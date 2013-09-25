@@ -18,8 +18,8 @@ public class EstadoAdapter extends BaseAdapter{
 			"Rio Grande do Sul", "Rondônia", "Rorâima", "São Paulo", "Santa Catarina",
 			"Sergipe", "Tocantins"};
 	
-	String siglas[] = {"AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", 
-			"PI", "RJ", "RN","RS", "RO", "RR", "SP", "SC", "SE", "TO"};
+	String siglas[] = {"AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", 
+			"PA", "PB", "PR", "PE",	"PI", "RJ", "RN","RS", "RO", "RR", "SP", "SC", "SE", "TO" };
 	
 	private LayoutInflater mInflater;
 	private ViewHolder holder;
