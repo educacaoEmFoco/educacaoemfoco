@@ -31,6 +31,10 @@
             android:name="com.mdsgpp.eef.TelaListaEstado"
             android:label="@string/title_activity_tela_lista_estado" >
         </activity>
+        <activity
+            android:name="com.mdsgpp.eef.TelaComparacao"
+            android:label="@string/title_activity_tela_comparacao" >
+        </activity>
     </application>
 
 </manifest>

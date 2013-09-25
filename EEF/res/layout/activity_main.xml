@@ -8,9 +8,24 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+    <Button
+        android:id="@+id/buttonComparacao"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="17dp"
+        android:layout_toRightOf="@+id/botao_lista_estados"
+        android:onClick="clickBotaoComparacao"
+        android:text="@string/menu_botao_comparacao" />
+
+    <Button
+        android:id="@+id/botao_lista_estados"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/buttonComparacao"
+        android:layout_marginLeft="18dp"
+        android:onClick="clickBotaoListaEstados"
+        android:text="@string/menu_botao_lista_estados" />
 
 </RelativeLayout>

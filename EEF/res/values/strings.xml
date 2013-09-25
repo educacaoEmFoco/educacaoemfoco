@@ -6,5 +6,8 @@
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_tela_estado">TelaEstado</string>
     <string name="title_activity_tela_lista_estado">TelaListaEstado</string>
+    <string name="menu_botao_lista_estados">Lista de Estados</string>
+    <string name="menu_botao_comparacao">Comparar</string>
+    <string name="title_activity_tela_comparacao">TelaComparacao</string>
 
 </resources>

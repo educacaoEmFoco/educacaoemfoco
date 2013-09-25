@@ -2,14 +2,16 @@ package com.mdsgpp.eef;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
+import android.view.View;
 
 public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main);        
     }
 
 
@@ -20,4 +22,15 @@ public class MainActivity extends Activity {
         return true;
     }
     
+    
+    // Eventos
+    public void clickBotaoListaEstados(View view) {
+    	Intent intent = new Intent(this, TelaListaEstado.class);
+		startActivity(intent);
+    }
+    
+    public void clickBotaoComparacao(View view) {
+    	Intent intent = new Intent(this, TelaComparacao.class);
+		startActivity(intent);
+    }
 }
