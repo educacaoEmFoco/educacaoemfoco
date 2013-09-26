@@ -1,7 +1,7 @@
 package com.mdsgpp.eef.modelo;
 
 public class TaxaDistorcaoIdadeSerie extends Media{
-
+	
 	public TaxaDistorcaoIdadeSerie() {
 	}
 	

@@ -9,6 +9,9 @@ public class Estado {
 	private int valorInvestidoCienciaTecnologia[];
 	private Ideb idebs[];
 	private MediaNotasPorTurma mpt[];
+	private MediaHorasAulaDiaria mhad[];
+	private ProjetosContratados projetos[];
+	private TaxaDistorcaoIdadeSerie tdis[];
 	
 	public Estado(){
 	}
@@ -75,6 +78,30 @@ public class Estado {
 
 	public void setMpt(MediaNotasPorTurma[] mpt) {
 		this.mpt = mpt;
+	}
+
+	public MediaHorasAulaDiaria[] getMhad() {
+		return mhad;
+	}
+
+	public void setMhad(MediaHorasAulaDiaria[] mhad) {
+		this.mhad = mhad;
+	}
+
+	public ProjetosContratados[] getProjetos() {
+		return projetos;
+	}
+
+	public void setProjetos(ProjetosContratados[] projetos) {
+		this.projetos = projetos;
+	}
+
+	public TaxaDistorcaoIdadeSerie[] getTdis() {
+		return tdis;
+	}
+
+	public void setTdis(TaxaDistorcaoIdadeSerie[] tdis) {
+		this.tdis = tdis;
 	}
 	
 }

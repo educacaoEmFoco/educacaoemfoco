@@ -9,6 +9,7 @@ public class ProjetosContratados {
 	private double valoresProgamaPrimeirosProjetos[];
 	private double valoresProjetosApoioPesquisacnpq[];
 	private double valoresProjetosInct[];
+	private Estado estado;
 		
 	public ProjetosContratados(int jovensPesquisadores[],int programaPrimeirosProjetos[],
 			int projetosApoioPesquisacnpq[],int projetosInct[],double valoresJovensPesquisadores[],
@@ -90,5 +91,14 @@ public class ProjetosContratados {
 	public void setValoresProjetosInct(double[] valoresProjetosInct) {
 		this.valoresProjetosInct = valoresProjetosInct;
 	}
+
+	public Estado getEstado() {
+		return estado;
+	}
+
+	public void setEstado(Estado estado) {
+		this.estado = estado;
+	}
+	
 
 }
