@@ -49,6 +49,28 @@ public abstract class Media {
 			this.medioNaoSeriado = medioNaoSeriado;  
 			
 		}
+		
+		public Media(double primeiroAnoFundamental[], double segundoAnoFundamental[], double terceiroAnoFundamental[],
+				double quartoAnoFundamental[],  double quintoAnoFundamental[],  double sextoAnoFundamental[],
+				double setimoAnoFundamental[], double oitavoAnoFundamental[], double nonoAnoFundamental[],
+				double primeiroAnoMedio[], double segundoAnoMedio[], double terceiroAnoMedio[],
+				double quartoAnoMedio[], double medioNaoSeriado[]){
+			this.primeiroAnoFundamental = primeiroAnoFundamental;
+			this.segundoAnoFundamental = segundoAnoFundamental;
+			this.terceiroAnoFundamental = terceiroAnoFundamental;
+			this.quartoAnoFundamental = quartoAnoFundamental;
+			this.quintoAnoFundamental = quintoAnoFundamental;
+			this.sextaAnoFundamental = sextoAnoFundamental;
+			this.setimaAnoFundamental = setimoAnoFundamental;
+			this.oitavoAnoFundamental = oitavoAnoFundamental;
+			this.nonoAnoFundamental = nonoAnoFundamental;
+			this.primeiroAnoMedio = primeiroAnoMedio;
+			this.segundoAnoMedio = segundoAnoMedio;
+			this.terceiroAnoMedio = terceiroAnoMedio;
+			this.quartoAnoMedio = quartoAnoMedio;
+			this.medioNaoSeriado = medioNaoSeriado;  
+			
+		}
 
 		public double[] getCreche() {
 			return creche;
