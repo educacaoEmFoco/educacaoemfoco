@@ -12,7 +12,9 @@ public class Estado {
 	private TaxaDeAprovacao ta[];
 	private TaxaDeReprovacao tr[];
 	private TaxaDeAbandono tAbandono[];
-	private ProjetosContratados projetosContratados[];
+	private MediaHorasAulaDiaria mhad[];
+	private ProjetosContratados projetos[];
+	private TaxaDistorcaoIdadeSerie tdis[];
 	
 	public Estado(){
 	}
@@ -106,12 +108,28 @@ public class Estado {
 		this.tAbandono = tAbandono;
 	}
 	
-	public ProjetosContratados[] getProjetosContratados() {
-		return projetosContratados;
+	public MediaHorasAulaDiaria[] getMhad() {
+		return mhad;
 	}
 
-	public void setProjetosContratados(ProjetosContratados[] projetosContratados) {
-		this.projetosContratados = projetosContratados;
+	public void setMhad(MediaHorasAulaDiaria[] mhad) {
+		this.mhad = mhad;
+	}
+
+	public ProjetosContratados[] getProjetos() {
+		return projetos;
+	}
+
+	public void setProjetos(ProjetosContratados[] projetos) {
+		this.projetos = projetos;
+	}
+
+	public TaxaDistorcaoIdadeSerie[] getTdis() {
+		return tdis;
+	}
+
+	public void setTdis(TaxaDistorcaoIdadeSerie[] tdis) {
+		this.tdis = tdis;
 	}
 
 	

@@ -1,6 +1,7 @@
 package com.mdsgpp.eef.modelo;
 
 public class ProjetosContratados {
+
 	private int jovensPesquisadores;
 	private int programaPrimeirosProjetos;
 	private int projetosApoioPesquisacnpq;
@@ -9,6 +10,7 @@ public class ProjetosContratados {
 	private double valoresProgamaPrimeirosProjetos;
 	private double valoresProjetosApoioPesquisacnpq;
 	private double valoresProjetosInct;
+
 	private Estado estado;
 		
 	public ProjetosContratados(int jovensPesquisadores,int programaPrimeirosProjetos,
