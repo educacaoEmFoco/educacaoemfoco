@@ -9,10 +9,15 @@ public class Estado {
 	private int valorInvestidoCienciaTecnologia[];
 	private Ideb idebs[];
 	private MediaNotasPorTurma mpt[];
+	private TaxaDeAprovacao ta[];
+	private TaxaDeReprovacao tr[];
+	private TaxaDeAbandono tAbandono[];
+	private ProjetosContratados projetosContratados[];
 	
 	public Estado(){
 	}
-	
+
+
 	public Estado(Censo censos[], double participacaoPercentualPIB[], int populacao[]){
 		this.censos = censos;
 		this.participacaoPercentualPIB = participacaoPercentualPIB;
@@ -76,5 +81,38 @@ public class Estado {
 	public void setMpt(MediaNotasPorTurma[] mpt) {
 		this.mpt = mpt;
 	}
+
+	public TaxaDeAprovacao[] getTa() {
+		return ta;
+	}
+
+	public void setTa(TaxaDeAprovacao[] ta) {
+		this.ta = ta;
+	}
+
+	public TaxaDeReprovacao[] getTr() {
+		return tr;
+	}
+
+	public void setTr(TaxaDeReprovacao[] tr) {
+		this.tr = tr;
+	}
+
+	public TaxaDeAbandono[] gettAbandono() {
+		return tAbandono;
+	}
+
+	public void settAbandono(TaxaDeAbandono[] tAbandono) {
+		this.tAbandono = tAbandono;
+	}
+	
+	public ProjetosContratados[] getProjetosContratados() {
+		return projetosContratados;
+	}
+
+	public void setProjetosContratados(ProjetosContratados[] projetosContratados) {
+		this.projetosContratados = projetosContratados;
+	}
+
 	
 }
