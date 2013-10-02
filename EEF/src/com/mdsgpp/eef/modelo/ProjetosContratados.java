@@ -13,6 +13,10 @@ public class ProjetosContratados {
 
 	private Estado estado;
 		
+	public ProjetosContratados() {
+		
+	}
+	
 	public ProjetosContratados(int jovensPesquisadores,int programaPrimeirosProjetos,
 			int projetosApoioPesquisacnpq,int projetosInct,double valoresJovensPesquisadores,
 			double valoresProgamaPrimeirosProjetos,double valoresProjetosApoioPesquisacnpq,

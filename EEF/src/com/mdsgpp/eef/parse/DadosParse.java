@@ -38,9 +38,7 @@ public class DadosParse {
 		
 		lerIndicativos(br);
 		
-		estado = new Estado();
-		estado.setNome(nome);
-		estado.setSigla(sigla);
+		estado = new Estado(nome, sigla, informacoes);
 		
 		return estado;
 	}
