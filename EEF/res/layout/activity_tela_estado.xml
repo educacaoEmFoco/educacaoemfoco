@@ -1,17 +1,135 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".TelaEstado" >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/text_view_estado"
-        android:text="" />
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+   		xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
 
-</RelativeLayout>
+        <LinearLayout
+            android:id="@+id/linearlayout_estado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView_sigla"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/string_vazia" />
+            
+             <TextView
+                android:id="@+id/textView_nome_estado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/string_vazia" />
+             
+              <TextView
+                android:id="@+id/textView_populacao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/populacao" />
+              
+              <TextView
+                android:id="@+id/textView_populacao_valor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/string_vazia" />
+              
+              <TextView
+                android:id="@+id/textView_participacao_estadual_pib"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/string_vazia" />
+              
+              
+              <TextView
+                android:id="@+id/textView_participacao_pib_valor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/string_vazia" />
+              
+            
+               <TextView
+                android:id="@+id/textView_numero_projetos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/string_vazia" />
+               
+               <TextView
+                android:id="@+id/textView_numero_projetos_quantidade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/string_vazia" />
+              
+               <TextView
+                android:id="@+id/textView_valor_investido_projetos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/string_vazia" />
+              
+              
+                <TextView
+                android:id="@+id/textView_ideb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/string_vazia" />
+                
+                <TextView
+                android:id="@+id/textView_ideb_fundamental"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/string_vazia" />
+                
+                <TextView
+                android:id="@+id/textView_ideb_ensinomedio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/string_vazia" />
+                 
+                <TextView
+                android:id="@+id/textView_ideb_iniciais"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/string_vazia" />
+                
+                <TextView
+                android:id="@+id/textView_programa_primeiros_projetos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/string_vazia" />
+                
+                <TextView
+                android:id="@+id/textView_primeiros_projetos_quantidade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/string_vazia" />
+                
+                 <TextView
+                android:id="@+id/textView_programa_primeiros_projetos_valor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/string_vazia" />
+                
+                <TextView
+                android:id="@+id/textView_projetos_pesquisa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/string_vazia" />
+                
+                <TextView
+                android:id="@+id/textView_projetos_pesquisa_quantidade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/string_vazia" />
+                
+                <TextView
+                android:id="@+id/textView_valores_projeto_pesquisa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/string_vazia" />
+                             
+
+        </LinearLayout>
+    </ScrollView>
+
+
