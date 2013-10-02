@@ -11,8 +11,9 @@
     <string name="string_vazia"> </string>
     <string name="populacao">População</string>
     <string name="particicao_PIB">Participacao Estadual no PIB</string>
-    <string name="numeroProjetos">Número de Projetos de Difusão Tecnológica</string>
-    
-   
+    <string name="numero_projetos">Projetos de Difusão Tecnológica</string>
+    <string name="participacao_IDEB">IDEB</string>
+    <string name="Programa_primeiros_projetos">Programa Primeiros Projetos</string>
+    <string name="Projetos_pesquisa_CNPq">Projetos de Pesquisa Apoio CNPq</string>
 
 </resources>
