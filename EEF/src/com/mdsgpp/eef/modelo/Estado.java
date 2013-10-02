@@ -18,7 +18,10 @@ public class Estado {
 	private Ideb idebs[];
 	private MediaNotasPorTurma mpt[];
 	private MediaHorasAulaDiaria mhad[];
-	private ProjetosContratados projetos[];
+	private PrimeirosProjetos primProj[];
+	private ProjetoInct pInct[];
+	private ApoioPesquisaCnpq cnpq[];
+	private JovensPesquisadores jovensPesq[];
 	private TaxaDistorcaoIdadeSerie tdis[];
 	
 	public Estado(){
@@ -99,14 +102,6 @@ public class Estado {
 		this.mhad = mhad;
 	}
 
-	public ProjetosContratados[] getProjetos() {
-		return projetos;
-	}
-
-	public void setProjetos(ProjetosContratados[] projetos) {
-		this.projetos = projetos;
-	}
-
 	public TaxaDistorcaoIdadeSerie[] getTdis() {
 		return tdis;
 	}
@@ -131,11 +126,45 @@ public class Estado {
 		this.sigla = sigla;
 	}
 	
-	
+	public PrimeirosProjetos[] getPrimProj() {
+		return primProj;
+	}
+
+	public void setPrimProj(PrimeirosProjetos[] primProj) {
+		this.primProj = primProj;
+	}
+
+	public ProjetoInct[] getpInct() {
+		return pInct;
+	}
+
+	public void setpInct(ProjetoInct[] pInct) {
+		this.pInct = pInct;
+	}
+
+	public ApoioPesquisaCnpq[] getCnpq() {
+		return cnpq;
+	}
+
+	public void setCnpq(ApoioPesquisaCnpq[] cnpq) {
+		this.cnpq = cnpq;
+	}
+
+	public JovensPesquisadores[] getJovensPesq() {
+		return jovensPesq;
+	}
+
+	public void setJovensPesq(JovensPesquisadores[] jovensPesq) {
+		this.jovensPesq = jovensPesq;
+	}
+
 	private void preencheDados(HashMap<String, ArrayList<String[]>> informacoes) {
 		Iterator<String> it = informacoes.keySet().iterator();
 		Ideb ideb[] = null;
-		ProjetosContratados numProjetos[] = null;
+		PrimeirosProjetos numPrimProjetos[] = null;
+		ProjetoInct numProjInct[] = null;
+		ApoioPesquisaCnpq numProjCnpq[] = null;
+		JovensPesquisadores numJovensPesq[] = null;
 		
 		while (it.hasNext()) {
 			String key = it.next();
@@ -152,6 +181,7 @@ public class Estado {
 				for (int i=0; i<dadosH.size(); i++) {
 					if (ideb[i] == null) 
 						ideb[i] = new Ideb();
+					ideb[i].setEstado(this);
 					Log.i("Teste", dadosH.get(i)[1].replaceAll(",", "."));
 					if (dadosH.get(i)[1].equalsIgnoreCase("-"))
 						ideb[i].setFundamental(0);
@@ -187,118 +217,122 @@ public class Estado {
 				}
 				
 			} else if (key.equalsIgnoreCase("projetos_apoio_pesquisa_cnpq")) {
-				if (numProjetos == null) {
-					numProjetos = new ProjetosContratados[dadosH.size()];
+				if (numProjCnpq == null) {
+					numProjCnpq = new ApoioPesquisaCnpq[dadosH.size()];
 					Log.i("Teste", "criado");
 				}
 				for (int i=0; i<dadosH.size(); i++) {
-					if (numProjetos[i] == null) 
-						numProjetos[i] = new ProjetosContratados();
+					if (numProjCnpq[i] == null) 
+						numProjCnpq[i] = new ApoioPesquisaCnpq();
+					numProjCnpq[i].setEstado(this);
 					Log.i("Teste", dadosH.get(i)[1].replaceAll(",", "."));
 					if (dadosH.get(i)[1].equalsIgnoreCase("-"))
-						numProjetos[i].setProjetosApoioPesquisacnpq(0);
+						numProjCnpq[i].setQuantidade(0);
 					else 
-						numProjetos[i].setProjetosApoioPesquisacnpq(Integer.parseInt(dadosH.get(i)[1].replaceAll(",", ".")));
+						numProjCnpq[i].setQuantidade(Integer.parseInt(dadosH.get(i)[1].replaceAll(",", ".")));
 				}
 				
 			} else if (key.equalsIgnoreCase("jovens_pesquisadores")) {
-				if (numProjetos == null) {
-					numProjetos = new ProjetosContratados[dadosH.size()];
+				if (numJovensPesq == null) {
+					numJovensPesq = new JovensPesquisadores[dadosH.size()];
 					Log.i("Teste", "criado");
 				}
 				for (int i=0; i<dadosH.size(); i++) {
-					if (numProjetos[i] == null) 
-						numProjetos[i] = new ProjetosContratados();
+					if (numJovensPesq[i] == null) 
+						numJovensPesq[i] = new JovensPesquisadores();
+					numJovensPesq[i].setEstado(this);
 					if (dadosH.get(i)[1].equalsIgnoreCase("-"))
-						numProjetos[i].setJovensPesquisadores(0);
+						numJovensPesq[i].setQuantidade(0);
 					else 
-						numProjetos[i].setJovensPesquisadores(Integer.parseInt(dadosH.get(i)[1].replaceAll(",", ".")));
+						numJovensPesq[i].setQuantidade(Integer.parseInt(dadosH.get(i)[1].replaceAll(",", ".")));
 				}
 				
 			} else if (key.equalsIgnoreCase("programa_primeiros_projetos")) {
-				if (numProjetos == null) {
-					numProjetos = new ProjetosContratados[dadosH.size()];
+				if (numPrimProjetos == null) {
+					numPrimProjetos = new PrimeirosProjetos[dadosH.size()];
 					Log.i("Teste", "criado");
 				}
 				for (int i=0; i<dadosH.size(); i++) {
-					if (numProjetos[i] == null) 
-						numProjetos[i] = new ProjetosContratados();
+					if (numPrimProjetos[i] == null) 
+						numPrimProjetos[i] = new PrimeirosProjetos();
+					numPrimProjetos[i].setEstado(this);
 					if (dadosH.get(i)[1].equalsIgnoreCase("-"))
-						numProjetos[i].setProgramaPrimeirosProjetos(0);
+						numPrimProjetos[i].setQuantidade(0);
 					else 
-						numProjetos[i].setProgramaPrimeirosProjetos(Integer.parseInt(dadosH.get(i)[1].replaceAll(",", ".")));
+						numPrimProjetos[i].setQuantidade(Integer.parseInt(dadosH.get(i)[1].replaceAll(",", ".")));
 				}
 				
 			} else if (key.equalsIgnoreCase("projetos_inct")) {
-				if (numProjetos == null) {
-					numProjetos = new ProjetosContratados[dadosH.size()];
+				if (numProjInct == null) {
+					numProjInct = new ProjetoInct[dadosH.size()];
 					Log.i("Teste", "criado");
 				}
 				for (int i=0; i<dadosH.size(); i++) {
-					if (numProjetos[i] == null) 
-						numProjetos[i] = new ProjetosContratados();
+					if (numProjInct[i] == null) 
+						numProjInct[i] = new ProjetoInct();
+					numProjInct[i].setEstado(this);
 					if (dadosH.get(i)[1].equalsIgnoreCase("-"))
-						numProjetos[i].setProjetosInct(0);
+						numProjInct[i].setQuantidade(0);
 					else 
-						numProjetos[i].setProjetosInct(Integer.parseInt(dadosH.get(i)[1].replaceAll(",", ".")));
-					Log.i("teste",""+numProjetos[i].getProjetosInct());
+						numProjInct[i].setQuantidade(Integer.parseInt(dadosH.get(i)[1].replaceAll(",", ".")));
+					Log.i("teste",""+numProjInct[i].getQuantidade());
 				}
 				
 			} else if (key.equalsIgnoreCase("valores_projetos_apoio_pesquisa_cnpq")) {
-				if (numProjetos == null) {
-					numProjetos = new ProjetosContratados[dadosH.size()];
+				if (numProjCnpq == null) {
+					numProjCnpq = new ApoioPesquisaCnpq[dadosH.size()];
 					Log.i("Teste", "criado");
 				}
 				Log.i("Teste", "tamanho: "+dadosH.size());
 				for (int i=0; i<dadosH.size(); i++) {
-					if (numProjetos[i] == null) 
-						numProjetos[i] = new ProjetosContratados();
+					if (numProjCnpq[i] == null) 
+						numProjCnpq[i] = new ApoioPesquisaCnpq();
 					if (dadosH.get(i)[1].equalsIgnoreCase("-"))
-						numProjetos[i].setValoresProjetosApoioPesquisacnpq(0);
+						numProjCnpq[i].setValor(0);
 					else 
-						numProjetos[i].setValoresProjetosApoioPesquisacnpq(Double.parseDouble(dadosH.get(i)[1].replaceAll(",", ".")));
+						numProjCnpq[i].setValor(Double.parseDouble(dadosH.get(i)[1].replaceAll(",", ".")));
 				}
 				
 			} else if (key.equalsIgnoreCase("valores_projetos_inct")) {
-				if (numProjetos == null) {
-					numProjetos = new ProjetosContratados[dadosH.size()];
+				if (numProjInct == null) {
+					numProjInct = new ProjetoInct[dadosH.size()];
 					Log.i("Teste", "criado");
 				}
 				for (int i=0; i<dadosH.size(); i++) {
-					if (numProjetos[i] == null) 
-						numProjetos[i] = new ProjetosContratados();
+					if (numProjInct[i] == null) 
+						numProjInct[i] = new ProjetoInct();
 					if (dadosH.get(i)[1].equalsIgnoreCase("-"))
-						numProjetos[i].setValoresProjetosInct(0);
+						numProjInct[i].setValor(0);
 					else 
-						numProjetos[i].setValoresProjetosInct(Double.parseDouble(dadosH.get(i)[1].replaceAll(",", ".")));
+						numProjInct[i].setValor(Double.parseDouble(dadosH.get(i)[1].replaceAll(",", ".")));
 				}
 				
 			} else if (key.equalsIgnoreCase("valores_programa_primeiros_projetos")) {
-				if (numProjetos == null) {
-					numProjetos = new ProjetosContratados[dadosH.size()];
+				if (numPrimProjetos == null) {
+					numPrimProjetos = new PrimeirosProjetos[dadosH.size()];
 					Log.i("Teste", "criado");
 				}
 				for (int i=0; i<dadosH.size(); i++) {
-					if (numProjetos[i] == null) 
-						numProjetos[i] = new ProjetosContratados();
+					if (numPrimProjetos[i] == null) 
+						numPrimProjetos[i] = new PrimeirosProjetos();
 					if (dadosH.get(i)[1].equalsIgnoreCase("-"))
-						numProjetos[i].setValoresProgamaPrimeirosProjetos(0);
+						numPrimProjetos[i].setValor(0);
 					else 
-						numProjetos[i].setValoresProgamaPrimeirosProjetos(Double.parseDouble(dadosH.get(i)[1].replaceAll(",", ".")));
+						numPrimProjetos[i].setValor(Double.parseDouble(dadosH.get(i)[1].replaceAll(",", ".")));
 				}
 				
 			} else if (key.equalsIgnoreCase("valores_jovens_pesquisadores")) {
-				if (numProjetos == null) {
-					numProjetos = new ProjetosContratados[dadosH.size()];
+				if (numJovensPesq == null) {
+					numJovensPesq = new JovensPesquisadores[dadosH.size()];
 					Log.i("Teste", "criado");
 				}
 				for (int i=0; i<dadosH.size(); i++) {
-					if (numProjetos[i] == null) 
-						numProjetos[i] = new ProjetosContratados();
+					if (numJovensPesq[i] == null) 
+						numJovensPesq[i] = new JovensPesquisadores();
 					if (dadosH.get(i)[1].equalsIgnoreCase("-"))
-						numProjetos[i].setValoresJovensPesquisadores(0);
+						numJovensPesq[i].setValor(0);
 					else 
-						numProjetos[i].setValoresJovensPesquisadores(Double.parseDouble(dadosH.get(i)[1].replaceAll(",", ".")));
+						numJovensPesq[i].setValor(Double.parseDouble(dadosH.get(i)[1].replaceAll(",", ".")));
 				}
 				
 			} else if (key.equalsIgnoreCase("participacao_estadual_pib")) {
@@ -335,9 +369,12 @@ public class Estado {
 			}
 			
 		} 
-		
-		this.setProjetos(numProjetos);
+
 		this.setIdebs(ideb);
+		this.setPrimProj(numPrimProjetos);
+		this.setpInct(numProjInct);
+		this.setCnpq(numProjCnpq);
+		this.setJovensPesq(numJovensPesq);
 	}
 	
 }
