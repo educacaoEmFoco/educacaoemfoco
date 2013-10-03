@@ -13,12 +13,7 @@ import android.widget.TextView;
 
 public class TelaEstado extends Activity {
 
-	String estados[] = {"Acre", "Alagoas", "Amapa", "Amazonas", "Bahia", 
-			"Ceara", "Distrito Federal","Espirito Santo","Goias", "Maranhao",
-			"Mato Grosso", "Mato Grosso do Sul", "Minas Gerais", "Para", "Paraiba",
-			"Parana", "Pernambuco", "Piauí", "Rio de Janeiro", "Rio Grande do Norte",
-			"Rio Grande do Sul", "Rondonia", "Roraima", "Sao Paulo", "Santa Catarina",
-			"Sergipe", "Tocantins"};
+	
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +42,7 @@ public class TelaEstado extends Activity {
 		DadosParse parser = new DadosParse(this);
 		
 		try {
-			Estado estado = parser.getEstado(estados[posicao]);
+			Estado estado = parser.getEstado(posicao);
 			textViewSigla.setText(estado.getSigla());
 			textViewNome.setText(estado.getNome());
 			textViewPopulacao.setText(estado.getPopulacao()+"");
