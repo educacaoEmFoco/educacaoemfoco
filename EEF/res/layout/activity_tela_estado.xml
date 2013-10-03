@@ -39,7 +39,7 @@
                 android:id="@+id/textView_participacao_estadual_pib"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/string_vazia" />
+                android:text="@string/particicao_PIB" />
               
               
               <TextView
@@ -53,7 +53,8 @@
                 android:id="@+id/textView_numero_projetos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/string_vazia" />
+                android:text="@string/numero_projetos"/>
+               
                
                <TextView
                 android:id="@+id/textView_numero_projetos_quantidade"
@@ -72,7 +73,7 @@
                 android:id="@+id/textView_ideb"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/string_vazia" />
+                android:text="@string/participacao_IDEB" />
                 
                 <TextView
                 android:id="@+id/textView_ideb_fundamental"
@@ -96,7 +97,7 @@
                 android:id="@+id/textView_programa_primeiros_projetos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/string_vazia" />
+                android:text="@string/Programa_primeiros_projetos" />
                 
                 <TextView
                 android:id="@+id/textView_primeiros_projetos_quantidade"
@@ -114,7 +115,7 @@
                 android:id="@+id/textView_projetos_pesquisa"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/string_vazia" />
+                android:text="@string/Projetos_pesquisa_CNPq" />
                 
                 <TextView
                 android:id="@+id/textView_projetos_pesquisa_quantidade"
