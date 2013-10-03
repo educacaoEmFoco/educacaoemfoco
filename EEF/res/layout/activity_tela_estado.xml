@@ -128,6 +128,42 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/string_vazia" />
+                
+                <TextView
+                android:id="@+id/textView_jovens_pesquisadores"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/jovens_pesquisadores" />
+                
+                <TextView
+                android:id="@+id/textView_jovens_pesquisadores_quantidade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/string_vazia" />
+                
+                <TextView
+                android:id="@+id/textView_jovens_pesquisadores_valor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/string_vazia" />
+                
+                <TextView
+                android:id="@+id/textView_projetos_iniciacao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/projeto_iniciacao" />
+                             
+                <TextView
+                android:id="@+id/textView_projetos_iniciacao_quantidade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/string_vazia" />
+                
+                <TextView
+                android:id="@+id/textView_projetos_iniciacao_valor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/string_vazia" />
                              
 
         </LinearLayout>
