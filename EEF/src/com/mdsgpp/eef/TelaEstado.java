@@ -38,6 +38,11 @@ public class TelaEstado extends Activity {
 		TextView textViewValorPrimeirosProjetos = (TextView) findViewById(R.id.textView_programa_primeiros_projetos_valor);
 		TextView textViewQuantidadePesquisa = (TextView) findViewById(R.id.textView_projetos_pesquisa_quantidade);
 		TextView textViewValoresPesquisa = (TextView) findViewById(R.id.textView_valores_projeto_pesquisa);
+		TextView textViewQuantidadeJovensPesquisadores = (TextView) findViewById(R.id.textView_jovens_pesquisadores_quantidade);
+		TextView textViewValorJovensPesquisadores= (TextView) findViewById(R.id.textView_jovens_pesquisadores_valor);
+		TextView textViewQuantidadeProjetosIniciacao = (TextView) findViewById(R.id.textView_projetos_iniciacao_quantidade);
+		TextView textViewValorProjetosIniciacao = (TextView) findViewById(R.id.textView_projetos_iniciacao_valor);
+		
 		
 		DadosParse parser = new DadosParse(this);
 		
@@ -56,6 +61,10 @@ public class TelaEstado extends Activity {
 			textViewValorPrimeirosProjetos.setText(estado.getPrimProj()[estado.getPrimProj().length-1].getValor()+"");
 			textViewQuantidadePesquisa.setText(estado.getCnpq()[estado.getCnpq().length-1].getQuantidade()+"");
 			textViewValoresPesquisa.setText(estado.getCnpq()[estado.getCnpq().length-1].getValor()+"");
+			textViewQuantidadeJovensPesquisadores.setText(estado.getJovensPesq()[estado.getJovensPesq().length-1].getQuantidade()+"");
+			textViewValorJovensPesquisadores.setText(estado.getJovensPesq()[estado.getJovensPesq().length-1].getValor()+"");
+			textViewQuantidadeProjetosIniciacao.setText(estado.getpInct()[estado.getpInct().length-1].getQuantidade()+"");
+			textViewValorProjetosIniciacao.setText(estado.getpInct()[estado.getpInct().length-1].getValor()+"");
 			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
