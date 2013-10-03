@@ -5,11 +5,13 @@
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_tela_estado">TelaEstado</string>
+    <string name="title_activity_tela_comparacao">Tela Comparação</string>
     <string name="title_activity_tela_lista_estado">TelaListaEstado</string>
     <string name="menu_botao_lista_estados">Lista de Estados</string>
     <string name="menu_botao_comparacao">Comparar</string>
     <string name="string_vazia"> </string>
     <string name="populacao">População</string>
+    
    
 
 </resources>
