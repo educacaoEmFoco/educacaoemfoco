@@ -50,7 +50,7 @@ public class TelaEstado extends Activity {
 			Estado estado = parser.getEstado(estados[posicao]);
 			textViewSigla.setText(estado.getSigla());
 			textViewNome.setText(estado.getNome());
-			textViewPopulacao.setText(estado.getPopulacao());
+			textViewPopulacao.setText(estado.getPopulacao()+"");
 			textViewParticipacaoPib.setText(estado.getParticipacaoPercentualPIB()[estado.getParticipacaoPercentualPIB().length-1]+"%");
 			textViewQuantidadeProjetos.setText(estado.getNumeroDeProjetosCienciaTecnologia()[estado.getNumeroDeProjetosCienciaTecnologia().length-1]+"");
 			textViewValorProjetos.setText(estado.getValorInvestidoCienciaTecnologia()[estado.getValorInvestidoCienciaTecnologia().length-1]+"");
@@ -61,8 +61,6 @@ public class TelaEstado extends Activity {
 			textViewValorPrimeirosProjetos.setText(estado.getPrimProj()[estado.getPrimProj().length-1].getValor()+"");
 			textViewQuantidadePesquisa.setText(estado.getCnpq()[estado.getCnpq().length-1].getQuantidade()+"");
 			textViewValoresPesquisa.setText(estado.getCnpq()[estado.getCnpq().length-1].getValor()+"");
-			
-			
 			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

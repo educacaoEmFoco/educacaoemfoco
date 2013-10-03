@@ -46,6 +46,11 @@ public class Estado {
 	}
 
 	public double[] getParticipacaoPercentualPIB() {
+		if (participacaoPercentualPIB == null) {
+			double[] vazio = {0};
+			return vazio;
+		}
+			
 		return participacaoPercentualPIB;
 	}
 
@@ -62,6 +67,11 @@ public class Estado {
 	}
 
 	public int[] getNumeroDeProjetosCienciaTecnologia() {
+		if (numeroDeProjetosCienciaTecnologia == null) {
+			int[] vazio = {0};
+			return vazio;
+		}
+		
 		return numeroDeProjetosCienciaTecnologia;
 	}
 
@@ -71,6 +81,11 @@ public class Estado {
 	}
 
 	public double[] getValorInvestidoCienciaTecnologia() {
+		if (valorInvestidoCienciaTecnologia == null) {
+			double[] vazio = {0};
+			return vazio;
+		}
+		
 		return valorInvestidoCienciaTecnologia;
 	}
 
@@ -79,6 +94,11 @@ public class Estado {
 	}
 
 	public Ideb[] getIdebs() {
+		if (idebs == null) {
+			Ideb vazio[] = { new Ideb(0,0,0) };
+			return vazio;
+		}
+		
 		return idebs;
 	}
 
@@ -87,6 +107,11 @@ public class Estado {
 	}
 
 	public MediaNotasPorTurma[] getMpt() {
+		if (mpt == null) {
+			MediaNotasPorTurma vazio[] = { new MediaNotasPorTurma(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0) };
+			return vazio;
+		}
+		
 		return mpt;
 	}
 
@@ -95,6 +120,11 @@ public class Estado {
 	}
 
 	public MediaHorasAulaDiaria[] getMhad() {
+		if (mhad == null) {
+			MediaHorasAulaDiaria vazio[] = { new MediaHorasAulaDiaria(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0) };
+			return vazio;
+		}
+		
 		return mhad;
 	}
 
@@ -103,6 +133,11 @@ public class Estado {
 	}
 
 	public TaxaDistorcaoIdadeSerie[] getTdis() {
+		if (tdis == null) {
+			TaxaDistorcaoIdadeSerie vazio[] = { new TaxaDistorcaoIdadeSerie(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0) };
+			return vazio;
+		}
+		
 		return tdis;
 	}
 
@@ -111,6 +146,10 @@ public class Estado {
 	}
 
 	public String getNome() {
+		if (nome == null) {
+			return "Sem nome";
+		}
+		
 		return nome;
 	}
 
@@ -119,6 +158,10 @@ public class Estado {
 	}
 
 	public String getSigla() {
+		if (nome == null) {
+			return "Sem sigla";
+		}
+		
 		return sigla;
 	}
 
@@ -127,6 +170,14 @@ public class Estado {
 	}
 	
 	public PrimeirosProjetos[] getPrimProj() {
+		if (primProj == null) {
+			PrimeirosProjetos vazio[] = { new PrimeirosProjetos() };
+			vazio[0].setQuantidade(0);
+			vazio[0].setValor(0);
+			
+			return vazio;
+		}
+		
 		return primProj;
 	}
 
@@ -135,6 +186,14 @@ public class Estado {
 	}
 
 	public ProjetoInct[] getpInct() {
+		if (pInct == null) {
+			ProjetoInct vazio[] = { new ProjetoInct() };
+			vazio[0].setQuantidade(0);
+			vazio[0].setValor(0);
+			
+			return vazio;
+		}
+		
 		return pInct;
 	}
 
@@ -143,6 +202,14 @@ public class Estado {
 	}
 
 	public ApoioPesquisaCnpq[] getCnpq() {
+		if (cnpq == null) {
+			ApoioPesquisaCnpq vazio[] = { new ApoioPesquisaCnpq() };
+			vazio[0].setQuantidade(0);
+			vazio[0].setValor(0);
+			
+			return vazio;
+		}
+		
 		return cnpq;
 	}
 
@@ -151,6 +218,14 @@ public class Estado {
 	}
 
 	public JovensPesquisadores[] getJovensPesq() {
+		if (jovensPesq == null) {
+			JovensPesquisadores vazio[] = { new JovensPesquisadores() };
+			vazio[0].setQuantidade(0);
+			vazio[0].setValor(0);
+			
+			return vazio;
+		}
+		
 		return jovensPesq;
 	}
 

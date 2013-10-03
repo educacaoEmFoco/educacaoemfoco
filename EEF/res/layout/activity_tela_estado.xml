@@ -39,7 +39,7 @@
                 android:id="@+id/textView_participacao_estadual_pib"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/particicao_PIB" />
+                android:text="@string/participacao_PIB" />
               
               
               <TextView

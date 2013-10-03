@@ -68,11 +68,16 @@ public final class R {
         public static final int tela_lista_estado=0x7f070003;
     }
     public static final class string {
+        public static final int Programa_primeiros_projetos=0x7f05000d;
+        public static final int Projetos_pesquisa_CNPq=0x7f05000e;
         public static final int action_settings=0x7f050001;
         public static final int app_name=0x7f050000;
         public static final int hello_world=0x7f050002;
         public static final int menu_botao_comparacao=0x7f050007;
         public static final int menu_botao_lista_estados=0x7f050006;
+        public static final int numero_projetos=0x7f05000b;
+        public static final int participacao_IDEB=0x7f05000c;
+        public static final int participacao_PIB=0x7f05000a;
         public static final int populacao=0x7f050009;
         public static final int string_vazia=0x7f050008;
         public static final int title_activity_tela_comparacao=0x7f050004;
