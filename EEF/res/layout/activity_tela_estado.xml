@@ -45,6 +45,8 @@
                 android:text="@string/participacao_PIB" />
               
               
+              
+              
               <TextView
                 android:id="@+id/textView_participacao_pib_valor"
                 android:layout_width="wrap_content"
@@ -52,6 +54,9 @@
                 android:layout_marginLeft="15dp"
                 android:text="@string/string_vazia" />
               
+              
+              
+             
             
                <TextView
                 android:id="@+id/textView_numero_projetos"
@@ -67,30 +72,32 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:text="@string/string_vazia" />
-              
-               <TextView
+               
+             
+              <TextView
                 android:id="@+id/textView_valor_investido_projetos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:text="@string/string_vazia" />
+               
+             
               
-              
-                <TextView
+               <TextView
                 android:id="@+id/textView_ideb"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:text="@string/participacao_IDEB" />
                 
-                <TextView
+               <TextView
                 android:id="@+id/textView_ideb_fundamental"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:text="@string/string_vazia" />
                 
-                <TextView
+               <TextView
                 android:id="@+id/textView_ideb_ensinomedio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

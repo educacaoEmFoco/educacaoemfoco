@@ -74,9 +74,9 @@ Total: 124
 
 programa_primeiros_projetos
 2007: 3
-2008: -
-2009: -
-2010: -
+2008: 0
+2009: 0
+2010: 0
 Total: 3
 
 
@@ -113,9 +113,9 @@ Total: 5372,7399999992
 
 valores_programa_primeiros_projetos
 2007: 1730
-2008: -
-2009: -
-2010: -
+2008: 0
+2009: 0
+2010: 0
 Total: 1730
 
 
