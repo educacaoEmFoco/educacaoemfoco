@@ -2,6 +2,7 @@ package com.mdsgpp.eef;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import com.mdsgpp.eef.controle.EstadoControle;
 import android.os.Bundle;
@@ -44,32 +45,27 @@ public class TelaEstado extends Activity {
 		
 		
 		
-		try {
-			ArrayList<String> informacoes;
-			informacoes = EstadoControle.getInstancia().getInformacoesEstado(posicao, this);
+
+	    HashMap<String, String> informacoes = new HashMap <String, String>();
 			
-			textViewSigla.setText(informacoes.get(0));
-			textViewNome.setText(informacoes.get(1));
-			textViewPopulacao.setText(informacoes.get(2));
-			textViewParticipacaoPib.setText(informacoes.get(3));
-			textViewQuantidadeProjetos.setText(informacoes.get(4));
-			textViewValorProjetos.setText(informacoes.get(5));
-			textViewFundamentalIdeb.setText(informacoes.get(6));
-			textViewEnsinoMedioIdeb.setText(informacoes.get(7));
-			textViewIniciaisIdeb.setText(informacoes.get(8));
-			textViewQuantidadePrimeirosProjetos.setText(informacoes.get(9));
-			textViewValorPrimeirosProjetos.setText(informacoes.get(10));
-			textViewQuantidadePesquisa.setText(informacoes.get(11));
-			textViewValoresPesquisa.setText(informacoes.get(12));
-			textViewQuantidadeJovensPesquisadores.setText(informacoes.get(13));
-			textViewValorJovensPesquisadores.setText(informacoes.get(14));
-			textViewQuantidadeProjetosIniciacao.setText(informacoes.get(15));
-			textViewValorProjetosIniciacao.setText(informacoes.get(16));
-			
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-			
+	    textViewSigla.setText(informacoes.get("sigla"));
+		textViewNome.setText(informacoes.get("nome"));
+		textViewPopulacao.setText(informacoes.get("populacao"));
+		textViewParticipacaoPib.setText(informacoes.get("percentrual_participacao_pib"));
+		textViewQuantidadeProjetos.setText(informacoes.get("quantidade_primeiros_projetos"));
+		textViewValorProjetos.setText(informacoes.get("valor_primeiros_projetos"));
+		textViewFundamentalIdeb.setText(informacoes.get("ideb_fundamental_final"));
+		textViewEnsinoMedioIdeb.setText(informacoes.get("ideb_ensino_medio"));
+		textViewIniciaisIdeb.setText(informacoes.get("ideb_fundamental_inicial"));
+		textViewQuantidadePrimeirosProjetos.setText(informacoes.get("quantidade_primeiro_projetos"));
+		textViewValorPrimeirosProjetos.setText(informacoes.get("valor_primeiros_projetos"));
+	    textViewQuantidadePesquisa.setText(informacoes.get("quantidade_pesquisa"));
+		textViewValoresPesquisa.setText(informacoes.get("valor_pesquisa"));
+		textViewQuantidadeJovensPesquisadores.setText(informacoes.get("quantidade_jovens_pesquisadores"));
+		textViewValorJovensPesquisadores.setText(informacoes.get("valor_projetos_jovens_pesquisadores"));
+		textViewQuantidadeProjetosIniciacao.setText(informacoes.get("quantidade_projetos_iniciacao_cientifica"));
+		textViewValorProjetosIniciacao.setText(informacoes.get("valor_projetos_iniciacao_cientifica"));
+		
 	}
 
 	@Override
