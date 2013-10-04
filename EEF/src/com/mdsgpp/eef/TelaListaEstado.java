@@ -1,6 +1,6 @@
 package com.mdsgpp.eef;
 
-import com.mdsgpp.eef.modelo.EstadoAdapter;
+import com.mdsgpp.eef.EstadoAdapter;
 
 import android.os.Bundle;
 import android.app.Activity;

@@ -4,9 +4,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import com.mdsgpp.eef.controle.EstadoControle;
-import com.mdsgpp.eef.modelo.Estado;
-import com.mdsgpp.eef.parse.DadosParse;
-
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
