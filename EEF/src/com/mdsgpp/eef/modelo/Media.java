@@ -1,6 +1,6 @@
 package com.mdsgpp.eef.modelo;
 
-public abstract class Media {
+public class Media {
 		private double creche;
 		private double preEscola;
 		private double anosIniciais;
