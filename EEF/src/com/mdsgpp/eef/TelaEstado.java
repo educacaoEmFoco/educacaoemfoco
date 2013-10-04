@@ -1,10 +1,10 @@
 package com.mdsgpp.eef;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
 
 import com.mdsgpp.eef.controle.EstadoControle;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -17,8 +17,8 @@ public class TelaEstado extends Activity {
 	private TextView textViewNome;
 	private TextView textViewPopulacao;
 	private TextView textViewParticipacaoPib;
-	private TextView textViewQuantidadeProjetos;
-	private TextView textViewValorProjetos;
+	private TextView textViewQuantidadeProjetosCienciaTecnologia;
+	private TextView textViewValorProjetosCienciaTecnologia;
 	private TextView textViewFundamentalIdeb;
 	private TextView textViewEnsinoMedioIdeb;
 	private TextView textViewIniciaisIdeb;
@@ -41,28 +41,17 @@ public class TelaEstado extends Activity {
 		// Captura o valor transferido através da intent
 		int posicao = intent.getIntExtra("INDEX_ESTADO_ESCOLHIDO", 0);	
 		
-		InicializaCampoTexto();
+		InicializaCamposTexto();
 		
-
 	    HashMap<String, String> informacoes = new HashMap <String, String>();
-			
-	    textViewSigla.setText(informacoes.get("sigla"));
-		textViewNome.setText(informacoes.get("nome"));
-		textViewPopulacao.setText(informacoes.get("populacao"));
-		textViewParticipacaoPib.setText(informacoes.get("percentrual_participacao_pib"));
-		textViewQuantidadeProjetos.setText(informacoes.get("quantidade_primeiros_projetos"));
-		textViewValorProjetos.setText(informacoes.get("valor_primeiros_projetos"));
-		textViewFundamentalIdeb.setText(informacoes.get("ideb_fundamental_final"));
-		textViewEnsinoMedioIdeb.setText(informacoes.get("ideb_ensino_medio"));
-		textViewIniciaisIdeb.setText(informacoes.get("ideb_fundamental_inicial"));
-		textViewQuantidadePrimeirosProjetos.setText(informacoes.get("quantidade_primeiro_projetos"));
-		textViewValorPrimeirosProjetos.setText(informacoes.get("valor_primeiros_projetos"));
-	    textViewQuantidadePesquisa.setText(informacoes.get("quantidade_pesquisa"));
-		textViewValoresPesquisa.setText(informacoes.get("valor_pesquisa"));
-		textViewQuantidadeJovensPesquisadores.setText(informacoes.get("quantidade_jovens_pesquisadores"));
-		textViewValorJovensPesquisadores.setText(informacoes.get("valor_projetos_jovens_pesquisadores"));
-		textViewQuantidadeProjetosIniciacao.setText(informacoes.get("quantidade_projetos_iniciacao_cientifica"));
-		textViewValorProjetosIniciacao.setText(informacoes.get("valor_projetos_iniciacao_cientifica"));
+	    
+	    try {
+			informacoes = EstadoControle.getInstancia().getInformacoesEstado(posicao, this);
+			preencheCamposTexto(informacoes);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 	}
 
@@ -73,14 +62,14 @@ public class TelaEstado extends Activity {
 		return true;
 	}
 	
-	private void InicializaCampoTexto() {
+	private void InicializaCamposTexto() {
 		
 		textViewSigla = (TextView) findViewById(R.id.textView_sigla);
 		textViewNome = (TextView) findViewById(R.id.textView_nome_estado);
 		textViewPopulacao = (TextView) findViewById(R.id.textView_populacao_valor);
 		textViewParticipacaoPib = (TextView) findViewById(R.id.textView_participacao_pib_valor);
-		textViewQuantidadeProjetos = (TextView) findViewById(R.id.textView_numero_projetos_quantidade);
-		textViewValorProjetos = (TextView) findViewById(R.id.textView_valor_investido_projetos);
+		textViewQuantidadeProjetosCienciaTecnologia = (TextView) findViewById(R.id.textView_numero_projetos_quantidade);
+		textViewValorProjetosCienciaTecnologia = (TextView) findViewById(R.id.textView_valor_investido_projetos);
 		textViewFundamentalIdeb = (TextView) findViewById(R.id.textView_ideb_fundamental);
 		textViewEnsinoMedioIdeb = (TextView) findViewById(R.id.textView_ideb_ensinomedio);
 		textViewIniciaisIdeb = (TextView) findViewById(R.id.textView_ideb_iniciais);
@@ -92,6 +81,28 @@ public class TelaEstado extends Activity {
 		textViewValorJovensPesquisadores= (TextView) findViewById(R.id.textView_jovens_pesquisadores_valor);
 		textViewQuantidadeProjetosIniciacao = (TextView) findViewById(R.id.textView_projetos_iniciacao_quantidade);
 		textViewValorProjetosIniciacao = (TextView) findViewById(R.id.textView_projetos_iniciacao_valor);
+		
+	}
+	
+	private void preencheCamposTexto(HashMap<String, String> informacoes) {
+		
+		textViewSigla.setText(informacoes.get("sigla"));
+		textViewNome.setText(informacoes.get("nome"));
+		textViewPopulacao.setText(informacoes.get("populacao"));
+		textViewParticipacaoPib.setText(informacoes.get("percentual_participacao_pib"));
+		textViewQuantidadeProjetosCienciaTecnologia.setText(informacoes.get("projetos_ciencia_tecnologia"));
+		textViewValorProjetosCienciaTecnologia.setText(informacoes.get("valor_ciencia_tecnologia"));
+		textViewFundamentalIdeb.setText(informacoes.get("ideb_fundamental_final"));
+		textViewEnsinoMedioIdeb.setText(informacoes.get("ideb_ensino_medio"));
+		textViewIniciaisIdeb.setText(informacoes.get("ideb_fundamental_inicial"));
+		textViewQuantidadePrimeirosProjetos.setText(informacoes.get("quantidade_primeiros_projetos"));
+		textViewValorPrimeirosProjetos.setText(informacoes.get("valor_primeiros_projetos"));
+	    textViewQuantidadePesquisa.setText(informacoes.get("quantidade_projeto_cnpq"));
+		textViewValoresPesquisa.setText(informacoes.get("valor_projetos_cnpq"));
+		textViewQuantidadeJovensPesquisadores.setText(informacoes.get("quantidade_projeto_jovens_pesquisadores"));
+		textViewValorJovensPesquisadores.setText(informacoes.get("valor_projetos_jovens_pesquisadores"));
+		textViewQuantidadeProjetosIniciacao.setText(informacoes.get("quantidade_projetos_iniciacao_cientifica"));
+		textViewValorProjetosIniciacao.setText(informacoes.get("valor_projetos_iniciacao_cientifica"));
 		
 	}
 
