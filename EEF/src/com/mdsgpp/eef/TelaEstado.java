@@ -1,7 +1,9 @@
 package com.mdsgpp.eef;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
+import com.mdsgpp.eef.controle.EstadoControle;
 import com.mdsgpp.eef.modelo.Estado;
 import com.mdsgpp.eef.parse.DadosParse;
 
@@ -44,34 +46,33 @@ public class TelaEstado extends Activity {
 		TextView textViewValorProjetosIniciacao = (TextView) findViewById(R.id.textView_projetos_iniciacao_valor);
 		
 		
-		DadosParse parser = new DadosParse(this);
 		
 		try {
-			Estado estado = parser.getEstado(posicao);
-			textViewSigla.setText(estado.getSigla());
-			textViewNome.setText(estado.getNome());
-			textViewPopulacao.setText(estado.getPopulacao()+"");
-			textViewParticipacaoPib.setText(estado.getParticipacaoPercentualPIB()[estado.getParticipacaoPercentualPIB().length-1]+"%");
-			textViewQuantidadeProjetos.setText(estado.getNumeroDeProjetosCienciaTecnologia()[estado.getNumeroDeProjetosCienciaTecnologia().length-1]+"");
-			textViewValorProjetos.setText(estado.getValorInvestidoCienciaTecnologia()[estado.getValorInvestidoCienciaTecnologia().length-1]+"");
-			textViewFundamentalIdeb.setText(estado.getIdebs()[estado.getIdebs().length-1].getFundamental()+"");
-			textViewEnsinoMedioIdeb.setText(estado.getIdebs()[estado.getIdebs().length-1].getMedio()+"");
-			textViewIniciaisIdeb.setText(estado.getIdebs()[estado.getIdebs().length-1].getSeriesIniciais()+"");
-			textViewQuantidadePrimeirosProjetos.setText(estado.getPrimProj()[estado.getPrimProj().length-1].getQuantidade()+"");
-			textViewValorPrimeirosProjetos.setText(estado.getPrimProj()[estado.getPrimProj().length-1].getValor()+"");
-			textViewQuantidadePesquisa.setText(estado.getCnpq()[estado.getCnpq().length-1].getQuantidade()+"");
-			textViewValoresPesquisa.setText(estado.getCnpq()[estado.getCnpq().length-1].getValor()+"");
-			textViewQuantidadeJovensPesquisadores.setText(estado.getJovensPesq()[estado.getJovensPesq().length-1].getQuantidade()+"");
-			textViewValorJovensPesquisadores.setText(estado.getJovensPesq()[estado.getJovensPesq().length-1].getValor()+"");
-			textViewQuantidadeProjetosIniciacao.setText(estado.getpInct()[estado.getpInct().length-1].getQuantidade()+"");
-			textViewValorProjetosIniciacao.setText(estado.getpInct()[estado.getpInct().length-1].getValor()+"");
+			ArrayList<String> informacoes;
+			informacoes = EstadoControle.getInstancia().getInformacoesEstado(posicao, this);
+			
+			textViewSigla.setText(informacoes.get(0));
+			textViewNome.setText(informacoes.get(1));
+			textViewPopulacao.setText(informacoes.get(2));
+			textViewParticipacaoPib.setText(informacoes.get(3));
+			textViewQuantidadeProjetos.setText(informacoes.get(4));
+			textViewValorProjetos.setText(informacoes.get(5));
+			textViewFundamentalIdeb.setText(informacoes.get(6));
+			textViewEnsinoMedioIdeb.setText(informacoes.get(7));
+			textViewIniciaisIdeb.setText(informacoes.get(8));
+			textViewQuantidadePrimeirosProjetos.setText(informacoes.get(9));
+			textViewValorPrimeirosProjetos.setText(informacoes.get(10));
+			textViewQuantidadePesquisa.setText(informacoes.get(11));
+			textViewValoresPesquisa.setText(informacoes.get(12));
+			textViewQuantidadeJovensPesquisadores.setText(informacoes.get(13));
+			textViewValorJovensPesquisadores.setText(informacoes.get(14));
+			textViewQuantidadeProjetosIniciacao.setText(informacoes.get(15));
+			textViewValorProjetosIniciacao.setText(informacoes.get(16));
 			
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		
+			
 	}
 
 	@Override
