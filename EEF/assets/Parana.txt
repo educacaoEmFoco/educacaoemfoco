@@ -23,7 +23,7 @@ populacao
 
 
 numero_projetos
-2003: -
+2003: 0
 2004: 1
 2005: 9
 2006: 2
@@ -34,7 +34,7 @@ Total: 35
 
 
 valor_investido
-2003: -
+2003: 0
 2004: 52000
 2005: 3851815
 2006: 358478,800000191
@@ -63,7 +63,7 @@ series_iniciais
 
 
 jovens_pesquisadores
-2005: -
+2005: 0
 2006: 1
 2007: 4
 2008: 35
@@ -75,7 +75,7 @@ Total: 91
 programa_primeiros_projetos
 2007: 2
 2008: 2
-2009: -
+2009: 0
 2010: 1
 Total: 5
 
@@ -102,7 +102,7 @@ Total: 5
 
 
 valores_jovens_pesquisadores
-2005: -
+2005: 0
 2006: 190
 2007: 211,5
 2008: 1829,74000000022
@@ -114,7 +114,7 @@ Total: 3914,23000000021
 valores_programa_primeiros_projetos
 2007: 773,509999999776
 2008: 626,490000000224
-2009: -
+2009: 0
 2010: 910
 Total: 2310
 

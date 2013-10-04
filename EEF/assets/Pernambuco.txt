@@ -64,7 +64,7 @@ series_iniciais
 
 jovens_pesquisadores
 2005: 2
-2006: -
+2006: 0
 2007: 3
 2008: 20
 2009: 19
@@ -74,9 +74,9 @@ Total: 52
 
 programa_primeiros_projetos
 2007: 3
-2008: -
+2008: 0
 2009: 3
-2010: -
+2010: 0
 Total: 6
 
 
@@ -103,7 +103,7 @@ Total: 15
 
 valores_jovens_pesquisadores
 2005: 266,060000000056
-2006: -
+2006: 0
 2007: 122,530000000028
 2008: 1055,94999999925
 2009: 741,200000000186
@@ -113,9 +113,9 @@ Total: 2297,03999999957
 
 valores_programa_primeiros_projetos
 2007: 1800
-2008: -
+2008: 0
 2009: 1170
-2010: -
+2010: 0
 Total: 2970
 
 
