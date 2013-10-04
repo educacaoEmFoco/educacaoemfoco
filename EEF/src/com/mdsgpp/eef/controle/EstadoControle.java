@@ -22,7 +22,7 @@ public class EstadoControle {
 		return instancia; 
 	}
 	
-	public ArrayList<String> getInformacoesEstado(int posicao, Context context) throws IOException {
+	public HashMap<String, String> getInformacoesEstado(int posicao, Context context) throws IOException {
 		DadosParse parser = new DadosParse(context);
 		Estado estado = parser.getEstado(posicao);
 		
@@ -34,19 +34,18 @@ public class EstadoControle {
 		informacoes.put("percentual_participacao_pib", estado.getParticipacaoPercentualPIB()[estado.getParticipacaoPercentualPIB().length-1] + "%" );
 		informacoes.put("projetos_ciencia_tecnologia", estado.getNumeroDeProjetosCienciaTecnologia()[estado.getNumeroDeProjetosCienciaTecnologia().length-1] + " projetos" );
 		informacoes.put("valor_ciencia_tecnologia", estado.getValorInvestidoCienciaTecnologia()[estado.getValorInvestidoCienciaTecnologia().length-1] + "" );
-		informacoes.add( "Ensino Fundamental (séries finais): " + estado.getIdebs()[estado.getIdebs().length-1].getFundamental());
-		informacoes.add( "Ensino Médio: " + estado.getIdebs()[estado.getIdebs().length-1].getMedio() + "");
-		informacoes.add( "Ensino Fundamental (séries iniciais): " + estado.getIdebs()[estado.getIdebs().length-1].getSeriesIniciais() + "");
-		informacoes.add( estado.getPrimeirosProjetos()[estado.getPrimeirosProjetos().length-1].getQuantidade() + "");
-		informacoes.add( estado.getPrimeirosProjetos()[estado.getPrimeirosProjetos().length-1].getValor() + "");
-		informacoes.add( estado.getProjetosApoioCnpq()[estado.getProjetosApoioCnpq().length-1].getQuantidade() + "");
-		informacoes.add( estado.getProjetosApoioCnpq()[estado.getProjetosApoioCnpq().length-1].getValor() + "");
-		informacoes.add( estado.getProjetoJovensPesquisadores()[estado.getProjetoJovensPesquisadores().length-1].getQuantidade() + "");
-		informacoes.add( estado.getProjetoJovensPesquisadores()[estado.getProjetoJovensPesquisadores().length-1].getValor() + "");
-		informacoes.add( estado.getProjetosInct()[estado.getProjetosInct().length-1].getQuantidade() + "");
-		informacoes.add( estado.getProjetosInct()[estado.getProjetosInct().length-1].getValor() + "");
-
+		informacoes.put("ideb_fundamental_final", "Ensino Fundamental: "+ estado.getIdebs()[estado.getIdebs().length-1].getFundamental());
+		informacoes.put("ideb_ensino_medio", "Ensino Médio: " + estado.getIdebs()[estado.getIdebs().length-1].getMedio() + "");
+		informacoes.put("ideb_fundamental_inicial ","Ensino Fundamental:" + estado.getIdebs()[estado.getIdebs().length-1].getSeriesIniciais() + "");
+		informacoes.put("quantidade_primeiros_projetos","Quantidade dos Primeiros Projetos:"+ estado.getPrimeirosProjetos()[estado.getPrimeirosProjetos().length-1].getQuantidade() + "");
+		informacoes.put("valor_primeiros_projetos","Valor dos Primeiros Projetos:"+ estado.getPrimeirosProjetos()[estado.getPrimeirosProjetos().length-1].getValor() + "");
+		informacoes.put("quantidade_projeto_cnpq","Quantidade Projetos  de Apoio Cnpq" + estado.getProjetosApoioCnpq()[estado.getProjetosApoioCnpq().length-1].getQuantidade() + "");
+		informacoes.put("valor_projetos_cnpq","Valor dos Projetos de Apoio Cnpq" + estado.getProjetosApoioCnpq()[estado.getProjetosApoioCnpq().length-1].getValor() + "");
+		informacoes.put("quantidade_projeto_jovens_pesquisadores","Quantidade de projetos Jovens Pesquisadores" + estado.getProjetoJovensPesquisadores()[estado.getProjetoJovensPesquisadores().length-1].getQuantidade() + "");
+		informacoes.put("valor_projetos_jovens_pesquisadores","Valor de projetos Jovens Pesquisadores" + estado.getProjetoJovensPesquisadores()[estado.getProjetoJovensPesquisadores().length-1].getValor() + "");
+		informacoes.put("quantidade_projetos_iniciacao_cientifica","Quantidade de projetos de Iniciação Científica" + estado.getProjetosInct()[estado.getProjetosInct().length-1].getQuantidade() + "");
+		informacoes.put( "valor_projetos_iniciacao_cientifica","Valor de projetos de Iniciação Científica" + estado.getProjetosInct()[estado.getProjetosInct().length-1].getValor() + "");
+		return informacoes;
 		
-		return informacoes; 
 	}
 }
