@@ -3,8 +3,6 @@ package com.mdsgpp.eef.modelo;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import android.util.Log;
-
 public class Estado {
 
 	private String nome;
@@ -30,8 +28,6 @@ public class Estado {
 		this.nome = nome;
 		this.sigla = sigla;
 		
-		Log.i("teste", nome+"-"+sigla);
-		
 		preencheDados(informacoes);		
 	}
 
@@ -53,16 +49,28 @@ public class Estado {
 		return participacaoPercentualPIB;
 	}
 
-	public void setParticipacaoPercentualPIB(double[] participacaoPercentualPIB) {
-		this.participacaoPercentualPIB = participacaoPercentualPIB;
+	public void setParticipacaoPercentualPIB(HashMap<String, ArrayList<String[]>> informacoes) {
+		
+		double participacaoPercentual[];
+		ArrayList<String[]> dados = informacoes.get("participacao_estadual_pib");
+			
+		participacaoPercentual = new double[dados.size()];
+		for (int i=0; i<dados.size(); i++) {
+			participacaoPercentual[i] = Double.parseDouble(dados.get(i)[1].replaceAll(",", "."));
+		}
+			
+		this.participacaoPercentualPIB = participacaoPercentual;
 	}
 
 	public int getPopulacao() {
 		return populacao;
 	}
 
-	public void setPopulacao(int populacao) {
-		this.populacao = populacao;
+	public void setPopulacao(HashMap<String, ArrayList<String[]>> informacoes) {
+		
+		ArrayList<String[]> dados = informacoes.get("populacao");
+		this.populacao = Integer.parseInt(dados.get(0)[1].replaceAll(",", "."));
+
 	}
 
 	public int[] getNumeroDeProjetosCienciaTecnologia() {
@@ -74,9 +82,19 @@ public class Estado {
 		return numeroDeProjetosCienciaTecnologia;
 	}
 
-	public void setNumeroDeProjetosCienciaTecnologia(
-			int[] numeroDeProjetosCienciaTecnologia) {
-		this.numeroDeProjetosCienciaTecnologia = numeroDeProjetosCienciaTecnologia;
+	public void setNumeroDeProjetosCienciaTecnologia(HashMap<String, ArrayList<String[]>> informacoes) {
+		int quantidadeProjetosCienciaTecnologia[] = null;
+		ArrayList<String[]> dados;
+		
+		if (informacoes.containsKey("numero_projetos")) {
+			dados = informacoes.get("numero_projetos");
+			quantidadeProjetosCienciaTecnologia = new int[dados.size()];
+			for (int i=0; i<dados.size(); i++) {
+				quantidadeProjetosCienciaTecnologia[i] = Integer.parseInt(dados.get(i)[1].replaceAll(",", "."));
+			}
+		}
+		
+		this.numeroDeProjetosCienciaTecnologia = quantidadeProjetosCienciaTecnologia;
 	}
 
 	public double[] getValorInvestidoCienciaTecnologia() {
@@ -88,8 +106,19 @@ public class Estado {
 		return valorInvestidoCienciaTecnologia;
 	}
 
-	public void setValorInvestidoCienciaTecnologia(double[] valorInvestidoCienciaTecnologia) {
-		this.valorInvestidoCienciaTecnologia = valorInvestidoCienciaTecnologia;
+	public void setValorInvestidoCienciaTecnologia(HashMap<String, ArrayList<String[]>> informacoes) {
+		double valoresProjetosCienciaTecnologia[] = null;
+		ArrayList<String[]> dados;
+		
+		if (informacoes.containsKey("valor_investido")) {
+			dados = informacoes.get("valor_investido");
+			valoresProjetosCienciaTecnologia = new double[dados.size()];
+			for (int i=0; i<dados.size(); i++) {
+				valoresProjetosCienciaTecnologia[i] = Double.parseDouble(dados.get(i)[1].replaceAll(",", "."));
+			}
+		}
+		
+		this.valorInvestidoCienciaTecnologia = valoresProjetosCienciaTecnologia;
 	}
 
 	public Ideb[] getIdebs() {
@@ -101,8 +130,27 @@ public class Estado {
 		return idebs;
 	}
 
-	public void setIdebs(Ideb[] idebs) {
-		this.idebs = idebs;
+	public void setIdebs(HashMap<String, ArrayList<String[]>> informacoes) {
+		ArrayList<String[]> dadosFundamentalFinais;
+		ArrayList<String[]> dadosFundamentalIniciais;
+		ArrayList<String[]> dadosMedio;
+		Ideb ideb[] = null;
+		
+		dadosFundamentalFinais = informacoes.get("5a_8a");
+		dadosFundamentalIniciais = informacoes.get("series_iniciais");
+		dadosMedio = informacoes.get("ensino_medio");
+		
+		ideb = new Ideb[dadosMedio.size()];
+		for (int i=0; i<ideb.length; i++) {
+			ideb[i] = new Ideb();
+			ideb[i].setEstado(this); 
+			
+			ideb[i].setFundamental(Double.parseDouble(dadosFundamentalFinais.get(i)[1].replaceAll(",", ".")));
+			ideb[i].setMedio(Double.parseDouble(dadosMedio.get(i)[1].replaceAll(",", ".")));
+			ideb[i].setSeriesIniciais(Double.parseDouble(dadosFundamentalIniciais.get(i)[1].replaceAll(",", ".")));
+		}
+		
+		this.idebs = ideb;
 	}
 
 	public Media[] getmediaNotasPorTurma() {
@@ -180,8 +228,26 @@ public class Estado {
 		return primeirosProjetos;
 	}
 
-	public void setPrimeirosProjetos(Projeto[] primeirosProjetos) {
-		this.primeirosProjetos = primeirosProjetos;
+	public void setPrimeirosProjetos(HashMap<String, ArrayList<String[]>> informacoes) {
+		Projeto projetosPrimeirosProjetos[] = null;
+		
+		if (informacoes.containsKey("programa_primeiros_projetos") 
+				&& informacoes.containsKey("valores_programa_primeiros_projetos")) {
+
+			ArrayList<String[]> dadosProjetos = informacoes.get("programa_primeiros_projetos");
+			ArrayList<String[]> dadosValores = informacoes.get("valores_programa_primeiros_projetos");
+			
+			projetosPrimeirosProjetos = new Projeto[dadosProjetos.size()];
+			
+			for (int i=0; i<projetosPrimeirosProjetos.length; i++) { 
+				projetosPrimeirosProjetos[i] = new Projeto();
+				projetosPrimeirosProjetos[i].setEstado(this);
+				projetosPrimeirosProjetos[i].setQuantidade(Integer.parseInt(dadosProjetos.get(i)[1].replaceAll(",", ".")));
+				projetosPrimeirosProjetos[i].setValor(Double.parseDouble(dadosValores.get(i)[1].replaceAll(",", ".")));
+			}
+		}
+		
+		this.primeirosProjetos = projetosPrimeirosProjetos;
 	}
 
 	public Projeto[] getProjetosInct() {
@@ -196,8 +262,26 @@ public class Estado {
 		return projetoInct;
 	}
 
-	public void setProjetosInct(Projeto[] projetoInct) {
-		this.projetoInct = projetoInct;
+	public void setProjetosInct(HashMap<String, ArrayList<String[]>> informacoes) {
+		Projeto projetosIniciacaoCientifica[] = null;
+		
+		if (informacoes.containsKey("projetos_inct") 
+				&& informacoes.containsKey("valores_projetos_inct")) {
+
+			ArrayList<String[]> dadosProjetos = informacoes.get("projetos_inct");
+			ArrayList<String[]> dadosValores = informacoes.get("valores_projetos_inct");
+			
+			projetosIniciacaoCientifica = new Projeto[dadosProjetos.size()];
+			
+			for (int i=0; i<projetosIniciacaoCientifica.length; i++) { 
+				projetosIniciacaoCientifica[i] = new Projeto();
+				projetosIniciacaoCientifica[i].setEstado(this);
+				projetosIniciacaoCientifica[i].setQuantidade(Integer.parseInt(dadosProjetos.get(i)[1].replaceAll(",", ".")));
+				projetosIniciacaoCientifica[i].setValor(Double.parseDouble(dadosValores.get(i)[1].replaceAll(",", ".")));
+			}
+		}
+		
+		this.projetoInct = projetosIniciacaoCientifica;
 	}
 
 	public Projeto[] getProjetosApoioCnpq() {
@@ -212,8 +296,26 @@ public class Estado {
 		return projetosApoioCnpq;
 	}
 
-	public void setProjetosApoioCnpq(Projeto[] projetosApoioCnpq) {
-		this.projetosApoioCnpq = projetosApoioCnpq;
+	public void setProjetosApoioCnpq(HashMap<String, ArrayList<String[]>> informacoes) {
+		Projeto projetosCnpq[] = null;
+		
+		if (informacoes.containsKey("projetos_apoio_pesquisa_cnpq") 
+				&& informacoes.containsKey("valores_projetos_apoio_pesquisa_cnpq")) {
+
+			ArrayList<String[]> dadosProjetos = informacoes.get("projetos_apoio_pesquisa_cnpq");
+			ArrayList<String[]> dadosValores = informacoes.get("valores_projetos_apoio_pesquisa_cnpq");
+			
+			projetosCnpq = new Projeto[dadosProjetos.size()];
+			
+			for (int i=0; i<projetosCnpq.length; i++) { 
+				projetosCnpq[i] = new Projeto();
+				projetosCnpq[i].setEstado(this);
+				projetosCnpq[i].setQuantidade(Integer.parseInt(dadosProjetos.get(i)[1].replaceAll(",", ".")));
+				projetosCnpq[i].setValor(Double.parseDouble(dadosValores.get(i)[1].replaceAll(",", ".")));
+			}
+		}
+		
+		this.projetosApoioCnpq = projetosCnpq;
 	}
 
 	public Projeto[] getProjetoJovensPesquisadores() {
@@ -228,230 +330,41 @@ public class Estado {
 		return projetoJovensPesquisadores;
 	}
 
-	public void setProjetoJovensPesquisadores(Projeto[] projetoJovensPesquisadores) {
-		this.projetoJovensPesquisadores = projetoJovensPesquisadores;
+	public void setProjetoJovensPesquisadores(HashMap<String, ArrayList<String[]>> informacoes) {
+		Projeto projetosJovensPesquisadores[] = null;
+		
+		if (informacoes.containsKey("jovens_pesquisadores") 
+				&& informacoes.containsKey("valores_jovens_pesquisadores")) {
+
+			ArrayList<String[]> dadosProjetos = informacoes.get("jovens_pesquisadores");
+			ArrayList<String[]> dadosValores = informacoes.get("valores_jovens_pesquisadores");
+			
+			projetosJovensPesquisadores = new Projeto[dadosProjetos.size()];
+			
+			for (int i=0; i<projetosJovensPesquisadores.length; i++) { 
+				projetosJovensPesquisadores[i] = new Projeto();
+				projetosJovensPesquisadores[i].setEstado(this);
+				projetosJovensPesquisadores[i].setQuantidade(Integer.parseInt(dadosProjetos.get(i)[1].replaceAll(",", ".")));
+				projetosJovensPesquisadores[i].setValor(Double.parseDouble(dadosValores.get(i)[1].replaceAll(",", ".")));
+			}
+		}
+				
+		this.projetoJovensPesquisadores = projetosJovensPesquisadores; 
 	}
 
 	private void preencheDados(HashMap<String, ArrayList<String[]>> informacoes) {
-		Ideb ideb[] = null;
-		Projeto numPrimProjetos[] = null;
-		Projeto numProjInct[] = null;
-		Projeto numProjCnpq[] = null;
-		Projeto numJovensPesq[] = null;
-		ArrayList<String[]> dadosH;
 		
-		if (informacoes.containsKey("populacao")) {
-			dadosH = informacoes.get("populacao");
-			this.populacao = Integer.parseInt(dadosH.get(0)[1].replaceAll(",", "."));
-		} 
-		
-		if (informacoes.containsKey("5a_8a")) {
-			dadosH = informacoes.get("5a_8a");
-			if (ideb == null)
-				ideb = new Ideb[dadosH.size()];
-			for (int i=0; i<dadosH.size(); i++) {
-				if (ideb[i] == null) 
-					ideb[i] = new Ideb();
-				ideb[i].setEstado(this); // exemplo do set estado, cardinalidade oposta, para os projetos
-				if (dadosH.get(i)[1].equalsIgnoreCase("-"))
-					ideb[i].setFundamental(0);
-				else 
-					ideb[i].setFundamental(Double.parseDouble(dadosH.get(i)[1].replaceAll(",", ".")));
-			}
-		}
-		
-		if (informacoes.containsKey("ensino_medio")) {
-			dadosH = informacoes.get("ensino_medio");
-			if (ideb == null)
-				ideb = new Ideb[dadosH.size()];
-			for (int i=0; i<dadosH.size(); i++) {
-				if (ideb[i] == null) 
-					ideb[i] = new Ideb();
-				if (dadosH.get(i)[1].equalsIgnoreCase("-"))
-					ideb[i].setMedio(0);
-				else 
-					ideb[i].setMedio(Double.parseDouble(dadosH.get(i)[1].replaceAll(",", ".")));
-			}
-		}
-		
-		if (informacoes.containsKey("series_iniciais")) {
-			dadosH = informacoes.get("series_iniciais");
-			if (ideb == null)
-				ideb = new Ideb[dadosH.size()];
-			for (int i=0; i<dadosH.size(); i++) {
-				if (ideb[i] == null) 
-					ideb[i] = new Ideb();
-				if (dadosH.get(i)[1].equalsIgnoreCase("-"))
-					ideb[i].setSeriesIniciais(0);
-				else 
-					ideb[i].setSeriesIniciais(Double.parseDouble(dadosH.get(i)[1].replaceAll(",", ".")));
-			}
-		}
-		
-		if (informacoes.containsKey("projetos_apoio_pesquisa_cnpq")) {
-			dadosH = informacoes.get("projetos_apoio_pesquisa_cnpq");
-			if (numProjCnpq == null) {
-				numProjCnpq = new Projeto[dadosH.size()];
-			}
-			for (int i=0; i<dadosH.size(); i++) {
-				if (numProjCnpq[i] == null) 
-					numProjCnpq[i] = new Projeto();
-				numProjCnpq[i].setEstado(this);
-				if (dadosH.get(i)[1].equalsIgnoreCase("-"))
-					numProjCnpq[i].setQuantidade(0);
-				else 
-					numProjCnpq[i].setQuantidade(Integer.parseInt(dadosH.get(i)[1].replaceAll(",", ".")));
-			}
-		}
-		
-		if (informacoes.containsKey("jovens_pesquisadores")) {
-			dadosH = informacoes.get("jovens_pesquisadores");
-			if (numJovensPesq == null) {
-				numJovensPesq = new Projeto[dadosH.size()];
-			}
-			for (int i=0; i<dadosH.size(); i++) {
-				if (numJovensPesq[i] == null) 
-					numJovensPesq[i] = new Projeto();
-				numJovensPesq[i].setEstado(this);
-				if (dadosH.get(i)[1].equalsIgnoreCase("-"))
-					numJovensPesq[i].setQuantidade(0);
-				else 
-					numJovensPesq[i].setQuantidade(Integer.parseInt(dadosH.get(i)[1].replaceAll(",", ".")));
-			}
-		}
-		
-		if (informacoes.containsKey("programa_primeiros_projetos")) {
-			dadosH = informacoes.get("programa_primeiros_projetos");
-			if (numPrimProjetos == null) {
-				numPrimProjetos = new Projeto[dadosH.size()];
-			}
-			for (int i=0; i<dadosH.size(); i++) {
-				if (numPrimProjetos[i] == null) 
-					numPrimProjetos[i] = new Projeto();
-				numPrimProjetos[i].setEstado(this);
-				if (dadosH.get(i)[1].equalsIgnoreCase("-"))
-					numPrimProjetos[i].setQuantidade(0);
-				else 
-					numPrimProjetos[i].setQuantidade(Integer.parseInt(dadosH.get(i)[1].replaceAll(",", ".")));
-			}
-		}
-		
-		if (informacoes.containsKey("projetos_inct")) {
-			dadosH = informacoes.get("projetos_inct");
-			if (numProjInct == null) {
-				numProjInct = new Projeto[dadosH.size()];
-			}
-			for (int i=0; i<dadosH.size(); i++) {
-				if (numProjInct[i] == null) 
-					numProjInct[i] = new Projeto();
-				numProjInct[i].setEstado(this);
-				if (dadosH.get(i)[1].equalsIgnoreCase("-"))
-					numProjInct[i].setQuantidade(0);
-				else 
-					numProjInct[i].setQuantidade(Integer.parseInt(dadosH.get(i)[1].replaceAll(",", ".")));
-			}
-		}
-		
-		if (informacoes.containsKey("valores_projetos_apoio_pesquisa_cnpq")) {
-			dadosH = informacoes.get("valores_projetos_apoio_pesquisa_cnpq");
-			if (numProjCnpq == null) {
-				numProjCnpq = new Projeto[dadosH.size()];
-			}
-			for (int i=0; i<dadosH.size(); i++) {
-				if (numProjCnpq[i] == null) 
-					numProjCnpq[i] = new Projeto();
-				if (dadosH.get(i)[1].equalsIgnoreCase("-"))
-					numProjCnpq[i].setValor(0);
-				else 
-					numProjCnpq[i].setValor(Double.parseDouble(dadosH.get(i)[1].replaceAll(",", ".")));
-			}
-		}
-		
-		if (informacoes.containsKey("valores_projetos_inct")) {
-			dadosH = informacoes.get("valores_projetos_inct");
-			if (numProjInct == null) {
-				numProjInct = new Projeto[dadosH.size()];
-			}
-			for (int i=0; i<dadosH.size(); i++) {
-				if (numProjInct[i] == null) 
-					numProjInct[i] = new Projeto();
-				if (dadosH.get(i)[1].equalsIgnoreCase("-"))
-					numProjInct[i].setValor(0);
-				else 
-					numProjInct[i].setValor(Double.parseDouble(dadosH.get(i)[1].replaceAll(",", ".")));
-			}
-		}
-		
-		if (informacoes.containsKey("valores_programa_primeiros_projetos")) {
-			dadosH = informacoes.get("valores_programa_primeiros_projetos");
-			if (numPrimProjetos == null) {
-				numPrimProjetos = new Projeto[dadosH.size()];
-			}
-			for (int i=0; i<dadosH.size(); i++) {
-				if (numPrimProjetos[i] == null) 
-					numPrimProjetos[i] = new Projeto();
-				if (dadosH.get(i)[1].equalsIgnoreCase("-"))
-					numPrimProjetos[i].setValor(0);
-				else 
-					numPrimProjetos[i].setValor(Double.parseDouble(dadosH.get(i)[1].replaceAll(",", ".")));
-			}
-		}
-		
-		if (informacoes.containsKey("valores_jovens_pesquisadores")) {
-			dadosH = informacoes.get("valores_jovens_pesquisadores");
-			if (numJovensPesq == null) {
-				numJovensPesq = new Projeto[dadosH.size()];
-			}
-			for (int i=0; i<dadosH.size(); i++) {
-				if (numJovensPesq[i] == null) 
-					numJovensPesq[i] = new Projeto();
-				if (dadosH.get(i)[1].equalsIgnoreCase("-"))
-					numJovensPesq[i].setValor(0);
-				else 
-					numJovensPesq[i].setValor(Double.parseDouble(dadosH.get(i)[1].replaceAll(",", ".")));
-			}
-		}
-		
-		if (informacoes.containsKey("participacao_estadual_pib")) {
-			dadosH = informacoes.get("participacao_estadual_pib");
-			this.participacaoPercentualPIB = new double[dadosH.size()];
-			for (int i=0; i<dadosH.size(); i++) {
-				if (dadosH.get(i)[1].equalsIgnoreCase("-"))
-					this.participacaoPercentualPIB[i] = 0;
-				else 
-					this.participacaoPercentualPIB[i] = Double.parseDouble(dadosH.get(i)[1].replaceAll(",", "."));
-			}
-		}
-		
-		if (informacoes.containsKey("numero_projetos")) {
-			dadosH = informacoes.get("numero_projetos");
-			this.numeroDeProjetosCienciaTecnologia = new int[dadosH.size()];
-			for (int i=0; i<dadosH.size(); i++) {
-				if (dadosH.get(i)[1].equalsIgnoreCase("-"))
-					this.numeroDeProjetosCienciaTecnologia[i] = 0;
-				else 
-					this.numeroDeProjetosCienciaTecnologia[i] = Integer.parseInt(dadosH.get(i)[1].replaceAll(",", "."));
-			}
-		}
-		
-		if (informacoes.containsKey("valor_investido")) {
-			dadosH = informacoes.get("valor_investido");
-			this.valorInvestidoCienciaTecnologia = new double[dadosH.size()];
-			Log.i("Teste", "quantidade: "+dadosH.size());
-			for (int i=0; i<dadosH.size(); i++) {
-				if (dadosH.get(i)[1].equalsIgnoreCase("-")) {
-					this.valorInvestidoCienciaTecnologia[i] = 0;
-				} else 
-					this.valorInvestidoCienciaTecnologia[i] = Double.parseDouble(dadosH.get(i)[1].replaceAll(",", "."));
-			}
-		}
+		this.setPopulacao(informacoes);
+		this.setIdebs(informacoes);
+		this.setNumeroDeProjetosCienciaTecnologia(informacoes);
+		this.setValorInvestidoCienciaTecnologia(informacoes);
+		this.setParticipacaoPercentualPIB(informacoes);
+		this.setPrimeirosProjetos(informacoes);
+		this.setProjetoJovensPesquisadores(informacoes);
+		this.setProjetosApoioCnpq(informacoes);
+		this.setProjetosApoioCnpq(informacoes);
 		
 
-		this.setIdebs(ideb);
-		this.setPrimeirosProjetos(numPrimProjetos);
-		this.setProjetosInct(numProjInct);
-		this.setProjetosApoioCnpq(numProjCnpq);
-		this.setProjetoJovensPesquisadores(numJovensPesq);
 	}
 	
 }
