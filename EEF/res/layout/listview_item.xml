@@ -12,9 +12,11 @@
         android:layout_marginLeft="15dp"
         android:text=""
         android:textSize="30sp"
+        android:textColor="#00008B"
         android:textAppearance="?android:attr/textAppearanceLarge" />
     
     
+   
     <TextView android:id="@+id/textview_lista_estados"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -22,7 +24,9 @@
         android:layout_marginLeft="30dp"
         android:text=""
         android:textSize="20sp"
+        android:textColor="#00008B"
         android:textAppearance="?android:attr/textAppearanceMedium" />
+   
     	    	    	
     
 </LinearLayout>

@@ -3,24 +3,29 @@
    		xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/scrollView1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent"
+        style="@style/AppBaseColorTest">
 
         <LinearLayout
             android:id="@+id/linearlayout_estado"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="#00008B"
             android:orientation="vertical" >
+            
 
             <TextView
                 android:id="@+id/textView_sigla"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="#00008B"
                 android:text="@string/string_vazia" />
             
              <TextView
                 android:id="@+id/textView_nome_estado"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="#00008B"
                 android:text="@string/string_vazia" />
              
               <TextView
@@ -28,6 +33,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
+                android:textColor="#00008B"
                 android:text="@string/populacao" />
               
               <TextView
@@ -35,6 +41,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
+                 android:textColor="#00008B"
                 android:text="@string/string_vazia" />
               
               <TextView
@@ -42,16 +49,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
+                 android:textColor="#00008B"
                 android:text="@string/participacao_PIB" />
               
-              
-              
+                            
               
               <TextView
                 android:id="@+id/textView_participacao_pib_valor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
+                android:textColor="#00008B"
                 android:text="@string/string_vazia" />
               
               
@@ -63,6 +71,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
+                android:textColor="#00008B"
                 android:text="@string/numero_projetos"/>
                
                
@@ -71,6 +80,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
+                 android:textColor="#00008B"
                 android:text="@string/string_vazia" />
                
              
@@ -79,6 +89,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
+                android:textColor="#00008B"
                 android:text="@string/string_vazia" />
                
              
@@ -88,6 +99,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
+                android:textColor="#00008B"
                 android:text="@string/participacao_IDEB" />
                 
                <TextView
@@ -95,6 +107,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
+                android:textColor="#00008B"
                 android:text="@string/string_vazia" />
                 
                <TextView
@@ -102,6 +115,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
+                 android:textColor="#00008B"
                 android:text="@string/string_vazia" />
                  
                 <TextView
@@ -109,6 +123,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
+                android:textColor="#00008B"
                 android:text="@string/string_vazia" />
                 
                 <TextView
@@ -116,6 +131,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
+                android:textColor="#00008B"
                 android:text="@string/Programa_primeiros_projetos" />
                 
                 <TextView
@@ -123,6 +139,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
+                android:textColor="#00008B"
                 android:text="@string/string_vazia" />
                 
                  <TextView
@@ -130,6 +147,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
+                android:textColor="#00008B"
                 android:text="@string/string_vazia" />
                 
                 <TextView
@@ -137,6 +155,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
+                android:textColor="#00008B"
                 android:text="@string/Projetos_pesquisa_CNPq" />
                 
                 <TextView
@@ -144,6 +163,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
+				android:textColor="#00008B"
                 android:text="@string/string_vazia" />
                 
                 <TextView
@@ -151,6 +171,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
+                android:textColor="#00008B"
                 android:text="@string/string_vazia" />
                 
                 <TextView
@@ -158,6 +179,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
+                android:textColor="#00008B"
                 android:text="@string/jovens_pesquisadores" />
                 
                 <TextView
@@ -165,6 +187,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
+                android:textColor="#00008B"
                 android:text="@string/string_vazia" />
                 
                 <TextView
@@ -172,6 +195,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
+                android:textColor="#00008B"
                 android:text="@string/string_vazia" />
                 
                 <TextView
@@ -179,6 +203,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
+                android:textColor="#00008B"
                 android:text="@string/projeto_iniciacao" />
                              
                 <TextView
@@ -186,6 +211,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
+                android:textColor="#00008B"
                 android:text="@string/string_vazia" />
                 
                 <TextView
@@ -193,6 +219,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
+                android:textColor="#00008B"
                 android:text="@string/string_vazia" />
                              
 
