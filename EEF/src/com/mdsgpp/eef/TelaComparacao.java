@@ -8,21 +8,28 @@ import android.widget.Spinner;
 
 public class TelaComparacao extends Activity {
 	
-	Spinner spinnerestados; 
+	Spinner estadosspinner01; 
+	Spinner estadosspinner02; 
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_tela_comparacao);
 		
-		// Captura o spinner
-		spinnerestados = (Spinner) findViewById(R.id.spinner1);
+		// Captura o spinners
+		estadosspinner01 = (Spinner) findViewById(R.id.spinner1);
+		estadosspinner02 = (Spinner) findViewById(R.id.spinner2);
 		
-		ArrayAdapter<CharSequence> estados = ArrayAdapter.createFromResource(this, R.array.estados, android.R.layout.simple_dropdown_item_1line);
-		estados.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
+		ArrayAdapter<CharSequence> estados01 = ArrayAdapter.createFromResource(this, R.array.estados, android.R.layout.simple_list_item_1);
+		estados01.setDropDownViewResource(android.R.layout.simple_list_item_1);
 		
-		// Define o adapter para o spinner
-		spinnerestados.setAdapter(estados);
+		ArrayAdapter<CharSequence> estados02 = ArrayAdapter.createFromResource(this, R.array.estados, android.R.layout.simple_list_item_1);
+		estados02.setDropDownViewResource(android.R.layout.simple_list_item_1);
+		
+		// Define o adapter para os spinners
+		estadosspinner01.setAdapter(estados01);
+		estadosspinner02.setAdapter(estados02);
+		
 	}
 
 	@Override
