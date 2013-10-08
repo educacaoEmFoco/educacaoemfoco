@@ -3,8 +3,9 @@
     android:id="@+id/linearLayoutHorizontal"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:orientation ="horizontal" 
-    android:background="@color/blue" >
+    android:orientation ="horizontal"
+    android:background="@color/white" >
+   
    
     <TextView android:id="@+id/textview_lista_siglas"
         android:layout_width="wrap_content"
@@ -13,7 +14,7 @@
         android:layout_marginLeft="15dp"
         android:text=""
         android:textSize="30sp"
-        android:textColor="#00008B"
+        android:textColor="#FF4500"
         android:textAppearance="?android:attr/textAppearanceLarge" />
     
     
@@ -25,7 +26,7 @@
         android:layout_marginLeft="30dp"
         android:text=""
         android:textSize="20sp"
-        android:textColor="#00008B"
+        android:textColor="#FF4500"
         android:textAppearance="?android:attr/textAppearanceMedium" />
    
     	    	    	
