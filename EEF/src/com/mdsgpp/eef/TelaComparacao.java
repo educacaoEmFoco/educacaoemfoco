@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
-import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
@@ -15,12 +14,13 @@ import android.widget.Spinner;
 
 public class TelaComparacao extends Activity {
 	
-	Spinner estadosspinner01; 
-	Spinner estadosspinner02; 
-	ArrayAdapter<String> estadosAdapter01;
-	ArrayAdapter<String> estadosAdapter02;
-	ArrayList<String> estados01;
-	ArrayList<String> estados02;
+	private Spinner estadosSpinner01; 
+	private Spinner estadosSpinner; 
+	private ArrayAdapter<String> estadosAdapter01;
+	private ArrayAdapter<String> estadosAdapter02;
+	private ArrayList<String> estados01;
+	private ArrayList<String> estados02;
+	private ArrayList<String> todosEstados;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -48,11 +48,11 @@ public class TelaComparacao extends Activity {
 		estados01 = new ArrayList<String>();
 		estados02 = new ArrayList<String>();
 		
-		estadosspinner01 = (Spinner) findViewById(R.id.spinner1);
-		estadosspinner01.setOnItemSelectedListener( new OnItemSelectedListener() {
+		estadosSpinner01 = (Spinner) findViewById(R.id.spinner1);
+		estadosSpinner01.setOnItemSelectedListener( new OnItemSelectedListener() {
 			@Override
 			public void onItemSelected(AdapterView<?> adapter, View view, int posicao, long id) {
-				atualizaValoresSpinner02( estadosspinner01.getSelectedItem().toString() );
+				atualizaValoresSpinner02( estadosSpinner01.getSelectedItem().toString() );
 			}
 			@Override
 			public void onNothingSelected(AdapterView<?> arg0) {
@@ -60,11 +60,11 @@ public class TelaComparacao extends Activity {
 			}
 		});
 		
-		estadosspinner02 = (Spinner) findViewById(R.id.spinner2);
-		estadosspinner02.setOnItemSelectedListener( new OnItemSelectedListener() {
+		estadosSpinner = (Spinner) findViewById(R.id.spinner2);
+		estadosSpinner.setOnItemSelectedListener( new OnItemSelectedListener() {
 			@Override
 			public void onItemSelected(AdapterView<?> adapter, View view, int posicao, long id) {
-				atualizaValoresSpinner01( estadosspinner02.getSelectedItem().toString() );
+				atualizaValoresSpinner01( estadosSpinner.getSelectedItem().toString() );
 			}
 			@Override
 			public void onNothingSelected(AdapterView<?> arg0) {
@@ -78,7 +78,7 @@ public class TelaComparacao extends Activity {
 		estadosAdapter01 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, estados01);
 		estadosAdapter01.setDropDownViewResource(android.R.layout.simple_list_item_1);
 		
-		estadosspinner01.setAdapter(estadosAdapter01);
+		estadosSpinner01.setAdapter(estadosAdapter01);
 	}
 	
 	private void setAdapterSpinner02() {
@@ -86,7 +86,7 @@ public class TelaComparacao extends Activity {
 		estadosAdapter02.setDropDownViewResource(android.R.layout.simple_list_item_1);
 		
 		// Define o adapter para os spinners
-		estadosspinner02.setAdapter(estadosAdapter02);
+		estadosSpinner.setAdapter(estadosAdapter02);
 	}
 	
 	private void preencheEstados01() {
@@ -153,6 +153,39 @@ public class TelaComparacao extends Activity {
 		estados02.add("Tocantins");
 	
 	}
+	
+	private void preencheTodosEstados() {
+		todosEstados.clear();
+		
+		todosEstados.add("Acre");
+		todosEstados.add("Alagoas");
+		todosEstados.add("Amapá");
+		todosEstados.add("Amazonas");
+		todosEstados.add("Bahia");
+		todosEstados.add("Ceará");
+		todosEstados.add("Distrito Federal");
+		todosEstados.add("Espírito Santo");
+		todosEstados.add("Goiás");
+		todosEstados.add("Maranhão");
+		todosEstados.add("Mato Grosso");
+		todosEstados.add("Mato Grosso do Sul");
+		todosEstados.add("Minas Gerais");
+		todosEstados.add("Pará");
+		todosEstados.add("Paraíba");
+		todosEstados.add("Paraná");
+		todosEstados.add("Pernambuco");
+		todosEstados.add("Piauí");
+		todosEstados.add("Rio de Janeiro");
+		todosEstados.add("Rio Grande do Norte");
+		todosEstados.add("Rio Grande do Sul");
+		todosEstados.add("Rondônia");
+		todosEstados.add("Roraima");
+		todosEstados.add("Santa Catarina");
+		todosEstados.add("São Paulo");
+		todosEstados.add("Sergipe");
+		todosEstados.add("Tocantins");
+	
+	}
 
 	private void atualizaValoresSpinner01(String nome) {
 		preencheEstados01(); 
@@ -167,7 +200,17 @@ public class TelaComparacao extends Activity {
 	}
 	
     public void clickBotaoComparacaoEstados(View view) {
+    	preencheTodosEstados();
     	Intent intent = new Intent(this, TelaComparaEstados.class);
+    	estadosSpinner01.getSelectedItem().toString();
+    	estadosSpinner.getSelectedItem().toString();
+
+    	int posicao1 = todosEstados.indexOf(estadosSpinner01.getSelectedItem().toString());
+    	int posicao2 = todosEstados.indexOf(estadosSpinner.getSelectedItem().toString());
+    	
+    	intent.putExtra("INDEX_ESTADO1_ESCOLHIDO", posicao1);
+    	intent.putExtra("INDEX_ESTADO2_ESCOLHIDO", posicao2);
+    	
 		startActivity(intent);
     }
 
