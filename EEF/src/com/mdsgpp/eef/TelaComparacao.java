@@ -26,7 +26,6 @@ public class TelaComparacao extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_tela_comparacao);
 		
-		
 		inicializaSpinners(); 
 		preencheEstados01();
 		preencheEstados02();
