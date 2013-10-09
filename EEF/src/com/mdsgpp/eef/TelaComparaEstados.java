@@ -1,7 +1,13 @@
 package com.mdsgpp.eef;
 
+import java.io.IOException;
+import java.util.HashMap;
+
+import com.mdsgpp.eef.controle.EstadoControle;
+
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
 import android.widget.TextView;
 
@@ -46,6 +52,26 @@ public class TelaComparaEstados extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_tela_compara_estados);
+		
+		// Captura o intent que abriu a activity
+		Intent intent = getIntent();
+		// Captura o valor transferido através da intent
+		int posicao1 = intent.getIntExtra("INDEX_ESTADO1_ESCOLHIDO", 0);
+		int posicao2 = intent.getIntExtra("INDEX_ESTADO2_ESCOLHIDO", 0);	
+		
+		InicializaCamposTexto();
+
+	    HashMap<String, String> informacoesEstado1 = new HashMap <String, String>();
+	    HashMap<String, String> informacoesEstado2 = new HashMap <String, String>();
+	    
+	    try {
+			informacoesEstado1 = EstadoControle.getInstancia().getInformacoesEstado(posicao1, this);
+			informacoesEstado2 = EstadoControle.getInstancia().getInformacoesEstado(posicao2, this);
+			preencheCamposTexto(informacoesEstado1,informacoesEstado2);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	@Override
@@ -54,6 +80,47 @@ public class TelaComparaEstados extends Activity {
 		getMenuInflater().inflate(R.menu.tela_compara_estados, menu);
 		return true;
 	}
+	
+	private void preencheCamposTexto(HashMap<String, String> informacoes1, HashMap<String, String> informacoes2 ) {
+
+		textViewSigla1.setText(informacoes1.get("sigla"));
+		textViewNome1.setText(informacoes1.get("nome"));
+		textViewPopulacao1.setText(informacoes1.get("populacao"));
+		textViewParticipacaoPib1.setText(informacoes1.get("percentual_participacao_pib"));
+		textViewQuantidadeProjetosCienciaTecnologia1.setText(informacoes1.get("projetos_ciencia_tecnologia"));
+		textViewValorProjetosCienciaTecnologia1.setText(informacoes1.get("valor_ciencia_tecnologia"));
+		textViewFundamentalIdeb1.setText(informacoes1.get("ideb_fundamental_final"));
+		textViewEnsinoMedioIdeb1.setText(informacoes1.get("ideb_ensino_medio"));
+		textViewIniciaisIdeb1.setText(informacoes1.get("ideb_fundamental_inicial"));
+		textViewQuantidadePrimeirosProjetos1.setText(informacoes1.get("quantidade_primeiros_projetos"));
+		textViewValorPrimeirosProjetos1.setText(informacoes1.get("valor_primeiros_projetos"));
+	    textViewQuantidadePesquisa1.setText(informacoes1.get("quantidade_projeto_cnpq"));
+		textViewValoresPesquisa1.setText(informacoes1.get("valor_projetos_cnpq"));
+		textViewQuantidadeJovensPesquisadores1.setText(informacoes1.get("quantidade_projeto_jovens_pesquisadores"));
+		textViewValorJovensPesquisadores1.setText(informacoes1.get("valor_projetos_jovens_pesquisadores"));
+		textViewQuantidadeProjetosIniciacao1.setText(informacoes1.get("quantidade_projetos_iniciacao_cientifica"));
+		textViewValorProjetosIniciacao1.setText(informacoes1.get("valor_projetos_iniciacao_cientifica"));
+
+		textViewSigla2.setText(informacoes2.get("sigla"));
+		textViewNome2.setText(informacoes2.get("nome"));
+		textViewPopulacao2.setText(informacoes2.get("populacao"));
+		textViewParticipacaoPib2.setText(informacoes2.get("percentual_participacao_pib"));
+		textViewQuantidadeProjetosCienciaTecnologia2.setText(informacoes2.get("projetos_ciencia_tecnologia"));
+		textViewValorProjetosCienciaTecnologia2.setText(informacoes2.get("valor_ciencia_tecnologia"));
+		textViewFundamentalIdeb2.setText(informacoes2.get("ideb_fundamental_final"));
+		textViewEnsinoMedioIdeb2.setText(informacoes2.get("ideb_ensino_medio"));
+		textViewIniciaisIdeb2.setText(informacoes2.get("ideb_fundamental_inicial"));
+		textViewQuantidadePrimeirosProjetos2.setText(informacoes2.get("quantidade_primeiros_projetos"));
+		textViewValorPrimeirosProjetos2.setText(informacoes2.get("valor_primeiros_projetos"));
+	    textViewQuantidadePesquisa2.setText(informacoes2.get("quantidade_projeto_cnpq"));
+		textViewValoresPesquisa2.setText(informacoes2.get("valor_projetos_cnpq"));
+		textViewQuantidadeJovensPesquisadores2.setText(informacoes2.get("quantidade_projeto_jovens_pesquisadores"));
+		textViewValorJovensPesquisadores2.setText(informacoes2.get("valor_projetos_jovens_pesquisadores"));
+		textViewQuantidadeProjetosIniciacao2.setText(informacoes2.get("quantidade_projetos_iniciacao_cientifica"));
+		textViewValorProjetosIniciacao2.setText(informacoes2.get("valor_projetos_iniciacao_cientifica"));
+		
+	}
+
 
 	private void InicializaCamposTexto() {
 
