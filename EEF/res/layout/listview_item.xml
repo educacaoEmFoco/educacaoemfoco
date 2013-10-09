@@ -15,8 +15,7 @@
         android:layout_marginLeft="15dp"
         android:text=""
         android:textSize="30sp"
-        android:textColor="#FF4500"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        style="@style/titulo" />
     
     
    
@@ -28,8 +27,7 @@
         android:layout_marginLeft="30dp"
         android:text=""
         android:textSize="20sp"
-        android:textColor="#FF4500"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        style="@style/titulo"/>
    
     	    	    	
     

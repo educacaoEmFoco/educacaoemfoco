@@ -183,5 +183,8 @@ public final class R {
     
          */
         public static final int AppTheme=0x7f080000;
+        public static final int subTitulo=0x7f080002;
+        public static final int titulo=0x7f080003;
+        public static final int valor=0x7f080004;
     }
 }

@@ -9,23 +9,20 @@
         android:id="@+id/linearlayout_estado"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:textColor="#FF4500" >
+        android:orientation="vertical">
 
         <LinearLayout
             android:id="@+id/linearlayout_estado_sigla"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:textColor="#FF4500" >
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textView_sigla"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/string_vazia"
-                android:textColor="#FF4500"
-                android:textSize="35sp" />
+                style="@style/titulo" />
 
             <TextView
                 android:id="@+id/textView_nome_estado"
@@ -33,9 +30,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="10dp"
-                android:text="@string/string_vazia"
-                android:textColor="#FF4500"
-                android:textSize="25sp" />
+                android:text="@string/string_vazia" 
+                style="@style/titulo" />
         </LinearLayout>
 
         <TextView
@@ -44,8 +40,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="@string/populacao"
-            android:textColor="#FF4500"
-            android:textSize="20sp" />
+            style="@style/subTitulo" />
 
         <TextView
             android:id="@+id/textView_populacao_valor"
@@ -53,7 +48,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:text="@string/string_vazia"
-            android:textColor="#FF4500" />
+            style="@style/valor" />
 
         <TextView
             android:id="@+id/textView_participacao_estadual_pib"
@@ -61,7 +56,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="@string/participacao_PIB"
-            android:textColor="#FF4500"
+            style="@style/subTitulo"
             android:textSize="20sp" />
 
         <TextView
@@ -70,7 +65,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:text="@string/string_vazia"
-            android:textColor="#FF4500" />
+            style="@style/valor" />
 
         <TextView
             android:id="@+id/textView_numero_projetos"
@@ -78,7 +73,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="@string/numero_projetos"
-            android:textColor="#FF4500"
+            style="@style/subTitulo"
             android:textSize="20sp" />
 
         <TextView
@@ -87,7 +82,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:text="@string/string_vazia"
-            android:textColor="#FF4500" />
+            style="@style/valor" />
 
         <TextView
             android:id="@+id/textView_valor_investido_projetos"
@@ -95,7 +90,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:text="@string/string_vazia"
-            android:textColor="#FF4500" />
+            style="@style/valor" />
 
         <TextView
             android:id="@+id/textView_ideb"
@@ -103,7 +98,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="@string/participacao_IDEB"
-            android:textColor="#FF4500"
+            style="@style/subTitulo"
             android:textSize="20sp" />
 
         <TextView
@@ -112,7 +107,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:text="@string/string_vazia"
-            android:textColor="#FF4500" />
+           	style="@style/valor" />
 
         <TextView
             android:id="@+id/textView_ideb_ensinomedio"
@@ -120,7 +115,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:text="@string/string_vazia"
-            android:textColor="#FF4500" />
+            style="@style/valor" />
 
         <TextView
             android:id="@+id/textView_ideb_iniciais"
@@ -128,7 +123,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:text="@string/string_vazia"
-            android:textColor="#FF4500" />
+            style="@style/valor" />
 
         <TextView
             android:id="@+id/textView_programa_primeiros_projetos"
@@ -136,7 +131,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="@string/Programa_primeiros_projetos"
-            android:textColor="#FF4500"
+            style="@style/subTitulo"
             android:textSize="20sp" />
 
         <TextView
@@ -145,7 +140,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:text="@string/string_vazia"
-            android:textColor="#FF4500" />
+            style="@style/valor" />
 
         <TextView
             android:id="@+id/textView_programa_primeiros_projetos_valor"
@@ -153,7 +148,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:text="@string/string_vazia"
-            android:textColor="#FF4500" />
+            style="@style/valor" />
 
         <TextView
             android:id="@+id/textView_projetos_pesquisa"
@@ -161,7 +156,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="@string/Projetos_pesquisa_CNPq"
-            android:textColor="#FF4500"
+           	style="@style/subTitulo"
             android:textSize="20sp" />
 
         <TextView
@@ -170,7 +165,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:text="@string/string_vazia"
-            android:textColor="#FF4500" />
+            style="@style/valor" />
 
         <TextView
             android:id="@+id/textView_valores_projeto_pesquisa"
@@ -178,7 +173,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:text="@string/string_vazia"
-            android:textColor="#FF4500" />
+            style="@style/valor" />
 
         <TextView
             android:id="@+id/textView_jovens_pesquisadores"
@@ -186,7 +181,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="@string/jovens_pesquisadores"
-            android:textColor="#FF4500"
+            style="@style/subTitulo"
             android:textSize="20sp" />
 
         <TextView
@@ -195,7 +190,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:text="@string/string_vazia"
-            android:textColor="#FF4500" />
+            style="@style/valor" />
 
         <TextView
             android:id="@+id/textView_jovens_pesquisadores_valor"
@@ -203,7 +198,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:text="@string/string_vazia"
-            android:textColor="#FF4500" />
+            style="@style/valor" />
 
         <TextView
             android:id="@+id/textView_projetos_iniciacao"
@@ -211,7 +206,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="@string/projeto_iniciacao"
-            android:textColor="#FF4500"
+           	style="@style/subTitulo"
             android:textSize="20sp" />
 
         <TextView
@@ -220,7 +215,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:text="@string/string_vazia"
-            android:textColor="#FF4500" />
+            style="@style/valor" />
 
         <TextView
             android:id="@+id/textView_projetos_iniciacao_valor"
@@ -228,7 +223,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:text="@string/string_vazia"
-            android:textColor="#FF4500" />
+            style="@style/valor" />
     </LinearLayout>
 
 </ScrollView>
