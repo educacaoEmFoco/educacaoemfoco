@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
@@ -156,15 +157,19 @@ public class TelaComparacao extends Activity {
 
 	private void atualizaValoresSpinner01(String nome) {
 		preencheEstados01(); 
-		Log.i("Teste", nome);
 		estados01.remove(nome);
 		estadosAdapter01.notifyDataSetChanged();
 	}
 	
 	private void atualizaValoresSpinner02(String nome) {
 		preencheEstados02(); 
-		Log.i("Teste", nome);
 		estados02.remove(nome);
 		estadosAdapter02.notifyDataSetChanged();
 	}
+	
+    public void clickBotaoComparacaoEstados(View view) {
+    	Intent intent = new Intent(this, TelaComparaEstados.class);
+		startActivity(intent);
+    }
+
 }

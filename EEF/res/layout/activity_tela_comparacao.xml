@@ -37,6 +37,7 @@
         android:layout_below="@+id/spinner2"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="64dp"
-        android:text="@string/compara_estados" />
+        android:text="@string/compara_estados"
+        android:onClick="clickBotaoComparacaoEstados" />
 
 </RelativeLayout>
