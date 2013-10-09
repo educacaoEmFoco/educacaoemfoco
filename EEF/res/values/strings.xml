@@ -8,9 +8,7 @@
     <string name="title_activity_tela_lista_estado">TelaListaEstado</string>
     <string name="menu_botao_lista_estados">Lista de Estados</string>
     <string name="menu_botao_comparacao">Comparar</string>
-  
-    
-    <string name="string_vazia"> </string>
+    <string name="string_vazia"></string>
     <string name="populacao">População</string>
     <string name="participacao_PIB">Participacao Estadual no PIB</string>
     <string name="numero_projetos">Projetos de Difusão Tecnológica</string>
@@ -19,9 +17,9 @@
     <string name="Projetos_pesquisa_CNPq">Projetos de Pesquisa Apoio CNPq</string>
     <string name="jovens_pesquisadores">Jovens pesquisadores</string>
     <string name="projeto_iniciacao">Projetos Iniciação Científica</string>
-   
     <string name="estados_opcao">Escolha dois estados: </string>
     <string name="compara_estados">Comparar</string>
-   
-	
+    <string name="title_activity_tela_compara_estados">TelaComparaEstados</string>
+    <string name="hello_world">Hello world!</string>
+
 </resources>
