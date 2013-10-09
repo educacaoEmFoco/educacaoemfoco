@@ -20,6 +20,6 @@
     <string name="estados_opcao">Escolha dois estados: </string>
     <string name="compara_estados">Comparar</string>
     <string name="title_activity_tela_compara_estados">TelaComparaEstados</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="tela_compara_estados">Estados </string>
 
 </resources>
