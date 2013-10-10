@@ -5,456 +5,473 @@
     android:layout_height="match_parent"
     android:background="@color/white" >
 
-      <LinearLayout
-        android:id="@+id/linearlayout_estado1"
+    <RelativeLayout
+        android:id="@+id/linearlayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:textColor="#FF4500" >
 
         <LinearLayout
-            android:id="@+id/linearlayout_estado_sigla1"
-            android:layout_width="match_parent"
+            android:id="@+id/linearlayout_estado1"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:textColor="#FF4500" >
+            android:orientation="vertical"
+            android:paddingRight="300dp"
+            android:layout_alignParentLeft="true"
+            android:textColor="#FF4500"
+            android:gravity="left" >
+
+            <LinearLayout
+                android:id="@+id/linearlayout_estado_sigla1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:textColor="#FF4500" >
+
+                <TextView
+                    android:id="@+id/textView_sigla1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/string_vazia"
+                    android:textColor="#FF4500"
+                    android:textSize="35sp" />
+
+                <TextView
+                    android:id="@+id/textView_nome_estado1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/string_vazia"
+                    android:textColor="#FF4500"
+                    android:textSize="25sp" />
+            </LinearLayout>
 
             <TextView
-                android:id="@+id/textView_sigla1"
+                android:id="@+id/textView_populacao1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/string_vazia"
+                android:layout_marginTop="20dp"
+                android:text="@string/populacao"
                 android:textColor="#FF4500"
-                android:textSize="35sp" />
+                android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/textView_nome_estado1"
+                android:id="@+id/textView_populacao_valor1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="15dp"
                 android:text="@string/string_vazia"
+                android:textColor="#FF4500" />
+
+            <TextView
+                android:id="@+id/textView_participacao_estadual_pib1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/participacao_PIB"
                 android:textColor="#FF4500"
-                android:textSize="25sp" />
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView_participacao_pib_valor1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="@string/string_vazia"
+                android:textColor="#FF4500" />
+
+            <TextView
+                android:id="@+id/textView_numero_projetos1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/numero_projetos"
+                android:textColor="#FF4500"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView_numero_projetos_quantidade1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="@string/string_vazia"
+                android:textColor="#FF4500" />
+
+            <TextView
+                android:id="@+id/textView_valor_investido_projetos1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="@string/string_vazia"
+                android:textColor="#FF4500" />
+
+            <TextView
+                android:id="@+id/textView_ideb1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/participacao_IDEB"
+                android:textColor="#FF4500"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView_ideb_fundamental1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="@string/string_vazia"
+                android:textColor="#FF4500" />
+
+            <TextView
+                android:id="@+id/textView_ideb_ensinomedio1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="@string/string_vazia"
+                android:textColor="#FF4500" />
+
+            <TextView
+                android:id="@+id/textView_ideb_iniciais1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="@string/string_vazia"
+                android:textColor="#FF4500" />
+
+            <TextView
+                android:id="@+id/textView_programa_primeiros_projetos1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/Programa_primeiros_projetos"
+                android:textColor="#FF4500"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView_primeiros_projetos_quantidade1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="@string/string_vazia"
+                android:textColor="#FF4500" />
+
+            <TextView
+                android:id="@+id/textView_programa_primeiros_projetos_valor1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="@string/string_vazia"
+                android:textColor="#FF4500" />
+
+            <TextView
+                android:id="@+id/textView_projetos_pesquisa1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/Projetos_pesquisa_CNPq"
+                android:textColor="#FF4500"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView_projetos_pesquisa_quantidade1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="@string/string_vazia"
+                android:textColor="#FF4500" />
+
+            <TextView
+                android:id="@+id/textView_valores_projeto_pesquisa1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="@string/string_vazia"
+                android:textColor="#FF4500" />
+
+            <TextView
+                android:id="@+id/textView_jovens_pesquisadores1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/jovens_pesquisadores"
+                android:textColor="#FF4500"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView_jovens_pesquisadores_quantidade1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="@string/string_vazia"
+                android:textColor="#FF4500" />
+
+            <TextView
+                android:id="@+id/textView_jovens_pesquisadores_valor1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="@string/string_vazia"
+                android:textColor="#FF4500" />
+
+            <TextView
+                android:id="@+id/textView_projetos_iniciacao1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/projeto_iniciacao"
+                android:textColor="#FF4500"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView_projetos_iniciacao_quantidade1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="@string/string_vazia"
+                android:textColor="#FF4500" />
+
+            <TextView
+                android:id="@+id/textView_projetos_iniciacao_valor1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="@string/string_vazia"
+                android:textColor="#FF4500" />
         </LinearLayout>
-
-        <TextView
-            android:id="@+id/textView_populacao1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="@string/populacao"
-            android:textColor="#FF4500"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/textView_populacao_valor1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:text="@string/string_vazia"
-            android:textColor="#FF4500" />
-
-        <TextView
-            android:id="@+id/textView_participacao_estadual_pib1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="@string/participacao_PIB"
-            android:textColor="#FF4500"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/textView_participacao_pib_valor1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:text="@string/string_vazia"
-            android:textColor="#FF4500" />
-
-        <TextView
-            android:id="@+id/textView_numero_projetos1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="@string/numero_projetos"
-            android:textColor="#FF4500"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/textView_numero_projetos_quantidade1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:text="@string/string_vazia"
-            android:textColor="#FF4500" />
-
-        <TextView
-            android:id="@+id/textView_valor_investido_projetos1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:text="@string/string_vazia"
-            android:textColor="#FF4500" />
-
-        <TextView
-            android:id="@+id/textView_ideb1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="@string/participacao_IDEB"
-            android:textColor="#FF4500"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/textView_ideb_fundamental1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:text="@string/string_vazia"
-            android:textColor="#FF4500" />
-
-        <TextView
-            android:id="@+id/textView_ideb_ensinomedio1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:text="@string/string_vazia"
-            android:textColor="#FF4500" />
-
-        <TextView
-            android:id="@+id/textView_ideb_iniciais1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:text="@string/string_vazia"
-            android:textColor="#FF4500" />
-
-        <TextView
-            android:id="@+id/textView_programa_primeiros_projetos1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="@string/Programa_primeiros_projetos"
-            android:textColor="#FF4500"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/textView_primeiros_projetos_quantidade1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:text="@string/string_vazia"
-            android:textColor="#FF4500" />
-
-        <TextView
-            android:id="@+id/textView_programa_primeiros_projetos_valor1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:text="@string/string_vazia"
-            android:textColor="#FF4500" />
-
-        <TextView
-            android:id="@+id/textView_projetos_pesquisa1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="@string/Projetos_pesquisa_CNPq"
-            android:textColor="#FF4500"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/textView_projetos_pesquisa_quantidade1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:text="@string/string_vazia"
-            android:textColor="#FF4500" />
-
-        <TextView
-            android:id="@+id/textView_valores_projeto_pesquisa1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:text="@string/string_vazia"
-            android:textColor="#FF4500" />
-
-        <TextView
-            android:id="@+id/textView_jovens_pesquisadores1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="@string/jovens_pesquisadores"
-            android:textColor="#FF4500"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/textView_jovens_pesquisadores_quantidade1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:text="@string/string_vazia"
-            android:textColor="#FF4500" />
-
-        <TextView
-            android:id="@+id/textView_jovens_pesquisadores_valor1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:text="@string/string_vazia"
-            android:textColor="#FF4500" />
-
-        <TextView
-            android:id="@+id/textView_projetos_iniciacao1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="@string/projeto_iniciacao"
-            android:textColor="#FF4500"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/textView_projetos_iniciacao_quantidade1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:text="@string/string_vazia"
-            android:textColor="#FF4500" />
-
-        <TextView
-            android:id="@+id/textView_projetos_iniciacao_valor1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:text="@string/string_vazia"
-            android:textColor="#FF4500" />
-    </LinearLayout>
-    
-      <LinearLayout
-        android:id="@+id/linearlayout_estado2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:textColor="#FF4500" >
 
         <LinearLayout
-            android:id="@+id/linearlayout_estado_sigla2"
-            android:layout_width="match_parent"
+            android:id="@+id/linearlayout_estado2"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:textColor="#FF4500" >
+            android:orientation="vertical"
+            android:paddingLeft="300dp"
+            android:textColor="#FF4500" 
+            android:gravity="right"
+            android:layout_alignParentRight="true" >
+            
+
+            <LinearLayout
+                android:id="@+id/linearlayout_estado_sigla2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="right"
+                android:textColor="#FF4500" >
+
+                <TextView
+                    android:id="@+id/textView_sigla2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/string_vazia"
+                    android:textColor="#FF4500"
+                    android:textSize="35sp" />
+
+                <TextView
+                    android:id="@+id/textView_nome_estado2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/string_vazia"
+                    android:textColor="#FF4500"
+                    android:textSize="25sp" />
+            </LinearLayout>
 
             <TextView
-                android:id="@+id/textView_sigla2"
+                android:id="@+id/textView_populacao2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/string_vazia"
+                android:layout_marginTop="20dp"
+                android:text="@string/populacao"
                 android:textColor="#FF4500"
-                android:textSize="35sp" />
+                android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/textView_nome_estado2"
+                android:id="@+id/textView_populacao_valor2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="15dp"
                 android:text="@string/string_vazia"
+                android:textColor="#FF4500" />
+
+            <TextView
+                android:id="@+id/textView_participacao_estadual_pib2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/participacao_PIB"
                 android:textColor="#FF4500"
-                android:textSize="25sp" />
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView_participacao_pib_valor2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="@string/string_vazia"
+                android:textColor="#FF4500" />
+
+            <TextView
+                android:id="@+id/textView_numero_projetos2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/numero_projetos"
+                android:textColor="#FF4500"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView_numero_projetos_quantidade2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="@string/string_vazia"
+                android:textColor="#FF4500" />
+
+            <TextView
+                android:id="@+id/textView_valor_investido_projetos2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="@string/string_vazia"
+                android:textColor="#FF4500" />
+
+            <TextView
+                android:id="@+id/textView_ideb2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/participacao_IDEB"
+                android:textColor="#FF4500"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView_ideb_fundamental2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="@string/string_vazia"
+                android:textColor="#FF4500" />
+
+            <TextView
+                android:id="@+id/textView_ideb_ensinomedio2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="@string/string_vazia"
+                android:textColor="#FF4500" />
+
+            <TextView
+                android:id="@+id/textView_ideb_iniciais2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="@string/string_vazia"
+                android:textColor="#FF4500" />
+
+            <TextView
+                android:id="@+id/textView_programa_primeiros_projetos2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/Programa_primeiros_projetos"
+                android:textColor="#FF4500"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView_primeiros_projetos_quantidade2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="@string/string_vazia"
+                android:textColor="#FF4500" />
+
+            <TextView
+                android:id="@+id/textView_programa_primeiros_projetos_valor2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="@string/string_vazia"
+                android:textColor="#FF4500" />
+
+            <TextView
+                android:id="@+id/textView_projetos_pesquisa2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/Projetos_pesquisa_CNPq"
+                android:textColor="#FF4500"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView_projetos_pesquisa_quantidade2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="@string/string_vazia"
+                android:textColor="#FF4500" />
+
+            <TextView
+                android:id="@+id/textView_valores_projeto_pesquisa2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="@string/string_vazia"
+                android:textColor="#FF4500" />
+
+            <TextView
+                android:id="@+id/textView_jovens_pesquisadores2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/jovens_pesquisadores"
+                android:textColor="#FF4500"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView_jovens_pesquisadores_quantidade2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="@string/string_vazia"
+                android:textColor="#FF4500" />
+
+            <TextView
+                android:id="@+id/textView_jovens_pesquisadores_valor2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="@string/string_vazia"
+                android:textColor="#FF4500" />
+
+            <TextView
+                android:id="@+id/textView_projetos_iniciacao2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/projeto_iniciacao"
+                android:textColor="#FF4500"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView_projetos_iniciacao_quantidade2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="@string/string_vazia"
+                android:textColor="#FF4500" />
+
+            <TextView
+                android:id="@+id/textView_projetos_iniciacao_valor2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="@string/string_vazia"
+                android:textColor="#FF4500" />
         </LinearLayout>
-
-        <TextView
-            android:id="@+id/textView_populacao2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="@string/populacao"
-            android:textColor="#FF4500"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/textView_populacao_valor2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:text="@string/string_vazia"
-            android:textColor="#FF4500" />
-
-        <TextView
-            android:id="@+id/textView_participacao_estadual_pib2"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="@string/participacao_PIB"
-            android:textColor="#FF4500"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/textView_participacao_pib_valor2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:text="@string/string_vazia"
-            android:textColor="#FF4500" />
-
-        <TextView
-            android:id="@+id/textView_numero_projetos2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="@string/numero_projetos"
-            android:textColor="#FF4500"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/textView_numero_projetos_quantidade2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:text="@string/string_vazia"
-            android:textColor="#FF4500" />
-
-        <TextView
-            android:id="@+id/textView_valor_investido_projetos2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:text="@string/string_vazia"
-            android:textColor="#FF4500" />
-
-        <TextView
-            android:id="@+id/textView_ideb2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="@string/participacao_IDEB"
-            android:textColor="#FF4500"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/textView_ideb_fundamental2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:text="@string/string_vazia"
-            android:textColor="#FF4500" />
-
-        <TextView
-            android:id="@+id/textView_ideb_ensinomedio2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:text="@string/string_vazia"
-            android:textColor="#FF4500" />
-
-        <TextView
-            android:id="@+id/textView_ideb_iniciais2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:text="@string/string_vazia"
-            android:textColor="#FF4500" />
-
-        <TextView
-            android:id="@+id/textView_programa_primeiros_projetos2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="@string/Programa_primeiros_projetos"
-            android:textColor="#FF4500"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/textView_primeiros_projetos_quantidade2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:text="@string/string_vazia"
-            android:textColor="#FF4500" />
-
-        <TextView
-            android:id="@+id/textView_programa_primeiros_projetos_valor2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:text="@string/string_vazia"
-            android:textColor="#FF4500" />
-
-        <TextView
-            android:id="@+id/textView_projetos_pesquisa2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="@string/Projetos_pesquisa_CNPq"
-            android:textColor="#FF4500"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/textView_projetos_pesquisa_quantidade2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:text="@string/string_vazia"
-            android:textColor="#FF4500" />
-
-        <TextView
-            android:id="@+id/textView_valores_projeto_pesquisa2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:text="@string/string_vazia"
-            android:textColor="#FF4500" />
-
-        <TextView
-            android:id="@+id/textView_jovens_pesquisadores2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="@string/jovens_pesquisadores"
-            android:textColor="#FF4500"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/textView_jovens_pesquisadores_quantidade2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:text="@string/string_vazia"
-            android:textColor="#FF4500" />
-
-        <TextView
-            android:id="@+id/textView_jovens_pesquisadores_valor2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:text="@string/string_vazia"
-            android:textColor="#FF4500" />
-
-        <TextView
-            android:id="@+id/textView_projetos_iniciacao2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="@string/projeto_iniciacao"
-            android:textColor="#FF4500"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/textView_projetos_iniciacao_quantidade2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:text="@string/string_vazia"
-            android:textColor="#FF4500" />
-
-        <TextView
-            android:id="@+id/textView_projetos_iniciacao_valor2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:text="@string/string_vazia"
-            android:textColor="#FF4500" />
-    </LinearLayout>
+        
+    </RelativeLayout>
 
 </ScrollView>
-

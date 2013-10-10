@@ -47,6 +47,7 @@ public class TelaComparacao extends Activity {
 	private void inicializaSpinners() {
 		estados01 = new ArrayList<String>();
 		estados02 = new ArrayList<String>();
+		todosEstados = new ArrayList<String>();
 		
 		estadosSpinner01 = (Spinner) findViewById(R.id.spinner1);
 		estadosSpinner01.setOnItemSelectedListener( new OnItemSelectedListener() {
