@@ -19,17 +19,27 @@
         <item name="android:textColor">#7D744F</item>       
     </style>
 	
+    
+    
     <style name="subTitulo">
         <item name="android:textColor">#7D744F</item>
-        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+        <item name="android:textSize">20sp</item>
         <item name="android:padding">5dip</item>
     </style>
+    
      <style name="titulo">
         <item name="android:textColor">#4A442E</item>
+        <item name="android:textSize">40sp</item>
+        <item name="android:typeface">serif</item>
         <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
     </style>
+    
     <style name="valor">
         <item name="android:textColor">#A69968</item>
+    </style>
+    
+    <style name="botaoMenu" parent="@style/subTitulo">
+        <item name="android:background">#0000</item>
     </style>
     
 </resources>
