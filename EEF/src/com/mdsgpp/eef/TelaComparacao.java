@@ -13,9 +13,9 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 public class TelaComparacao extends Activity {
-	
-	private Spinner estadosSpinner01; 
-	private Spinner estadosSpinner; 
+
+	private Spinner estadosSpinner01;
+	private Spinner estadosSpinner;
 	private ArrayAdapter<String> estadosAdapter01;
 	private ArrayAdapter<String> estadosAdapter02;
 	private ArrayList<String> estados01;
@@ -26,14 +26,13 @@ public class TelaComparacao extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_tela_comparacao);
-		
-		inicializaSpinners(); 
+
+		inicializaSpinners();
 		preencheEstados01();
 		preencheEstados02();
-		
+
 		setAdapterSpinner01();
 		setAdapterSpinner02();
-		
 	}
 
 	@Override
@@ -42,31 +41,37 @@ public class TelaComparacao extends Activity {
 		getMenuInflater().inflate(R.menu.tela_comparacao, menu);
 		return true;
 	}
-	
-	
+
 	private void inicializaSpinners() {
 		estados01 = new ArrayList<String>();
 		estados02 = new ArrayList<String>();
 		todosEstados = new ArrayList<String>();
-		
+
 		estadosSpinner01 = (Spinner) findViewById(R.id.spinner1);
-		estadosSpinner01.setOnItemSelectedListener( new OnItemSelectedListener() {
-			@Override
-			public void onItemSelected(AdapterView<?> adapter, View view, int posicao, long id) {
-				atualizaValoresSpinner02( estadosSpinner01.getSelectedItem().toString() );
-			}
-			@Override
-			public void onNothingSelected(AdapterView<?> arg0) {
-				// nada a fazer
-			}
-		});
-		
+		estadosSpinner01
+				.setOnItemSelectedListener(new OnItemSelectedListener() {
+					@Override
+					public void onItemSelected(AdapterView<?> adapter,
+							View view, int posicao, long id) {
+						atualizaValoresSpinner02(estadosSpinner01
+								.getSelectedItem().toString());
+					}
+
+					@Override
+					public void onNothingSelected(AdapterView<?> arg0) {
+						// nada a fazer
+					}
+				});
+
 		estadosSpinner = (Spinner) findViewById(R.id.spinner2);
-		estadosSpinner.setOnItemSelectedListener( new OnItemSelectedListener() {
+		estadosSpinner.setOnItemSelectedListener(new OnItemSelectedListener() {
 			@Override
-			public void onItemSelected(AdapterView<?> adapter, View view, int posicao, long id) {
-				atualizaValoresSpinner01( estadosSpinner.getSelectedItem().toString() );
+			public void onItemSelected(AdapterView<?> adapter, View view,
+					int posicao, long id) {
+				atualizaValoresSpinner01(estadosSpinner.getSelectedItem()
+						.toString());
 			}
+
 			@Override
 			public void onNothingSelected(AdapterView<?> arg0) {
 				// nada a fazer
@@ -74,25 +79,28 @@ public class TelaComparacao extends Activity {
 		});
 
 	}
-	
+
 	private void setAdapterSpinner01() {
-		estadosAdapter01 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, estados01);
-		estadosAdapter01.setDropDownViewResource(android.R.layout.simple_list_item_1);
-		
+		estadosAdapter01 = new ArrayAdapter<String>(this,
+				R.layout.spinner_item, estados01);
+		estadosAdapter01
+				.setDropDownViewResource(android.R.layout.simple_list_item_1);
+
 		estadosSpinner01.setAdapter(estadosAdapter01);
 	}
-	
+
 	private void setAdapterSpinner02() {
-		estadosAdapter02 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, estados02);
-		estadosAdapter02.setDropDownViewResource(android.R.layout.simple_list_item_1);
-		
+		estadosAdapter02 = new ArrayAdapter<String>(this,
+				R.layout.spinner_item, estados02);
+		estadosAdapter02.setDropDownViewResource(R.layout.spinner_item);
+
 		// Define o adapter para os spinners
 		estadosSpinner.setAdapter(estadosAdapter02);
 	}
-	
+
 	private void preencheEstados01() {
 		estados01.clear();
-		
+
 		estados01.add("Acre");
 		estados01.add("Alagoas");
 		estados01.add("Amapá");
@@ -121,10 +129,10 @@ public class TelaComparacao extends Activity {
 		estados01.add("Sergipe");
 		estados01.add("Tocantins");
 	}
-	
+
 	private void preencheEstados02() {
 		estados02.clear();
-		
+
 		estados02.add("Acre");
 		estados02.add("Alagoas");
 		estados02.add("Amapá");
@@ -152,12 +160,12 @@ public class TelaComparacao extends Activity {
 		estados02.add("São Paulo");
 		estados02.add("Sergipe");
 		estados02.add("Tocantins");
-	
+
 	}
-	
+
 	private void preencheTodosEstados() {
 		todosEstados.clear();
-		
+
 		todosEstados.add("Acre");
 		todosEstados.add("Alagoas");
 		todosEstados.add("Amapá");
@@ -185,34 +193,36 @@ public class TelaComparacao extends Activity {
 		todosEstados.add("São Paulo");
 		todosEstados.add("Sergipe");
 		todosEstados.add("Tocantins");
-	
+
 	}
 
 	private void atualizaValoresSpinner01(String nome) {
-		preencheEstados01(); 
+		preencheEstados01();
 		estados01.remove(nome);
 		estadosAdapter01.notifyDataSetChanged();
 	}
-	
+
 	private void atualizaValoresSpinner02(String nome) {
-		preencheEstados02(); 
+		preencheEstados02();
 		estados02.remove(nome);
 		estadosAdapter02.notifyDataSetChanged();
 	}
-	
-    public void clickBotaoComparacaoEstados(View view) {
-    	preencheTodosEstados();
-    	Intent intent = new Intent(this, TelaComparaEstados.class);
-    	estadosSpinner01.getSelectedItem().toString();
-    	estadosSpinner.getSelectedItem().toString();
 
-    	int posicao1 = todosEstados.indexOf(estadosSpinner01.getSelectedItem().toString());
-    	int posicao2 = todosEstados.indexOf(estadosSpinner.getSelectedItem().toString());
-    	
-    	intent.putExtra("INDEX_ESTADO1_ESCOLHIDO", posicao1);
-    	intent.putExtra("INDEX_ESTADO2_ESCOLHIDO", posicao2);
-    	
+	public void clickBotaoComparacaoEstados(View view) {
+		preencheTodosEstados();
+		Intent intent = new Intent(this, TelaComparaEstados.class);
+		estadosSpinner01.getSelectedItem().toString();
+		estadosSpinner.getSelectedItem().toString();
+
+		int posicao1 = todosEstados.indexOf(estadosSpinner01.getSelectedItem()
+				.toString());
+		int posicao2 = todosEstados.indexOf(estadosSpinner.getSelectedItem()
+				.toString());
+
+		intent.putExtra("INDEX_ESTADO1_ESCOLHIDO", posicao1);
+		intent.putExtra("INDEX_ESTADO2_ESCOLHIDO", posicao2);
+
 		startActivity(intent);
-    }
+	}
 
 }
