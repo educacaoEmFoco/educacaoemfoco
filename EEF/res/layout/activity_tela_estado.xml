@@ -8,225 +8,220 @@
         android:id="@+id/linearlayout_estado"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="15dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
+        android:background="@color/white"
         android:orientation="vertical"
-        android:background="@color/white" >
+        android:paddingBottom="30dp"
+        android:paddingLeft="10dp" >
 
-        <LinearLayout
-            android:id="@+id/linearlayout_estado_sigla"
+        <TextView
+            android:id="@+id/textView_sigla"
+            style="@style/titulo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:gravity="center"
+            android:text="@string/string_vazia" />
 
-            <TextView
-                android:id="@+id/textView_sigla"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/string_vazia"
-                style="@style/titulo" />
-
-            <TextView
-                android:id="@+id/textView_nome_estado"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:layout_marginLeft="10dp"
-                android:text="@string/string_vazia" 
-                style="@style/titulo" />
-        </LinearLayout>
+        <TextView
+            android:id="@+id/textView_nome_estado"
+            style="@style/titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:text="@string/string_vazia" />
 
         <TextView
             android:id="@+id/textView_populacao"
+            style="@style/subTitulo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="@string/populacao"
-            style="@style/subTitulo" />
+            android:text="@string/populacao" />
 
         <TextView
             android:id="@+id/textView_populacao_valor"
+            style="@style/valor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
-            android:text="@string/string_vazia"
-            style="@style/valor" />
+            android:text="@string/string_vazia" />
 
         <TextView
             android:id="@+id/textView_participacao_estadual_pib"
+            style="@style/subTitulo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="@string/participacao_PIB"
-            style="@style/subTitulo"
             android:textSize="20sp" />
 
         <TextView
             android:id="@+id/textView_participacao_pib_valor"
+            style="@style/valor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
-            android:text="@string/string_vazia"
-            style="@style/valor" />
+            android:text="@string/string_vazia" />
 
         <TextView
             android:id="@+id/textView_numero_projetos"
+            style="@style/subTitulo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="@string/numero_projetos"
-            style="@style/subTitulo"
             android:textSize="20sp" />
 
         <TextView
             android:id="@+id/textView_numero_projetos_quantidade"
+            style="@style/valor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
-            android:text="@string/string_vazia"
-            style="@style/valor" />
+            android:text="@string/string_vazia" />
 
         <TextView
             android:id="@+id/textView_valor_investido_projetos"
+            style="@style/valor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
-            android:text="@string/string_vazia"
-            style="@style/valor" />
+            android:text="@string/string_vazia" />
 
         <TextView
             android:id="@+id/textView_ideb"
+            style="@style/subTitulo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="@string/participacao_IDEB"
-            style="@style/subTitulo"
             android:textSize="20sp" />
 
         <TextView
             android:id="@+id/textView_ideb_fundamental"
+            style="@style/valor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
-            android:text="@string/string_vazia"
-           	style="@style/valor" />
+            android:text="@string/string_vazia" />
 
         <TextView
             android:id="@+id/textView_ideb_ensinomedio"
+            style="@style/valor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
-            android:text="@string/string_vazia"
-            style="@style/valor" />
+            android:text="@string/string_vazia" />
 
         <TextView
             android:id="@+id/textView_ideb_iniciais"
+            style="@style/valor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
-            android:text="@string/string_vazia"
-            style="@style/valor" />
+            android:text="@string/string_vazia" />
 
         <TextView
             android:id="@+id/textView_programa_primeiros_projetos"
+            style="@style/subTitulo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="@string/Programa_primeiros_projetos"
-            style="@style/subTitulo"
             android:textSize="20sp" />
 
         <TextView
             android:id="@+id/textView_primeiros_projetos_quantidade"
+            style="@style/valor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
-            android:text="@string/string_vazia"
-            style="@style/valor" />
+            android:text="@string/string_vazia" />
 
         <TextView
             android:id="@+id/textView_programa_primeiros_projetos_valor"
+            style="@style/valor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
-            android:text="@string/string_vazia"
-            style="@style/valor" />
+            android:text="@string/string_vazia" />
 
         <TextView
             android:id="@+id/textView_projetos_pesquisa"
+            style="@style/subTitulo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="@string/Projetos_pesquisa_CNPq"
-           	style="@style/subTitulo"
             android:textSize="20sp" />
 
         <TextView
             android:id="@+id/textView_projetos_pesquisa_quantidade"
+            style="@style/valor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
-            android:text="@string/string_vazia"
-            style="@style/valor" />
+            android:text="@string/string_vazia" />
 
         <TextView
             android:id="@+id/textView_valores_projeto_pesquisa"
+            style="@style/valor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
-            android:text="@string/string_vazia"
-            style="@style/valor" />
+            android:text="@string/string_vazia" />
 
         <TextView
             android:id="@+id/textView_jovens_pesquisadores"
+            style="@style/subTitulo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="@string/jovens_pesquisadores"
-            style="@style/subTitulo"
             android:textSize="20sp" />
 
         <TextView
             android:id="@+id/textView_jovens_pesquisadores_quantidade"
+            style="@style/valor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
-            android:text="@string/string_vazia"
-            style="@style/valor" />
+            android:text="@string/string_vazia" />
 
         <TextView
             android:id="@+id/textView_jovens_pesquisadores_valor"
+            style="@style/valor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
-            android:text="@string/string_vazia"
-            style="@style/valor" />
+            android:text="@string/string_vazia" />
 
         <TextView
             android:id="@+id/textView_projetos_iniciacao"
+            style="@style/subTitulo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="@string/projeto_iniciacao"
-           	style="@style/subTitulo"
             android:textSize="20sp" />
 
         <TextView
             android:id="@+id/textView_projetos_iniciacao_quantidade"
+            style="@style/valor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
-            android:text="@string/string_vazia"
-            style="@style/valor" />
+            android:text="@string/string_vazia" />
 
         <TextView
             android:id="@+id/textView_projetos_iniciacao_valor"
+            style="@style/valor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
-            android:text="@string/string_vazia"
-            style="@style/valor" />
+            android:text="@string/string_vazia" />
     </LinearLayout>
 
 </ScrollView>

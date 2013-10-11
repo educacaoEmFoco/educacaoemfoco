@@ -98,26 +98,26 @@ public class TelaComparaEstados extends Activity {
 		textViewValoresPesquisa1.setText(informacoes1.get("valor_projetos_cnpq"));
 		textViewQuantidadeJovensPesquisadores1.setText(informacoes1.get("quantidade_projeto_jovens_pesquisadores"));
 		textViewValorJovensPesquisadores1.setText(informacoes1.get("valor_projetos_jovens_pesquisadores"));
-		textViewQuantidadeProjetosIniciacao1.setText(informacoes1.get("quantidade_projetos_iniciacao_cientifica"));
-		textViewValorProjetosIniciacao1.setText(informacoes1.get("valor_projetos_iniciacao_cientifica"));
+		textViewQuantidadeProjetosIniciacao1.setText(informacoes1.get("quantidade_projetos_inct"));
+		textViewValorProjetosIniciacao1.setText(informacoes1.get("valor_projetos_inct"));
 
 		textViewSigla2.setText(informacoes2.get("sigla"));
 		textViewNome2.setText(informacoes2.get("nome"));
 		textViewPopulacao2.setText(informacoes2.get("populacao"));
 		textViewParticipacaoPib2.setText(informacoes2.get("percentual_participacao_pib"));
-		textViewQuantidadeProjetosCienciaTecnologia2.setText(informacoes2.get("projetos_ciencia_tecnologia"));
-		textViewValorProjetosCienciaTecnologia2.setText(informacoes2.get("valor_ciencia_tecnologia"));
-		textViewFundamentalIdeb2.setText(informacoes2.get("ideb_fundamental_final"));
-		textViewEnsinoMedioIdeb2.setText(informacoes2.get("ideb_ensino_medio"));
-		textViewIniciaisIdeb2.setText(informacoes2.get("ideb_fundamental_inicial"));
-		textViewQuantidadePrimeirosProjetos2.setText(informacoes2.get("quantidade_primeiros_projetos"));
-		textViewValorPrimeirosProjetos2.setText(informacoes2.get("valor_primeiros_projetos"));
-	    textViewQuantidadePesquisa2.setText(informacoes2.get("quantidade_projeto_cnpq"));
-		textViewValoresPesquisa2.setText(informacoes2.get("valor_projetos_cnpq"));
-		textViewQuantidadeJovensPesquisadores2.setText(informacoes2.get("quantidade_projeto_jovens_pesquisadores"));
-		textViewValorJovensPesquisadores2.setText(informacoes2.get("valor_projetos_jovens_pesquisadores"));
-		textViewQuantidadeProjetosIniciacao2.setText(informacoes2.get("quantidade_projetos_iniciacao_cientifica"));
-		textViewValorProjetosIniciacao2.setText(informacoes2.get("valor_projetos_iniciacao_cientifica"));
+		textViewQuantidadeProjetosCienciaTecnologia2.setText(informacoes2.get("projetos_ciencia_tecnologia").split(":")[1]);
+		textViewValorProjetosCienciaTecnologia2.setText(informacoes2.get("valor_ciencia_tecnologia").split(":")[1]);
+		textViewFundamentalIdeb2.setText(informacoes2.get("ideb_fundamental_final").split(":")[1]);
+		textViewEnsinoMedioIdeb2.setText(informacoes2.get("ideb_ensino_medio").split(":")[1]);
+		textViewIniciaisIdeb2.setText(informacoes2.get("ideb_fundamental_inicial").split(":")[1]);
+		textViewQuantidadePrimeirosProjetos2.setText(informacoes2.get("quantidade_primeiros_projetos").split(":")[1]);
+		textViewValorPrimeirosProjetos2.setText(informacoes2.get("valor_primeiros_projetos").split(":")[1]);
+	    textViewQuantidadePesquisa2.setText(informacoes2.get("quantidade_projeto_cnpq").split(":")[1]);
+		textViewValoresPesquisa2.setText(informacoes2.get("valor_projetos_cnpq").split(":")[1]);
+		textViewQuantidadeJovensPesquisadores2.setText(informacoes2.get("quantidade_projeto_jovens_pesquisadores").split(":")[1]);
+		textViewValorJovensPesquisadores2.setText(informacoes2.get("valor_projetos_jovens_pesquisadores").split(":")[1]);
+		textViewQuantidadeProjetosIniciacao2.setText(informacoes2.get("quantidade_projetos_inct").split(":")[1]);
+		textViewValorProjetosIniciacao2.setText(informacoes2.get("valor_projetos_inct").split(":")[1]);
 		
 	}
 

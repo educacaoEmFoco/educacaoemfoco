@@ -3,9 +3,9 @@
 
     <string name="app_name">EEF</string>
     <string name="action_settings">Settings</string>
-    <string name="title_activity_tela_estado">TelaEstado</string>
-    <string name="title_activity_tela_comparacao">Tela Comparação</string>
-    <string name="title_activity_tela_lista_estado">TelaListaEstado</string>
+    <string name="title_activity_tela_estado">Indicativos de Estado</string>
+    <string name="title_activity_tela_comparacao">Comparação de Estados</string>
+    <string name="title_activity_tela_lista_estado">Lista de estados</string>
     <string name="menu_botao_lista_estados">Lista de Estados</string>
     <string name="menu_botao_comparacao">Comparar</string>
     <string name="string_vazia"></string>
@@ -16,10 +16,10 @@
     <string name="Programa_primeiros_projetos">Programa Primeiros Projetos</string>
     <string name="Projetos_pesquisa_CNPq">Projetos de Pesquisa Apoio CNPq</string>
     <string name="jovens_pesquisadores">Jovens pesquisadores</string>
-    <string name="projeto_iniciacao">Projetos Iniciação Científica</string>
+    <string name="projeto_iniciacao">Projetos INCT</string>
     <string name="estados_opcao">Escolha dois estados: </string>
     <string name="compara_estados">Comparar</string>
-    <string name="title_activity_tela_compara_estados">TelaComparaEstados</string>
+    <string name="title_activity_tela_compara_estados">Comparativo de estados</string>
     <string name="tela_compara_estados">Estados </string>
     <string name="titulo_menu">Educação em Foco</string>
 

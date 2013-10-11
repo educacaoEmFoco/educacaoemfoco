@@ -24,10 +24,10 @@
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_margin="15dp"
-        android:background="@color/white"
         android:gravity="center"
         android:orientation="horizontal"
-        android:padding="25dp" >
+        android:padding="25dp"
+        android:background="@drawable/background_sombra" >
 
         <Button
             android:id="@+id/buttonComparacao"

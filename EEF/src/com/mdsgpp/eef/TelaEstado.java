@@ -49,7 +49,6 @@ public class TelaEstado extends Activity {
 			informacoes = EstadoControle.getInstancia().getInformacoesEstado(posicao, this);
 			preencheCamposTexto(informacoes);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
@@ -101,8 +100,8 @@ public class TelaEstado extends Activity {
 		textViewValoresPesquisa.setText(informacoes.get("valor_projetos_cnpq"));
 		textViewQuantidadeJovensPesquisadores.setText(informacoes.get("quantidade_projeto_jovens_pesquisadores"));
 		textViewValorJovensPesquisadores.setText(informacoes.get("valor_projetos_jovens_pesquisadores"));
-		textViewQuantidadeProjetosIniciacao.setText(informacoes.get("quantidade_projetos_iniciacao_cientifica"));
-		textViewValorProjetosIniciacao.setText(informacoes.get("valor_projetos_iniciacao_cientifica"));
+		textViewQuantidadeProjetosIniciacao.setText(informacoes.get("quantidade_projetos_inct"));
+		textViewValorProjetosIniciacao.setText(informacoes.get("valor_projetos_inct"));
 		
 	}
 

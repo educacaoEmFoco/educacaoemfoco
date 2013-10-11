@@ -362,7 +362,7 @@ public class Estado {
 		this.setPrimeirosProjetos(informacoes);
 		this.setProjetoJovensPesquisadores(informacoes);
 		this.setProjetosApoioCnpq(informacoes);
-		this.setProjetosApoioCnpq(informacoes);
+		this.setProjetosInct(informacoes);
 		
 
 	}
