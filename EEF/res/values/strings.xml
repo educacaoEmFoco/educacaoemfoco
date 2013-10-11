@@ -22,5 +22,6 @@
     <string name="title_activity_tela_compara_estados">Comparativo de estados</string>
     <string name="tela_compara_estados">Estados </string>
     <string name="titulo_menu">Educação em Foco</string>
+    <string name="string_x"> x </string>
 
 </resources>

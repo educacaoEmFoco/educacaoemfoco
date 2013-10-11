@@ -1,0 +1,444 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/relativelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/linearlayout_estado1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:gravity="left"
+            android:orientation="vertical"
+            android:paddingBottom="30dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="200dp" >
+
+            <TextView
+                android:id="@+id/textView_sigla1"
+                style="@style/comparacao_titulo_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/string_vazia" />
+
+            <TextView
+                android:id="@+id/textView_nome_estado1"
+                style="@style/comparacao_titulo_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:gravity="left"
+                android:text="@string/string_vazia" />
+
+            <TextView
+                android:id="@+id/textView_populacao1"
+                style="@style/comparacao_subTitulo_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/populacao" />
+
+            <TextView
+                android:id="@+id/textView_populacao_valor1"
+                style="@style/comparacao_valor_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="@string/string_vazia" />
+
+            <TextView
+                android:id="@+id/textView_participacao_estadual_pib1"
+                style="@style/comparacao_subTitulo_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/participacao_PIB" />
+
+            <TextView
+                android:id="@+id/textView_participacao_pib_valor1"
+                style="@style/comparacao_valor_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="@string/string_vazia" />
+
+            <TextView
+                android:id="@+id/textView_numero_projetos1"
+                style="@style/comparacao_subTitulo_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/numero_projetos" />
+
+            <TextView
+                android:id="@+id/textView_numero_projetos_quantidade1"
+                style="@style/comparacao_valor_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="@string/string_vazia" />
+
+            <TextView
+                android:id="@+id/textView_valor_investido_projetos1"
+                style="@style/comparacao_valor_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="@string/string_vazia" />
+
+            <TextView
+                android:id="@+id/textView_ideb1"
+                style="@style/comparacao_subTitulo_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/participacao_IDEB" />
+
+            <TextView
+                android:id="@+id/textView_ideb_fundamental1"
+                style="@style/comparacao_valor_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="@string/string_vazia" />
+
+            <TextView
+                android:id="@+id/textView_ideb_ensinomedio1"
+                style="@style/comparacao_valor_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="@string/string_vazia" />
+
+            <TextView
+                android:id="@+id/textView_ideb_iniciais1"
+                style="@style/comparacao_valor_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="@string/string_vazia" />
+
+            <TextView
+                android:id="@+id/textView_programa_primeiros_projetos1"
+                style="@style/comparacao_subTitulo_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/Programa_primeiros_projetos" />
+
+            <TextView
+                android:id="@+id/textView_primeiros_projetos_quantidade1"
+                style="@style/comparacao_valor_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="@string/string_vazia" />
+
+            <TextView
+                android:id="@+id/textView_programa_primeiros_projetos_valor1"
+                style="@style/comparacao_valor_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="@string/string_vazia" />
+
+            <TextView
+                android:id="@+id/textView_projetos_pesquisa1"
+                style="@style/comparacao_subTitulo_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/Projetos_pesquisa_CNPq" />
+
+            <TextView
+                android:id="@+id/textView_projetos_pesquisa_quantidade1"
+                style="@style/comparacao_valor_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="@string/string_vazia" />
+
+            <TextView
+                android:id="@+id/textView_valores_projeto_pesquisa1"
+                style="@style/comparacao_valor_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="@string/string_vazia" />
+
+            <TextView
+                android:id="@+id/textView_jovens_pesquisadores1"
+                style="@style/comparacao_subTitulo_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/jovens_pesquisadores" />
+
+            <TextView
+                android:id="@+id/textView_jovens_pesquisadores_quantidade1"
+                style="@style/comparacao_valor_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="@string/string_vazia" />
+
+            <TextView
+                android:id="@+id/textView_jovens_pesquisadores_valor1"
+                style="@style/comparacao_valor_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="@string/string_vazia" />
+
+            <TextView
+                android:id="@+id/textView_projetos_iniciacao1"
+                style="@style/comparacao_subTitulo_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/projeto_iniciacao" />
+
+            <TextView
+                android:id="@+id/textView_projetos_iniciacao_quantidade1"
+                style="@style/comparacao_valor_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="@string/string_vazia" />
+
+            <TextView
+                android:id="@+id/textView_projetos_iniciacao_valor1"
+                style="@style/comparacao_valor_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="@string/string_vazia" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearlayout_estado2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="left"
+            android:orientation="vertical"
+            android:paddingBottom="30dp"
+            android:paddingLeft="200dp"
+            android:paddingRight="10dp" >
+
+            <TextView
+                android:id="@+id/textView_sigla2"
+                style="@style/comparacao_titulo_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="@string/string_vazia" />
+
+            <TextView
+                android:id="@+id/textView_nome_estado2"
+                style="@style/comparacao_titulo_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:gravity="right"
+                android:text="@string/string_vazia" />
+
+            <TextView
+                android:id="@+id/textView_populacao2"
+                style="@style/comparacao_subTitulo_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/populacao" />
+
+            <TextView
+                android:id="@+id/textView_populacao_valor2"
+                style="@style/comparacao_valor_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:text="@string/string_vazia" />
+
+            <TextView
+                android:id="@+id/textView_participacao_estadual_pib2"
+                style="@style/comparacao_subTitulo_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/participacao_PIB" />
+
+            <TextView
+                android:id="@+id/textView_participacao_pib_valor2"
+                style="@style/comparacao_valor_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:text="@string/string_vazia" />
+
+            <TextView
+                android:id="@+id/textView_numero_projetos2"
+                style="@style/comparacao_subTitulo_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/numero_projetos" />
+
+            <TextView
+                android:id="@+id/textView_numero_projetos_quantidade2"
+                style="@style/comparacao_valor_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:text="@string/string_vazia" />
+
+            <TextView
+                android:id="@+id/textView_valor_investido_projetos2"
+                style="@style/comparacao_valor_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:text="@string/string_vazia" />
+
+            <TextView
+                android:id="@+id/textView_ideb2"
+                style="@style/comparacao_subTitulo_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/participacao_IDEB" />
+
+            <TextView
+                android:id="@+id/textView_ideb_fundamental2"
+                style="@style/comparacao_valor_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:text="@string/string_vazia" />
+
+            <TextView
+                android:id="@+id/textView_ideb_ensinomedio2"
+                style="@style/comparacao_valor_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:text="@string/string_vazia" />
+
+            <TextView
+                android:id="@+id/textView_ideb_iniciais2"
+                style="@style/comparacao_valor_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:text="@string/string_vazia" />
+
+            <TextView
+                android:id="@+id/textView_programa_primeiros_projetos2"
+                style="@style/comparacao_subTitulo_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/Programa_primeiros_projetos" />
+
+            <TextView
+                android:id="@+id/textView_primeiros_projetos_quantidade2"
+                style="@style/comparacao_valor_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:text="@string/string_vazia" />
+
+            <TextView
+                android:id="@+id/textView_programa_primeiros_projetos_valor2"
+                style="@style/comparacao_valor_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:text="@string/string_vazia" />
+
+            <TextView
+                android:id="@+id/textView_projetos_pesquisa2"
+                style="@style/comparacao_subTitulo_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/Projetos_pesquisa_CNPq" />
+
+            <TextView
+                android:id="@+id/textView_projetos_pesquisa_quantidade2"
+                style="@style/comparacao_valor_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:text="@string/string_vazia" />
+
+            <TextView
+                android:id="@+id/textView_valores_projeto_pesquisa2"
+                style="@style/comparacao_valor_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:text="@string/string_vazia" />
+
+            <TextView
+                android:id="@+id/textView_jovens_pesquisadores2"
+                style="@style/comparacao_subTitulo_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/jovens_pesquisadores" />
+
+            <TextView
+                android:id="@+id/textView_jovens_pesquisadores_quantidade2"
+                style="@style/comparacao_valor_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:text="@string/string_vazia" />
+
+            <TextView
+                android:id="@+id/textView_jovens_pesquisadores_valor2"
+                style="@style/comparacao_valor_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:text="@string/string_vazia" />
+
+            <TextView
+                android:id="@+id/textView_projetos_iniciacao2"
+                style="@style/comparacao_subTitulo_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/projeto_iniciacao" />
+
+            <TextView
+                android:id="@+id/textView_projetos_iniciacao_quantidade2"
+                style="@style/comparacao_valor_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:text="@string/string_vazia" />
+
+            <TextView
+                android:id="@+id/textView_projetos_iniciacao_valor2"
+                style="@style/comparacao_valor_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:text="@string/string_vazia" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</ScrollView>

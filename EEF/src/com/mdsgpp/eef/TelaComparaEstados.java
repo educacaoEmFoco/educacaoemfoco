@@ -84,7 +84,9 @@ public class TelaComparaEstados extends Activity {
 	private void preencheCamposTexto(HashMap<String, String> informacoes1, HashMap<String, String> informacoes2 ) {
 
 		textViewSigla1.setText(informacoes1.get("sigla"));
-		textViewNome1.setText(informacoes1.get("nome"));
+		if (textViewNome1 != null) 
+			textViewNome1.setText(informacoes1.get("nome"));
+		
 		textViewPopulacao1.setText(informacoes1.get("populacao"));
 		textViewParticipacaoPib1.setText(informacoes1.get("percentual_participacao_pib"));
 		textViewQuantidadeProjetosCienciaTecnologia1.setText(informacoes1.get("projetos_ciencia_tecnologia"));
@@ -102,7 +104,9 @@ public class TelaComparaEstados extends Activity {
 		textViewValorProjetosIniciacao1.setText(informacoes1.get("valor_projetos_inct"));
 
 		textViewSigla2.setText(informacoes2.get("sigla"));
-		textViewNome2.setText(informacoes2.get("nome"));
+		if (textViewNome2 != null) 
+			textViewNome2.setText(informacoes2.get("nome"));
+		
 		textViewPopulacao2.setText(informacoes2.get("populacao"));
 		textViewParticipacaoPib2.setText(informacoes2.get("percentual_participacao_pib"));
 		textViewQuantidadeProjetosCienciaTecnologia2.setText(informacoes2.get("projetos_ciencia_tecnologia").split(":")[1]);
