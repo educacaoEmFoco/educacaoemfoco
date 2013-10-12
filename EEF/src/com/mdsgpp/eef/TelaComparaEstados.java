@@ -48,6 +48,7 @@ public class TelaComparaEstados extends Activity {
 	private TextView textViewQuantidadeProjetosIniciacao2;
 	private TextView textViewValorProjetosIniciacao2;
 
+	@SuppressWarnings("unchecked")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -65,8 +66,9 @@ public class TelaComparaEstados extends Activity {
 	    HashMap<String, String> informacoesEstado2 = new HashMap <String, String>();
 	    
 	    try {
-			informacoesEstado1 = EstadoControle.getInstancia(this).lerEstado(posicao1);
-			informacoesEstado2 = EstadoControle.getInstancia(this).lerEstado(posicao2);
+	    	informacoesEstado1 = (HashMap<String, String>) EstadoControle.getInstancia(this).getInformacoesEstado(posicao1).clone();
+	    	informacoesEstado2 = (HashMap<String, String>) EstadoControle.getInstancia(this).getInformacoesEstado(posicao2).clone();
+			
 			preencheCamposTexto(informacoesEstado1,informacoesEstado2);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
