@@ -40,7 +40,8 @@
         </activity>
         <activity
             android:name="com.mdsgpp.eef.TelaComparaEstados"
-            android:label="@string/title_activity_tela_compara_estados" >
+            android:label="@string/title_activity_tela_compara_estados" 
+            android:screenOrientation="user" >
         </activity>
     </application>
 

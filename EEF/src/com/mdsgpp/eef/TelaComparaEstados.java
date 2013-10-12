@@ -65,8 +65,8 @@ public class TelaComparaEstados extends Activity {
 	    HashMap<String, String> informacoesEstado2 = new HashMap <String, String>();
 	    
 	    try {
-			informacoesEstado1 = EstadoControle.getInstancia().getInformacoesEstado(posicao1, this);
-			informacoesEstado2 = EstadoControle.getInstancia().getInformacoesEstado(posicao2, this);
+			informacoesEstado1 = EstadoControle.getInstancia(this).lerEstado(posicao1);
+			informacoesEstado2 = EstadoControle.getInstancia(this).lerEstado(posicao2);
 			preencheCamposTexto(informacoesEstado1,informacoesEstado2);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

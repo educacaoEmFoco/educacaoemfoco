@@ -261,7 +261,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="@string/populacao" />
+                android:text="@string/populacao"
+                android:visibility="invisible" />
 
             <TextView
                 android:id="@+id/textView_populacao_valor2"
@@ -277,7 +278,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="@string/participacao_PIB" />
+                android:text="@string/participacao_PIB"
+                android:visibility="invisible" />
 
             <TextView
                 android:id="@+id/textView_participacao_pib_valor2"
@@ -293,7 +295,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="@string/numero_projetos" />
+                android:text="@string/numero_projetos"
+                android:visibility="invisible" />
 
             <TextView
                 android:id="@+id/textView_numero_projetos_quantidade2"
@@ -317,7 +320,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="@string/participacao_IDEB" />
+                android:text="@string/participacao_IDEB"
+                android:visibility="invisible" />
 
             <TextView
                 android:id="@+id/textView_ideb_fundamental2"
@@ -349,7 +353,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="@string/Programa_primeiros_projetos" />
+                android:text="@string/Programa_primeiros_projetos"
+                android:visibility="invisible" />
 
             <TextView
                 android:id="@+id/textView_primeiros_projetos_quantidade2"
@@ -373,7 +378,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="@string/Projetos_pesquisa_CNPq" />
+                android:text="@string/Projetos_pesquisa_CNPq"
+                android:visibility="invisible" />
 
             <TextView
                 android:id="@+id/textView_projetos_pesquisa_quantidade2"
@@ -397,7 +403,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="@string/jovens_pesquisadores" />
+                android:text="@string/jovens_pesquisadores"
+                android:visibility="invisible" />
 
             <TextView
                 android:id="@+id/textView_jovens_pesquisadores_quantidade2"
@@ -421,7 +428,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="@string/projeto_iniciacao" />
+                android:text="@string/projeto_iniciacao"
+                android:visibility="invisible" />
 
             <TextView
                 android:id="@+id/textView_projetos_iniciacao_quantidade2"
