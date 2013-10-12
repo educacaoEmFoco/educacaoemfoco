@@ -165,6 +165,5 @@ public class TelaComparaEstados extends Activity {
 		textViewQuantidadeProjetosIniciacao2 = (TextView) findViewById(R.id.textView_projetos_iniciacao_quantidade2);
 		textViewValorProjetosIniciacao2 = (TextView) findViewById(R.id.textView_projetos_iniciacao_valor2);
 		
-		
 	}
 }

@@ -131,6 +131,7 @@ public final class R {
         public static final int activity_tela_lista_estado=0x7f030004;
         public static final int listview_item=0x7f030005;
         public static final int spinner_item=0x7f030006;
+        public static final int spinner_item2=0x7f030007;
     }
     public static final class menu {
         public static final int main=0x7f080000;
@@ -185,18 +186,20 @@ public final class R {
     
          */
         public static final int AppTheme=0x7f070000;
-        public static final int botaoComparacao=0x7f070006;
-        public static final int botaoMenu=0x7f070005;
-        public static final int comparacao_subTitulo_1=0x7f070008;
-        public static final int comparacao_subTitulo_2=0x7f07000b;
-        public static final int comparacao_titulo_1=0x7f070009;
-        public static final int comparacao_titulo_2=0x7f07000c;
-        public static final int comparacao_valor_1=0x7f07000a;
-        public static final int comparacao_valor_2=0x7f07000d;
-        public static final int comparacao_x=0x7f070007;
-        public static final int spinner_item=0x7f07000e;
+        public static final int botaoComparacao=0x7f070007;
+        public static final int botaoMenu=0x7f070006;
+        public static final int comparacao_subTitulo_1=0x7f070009;
+        public static final int comparacao_subTitulo_2=0x7f07000c;
+        public static final int comparacao_titulo_1=0x7f07000a;
+        public static final int comparacao_titulo_2=0x7f07000d;
+        public static final int comparacao_valor_1=0x7f07000b;
+        public static final int comparacao_valor_2=0x7f07000e;
+        public static final int comparacao_x=0x7f070008;
+        public static final int spinner_item=0x7f07000f;
+        public static final int spinner_item2=0x7f070010;
         public static final int subTitulo=0x7f070002;
-        public static final int titulo=0x7f070003;
-        public static final int valor=0x7f070004;
+        public static final int subTitulo2=0x7f070003;
+        public static final int titulo=0x7f070004;
+        public static final int valor=0x7f070005;
     }
 }
