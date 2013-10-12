@@ -1,6 +1,8 @@
-package com.mdsgpp.eef;
+package com.mdsgpp.eef.visao;
 
 import java.util.ArrayList;
+
+import com.mdsgpp.eef.R;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -91,8 +93,8 @@ public class TelaComparacao extends Activity {
 
 	private void setAdapterSpinner02() {
 		estadosAdapter02 = new ArrayAdapter<String>(this,
-				R.layout.spinner_item2, estados02);
-		estadosAdapter02.setDropDownViewResource(android.R.layout.simple_list_item_1);
+				R.layout.spinner_item, estados02);
+		estadosAdapter02.setDropDownViewResource(R.layout.spinner_item);
 
 		// Define o adapter para os spinners
 		estadosSpinner.setAdapter(estadosAdapter02);

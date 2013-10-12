@@ -1,8 +1,9 @@
-package com.mdsgpp.eef;
+package com.mdsgpp.eef.visao;
 
 import java.io.IOException;
 import java.util.HashMap;
 
+import com.mdsgpp.eef.R;
 import com.mdsgpp.eef.controle.EstadoControle;
 
 import android.os.Bundle;
@@ -166,6 +167,7 @@ public class TelaComparaEstados extends Activity {
 		textViewValorJovensPesquisadores2 = (TextView) findViewById(R.id.textView_jovens_pesquisadores_valor2);
 		textViewQuantidadeProjetosIniciacao2 = (TextView) findViewById(R.id.textView_projetos_iniciacao_quantidade2);
 		textViewValorProjetosIniciacao2 = (TextView) findViewById(R.id.textView_projetos_iniciacao_valor2);
+		
 		
 	}
 }

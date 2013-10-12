@@ -1,4 +1,4 @@
-package com.mdsgpp.eef;
+package com.mdsgpp.eef.visao;
 
 import com.mdsgpp.eef.R;
 
