@@ -155,7 +155,7 @@ public class Estado {
 
 	public Media[] getmediaNotasPorTurma() {
 		if (mediaNotasPorTurma == null) {
-			Media vazio[] = { new Media(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0) };
+			Media vazio[] = { new Media(0,0,0,0,0,0) };
 			return vazio;
 		}
 		
@@ -168,7 +168,7 @@ public class Estado {
 
 	public Media[] getMediaHorasAula() {
 		if (mediaHorasAula == null) {
-			Media vazio[] = { new Media(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0) };
+			Media vazio[] = { new Media(0,0,0,0,0,0) };
 			return vazio;
 		}
 		
@@ -181,7 +181,7 @@ public class Estado {
 
 	public Media[] getTaxaDistorcaoIdadeSerie() {
 		if (taxaDistorcaoIdadeSerie == null) {
-			Media vazio[] = { new Media(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0) };
+			Media vazio[] = { new Media(0,0,0,0,0,0) };
 			return vazio;
 		}
 		
