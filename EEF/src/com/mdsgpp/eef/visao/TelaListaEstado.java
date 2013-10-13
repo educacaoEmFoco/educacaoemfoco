@@ -16,33 +16,13 @@ import android.widget.ListView;
 public class TelaListaEstado extends Activity {
 
 	final Context context = this;
-	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_tela_lista_estado);
-		
-		// Captura a listview
-		ListView listView = (ListView) findViewById(R.id.listview_tela_estados);
-		
-		// Cria um Adapter para a list view
-		EstadoAdapter adapter = new EstadoAdapter(this); 
-		
-		// Define o adapter para a list view
-		listView.setAdapter(adapter);
-		// Cria o evento para responder à escolha de um item
-		listView.setOnItemClickListener( new OnItemClickListener() {
-			@Override
-			public void onItemClick(AdapterView<?> arg0, View arg1, int position, long id) {
-				// Cria uma nova intent para chamar a próxima activity
-				Intent intent = new Intent(context, TelaEstado.class);
-				// Transfere a posição do item escolhido através da intent para a próxima activity
-				intent.putExtra("INDEX_ESTADO_ESCOLHIDO", position);
-				// Executa a intent
-				startActivity(intent);
-			}
-		});
-		
+
+		inicializaListView();
 	}
 
 	@Override
@@ -51,6 +31,22 @@ public class TelaListaEstado extends Activity {
 		getMenuInflater().inflate(R.menu.tela_lista_estado, menu);
 		return true;
 	}
-
 	
+	private void inicializaListView() {
+		ListView listView = (ListView) findViewById(R.id.listview_tela_estados);
+
+		EstadoAdapter adapter = new EstadoAdapter(this);
+
+		listView.setAdapter(adapter);
+		listView.setOnItemClickListener(new OnItemClickListener() {
+			@Override
+			public void onItemClick(AdapterView<?> arg0, View arg1,
+					int position, long id) {
+				Intent intent = new Intent(context, TelaEstado.class);
+				intent.putExtra("INDEX_ESTADO_ESCOLHIDO", position);
+				startActivity(intent);
+			}
+		});
+	}
+
 }

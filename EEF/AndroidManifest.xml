@@ -15,7 +15,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.mdsgpp.eef.MainActivity"
+            android:name="com.mdsgpp.eef.visao.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,22 +24,22 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.mdsgpp.eef.TelaEstado"
+            android:name="com.mdsgpp.eef.visao.TelaEstado"
             android:label="@string/title_activity_tela_estado"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name="com.mdsgpp.eef.TelaListaEstado"
+            android:name="com.mdsgpp.eef.visao.TelaListaEstado"
             android:label="@string/title_activity_tela_lista_estado"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name="com.mdsgpp.eef.TelaComparacao"
+            android:name="com.mdsgpp.eef.visao.TelaComparacao"
             android:label="@string/title_activity_tela_comparacao"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name="com.mdsgpp.eef.TelaComparaEstados"
+            android:name="com.mdsgpp.eef.visao.TelaComparaEstados"
             android:label="@string/title_activity_tela_compara_estados" 
             android:screenOrientation="user" >
         </activity>

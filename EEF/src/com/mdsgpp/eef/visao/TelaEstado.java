@@ -9,8 +9,10 @@ import com.mdsgpp.eef.controle.EstadoControle;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.util.Log;
 import android.view.Menu;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class TelaEstado extends Activity {
 
@@ -37,9 +39,18 @@ public class TelaEstado extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_tela_estado);
 		
-		// Captura o intent que abriu a activity
+		capturaInformacoes();
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.tela_estado, menu);
+		return true;
+	}
+	
+	private void capturaInformacoes() {
 		Intent intent = getIntent();
-		// Captura o valor transferido através da intent
 		int posicao = intent.getIntExtra("INDEX_ESTADO_ESCOLHIDO", 0);	
 		
 		InicializaCamposTexto();
@@ -50,16 +61,9 @@ public class TelaEstado extends Activity {
 			informacoes = EstadoControle.getInstancia(this).getInformacoesEstado(posicao);
 			preencheCamposTexto(informacoes);
 		} catch (IOException e) {
-			e.printStackTrace();
+			Toast.makeText(getApplicationContext(), "Houve um erro no acesso às informações.", Toast.LENGTH_SHORT).show();
+			Log.i("IOException - TelaEstado", e.toString());
 		}
-		
-	}
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.tela_estado, menu);
-		return true;
 	}
 	
 	private void InicializaCamposTexto() {
