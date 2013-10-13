@@ -27,6 +27,12 @@
         <item name="android:padding">5dip</item>
     </style>
 
+    <style name="subTitulo2">
+        <item name="android:textColor">#4A442E</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:padding">5dip</item>
+    </style>
+    
     <style name="titulo">
         <item name="android:textColor">#4A442E</item>
         <item name="android:textSize">40sp</item>
@@ -88,10 +94,15 @@
     </style>
 
     <style name="comparacao_valor_2">
-        <item name="android:textColor">#A69968</item>
+        <item name="android:textColor">#4A442E</item>
     </style>
     
     <style name="spinner_item" parent="@style/subTitulo">
+        <item name="android:textSize">20sp</item>
+        <item name="android:typeface">serif</item>
+    </style>
+    
+    <style name="spinner_item2" parent="@style/subTitulo2">
         <item name="android:textSize">20sp</item>
         <item name="android:typeface">serif</item>
     </style>
