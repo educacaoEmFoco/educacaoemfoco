@@ -45,6 +45,12 @@ public class EstadoControle {
 		
 		Log.i("teste nome", nomeSigla[0]);
 		
+		escreveEstado(estado);
+	
+	}
+
+	private void escreveEstado(Estado estado) {
+		
 		this.informacoesEstado.put("sigla", estado.getSigla() );
 		this.informacoesEstado.put("nome", estado.getNome() );;
 		this.informacoesEstado.put("populacao", dfPopulação.format( estado.getPopulacao() ) + " habitantes" );
@@ -62,7 +68,6 @@ public class EstadoControle {
 		this.informacoesEstado.put("valor_projetos_jovens_pesquisadores","Valor investido: R$ " + dfValor.format( estado.getProjetoJovensPesquisadores()[estado.getProjetoJovensPesquisadores().length-1].getValor() ) + " (em mil)");
 		this.informacoesEstado.put("quantidade_projetos_inct","Quantidade: " + estado.getProjetosInct()[estado.getProjetosInct().length-1].getQuantidade() + " projetos");
 		this.informacoesEstado.put( "valor_projetos_inct","Valor investido: R$ " + dfValor.format( estado.getProjetosInct()[estado.getProjetosInct().length-1].getValor() ) + " (em mil)");
-	
 	}
 
 }

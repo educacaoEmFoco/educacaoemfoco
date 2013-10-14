@@ -49,4 +49,15 @@
         
     </LinearLayout>
 
+    <Button
+        android:id="@+id/button1"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/textViewTitulo"
+        android:layout_below="@+id/linearLayoutHorizontal"
+        android:layout_marginTop="40dp"
+        android:onClick="clickBotaoSobre"
+        android:text="@string/botao_sobre" />
+
 </RelativeLayout>
