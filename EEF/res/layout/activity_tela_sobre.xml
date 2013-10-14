@@ -108,16 +108,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="left"
-            android:text="@string/projetos_inct" />
-          
-          <TextView
-            android:id="@+id/textView_botao_sobre"
-            style="@style/tituloSobre"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="left"
-            android:text="@string/botao_sobre" />
-             
+            android:text="@string/projetos_inct" />            
         
     </LinearLayout>
     

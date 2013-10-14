@@ -94,7 +94,7 @@ public class TelaComparacao extends Activity {
 	private void setAdapterSpinner02() {
 		estadosAdapter02 = new ArrayAdapter<String>(this,
 				R.layout.spinner_item, estados02);
-		estadosAdapter02.setDropDownViewResource(R.layout.spinner_item);
+		estadosAdapter02.setDropDownViewResource(android.R.layout.simple_list_item_1);
 
 		// Define o adapter para os spinners
 		estadosSpinner.setAdapter(estadosAdapter02);
@@ -199,15 +199,19 @@ public class TelaComparacao extends Activity {
 	}
 
 	private void atualizaValoresSpinner01(String nome) {
+		String estadoSelecionado = estadosSpinner01.getSelectedItem().toString();
 		preencheEstados01();
 		estados01.remove(nome);
 		estadosAdapter01.notifyDataSetChanged();
+		estadosSpinner01.setSelection(estados01.indexOf(estadoSelecionado));
 	}
 
 	private void atualizaValoresSpinner02(String nome) {
+		String estadoSelecionado = estadosSpinner.getSelectedItem().toString();
 		preencheEstados02();
 		estados02.remove(nome);
 		estadosAdapter02.notifyDataSetChanged();
+		estadosSpinner.setSelection(estados02.indexOf(estadoSelecionado));
 	}
 
 	public void clickBotaoComparacaoEstados(View view) {

@@ -29,7 +29,7 @@ public final class R {
         public static final int ic_launcher=0x7f020001;
     }
     public static final class id {
-        public static final int action_settings=0x7f090068;
+        public static final int action_settings=0x7f090067;
         public static final int botao_lista_estados=0x7f090003;
         public static final int button1=0x7f090004;
         public static final int buttonComparacao=0x7f090002;
@@ -44,7 +44,6 @@ public final class R {
         public static final int spinner1=0x7f09003d;
         public static final int spinner2=0x7f09003e;
         public static final int textViewTitulo=0x7f090000;
-        public static final int textView_botao_sobre=0x7f090065;
         public static final int textView_ideb=0x7f090049;
         public static final int textView_ideb1=0x7f090016;
         public static final int textView_ideb2=0x7f090038;
@@ -132,8 +131,8 @@ public final class R {
         public static final int textView_valores_projeto_pesquisa1=0x7f090025;
         public static final int textView_valores_projeto_pesquisa2=0x7f090026;
         public static final int textView_x=0x7f090009;
-        public static final int textview_lista_estados=0x7f090067;
-        public static final int textview_lista_siglas=0x7f090066;
+        public static final int textview_lista_estados=0x7f090066;
+        public static final int textview_lista_siglas=0x7f090065;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
