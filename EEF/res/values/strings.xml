@@ -55,8 +55,7 @@
           A UF considerada é a UF da instituição de destino.  </string>
     
     <string name="projetos_inct"> Projetos Instituto Nacional de Ciência e Tecnologia - INCT: </string>
-    <string name="projetos_inct_conteudo"> Número de projetos contratados dos Institutos Nacionais de Ciência e Tecnologia.
-         A UF considerada é a UF da instituição de destino. </string>
+    <string name="projetos_inct_conteudo"> Número de projetos contratados dos Institutos Nacionais de Ciência e Tecnologia. </string>
     
     <string name="botao_sobre">Sobre</string>
     <string name="title_activity_tela_sobre">TelaSobre</string>

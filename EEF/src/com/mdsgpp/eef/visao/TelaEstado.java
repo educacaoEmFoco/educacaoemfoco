@@ -11,6 +11,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.util.Log;
 import android.view.Menu;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,6 +34,7 @@ public class TelaEstado extends Activity {
 	private TextView textViewValorJovensPesquisadores;
 	private TextView textViewQuantidadeProjetosIniciacao;
 	private TextView textViewValorProjetosIniciacao;
+	private ImageView imageViewBandeiras;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +62,7 @@ public class TelaEstado extends Activity {
 	    try {
 			informacoes = EstadoControle.getInstancia(this).getInformacoesEstado(posicao);
 			preencheCamposTexto(informacoes);
+			setImagem(posicao);
 		} catch (IOException e) {
 			Toast.makeText(getApplicationContext(), "Houve um erro no acesso às informações.", Toast.LENGTH_SHORT).show();
 			Log.i("IOException - TelaEstado", e.toString());
@@ -85,11 +88,9 @@ public class TelaEstado extends Activity {
 		textViewValorJovensPesquisadores= (TextView) findViewById(R.id.textView_jovens_pesquisadores_valor);
 		textViewQuantidadeProjetosIniciacao = (TextView) findViewById(R.id.textView_projetos_iniciacao_quantidade);
 		textViewValorProjetosIniciacao = (TextView) findViewById(R.id.textView_projetos_iniciacao_valor);
-		
 	}
 	
 	private void preencheCamposTexto(HashMap<String, String> informacoes) {
-		
 		textViewSigla.setText(informacoes.get("sigla"));
 		textViewNome.setText(informacoes.get("nome"));
 		textViewPopulacao.setText(informacoes.get("populacao"));
@@ -109,5 +110,21 @@ public class TelaEstado extends Activity {
 		textViewValorProjetosIniciacao.setText(informacoes.get("valor_projetos_inct"));
 		
 	}
+	
+	private void setImagem(int posicao) {
+		// O nome das bandeiras tá sem acento
+		// A slução que eu acho mais simples é ter um array com os nomes dos estados sem acento, e pegar o nome certo pela posicao
+		String bandeiras[] = {"acre", "alagoas", "amapa", "amazonas", "bahia", 
+				"ceara", "distritofederal", "espiritosanto", "goias", "maranhao",
+				"matogrosso", "matogrossodosul", "minasgerais", "para", "paraiba",
+				"parana", "pernambuco", "piaui", "riodejaneiro", "riograndedonorte",
+				"riograndedosul", "rondonia", "roraima", "santacatarina", "saopaulo",
+				"sergipe", "tocantins"};	
+		
+		imageViewBandeiras = (ImageView) findViewById(R.id.imageView_bandeiras);
+		int idBandeira = getResources().getIdentifier(bandeiras[posicao], "drawable", getPackageName());
+		imageViewBandeiras.setImageResource(idBandeira);
+	}
+
 
 }

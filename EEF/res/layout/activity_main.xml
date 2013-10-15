@@ -24,29 +24,29 @@
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_margin="15dp"
+        android:background="@drawable/background_sombra"
         android:gravity="center"
         android:orientation="horizontal"
-        android:padding="25dp"
-        android:background="@drawable/background_sombra" >
-
-        <Button
-            android:id="@+id/buttonComparacao"
-            style="@style/botaoMenu"
-            android:layout_width="130dp"
-            android:layout_height="130dp"
-            android:drawableTop="@drawable/ic_launcher"
-            android:onClick="clickBotaoComparacao"
-            android:text="@string/menu_botao_comparacao" />
+        android:padding="25dp" >
 
         <Button
             android:id="@+id/botao_lista_estados"
             style="@style/botaoMenu"
-            android:layout_width="130dp"
-            android:layout_height="130dp"
-            android:drawableTop="@drawable/ic_launcher"
+            android:layout_width="123dp"
+            android:layout_height="match_parent"
+            android:drawableTop="@drawable/icone_listar"
             android:onClick="clickBotaoListaEstados"
             android:text="@string/menu_botao_lista_estados" />
-        
+
+        <Button
+            android:id="@+id/buttonComparacao"
+            style="@style/botaoMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableTop="@drawable/icone_comparacao"
+            android:onClick="clickBotaoComparacao"
+            android:text="@string/menu_botao_comparacao" />
+
     </LinearLayout>
 
     <Button
