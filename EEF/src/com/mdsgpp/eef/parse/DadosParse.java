@@ -85,9 +85,6 @@ public class DadosParse {
 
 			aux = 0;
 			informacoes.put(nomeIndicador, dados);
-
-			if (linha == null)
-				return;
 		}
 
 		br.close();
