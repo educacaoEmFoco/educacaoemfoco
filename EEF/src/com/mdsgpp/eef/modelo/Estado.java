@@ -230,22 +230,22 @@ public class Estado {
 
 	public void setPrimeirosProjetos(HashMap<String, ArrayList<String[]>> informacoes) {
 		Projeto projetosPrimeirosProjetos[] = null;
+		ArrayList<String[]> dadosProjetos = null;
+		ArrayList<String[]> dadosValores = null;
 		
-		if (informacoes.containsKey("programa_primeiros_projetos") 
-				&& informacoes.containsKey("valores_programa_primeiros_projetos")) {
-
-			ArrayList<String[]> dadosProjetos = informacoes.get("programa_primeiros_projetos");
-			ArrayList<String[]> dadosValores = informacoes.get("valores_programa_primeiros_projetos");
-			
+		if (informacoes.containsKey("programa_primeiros_projetos")){
+			dadosProjetos = informacoes.get("programa_primeiros_projetos");
 			projetosPrimeirosProjetos = new Projeto[dadosProjetos.size()];
-			
-			for (int i=0; i<projetosPrimeirosProjetos.length; i++) { 
-				projetosPrimeirosProjetos[i] = new Projeto();
-				projetosPrimeirosProjetos[i].setEstado(this);
-				projetosPrimeirosProjetos[i].setQuantidade(Integer.parseInt(dadosProjetos.get(i)[1].replaceAll(",", ".")));
-				projetosPrimeirosProjetos[i].setValor(Double.parseDouble(dadosValores.get(i)[1].replaceAll(",", ".")));
-			}
+			dadosValores = informacoes.get("valores_programa_primeiros_projetos");
 		}
+			
+		for (int i=0; projetosPrimeirosProjetos!=null && i<projetosPrimeirosProjetos.length; i++) { 
+			projetosPrimeirosProjetos[i] = new Projeto();
+			projetosPrimeirosProjetos[i].setEstado(this);
+			projetosPrimeirosProjetos[i].setQuantidade(Integer.parseInt(dadosProjetos.get(i)[1].replaceAll(",", ".")));
+			projetosPrimeirosProjetos[i].setValor(Double.parseDouble(dadosValores.get(i)[1].replaceAll(",", ".")));
+		}
+		
 		
 		this.primeirosProjetos = projetosPrimeirosProjetos;
 	}
