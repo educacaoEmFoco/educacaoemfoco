@@ -10,13 +10,12 @@ import java.util.HashMap;
 import android.content.Context;
 import android.content.res.AssetManager;
 
-import com.mdsgpp.eef.controle.ParseControle;
-
 public class DadosParse {
 
-	Context context;
-	String extensao = ".txt";
-	private HashMap<String, ArrayList<String[]>> informacoes = new HashMap<String, ArrayList<String[]>>();
+	private HashMap<String, ArrayList<String[]>> informacoes;
+	private ArrayList<String[]> dados;
+	private Context context;
+	private String extensao = ".txt";
 	private String nomeIndicador;
 
 	String estados[][] = { { "Acre", "Acre" }, { "Alagoas", "Alagoas" },
@@ -39,55 +38,72 @@ public class DadosParse {
 
 	public DadosParse(Context context) {
 		this.context = context;
+		this.informacoes = new HashMap<String, ArrayList<String[]>>();
 	}
 
-	public void getEstado(int posicao) throws IOException {
+	public HashMap<String, ArrayList<String[]>> getEstado(int posicao) throws IOException {
 		String nome, sigla;
 
-		AssetManager am = context.getAssets();
-		InputStream is = am.open(estados[posicao][1] + extensao);
+		AssetManager am = this.context.getAssets();
+		InputStream is = am.open(this.estados[posicao][1] + this.extensao);
 		BufferedReader br = new BufferedReader(new InputStreamReader(is));
 
-		limpaInformacoes();
-
 		nome = br.readLine();
+		nome = this.estados[posicao][0];
 		sigla = br.readLine();
-
+		
+		limpaInformacoes();
+		limpaDados();
+		
+		insereNomeSigla(nome, sigla);
 		lerIndicativos(br);
-
-		nome = estados[posicao][0];
-		ParseControle.getInstancia(context).setInformacoes(nome, sigla, informacoes);
-
+		
+		return informacoes;
 	}
 
 	public void limpaInformacoes() {
-		informacoes.clear();
+		this.informacoes.clear();
+	}
+	
+	public void limpaDados() {
+		this.dados = new ArrayList<String[]>(); 
 	}
 
+	// Método para mandar o nome e a sigla através do mesmo hashmap ds indicativos
+	public void insereNomeSigla(String nome, String sigla) {
+		ArrayList<String[]> container = new ArrayList<String[]>();
+		String nomeEsigla[] = new String[2];
+		nomeEsigla[0] = nome;
+		nomeEsigla[1] = sigla;
+		
+		container.add(nomeEsigla);
+		this.informacoes.put("nome_e_sigla", container);
+	}
+	
 	public void lerIndicativos(BufferedReader br) throws IOException {
-		String linha = br.readLine();
-		linha = br.readLine();
 		int aux = 0;
+		String linha;
 
+		linha = br.readLine();
+		nomeIndicador = br.readLine();
+		linha = br.readLine();
+		
 		while (linha != null) {
-			nomeIndicador = linha;
-			ArrayList<String[]> dados = new ArrayList<String[]>();
-
-			linha = br.readLine();
-			while (linha != null && aux < 2) {
-				if (linha.isEmpty()) {
-					aux++;
-				} else {
-					dados.add(linha.split(": "));
-				}
-				linha = br.readLine();
+			
+			if (linha.isEmpty()) {
+				aux++;
+			} else {
+				dados.add(linha.split(": "));
 			}
 
-			aux = 0;
-			informacoes.put(nomeIndicador, dados);
-
-			if (linha == null)
-				return;
+			if (aux == 2) {
+				aux = 0;
+				this.informacoes.put(nomeIndicador, dados);
+				nomeIndicador = br.readLine();
+				limpaDados();
+			}
+			
+			linha = br.readLine();
 		}
 
 		br.close();
