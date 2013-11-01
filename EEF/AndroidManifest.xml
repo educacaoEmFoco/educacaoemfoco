@@ -51,6 +51,8 @@
             android:screenOrientation="portrait" > 
         </activity>
         
+        <uses-library android:name="android.test.runner" />
+        
     </application>
 
 </manifest>
