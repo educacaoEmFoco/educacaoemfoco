@@ -60,6 +60,10 @@
             android:name="com.mdsgpp.eef.visao.TelaConsultaIndicativo"
             android:label="@string/title_activity_tela_consulta_indicativo" >
         </activity>
+        <activity
+            android:name="com.mdsgpp.eef.visao.TelaIndicativosConsultados"
+            android:label="@string/title_activity_tela_indicativos_consultados" >
+        </activity>
     </application>
 
 </manifest>

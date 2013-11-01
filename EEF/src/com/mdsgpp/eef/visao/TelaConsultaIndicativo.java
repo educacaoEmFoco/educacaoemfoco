@@ -8,7 +8,9 @@ import com.mdsgpp.eef.R.menu;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
@@ -76,5 +78,17 @@ private ArrayList<String> preencherEstado(){
 	return estados01;
 } 
 
-
+public void clickBotaoComparar(View view){
+	
+	int posicao01 = estadosSpinner01.getSelectedItemPosition();
+	int posicao02 = estadosSpinner02.getSelectedItemPosition();
+	
+	Intent intent = new Intent(this, TelaIndicativosConsultados.class);
+	
+	intent.putExtra("POSICAO_ESTADO01", posicao01);
+	intent.putExtra("POSICAO_ESTADO02", posicao02);
+	
+	startActivity(intent);
+ }	
 }
+

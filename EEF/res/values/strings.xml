@@ -54,5 +54,6 @@
     <string name="title_activity_tela">Tela</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_tela_consulta_indicativo">TelaConsultaIndicativo</string>
+    <string name="title_activity_tela_indicativos_consultados">TelaIndicativosConsultados</string>
 
 </resources>
