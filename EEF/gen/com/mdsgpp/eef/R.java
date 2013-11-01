@@ -184,9 +184,10 @@ public final class R {
         public static final int activity_tela_estado=0x7f030004;
         public static final int activity_tela_indicativos_consultados=0x7f030005;
         public static final int activity_tela_lista_estado=0x7f030006;
-        public static final int activity_tela_sobre=0x7f030007;
-        public static final int listview_item=0x7f030008;
-        public static final int spinner_item=0x7f030009;
+        public static final int activity_tela_resultado_consulta=0x7f030007;
+        public static final int activity_tela_sobre=0x7f030008;
+        public static final int listview_item=0x7f030009;
+        public static final int spinner_item=0x7f03000a;
     }
     public static final class menu {
         public static final int main=0x7f080000;
@@ -198,7 +199,8 @@ public final class R {
         public static final int tela_estado=0x7f080006;
         public static final int tela_indicativos_consultados=0x7f080007;
         public static final int tela_lista_estado=0x7f080008;
-        public static final int tela_sobre=0x7f080009;
+        public static final int tela_resultado_consulta=0x7f080009;
+        public static final int tela_sobre=0x7f08000a;
     }
     public static final class string {
         public static final int Programa_primeiros_projetos=0x7f06000d;
@@ -251,6 +253,7 @@ public final class R {
         public static final int title_activity_tela_estado=0x7f060002;
         public static final int title_activity_tela_indicativos_consultados=0x7f06002b;
         public static final int title_activity_tela_lista_estado=0x7f060004;
+        public static final int title_activity_tela_resultado_consulta=0x7f06002c;
         public static final int title_activity_tela_sobre=0x7f060027;
         public static final int titulo_menu=0x7f060015;
     }

@@ -11,7 +11,7 @@
     <string name="menu_botao_lista_estados">Lista de Estados</string>
     <string name="menu_botao_comparacao">Comparar</string>
     <string name="string_vazia"></string>
-   
+
     <!-- Strings da tela indicativos consultados -->
     <string name="botao_tela_indicativos">Ir</string>
 
@@ -58,5 +58,6 @@
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_tela_consulta_indicativo">TelaConsultaIndicativo</string>
     <string name="title_activity_tela_indicativos_consultados">TelaIndicativosConsultados</string>
+    <string name="title_activity_tela_resultado_consulta">TelaResultadoConsulta</string>
 
 </resources>
