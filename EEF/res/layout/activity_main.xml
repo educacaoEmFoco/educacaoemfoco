@@ -12,41 +12,65 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="35dp"
         android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginTop="10dp"
         android:gravity="center"
         android:text="@string/titulo_menu" />
 
     <LinearLayout
-        android:id="@+id/linearLayoutHorizontal"
+        android:id="@+id/linearLayoutVertical"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_margin="15dp"
         android:background="@drawable/background_sombra"
         android:gravity="center"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:padding="25dp" >
 
-        <Button
-            android:id="@+id/botao_lista_estados"
-            style="@style/botaoMenu"
-            android:layout_width="123dp"
-            android:layout_height="match_parent"
-            android:drawableTop="@drawable/icone_listar"
-            android:onClick="clickBotaoListaEstados"
-            android:text="@string/menu_botao_lista_estados" />
+        <LinearLayout
+            android:id="@+id/linearLayoutHorizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
 
-        <Button
-            android:id="@+id/buttonComparacao"
-            style="@style/botaoMenu"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:drawableTop="@drawable/icone_comparacao"
-            android:onClick="clickBotaoComparacao"
-            android:text="@string/menu_botao_comparacao" />
+            <Button
+                android:id="@+id/botao_lista_estados"
+                style="@style/botaoMenu"
+                android:layout_width="123dp"
+                android:layout_height="match_parent"
+                android:drawableTop="@drawable/icone_listar"
+                android:onClick="clickBotaoListaEstados"
+                android:text="@string/menu_botao_lista_estados" />
 
+            <Button
+                android:id="@+id/buttonComparacao"
+                style="@style/botaoMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableTop="@drawable/icone_comparacao"
+                android:onClick="clickBotaoComparacao"
+                android:text="@string/menu_botao_comparacao" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutHorizontal2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/botao_consulta"
+                style="@style/botaoMenu"
+                android:layout_width="123dp"
+                android:layout_height="match_parent"
+                android:drawableTop="@drawable/icone_listar"
+                android:onClick="clickBotaoConsulta"
+                android:text="@string/menu_botao_consulta" />
+        </LinearLayout>
     </LinearLayout>
 
     <Button
@@ -55,7 +79,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignRight="@+id/textViewTitulo"
-        android:layout_below="@+id/linearLayoutHorizontal"
+        android:layout_below="@+id/linearLayoutVertical"
         android:layout_marginTop="40dp"
         android:onClick="clickBotaoSobre"
         android:text="@string/botao_sobre" />
