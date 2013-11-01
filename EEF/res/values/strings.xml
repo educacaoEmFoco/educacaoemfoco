@@ -11,6 +11,9 @@
     <string name="menu_botao_lista_estados">Lista de Estados</string>
     <string name="menu_botao_comparacao">Comparar</string>
     <string name="string_vazia"></string>
+   
+    <!-- Strings da tela indicativos consultados -->
+    <string name="botao_tela_indicativos">Ir</string>
 
     <!-- Strings da tela estado -->
 
