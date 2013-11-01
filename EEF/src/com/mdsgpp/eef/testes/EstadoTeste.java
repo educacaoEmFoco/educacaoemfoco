@@ -11,6 +11,8 @@ import org.junit.Test;
 
 import com.mdsgpp.eef.modelo.Estado;
 
+// Classe de testes referentes a classe Estado do modelo
+
 public class EstadoTeste {
 
 	private Estado estado;
@@ -21,6 +23,7 @@ public class EstadoTeste {
 	@Before
 	public void setUp() throws Exception {
 		
+		// Objetos utilizados para realizar os testes
 		dados = new ArrayList<String[]>();
 		informacoes = new HashMap<String, ArrayList<String[]>>();
 		estado = new Estado();
@@ -32,6 +35,8 @@ public class EstadoTeste {
 		dados.add(valores);
 		
 		informacoes.put("valor_investido", dados);
+		informacoes.put("numero_projetos", dados);
+		informacoes.put("participacao_estadual_pib", dados);
 	}
 
 	@After
@@ -47,6 +52,28 @@ public class EstadoTeste {
 		valores = estado.getValorInvestidoCienciaTecnologia();
 
 		
+		assertEquals(valores[0], 3000, 0.00001);
+	}
+	
+	@Test
+	public void testNumeroDeProjetosCienciaTecnologia() {
+
+		int[] valores;	
+		estado.setNumeroDeProjetosCienciaTecnologia(informacoes);
+		
+		valores = estado.getNumeroDeProjetosCienciaTecnologia();
+
+		assertEquals(valores[0], 3000, 0.00001);
+	}
+	
+	@Test
+	public void testParticipacaoPercentualPIB() {
+
+		double[] valores;	
+		estado.setParticipacaoPercentualPIB(informacoes);
+		
+		valores = estado.getParticipacaoPercentualPIB();
+
 		assertEquals(valores[0], 3000, 0.00001);
 	}
 

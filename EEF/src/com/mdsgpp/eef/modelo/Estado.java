@@ -11,7 +11,7 @@ public class Estado {
 	private int populacao;
 	private int numeroDeProjetosCienciaTecnologia[];
 	private double valorInvestidoCienciaTecnologia[];
-	private Censo censos[]; //vetores, pois, será disponibilizado os valores referentes desde 2010
+	private Censo censos[];
 	private Ideb idebs[];
 	private Media mediaNotasPorTurma[];
 	private Media mediaHorasAula[];
@@ -39,7 +39,7 @@ public class Estado {
 	public void setCensos(Censo[] censos) {
 		this.censos = censos;
 	}
-
+	//testado
 	public double[] getParticipacaoPercentualPIB() {
 		if (participacaoPercentualPIB == null) {
 			double[] vazio = {0};
@@ -48,7 +48,7 @@ public class Estado {
 			
 		return participacaoPercentualPIB;
 	}
-
+	
 	public void setParticipacaoPercentualPIB(HashMap<String, ArrayList<String[]>> informacoes) {
 		
 		double participacaoPercentual[];
@@ -72,7 +72,7 @@ public class Estado {
 		this.populacao = Integer.parseInt(dados.get(0)[1].replaceAll(",", "."));
 
 	}
-
+	//testado
 	public int[] getNumeroDeProjetosCienciaTecnologia() {
 		if (numeroDeProjetosCienciaTecnologia == null) {
 			int[] vazio = {0};
@@ -81,7 +81,7 @@ public class Estado {
 		
 		return numeroDeProjetosCienciaTecnologia;
 	}
-
+	
 	public void setNumeroDeProjetosCienciaTecnologia(HashMap<String, ArrayList<String[]>> informacoes) {
 		int quantidadeProjetosCienciaTecnologia[] = null;
 		ArrayList<String[]> dados;
@@ -96,7 +96,7 @@ public class Estado {
 		
 		this.numeroDeProjetosCienciaTecnologia = quantidadeProjetosCienciaTecnologia;
 	}
-
+	//testado
 	public double[] getValorInvestidoCienciaTecnologia() {
 		if (valorInvestidoCienciaTecnologia == null) {
 			double[] vazio = {0};
@@ -129,7 +129,8 @@ public class Estado {
 		
 		return idebs;
 	}
-
+	
+	
 	public void setIdebs(HashMap<String, ArrayList<String[]>> informacoes) {
 		ArrayList<String[]> dadosFundamentalFinais;
 		ArrayList<String[]> dadosFundamentalIniciais;

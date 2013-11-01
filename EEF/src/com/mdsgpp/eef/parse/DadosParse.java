@@ -17,6 +17,7 @@ public class DadosParse {
 	private Context context;
 	private String extensao = ".txt";
 	private String nomeIndicador;
+	private int linhas = 2;
 
 	String estados[][] = { { "Acre", "Acre" }, { "Alagoas", "Alagoas" },
 			{ "Amapá", "Amapa" }, { "Amazonas", "Amazonas" },
@@ -69,7 +70,7 @@ public class DadosParse {
 		this.dados = new ArrayList<String[]>(); 
 	}
 
-	// Método para mandar o nome e a sigla através do mesmo hashmap ds indicativos
+	// Método resposavel por mandar o nome e a sigla através do mesmo hashmap ds indicativos
 	public void insereNomeSigla(String nome, String sigla) {
 		ArrayList<String[]> container = new ArrayList<String[]>();
 		String nomeEsigla[] = new String[2];
@@ -80,6 +81,7 @@ public class DadosParse {
 		this.informacoes.put("nome_e_sigla", container);
 	}
 	
+	// Metodo responsavel pela leitura dos dados disponiveis
 	public void lerIndicativos(BufferedReader br) throws IOException {
 		int aux = 0;
 		String linha;
@@ -96,7 +98,7 @@ public class DadosParse {
 				dados.add(linha.split(": "));
 			}
 
-			if (aux == 2) {
+			if (aux == linhas) {
 				aux = 0;
 				this.informacoes.put(nomeIndicador, dados);
 				nomeIndicador = br.readLine();
