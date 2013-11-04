@@ -32,12 +32,7 @@ public class EstadoControle {
 		return instancia; 
 	}
 	
-	public HashMap<String, String> getInformacoesEstado(int posicao) throws IOException {	
-		lerEstado(posicao);
-		return this.informacoesEstado;
-	}
-	
-	public void lerEstado(int posicao) throws IOException {
+	public HashMap<String, String> lerEstado(int posicao) throws IOException {
 		informacoesParse = ParseControle.getInstancia(context).getInformacoes(posicao);
 		
 		String nomeSigla[] = informacoesParse.get("nome_e_sigla").get(0);
@@ -46,6 +41,8 @@ public class EstadoControle {
 		Log.i("teste nome", nomeSigla[0]);
 		
 		escreveEstado(estado);
+		
+		return this.informacoesEstado;
 	
 	}
 
