@@ -4,7 +4,10 @@
     android:installLocation="preferExternal"
     android:versionCode="1"
     android:versionName="1.0" >
-
+	
+	<instrumentation android:name="android.test.InstrumentationTestRunner"
+   		android:targetPackage="com.mdsgpp.eef" />
+	
     <uses-sdk
         android:minSdkVersion="10"
         android:targetSdkVersion="16" />
