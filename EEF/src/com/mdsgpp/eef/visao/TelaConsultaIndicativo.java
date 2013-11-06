@@ -23,6 +23,9 @@ public class TelaConsultaIndicativo extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_tela_consulta_indicativo);
+		
+		inicializaSpinner();
+		preencherEstado();
 	}
 
 	@Override
@@ -34,61 +37,61 @@ public class TelaConsultaIndicativo extends Activity {
 	
 	private void inicializaSpinner(){
 	
-	estadosSpinner01 = (Spinner) findViewById(R.id.spinner_consulta01);
-	estadosSpinner02 = (Spinner) findViewById(R.id.spinner_consulta02);
+		estadosSpinner01 = (Spinner) findViewById(R.id.spinner_consulta01);
+		estadosSpinner02 = (Spinner) findViewById(R.id.spinner_consulta02);
+		
+		ArrayAdapter<String> estadoAdapter01 = new ArrayAdapter<String>(this, R.layout.spinner_item, preencherEstado()); 
+		ArrayAdapter<String> estadoAdapter02 = new ArrayAdapter<String>(this, R.layout.spinner_item, preencherEstado());
 	
-	ArrayAdapter<String> estadoAdapter01 = new ArrayAdapter<String>(this, R.layout.spinner_item, preencherEstado()); 
-	ArrayAdapter<String> estadoAdapter02 = new ArrayAdapter<String>(this, R.layout.spinner_item, preencherEstado());
+		estadosSpinner01.setAdapter(estadoAdapter01);
+		estadosSpinner02.setAdapter(estadoAdapter02);
+	}
 
-	estadosSpinner01.setAdapter(estadoAdapter01);
-	estadosSpinner02.setAdapter(estadoAdapter02);
-}
+	private ArrayList<String> preencherEstado(){
+		ArrayList<String> estados01 = new ArrayList<String>();
+		
+		estados01.add("Acre");
+		estados01.add("Alagoas");
+		estados01.add("Amapá");
+		estados01.add("Amazonas");
+		estados01.add("Bahia");
+		estados01.add("Ceará");
+		estados01.add("Distrito Federal");
+		estados01.add("Espírito Santo");
+		estados01.add("Goiás");
+		estados01.add("Maranhão");
+		estados01.add("Mato Grosso");
+		estados01.add("Mato Grosso do Sul");
+		estados01.add("Minas Gerais");
+		estados01.add("Pará");
+		estados01.add("Paraíba");
+		estados01.add("Paraná");
+		estados01.add("Pernambuco");
+		estados01.add("Piauí");
+		estados01.add("Rio de Janeiro");
+		estados01.add("Rio Grande do Norte");
+		estados01.add("Rio Grande do Sul");
+		estados01.add("Rondônia");
+		estados01.add("Roraima");
+		estados01.add("Santa Catarina");
+		estados01.add("São Paulo");
+		estados01.add("Sergipe");
+		estados01.add("Tocantins");
+		
+		return estados01;
+	} 
 
-private ArrayList<String> preencherEstado(){
-	ArrayList<String> estados01 = new ArrayList<String>();
+	public void clickBotaoComparar(View view){
 	
-	estados01.add("Acre");
-	estados01.add("Alagoas");
-	estados01.add("Amapá");
-	estados01.add("Amazonas");
-	estados01.add("Bahia");
-	estados01.add("Ceará");
-	estados01.add("Distrito Federal");
-	estados01.add("Espírito Santo");
-	estados01.add("Goiás");
-	estados01.add("Maranhão");
-	estados01.add("Mato Grosso");
-	estados01.add("Mato Grosso do Sul");
-	estados01.add("Minas Gerais");
-	estados01.add("Pará");
-	estados01.add("Paraíba");
-	estados01.add("Paraná");
-	estados01.add("Pernambuco");
-	estados01.add("Piauí");
-	estados01.add("Rio de Janeiro");
-	estados01.add("Rio Grande do Norte");
-	estados01.add("Rio Grande do Sul");
-	estados01.add("Rondônia");
-	estados01.add("Roraima");
-	estados01.add("Santa Catarina");
-	estados01.add("São Paulo");
-	estados01.add("Sergipe");
-	estados01.add("Tocantins");
-	
-	return estados01;
-} 
-
-public void clickBotaoComparar(View view){
-	
-	int posicao01 = estadosSpinner01.getSelectedItemPosition();
-	int posicao02 = estadosSpinner02.getSelectedItemPosition();
-	
-	Intent intent = new Intent(this, TelaIndicativosConsultados.class);
-	
-	intent.putExtra("POSICAO_ESTADO01", posicao01);
-	intent.putExtra("POSICAO_ESTADO02", posicao02);
-	
-	startActivity(intent);
- }	
+		int posicao01 = estadosSpinner01.getSelectedItemPosition();
+		int posicao02 = estadosSpinner02.getSelectedItemPosition();
+		
+		Intent intent = new Intent(this, TelaIndicativosConsultados.class);
+		
+		intent.putExtra("POSICAO_ESTADO01", posicao01);
+		intent.putExtra("POSICAO_ESTADO02", posicao02);
+		
+		startActivity(intent);
+	}	
 }
 
