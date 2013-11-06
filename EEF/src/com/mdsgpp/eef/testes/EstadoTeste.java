@@ -28,6 +28,8 @@ public class EstadoTeste {
 	ArrayList<String[]> dadosValores;
 	ArrayList<String[]> dadosProjetosInct;
 	ArrayList<String[]> dadosValoresInct;
+	ArrayList<String[]> dadosProjetosCnpq;
+	ArrayList<String[]> dadosValoresCnpq;
 	private String valores[];
 	
 	@Before
@@ -42,6 +44,8 @@ public class EstadoTeste {
 		dadosValores = new ArrayList<String[]>();
 		dadosProjetosInct = new ArrayList<String[]>();
 		dadosValoresInct = new ArrayList<String[]>();
+		dadosProjetosCnpq = new ArrayList<String[]>();
+		dadosValoresCnpq = 	new ArrayList<String[]>();	
 		
 		informacoes = new HashMap<String, ArrayList<String[]>>();
 		estado = new Estado();
@@ -58,6 +62,8 @@ public class EstadoTeste {
 		String[] PrimeirosProjetos2 = {"2001","10000.50"};
 		String[] ProjetosInct1 = {"2001","20"};
 		String[] ProjetosInct2 ={"2001","10000.50"};
+		String[] ProjetosCnpq1 = {"2001","20"};
+		String[] ProjetosCnpq2 ={"2001","10000.50"};
 		
 		dados.add(valores);
 		dadosFundamentalFinais.add(idebs1);
@@ -67,6 +73,9 @@ public class EstadoTeste {
 		dadosValores.add(PrimeirosProjetos2);
 		dadosProjetosInct.add(ProjetosInct1);
 		dadosValoresInct.add(ProjetosInct2);
+		dadosProjetosCnpq.add(ProjetosCnpq1);
+		dadosValoresCnpq.add(ProjetosCnpq1);
+		
 		
 		informacoes.put("valor_investido", dados);
 		informacoes.put("numero_projetos", dados);
@@ -78,7 +87,8 @@ public class EstadoTeste {
 		informacoes.put("valores_programa_primeiros_projetos",dadosValores);
 		informacoes.put("projetos_inct",dadosProjetosInct);
 		informacoes.put("valores_projetos_inct",dadosValoresInct);
-		
+		informacoes.put("projetos_apoio_pesquisa_cnpq",dadosProjetosCnpq);
+		informacoes.put("valores_projetos_apoio_pesquisa_cnpq",dadosValoresCnpq);
 	
 	
 	}
@@ -153,6 +163,14 @@ public class EstadoTeste {
 		assertEquals(10000.50,ProjetosInct[0].getValor(),0.00001);
 		}
 	
+	@Test
+	public void tetProjetosApoioCnpq(){
+		Projeto[] ProjetosApoioCnpq;
+		estado.setProjetosApoioCnpq(informacoes);
+		ProjetosApoioCnpq = estado.getProjetosApoioCnpq();
+		assertEquals(10,ProjetosApoioCnpq[0].getQuantidade());
+		assertEquals(10000.50,ProjetosApoioCnpq[0].getValor(),0.00001);
+	}
 }
 	
 
