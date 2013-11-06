@@ -30,6 +30,8 @@ public class EstadoTeste {
 	ArrayList<String[]> dadosValoresInct;
 	ArrayList<String[]> dadosProjetosCnpq;
 	ArrayList<String[]> dadosValoresCnpq;
+	ArrayList<String[]> dadosJovensPesquisadores;
+	ArrayList<String[]> dadosValoresJovensPesquisadores;
 	private String valores[];
 	
 	@Before
@@ -45,7 +47,9 @@ public class EstadoTeste {
 		dadosProjetosInct = new ArrayList<String[]>();
 		dadosValoresInct = new ArrayList<String[]>();
 		dadosProjetosCnpq = new ArrayList<String[]>();
-		dadosValoresCnpq = 	new ArrayList<String[]>();	
+		dadosValoresCnpq = 	new ArrayList<String[]>();
+		dadosJovensPesquisadores = new ArrayList<String[]>();
+		dadosValoresJovensPesquisadores = new ArrayList<String[]>();
 		
 		informacoes = new HashMap<String, ArrayList<String[]>>();
 		estado = new Estado();
@@ -58,12 +62,14 @@ public class EstadoTeste {
 		String[] idebs1 = {"2000","2.5"};
 		String[] idebs2 = {"2000","3.7"};
 		String[] idebs3 = {"2000","4.1"};
-		String[] PrimeirosProjetos1 = {"2001","20"};
+		String[] PrimeirosProjetos1 = {"2001","10"};
 		String[] PrimeirosProjetos2 = {"2001","10000.50"};
-		String[] ProjetosInct1 = {"2001","20"};
+		String[] ProjetosInct1 = {"2001","10"};
 		String[] ProjetosInct2 ={"2001","10000.50"};
-		String[] ProjetosCnpq1 = {"2001","20"};
+		String[] ProjetosCnpq1 = {"2001","10"};
 		String[] ProjetosCnpq2 ={"2001","10000.50"};
+		String[] JovensPesquisadores1 = {"2001","10"};
+		String[] JovensPesquisadores2 ={"2001","10000.50"};
 		
 		dados.add(valores);
 		dadosFundamentalFinais.add(idebs1);
@@ -74,7 +80,10 @@ public class EstadoTeste {
 		dadosProjetosInct.add(ProjetosInct1);
 		dadosValoresInct.add(ProjetosInct2);
 		dadosProjetosCnpq.add(ProjetosCnpq1);
-		dadosValoresCnpq.add(ProjetosCnpq1);
+		dadosValoresCnpq.add(ProjetosCnpq2);
+		dadosJovensPesquisadores.add(JovensPesquisadores1);
+		dadosValoresJovensPesquisadores.add(JovensPesquisadores2);
+		
 		
 		
 		informacoes.put("valor_investido", dados);
@@ -89,6 +98,8 @@ public class EstadoTeste {
 		informacoes.put("valores_projetos_inct",dadosValoresInct);
 		informacoes.put("projetos_apoio_pesquisa_cnpq",dadosProjetosCnpq);
 		informacoes.put("valores_projetos_apoio_pesquisa_cnpq",dadosValoresCnpq);
+		informacoes.put("jovens_pesquisadores",dadosJovensPesquisadores);
+		informacoes.put("valores_jovens_pesquisadores",dadosValoresJovensPesquisadores);
 	
 	
 	}
@@ -164,12 +175,20 @@ public class EstadoTeste {
 		}
 	
 	@Test
-	public void tetProjetosApoioCnpq(){
+	public void testProjetosApoioCnpq(){
 		Projeto[] ProjetosApoioCnpq;
 		estado.setProjetosApoioCnpq(informacoes);
 		ProjetosApoioCnpq = estado.getProjetosApoioCnpq();
 		assertEquals(10,ProjetosApoioCnpq[0].getQuantidade());
 		assertEquals(10000.50,ProjetosApoioCnpq[0].getValor(),0.00001);
+	}
+	@Test
+	public void testProjetoJovensPesquisadores(){
+		Projeto[] ProjetoJovensPesquisadores;
+		estado.setProjetoJovensPesquisadores(informacoes);
+		ProjetoJovensPesquisadores = estado.getProjetoJovensPesquisadores();
+		assertEquals(10,ProjetoJovensPesquisadores[0].getQuantidade());
+		assertEquals(10000.50,ProjetoJovensPesquisadores[0].getValor(),0.00001);
 	}
 }
 	
