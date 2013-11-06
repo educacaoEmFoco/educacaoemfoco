@@ -26,6 +26,8 @@ public class EstadoTeste {
 	ArrayList<String[]> dadosMedio;
 	ArrayList<String[]> dadosProjetos;
 	ArrayList<String[]> dadosValores;
+	ArrayList<String[]> dadosProjetosInct;
+	ArrayList<String[]> dadosValoresInct;
 	private String valores[];
 	
 	@Before
@@ -38,7 +40,8 @@ public class EstadoTeste {
 		dadosMedio = new ArrayList<String[]>();
 		dadosProjetos = new ArrayList<String[]>();
 		dadosValores = new ArrayList<String[]>();
-	
+		dadosProjetosInct = new ArrayList<String[]>();
+		dadosValoresInct = new ArrayList<String[]>();
 		
 		informacoes = new HashMap<String, ArrayList<String[]>>();
 		estado = new Estado();
@@ -53,6 +56,8 @@ public class EstadoTeste {
 		String[] idebs3 = {"2000","4.1"};
 		String[] PrimeirosProjetos1 = {"2001","20"};
 		String[] PrimeirosProjetos2 = {"2001","10000.50"};
+		String[] ProjetosInct1 = {"2001","20"};
+		String[] ProjetosInct2 ={"2001","10000.50"};
 		
 		dados.add(valores);
 		dadosFundamentalFinais.add(idebs1);
@@ -60,7 +65,9 @@ public class EstadoTeste {
 		dadosMedio.add(idebs3);
 		dadosProjetos.add(PrimeirosProjetos1);
 		dadosValores.add(PrimeirosProjetos2);
-	
+		dadosProjetosInct.add(ProjetosInct1);
+		dadosValoresInct.add(ProjetosInct2);
+		
 		informacoes.put("valor_investido", dados);
 		informacoes.put("numero_projetos", dados);
 		informacoes.put("participacao_estadual_pib", dados);
@@ -69,6 +76,9 @@ public class EstadoTeste {
 		informacoes.put("ensino_medio",dadosMedio);
 		informacoes.put("programa_primeiros_projetos",dadosProjetos);
 		informacoes.put("valores_programa_primeiros_projetos",dadosValores);
+		informacoes.put("projetos_inct",dadosProjetosInct);
+		informacoes.put("valores_projetos_inct",dadosValoresInct);
+		
 	
 	
 	}
@@ -133,6 +143,15 @@ public class EstadoTeste {
 		
 	}
 	
+	
+	@Test
+	public void testProjetosInct(){
+		Projeto[] ProjetosInct;
+		estado.setProjetosInct(informacoes);
+		ProjetosInct = estado.getProjetosInct();
+		assertEquals(10,ProjetosInct[0].getQuantidade());
+		assertEquals(10000.50,ProjetosInct[0].getValor(),0.00001);
+		}
 	
 }
 	
