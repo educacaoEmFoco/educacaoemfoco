@@ -132,6 +132,18 @@ public class EstadoTeste {
 	}*/
 	
 	@Test
+	public void testPopulacao(){
+		int valores;
+		estado.setPopulacao(informacoes);
+		
+		valores = estado.getPopulacao();
+		
+		assertEquals(valores, 3000, 0.00001);
+		
+	}
+
+	
+	@Test
 	public void testParticipacaoPercentualPIB() {
 
 		double[] valores;	
