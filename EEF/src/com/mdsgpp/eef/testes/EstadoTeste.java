@@ -11,6 +11,8 @@ import org.junit.Test;
 
 import com.mdsgpp.eef.modelo.Estado;
 import com.mdsgpp.eef.modelo.Ideb;
+import com.mdsgpp.eef.modelo.Media;
+import com.mdsgpp.eef.modelo.Projeto;
 
 // Classe de testes referentes a classe Estado do modelo
 
@@ -22,9 +24,10 @@ public class EstadoTeste {
 	ArrayList<String[]> dadosFundamentalFinais;
 	ArrayList<String[]> dadosFundamentalIniciais;
 	ArrayList<String[]> dadosMedio;
+	ArrayList<String[]> dadosProjetos;
+	ArrayList<String[]> dadosValores;
 	private String valores[];
-
-
+	
 	@Before
 	public void setUp() throws Exception {
 		
@@ -33,30 +36,41 @@ public class EstadoTeste {
 		dadosFundamentalFinais = new ArrayList<String[]>();
 		dadosFundamentalIniciais = new ArrayList<String[]>();
 		dadosMedio = new ArrayList<String[]>();
-				
+		dadosProjetos = new ArrayList<String[]>();
+		dadosValores = new ArrayList<String[]>();
+	
+		
 		informacoes = new HashMap<String, ArrayList<String[]>>();
 		estado = new Estado();
 		valores = new String[2];
 		
-		
 		valores[0] = "1998";
 		valores[1] ="3000";
+		
 		
 		String[] idebs1 = {"2000","2.5"};
 		String[] idebs2 = {"2000","3.7"};
 		String[] idebs3 = {"2000","4.1"};
+		String[] PrimeirosProjetos1 = {"2001","20"};
+		String[] PrimeirosProjetos2 = {"2001","10000.50"};
 		
 		dados.add(valores);
 		dadosFundamentalFinais.add(idebs1);
 		dadosFundamentalIniciais.add(idebs2);
 		dadosMedio.add(idebs3);
-		
+		dadosProjetos.add(PrimeirosProjetos1);
+		dadosValores.add(PrimeirosProjetos2);
+	
 		informacoes.put("valor_investido", dados);
 		informacoes.put("numero_projetos", dados);
 		informacoes.put("participacao_estadual_pib", dados);
 		informacoes.put("5a_8a",dadosFundamentalFinais);
 		informacoes.put("series_iniciais",dadosFundamentalIniciais);
 		informacoes.put("ensino_medio",dadosMedio);
+		informacoes.put("programa_primeiros_projetos",dadosProjetos);
+		informacoes.put("valores_programa_primeiros_projetos",dadosValores);
+	
+	
 	}
 
 	@After
@@ -104,8 +118,22 @@ public class EstadoTeste {
 		
 		idebs = estado.getIdebs();
 		
-	assertEquals(2.5,idebs[0].getFundamental(), 0.00001);
-	assertEquals(3.7,idebs[0].getSeriesIniciais(),0.00001);
-	assertEquals(4.1,idebs[0].getMedio(),0.00001);
+		assertEquals(2.5,idebs[0].getFundamental(), 0.00001);
+		assertEquals(3.7,idebs[0].getSeriesIniciais(),0.00001);
+		assertEquals(4.1,idebs[0].getMedio(),0.00001);
 	}
+	 
+	@Test
+	public void testProjeto(){
+		Projeto[] PrimeirosProjetos;
+		estado.setPrimeirosProjetos(informacoes);
+		PrimeirosProjetos = estado.getPrimeirosProjetos();
+		assertEquals(10,PrimeirosProjetos[0].getQuantidade());
+		assertEquals(10000.50,PrimeirosProjetos[0].getValor(),0.00001);
+		
+	}
+	
+	
 }
+	
+
