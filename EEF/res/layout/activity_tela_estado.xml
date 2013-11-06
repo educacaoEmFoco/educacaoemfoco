@@ -17,10 +17,12 @@
 		
         <ImageView   
         	android:id="@+id/imageView_bandeiras"
-			android:layout_width="wrap_content"       	
+			android:layout_width="350dp"       	
 			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:layout_marginTop="35dp"
 			android:contentDescription="@string/string_vazia"/>
-        
+      
         <TextView
             android:id="@+id/textView_sigla"
             style="@style/titulo"
