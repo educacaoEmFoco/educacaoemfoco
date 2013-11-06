@@ -52,8 +52,8 @@ public class EstadoControle {
 		this.informacoesEstado.put("nome", estado.getNome() );;
 		this.informacoesEstado.put("populacao", dfPopulação.format( estado.getPopulacao() ) + " habitantes" );
 		this.informacoesEstado.put("percentual_participacao_pib", dfPorcentagem.format( estado.getParticipacaoPercentualPIB()[estado.getParticipacaoPercentualPIB().length-1] ) + "%" );
-		this.informacoesEstado.put("projetos_ciencia_tecnologia","Quantidade: " + estado.getNumeroDeProjetosCienciaTecnologia()[estado.getNumeroDeProjetosCienciaTecnologia().length-1] + " projetos" );
-		this.informacoesEstado.put("valor_ciencia_tecnologia", "Valor investido: R$ " + dfValor.format( estado.getValorInvestidoCienciaTecnologia()[estado.getValorInvestidoCienciaTecnologia().length-1] ) + " (em mil)" );
+		this.informacoesEstado.put("projetos_ciencia_tecnologia","Quantidade: " + estado.getProjetosCienciaTecnologia()[estado.getProjetosCienciaTecnologia().length-1].getQuantidade() + " projetos" );
+		this.informacoesEstado.put("valor_ciencia_tecnologia", "Valor investido: R$ " + dfValor.format( estado.getProjetosCienciaTecnologia()[estado.getProjetosCienciaTecnologia().length-1].getValor() ) + " (em mil)" );
 		this.informacoesEstado.put("ideb_fundamental_final", "Ensino Fundamental (séries finais): "+ dfPorcentagem.format( estado.getIdebs()[estado.getIdebs().length-1].getFundamental()) );
 		this.informacoesEstado.put("ideb_ensino_medio", "Ensino Médio: " +dfPorcentagem.format(  estado.getIdebs()[estado.getIdebs().length-1].getMedio() ) + "" );
 		this.informacoesEstado.put("ideb_fundamental_inicial", "Ensino Fundamental (Séries iniciais): " + dfPorcentagem.format( estado.getIdebs()[estado.getIdebs().length-1].getSeriesIniciais() ) + "");

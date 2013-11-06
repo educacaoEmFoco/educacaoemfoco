@@ -77,7 +77,7 @@ public class EstadoTeste {
 	public void tearDown() throws Exception {
 	}
 
-	@Test
+	/*@Test
 	public void testValorInvestidoCienciaTecnologia() {
 
 		double[] valores;	
@@ -98,7 +98,7 @@ public class EstadoTeste {
 		valores = estado.getNumeroDeProjetosCienciaTecnologia();
 
 		assertEquals(valores[0], 3000, 0.00001);
-	}
+	}*/
 	
 	@Test
 	public void testParticipacaoPercentualPIB() {
