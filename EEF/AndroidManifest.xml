@@ -47,15 +47,30 @@
             android:label="@string/title_activity_tela_compara_estados"
             android:screenOrientation="user" >
         </activity>
-        
         <activity
             android:name="com.mdsgpp.eef.visao.TelaSobre"
             android:label="@string/title_activity_tela_sobre"
-            android:screenOrientation="portrait" > 
+            android:screenOrientation="portrait" >
         </activity>
-        
+
         <uses-library android:name="android.test.runner" />
-        
+
+        <activity
+            android:name="com.mdsgpp.eef.visao.Tela"
+            android:label="@string/title_activity_tela" >
+        </activity>
+        <activity
+            android:name="com.mdsgpp.eef.visao.TelaConsultaIndicativo"
+            android:label="@string/title_activity_tela_consulta_indicativo" >
+        </activity>
+        <activity
+            android:name="com.mdsgpp.eef.visao.TelaIndicativosConsultados"
+            android:label="@string/title_activity_tela_indicativos_consultados" >
+        </activity>
+        <activity
+            android:name="com.mdsgpp.eef.visao.TelaResultadoConsulta"
+            android:label="@string/title_activity_tela_resultado_consulta" >
+        </activity>
     </application>
 
 </manifest>

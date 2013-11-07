@@ -35,9 +35,14 @@ public class MainActivity extends Activity {
     	Intent intent = new Intent(this, TelaComparacao.class);
 		startActivity(intent);
     }
-    
+
     public void clickBotaoSobre(View view){
     	Intent intent = new Intent(this, TelaSobre.class);
+    	startActivity(intent);
+    }
+    
+    public void clickBotaoConsulta(View view){
+    	Intent intent = new Intent(this, TelaConsultaIndicativo.class);
     	startActivity(intent);
     }
 }
