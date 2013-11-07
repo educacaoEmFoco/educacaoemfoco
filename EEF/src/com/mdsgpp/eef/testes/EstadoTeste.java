@@ -85,7 +85,7 @@ public class EstadoTeste extends AndroidTestCase {
 		dadosValoresJovensPesquisadores.add(JovensPesquisadores2);
 		
 		
-		
+		informacoes.put("populacao", dados);
 		informacoes.put("valor_investido", dados);
 		informacoes.put("numero_projetos", dados);
 		informacoes.put("participacao_estadual_pib", dados);
@@ -108,28 +108,27 @@ public class EstadoTeste extends AndroidTestCase {
 	public void tearDown() throws Exception {
 	}
 
-	/*@Test
-	public void testValorInvestidoCienciaTecnologia() {
-
-		double[] valores;	
-		estado.setValorInvestidoCienciaTecnologia(informacoes);
+	@Test
+	public void testNome(){
+		String nome;
+		estado.setNome("Acre");
 		
-		valores = estado.getValorInvestidoCienciaTecnologia();
-
+		nome = estado.getNome();
 		
-		assertEquals(valores[0], 3000, 0.00001);
+		assertEquals("Acre",nome);
+		
 	}
 	
 	@Test
-	public void testNumeroDeProjetosCienciaTecnologia() {
-
-		int[] valores;	
-		estado.setNumeroDeProjetosCienciaTecnologia(informacoes);
+	public void testSigla(){
+		String sigla;
+		estado.setSigla("AC");
 		
-		valores = estado.getNumeroDeProjetosCienciaTecnologia();
-
-		assertEquals(valores[0], 3000, 0.00001);
-	}*/
+		sigla = estado.getSigla();
+		
+		assertEquals("AC",sigla);
+		
+	}
 	
 	@Test
 	public void testPopulacao(){
