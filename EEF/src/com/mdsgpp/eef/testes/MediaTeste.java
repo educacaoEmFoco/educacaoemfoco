@@ -1,15 +1,16 @@
 package com.mdsgpp.eef.testes;
 
-import static org.junit.Assert.*;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import android.test.AndroidTestCase;
+
 import com.mdsgpp.eef.modelo.Estado;
 import com.mdsgpp.eef.modelo.Media;
 
-public class MediaTeste {
+public class MediaTeste extends AndroidTestCase {
 
 	private Media media;
 	private Estado estado;

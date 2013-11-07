@@ -1,6 +1,5 @@
 package com.mdsgpp.eef.testes;
 
-import static org.junit.Assert.*;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -9,14 +8,15 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import android.test.AndroidTestCase;
+
 import com.mdsgpp.eef.modelo.Estado;
 import com.mdsgpp.eef.modelo.Ideb;
-import com.mdsgpp.eef.modelo.Media;
 import com.mdsgpp.eef.modelo.Projeto;
 
 // Classe de testes referentes a classe Estado do modelo
 
-public class EstadoTeste {
+public class EstadoTeste extends AndroidTestCase {
 
 	private Estado estado;
 	private HashMap<String, ArrayList<String[]>> informacoes;
