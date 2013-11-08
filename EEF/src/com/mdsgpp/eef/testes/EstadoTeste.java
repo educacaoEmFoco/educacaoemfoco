@@ -1,6 +1,5 @@
 package com.mdsgpp.eef.testes;
 
-import static org.junit.Assert.*;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -9,14 +8,15 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import android.test.AndroidTestCase;
+
 import com.mdsgpp.eef.modelo.Estado;
 import com.mdsgpp.eef.modelo.Ideb;
-import com.mdsgpp.eef.modelo.Media;
 import com.mdsgpp.eef.modelo.Projeto;
 
 // Classe de testes referentes a classe Estado do modelo
 
-public class EstadoTeste {
+public class EstadoTeste extends AndroidTestCase {
 
 	private Estado estado;
 	private HashMap<String, ArrayList<String[]>> informacoes;
@@ -32,6 +32,8 @@ public class EstadoTeste {
 	ArrayList<String[]> dadosValoresCnpq;
 	ArrayList<String[]> dadosJovensPesquisadores;
 	ArrayList<String[]> dadosValoresJovensPesquisadores;
+	ArrayList<String[]> dadosProjetosTecnologia;
+	ArrayList<String[]> dadosValoresProjetosTecnologia;
 	private String valores[];
 	
 	@Before
@@ -50,6 +52,8 @@ public class EstadoTeste {
 		dadosValoresCnpq = 	new ArrayList<String[]>();
 		dadosJovensPesquisadores = new ArrayList<String[]>();
 		dadosValoresJovensPesquisadores = new ArrayList<String[]>();
+		dadosProjetosTecnologia = new ArrayList<String[]>();
+		dadosValoresProjetosTecnologia= new ArrayList<String[]>();
 		
 		informacoes = new HashMap<String, ArrayList<String[]>>();
 		estado = new Estado();
@@ -62,30 +66,34 @@ public class EstadoTeste {
 		String[] idebs1 = {"2000","2.5"};
 		String[] idebs2 = {"2000","3.7"};
 		String[] idebs3 = {"2000","4.1"};
-		String[] PrimeirosProjetos1 = {"2001","10"};
-		String[] PrimeirosProjetos2 = {"2001","10000.50"};
-		String[] ProjetosInct1 = {"2001","10"};
-		String[] ProjetosInct2 ={"2001","10000.50"};
-		String[] ProjetosCnpq1 = {"2001","10"};
-		String[] ProjetosCnpq2 ={"2001","10000.50"};
-		String[] JovensPesquisadores1 = {"2001","10"};
-		String[] JovensPesquisadores2 ={"2001","10000.50"};
+		String[] primeirosProjetos1 = {"2001","10"};
+		String[] primeirosProjetos2 = {"2001","10000.50"};
+		String[] projetosInct1 = {"2001","10"};
+		String[] projetosInct2 ={"2001","10000.50"};
+		String[] projetosCnpq1 = {"2001","10"};
+		String[] projetosCnpq2 ={"2001","10000.50"};
+		String[] jovensPesquisadores1 = {"2001","10"};
+		String[] jovensPesquisadores2 ={"2001","10000.50"};
+		String[] projetosTecnologia1 = {"2001","10"};
+		String[] projetosTecnologia2 ={"2001","10000.50"};
 		
 		dados.add(valores);
 		dadosFundamentalFinais.add(idebs1);
 		dadosFundamentalIniciais.add(idebs2);
 		dadosMedio.add(idebs3);
-		dadosProjetos.add(PrimeirosProjetos1);
-		dadosValores.add(PrimeirosProjetos2);
-		dadosProjetosInct.add(ProjetosInct1);
-		dadosValoresInct.add(ProjetosInct2);
-		dadosProjetosCnpq.add(ProjetosCnpq1);
-		dadosValoresCnpq.add(ProjetosCnpq2);
-		dadosJovensPesquisadores.add(JovensPesquisadores1);
-		dadosValoresJovensPesquisadores.add(JovensPesquisadores2);
+		dadosProjetos.add(primeirosProjetos1);
+		dadosValores.add(primeirosProjetos2);
+		dadosProjetosInct.add(projetosInct1);
+		dadosValoresInct.add(projetosInct2);
+		dadosProjetosCnpq.add(projetosCnpq1);
+		dadosValoresCnpq.add(projetosCnpq2);
+		dadosJovensPesquisadores.add(jovensPesquisadores1);
+		dadosValoresJovensPesquisadores.add(jovensPesquisadores2);
+		dadosProjetosTecnologia.add(projetosTecnologia1);
+		dadosValoresProjetosTecnologia.add(projetosTecnologia2);
 		
 		
-		
+		informacoes.put("populacao", dados);
 		informacoes.put("valor_investido", dados);
 		informacoes.put("numero_projetos", dados);
 		informacoes.put("participacao_estadual_pib", dados);
@@ -100,6 +108,8 @@ public class EstadoTeste {
 		informacoes.put("valores_projetos_apoio_pesquisa_cnpq",dadosValoresCnpq);
 		informacoes.put("jovens_pesquisadores",dadosJovensPesquisadores);
 		informacoes.put("valores_jovens_pesquisadores",dadosValoresJovensPesquisadores);
+		informacoes.put("numero_projetos",dadosProjetosTecnologia);
+		informacoes.put("valor_investido",dadosValoresProjetosTecnologia);
 	
 	
 	}
@@ -108,28 +118,39 @@ public class EstadoTeste {
 	public void tearDown() throws Exception {
 	}
 
-	/*@Test
-	public void testValorInvestidoCienciaTecnologia() {
-
-		double[] valores;	
-		estado.setValorInvestidoCienciaTecnologia(informacoes);
+	@Test
+	public void testNome(){
+		String nome;
+		estado.setNome("Acre");
 		
-		valores = estado.getValorInvestidoCienciaTecnologia();
-
+		nome = estado.getNome();
 		
-		assertEquals(valores[0], 3000, 0.00001);
+		assertEquals("Acre",nome);
+		
 	}
 	
 	@Test
-	public void testNumeroDeProjetosCienciaTecnologia() {
-
-		int[] valores;	
-		estado.setNumeroDeProjetosCienciaTecnologia(informacoes);
+	public void testSigla(){
+		String sigla;
+		estado.setSigla("AC");
 		
-		valores = estado.getNumeroDeProjetosCienciaTecnologia();
+		sigla = estado.getSigla();
+		
+		assertEquals("AC", sigla);
+		
+	}
+	
+	@Test
+	public void testPopulacao(){
+		int valores;
+		estado.setPopulacao(informacoes);
+		
+		valores = estado.getPopulacao();
+		
+		assertEquals(valores, 3000, 0.00001);
+		
+	}
 
-		assertEquals(valores[0], 3000, 0.00001);
-	}*/
 	
 	@Test
 	public void testParticipacaoPercentualPIB() {
@@ -155,7 +176,16 @@ public class EstadoTeste {
 	}
 	 
 	@Test
-	public void testProjeto(){
+	public void testProjetoCienciaTecnologia(){
+		Projeto[] ProjetosTecnologia;
+		estado.setProjetosCienciaTecnologia(informacoes);
+		ProjetosTecnologia = estado.getProjetosCienciaTecnologia();
+		assertEquals(10,ProjetosTecnologia[0].getQuantidade());
+		assertEquals(10000.50,ProjetosTecnologia[0].getValor(),0.00001);
+		}
+	
+	@Test
+	public void testPrimeirosProjetos(){
 		Projeto[] PrimeirosProjetos;
 		estado.setPrimeirosProjetos(informacoes);
 		PrimeirosProjetos = estado.getPrimeirosProjetos();

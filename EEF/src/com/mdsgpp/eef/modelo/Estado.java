@@ -156,7 +156,7 @@ public class Estado {
 	}
 
 	public String getSigla() {
-		if (nome == null) {
+		if (sigla == null) {
 			return "Sem sigla";
 		}
 		

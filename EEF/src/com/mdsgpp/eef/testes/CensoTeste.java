@@ -1,15 +1,16 @@
 package com.mdsgpp.eef.testes;
 
-import static org.junit.Assert.*;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import android.test.AndroidTestCase;
+
 import com.mdsgpp.eef.modelo.Censo;
 import com.mdsgpp.eef.modelo.Estado;
 
-public class CensoTeste {
+public class CensoTeste extends AndroidTestCase {
 
 	private Censo censo;
 	private Estado estado;

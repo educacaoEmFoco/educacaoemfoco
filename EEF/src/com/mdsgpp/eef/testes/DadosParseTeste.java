@@ -1,6 +1,5 @@
 package com.mdsgpp.eef.testes;
 
-import static org.junit.Assert.*;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -11,7 +10,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 import android.test.AndroidTestCase;
-import android.util.Log;
 
 import com.mdsgpp.eef.parse.DadosParse;
 
@@ -31,14 +29,13 @@ public class DadosParseTeste extends AndroidTestCase{
 	private ArrayList<String[]> dados11;
 	private ArrayList<String[]> dados12;
 	private ArrayList<String[]> dados13;
-	private DadosParse dadosParse;
 	private String indicadores[] = new String[13];
 	private ArrayList<String[]> container;
 	private String nomeEsigla[] = new String[2];
 	
 	@Before
 	public void setUp() throws Exception {
-		dadosParse = new DadosParse(getContext());
+		new DadosParse(getContext());
 		informacoes = new HashMap<String, ArrayList<String[]>>();
 		container = new ArrayList<String[]>();
 		dados1 = new ArrayList<String[]>();
