@@ -49,7 +49,7 @@ public class EstadoControle {
 	private void escreveEstado(Estado estado) {
 		
 		this.informacoesEstado.put("sigla", estado.getSigla() );
-		this.informacoesEstado.put("nome", estado.getNome() );;
+		this.informacoesEstado.put("nome", estado.getNome() );
 		this.informacoesEstado.put("populacao", dfPopulação.format( estado.getPopulacao() ) + " habitantes" );
 		this.informacoesEstado.put("percentual_participacao_pib", dfPorcentagem.format( estado.getParticipacaoPercentualPIB()[estado.getParticipacaoPercentualPIB().length-1] ) + "%" );
 		this.informacoesEstado.put("projetos_ciencia_tecnologia","Quantidade: " + estado.getProjetosCienciaTecnologia()[estado.getProjetosCienciaTecnologia().length-1].getQuantidade() + " projetos" );
