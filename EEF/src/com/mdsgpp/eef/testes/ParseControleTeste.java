@@ -1,5 +1,6 @@
 package com.mdsgpp.eef.testes;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -201,5 +202,47 @@ public class ParseControleTeste extends AndroidTestCase{
 	@Test
 	public void testarSingleton(){
 		assertNotNull(ParseControle.getInstancia(context));
+	}
+	
+
+	@Test
+	public void testarInformacoesParse(){
+		
+		HashMap<String, ArrayList<String[]>> estado;
+		estado = null;
+		try {
+			estado = parseControle.getInformacoes(0);
+		} catch (IOException e) {
+			fail();
+		}
+		
+		assertEquals("AC", estado.get("nome_e_sigla").get(0)[1]);
+
+		assertEquals("0,200000000000045", estado.get("participacao_estadual_pib").get(0)[1]);
+		
+		assertEquals("691132", estado.get("populacao").get(0)[1]);
+		
+		assertEquals("0", estado.get("numero_projetos").get(0)[1]);
+		
+		assertEquals("0", estado.get("valor_investido").get(0)[1]);
+		
+		assertEquals("3,5", estado.get("5a_8a").get(0)[1]);
+
+		assertEquals("3", estado.get("ensino_medio").get(0)[1]);
+		
+		assertEquals("3,29999999999927", estado.get("series_iniciais").get(0)[1]);
+		
+		assertEquals("0", estado.get("jovens_pesquisadores").get(0)[1]);
+		
+		assertEquals("2", estado.get("programa_primeiros_projetos").get(0)[1]);
+
+		assertEquals("5", estado.get("projetos_apoio_pesquisa_cnpq").get(0)[1]);
+		
+		assertEquals("0", estado.get("valores_jovens_pesquisadores").get(0)[1]);
+
+		assertEquals("55,4400000000023", estado.get("valores_programa_primeiros_projetos").get(0)[1]);
+		
+		assertEquals("22", estado.get("valores_projetos_apoio_pesquisa_cnpq").get(0)[1]);
+		
 	}
 }
