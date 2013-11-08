@@ -1,8 +1,6 @@
 package com.mdsgpp.eef.visao;
 
 import com.mdsgpp.eef.R;
-import com.mdsgpp.eef.R.layout;
-import com.mdsgpp.eef.R.menu;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -23,6 +21,12 @@ public class TelaIndicativosConsultados extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_tela_indicativos_consultados);
+		Intent intentAuxiliar = getIntent();
+		
+		posicao01 = intentAuxiliar.getIntExtra("POSICAO_ESTADO01", 0);
+		
+		posicao02 = intentAuxiliar.getIntExtra("POSICAO_ESTADO02", 0);
+		
 	}
 
 	@Override

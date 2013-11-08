@@ -6,17 +6,17 @@ import java.util.HashMap;
 import com.mdsgpp.eef.R;
 import com.mdsgpp.eef.controle.EstadoControle;
 
-import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class TelaResultadoConsulta extends Activity {
-
-	private TextView textViewSigla1;
+public abstract class ResultadoComparacao extends Activity{
+	
+	/*private TextView textViewSigla1;
 	private TextView textViewNome1;
 	private TextView textViewPopulacao1;
 	private TextView textViewParticipacaoPib1;
@@ -52,12 +52,11 @@ public class TelaResultadoConsulta extends Activity {
 	private TextView textViewQuantidadeProjetosIniciacao2;
 	private TextView textViewValorProjetosIniciacao2;
 
-	
-	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_tela_compara_estados);
+
 		capturaInformacoes();
 	}
 
@@ -66,20 +65,15 @@ public class TelaResultadoConsulta extends Activity {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.tela_compara_estados, menu);
 		return true;
-		
 	}
-	
+
 	@SuppressWarnings("unchecked")
 	private void capturaInformacoes() {
-		
 		// Captura o intent que abriu a activity
 		Intent intent = getIntent();
 		// Captura o valor transferido através da intent
-		
-		int posicao1 = intent.getIntExtra("POSICAO_ESTADO_01",5);
-		int posicao2 = intent.getIntExtra("POSICAO_ESTADO_02",0);
-		
-		
+		int posicao1 = intent.getIntExtra("POSICAO_ESTADO_01", 0);
+		int posicao2 = intent.getIntExtra("POSICAO_ESTADO_02", 0);
 
 		InicializaCamposTexto();
 
@@ -105,69 +99,97 @@ public class TelaResultadoConsulta extends Activity {
 		textViewSigla1.setText(informacoes1.get("sigla"));
 		if (textViewNome1 != null)
 			textViewNome1.setText(informacoes1.get("nome"));
-
-		textViewPopulacao1.setText(informacoes1.get("populacao"));
-		textViewParticipacaoPib1.setText(informacoes1
-				.get("percentual_participacao_pib"));
-		textViewQuantidadeProjetosCienciaTecnologia1.setText(informacoes1
-				.get("projetos_ciencia_tecnologia"));
-		textViewValorProjetosCienciaTecnologia1.setText(informacoes1
-				.get("valor_ciencia_tecnologia"));
-		textViewFundamentalIdeb1.setText(informacoes1
-				.get("ideb_fundamental_final"));
-		textViewEnsinoMedioIdeb1.setText(informacoes1.get("ideb_ensino_medio"));
-		textViewIniciaisIdeb1.setText(informacoes1
-				.get("ideb_fundamental_inicial"));
-		textViewQuantidadePrimeirosProjetos1.setText(informacoes1
-				.get("quantidade_primeiros_projetos"));
-		textViewValorPrimeirosProjetos1.setText(informacoes1
-				.get("valor_primeiros_projetos"));
-		textViewQuantidadePesquisa1.setText(informacoes1
-				.get("quantidade_projeto_cnpq"));
-		textViewValoresPesquisa1.setText(informacoes1
-				.get("valor_projetos_cnpq"));
-		textViewQuantidadeJovensPesquisadores1.setText(informacoes1
-				.get("quantidade_projeto_jovens_pesquisadores"));
-		textViewValorJovensPesquisadores1.setText(informacoes1
-				.get("valor_projetos_jovens_pesquisadores"));
-		textViewQuantidadeProjetosIniciacao1.setText(informacoes1
-				.get("quantidade_projetos_inct"));
-		textViewValorProjetosIniciacao1.setText(informacoes1
-				.get("valor_projetos_inct"));
+		
+		if(textViewPopulacao1 != null)
+			textViewPopulacao1.setText(informacoes1.get("populacao"));
+		
+		if(textViewParticipacaoPib1 != null)
+			textViewParticipacaoPib1.setText(informacoes1.get("percentual_participacao_pib"));
+		
+		if(textViewQuantidadeProjetosCienciaTecnologia1 != null){
+			textViewQuantidadeProjetosCienciaTecnologia1.setText(informacoes1.get("projetos_ciencia_tecnologia"));
+			textViewValorProjetosCienciaTecnologia1.setText(informacoes1.get("valor_ciencia_tecnologia"));
+		}
+		
+		if(textViewFundamentalIdeb1 != null){
+			textViewFundamentalIdeb1.setText(informacoes1.get("ideb_fundamental_final"));
+			textViewEnsinoMedioIdeb1.setText(informacoes1.get("ideb_ensino_medio"));
+			textViewIniciaisIdeb1.setText(informacoes1.get("ideb_fundamental_inicial"));
+		}
+		
+		if(textViewQuantidadePrimeirosProjetos1 != null){
+			textViewQuantidadePrimeirosProjetos1.setText(informacoes1.get("quantidade_primeiros_projetos"));
+			textViewValorPrimeirosProjetos1.setText(informacoes1.get("valor_primeiros_projetos"));
+		}
+		
+		if(textViewQuantidadePesquisa1 != null){
+			textViewQuantidadePesquisa1.setText(informacoes1.get("quantidade_projeto_cnpq"));
+			textViewValoresPesquisa1.setText(informacoes1.get("valor_projetos_cnpq"));
+		}
+		
+		if(textViewQuantidadeJovensPesquisadores1 != null){
+			textViewQuantidadeJovensPesquisadores1.setText(informacoes1.get("quantidade_projeto_jovens_pesquisadores"));
+			textViewValorJovensPesquisadores1.setText(informacoes1.get("valor_projetos_jovens_pesquisadores"));
+		}
+		
+		if(textViewQuantidadeProjetosIniciacao1 != null){
+			textViewQuantidadeProjetosIniciacao1.setText(informacoes1.get("quantidade_projetos_inct"));
+			textViewValorProjetosIniciacao1.setText(informacoes1.get("valor_projetos_inct"));
+		}
 
 		textViewSigla2.setText(informacoes2.get("sigla"));
 		if (textViewNome2 != null)
 			textViewNome2.setText(informacoes2.get("nome"));
-
-		textViewPopulacao2.setText(informacoes2.get("populacao"));
-		textViewParticipacaoPib2.setText(informacoes2
-				.get("percentual_participacao_pib"));
-		textViewQuantidadeProjetosCienciaTecnologia2.setText(informacoes2.get(
-				"projetos_ciencia_tecnologia").split(":")[1]);
-		textViewValorProjetosCienciaTecnologia2.setText(informacoes2.get(
-				"valor_ciencia_tecnologia").split(":")[1]);
-		textViewFundamentalIdeb2.setText(informacoes2.get(
-				"ideb_fundamental_final").split(":")[1]);
-		textViewEnsinoMedioIdeb2.setText(informacoes2.get("ideb_ensino_medio")
-				.split(":")[1]);
-		textViewIniciaisIdeb2.setText(informacoes2.get(
-				"ideb_fundamental_inicial").split(":")[1]);
-		textViewQuantidadePrimeirosProjetos2.setText(informacoes2.get(
-				"quantidade_primeiros_projetos").split(":")[1]);
-		textViewValorPrimeirosProjetos2.setText(informacoes2.get(
-				"valor_primeiros_projetos").split(":")[1]);
-		textViewQuantidadePesquisa2.setText(informacoes2.get(
+		
+		if(textViewPopulacao2 != null)
+			textViewPopulacao2.setText(informacoes2.get("populacao"));
+		
+		if(textViewParticipacaoPib2 != null)
+			textViewParticipacaoPib2.setText(informacoes2.get("percentual_participacao_pib"));
+		
+		if(textViewQuantidadeProjetosCienciaTecnologia2 != null){
+			textViewQuantidadeProjetosCienciaTecnologia2.setText(informacoes2.get(
+					"projetos_ciencia_tecnologia").split(":")[1]);
+			textViewValorProjetosCienciaTecnologia2.setText(informacoes2.get(
+					"valor_ciencia_tecnologia").split(":")[1]);
+		}
+		
+		if(textViewFundamentalIdeb2 != null){
+			textViewFundamentalIdeb2.setText(informacoes2.get(
+					"ideb_fundamental_final").split(":")[1]);
+			textViewEnsinoMedioIdeb2.setText(informacoes2.get("ideb_ensino_medio")
+					.split(":")[1]);
+			textViewIniciaisIdeb2.setText(informacoes2.get(
+					"ideb_fundamental_inicial").split(":")[1]);
+		}
+		
+		if(textViewQuantidadePrimeirosProjetos2 != null){
+			textViewQuantidadePrimeirosProjetos2.setText(informacoes2.get(
+					"quantidade_primeiros_projetos").split(":")[1]);
+			textViewValorPrimeirosProjetos2.setText(informacoes2.get(
+					"valor_primeiros_projetos").split(":")[1]);
+		}
+		
+		if(textViewQuantidadePesquisa2 != null){
+			textViewQuantidadePesquisa2.setText(informacoes2.get(
 				"quantidade_projeto_cnpq").split(":")[1]);
-		textViewValoresPesquisa2.setText(informacoes2
+			textViewValoresPesquisa2.setText(informacoes2
 				.get("valor_projetos_cnpq").split(":")[1]);
-		textViewQuantidadeJovensPesquisadores2.setText(informacoes2.get(
-				"quantidade_projeto_jovens_pesquisadores").split(":")[1]);
-		textViewValorJovensPesquisadores2.setText(informacoes2.get(
-				"valor_projetos_jovens_pesquisadores").split(":")[1]);
-		textViewQuantidadeProjetosIniciacao2.setText(informacoes2.get(
-				"quantidade_projetos_inct").split(":")[1]);
-		textViewValorProjetosIniciacao2.setText(informacoes2.get(
-				"valor_projetos_inct").split(":")[1]);
+		}
+		
+		if(textViewQuantidadeJovensPesquisadores2 != null){
+			textViewQuantidadeJovensPesquisadores2.setText(informacoes2.get(
+					"quantidade_projeto_jovens_pesquisadores").split(":")[1]);
+			textViewValorJovensPesquisadores2.setText(informacoes2.get(
+					"valor_projetos_jovens_pesquisadores").split(":")[1]);
+		}
+		
+		if(textViewQuantidadeProjetosIniciacao2 != null){
+			textViewQuantidadeProjetosIniciacao2.setText(informacoes2.get(
+					"quantidade_projetos_inct").split(":")[1]);
+			textViewValorProjetosIniciacao2.setText(informacoes2.get(
+					"valor_projetos_inct").split(":")[1]);
+		}
 
 	}
 
@@ -209,7 +231,5 @@ public class TelaResultadoConsulta extends Activity {
 		textViewQuantidadeProjetosIniciacao2 = (TextView) findViewById(R.id.textView_projetos_iniciacao_quantidade2);
 		textViewValorProjetosIniciacao2 = (TextView) findViewById(R.id.textView_projetos_iniciacao_valor2);
 
-	}
+	}*/
 }
-
-

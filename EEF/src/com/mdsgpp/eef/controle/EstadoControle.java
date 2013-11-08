@@ -17,7 +17,7 @@ public class EstadoControle {
 	private HashMap<String, String> informacoesEstado;
 	private HashMap<String, ArrayList<String[]>> informacoesParse;
 	private DecimalFormat dfValor = new DecimalFormat("#,##0.00");
-	private DecimalFormat dfPopulação = new DecimalFormat("#,###");
+	private DecimalFormat dfPopulacao = new DecimalFormat("#,###");
 	private DecimalFormat dfPorcentagem = new DecimalFormat("#.##");
 	
 	public EstadoControle(Context contextActivity) {
@@ -53,7 +53,7 @@ public class EstadoControle {
 		
 		this.informacoesEstado.put("sigla", estado.getSigla() );
 		this.informacoesEstado.put("nome", estado.getNome() );;
-		this.informacoesEstado.put("populacao", dfPopulação.format( estado.getPopulacao() ) + " habitantes" );
+		this.informacoesEstado.put("populacao", dfPopulacao.format( estado.getPopulacao() ) + " habitantes" );
 		this.informacoesEstado.put("percentual_participacao_pib", dfPorcentagem.format( estado.getParticipacaoPercentualPIB()[estado.getParticipacaoPercentualPIB().length-1] ) + "%" );
 		this.informacoesEstado.put("projetos_ciencia_tecnologia","Quantidade: " + estado.getNumeroDeProjetosCienciaTecnologia()[estado.getNumeroDeProjetosCienciaTecnologia().length-1] + " projetos" );
 		this.informacoesEstado.put("valor_ciencia_tecnologia", "Valor investido: R$ " + dfValor.format( estado.getValorInvestidoCienciaTecnologia()[estado.getValorInvestidoCienciaTecnologia().length-1] ) + " (em mil)" );

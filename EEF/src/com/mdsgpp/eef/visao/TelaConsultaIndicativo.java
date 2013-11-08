@@ -8,9 +8,15 @@ public class TelaConsultaIndicativo extends Comparacao {
 	
 	@Override
 	public void clickBotaoComparacaoEstados(View view){
-	
-		int posicao01 = getEstadosSpinner().getSelectedItemPosition();
-		int posicao02 = getEstadosSpinner01().getSelectedItemPosition();
+		preencheTodosEstados();
+		
+		getEstadosSpinner01().getSelectedItem().toString();
+		getEstadosSpinner().getSelectedItem().toString();
+
+		int posicao01 = getTodosEstados().indexOf(getEstadosSpinner01().getSelectedItem()
+				.toString());
+		int posicao02 = getTodosEstados().indexOf(getEstadosSpinner().getSelectedItem()
+				.toString());
 		
 		Intent intent = new Intent(this, TelaIndicativosConsultados.class);
 		
