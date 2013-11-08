@@ -24,7 +24,7 @@ public class EstadoControleTeste extends AndroidTestCase{
 	private EstadoControle instancia2;
 	private EstadoControle instancia3;
 	private DecimalFormat dfValor = new DecimalFormat("#,##0.00");
-	private DecimalFormat dfPopulação = new DecimalFormat("#,###");
+	private DecimalFormat dfPopulacao = new DecimalFormat("#,###");
 	private DecimalFormat dfPorcentagem = new DecimalFormat("#.##");
 
 
@@ -40,7 +40,7 @@ public class EstadoControleTeste extends AndroidTestCase{
 		
 		this.informacoes.put("sigla", "AC");
 		this.informacoes.put("nome", "Acre");
-		this.informacoes.put("populacao",  dfPopulação.format(691132) + " habitantes");
+		this.informacoes.put("populacao",  dfPopulacao.format(691132) + " habitantes");
 		this.informacoes.put("percentual_participacao_pib", dfPorcentagem.format(0.200000000000045)+ "%");
 		this.informacoes.put("projetos_ciencia_tecnologia","Quantidade: " + 3 + " projetos");
 		this.informacoes.put("valor_ciencia_tecnologia", "Valor investido: R$ " + dfValor.format(563681.899999976)+ " (em mil)");

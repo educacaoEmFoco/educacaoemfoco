@@ -195,9 +195,10 @@ public class DadosParseTeste extends AndroidTestCase{
 		
 		informacoes.clear();
 		informacoes = dadosParse.getEstado(0);
-		
 		HashMap<String, ArrayList<String[]>> estado;
 		estado = null;
+		
+		
 		try {
 			estado = dadosParse.getEstado(0);
 		} catch (IOException e) {
@@ -231,6 +232,7 @@ public class DadosParseTeste extends AndroidTestCase{
 		assertEquals("55,4400000000023", estado.get("valores_programa_primeiros_projetos").get(0)[1]);
 		
 		assertEquals("22", estado.get("valores_projetos_apoio_pesquisa_cnpq").get(0)[1]);
+
 		
 	}
 
