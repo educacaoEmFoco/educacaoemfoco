@@ -32,10 +32,11 @@ public class DadosParseTeste extends AndroidTestCase{
 	private String indicadores[] = new String[13];
 	private ArrayList<String[]> container;
 	private String nomeEsigla[] = new String[2];
+	private DadosParse dadosParse;
 	
 	@Before
 	public void setUp() throws Exception {
-		new DadosParse(getContext());
+		dadosParse = new DadosParse(getContext());
 		informacoes = new HashMap<String, ArrayList<String[]>>();
 		container = new ArrayList<String[]>();
 		dados1 = new ArrayList<String[]>();
@@ -191,33 +192,47 @@ public class DadosParseTeste extends AndroidTestCase{
 
 	@Test
 	public void testGetEstado() throws IOException {
-		assertEquals(container, this.informacoes.get("nome_e_sigla"));
+		
+		informacoes.clear();
+		informacoes = dadosParse.getEstado(0);
+		HashMap<String, ArrayList<String[]>> estado;
+		estado = null;
+		
+		
+		try {
+			estado = dadosParse.getEstado(0);
+		} catch (IOException e) {
+			fail();
+		}
+		
+		assertEquals("AC", estado.get("nome_e_sigla").get(0)[1]);
 
-		assertEquals(dados1, this.informacoes.get("participacao_estadual_pib"));
+		assertEquals("0,200000000000045", estado.get("participacao_estadual_pib").get(0)[1]);
 		
-		assertEquals(dados2, this.informacoes.get("populacao"));
+		assertEquals("691132", estado.get("populacao").get(0)[1]);
 		
-		assertEquals(dados3, this.informacoes.get("numero_projetos"));
+		assertEquals("0", estado.get("numero_projetos").get(0)[1]);
 		
-		assertEquals(dados4, this.informacoes.get("valor_investido"));
+		assertEquals("0", estado.get("valor_investido").get(0)[1]);
 		
-		assertEquals(dados5, this.informacoes.get("5a_8a"));
+		assertEquals("3,5", estado.get("5a_8a").get(0)[1]);
 
-		assertEquals(dados6, this.informacoes.get("ensino_medio"));
+		assertEquals("3", estado.get("ensino_medio").get(0)[1]);
 		
-		assertEquals(dados7, this.informacoes.get("series_iniciais"));
+		assertEquals("3,29999999999927", estado.get("series_iniciais").get(0)[1]);
 		
-		assertEquals(dados8, this.informacoes.get("jovens_pesquisadores"));
+		assertEquals("0", estado.get("jovens_pesquisadores").get(0)[1]);
 		
-		assertEquals(dados9, this.informacoes.get("programa_primeiros_projetos"));
+		assertEquals("2", estado.get("programa_primeiros_projetos").get(0)[1]);
 
-		assertEquals(dados10, this.informacoes.get("projetos_apoio_pesquisa_cnpq"));
+		assertEquals("5", estado.get("projetos_apoio_pesquisa_cnpq").get(0)[1]);
 		
-		assertEquals(dados11, this.informacoes.get("valores_jovens_pesquisadores"));
+		assertEquals("0", estado.get("valores_jovens_pesquisadores").get(0)[1]);
 
-		assertEquals(dados12, this.informacoes.get("valores_programa_primeiros_projetos"));
+		assertEquals("55,4400000000023", estado.get("valores_programa_primeiros_projetos").get(0)[1]);
 		
-		assertEquals(dados13, this.informacoes.get("valores_projetos_apoio_pesquisa_cnpq"));
+		assertEquals("22", estado.get("valores_projetos_apoio_pesquisa_cnpq").get(0)[1]);
+
 		
 	}
 
