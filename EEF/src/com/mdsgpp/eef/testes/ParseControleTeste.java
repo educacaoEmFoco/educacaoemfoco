@@ -4,9 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+
 
 import android.content.Context;
 import android.test.AndroidTestCase;
@@ -36,7 +34,7 @@ public class ParseControleTeste extends AndroidTestCase{
 	private ArrayList<String[]> container;
 	private String nomeEsigla[] = new String[2];
 	
-	@Before
+
 	public void setUp() throws Exception {
 		context = getContext();
 		parseControle = new ParseControle(context);
@@ -190,22 +188,22 @@ public class ParseControleTeste extends AndroidTestCase{
 		
 	}
 
-	@After
+	
 	public void tearDown() throws Exception {
 	}
 
-	@Test
+	
 	public void testInstancia() {
 		assertNotNull(parseControle);
 	}
 
-	@Test
+	
 	public void testarSingleton(){
 		assertNotNull(ParseControle.getInstancia(context));
 	}
 	
 
-	@Test
+	
 	public void testarInformacoesParse(){
 		
 		HashMap<String, ArrayList<String[]>> estado;

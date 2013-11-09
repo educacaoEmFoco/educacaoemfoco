@@ -2,11 +2,8 @@ package com.mdsgpp.eef.testes;
 
 import java.io.IOException;
 import java.text.DecimalFormat;
-import java.util.ArrayList;
 import java.util.HashMap;
 
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 
 import com.mdsgpp.eef.controle.EstadoControle;
@@ -24,7 +21,7 @@ public class EstadoControleTeste extends AndroidTestCase{
 	private DecimalFormat dfPorcentagem = new DecimalFormat("#.##");
 
 
-	@Before
+	
 	public void setUp() throws Exception {
 		instancia = new EstadoControle(getContext());
 		
@@ -53,11 +50,10 @@ public class EstadoControleTeste extends AndroidTestCase{
 		
 	
 
-	@After
 	public void tearDown() throws Exception {
 	}
 
-	@Test
+
 	public void testLerEstado() throws IOException {
 		assertEquals(this.informacoes.get("nome"),
 				 EstadoControle.getInstancia(getContext()).lerEstado(0).get("nome"));

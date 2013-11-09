@@ -1,10 +1,6 @@
 package com.mdsgpp.eef.testes;
 
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-
 import android.test.AndroidTestCase;
 
 import com.mdsgpp.eef.modelo.Estado;
@@ -17,7 +13,6 @@ public class ProjetoTeste extends AndroidTestCase {
 	private int quantidade;
 	private double valor; 
 	
-	@Before
 	public void setUp() throws Exception {
 		this.estado = new Estado();
 		this.projeto = new Projeto();
@@ -25,11 +20,11 @@ public class ProjetoTeste extends AndroidTestCase {
 		this.valor = 10000.50;
 	}
 
-	@After
+
 	public void tearDown() throws Exception {
 	}
 
-	@Test
+
 	public void testValor() {
 		double valorAtual;
 		
@@ -39,7 +34,6 @@ public class ProjetoTeste extends AndroidTestCase {
 		assertEquals(this.valor, valorAtual, 0.0);
 	}
 	
-	@Test
 	public void testQuantidade() {
 		int quantidadeAtual;
 		
@@ -49,7 +43,7 @@ public class ProjetoTeste extends AndroidTestCase {
 		assertEquals(this.quantidade, quantidadeAtual);
 	}
 	
-	@Test
+	
 	public void testEstado() {
 		Estado estadoAtual;
 		

@@ -1,10 +1,6 @@
 package com.mdsgpp.eef.testes;
 
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-
 import android.test.AndroidTestCase;
 
 import com.mdsgpp.eef.modelo.Estado;
@@ -16,7 +12,7 @@ public class MediaTeste extends AndroidTestCase {
 	private Estado estado;
 	private double creche, preEscola, anosIniciais, anosFinais, totalMedio, medioNaoSeriado;
 	
-	@Before
+	
 	public void setUp() throws Exception {
 		this.media = new Media();
 		this.estado = new Estado();
@@ -29,11 +25,11 @@ public class MediaTeste extends AndroidTestCase {
 		this.medioNaoSeriado = 105.17;
 	}
 
-	@After
+	
 	public void tearDown() throws Exception {
 	}
 
-	@Test
+	
 	public void testCreche() {
 		double crecheAtual;
 		
@@ -43,7 +39,7 @@ public class MediaTeste extends AndroidTestCase {
 		assertEquals(this.creche, crecheAtual, 0.0);
 	}
 	
-	@Test
+	
 	public void testPreEscola() {
 		double preEscolaAtual;
 		
@@ -53,7 +49,7 @@ public class MediaTeste extends AndroidTestCase {
 		assertEquals(this.preEscola, preEscolaAtual, 0.0);
 	}
 	
-	@Test
+
 	public void testAnosIniciais() {
 		double anosIniciaisAtual;
 		
@@ -63,7 +59,7 @@ public class MediaTeste extends AndroidTestCase {
 		assertEquals(this.anosIniciais, anosIniciaisAtual, 0.0);
 	}
 	
-	@Test
+	
 	public void testAnosFinais() {
 		double anosFinaisAtual;
 		
@@ -73,7 +69,7 @@ public class MediaTeste extends AndroidTestCase {
 		assertEquals(this.anosFinais, anosFinaisAtual, 0.0);
 	}
 	
-	@Test
+	
 	public void testTotalMedio() {
 		double totalMedioAtual;
 		
@@ -83,7 +79,7 @@ public class MediaTeste extends AndroidTestCase {
 		assertEquals(this.totalMedio, totalMedioAtual, 0.0);
 	}
 	
-	@Test
+
 	public void testMedioNaoSeriado() {
 		double medioNaoSeriadoAtual;
 		
@@ -93,7 +89,7 @@ public class MediaTeste extends AndroidTestCase {
 		assertEquals(this.medioNaoSeriado, medioNaoSeriadoAtual, 0.0);
 	}
 	
-	@Test
+	
 	public void testEstado() {
 		Estado estadoAtual;
 		

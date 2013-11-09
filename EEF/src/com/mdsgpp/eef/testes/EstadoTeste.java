@@ -4,10 +4,6 @@ package com.mdsgpp.eef.testes;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-
 import android.test.AndroidTestCase;
 
 import com.mdsgpp.eef.modelo.Estado;
@@ -36,7 +32,7 @@ public class EstadoTeste extends AndroidTestCase {
 	ArrayList<String[]> dadosValoresProjetosTecnologia;
 	private String valores[];
 	
-	@Before
+	
 	public void setUp() throws Exception {
 		
 		// Objetos utilizados para realizar os testes
@@ -114,11 +110,11 @@ public class EstadoTeste extends AndroidTestCase {
 	
 	}
 
-	@After
+	
 	public void tearDown() throws Exception {
 	}
 
-	@Test
+	
 	public void testNome(){
 		String nome;
 		estado.setNome("Acre");
@@ -129,7 +125,7 @@ public class EstadoTeste extends AndroidTestCase {
 		
 	}
 	
-	@Test
+
 	public void testSigla(){
 		String sigla;
 		estado.setSigla("AC");
@@ -140,7 +136,7 @@ public class EstadoTeste extends AndroidTestCase {
 		
 	}
 	
-	@Test
+
 	public void testPopulacao(){
 		int valores;
 		estado.setPopulacao(informacoes);
@@ -152,7 +148,7 @@ public class EstadoTeste extends AndroidTestCase {
 	}
 
 	
-	@Test
+	
 	public void testParticipacaoPercentualPIB() {
 
 		double[] valores;	
@@ -163,7 +159,7 @@ public class EstadoTeste extends AndroidTestCase {
 		assertEquals(valores[0], 3000, 0.00001);
 	}
 	
-	@Test
+
 	public void testIdeb(){
 		Ideb[] idebs;
 		estado.setIdebs(informacoes);
@@ -175,7 +171,7 @@ public class EstadoTeste extends AndroidTestCase {
 		assertEquals(4.1,idebs[0].getMedio(),0.00001);
 	}
 	 
-	@Test
+	
 	public void testProjetoCienciaTecnologia(){
 		Projeto[] ProjetosTecnologia;
 		estado.setProjetosCienciaTecnologia(informacoes);
@@ -184,7 +180,7 @@ public class EstadoTeste extends AndroidTestCase {
 		assertEquals(10000.50,ProjetosTecnologia[0].getValor(),0.00001);
 		}
 	
-	@Test
+	
 	public void testPrimeirosProjetos(){
 		Projeto[] PrimeirosProjetos;
 		estado.setPrimeirosProjetos(informacoes);
@@ -195,7 +191,7 @@ public class EstadoTeste extends AndroidTestCase {
 	}
 	
 	
-	@Test
+	
 	public void testProjetosInct(){
 		Projeto[] ProjetosInct;
 		estado.setProjetosInct(informacoes);
@@ -204,7 +200,7 @@ public class EstadoTeste extends AndroidTestCase {
 		assertEquals(10000.50,ProjetosInct[0].getValor(),0.00001);
 		}
 	
-	@Test
+	
 	public void testProjetosApoioCnpq(){
 		Projeto[] ProjetosApoioCnpq;
 		estado.setProjetosApoioCnpq(informacoes);
@@ -212,7 +208,7 @@ public class EstadoTeste extends AndroidTestCase {
 		assertEquals(10,ProjetosApoioCnpq[0].getQuantidade());
 		assertEquals(10000.50,ProjetosApoioCnpq[0].getValor(),0.00001);
 	}
-	@Test
+	
 	public void testProjetoJovensPesquisadores(){
 		Projeto[] ProjetoJovensPesquisadores;
 		estado.setProjetoJovensPesquisadores(informacoes);

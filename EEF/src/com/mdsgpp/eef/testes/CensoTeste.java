@@ -1,10 +1,6 @@
 package com.mdsgpp.eef.testes;
 
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-
 import android.test.AndroidTestCase;
 
 import com.mdsgpp.eef.modelo.Censo;
@@ -17,7 +13,7 @@ public class CensoTeste extends AndroidTestCase {
 	private double creche, preEscola, anosIniciaisFundamental, anosFinaisFundamental, 
 		ensinoMedio, fundamentalEJA, medioEJA;
 	
-	@Before
+	
 	public void setUp() throws Exception {
 		this.censo = new Censo();
 		this.estado = new Estado();
@@ -31,11 +27,11 @@ public class CensoTeste extends AndroidTestCase {
 		this.medioEJA = 460.21;
 	}
 
-	@After
+	
 	public void tearDown() throws Exception {
 	}
 
-	@Test
+	
 	public void testCreche() {
 		double crecheAtual;
 		
@@ -45,7 +41,7 @@ public class CensoTeste extends AndroidTestCase {
 		assertEquals(this.creche, crecheAtual, 0.0);
 	}
 	
-	@Test
+	
 	public void testPreEscola() {
 		double preEscolaAtual;
 		
@@ -55,7 +51,7 @@ public class CensoTeste extends AndroidTestCase {
 		assertEquals(this.preEscola, preEscolaAtual, 0.0);
 	}
 	
-	@Test
+	
 	public void testAnosIniciaisFundamental() {
 		double anosIniciaisFundamentalAtual;
 		
@@ -65,7 +61,7 @@ public class CensoTeste extends AndroidTestCase {
 		assertEquals(this.anosIniciaisFundamental, anosIniciaisFundamentalAtual, 0.0);
 	}
 	
-	@Test
+	
 	public void testAnosFinaisFundamental() {
 		double anosFinaisFundamentalAtual;
 		
@@ -75,7 +71,7 @@ public class CensoTeste extends AndroidTestCase {
 		assertEquals(this.anosFinaisFundamental, anosFinaisFundamentalAtual, 0.0);
 	}
 	
-	@Test
+	
 	public void testEnsinoMedio() {
 		double ensinoMedioAtual;
 		
@@ -85,7 +81,7 @@ public class CensoTeste extends AndroidTestCase {
 		assertEquals(this.ensinoMedio, ensinoMedioAtual, 0.0);
 	}
 	
-	@Test
+	
 	public void testFundamentalEJA() {
 		double fundamentalEjaAtual;
 		
@@ -95,7 +91,7 @@ public class CensoTeste extends AndroidTestCase {
 		assertEquals(this.fundamentalEJA, fundamentalEjaAtual, 0.0);
 	}
 	
-	@Test
+
 	public void testMediaEJA() {
 		double medioEjaAtual;
 		
@@ -105,7 +101,6 @@ public class CensoTeste extends AndroidTestCase {
 		assertEquals(this.medioEJA, medioEjaAtual, 0.0);
 	}
 	
-	@Test
 	public void testEstado() {
 		Estado estadoAtual;
 		

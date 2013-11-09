@@ -5,9 +5,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
 
 import android.test.AndroidTestCase;
 
@@ -34,7 +31,7 @@ public class DadosParseTeste extends AndroidTestCase{
 	private String nomeEsigla[] = new String[2];
 	private DadosParse dadosParse;
 	
-	@Before
+	
 	public void setUp() throws Exception {
 		dadosParse = new DadosParse(getContext());
 		informacoes = new HashMap<String, ArrayList<String[]>>();
@@ -185,12 +182,12 @@ public class DadosParseTeste extends AndroidTestCase{
 		informacoes.put(indicadores[12], dados13);
 	}
 
-	@After
+	
 	public void tearDown() throws Exception {
 	}
 
 
-	@Test
+	
 	public void testGetEstado() throws IOException {
 		
 		informacoes.clear();
