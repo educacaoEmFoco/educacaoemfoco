@@ -38,7 +38,6 @@ public class TelaResultadoConsulta extends Activity {
 
 	private TextView textViewSigla2;
 	private TextView textViewNome2;
-	private TextView textViewPopulacao2;
 	private TextView textViewPopulacaoValor2;
 	private TextView textViewParticipacaoPib2;
 	private TextView textViewQuantidadeProjetosCienciaTecnologia2;
@@ -207,7 +206,6 @@ public class TelaResultadoConsulta extends Activity {
 		textViewSigla2 = (TextView) findViewById(R.id.textView_sigla2);
 		textViewNome2 = (TextView) findViewById(R.id.textView_nome_estado2);
 		textViewPopulacaoValor2 = (TextView) findViewById(R.id.textView_populacao_valor2);
-		textViewPopulacao2 = (TextView) findViewById(R.id.textView_populacao2);
 		textViewParticipacaoPib2 = (TextView) findViewById(R.id.textView_participacao_pib_valor2);
 		textViewQuantidadeProjetosCienciaTecnologia2 = (TextView) findViewById(R.id.textView_numero_projetos_quantidade2);
 		textViewValorProjetosCienciaTecnologia2 = (TextView) findViewById(R.id.textView_valor_investido_projetos2);
@@ -229,7 +227,6 @@ public class TelaResultadoConsulta extends Activity {
 		int vPopulacao = (bPopulacao) ? View.VISIBLE : View.GONE;
 			textViewPopulacao1.setVisibility(vPopulacao);
 			textViewPopulacaoValor1.setVisibility(vPopulacao);
-			textViewPopulacao2.setVisibility(vPopulacao);
 			textViewPopulacaoValor2.setVisibility(vPopulacao);
 	}
 }
