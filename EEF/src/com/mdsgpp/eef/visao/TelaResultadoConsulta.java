@@ -11,6 +11,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.util.Log;
 import android.view.Menu;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,6 +20,7 @@ public class TelaResultadoConsulta extends Activity {
 	private TextView textViewSigla1;
 	private TextView textViewNome1;
 	private TextView textViewPopulacao1;
+	private TextView textViewPopulacaoValor1;
 	private TextView textViewParticipacaoPib1;
 	private TextView textViewQuantidadeProjetosCienciaTecnologia1;
 	private TextView textViewValorProjetosCienciaTecnologia1;
@@ -37,6 +39,7 @@ public class TelaResultadoConsulta extends Activity {
 	private TextView textViewSigla2;
 	private TextView textViewNome2;
 	private TextView textViewPopulacao2;
+	private TextView textViewPopulacaoValor2;
 	private TextView textViewParticipacaoPib2;
 	private TextView textViewQuantidadeProjetosCienciaTecnologia2;
 	private TextView textViewValorProjetosCienciaTecnologia2;
@@ -51,14 +54,16 @@ public class TelaResultadoConsulta extends Activity {
 	private TextView textViewValorJovensPesquisadores2;
 	private TextView textViewQuantidadeProjetosIniciacao2;
 	private TextView textViewValorProjetosIniciacao2;
+	private boolean  bIdeb, bPib, bPopulacao, bPrimeirosProjetos, bProjetosCnpq,
+					 bProjetosDifusao, bProjetosIniciacao, bProjetosJovens;
 
-	
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_tela_compara_estados);
 		capturaInformacoes();
+		escondeCamposDeTexto();
 	}
 
 	@Override
@@ -79,8 +84,15 @@ public class TelaResultadoConsulta extends Activity {
 		int posicao1 = intent.getIntExtra("POSICAO_ESTADO_01",5);
 		int posicao2 = intent.getIntExtra("POSICAO_ESTADO_02",0);
 		
+		bIdeb = intent.getBooleanExtra("CB_IDEB", false);
+		bPib = intent.getBooleanExtra("CB_PIB", false);
+		bPopulacao = intent.getBooleanExtra("CB_POPULACAO", false);
+		bPrimeirosProjetos = intent.getBooleanExtra("CB_PRIMEIROS_PROJETOS", false);
+		bProjetosCnpq = intent.getBooleanExtra("CB_PROJETOS_CNPQ", false);
+		bProjetosDifusao = intent.getBooleanExtra("CB_PROJETOS_DIFUSAO", false);
+		bProjetosIniciacao = intent.getBooleanExtra("CB_PROJETOS_INICIACAO", false);
+		bProjetosJovens = intent.getBooleanExtra("CB_PROJETOS_JOVENS", false);
 		
-
 		InicializaCamposTexto();
 
 		HashMap<String, String> informacoesEstado1 = new HashMap<String, String>();
@@ -106,7 +118,7 @@ public class TelaResultadoConsulta extends Activity {
 		if (textViewNome1 != null)
 			textViewNome1.setText(informacoes1.get("nome"));
 
-		textViewPopulacao1.setText(informacoes1.get("populacao"));
+		textViewPopulacaoValor1.setText(informacoes1.get("populacao"));			
 		textViewParticipacaoPib1.setText(informacoes1
 				.get("percentual_participacao_pib"));
 		textViewQuantidadeProjetosCienciaTecnologia1.setText(informacoes1
@@ -139,7 +151,7 @@ public class TelaResultadoConsulta extends Activity {
 		if (textViewNome2 != null)
 			textViewNome2.setText(informacoes2.get("nome"));
 
-		textViewPopulacao2.setText(informacoes2.get("populacao"));
+		textViewPopulacaoValor2.setText(informacoes2.get("populacao"));
 		textViewParticipacaoPib2.setText(informacoes2
 				.get("percentual_participacao_pib"));
 		textViewQuantidadeProjetosCienciaTecnologia2.setText(informacoes2.get(
@@ -174,8 +186,9 @@ public class TelaResultadoConsulta extends Activity {
 	private void InicializaCamposTexto() {
 
 		textViewSigla1 = (TextView) findViewById(R.id.textView_sigla1);
-		textViewNome1 = (TextView) findViewById(R.id.textView_nome_estado1);
-		textViewPopulacao1 = (TextView) findViewById(R.id.textView_populacao_valor1);
+		textViewNome1 = (TextView) findViewById(R.id.textView_nome_estado1);		
+		textViewPopulacaoValor1 = (TextView) findViewById(R.id.textView_populacao_valor1);
+		textViewPopulacao1 = (TextView) findViewById(R.id.textView_populacao1);
 		textViewParticipacaoPib1 = (TextView) findViewById(R.id.textView_participacao_pib_valor1);
 		textViewQuantidadeProjetosCienciaTecnologia1 = (TextView) findViewById(R.id.textView_numero_projetos_quantidade1);
 		textViewValorProjetosCienciaTecnologia1 = (TextView) findViewById(R.id.textView_valor_investido_projetos1);
@@ -190,10 +203,11 @@ public class TelaResultadoConsulta extends Activity {
 		textViewValorJovensPesquisadores1 = (TextView) findViewById(R.id.textView_jovens_pesquisadores_valor1);
 		textViewQuantidadeProjetosIniciacao1 = (TextView) findViewById(R.id.textView_projetos_iniciacao_quantidade1);
 		textViewValorProjetosIniciacao1 = (TextView) findViewById(R.id.textView_projetos_iniciacao_valor1);
-
+		
 		textViewSigla2 = (TextView) findViewById(R.id.textView_sigla2);
 		textViewNome2 = (TextView) findViewById(R.id.textView_nome_estado2);
-		textViewPopulacao2 = (TextView) findViewById(R.id.textView_populacao_valor2);
+		textViewPopulacaoValor2 = (TextView) findViewById(R.id.textView_populacao_valor2);
+		textViewPopulacao2 = (TextView) findViewById(R.id.textView_populacao2);
 		textViewParticipacaoPib2 = (TextView) findViewById(R.id.textView_participacao_pib_valor2);
 		textViewQuantidadeProjetosCienciaTecnologia2 = (TextView) findViewById(R.id.textView_numero_projetos_quantidade2);
 		textViewValorProjetosCienciaTecnologia2 = (TextView) findViewById(R.id.textView_valor_investido_projetos2);
@@ -209,6 +223,14 @@ public class TelaResultadoConsulta extends Activity {
 		textViewQuantidadeProjetosIniciacao2 = (TextView) findViewById(R.id.textView_projetos_iniciacao_quantidade2);
 		textViewValorProjetosIniciacao2 = (TextView) findViewById(R.id.textView_projetos_iniciacao_valor2);
 
+	}
+	
+	public void escondeCamposDeTexto() {
+		int vPopulacao = (bPopulacao) ? View.VISIBLE : View.GONE;
+			textViewPopulacao1.setVisibility(vPopulacao);
+			textViewPopulacaoValor1.setVisibility(vPopulacao);
+			textViewPopulacao2.setVisibility(vPopulacao);
+			textViewPopulacaoValor2.setVisibility(vPopulacao);
 	}
 }
 
