@@ -12,6 +12,7 @@
     <string name="menu_botao_comparacao">Comparar</string>
     <string name="string_vazia"></string>
     <string name="menu_botao_consulta">Consulta</string>
+    <string name="menu_botao_feed">Feed</string>
 
     <!-- Strings da tela indicativos consultados -->
     <string name="botao_tela_indicativos">Ir</string>
@@ -60,5 +61,8 @@
     <string name="title_activity_tela_consulta_indicativo">TelaConsultaIndicativo</string>
     <string name="title_activity_tela_indicativos_consultados">TelaIndicativosConsultados</string>
     <string name="title_activity_tela_resultado_consulta">TelaResultadoConsulta</string>
+    <string name="title_activity_tela_feed">TelaFeed</string>
+    <string name="title_activity_feed_adapter">FeedAdapter</string>
+    <string name="title_activity_receptor_dados">ReceptorDados</string>
 
 </resources>

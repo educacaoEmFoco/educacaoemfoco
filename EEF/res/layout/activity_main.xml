@@ -70,6 +70,16 @@
                 android:drawableTop="@drawable/icone_listar"
                 android:onClick="clickBotaoConsulta"
                 android:text="@string/menu_botao_consulta" />
+
+            <Button
+                android:id="@+id/botao_feed"
+                style="@style/botaoMenu"
+                android:layout_width="123dp"
+                android:layout_height="match_parent"
+                android:drawableTop="@drawable/icone_listar"
+                android:onClick="clickBotaoFeed"
+                android:text="@string/menu_botao_feed" />
+
         </LinearLayout>
     </LinearLayout>
 
