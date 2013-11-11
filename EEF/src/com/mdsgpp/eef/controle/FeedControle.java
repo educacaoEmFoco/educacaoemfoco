@@ -5,7 +5,11 @@ import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import com.mdsgpp.eef.R;
 import com.mdsgpp.eef.modelo.Feed;
+import com.mdsgpp.eef.parse.FeedParser;
+import com.mdsgpp.eef.parse.FeedPersistencia;
+import com.mdsgpp.eef.visao.ReceptorDados;
 
 import android.annotation.TargetApi;
 import android.app.ProgressDialog;

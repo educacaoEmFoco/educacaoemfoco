@@ -1,7 +1,7 @@
-package com.rssfeed.control;
+package com.mdsgpp.eef.controle;
 
-import com.rssfeed.model.Feed;
-import com.rssfeed.model.Noticias;
+import com.mdsgpp.eef.modelo.Feed;
+import com.mdsgpp.eef.modelo.Noticias;
 
 public class FeedParseControle {
 
