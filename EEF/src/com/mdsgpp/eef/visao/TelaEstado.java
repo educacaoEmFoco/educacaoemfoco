@@ -60,7 +60,7 @@ public class TelaEstado extends Activity {
 	    HashMap<String, String> informacoes = new HashMap <String, String>();
 	    
 	    try {
-			informacoes = EstadoControle.getInstancia(this).getInformacoesEstado(posicao);
+			informacoes = EstadoControle.getInstancia(this).lerEstado(posicao);
 			preencheCamposTexto(informacoes);
 			setImagem(posicao);
 		} catch (IOException e) {

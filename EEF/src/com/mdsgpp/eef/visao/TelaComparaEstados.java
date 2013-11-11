@@ -81,9 +81,9 @@ public class TelaComparaEstados extends Activity {
 
 		try {
 			informacoesEstado1 = (HashMap<String, String>) EstadoControle
-					.getInstancia(this).getInformacoesEstado(posicao1).clone();
+					.getInstancia(this).lerEstado(posicao1).clone();
 			informacoesEstado2 = (HashMap<String, String>) EstadoControle
-					.getInstancia(this).getInformacoesEstado(posicao2).clone();
+					.getInstancia(this).lerEstado(posicao2).clone();
 
 			preencheCamposTexto(informacoesEstado1, informacoesEstado2);
 		} catch (IOException e) {

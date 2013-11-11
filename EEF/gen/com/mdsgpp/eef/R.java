@@ -187,6 +187,7 @@ public final class R {
         public static final int activity_tela_sobre=0x7f030007;
         public static final int listview_item=0x7f030008;
         public static final int spinner_item=0x7f030009;
+        public static final int spinner_item2=0x7f03000a;
     }
     public static final class menu {
         public static final int main=0x7f080000;

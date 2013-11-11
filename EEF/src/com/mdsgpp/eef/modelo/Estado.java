@@ -9,12 +9,11 @@ public class Estado {
 	private String sigla;
 	private double participacaoPercentualPIB[];
 	private int populacao;
-	private int numeroDeProjetosCienciaTecnologia[];
-	private double valorInvestidoCienciaTecnologia[];
 	private Censo censos[];
 	private Ideb idebs[];
 	private Media mediaNotasPorTurma[];
 	private Media mediaHorasAula[];
+	private Projeto projetosCienciaTecnologia[];
 	private Projeto primeirosProjetos[];
 	private Projeto projetoInct[];
 	private Projeto projetosApoioCnpq[];
@@ -31,7 +30,6 @@ public class Estado {
 		preencheDados(informacoes);		
 	}
 
-	
 	public Censo[] getCensos() {
 		return censos;
 	}
@@ -71,54 +69,6 @@ public class Estado {
 		ArrayList<String[]> dados = informacoes.get("populacao");
 		this.populacao = Integer.parseInt(dados.get(0)[1].replaceAll(",", "."));
 
-	}
-	//testado
-	public int[] getNumeroDeProjetosCienciaTecnologia() {
-		if (numeroDeProjetosCienciaTecnologia == null) {
-			int[] vazio = {0};
-			return vazio;
-		}
-		
-		return numeroDeProjetosCienciaTecnologia;
-	}
-	
-	public void setNumeroDeProjetosCienciaTecnologia(HashMap<String, ArrayList<String[]>> informacoes) {
-		int quantidadeProjetosCienciaTecnologia[] = null;
-		ArrayList<String[]> dados;
-		
-		if (informacoes.containsKey("numero_projetos")) {
-			dados = informacoes.get("numero_projetos");
-			quantidadeProjetosCienciaTecnologia = new int[dados.size()];
-			for (int i=0; i<dados.size(); i++) {
-				quantidadeProjetosCienciaTecnologia[i] = Integer.parseInt(dados.get(i)[1].replaceAll(",", "."));
-			}
-		}
-		
-		this.numeroDeProjetosCienciaTecnologia = quantidadeProjetosCienciaTecnologia;
-	}
-	//testado
-	public double[] getValorInvestidoCienciaTecnologia() {
-		if (valorInvestidoCienciaTecnologia == null) {
-			double[] vazio = {0};
-			return vazio;
-		}
-		
-		return valorInvestidoCienciaTecnologia;
-	}
-
-	public void setValorInvestidoCienciaTecnologia(HashMap<String, ArrayList<String[]>> informacoes) {
-		double valoresProjetosCienciaTecnologia[] = null;
-		ArrayList<String[]> dados;
-		
-		if (informacoes.containsKey("valor_investido")) {
-			dados = informacoes.get("valor_investido");
-			valoresProjetosCienciaTecnologia = new double[dados.size()];
-			for (int i=0; i<dados.size(); i++) {
-				valoresProjetosCienciaTecnologia[i] = Double.parseDouble(dados.get(i)[1].replaceAll(",", "."));
-			}
-		}
-		
-		this.valorInvestidoCienciaTecnologia = valoresProjetosCienciaTecnologia;
 	}
 
 	public Ideb[] getIdebs() {
@@ -206,7 +156,7 @@ public class Estado {
 	}
 
 	public String getSigla() {
-		if (nome == null) {
+		if (sigla == null) {
 			return "Sem sigla";
 		}
 		
@@ -215,6 +165,37 @@ public class Estado {
 
 	public void setSigla(String sigla) {
 		this.sigla = sigla;
+	}
+	
+	public Projeto[] getProjetosCienciaTecnologia() {
+		if(projetosCienciaTecnologia == null){
+			Projeto vazio[] = { new Projeto() };
+			vazio[0].setQuantidade(0);
+			vazio[0].setValor(0);
+		}
+		
+		return projetosCienciaTecnologia;
+	}
+
+	public void setProjetosCienciaTecnologia(HashMap<String, ArrayList<String[]>> informacoes) {
+		ArrayList<String[]> dadosValoresInvestidos = null;
+		ArrayList<String[]> dadosQtdProjetos = null;
+		Projeto projetosCienciaTecnologia[] = null;
+		
+		if(informacoes.containsKey("numero_projetos")){
+			dadosQtdProjetos = informacoes.get("numero_projetos");
+			projetosCienciaTecnologia = new Projeto[dadosQtdProjetos.size()];
+			dadosValoresInvestidos = informacoes.get("valor_investido");
+		}
+		
+		for (int i=0; projetosCienciaTecnologia!=null && i<projetosCienciaTecnologia.length; i++) { 
+			projetosCienciaTecnologia[i] = new Projeto();
+			projetosCienciaTecnologia[i].setEstado(this);
+			projetosCienciaTecnologia[i].setQuantidade(Integer.parseInt(dadosQtdProjetos.get(i)[1].replaceAll(",", ".")));
+			projetosCienciaTecnologia[i].setValor(Double.parseDouble(dadosValoresInvestidos.get(i)[1].replaceAll(",", ".")));
+		}
+		
+		this.projetosCienciaTecnologia = projetosCienciaTecnologia;
 	}
 	
 	public Projeto[] getPrimeirosProjetos() {
@@ -233,11 +214,19 @@ public class Estado {
 		Projeto projetosPrimeirosProjetos[] = null;
 		ArrayList<String[]> dadosProjetos = null;
 		ArrayList<String[]> dadosValores = null;
+		ArrayList<String[]> dadosValoresInvestidos = null;
+		ArrayList<String[]> dadosQtdProjetos = null;
+		int quantidadeProjetosCienciaTecnologia[] = null;
+		double valoresProjetosCienciaTecnologia[] = null;
 		
 		if (informacoes.containsKey("programa_primeiros_projetos")){
 			dadosProjetos = informacoes.get("programa_primeiros_projetos");
 			projetosPrimeirosProjetos = new Projeto[dadosProjetos.size()];
 			dadosValores = informacoes.get("valores_programa_primeiros_projetos");
+			dadosValoresInvestidos = informacoes.get("valor_investido");
+			valoresProjetosCienciaTecnologia = new double[dadosValoresInvestidos.size()];
+			dadosQtdProjetos = informacoes.get("numero_projetos");
+			quantidadeProjetosCienciaTecnologia = new int[dadosQtdProjetos.size()];
 		}
 			
 		for (int i=0; projetosPrimeirosProjetos!=null && i<projetosPrimeirosProjetos.length; i++) { 
@@ -245,6 +234,8 @@ public class Estado {
 			projetosPrimeirosProjetos[i].setEstado(this);
 			projetosPrimeirosProjetos[i].setQuantidade(Integer.parseInt(dadosProjetos.get(i)[1].replaceAll(",", ".")));
 			projetosPrimeirosProjetos[i].setValor(Double.parseDouble(dadosValores.get(i)[1].replaceAll(",", ".")));
+			valoresProjetosCienciaTecnologia[i] = Double.parseDouble(dadosValoresInvestidos.get(i)[1].replaceAll(",", "."));
+			quantidadeProjetosCienciaTecnologia[i] = Integer.parseInt(dadosQtdProjetos.get(i)[1].replaceAll(",", "."));
 		}
 		
 		
@@ -266,8 +257,7 @@ public class Estado {
 	public void setProjetosInct(HashMap<String, ArrayList<String[]>> informacoes) {
 		Projeto projetosIniciacaoCientifica[] = null;
 		
-		if (informacoes.containsKey("projetos_inct") 
-				&& informacoes.containsKey("valores_projetos_inct")) {
+		if (informacoes.containsKey("projetos_inct")) {
 
 			ArrayList<String[]> dadosProjetos = informacoes.get("projetos_inct");
 			ArrayList<String[]> dadosValores = informacoes.get("valores_projetos_inct");
@@ -357,14 +347,12 @@ public class Estado {
 		
 		this.setPopulacao(informacoes);
 		this.setIdebs(informacoes);
-		this.setNumeroDeProjetosCienciaTecnologia(informacoes);
-		this.setValorInvestidoCienciaTecnologia(informacoes);
 		this.setParticipacaoPercentualPIB(informacoes);
 		this.setPrimeirosProjetos(informacoes);
 		this.setProjetoJovensPesquisadores(informacoes);
 		this.setProjetosApoioCnpq(informacoes);
 		this.setProjetosInct(informacoes);
-		
+		this.setProjetosCienciaTecnologia(informacoes);
 
 	}
 	
