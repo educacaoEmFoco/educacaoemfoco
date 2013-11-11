@@ -45,4 +45,9 @@ public class MainActivity extends Activity {
     	Intent intent = new Intent(this, TelaConsultaIndicativo.class);
     	startActivity(intent);
     }
+    
+    public void clickBotaoFeed(View view){
+    	Intent intent = new Intent(this, TelaFeed.class);
+    	startActivity(intent);
+    }
 }
