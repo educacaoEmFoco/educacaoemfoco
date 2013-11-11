@@ -15,7 +15,8 @@ public class ProjetoTeste extends AndroidTestCase {
 	private Projeto projeto;
 	private Estado estado;
 	private int quantidade;
-	private double valor; 
+	private double valor;
+	private int ano;
 	
 	@Before
 	public void setUp() throws Exception {
@@ -23,6 +24,7 @@ public class ProjetoTeste extends AndroidTestCase {
 		this.projeto = new Projeto();
 		this.quantidade = 10;
 		this.valor = 10000.50;
+		this.ano = 1990;
 	}
 
 	@After
@@ -57,6 +59,15 @@ public class ProjetoTeste extends AndroidTestCase {
 		estadoAtual = this.projeto.getEstado();
 		
 		assertEquals(this.estado, estadoAtual);
+	}
+	@Test
+	public void testAno() {
+		int anoAtual;
+		
+		this.projeto.setAno(this.ano);
+		anoAtual = this.projeto.getAno();
+		
+		assertEquals(this.ano, anoAtual);
 	}
 
 }

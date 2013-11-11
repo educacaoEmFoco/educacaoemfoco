@@ -6,6 +6,7 @@ public class Ideb {
 	private double medio;
 	private double seriesIniciais;
 	private Estado estado;
+	private int ano;
 	
 	public Ideb() {
 	}
@@ -47,4 +48,10 @@ public class Ideb {
 	public void setEstado(Estado estado) {
 		this.estado = estado;
 	}	
+	public int getAno(){
+		return ano;
+	}
+	public void setAno(int ano){
+		this.ano = ano;
+	}
 }

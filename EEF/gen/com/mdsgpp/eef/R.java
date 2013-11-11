@@ -181,20 +181,13 @@ public final class R {
         public static final int activity_tela_compara_estados=0x7f030001;
         public static final int activity_tela_comparacao=0x7f030002;
         public static final int activity_tela_estado=0x7f030003;
-<<<<<<< HEAD
-        public static final int activity_tela_lista_estado=0x7f030004;
-        public static final int activity_tela_sobre=0x7f030005;
-        public static final int listview_item=0x7f030006;
-        public static final int spinner_item=0x7f030007;
-        public static final int spinner_item2=0x7f030008;
-=======
         public static final int activity_tela_indicativos_consultados=0x7f030004;
         public static final int activity_tela_lista_estado=0x7f030005;
         public static final int activity_tela_resultado_consulta=0x7f030006;
         public static final int activity_tela_sobre=0x7f030007;
         public static final int listview_item=0x7f030008;
         public static final int spinner_item=0x7f030009;
->>>>>>> aff53fba7113839c5c5a6521f3f9c0ddb7998ad2
+        public static final int spinner_item2=0x7f03000a;
     }
     public static final class menu {
         public static final int main=0x7f080000;

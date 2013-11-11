@@ -95,7 +95,9 @@ public class Estado {
 		for (int i=0; i<ideb.length; i++) {
 			ideb[i] = new Ideb();
 			ideb[i].setEstado(this); 
-			
+			if(i<ideb.length-1){
+				ideb[i].setAno(Integer.parseInt(dadosMedio.get(i)[0]));
+			}
 			ideb[i].setFundamental(Double.parseDouble(dadosFundamentalFinais.get(i)[1].replaceAll(",", ".")));
 			ideb[i].setMedio(Double.parseDouble(dadosMedio.get(i)[1].replaceAll(",", ".")));
 			ideb[i].setSeriesIniciais(Double.parseDouble(dadosFundamentalIniciais.get(i)[1].replaceAll(",", ".")));
@@ -172,6 +174,7 @@ public class Estado {
 			Projeto vazio[] = { new Projeto() };
 			vazio[0].setQuantidade(0);
 			vazio[0].setValor(0);
+			
 		}
 		
 		return projetosCienciaTecnologia;
@@ -186,11 +189,16 @@ public class Estado {
 			dadosQtdProjetos = informacoes.get("numero_projetos");
 			projetosCienciaTecnologia = new Projeto[dadosQtdProjetos.size()];
 			dadosValoresInvestidos = informacoes.get("valor_investido");
+			
 		}
 		
 		for (int i=0; projetosCienciaTecnologia!=null && i<projetosCienciaTecnologia.length; i++) { 
 			projetosCienciaTecnologia[i] = new Projeto();
 			projetosCienciaTecnologia[i].setEstado(this);
+			//projeto.setano(integer(array[0]);
+			if(i<projetosCienciaTecnologia.length-1){
+				projetosCienciaTecnologia[i].setAno(Integer.parseInt(dadosQtdProjetos.get(i)[0]));
+			}
 			projetosCienciaTecnologia[i].setQuantidade(Integer.parseInt(dadosQtdProjetos.get(i)[1].replaceAll(",", ".")));
 			projetosCienciaTecnologia[i].setValor(Double.parseDouble(dadosValoresInvestidos.get(i)[1].replaceAll(",", ".")));
 		}
@@ -232,6 +240,9 @@ public class Estado {
 		for (int i=0; projetosPrimeirosProjetos!=null && i<projetosPrimeirosProjetos.length; i++) { 
 			projetosPrimeirosProjetos[i] = new Projeto();
 			projetosPrimeirosProjetos[i].setEstado(this);
+			if(i<projetosPrimeirosProjetos.length-1){
+				projetosPrimeirosProjetos[i].setAno(Integer.parseInt(dadosQtdProjetos.get(i)[0]));
+				}
 			projetosPrimeirosProjetos[i].setQuantidade(Integer.parseInt(dadosProjetos.get(i)[1].replaceAll(",", ".")));
 			projetosPrimeirosProjetos[i].setValor(Double.parseDouble(dadosValores.get(i)[1].replaceAll(",", ".")));
 			valoresProjetosCienciaTecnologia[i] = Double.parseDouble(dadosValoresInvestidos.get(i)[1].replaceAll(",", "."));
@@ -267,6 +278,9 @@ public class Estado {
 			for (int i=0; i<projetosIniciacaoCientifica.length; i++) { 
 				projetosIniciacaoCientifica[i] = new Projeto();
 				projetosIniciacaoCientifica[i].setEstado(this);
+				if(i<projetosIniciacaoCientifica.length-1){
+					projetosIniciacaoCientifica[i].setAno(Integer.parseInt(dadosProjetos.get(i)[0]));
+				}
 				projetosIniciacaoCientifica[i].setQuantidade(Integer.parseInt(dadosProjetos.get(i)[1].replaceAll(",", ".")));
 				projetosIniciacaoCientifica[i].setValor(Double.parseDouble(dadosValores.get(i)[1].replaceAll(",", ".")));
 			}
@@ -301,6 +315,9 @@ public class Estado {
 			for (int i=0; i<projetosCnpq.length; i++) { 
 				projetosCnpq[i] = new Projeto();
 				projetosCnpq[i].setEstado(this);
+				if(i<projetosCnpq.length-1){
+					projetosCnpq[i].setAno(Integer.parseInt(dadosProjetos.get(i)[0]));
+				}
 				projetosCnpq[i].setQuantidade(Integer.parseInt(dadosProjetos.get(i)[1].replaceAll(",", ".")));
 				projetosCnpq[i].setValor(Double.parseDouble(dadosValores.get(i)[1].replaceAll(",", ".")));
 			}
@@ -335,6 +352,9 @@ public class Estado {
 			for (int i=0; i<projetosJovensPesquisadores.length; i++) { 
 				projetosJovensPesquisadores[i] = new Projeto();
 				projetosJovensPesquisadores[i].setEstado(this);
+				if(i<projetosJovensPesquisadores.length-1){
+					projetosJovensPesquisadores[i].setAno(Integer.parseInt(dadosProjetos.get(i)[0]));
+				}
 				projetosJovensPesquisadores[i].setQuantidade(Integer.parseInt(dadosProjetos.get(i)[1].replaceAll(",", ".")));
 				projetosJovensPesquisadores[i].setValor(Double.parseDouble(dadosValores.get(i)[1].replaceAll(",", ".")));
 			}
