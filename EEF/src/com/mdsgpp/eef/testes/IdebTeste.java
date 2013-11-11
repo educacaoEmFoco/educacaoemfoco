@@ -1,10 +1,6 @@
 package com.mdsgpp.eef.testes;
 
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-
 import android.test.AndroidTestCase;
 
 import com.mdsgpp.eef.modelo.Estado;
@@ -17,7 +13,7 @@ public class IdebTeste extends AndroidTestCase {
 	private double seriesIniciais, fundamental, medio;
 	private int ano;
 	
-	@Before
+	
 	public void setUp() throws Exception {
 		this.ideb = new Ideb();
 		this.estado = new Estado();
@@ -28,11 +24,11 @@ public class IdebTeste extends AndroidTestCase {
 		this.ano = 1990;
 	}
 
-	@After
+	
 	public void tearDown() throws Exception {
 	}
 
-	@Test
+	
 	public void testSeriesIniciais() {
 		double seriesIniciasAtual;
 		
@@ -42,7 +38,7 @@ public class IdebTeste extends AndroidTestCase {
 		assertEquals(this.seriesIniciais, seriesIniciasAtual, 0.0);
 	}
 
-	@Test
+
 	public void testFundamental() {
 		double fundamentalAtual;
 		
@@ -52,7 +48,7 @@ public class IdebTeste extends AndroidTestCase {
 		assertEquals(this.fundamental, fundamentalAtual, 0.0);
 	}
 	
-	@Test
+
 	public void testMedio() {
 		double medioAtual;
 		
@@ -62,7 +58,7 @@ public class IdebTeste extends AndroidTestCase {
 		assertEquals(this.medio, medioAtual, 0.0);
 	}
 	
-	@Test
+	
 	public void testEstado() {
 		Estado estadoAtual;
 		
