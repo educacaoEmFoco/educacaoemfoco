@@ -43,24 +43,32 @@ public class TelaResultadoConsulta extends Activity {
 	private TextView textViewQuantidadeProjetosIniciacao1;
 	private TextView textViewValorProjetosIniciacao1;
 	
-
 	private TextView textViewSigla2;
 	private TextView textViewNome2;
+	private TextView textViewPopulacao2;
 	private TextView textViewPopulacaoValor2;
+	private TextView textViewParticipacaoEstadualPib2;
 	private TextView textViewParticipacaoPib2;
+	private TextView textViewNumeroProjetos2;
 	private TextView textViewQuantidadeProjetosCienciaTecnologia2;
 	private TextView textViewValorProjetosCienciaTecnologia2;
+	private TextView textViewIdeb2;
 	private TextView textViewFundamentalIdeb2;
 	private TextView textViewEnsinoMedioIdeb2;
 	private TextView textViewIniciaisIdeb2;
+	private TextView textViewProgramaPrimeirosProjetos2;
 	private TextView textViewQuantidadePrimeirosProjetos2;
 	private TextView textViewValorPrimeirosProjetos2;
+	private TextView textViewProjetosPesquisa2;
 	private TextView textViewQuantidadePesquisa2;
+	private TextView textViewJovensPesquisadores2;
 	private TextView textViewQuantidadeJovensPesquisadores2;
 	private TextView textViewValoresPesquisa2;
 	private TextView textViewValorJovensPesquisadores2;
+	private TextView textViewProjetosIniciacao2;
 	private TextView textViewQuantidadeProjetosIniciacao2;
 	private TextView textViewValorProjetosIniciacao2;
+	
 	private boolean  bIdeb, bPib, bPopulacao, bPrimeirosProjetos, bProjetosCnpq,
 					 bProjetosDifusao, bProjetosIniciacao, bProjetosJovens;
 
@@ -212,28 +220,34 @@ public class TelaResultadoConsulta extends Activity {
 		textViewQuantidadePesquisa1 = (TextView) findViewById(R.id.textView_projetos_pesquisa_quantidade1);
 		textViewValoresPesquisa1 = (TextView) findViewById(R.id.textView_valores_projeto_pesquisa1);
 		textViewQuantidadeJovensPesquisadores1 = (TextView) findViewById(R.id.textView_jovens_pesquisadores_quantidade1);
+		textViewJovensPesquisadores1 = (TextView) findViewById(R.id.textView_jovens_pesquisadores1);
 		textViewValorJovensPesquisadores1 = (TextView) findViewById(R.id.textView_jovens_pesquisadores_valor1);
 		textViewProjetosIniciacao1 = (TextView) findViewById(R.id.textView_projetos_iniciacao1);
 		textViewQuantidadeProjetosIniciacao1 = (TextView) findViewById(R.id.textView_projetos_iniciacao_quantidade1);
 		textViewValorProjetosIniciacao1 = (TextView) findViewById(R.id.textView_projetos_iniciacao_valor1);
 		
-		
 		textViewSigla2 = (TextView) findViewById(R.id.textView_sigla2);
-		textViewNome2 = (TextView) findViewById(R.id.textView_nome_estado2);
+		textViewNome2 = (TextView) findViewById(R.id.textView_nome_estado2);		
 		textViewPopulacaoValor2 = (TextView) findViewById(R.id.textView_populacao_valor2);
+		textViewPopulacao2 = (TextView) findViewById(R.id.textView_populacao2);
+		textViewParticipacaoEstadualPib2 = (TextView) findViewById(R.id.textView_participacao_estadual_pib2);
 		textViewParticipacaoPib2 = (TextView) findViewById(R.id.textView_participacao_pib_valor2);
+		textViewNumeroProjetos2 =  (TextView) findViewById(R.id.textView_numero_projetos2);
 		textViewQuantidadeProjetosCienciaTecnologia2 = (TextView) findViewById(R.id.textView_numero_projetos_quantidade2);
 		textViewValorProjetosCienciaTecnologia2 = (TextView) findViewById(R.id.textView_valor_investido_projetos2);
+		textViewIdeb2 = (TextView) findViewById(R.id.textView_ideb2);
 		textViewFundamentalIdeb2 = (TextView) findViewById(R.id.textView_ideb_fundamental2);
 		textViewEnsinoMedioIdeb2 = (TextView) findViewById(R.id.textView_ideb_ensinomedio2);
 		textViewIniciaisIdeb2 = (TextView) findViewById(R.id.textView_ideb_iniciais2);
+		textViewProgramaPrimeirosProjetos2 = (TextView) findViewById(R.id.textView_programa_primeiros_projetos2);
 		textViewQuantidadePrimeirosProjetos2 = (TextView) findViewById(R.id.textView_primeiros_projetos_quantidade2);
 		textViewValorPrimeirosProjetos2 = (TextView) findViewById(R.id.textView_programa_primeiros_projetos_valor2);
+		textViewProjetosPesquisa2 = (TextView) findViewById(R.id.textView_projetos_pesquisa2);
 		textViewQuantidadePesquisa2 = (TextView) findViewById(R.id.textView_projetos_pesquisa_quantidade2);
 		textViewValoresPesquisa2 = (TextView) findViewById(R.id.textView_valores_projeto_pesquisa2);
-		textViewJovensPesquisadores1 = (TextView) findViewById(R.id.textView_jovens_pesquisadores1);
 		textViewQuantidadeJovensPesquisadores2 = (TextView) findViewById(R.id.textView_jovens_pesquisadores_quantidade2);
 		textViewValorJovensPesquisadores2 = (TextView) findViewById(R.id.textView_jovens_pesquisadores_valor2);
+		textViewProjetosIniciacao2 = (TextView) findViewById(R.id.textView_projetos_iniciacao2);
 		textViewQuantidadeProjetosIniciacao2 = (TextView) findViewById(R.id.textView_projetos_iniciacao_quantidade2);
 		textViewValorProjetosIniciacao2 = (TextView) findViewById(R.id.textView_projetos_iniciacao_valor2);
 
@@ -241,75 +255,101 @@ public class TelaResultadoConsulta extends Activity {
 	
 	public void escondeCamposDeTexto() {
 		int vPopulacao = (bPopulacao) ? View.VISIBLE : View.GONE;
+		textViewPopulacao1.setVisibility(vPopulacao);
 		
-			textViewPopulacao1.setVisibility(vPopulacao);
-			textViewPopulacaoValor1.setVisibility(vPopulacao);
-			textViewPopulacaoValor2.setVisibility(vPopulacao);
-			
+		try{
+			textViewPopulacao2.setVisibility(vPopulacao);
+		}catch(NullPointerException npe){
+			Log.i("NullPointerException - textViewPopulacao2",npe.toString());
+		}
+		
+		textViewPopulacaoValor1.setVisibility(vPopulacao);
+		textViewPopulacaoValor2.setVisibility(vPopulacao);
+
 		int vIdeb = (bIdeb) ? View.VISIBLE : View.GONE;
-		
-			textViewIdeb1.setVisibility(vIdeb);
-			textViewFundamentalIdeb1.setVisibility(vIdeb);
-			textViewEnsinoMedioIdeb1.setVisibility(vIdeb);
-			textViewIniciaisIdeb1.setVisibility(vIdeb);
-			textViewFundamentalIdeb2.setVisibility(vIdeb);
-			textViewEnsinoMedioIdeb2.setVisibility(vIdeb);
-			textViewIniciaisIdeb2.setVisibility(vIdeb);
-			
-		 int vPib = (bPib) ? View.VISIBLE : View.GONE;	
-		
-		    textViewParticipacaoEstadualPib1.setVisibility(vPib);
-		    textViewParticipacaoPib1.setVisibility(vPib);
-			textViewParticipacaoPib2.setVisibility(vPib);
-			
+		textViewIdeb1.setVisibility(vIdeb);
+		try{
+			textViewIdeb2.setVisibility(vIdeb);
+		}catch(NullPointerException npe){
+			Log.i("NullPointerException - textViewIdeb2",npe.toString());
+		}
+		textViewFundamentalIdeb1.setVisibility(vIdeb);
+		textViewEnsinoMedioIdeb1.setVisibility(vIdeb);
+		textViewIniciaisIdeb1.setVisibility(vIdeb);
+		textViewFundamentalIdeb2.setVisibility(vIdeb);
+		textViewEnsinoMedioIdeb2.setVisibility(vIdeb);
+		textViewIniciaisIdeb2.setVisibility(vIdeb);
+
+		int vPib = (bPib) ? View.VISIBLE : View.GONE;
+		textViewParticipacaoEstadualPib1.setVisibility(vPib);
+		try{
+			textViewParticipacaoEstadualPib2.setVisibility(vPib);
+		}catch(NullPointerException npe){
+			Log.i("NullPointerException - textViewIdeb2",npe.toString());
+		}
+		textViewParticipacaoPib1.setVisibility(vPib);
+		textViewParticipacaoPib2.setVisibility(vPib);
+
 		int vPrimeirosProjetos = (bPrimeirosProjetos) ? View.VISIBLE : View.GONE;
-			
-			textViewProgramaPrimeirosProjetos1.setVisibility(vPrimeirosProjetos);
-			textViewQuantidadePrimeirosProjetos1.setVisibility(vPrimeirosProjetos);
-			textViewValorPrimeirosProjetos1.setVisibility(vPrimeirosProjetos);
-			textViewQuantidadePrimeirosProjetos2.setVisibility(vPrimeirosProjetos);
-			textViewValorPrimeirosProjetos2.setVisibility(vPrimeirosProjetos);
-			
-		int vProjetosCnpq = (bProjetosCnpq) ? View.VISIBLE : View.GONE;	
-		
-			textViewProjetosPesquisa1.setVisibility(vProjetosCnpq);
-			textViewQuantidadePesquisa1.setVisibility(vProjetosCnpq);
-			textViewValoresPesquisa1.setVisibility(vProjetosCnpq);
-			textViewQuantidadePesquisa2.setVisibility(vProjetosCnpq);
-			textViewValoresPesquisa2.setVisibility(vProjetosCnpq);
-				
-			
-		int vProjetosJovens = (bProjetosJovens) ? View.VISIBLE : View.GONE;	
-			
-			
-			textViewJovensPesquisadores1.setVisibility(vProjetosJovens);
-			textViewQuantidadeJovensPesquisadores1.setVisibility(vProjetosJovens); 
-			textViewValorJovensPesquisadores1.setVisibility(vProjetosJovens);
-			textViewQuantidadeJovensPesquisadores2.setVisibility(vProjetosJovens); 
-			textViewValorJovensPesquisadores2.setVisibility(vProjetosJovens);  
-				
-		int vProjetosIniciacao = (bProjetosIniciacao) ? View.VISIBLE : View.GONE;	
-		
-		
-			textViewProjetosIniciacao1.setVisibility(vProjetosIniciacao); 
-			textViewQuantidadeProjetosIniciacao1.setVisibility(vProjetosIniciacao); 
-			textViewValorProjetosIniciacao1.setVisibility(vProjetosIniciacao );
-			textViewQuantidadeProjetosIniciacao2.setVisibility(vProjetosIniciacao); 
-			textViewValorProjetosIniciacao2.setVisibility(vProjetosIniciacao);
-		
-			
-		int vProjetosDifusao = (bProjetosDifusao) ? View.VISIBLE : View.GONE;	
-		
-			textViewNumeroProjetos1.setVisibility(vProjetosDifusao);
-			textViewQuantidadeProjetosCienciaTecnologia1.setVisibility(vProjetosDifusao);
-			textViewValorProjetosCienciaTecnologia1.setVisibility(vProjetosDifusao);	
-			textViewQuantidadeProjetosCienciaTecnologia2.setVisibility(vProjetosDifusao);
-			textViewValorProjetosCienciaTecnologia2.setVisibility(vProjetosDifusao);
+		textViewProgramaPrimeirosProjetos1.setVisibility(vPrimeirosProjetos);
+		try{
+			textViewProgramaPrimeirosProjetos2.setVisibility(vPrimeirosProjetos);
+		}catch(NullPointerException npe){
+			Log.i("NullPointerException - textViewProgramaPrimeirosProjetos2",npe.toString());
+		}
+		textViewQuantidadePrimeirosProjetos1.setVisibility(vPrimeirosProjetos);
+		textViewValorPrimeirosProjetos1.setVisibility(vPrimeirosProjetos);
+		textViewQuantidadePrimeirosProjetos2.setVisibility(vPrimeirosProjetos);
+		textViewValorPrimeirosProjetos2.setVisibility(vPrimeirosProjetos);
+
+		int vProjetosCnpq = (bProjetosCnpq) ? View.VISIBLE : View.GONE;
+		textViewProjetosPesquisa1.setVisibility(vProjetosCnpq);
+		try{
+			textViewProjetosPesquisa2.setVisibility(vProjetosCnpq);
+		}catch(NullPointerException npe){
+			Log.i("NullPointerException - textViewProjetosPesquisa2",npe.toString());
+		}
+		textViewQuantidadePesquisa1.setVisibility(vProjetosCnpq);
+		textViewValoresPesquisa1.setVisibility(vProjetosCnpq);
+		textViewQuantidadePesquisa2.setVisibility(vProjetosCnpq);
+		textViewValoresPesquisa2.setVisibility(vProjetosCnpq);
+
+		int vProjetosJovens = (bProjetosJovens) ? View.VISIBLE : View.GONE;
+		textViewJovensPesquisadores1.setVisibility(vProjetosJovens);
+		try{
+			textViewJovensPesquisadores2.setVisibility(vProjetosJovens);
+		}catch(NullPointerException npe){
+			Log.i("NullPointerException - textViewJovensPesquisadores2",npe.toString());
+		}
+		textViewQuantidadeJovensPesquisadores1.setVisibility(vProjetosJovens);
+		textViewValorJovensPesquisadores1.setVisibility(vProjetosJovens);
+		textViewQuantidadeJovensPesquisadores2.setVisibility(vProjetosJovens);
+		textViewValorJovensPesquisadores2.setVisibility(vProjetosJovens);
+
+		int vProjetosIniciacao = (bProjetosIniciacao) ? View.VISIBLE : View.GONE;
+		textViewProjetosIniciacao1.setVisibility(vProjetosIniciacao);
+		try{
+			textViewProjetosIniciacao2.setVisibility(vProjetosIniciacao);
+		}catch(NullPointerException npe){
+			Log.i("NullPointerException - textViewProjetosIniciacao2",npe.toString());
+		}	
+		textViewQuantidadeProjetosIniciacao1.setVisibility(vProjetosIniciacao);
+		textViewValorProjetosIniciacao1.setVisibility(vProjetosIniciacao);
+		textViewQuantidadeProjetosIniciacao2.setVisibility(vProjetosIniciacao);
+		textViewValorProjetosIniciacao2.setVisibility(vProjetosIniciacao);
+
+		int vProjetosDifusao = (bProjetosDifusao) ? View.VISIBLE : View.GONE;
+		textViewNumeroProjetos1.setVisibility(vProjetosDifusao);
+		try{
+			textViewNumeroProjetos2.setVisibility(vProjetosDifusao);
+		}catch(NullPointerException npe){
+			Log.i("NullPointerException - textViewNumeroProjetos2",npe.toString());
+		}
+		textViewQuantidadeProjetosCienciaTecnologia1.setVisibility(vProjetosDifusao);
+		textViewValorProjetosCienciaTecnologia1.setVisibility(vProjetosDifusao);
+		textViewQuantidadeProjetosCienciaTecnologia2.setVisibility(vProjetosDifusao);
+		textViewValorProjetosCienciaTecnologia2.setVisibility(vProjetosDifusao);
 						
-						
-					
-			
 	}
 }
-
 

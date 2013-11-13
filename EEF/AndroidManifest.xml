@@ -12,6 +12,8 @@
     <uses-sdk
         android:minSdkVersion="10"
         android:targetSdkVersion="16" />
+    
+    <uses-permission android:name="android.permission.INTERNET"/> 
 
     <application
         android:allowBackup="true"
@@ -62,11 +64,13 @@
         </activity>
         <activity
             android:name="com.mdsgpp.eef.visao.TelaConsultaIndicativo"
-            android:label="@string/title_activity_tela_consulta_indicativo" >
+            android:label="@string/title_activity_tela_consulta_indicativo" 
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.mdsgpp.eef.visao.TelaIndicativosConsultados"
-            android:label="@string/title_activity_tela_indicativos_consultados" >
+            android:label="@string/title_activity_tela_indicativos_consultados"
+			android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.mdsgpp.eef.visao.TelaResultadoConsulta"
