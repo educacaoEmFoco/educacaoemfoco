@@ -11,6 +11,7 @@ public class IdebTeste extends AndroidTestCase {
 	private Ideb ideb;
 	private Estado estado;
 	private double seriesIniciais, fundamental, medio;
+	private int ano;
 	
 	
 	public void setUp() throws Exception {
@@ -20,6 +21,7 @@ public class IdebTeste extends AndroidTestCase {
 		this.seriesIniciais = 1.5;
 		this.fundamental = 2.3;
 		this.medio = 1.9;
+		this.ano = 1990;
 	}
 
 	
@@ -65,4 +67,14 @@ public class IdebTeste extends AndroidTestCase {
 		
 		assertEquals(this.estado, estadoAtual);
 	}
+	@Test
+	public void testAno() {
+		int anoAtual;
+		
+		this.ideb.setAno(this.ano);
+		anoAtual = this.ideb.getAno();
+		
+		assertEquals(this.ano, anoAtual);
+	}
+
 }
