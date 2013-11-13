@@ -67,7 +67,6 @@ public class IdebTeste extends AndroidTestCase {
 		
 		assertEquals(this.estado, estadoAtual);
 	}
-	@Test
 	public void testAno() {
 		int anoAtual;
 		

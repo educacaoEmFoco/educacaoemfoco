@@ -5,40 +5,23 @@ import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-import com.mdsgpp.eef.R;
 import com.mdsgpp.eef.modelo.Feed;
 import com.mdsgpp.eef.parse.FeedParser;
 import com.mdsgpp.eef.parse.FeedPersistencia;
 import com.mdsgpp.eef.visao.ReceptorDados;
 
-import android.annotation.TargetApi;
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
-import android.os.Build;
 import android.widget.Toast;
 
 public class FeedControle extends AsyncTask<String, Void, Feed> {
 
 	private Context context;
 	private boolean updated = false;
-	private ProgressDialog progressDialog;
 	private ReceptorDados dataReceiver;
 
-	public FeedControle(Context context, ReceptorDados dataReceiver) {
-		this.context = context;
+	public FeedControle(ReceptorDados dataReceiver) {
 		this.dataReceiver = dataReceiver;
-	}
-
-	// Before the execution of the task
-	@TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
-	protected void onPreExecute() {
-		this.progressDialog = new ProgressDialog(context, R.style.CustomProgressBar);
-		this.progressDialog.setMessage("Loading the feed data...");
-		this.progressDialog.setCancelable(false);
-		this.progressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
-		this.progressDialog.setIndeterminate(true);
-		this.progressDialog.show();
 	}
 
 	// While the execution of the task
@@ -79,15 +62,14 @@ public class FeedControle extends AsyncTask<String, Void, Feed> {
 
 	// After the execution of the task
 	protected void onPostExecute(Feed feed) {
-		if (this.progressDialog != null) {
-			this.progressDialog.dismiss();
-		}
-
+		
 		if (!this.updated) {
 			Toast.makeText(this.context, "Couldn't update the news! :(",
 					Toast.LENGTH_LONG).show();
 		}
 
-		this.dataReceiver.receiveFeed(feed);
+		if (dataReceiver != null) {
+			this.dataReceiver.receiveFeed(feed);
+		}
 	}
 }

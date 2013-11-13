@@ -54,7 +54,6 @@ public class ProjetoTeste extends AndroidTestCase {
 		
 		assertEquals(this.estado, estadoAtual);
 	}
-	@Test
 	public void testAno() {
 		int anoAtual;
 		
