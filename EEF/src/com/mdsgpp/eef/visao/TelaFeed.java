@@ -25,7 +25,7 @@ public class TelaFeed extends Activity implements ReceptorDados {
 		setContentView(R.layout.activity_tela_feed);
 		
 		// Execute the task to retrieve the feed data
-		new FeedControle(this).execute(FEED_ADDRESS);
+		new FeedControle(this, this).execute(FEED_ADDRESS);
 	}
 
 	@Override
@@ -55,5 +55,11 @@ public class TelaFeed extends Activity implements ReceptorDados {
 			}
 		});
 	}
+	
+	public void clickBotaoSobreFeed(View view)
+	{
+		Intent intent = new Intent(this, TelaFeedSobre.class);
+		startActivity(intent);
+	}	
 	
 }

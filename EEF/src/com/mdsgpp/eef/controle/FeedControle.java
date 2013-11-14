@@ -20,7 +20,7 @@ public class FeedControle extends AsyncTask<String, Void, Feed> {
 	private boolean updated = false;
 	private ReceptorDados dataReceiver;
 
-	public FeedControle(ReceptorDados dataReceiver) {
+	public FeedControle(Context context, ReceptorDados dataReceiver) {
 		this.dataReceiver = dataReceiver;
 	}
 

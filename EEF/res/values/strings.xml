@@ -64,5 +64,14 @@
     <string name="title_activity_tela_feed">TelaFeed</string>
     <string name="title_activity_feed_adapter">FeedAdapter</string>
     <string name="title_activity_receptor_dados">ReceptorDados</string>
+    <string name="title_activity_tela_feed_sobre">TelaFeedSobre</string>
+
+	<!-- Strings da tela sobre feed -->
+	
+	<string name = "tela_sobre_feed">Fonte de Informações do EEF</string>
+	<string name = "descricao_sobre_feed">As notícias informadas pelo aplicativo Educação em Foco são originárias do site:\n
+	* http://noticias.gov.br/noticias/rss?id=AFSZW.\n
+	Entretanto, as notícias retiradas são apenas relacionadas a educação brasileira.\n
+	Caso o aplicativo seja atualizado para abranger mais fontes de informação, esta tela será atualizada para refletir tais mudanças.</string>
 
 </resources>

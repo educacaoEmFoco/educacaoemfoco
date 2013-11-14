@@ -58,20 +58,20 @@ public final class R {
         public static final int tocantins=0x7f02001e;
     }
     public static final class id {
-        public static final int action_settings=0x7f090079;
+        public static final int action_settings=0x7f09007b;
         public static final int botao_consulta=0x7f090006;
         public static final int botao_feed=0x7f090007;
         public static final int botao_lista_estados=0x7f090003;
         public static final int button1=0x7f090008;
         public static final int buttonComparacao=0x7f090004;
-        public static final int checkBox_ideb=0x7f090060;
-        public static final int checkBox_participacao_pib=0x7f090067;
-        public static final int checkBox_populacao=0x7f090066;
-        public static final int checkBox_primeiros_projeto=0x7f090061;
-        public static final int checkBox_projetos_cnpq=0x7f090062;
-        public static final int checkBox_projetos_difusao=0x7f090065;
-        public static final int checkBox_projetos_iniciacao=0x7f090064;
-        public static final int checkBox_projetos_jovens=0x7f090063;
+        public static final int checkBox_ideb=0x7f090062;
+        public static final int checkBox_participacao_pib=0x7f090069;
+        public static final int checkBox_populacao=0x7f090068;
+        public static final int checkBox_primeiros_projeto=0x7f090063;
+        public static final int checkBox_projetos_cnpq=0x7f090064;
+        public static final int checkBox_projetos_difusao=0x7f090067;
+        public static final int checkBox_projetos_iniciacao=0x7f090066;
+        public static final int checkBox_projetos_jovens=0x7f090065;
         public static final int imageView_bandeiras=0x7f090044;
         public static final int linearLayoutHorizontal=0x7f090002;
         public static final int linearLayoutHorizontal2=0x7f090005;
@@ -81,17 +81,17 @@ public final class R {
         public static final int linearlayout_estado2=0x7f090037;
         public static final int linearlayout_siglas=0x7f09000b;
         public static final int listView1=0x7f09005e;
-        public static final int listview_tela_estados=0x7f090068;
+        public static final int listview_tela_estados=0x7f09006a;
         public static final int relativelayout=0x7f090035;
         public static final int scrollView1=0x7f090009;
-        public static final int scrollViewConsulta=0x7f09005f;
+        public static final int scrollViewConsulta=0x7f090061;
         public static final int spinner1=0x7f090041;
         public static final int spinner2=0x7f090042;
         public static final int textViewTitulo=0x7f090000;
         public static final int textView_ideb=0x7f09004e;
         public static final int textView_ideb1=0x7f09001a;
         public static final int textView_ideb2=0x7f09003c;
-        public static final int textView_ideb_conteudo=0x7f09006d;
+        public static final int textView_ideb_conteudo=0x7f09006f;
         public static final int textView_ideb_ensinomedio=0x7f090050;
         public static final int textView_ideb_ensinomedio1=0x7f09001d;
         public static final int textView_ideb_ensinomedio2=0x7f09001e;
@@ -119,8 +119,8 @@ public final class R {
         public static final int textView_numero_projetos_quantidade=0x7f09004c;
         public static final int textView_numero_projetos_quantidade1=0x7f090016;
         public static final int textView_numero_projetos_quantidade2=0x7f090017;
-        public static final int textView_participacaoPIB=0x7f090069;
-        public static final int textView_participacaoPIB_conteudo=0x7f09006a;
+        public static final int textView_participacaoPIB=0x7f09006b;
+        public static final int textView_participacaoPIB_conteudo=0x7f09006c;
         public static final int textView_participacao_estadual_pib=0x7f090049;
         public static final int textView_participacao_estadual_pib1=0x7f090012;
         public static final int textView_participacao_estadual_pib2=0x7f09003a;
@@ -142,12 +142,12 @@ public final class R {
         public static final int textView_programa_primeiros_projetos_valor=0x7f090054;
         public static final int textView_programa_primeiros_projetos_valor1=0x7f090024;
         public static final int textView_programa_primeiros_projetos_valor2=0x7f090025;
-        public static final int textView_projetos_apoio_cnpq=0x7f09006e;
-        public static final int textView_projetos_apoio_cnpq_conteudo=0x7f09006f;
-        public static final int textView_projetos_difusao=0x7f09006b;
-        public static final int textView_projetos_difusao_conteudo=0x7f09006c;
-        public static final int textView_projetos_inct=0x7f090072;
-        public static final int textView_projetos_inct_conteudo=0x7f090073;
+        public static final int textView_projetos_apoio_cnpq=0x7f090070;
+        public static final int textView_projetos_apoio_cnpq_conteudo=0x7f090071;
+        public static final int textView_projetos_difusao=0x7f09006d;
+        public static final int textView_projetos_difusao_conteudo=0x7f09006e;
+        public static final int textView_projetos_inct=0x7f090074;
+        public static final int textView_projetos_inct_conteudo=0x7f090075;
         public static final int textView_projetos_iniciacao=0x7f09005b;
         public static final int textView_projetos_iniciacao1=0x7f090030;
         public static final int textView_projetos_iniciacao2=0x7f090040;
@@ -157,20 +157,22 @@ public final class R {
         public static final int textView_projetos_iniciacao_valor=0x7f09005d;
         public static final int textView_projetos_iniciacao_valor1=0x7f090033;
         public static final int textView_projetos_iniciacao_valor2=0x7f090034;
-        public static final int textView_projetos_jovens_pesquisadores=0x7f090070;
-        public static final int textView_projetos_jovens_pesquisadores_conteudo=0x7f090071;
+        public static final int textView_projetos_jovens_pesquisadores=0x7f090072;
+        public static final int textView_projetos_jovens_pesquisadores_conteudo=0x7f090073;
         public static final int textView_projetos_pesquisa=0x7f090055;
         public static final int textView_projetos_pesquisa1=0x7f090026;
         public static final int textView_projetos_pesquisa2=0x7f09003e;
         public static final int textView_projetos_pesquisa_quantidade=0x7f090056;
         public static final int textView_projetos_pesquisa_quantidade1=0x7f090027;
         public static final int textView_projetos_pesquisa_quantidade2=0x7f090028;
-        public static final int textView_rss_category=0x7f090077;
-        public static final int textView_rss_description=0x7f090078;
-        public static final int textView_rss_title=0x7f090076;
+        public static final int textView_rss_category=0x7f090079;
+        public static final int textView_rss_description=0x7f09007a;
+        public static final int textView_rss_title=0x7f090078;
         public static final int textView_sigla=0x7f090045;
         public static final int textView_sigla1=0x7f09000c;
         public static final int textView_sigla2=0x7f09000e;
+        public static final int textView_sobre_feed=0x7f09005f;
+        public static final int textView_sobre_feed_texto=0x7f090060;
         public static final int textView_valor_investido_projetos=0x7f09004d;
         public static final int textView_valor_investido_projetos1=0x7f090018;
         public static final int textView_valor_investido_projetos2=0x7f090019;
@@ -178,8 +180,8 @@ public final class R {
         public static final int textView_valores_projeto_pesquisa1=0x7f090029;
         public static final int textView_valores_projeto_pesquisa2=0x7f09002a;
         public static final int textView_x=0x7f09000d;
-        public static final int textview_lista_estados=0x7f090075;
-        public static final int textview_lista_siglas=0x7f090074;
+        public static final int textview_lista_estados=0x7f090077;
+        public static final int textview_lista_siglas=0x7f090076;
     }
     public static final class layout {
         public static final int activity_feed_adapter=0x7f030000;
@@ -189,13 +191,14 @@ public final class R {
         public static final int activity_tela_comparacao=0x7f030004;
         public static final int activity_tela_estado=0x7f030005;
         public static final int activity_tela_feed=0x7f030006;
-        public static final int activity_tela_indicativos_consultados=0x7f030007;
-        public static final int activity_tela_lista_estado=0x7f030008;
-        public static final int activity_tela_sobre=0x7f030009;
-        public static final int listview_item=0x7f03000a;
-        public static final int rss_listview_item=0x7f03000b;
-        public static final int spinner_item=0x7f03000c;
-        public static final int spinner_item2=0x7f03000d;
+        public static final int activity_tela_feed_sobre=0x7f030007;
+        public static final int activity_tela_indicativos_consultados=0x7f030008;
+        public static final int activity_tela_lista_estado=0x7f030009;
+        public static final int activity_tela_sobre=0x7f03000a;
+        public static final int listview_item=0x7f03000b;
+        public static final int rss_listview_item=0x7f03000c;
+        public static final int spinner_item=0x7f03000d;
+        public static final int spinner_item2=0x7f03000e;
     }
     public static final class menu {
         public static final int feed_adapter=0x7f080000;
@@ -208,10 +211,11 @@ public final class R {
         public static final int tela_consulta_indicativo=0x7f080007;
         public static final int tela_estado=0x7f080008;
         public static final int tela_feed=0x7f080009;
-        public static final int tela_indicativos_consultados=0x7f08000a;
-        public static final int tela_lista_estado=0x7f08000b;
-        public static final int tela_resultado_consulta=0x7f08000c;
-        public static final int tela_sobre=0x7f08000d;
+        public static final int tela_feed_sobre=0x7f08000a;
+        public static final int tela_indicativos_consultados=0x7f08000b;
+        public static final int tela_lista_estado=0x7f08000c;
+        public static final int tela_resultado_consulta=0x7f08000d;
+        public static final int tela_sobre=0x7f08000e;
     }
     public static final class string {
         public static final int Programa_primeiros_projetos=0x7f06000f;
@@ -225,6 +229,7 @@ public final class R {
          */
         public static final int botao_tela_indicativos=0x7f06000a;
         public static final int compara_estados=0x7f060014;
+        public static final int descricao_sobre_feed=0x7f060034;
         public static final int estados_opcao=0x7f060013;
         public static final int hello_world=0x7f06002b;
         public static final int ideb=0x7f06001e;
@@ -259,6 +264,9 @@ public final class R {
         /**  Strings da tela sobre 
          */
         public static final int tela_sobre=0x7f060019;
+        /**  Strings da tela sobre feed 
+         */
+        public static final int tela_sobre_feed=0x7f060033;
         public static final int title_activity_feed_adapter=0x7f060030;
         public static final int title_activity_receptor_dados=0x7f060031;
         public static final int title_activity_tela=0x7f06002a;
@@ -267,6 +275,7 @@ public final class R {
         public static final int title_activity_tela_consulta_indicativo=0x7f06002c;
         public static final int title_activity_tela_estado=0x7f060002;
         public static final int title_activity_tela_feed=0x7f06002f;
+        public static final int title_activity_tela_feed_sobre=0x7f060032;
         public static final int title_activity_tela_indicativos_consultados=0x7f06002d;
         public static final int title_activity_tela_lista_estado=0x7f060004;
         public static final int title_activity_tela_resultado_consulta=0x7f06002e;
