@@ -1,6 +1,5 @@
 package com.mdsgpp.eef.visao;
 
-
 import com.mdsgpp.eef.R;
 import com.mdsgpp.eef.controle.FeedControle;
 import com.mdsgpp.eef.modelo.Feed;

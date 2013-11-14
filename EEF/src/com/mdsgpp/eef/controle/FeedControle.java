@@ -22,6 +22,7 @@ public class FeedControle extends AsyncTask<String, Void, Feed> {
 
 	public FeedControle(Context context, ReceptorDados dataReceiver) {
 		this.dataReceiver = dataReceiver;
+		this.context = context;
 	}
 
 	// While the execution of the task
