@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.util.HashMap;
 
 import com.mdsgpp.eef.R;
-import com.mdsgpp.eef.TelaEscolheIndicativoGrafico;
 import com.mdsgpp.eef.controle.EstadoControle;
 
 import android.os.Bundle;

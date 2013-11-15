@@ -86,5 +86,6 @@
     <string name="title_activity_aadsa">Aadsa</string>
     <string name="title_activity_tela_escolhe_indicativo_grafico">TelaEscolheIndicativoGrafico</string>
     <string name="title_activity_grafico">Grafico</string>
+    <string name="title_activity_tela_grafico">TelaGrafico</string>
 
 </resources>

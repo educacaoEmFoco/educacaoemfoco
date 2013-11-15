@@ -17,14 +17,6 @@
         android:paddingBottom="30dp"
         android:paddingLeft="10dp" >
 
-        <Button
-            android:id="@+id/botao_gera_grafico"
-            style="@style/botaoMenu"
-            android:layout_width="123dp"
-            android:layout_height="match_parent"
-            android:onClick="clickBotaoGeraGrafico"
-            android:text="@string/botao_gera_grafico" />
-
         <LinearLayout
             android:id="@+id/linearlayout_siglas"
             android:layout_width="match_parent"
@@ -360,6 +352,14 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:text="@string/string_vazia" />
+        <Button
+            android:id="@+id/botao_gera_grafico"
+            style="@style/botaoMenu"
+        	android:layout_width="wrap_content"
+       		android:layout_height="wrap_content"
+            android:onClick="clickBotaoGeraGrafico"
+            android:padding="20dp"
+            android:text="@string/botao_gera_grafico" />
     </LinearLayout>
 
 </ScrollView>

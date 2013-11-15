@@ -89,8 +89,12 @@
             android:label="@string/title_activity_receptor_dados" >
         </activity>
         <activity
-            android:name="com.mdsgpp.eef.TelaEscolheIndicativoGrafico"
+            android:name="com.mdsgpp.eef.visao.TelaEscolheIndicativoGrafico"
             android:label="@string/title_activity_tela_escolhe_indicativo_grafico" >
+        </activity>
+        <activity
+            android:name="com.mdsgpp.eef.visao.TelaGrafico"
+            android:label="@string/title_activity_tela_grafico" >
         </activity>
     </application>
 
