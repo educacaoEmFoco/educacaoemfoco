@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.HashMap;
 
 import com.mdsgpp.eef.R;
+import com.mdsgpp.eef.TelaEscolheIndicativoGrafico;
 import com.mdsgpp.eef.controle.EstadoControle;
 
 import android.os.Bundle;
@@ -11,6 +12,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.util.Log;
 import android.view.Menu;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -203,4 +205,17 @@ public class TelaComparaEstados extends Activity {
 		textViewValorProjetosIniciacao2 = (TextView) findViewById(R.id.textView_projetos_iniciacao_valor2);
 
 	}
+	
+	public void clickBotaoGeraGrafico(View view) {
+		Intent intent = new Intent(this, TelaEscolheIndicativoGrafico.class);
+		Intent intent1 = getIntent();
+
+		int posicao1 = intent1.getIntExtra("INDEX_ESTADO1_ESCOLHIDO", 0);
+		int posicao2 = intent1.getIntExtra("INDEX_ESTADO2_ESCOLHIDO", 0);
+
+		intent.putExtra("INDEX_ESTADO1_ESCOLHIDO", posicao1);
+		intent.putExtra("INDEX_ESTADO2_ESCOLHIDO", posicao2);
+
+		startActivity(intent);
+	}	
 }

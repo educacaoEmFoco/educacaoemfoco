@@ -17,6 +17,14 @@
         android:paddingBottom="30dp"
         android:paddingLeft="10dp" >
 
+        <Button
+            android:id="@+id/botao_gera_grafico"
+            style="@style/botaoMenu"
+            android:layout_width="123dp"
+            android:layout_height="match_parent"
+            android:onClick="clickBotaoGeraGrafico"
+            android:text="@string/botao_gera_grafico" />
+
         <LinearLayout
             android:id="@+id/linearlayout_siglas"
             android:layout_width="match_parent"
@@ -24,7 +32,6 @@
             android:gravity="center"
             android:orientation="horizontal"
             android:paddingBottom="30dp" >
-
             <TextView
                 android:id="@+id/textView_sigla1"
                 style="@@style/titulo"
