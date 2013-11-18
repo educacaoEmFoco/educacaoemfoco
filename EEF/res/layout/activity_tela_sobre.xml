@@ -6,7 +6,7 @@
     <LinearLayout
         android:id="@+id/linearlayout_estado"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="317dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:background="@color/white"
@@ -15,103 +15,57 @@
         android:paddingLeft="10dp" >
 
         <TextView
-            android:id="@+id/textView_participacaoPIB"
+            android:id="@+id/sobre_menu_consultar_estados_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             style="@style/tituloSobre"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="left"
-            android:text="@string/participacao_percentual_PIB" />
-        
-        <TextView
-            android:id="@+id/textView_participacaoPIB_conteudo"
-            style="@style/subTituloSobre"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="left"
-            android:text="@string/participacao_percentual_PIB_conteudo" />
+            android:text="@string/title_consultar_estados"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <TextView
-            android:id="@+id/textView_projetos_difusao"
-            style="@style/tituloSobre"
-            android:layout_width="match_parent"
+            android:id="@+id/sobre_menu_consultar_estados_conteudo"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="left"
-            android:text="@string/projetos_difusao" />
+            android:layout_marginBottom="20dp"
+            style="@style/subTituloSobre"
+            android:text="@string/consultar_estados_conteudo"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/sobre_menu_comparar_estados_title"
+            style="@style/tituloSobre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_comparar_estados"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/sobre_menu_comparar_estados_conteudo"
+            style="@style/subTituloSobre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="@string/comparar_estados_conteudo"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
         
-          <TextView
-            android:id="@+id/textView_projetos_difusao_conteudo"
-            style="@style/subTituloSobre"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="left"
-            android:text="@string/projetos_difusao_conteudo" />
- 
-          <TextView
-            android:id="@+id/textView_ideb"
-            style="@style/tituloSobre"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="left"
-            android:text="@string/ideb" />
-          
-          <TextView
-            android:id="@+id/textView_ideb_conteudo"
-            style="@style/subTituloSobre"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="left"
-            android:text="@string/ideb_conteudo" />
-          
-          <TextView
-            android:id="@+id/textView_projetos_apoio_cnpq"
-            style="@style/tituloSobre"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="left"
-            android:text="@string/projetos_apoio_cnpq" />
-          
-          <TextView
-            android:id="@+id/textView_projetos_apoio_cnpq_conteudo"
-            style="@style/subTituloSobre"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="left"
-            android:text="@string/projetos_apoio_cnpq_conteudo" />
-          
-          <TextView
-            android:id="@+id/textView_projetos_jovens_pesquisadores"
-            style="@style/tituloSobre"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="left"
-            android:text="@string/projetos_jovens_pesquisadores" />
-          
-           <TextView
-            android:id="@+id/textView_projetos_jovens_pesquisadores_conteudo"
-            style="@style/subTituloSobre"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="left"
-            android:text="@string/projetos_jovens_pesquisadores_conteudo" />
-          
-          <TextView
-            android:id="@+id/textView_projetos_inct"
-            style="@style/tituloSobre"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="left"
-            android:text="@string/projetos_inct" />
-          
-           <TextView
-            android:id="@+id/textView_projetos_inct_conteudo"
-            style="@style/subTituloSobre"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="left"
-            android:text="@string/projetos_inct_conteudo" />            
         
+        <TextView
+            android:id="@+id/sobre_menu_noticias_title"
+            style="@style/tituloSobre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_noticias_sobre"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/sobre_menu_noticias_conteudo"
+            style="@style/subTituloSobre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="@string/noticias_sobre_conteudo"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
     </LinearLayout>
-    
 
 </ScrollView>
-

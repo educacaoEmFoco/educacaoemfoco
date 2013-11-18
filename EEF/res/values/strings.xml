@@ -60,5 +60,12 @@
     <string name="title_activity_tela_consulta_indicativo">TelaConsultaIndicativo</string>
     <string name="title_activity_tela_indicativos_consultados">TelaIndicativosConsultados</string>
     <string name="title_activity_tela_resultado_consulta">TelaResultadoConsulta</string>
+    <string name="title_consultar_estados">Consultar Estados</string><string name="consultar_estados_conteudo">Selecionando a opção de consultar estados você será redirecionado para uma tela onde irá aparecer a lista de todos os estados, para que você possa consultar os dados do mesmo.</string><string name="title_comparar_estados">Comparar Estados</string><string name="title_activity_sobre_menu">SobreMenuActivity</string>
+    
+    
+    
+    <string name="comparar_estados_conteudo">Selecionando a opção de comparar os estados você será redirecionado para uma tela onde você  poderá selecionar se deseja comparar por estado ou por indicativo.</string>
+    <string name="title_noticias_sobre">Notícias</string>
+    <string name="noticias_sobre_conteudo">Selecionando a opção de notícias você será redirecionado para uma tela onde você  poderá visualizar as últimas notícias publicadas no site noticias.gov.br</string>
 
 </resources>

@@ -4,10 +4,11 @@
     android:installLocation="preferExternal"
     android:versionCode="1"
     android:versionName="1.0" >
-	
-	<instrumentation android:name="android.test.InstrumentationTestRunner"
-   		android:targetPackage="com.mdsgpp.eef" />
-	
+
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:targetPackage="com.mdsgpp.eef" />
+
     <uses-sdk
         android:minSdkVersion="10"
         android:targetSdkVersion="16" />
@@ -70,6 +71,10 @@
         <activity
             android:name="com.mdsgpp.eef.visao.TelaResultadoConsulta"
             android:label="@string/title_activity_tela_resultado_consulta" >
+        </activity>
+        <activity
+            android:name="com.mdsgpp.eef.SobreMenuActivity"
+            android:label="@string/title_activity_sobre_menu" >
         </activity>
     </application>
 
