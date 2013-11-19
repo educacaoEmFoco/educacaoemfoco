@@ -1,6 +1,36 @@
 Santa Catarina
 SC
 
+censo_anos_finais
+2010: 397.122
+2011: 334.953
+2012: 332.193
+
+
+censo_anos_iniciais
+2010: 351.234
+2011: 393.048
+2012: 371.251
+
+
+censo_eja_fundamental
+2010: 36.571
+2011: 34.218
+2012: 18.936
+
+
+censo_eja_medio
+2010: 40.970
+2011: 34.486
+2012: 9.470
+
+
+censo_ensino_medio
+2010: 207.064
+2011: 208.301
+2012: 201.697
+
+
 participacao_estadual_pib
 1995: 3,40000000000146
 1996: 3,5
@@ -60,6 +90,39 @@ series_iniciais
 2005: 4,30000000000291
 2007: 4,69999999999709
 2009: 5
+
+
+alunos_por_turma_educacao_infantil
+2007: 16,5
+2008: 16,4
+2009: 16,4
+2010: 16,2
+
+
+alunos_por_turma_ensino_fundamental
+2007: 22,3
+2008: 22,5
+2009: 22,5
+2010: 22,7
+
+
+alunos_por_turma_ensino_medio
+2007: 29,1
+2008: 29,4
+2009: 29,3
+2010: 29,2
+
+
+horas_aula_educacao_infantil
+2010: 7,6
+
+
+horas_aula_ensino_fundamental
+2010: 4,1
+
+
+horas_aula_ensino_medio
+2010: 4
 
 
 jovens_pesquisadores
@@ -138,5 +201,49 @@ valores_projetos_inct
 2009: 1293,40000000037
 2010: 873,660000000149
 Total: 4044,28000000119
+
+
+taxa_abandono_fundamental
+2007: 0,8
+2008: 0,8
+2009: 0,8
+2010: 0,8
+
+
+taxa_abandono_medio
+2007: 7,1
+2008: 7,3
+2009: 6,8
+2010: 7,1
+
+
+taxa_aprovacao_fundamental
+2007: 90,3
+2008: 90,8
+2009: 91,1
+2010: 93,1
+
+
+taxa_aprovacao_medio
+2007: 83,8
+2008: 83,8
+2009: 83,7
+2010: 82,5
+
+
+taxa_distorcao_ensino_medio
+2006: 21,7
+2007: 18,3
+2008: 17,9
+2009: 16,7
+2010: 16,4
+
+
+taxa_distorcao_fundamental
+2006: 14,7
+2007: 14,5
+2008: 14,8
+2009: 15
+2010: 15,2
 
 

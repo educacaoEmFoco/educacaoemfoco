@@ -1,6 +1,36 @@
 Mato Grosso
 MT
 
+censo_anos_finais
+2010: 199.887
+2011: 186.367
+2012: 181.008
+
+
+censo_anos_iniciais
+2010: 224.750
+2011: 211.747
+2012: 201.910
+
+
+censo_eja_fundamental
+2010: 62.110
+2011: 62.289
+2012: 54.819
+
+
+censo_eja_medio
+2010: 36.617
+2011: 40.287
+2012: 40.876
+
+
+censo_ensino_medio
+2010: 129.590
+2011: 135.826
+2012: 141.935
+
+
 participacao_estadual_pib
 1995: 1
 1996: 1
@@ -60,6 +90,39 @@ series_iniciais
 2005: 3,59999999999854
 2007: 4,40000000000146
 2009: 4,90000000000146
+
+
+alunos_por_turma_educacao_infantil
+2007: 20,4
+2008: 20,3
+2009: 20,2
+2010: 19,7
+
+
+alunos_por_turma_ensino_fundamental
+2007: 21,9
+2008: 21,7
+2009: 21,5
+2010: 21,3
+
+
+alunos_por_turma_ensino_medio
+2007: 29,6
+2008: 29
+2009: 28,2
+2010: 28
+
+
+horas_aula_educacao_infantil
+2010: 5,8
+
+
+horas_aula_ensino_fundamental
+2010: 4,1
+
+
+horas_aula_ensino_medio
+2010: 4,2
 
 
 jovens_pesquisadores
@@ -124,5 +187,49 @@ valores_projetos_apoio_pesquisa_cnpq
 2009: 747,349999999627
 2010: 2346,51999999955
 Total: 7186,36999999778
+
+
+taxa_abandono_fundamental
+2007: 5
+2008: 4,5
+2009: 2,8
+2010: 1,2
+
+
+taxa_abandono_medio
+2007: 17,9
+2008: 19,4
+2009: 15,8
+2010: 11,2
+
+
+taxa_aprovacao_fundamental
+2007: 87,1
+2008: 88,3
+2009: 92,3
+2010: 94,8
+
+
+taxa_aprovacao_medio
+2007: 73,3
+2008: 71,2
+2009: 72,6
+2010: 71,6
+
+
+taxa_distorcao_ensino_medio
+2006: 44,4
+2007: 40,7
+2008: 37,9
+2009: 37,3
+2010: 35,5
+
+
+taxa_distorcao_fundamental
+2006: 27
+2007: 25,2
+2008: 22,9
+2009: 20,9
+2010: 18,3
 
 

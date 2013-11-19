@@ -1,6 +1,36 @@
 Pará
 PA
 
+censo_anos_finais
+2010: 539.535
+2011: 527.984
+2012: 525.582
+
+
+censo_anos_iniciais
+2010: 881.247
+2011: 829.537
+2012: 780.342
+
+
+censo_eja_fundamental
+2010: 210.327
+2011: 196.764
+2012: 191.679
+
+
+censo_eja_medio
+2010: 46.570
+2011: 46.524
+2012: 48.883
+
+
+censo_ensino_medio
+2010: 324.432
+2011: 316.368
+2012: 316.843
+
+
 participacao_estadual_pib
 1995: 1,60000000000036
 1996: 1,60000000000036
@@ -60,6 +90,39 @@ series_iniciais
 2005: 2,79999999999927
 2007: 2,79999999999927
 2009: 3,70000000000073
+
+
+alunos_por_turma_educacao_infantil
+2007: 22,5
+2008: 22
+2009: 21
+2010: 19,8
+
+
+alunos_por_turma_ensino_fundamental
+2007: 27,4
+2008: 26,1
+2009: 25,4
+2010: 24,7
+
+
+alunos_por_turma_ensino_medio
+2007: 39,6
+2008: 35
+2009: 34,8
+2010: 33,9
+
+
+horas_aula_educacao_infantil
+2010: 4,2
+
+
+horas_aula_ensino_fundamental
+2010: 4,2
+
+
+horas_aula_ensino_medio
+2010: 4,2
 
 
 jovens_pesquisadores
@@ -138,5 +201,49 @@ valores_projetos_inct
 2009: 2583,53999999911
 2010: 2127,53000000119
 Total: 4711,0700000003
+
+
+taxa_abandono_fundamental
+2007: 9,2
+2008: 8,6
+2009: 7,2
+2010: 6,1
+
+
+taxa_abandono_medio
+2007: 20
+2008: 22
+2009: 20,7
+2010: 19,2
+
+
+taxa_aprovacao_fundamental
+2007: 72,1
+2008: 74
+2009: 78
+2010: 81,8
+
+
+taxa_aprovacao_medio
+2007: 63,3
+2008: 68,2
+2009: 68,1
+2010: 68,9
+
+
+taxa_distorcao_ensino_medio
+2006: 78,1
+2007: 69
+2008: 50,5
+2009: 57,4
+2010: 59,2
+
+
+taxa_distorcao_fundamental
+2006: 57,8
+2007: 47,2
+2008: 33,4
+2009: 38,5
+2010: 39,9
 
 

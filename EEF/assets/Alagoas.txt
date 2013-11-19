@@ -1,6 +1,36 @@
 Alagoas
 AL
 
+censo_anos_finais
+2010: 258.261
+2011: 247.661
+2012: 229.224
+
+
+censo_anos_iniciais
+2010: 281.507
+2011: 261.487
+2012: 238.861
+
+
+censo_eja_fundamental
+2010: 84.367
+2011: 96.366
+2012: 88.576
+
+
+censo_eja_medio
+2010: 10.517
+2011: 10.180
+2012: 11.185
+
+
+censo_ensino_medio
+2010: 108.617
+2011: 110.331
+2012: 106.913
+
+
 participacao_estadual_pib
 1995: 0,699999999999818
 1996: 0,600000000000364
@@ -60,6 +90,39 @@ series_iniciais
 2005: 2,90000000000146
 2007: 3,29999999999927
 2009: 3,29999999999927
+
+
+alunos_por_turma_educacao_infantil
+2007: 21
+2008: 20
+2009: 19,7
+2010: 18,6
+
+
+alunos_por_turma_ensino_fundamental
+2007: 30,1
+2008: 29,3
+2009: 28,7
+2010: 27,4
+
+
+alunos_por_turma_ensino_medio
+2007: 40,3
+2008: 39,6
+2009: 40,4
+2010: 38,8
+
+
+horas_aula_educacao_infantil
+2010: 4,6
+
+
+horas_aula_ensino_fundamental
+2010: 4,3
+
+
+horas_aula_ensino_medio
+2010: 4,5
 
 
 jovens_pesquisadores
@@ -124,5 +187,49 @@ valores_projetos_apoio_pesquisa_cnpq
 2009: 1039,83000000007
 2010: 1046,09999999963
 Total: 7414,35999999958
+
+
+taxa_abandono_fundamental
+2007: 12
+2008: 10
+2009: 9,1
+2010: 8,7
+
+
+taxa_abandono_medio
+2007: 19,9
+2008: 17
+2009: 19,2
+2010: 17,8
+
+
+taxa_aprovacao_fundamental
+2007: 72,8
+2008: 77
+2009: 77,5
+2010: 77
+
+
+taxa_aprovacao_medio
+2007: 71,7
+2008: 74,2
+2009: 71,1
+2010: 71,8
+
+
+taxa_distorcao_ensino_medio
+2006: 69,3
+2007: 66,1
+2008: 41,9
+2009: 47,2
+2010: 49,4
+
+
+taxa_distorcao_fundamental
+2006: 47
+2007: 45,7
+2008: 31,2
+2009: 34,1
+2010: 35,4
 
 

@@ -1,6 +1,36 @@
 Maranhão
 MA
 
+censo_anos_finais
+2010: 527.789
+2011: 517.456
+2012: 505.845
+
+
+censo_anos_iniciais
+2010: 710.036
+2011: 657.853
+2012: 612.347
+
+
+censo_eja_fundamental
+2010: 161.132
+2011: 154.343
+2012: 140.954
+
+
+censo_eja_medio
+2010: 24.849
+2011: 25.076
+2012: 24.904
+
+
+censo_ensino_medio
+2010: 290.035
+2011: 281.130
+2012: 277.453
+
+
 participacao_estadual_pib
 1995: 0,899999999999636
 1996: 1
@@ -60,6 +90,39 @@ series_iniciais
 2005: 3,20000000000073
 2007: 3,29999999999927
 2009: 4
+
+
+alunos_por_turma_educacao_infantil
+2007: 21
+2008: 20,4
+2009: 19,9
+2010: 19
+
+
+alunos_por_turma_ensino_fundamental
+2007: 24,8
+2008: 24,1
+2009: 23,6
+2010: 22,8
+
+
+alunos_por_turma_ensino_medio
+2007: 37
+2008: 35,8
+2009: 34,9
+2010: 33,4
+
+
+horas_aula_educacao_infantil
+2010: 4
+
+
+horas_aula_ensino_fundamental
+2010: 4,2
+
+
+horas_aula_ensino_medio
+2010: 4,3
 
 
 jovens_pesquisadores
@@ -124,5 +187,49 @@ valores_projetos_apoio_pesquisa_cnpq
 2009: 979,900000000373
 2010: 530,150000000373
 Total: 6158,47999999981
+
+
+taxa_abandono_fundamental
+2007: 6,2
+2008: 5,7
+2009: 4,4
+2010: 4,1
+
+
+taxa_abandono_medio
+2007: 17,5
+2008: 16,2
+2009: 13,8
+2010: 14,7
+
+
+taxa_aprovacao_fundamental
+2007: 82,6
+2008: 83,1
+2009: 85,6
+2010: 86,7
+
+
+taxa_aprovacao_medio
+2007: 75
+2008: 76,3
+2009: 78,5
+2010: 76,8
+
+
+taxa_distorcao_ensino_medio
+2006: 64,2
+2007: 61,8
+2008: 41,2
+2009: 45,5
+2010: 48,3
+
+
+taxa_distorcao_fundamental
+2006: 42
+2007: 40,2
+2008: 26,2
+2009: 29,4
+2010: 30,5
 
 

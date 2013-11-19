@@ -1,6 +1,36 @@
 Pernambuco
 PE
 
+censo_anos_finais
+2010: 565.106
+2011: 539.393
+2012: 504.805
+
+
+censo_anos_iniciais
+2010: 612.314
+2011: 561.445
+2012: 532.129
+
+
+censo_eja_fundamental
+2010: 213.903
+2011: 190.901
+2012: 179.388
+
+
+censo_eja_medio
+2010: 25.619
+2011: 36.234
+2012: 44.526
+
+
+censo_ensino_medio
+2010: 347.431
+2011: 285.817
+2012: 251.934
+
+
 participacao_estadual_pib
 1995: 2,29999999999927
 1996: 2,40000000000146
@@ -60,6 +90,39 @@ series_iniciais
 2005: 3,09999999999854
 2007: 3,5
 2009: 3,90000000000146
+
+
+alunos_por_turma_educacao_infantil
+2007: 18
+2008: 17,6
+2009: 17
+2010: 16,4
+
+
+alunos_por_turma_ensino_fundamental
+2007: 26,6
+2008: 25,7
+2009: 25
+2010: 24
+
+
+alunos_por_turma_ensino_medio
+2007: 39
+2008: 36,2
+2009: 34,5
+2010: 33,6
+
+
+horas_aula_educacao_infantil
+2010: 4,6
+
+
+horas_aula_ensino_fundamental
+2010: 4,3
+
+
+horas_aula_ensino_medio
+2010: 4,4
 
 
 jovens_pesquisadores
@@ -138,5 +201,49 @@ valores_projetos_inct
 2009: 5386,22999999672
 2010: 6241,0700000003
 Total: 16656,549999997
+
+
+taxa_abandono_fundamental
+2007: 10,4
+2008: 8,4
+2009: 6,2
+2010: 4,8
+
+
+taxa_abandono_medio
+2007: 22
+2008: 18
+2009: 14
+2010: 11,1
+
+
+taxa_aprovacao_fundamental
+2007: 73,5
+2008: 76,4
+2009: 80,5
+2010: 83,5
+
+
+taxa_aprovacao_medio
+2007: 70,1
+2008: 73,1
+2009: 77
+2010: 80,2
+
+
+taxa_distorcao_ensino_medio
+2006: 62,4
+2007: 61
+2008: 43
+2009: 48,4
+2010: 49,1
+
+
+taxa_distorcao_fundamental
+2006: 39
+2007: 38,6
+2008: 28
+2009: 30
+2010: 29,7
 
 
