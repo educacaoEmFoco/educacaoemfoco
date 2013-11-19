@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/linearlayout_estado"
+        android:layout_width="match_parent"
+        android:layout_height="317dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingBottom="30dp"
+        android:paddingLeft="10dp" >
+
+        <TextView
+            android:id="@+id/sobre_menu_consultar_estado1_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/tituloSobre"
+            android:text="@string/title_consultar_estado1"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+       <TextView
+            android:id="@+id/sobre_menu_informacao_consultar_estado1"
+            style="@style/subTituloSobre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="@string/informacao_consultar_estado1"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+       
+       <TextView
+            android:id="@+id/sobre_menu_ast_adicional_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/tituloSobre"
+            android:text="@string/title_ast_adicional"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+       <TextView
+            android:id="@+id/sobre_menu_informacao_ast_adicional"
+            style="@style/subTituloSobre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="@string/informacao_ast_adicional"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+       <TextView
+            android:id="@+id/sobre_menu_consultar_estado2_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/tituloSobre"
+            android:text="@string/title_consultar_estado2"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+        
+        
+        <TextView
+            android:id="@+id/sobre_menu_informacao_consultar_estado2"
+            style="@style/subTituloSobre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="@string/informacao_consultar_estado2"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+        
+          <TextView
+            android:id="@+id/sobre_menu_botao_sobre_consulta_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/tituloSobre"
+            android:text="@string/title_botao_sobre_consulta"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+         <TextView
+            android:id="@+id/sobre_menu_informacao_botao_sobre_consulta"
+            style="@style/subTituloSobre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="@string/informacao_botao_sobre_consulta"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    </LinearLayout>
+
+</ScrollView>
