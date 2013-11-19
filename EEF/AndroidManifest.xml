@@ -96,6 +96,10 @@
             android:name="com.mdsgpp.eef.visao.TelaGrafico"
             android:label="@string/title_activity_tela_grafico" >
         </activity>
+        <activity
+            android:name="com.mdsgpp.eef.SobreIndicativosActivity"
+            android:label="@string/title_activity_sobre_indicativos" >
+        </activity>
     </application>
 
 </manifest>
