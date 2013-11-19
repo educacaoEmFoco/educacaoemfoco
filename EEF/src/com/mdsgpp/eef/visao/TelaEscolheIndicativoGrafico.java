@@ -129,5 +129,14 @@ public void onRadioButtonClicked(View view) {
 		intent.putExtra("TITULO", titulo);
 
 		startActivity(intent);
-	}	
+	}
+	
+	
+	public void clickBotaoSobreIndicativos(View view) {
+		Intent intent = new Intent(this, TelaSobreIndicativos.class);
+		//Intent intent2 = getIntent();
+
+		startActivity(intent);
+	}
+	
 }
