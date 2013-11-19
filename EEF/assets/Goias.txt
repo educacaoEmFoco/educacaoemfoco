@@ -1,6 +1,36 @@
 Goiás
 GO
 
+censo_anos_finais
+2010: 349.011
+2011: 332.590
+2012: 313.359
+
+
+censo_anos_iniciais
+2010: 370.308
+2011: 361.608
+2012: 353.774
+
+
+censo_eja_fundamental
+2010: 44.102
+2011: 37.138
+2012: 32.732
+
+
+censo_eja_medio
+2010: 33.371
+2011: 28.982
+2012: 25.005
+
+
+censo_ensino_medio
+2010: 226.255
+2011: 219.906
+2012: 214.730
+
+
 participacao_estadual_pib
 1995: 2
 1996: 2,09999999999854
@@ -60,6 +90,39 @@ series_iniciais
 2005: 3,90000000000146
 2007: 4,30000000000291
 2009: 4,90000000000146
+
+
+alunos_por_turma_educacao_infantil
+2007: 19,3
+2008: 19
+2009: 18,7
+2010: 17,9
+
+
+alunos_por_turma_ensino_fundamental
+2007: 25,7
+2008: 25,1
+2009: 24,9
+2010: 24,4
+
+
+alunos_por_turma_ensino_medio
+2007: 33,4
+2008: 31,3
+2009: 31,3
+2010: 30,3
+
+
+horas_aula_educacao_infantil
+2010: 6,1
+
+
+horas_aula_ensino_fundamental
+2010: 4,5
+
+
+horas_aula_ensino_medio
+2010: 4,6
 
 
 jovens_pesquisadores
@@ -124,5 +187,49 @@ valores_projetos_apoio_pesquisa_cnpq
 2009: 2502,19999999925
 2010: 1577,55000000075
 Total: 14105,3600000006
+
+
+taxa_abandono_fundamental
+2007: 5,6
+2008: 5
+2009: 4,1
+2010: 3,8
+
+
+taxa_abandono_medio
+2007: 15,9
+2008: 15,1
+2009: 12
+2010: 11,7
+
+
+taxa_aprovacao_fundamental
+2007: 85,9
+2008: 86
+2009: 86,8
+2010: 87,5
+
+
+taxa_aprovacao_medio
+2007: 73,6
+2008: 73,5
+2009: 74,7
+2010: 76,1
+
+
+taxa_distorcao_ensino_medio
+2006: 43,9
+2007: 40,8
+2008: 36,2
+2009: 34,6
+2010: 33,6
+
+
+taxa_distorcao_fundamental
+2006: 26,3
+2007: 24,6
+2008: 21,8
+2009: 21,8
+2010: 21,7
 
 

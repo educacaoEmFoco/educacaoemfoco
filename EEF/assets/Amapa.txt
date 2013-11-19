@@ -1,6 +1,36 @@
 Amapá
 AP
 
+censo_anos_finais
+2010: 52.832
+2011: 53.585
+2012: 50.539
+
+
+censo_anos_iniciais
+2010: 71.426
+2011: 68.478
+2012: 61.852
+
+
+censo_eja_fundamental
+2010: 16.290
+2011: 16.803
+2012: 15.940
+
+
+censo_eja_medio
+2010: 5.701
+2011: 6.735
+2012: 6.592
+
+
+censo_ensino_medio
+2010: 34.516
+2011: 34.259
+2012: 34.919
+
+
 participacao_estadual_pib
 1995: 0,200000000000045
 1996: 0,200000000000045
@@ -62,6 +92,39 @@ series_iniciais
 2009: 3,59999999999854
 
 
+alunos_por_turma_educacao_infantil
+2007: 19,1
+2008: 18,7
+2009: 18,7
+2010: 18,3
+
+
+alunos_por_turma_ensino_fundamental
+2007: 23,4
+2008: 23,8
+2009: 23,8
+2010: 23
+
+
+alunos_por_turma_ensino_medio
+2007: 33,4
+2008: 32,5
+2009: 32,8
+2010: 32,9
+
+
+horas_aula_educacao_infantil
+2010: 4,3
+
+
+horas_aula_ensino_fundamental
+2010: 4,3
+
+
+horas_aula_ensino_medio
+2010: 4,6
+
+
 programa_primeiros_projetos
 2007: 0
 2008: 1
@@ -104,5 +167,49 @@ valores_projetos_apoio_pesquisa_cnpq
 2009: 13,1199999999953
 2010: 132,780000000028
 Total: 1099,82000000036
+
+
+taxa_abandono_fundamental
+2007: 4,7
+2008: 4
+2009: 3,4
+2010: 3,1
+
+
+taxa_abandono_medio
+2007: 19,6
+2008: 18,4
+2009: 17,5
+2010: 15,3
+
+
+taxa_aprovacao_fundamental
+2007: 80,9
+2008: 82,2
+2009: 83,4
+2010: 86,1
+
+
+taxa_aprovacao_medio
+2007: 70
+2008: 69,5
+2009: 70,6
+2010: 73,6
+
+
+taxa_distorcao_ensino_medio
+2006: 57,1
+2007: 53,3
+2008: 36,3
+2009: 41,9
+2010: 42,6
+
+
+taxa_distorcao_fundamental
+2006: 30,9
+2007: 30,4
+2008: 22,1
+2009: 25,3
+2010: 27,1
 
 

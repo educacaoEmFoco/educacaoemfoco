@@ -1,6 +1,36 @@
 Ceará
 CE
 
+censo_anos_finais
+2010: 533.274
+2011: 488.637
+2012: 443.285
+
+
+censo_anos_iniciais
+2010: 606.356
+2011: 542.857
+2012: 491.496
+
+
+censo_eja_fundamental
+2010: 120.712
+2011: 115.492
+2012: 116.808
+
+
+censo_eja_medio
+2010: 12.470
+2011: 13.922
+2012: 14.714
+
+
+censo_ensino_medio
+2010: 338.183
+2011: 332.955
+2012: 318.978
+
+
 participacao_estadual_pib
 1995: 1,89999999999964
 1996: 2
@@ -60,6 +90,39 @@ series_iniciais
 2005: 3,20000000000073
 2007: 3,5
 2009: 4,19999999999709
+
+
+alunos_por_turma_educacao_infantil
+2007: 18,5
+2008: 18,2
+2009: 18
+2010: 17,7
+
+
+alunos_por_turma_ensino_fundamental
+2007: 23,7
+2008: 23,4
+2009: 23,4
+2010: 23
+
+
+alunos_por_turma_ensino_medio
+2007: 38,1
+2008: 37,8
+2009: 38,4
+2010: 36,9
+
+
+horas_aula_educacao_infantil
+2010: 4,3
+
+
+horas_aula_ensino_fundamental
+2010: 4,1
+
+
+horas_aula_ensino_medio
+2010: 4,4
 
 
 jovens_pesquisadores
@@ -138,5 +201,49 @@ valores_projetos_inct
 2009: 6211,86999999732
 2010: 3911
 Total: 11835,3599999975
+
+
+taxa_abandono_fundamental
+2007: 4,8
+2008: 4,3
+2009: 3,5
+2010: 2,9
+
+
+taxa_abandono_medio
+2007: 14,7
+2008: 13,8
+2009: 13
+2010: 10,6
+
+
+taxa_aprovacao_fundamental
+2007: 83,8
+2008: 84,5
+2009: 87
+2010: 88,4
+
+
+taxa_aprovacao_medio
+2007: 76,7
+2008: 78,5
+2009: 79,9
+2010: 82,2
+
+
+taxa_distorcao_ensino_medio
+2006: 50,5
+2007: 46,7
+2008: 31,1
+2009: 34
+2010: 34,7
+
+
+taxa_distorcao_fundamental
+2006: 30,6
+2007: 29,3
+2008: 22,4
+2009: 24,8
+2010: 25,5
 
 

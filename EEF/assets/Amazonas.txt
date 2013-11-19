@@ -1,6 +1,36 @@
 Amazonas
 AM
 
+censo_anos_finais
+2010: 259.817
+2011: 261.647
+2012: 273.848
+
+
+censo_anos_iniciais
+2010: 391.946
+2011: 372.036
+2012: 359.614
+
+
+censo_eja_fundamental
+2010: 62.593
+2011: 62.885
+2012: 66.859
+
+
+censo_eja_medio
+2010: 14.507
+2011: 16.114
+2012: 16.663
+
+
+censo_ensino_medio
+2010: 142.576
+2011: 147.964
+2012: 160.716
+
+
 participacao_estadual_pib
 1995: 1,39999999999964
 1996: 1,5
@@ -60,6 +90,39 @@ series_iniciais
 2005: 3,29999999999927
 2007: 3,90000000000146
 2009: 4,5
+
+
+alunos_por_turma_educacao_infantil
+2007: 21,5
+2008: 20,9
+2009: 20,9
+2010: 20,6
+
+
+alunos_por_turma_ensino_fundamental
+2007: 27
+2008: 26,7
+2009: 26
+2010: 25,5
+
+
+alunos_por_turma_ensino_medio
+2007: 33,7
+2008: 34,1
+2009: 32,8
+2010: 31,9
+
+
+horas_aula_educacao_infantil
+2010: 4,2
+
+
+horas_aula_ensino_fundamental
+2010: 4,2
+
+
+horas_aula_ensino_medio
+2010: 4,2
 
 
 jovens_pesquisadores
@@ -138,5 +201,49 @@ valores_projetos_inct
 2009: 3100,48999999836
 2010: 1861,15000000037
 Total: 4961,63999999873
+
+
+taxa_abandono_fundamental
+2007: 9
+2008: 8,8
+2009: 7,7
+2010: 6,6
+
+
+taxa_abandono_medio
+2007: 11,2
+2008: 14,1
+2009: 13,4
+2010: 10,2
+
+
+taxa_aprovacao_fundamental
+2007: 76,6
+2008: 77,4
+2009: 78,5
+2010: 81,2
+
+
+taxa_aprovacao_medio
+2007: 77,9
+2008: 74,6
+2009: 77,4
+2010: 81,7
+
+
+taxa_distorcao_ensino_medio
+2006: 67,2
+2007: 62,7
+2008: 48,9
+2009: 49,7
+2010: 51
+
+
+taxa_distorcao_fundamental
+2006: 43,5
+2007: 42,1
+2008: 30,6
+2009: 33,9
+2010: 35,8
 
 

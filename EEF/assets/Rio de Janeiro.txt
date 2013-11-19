@@ -1,6 +1,36 @@
 Rio de Janeiro
 RJ
 
+censo_anos_finais
+2010: 780.879
+2011: 708.349
+2012: 667.315
+
+
+censo_anos_iniciais
+2010: 819.508
+2011: 739.555
+2012: 703.087
+
+
+censo_eja_fundamental
+2010: 202.357
+2011: 164.772
+2012: 138.998
+
+
+censo_eja_medio
+2010: 93.479
+2011: 73.323
+2012: 57.434
+
+
+censo_ensino_medio
+2010: 484.429
+2011: 446.899
+2012: 425.608
+
+
 participacao_estadual_pib
 1995: 11,1999999999971
 1996: 11,1999999999971
@@ -60,6 +90,39 @@ series_iniciais
 2005: 3,70000000000073
 2007: 3,79999999999927
 2009: 4
+
+
+alunos_por_turma_educacao_infantil
+2007: 17,8
+2008: 17
+2009: 16,9
+2010: 16,5
+
+
+alunos_por_turma_ensino_fundamental
+2007: 27,6
+2008: 26,6
+2009: 26,6
+2010: 25,9
+
+
+alunos_por_turma_ensino_medio
+2007: 35,3
+2008: 34,3
+2009: 33,9
+2010: 32,4
+
+
+horas_aula_educacao_infantil
+2010: 5,9
+
+
+horas_aula_ensino_fundamental
+2010: 4,7
+
+
+horas_aula_ensino_medio
+2010: 5,4
 
 
 jovens_pesquisadores
@@ -138,5 +201,49 @@ valores_projetos_inct
 2009: 13098,9599999934
 2010: 8484,23000000417
 Total: 26547,1499999985
+
+
+taxa_abandono_fundamental
+2007: 3,6
+2008: 3,4
+2009: 3,1
+2010: 2,6
+
+
+taxa_abandono_medio
+2007: 14
+2008: 14,8
+2009: 13,8
+2010: 12,8
+
+
+taxa_aprovacao_fundamental
+2007: 83,3
+2008: 82,7
+2009: 80,9
+2010: 82,4
+
+
+taxa_aprovacao_medio
+2007: 67,3
+2008: 65,8
+2009: 66,6
+2010: 68,3
+
+
+taxa_distorcao_ensino_medio
+2006: 54,9
+2007: 53,1
+2008: 49,1
+2009: 45,9
+2010: 43,5
+
+
+taxa_distorcao_fundamental
+2006: 29,3
+2007: 30,7
+2008: 28,6
+2009: 28,4
+2010: 28
 
 

@@ -1,6 +1,36 @@
 Distrito Federal
 DF
 
+censo_anos_finais
+2010: 135.384
+2011: 133.604
+2012: 131.899
+
+
+censo_anos_iniciais
+2010: 165.407
+2011: 159.233
+2012: 153.027
+
+
+censo_eja_fundamental
+2010: 26.357
+2011: 27.753
+2012: 26.599
+
+
+censo_eja_medio
+2010: 23.291
+2011: 23.325
+2012: 22.383
+
+
+censo_ensino_medio
+2010: 78.490
+2011: 79.000
+2012: 79.675
+
+
 participacao_estadual_pib
 1995: 4,40000000000146
 1996: 4,59999999999854
@@ -60,6 +90,39 @@ series_iniciais
 2005: 4,40000000000146
 2007: 4,80000000000291
 2009: 5,40000000000146
+
+
+alunos_por_turma_educacao_infantil
+2007: 20,7
+2008: 18,5
+2009: 18,2
+2010: 18,1
+
+
+alunos_por_turma_ensino_fundamental
+2007: 29,5
+2008: 28,4
+2009: 27,9
+2010: 27,2
+
+
+alunos_por_turma_ensino_medio
+2007: 37,2
+2008: 37,5
+2009: 38
+2010: 36,7
+
+
+horas_aula_educacao_infantil
+2010: 5
+
+
+horas_aula_ensino_fundamental
+2010: 4,9
+
+
+horas_aula_ensino_medio
+2010: 5
 
 
 jovens_pesquisadores
@@ -138,5 +201,49 @@ valores_projetos_inct
 2009: 1707,94999999925
 2010: 3937,9299999997
 Total: 8597,61999999732
+
+
+taxa_abandono_fundamental
+2007: 1,8
+2008: 1,9
+2009: 1,6
+2010: 1,2
+
+
+taxa_abandono_medio
+2007: 8
+2008: 5
+2009: 7,3
+2010: 6,6
+
+
+taxa_aprovacao_fundamental
+2007: 83,8
+2008: 89,2
+2009: 88,7
+2010: 88,7
+
+
+taxa_aprovacao_medio
+2007: 71,1
+2008: 82
+2009: 76,6
+2010: 74,8
+
+
+taxa_distorcao_ensino_medio
+2006: 37,7
+2007: 37,3
+2008: 26,1
+2009: 29,9
+2010: 29,4
+
+
+taxa_distorcao_fundamental
+2006: 24,2
+2007: 25
+2008: 20,8
+2009: 18,7
+2010: 17,9
 
 

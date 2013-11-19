@@ -1,6 +1,36 @@
 Rio Grande do Norte
 RN
 
+censo_anos_finais
+2010: 173.307
+2011: 159.740
+2012: 149.094
+
+
+censo_anos_iniciais
+2010: 213.843
+2011: 198.614
+2012: 191.147
+
+
+censo_eja_fundamental
+2010: 72.222
+2011: 71.765
+2012: 64.735
+
+
+censo_eja_medio
+2010: 10.936
+2011: 12.006
+2012: 11.919
+
+
+censo_ensino_medio
+2010: 122.299
+2011: 119.949
+2012: 115.599
+
+
 participacao_estadual_pib
 1995: 0,699999999999818
 1996: 0,699999999999818
@@ -60,6 +90,39 @@ series_iniciais
 2005: 2,59999999999854
 2007: 3
 2009: 3,5
+
+
+alunos_por_turma_educacao_infantil
+2007: 20,4
+2008: 19,7
+2009: 19,4
+2010: 18,9
+
+
+alunos_por_turma_ensino_fundamental
+2007: 23,7
+2008: 23,9
+2009: 24
+2010: 23,4
+
+
+alunos_por_turma_ensino_medio
+2007: 36,8
+2008: 36,2
+2009: 35,8
+2010: 34,1
+
+
+horas_aula_educacao_infantil
+2010: 4,6
+
+
+horas_aula_ensino_fundamental
+2010: 4,4
+
+
+horas_aula_ensino_medio
+2010: 4,1
 
 
 jovens_pesquisadores
@@ -138,5 +201,49 @@ valores_projetos_inct
 2009: 1018,87999999989
 2010: 560
 Total: 1913,04000000004
+
+
+taxa_abandono_fundamental
+2007: 7,2
+2008: 7,1
+2009: 6,5
+2010: 5,6
+
+
+taxa_abandono_medio
+2007: 24,2
+2008: 22,7
+2009: 20,9
+2010: 17,3
+
+
+taxa_aprovacao_fundamental
+2007: 76,7
+2008: 76,5
+2009: 77,3
+2010: 79,1
+
+
+taxa_aprovacao_medio
+2007: 68,3
+2008: 69,1
+2009: 71,1
+2010: 76,1
+
+
+taxa_distorcao_ensino_medio
+2006: 59,2
+2007: 57
+2008: 38
+2009: 43,6
+2010: 45,4
+
+
+taxa_distorcao_fundamental
+2006: 35,2
+2007: 34,3
+2008: 25,2
+2009: 29,3
+2010: 31,1
 
 

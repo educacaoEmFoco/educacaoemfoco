@@ -1,6 +1,36 @@
 Rondônia
 RO
 
+censo_anos_finais
+2010: 124.739
+2011: 119.083
+2012: 110.640
+
+
+censo_anos_iniciais
+2010: 137.507
+2011: 135.331
+2012: 134.900
+
+
+censo_eja_fundamental
+2010: 32.479
+2011: 29.068
+2012: 27.514
+
+
+censo_eja_medio
+2010: 25.354
+2011: 21.352
+2012: 20.049
+
+
+censo_ensino_medio
+2010: 53.858
+2011: 56.814
+2012: 56.061
+
+
 participacao_estadual_pib
 1995: 0,400000000000091
 1996: 0,5
@@ -60,6 +90,27 @@ series_iniciais
 2005: 3,59999999999854
 2007: 4
 2009: 4,40000000000146
+
+
+alunos_por_turma_educacao_infantil
+2007: 21,4
+2008: 21
+2009: 21,2
+2010: 20,9
+
+
+alunos_por_turma_ensino_fundamental
+2007: 23,7
+2008: 24,1
+2009: 24
+2010: 23,8
+
+
+alunos_por_turma_ensino_medio
+2007: 29,4
+2008: 29,6
+2009: 29,1
+2010: 28,3
 
 
 jovens_pesquisadores
@@ -124,5 +175,49 @@ valores_projetos_apoio_pesquisa_cnpq
 2009: 215,159999999916
 2010: 303,569999999832
 Total: 3487,2399999983
+
+
+taxa_abandono_fundamental
+2007: 4,5
+2008: 4,2
+2009: 3,4
+2010: 3,3
+
+
+taxa_abandono_medio
+2007: 13,2
+2008: 12,7
+2009: 11,6
+2010: 11,5
+
+
+taxa_aprovacao_fundamental
+2007: 81,3
+2008: 81
+2009: 82,1
+2010: 82,2
+
+
+taxa_aprovacao_medio
+2007: 74,4
+2008: 75,2
+2009: 76,1
+2010: 76,7
+
+
+taxa_distorcao_ensino_medio
+2006: 39,6
+2007: 35,7
+2008: 28,2
+2009: 29,9
+2010: 30,3
+
+
+taxa_distorcao_fundamental
+2006: 29,1
+2007: 29,9
+2008: 21,6
+2009: 24,6
+2010: 26,9
 
 

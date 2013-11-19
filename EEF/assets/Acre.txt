@@ -1,6 +1,36 @@
 Acre
 AC
 
+censo_anos_finais
+2010: 59.465
+2011: 59.258
+2012: 53.112
+
+
+censo_anos_iniciais
+2010: 90.458
+2011: 86.217
+2012: 77.172
+
+
+censo_eja_fundamental
+2010: 16.027
+2011: 16.521
+2012: 19.883
+
+
+censo_eja_medio
+2010: 6.711
+2011: 6.161
+2012: 6.945
+
+
+censo_ensino_medio
+2010: 33.975
+2011: 34.181
+2012: 34.131
+
+
 participacao_estadual_pib
 1995: 0,200000000000045
 1996: 0,200000000000045
@@ -60,6 +90,39 @@ series_iniciais
 2005: 3,29999999999927
 2007: 3,79999999999927
 2009: 4,5
+
+
+alunos_por_turma_educacao_infantil
+2007: 24,4
+2008: 22,7
+2009: 20,8
+2010: 20,3
+
+
+alunos_por_turma_ensino_fundamental
+2007: 24,1
+2008: 24,2
+2009: 24,1
+2010: 23,9
+
+
+alunos_por_turma_ensino_medio
+2007: 32,9
+2008: 31,8
+2009: 31,1
+2010: 30,4
+
+
+horas_aula_educacao_infantil
+2010: 4,4
+
+
+horas_aula_ensino_fundamental
+2010: 4,2
+
+
+horas_aula_ensino_medio
+2010: 4,2
 
 
 jovens_pesquisadores
@@ -124,5 +187,49 @@ valores_projetos_apoio_pesquisa_cnpq
 2009: 113,739999999991
 2010: 216,510000000009
 Total: 1905,13000000053
+
+
+taxa_abandono_fundamental
+2007: 6,3
+2008: 5,5
+2009: 4,7
+2010: 4,3
+
+
+taxa_abandono_medio
+2007: 14,9
+2008: 14,3
+2009: 12,8
+2010: 12,5
+
+
+taxa_aprovacao_fundamental
+2007: 81,7
+2008: 83,4
+2009: 86,1
+2010: 87
+
+
+taxa_aprovacao_medio
+2007: 75,9
+2008: 77,8
+2009: 79,2
+2010: 78,9
+
+
+taxa_distorcao_ensino_medio
+2006: 47,9
+2007: 41,8
+2008: 31,3
+2009: 33
+2010: 36,3
+
+
+taxa_distorcao_fundamental
+2006: 36,8
+2007: 34,9
+2008: 24,6
+2009: 26,7
+2010: 29,1
 
 
