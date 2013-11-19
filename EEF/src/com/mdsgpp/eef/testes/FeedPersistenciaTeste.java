@@ -1,5 +1,10 @@
 package com.mdsgpp.eef.testes;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
 import com.mdsgpp.eef.modelo.Feed;
@@ -13,8 +18,7 @@ public class FeedPersistenciaTeste extends AndroidTestCase {
 	private Feed feed;
 	private Context context;
 	private Noticias noticia;
-	private ArrayList<Noticias> dados;
-	
+	private ArrayList<Noticias> dadosFeed;
 
 	protected void setUp() throws Exception {
 		super.setUp();
@@ -24,20 +28,37 @@ public class FeedPersistenciaTeste extends AndroidTestCase {
 		noticia.setCategory("teste");
 		noticia.setDate("18/02");
 		noticia.setLink("www.noticias.gov");
-		noticia.setDescription("Teste da classe de persistencia do parse.");
-		
+		noticia.setDescription("Descricao");
+
+		feed.addItem(noticia);
+
 	}
 
 	protected void tearDown() throws Exception {
 		super.tearDown();
 	}
-	
-	public void testgetinstancia(){
+
+	public void testgetinstancia() {
 		context = getContext();
-		String nomeClasseRetorno = FeedPersistencia.getInstance(context).getClass().getSimpleName();
-		assertEquals("FeedPersistencia",nomeClasseRetorno);
-		
+		String nomeClasseRetorno = FeedPersistencia.getInstance(context)
+				.getClass().getSimpleName();
+		assertEquals("FeedPersistencia", nomeClasseRetorno);
+
 	}
 
+	public void testWriteFeedFile() throws IOException, ClassNotFoundException {
+
+		Feed feedRead;
+
+		FeedPersistencia.getInstance(getContext()).writeFeedFile(feed);
+		feedRead = FeedPersistencia.getInstance(getContext()).readFeedFile();
+
+		assertEquals("Título esperado", "Teste de persistencia", feed.getItem(0).getTitle());
+		assertEquals("Categoria esperada", "teste", feed.getItem(0).getCategory());
+		assertEquals("Data esperada", "18/02", feed.getItem(0).getDate());
+		assertEquals("Link esperado", "www.noticias.gov", feed.getItem(0).getLink());
+		assertEquals("Descricao esperada", "Descricao", feed.getItem(0).getDescription());
+
+	}
 
 }
