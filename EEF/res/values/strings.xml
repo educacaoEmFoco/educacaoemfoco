@@ -10,6 +10,8 @@
     <string name="title_activity_tela_lista_estado">Lista de estados</string>
     <string name="menu_botao_lista_estados">Lista de Estados</string>
     <string name="menu_botao_comparacao">Comparar</string>
+    <string name="botao_gera_grafico">Gerar grafico</string>
+    <string name="titulo_escolhe_indicativo_grafico">Escolha o indicativo para gerar o gráfico:</string>
     <string name="string_vazia"></string>
     <string name="menu_botao_consulta">Consulta</string>
     <string name="menu_botao_feed">Feed</string>
@@ -17,9 +19,26 @@
     <!-- Strings da tela indicativos consultados -->
     <string name="botao_tela_indicativos">Ir</string>
 
+    <!-- Strings da Escolhe Indicativo Grafico -->
+    <string name="populacao">População</string>
+    <string name="participacao_PIB_percentual">Participação Estadual no PIB (%)</string>
+    <string name="projetos_difusao_tecnologica_qtd">Projeto de Difusão Tecnológica (Qtd.)</string>
+    <string name="projetos_difusao_tecnologica_investimento">Projeto de Difusão Tecnológica (R$)</string>
+    <string name="participacao_IDEB_fundamental_iniciais">IDEB do Ensino Fundamental (Séries Iniciais)</string>
+    <string name="participacao_IDEB_fundamental_finais">IDEB do Ensino Fundamental (Séries Finais)</string>
+    <string name="participacao_IDEB_medio">IDEB do Ensino Médio</string>
+    <string name="programa_primeiros_projetos_qtd">Programa Primeiros Projetos (Qtd.)</string>
+    <string name="programa_primeiros_projetos_investimento">Programa Primeiros Projetos (R$)</string>
+    <string name="projetos_pesquisa_CNPq_qtd">Projetos de Pesquisa Apoio CNPq (Qtd.)</string>
+    <string name="projetos_pesquisa_CNPq_investimento">Projetos de Pesquisa Apoio CNPq (R$)</string>
+    <string name="jovens_pesquisadores_qtd">Jovens pesquisadores (Qtd.)</string>
+    <string name="jovens_pesquisadores_investimento">Jovens pesquisadores (R$)</string>
+    <string name="projeto_iniciacao_qtd">Projetos INCT (Qtd.)</string>
+    <string name="projeto_iniciacao_investimento">Projetos INCT (R$)</string>
+    <string name="bt_grafico">Gráfico</string>
+
     <!-- Strings da tela estado -->
 
-    <string name="populacao">População</string>
     <string name="participacao_PIB">Participacao Estadual no PIB</string>
     <string name="numero_projetos">Projetos de Difusão Tecnológica</string>
     <string name="participacao_IDEB">IDEB</string>
@@ -73,5 +92,10 @@
 	* http://noticias.gov.br/noticias/rss?id=AFSZW.\n
 	Entretanto, as notícias retiradas são apenas relacionadas a educação brasileira.\n
 	Caso o aplicativo seja atualizado para abranger mais fontes de informação, esta tela será atualizada para refletir tais mudanças.</string>
+    <string name="title_activity_aadsa">Aadsa</string>
+    <string name="title_activity_tela_escolhe_indicativo_grafico">TelaEscolheIndicativoGrafico</string>
+    <string name="title_activity_grafico">Grafico</string>
+    <string name="title_activity_tela_grafico">TelaGrafico</string>
+    <string name="title_activity_sobre_indicativos">SobreIndicativosActivity</string>
 
 </resources>

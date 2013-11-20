@@ -92,6 +92,18 @@
             android:name="com.mdsgpp.eef.visao.TelaFeedSobre"
             android:label="@string/title_activity_tela_feed_sobre" >
         </activity>
+        <activity
+            android:name="com.mdsgpp.eef.visao.TelaEscolheIndicativoGrafico"
+            android:label="@string/title_activity_tela_escolhe_indicativo_grafico" >
+        </activity>
+        <activity
+            android:name="com.mdsgpp.eef.visao.TelaGrafico"
+            android:label="@string/title_activity_tela_grafico" >
+        </activity>
+        <activity
+            android:name="com.mdsgpp.eef.visao.TelaSobreIndicativos"
+            android:label="@string/title_activity_sobre_indicativos" >
+        </activity>
     </application>
 
 </manifest>
