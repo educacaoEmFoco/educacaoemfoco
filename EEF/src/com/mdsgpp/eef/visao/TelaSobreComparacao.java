@@ -1,4 +1,8 @@
-package com.mdsgpp.eef;
+package com.mdsgpp.eef.visao;
+
+import com.mdsgpp.eef.R;
+import com.mdsgpp.eef.R.layout;
+import com.mdsgpp.eef.R.menu;
 
 import android.os.Bundle;
 import android.app.Activity;

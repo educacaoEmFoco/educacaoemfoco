@@ -41,12 +41,13 @@
 
     <Button
         android:id="@+id/button2"
+        style="@style/botaoComparacao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/spinner2"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="14dp"
-        android:onClick="clickBotaoSobreCompara"
+        android:layout_alignBottom="@+id/button1"
+        android:layout_alignTop="@+id/button1"
+        android:onClick="clickBotaoSobreComparacao"
+        android:padding="20dp"
         android:text="@string/botao_sobre" />
 
 </RelativeLayout>
