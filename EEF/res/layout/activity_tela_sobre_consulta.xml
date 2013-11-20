@@ -30,23 +30,6 @@
             android:layout_marginBottom="20dp"
             android:text="@string/informacao_consultar_estado1"
             android:textAppearance="?android:attr/textAppearanceMedium" />
-       
-       <TextView
-            android:id="@+id/sobre_menu_ast_adicional_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/tituloSobre"
-            android:text="@string/title_ast_adicional"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-
-       <TextView
-            android:id="@+id/sobre_menu_informacao_ast_adicional"
-            style="@style/subTituloSobre"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:text="@string/informacao_ast_adicional"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
 
 
        <TextView
@@ -66,13 +49,16 @@
             android:layout_marginBottom="20dp"
             android:text="@string/informacao_consultar_estado2"
             android:textAppearance="?android:attr/textAppearanceMedium" />
+
+       
+        
         
           <TextView
             android:id="@+id/sobre_menu_botao_sobre_consulta_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/tituloSobre"
-            android:text="@string/title_botao_sobre_consulta"
+            android:text="@string/title_botao_comparar"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
          <TextView
@@ -81,8 +67,32 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:text="@string/informacao_botao_sobre_consulta"
+            android:text="@string/informacao_botao_comparar"
             android:textAppearance="?android:attr/textAppearanceMedium" />
+         
+          <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+
+            <TextView
+            android:id="@+id/sobre_menu_ast_adicional_title"
+            style="@style/tituloSobre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_ast_adicional"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/sobre_menu_informacao_ast_adicional"
+            style="@style/subTituloSobre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="@string/informacao_ast_adicional"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+            
+        </LinearLayout>
 
     </LinearLayout>
 

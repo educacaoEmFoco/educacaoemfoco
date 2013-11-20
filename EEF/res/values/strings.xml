@@ -77,9 +77,11 @@
     <string name="informacao_consultar_estado2">Será apresentado um combo box com 26* unidades federativas brasileiras,
           para a escolha daquela que o usuário deseje definir como o segundo estado na comparação.</string>
     <string name="title_botao_sobre_consulta">Sobre</string>
-    <string name="title_sobre_comparacao">Sobre Comparação</string><string name="informacao_botao_sobre_consulta">Após a seleção dos 2 estados desejados,esta opção encaminha o usuário para uma tela onde devem ser definido(s) qual(s) indicativo(s) deseja visualizar na comparação.</string>
+    <string name="title_sobre_comparacao">Sobre Comparação</string>
+    <string name="informacao_botao_sobre_consulta">Após a seleção dos 2 estados desejados,esta opção encaminha o usuário para uma tela onde devem ser definido(s) qual(s) indicativo(s) deseja visualizar na comparação.</string>
     <string name="title_activity_tela_sobre_comparacao">TelaSobreComparacao</string>
-    
-    
+    <string name="title_botao_comparar">Comparar</string>
+    <string name="informacao_botao_comparar">Após a seleção dos 2 estados desejados,esta opção encaminha o usuário para uma tela onde devem ser definido(s) qual(s) indicativo(s) deseja visualizar na comparação.</string>
+
 
 </resources>
