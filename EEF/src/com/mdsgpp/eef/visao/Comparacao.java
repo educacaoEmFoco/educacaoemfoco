@@ -3,6 +3,7 @@ package com.mdsgpp.eef.visao;
 import java.util.ArrayList;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
@@ -103,29 +104,29 @@ public abstract class Comparacao extends Activity{
 
 		estados01.add("Acre");
 		estados01.add("Alagoas");
-		estados01.add("Amap·");
+		estados01.add("Amap√°");
 		estados01.add("Amazonas");
 		estados01.add("Bahia");
-		estados01.add("Cear·");
+		estados01.add("Cear√°");
 		estados01.add("Distrito Federal");
-		estados01.add("EspÌrito Santo");
-		estados01.add("Goi·s");
-		estados01.add("Maranh„o");
+		estados01.add("Esp√≠rito Santo");
+		estados01.add("Goi√°s");
+		estados01.add("Maranh√£o");
 		estados01.add("Mato Grosso");
 		estados01.add("Mato Grosso do Sul");
 		estados01.add("Minas Gerais");
-		estados01.add("Par·");
-		estados01.add("ParaÌba");
-		estados01.add("Paran·");
+		estados01.add("Par√°");
+		estados01.add("Para√≠ba");
+		estados01.add("Paran√°");
 		estados01.add("Pernambuco");
-		estados01.add("PiauÌ");
+		estados01.add("Piau√≠");
 		estados01.add("Rio de Janeiro");
 		estados01.add("Rio Grande do Norte");
 		estados01.add("Rio Grande do Sul");
-		estados01.add("RondÙnia");
+		estados01.add("Rond√¥nia");
 		estados01.add("Roraima");
 		estados01.add("Santa Catarina");
-		estados01.add("S„o Paulo");
+		estados01.add("S√£o Paulo");
 		estados01.add("Sergipe");
 		estados01.add("Tocantins");
 	}
@@ -135,29 +136,29 @@ public abstract class Comparacao extends Activity{
 
 		estados02.add("Acre");
 		estados02.add("Alagoas");
-		estados02.add("Amap·");
+		estados02.add("Amap√°");
 		estados02.add("Amazonas");
 		estados02.add("Bahia");
-		estados02.add("Cear·");
+		estados02.add("Cear√°");
 		estados02.add("Distrito Federal");
-		estados02.add("EspÌrito Santo");
-		estados02.add("Goi·s");
-		estados02.add("Maranh„o");
+		estados02.add("Esp√≠rito Santo");
+		estados02.add("Goi√°s");
+		estados02.add("Maranh√£o");
 		estados02.add("Mato Grosso");
 		estados02.add("Mato Grosso do Sul");
 		estados02.add("Minas Gerais");
-		estados02.add("Par·");
-		estados02.add("ParaÌba");
-		estados02.add("Paran·");
+		estados02.add("Par√°");
+		estados02.add("Para√≠ba");
+		estados02.add("Paran√°");
 		estados02.add("Pernambuco");
-		estados02.add("PiauÌ");
+		estados02.add("Piau√≠");
 		estados02.add("Rio de Janeiro");
 		estados02.add("Rio Grande do Norte");
 		estados02.add("Rio Grande do Sul");
-		estados02.add("RondÙnia");
+		estados02.add("Rond√¥nia");
 		estados02.add("Roraima");
 		estados02.add("Santa Catarina");
-		estados02.add("S„o Paulo");
+		estados02.add("S√£o Paulo");
 		estados02.add("Sergipe");
 		estados02.add("Tocantins");
 
@@ -168,29 +169,29 @@ public abstract class Comparacao extends Activity{
 
 		todosEstados.add("Acre");
 		todosEstados.add("Alagoas");
-		todosEstados.add("Amap·");
+		todosEstados.add("Amap√°");
 		todosEstados.add("Amazonas");
 		todosEstados.add("Bahia");
-		todosEstados.add("Cear·");
+		todosEstados.add("Cear√°");
 		todosEstados.add("Distrito Federal");
-		todosEstados.add("EspÌrito Santo");
-		todosEstados.add("Goi·s");
-		todosEstados.add("Maranh„o");
+		todosEstados.add("Esp√≠rito Santo");
+		todosEstados.add("Goi√°s");
+		todosEstados.add("Maranh√£o");
 		todosEstados.add("Mato Grosso");
 		todosEstados.add("Mato Grosso do Sul");
 		todosEstados.add("Minas Gerais");
-		todosEstados.add("Par·");
-		todosEstados.add("ParaÌba");
-		todosEstados.add("Paran·");
+		todosEstados.add("Par√°");
+		todosEstados.add("Para√≠ba");
+		todosEstados.add("Paran√°");
 		todosEstados.add("Pernambuco");
-		todosEstados.add("PiauÌ");
+		todosEstados.add("Piau√≠");
 		todosEstados.add("Rio de Janeiro");
 		todosEstados.add("Rio Grande do Norte");
 		todosEstados.add("Rio Grande do Sul");
-		todosEstados.add("RondÙnia");
+		todosEstados.add("Rond√¥nia");
 		todosEstados.add("Roraima");
 		todosEstados.add("Santa Catarina");
-		todosEstados.add("S„o Paulo");
+		todosEstados.add("S√£o Paulo");
 		todosEstados.add("Sergipe");
 		todosEstados.add("Tocantins");
 
@@ -213,6 +214,11 @@ public abstract class Comparacao extends Activity{
 	}
 
 	public abstract void clickBotaoComparacaoEstados(View view);
+	
+	public void clickBotaoSobreCompara(View view) {
+		Intent intent = new Intent(this, TelaSobreConsulta.class);
+		startActivity(intent);
+	}	
 	
 	public Spinner getEstadosSpinner01() {
 		return estadosSpinner01;
