@@ -94,7 +94,7 @@ public class TelaResultadoConsulta extends Activity {
 		
 		// Captura o intent que abriu a activity
 		Intent intent = getIntent();
-		// Captura o valor transferido através da intent
+		// Captura o valor transferido atravï¿½s da intent
 		
 		int posicao1 = intent.getIntExtra("POSICAO_ESTADO_01",5);
 		int posicao2 = intent.getIntExtra("POSICAO_ESTADO_02",0);
@@ -121,7 +121,7 @@ public class TelaResultadoConsulta extends Activity {
 
 			preencheCamposTexto(informacoesEstado1, informacoesEstado2);
 		} catch (IOException e) {
-			Toast.makeText(getApplicationContext(), "Houve um erro no acesso às informações.", Toast.LENGTH_SHORT).show();
+			Toast.makeText(getApplicationContext(), "Houve um erro no acesso ï¿½s informaï¿½ï¿½es.", Toast.LENGTH_SHORT).show();
 			Log.i("IOException - TelaComparaEstados",e.toString());
 		}
 	}
@@ -351,5 +351,18 @@ public class TelaResultadoConsulta extends Activity {
 		textViewValorProjetosCienciaTecnologia2.setVisibility(vProjetosDifusao);
 						
 	}
+	
+	public void clickBotaoGeraGrafico(View view) {
+		Intent intent = new Intent(this, TelaEscolheIndicativoGrafico.class);
+		Intent intent1 = getIntent();
+
+		int posicao1 = intent1.getIntExtra("POSICAO_ESTADO_01", 0);
+		int posicao2 = intent1.getIntExtra("POSICAO_ESTADO_02", 0);
+
+		intent.putExtra("INDEX_ESTADO1_ESCOLHIDO", posicao1);
+		intent.putExtra("INDEX_ESTADO2_ESCOLHIDO", posicao2);
+
+		startActivity(intent);
+	}	
 }
 
