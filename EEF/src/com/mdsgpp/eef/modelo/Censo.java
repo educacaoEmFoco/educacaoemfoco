@@ -9,6 +9,7 @@ public class Censo {
 	private double ensinoMedio;
 	private double fundamentalEJA;
 	private double medioEJA;
+	private int ano;
 	private Estado estado;
 	
 	public Censo() {
@@ -87,6 +88,14 @@ public class Censo {
 
 	public void setEstado(Estado estado) {
 		this.estado = estado;
+	}
+
+	public int getAno() {
+		return ano;
+	}
+
+	public void setAno(int ano) {
+		this.ano = ano;
 	}
 	
 }

@@ -11,14 +11,16 @@ public class Estado {
 	private int populacao;
 	private Censo censos[];
 	private Ideb idebs[];
-	private Media mediaNotasPorTurma[];
+	private Media mediaAlunosPorTurma[];
 	private Media mediaHorasAula[];
 	private Projeto projetosCienciaTecnologia[];
 	private Projeto primeirosProjetos[];
 	private Projeto projetoInct[];
 	private Projeto projetosApoioCnpq[];
 	private Projeto projetoJovensPesquisadores[];
-	private Media taxaDistorcaoIdadeSerie[];
+	private Media taxaDistorcaoIdadeSerie[]; //pendente
+	private Media taxaDeAproveitamento[]; //pendente
+	private Media taxaDeAbandono[];//pendente
 	
 	public Estado(){
 	}
@@ -34,10 +36,35 @@ public class Estado {
 		return censos;
 	}
 
-	public void setCensos(Censo[] censos) {
-		this.censos = censos;
+	public void setCensos(HashMap<String, ArrayList<String[]>> informacoes) {
+		ArrayList<String[]> dadosFundamentalFinais;
+		ArrayList<String[]> dadosFundamentalIniciais;
+		ArrayList<String[]> dadosMedio;
+		ArrayList<String[]> dadosEjaMedio;
+		ArrayList<String[]> dadosEjaFundamental;
+		Censo censo[] = null;
+		
+		dadosFundamentalFinais = informacoes.get("censo_anos_finais");
+		dadosFundamentalIniciais = informacoes.get("censo_anos_iniciais");
+		dadosMedio = informacoes.get("censo_ensino_medio");
+		dadosEjaMedio = informacoes.get("censo_eja_medio");
+		dadosEjaFundamental = informacoes.get("censo_eja_fundamental");
+		
+		censo = new Censo[dadosMedio.size()];
+		for (int i=0; i<censo.length; i++) {
+			censo[i] = new Censo();
+			censo[i].setEstado(this); 
+			censo[i].setAno(Integer.parseInt(dadosMedio.get(i)[0]));
+			censo[i].setAnosFinaisFundamental(Double.parseDouble(dadosFundamentalFinais.get(i)[1].replaceAll(",", ".")));
+			censo[i].setEnsinoMedio(Double.parseDouble(dadosMedio.get(i)[1].replaceAll(",", ".")));
+			censo[i].setAnosIniciaisFundamental(Double.parseDouble(dadosFundamentalIniciais.get(i)[1].replaceAll(",", ".")));
+			censo[i].setMedioEJA(Double.parseDouble(dadosEjaMedio.get(i)[1].replaceAll(",", ".")));
+			censo[i].setFundamentalEJA(Double.parseDouble(dadosEjaFundamental.get(i)[1].replaceAll(",", ".")));
+		}
+		
+		this.censos = censo;
 	}
-	//testado
+	
 	public double[] getParticipacaoPercentualPIB() {
 		if (participacaoPercentualPIB == null) {
 			double[] vazio = {0};
@@ -106,35 +133,67 @@ public class Estado {
 		this.idebs = ideb;
 	}
 
-	public Media[] getmediaNotasPorTurma() {
-		if (mediaNotasPorTurma == null) {
-			Media vazio[] = { new Media(0,0,0,0,0,0) };
+	public Media[] getmediaAlunosPorTurma() {
+		if (mediaAlunosPorTurma == null) {
+			Media vazio[] = { new Media(0,0) };
 			return vazio;
 		}
 		
-		return mediaNotasPorTurma;
+		return mediaAlunosPorTurma;
 	}
 
-	public void setmediaNotasPorTurma(Media[] mediaNotasPorTurma) {
-		this.mediaNotasPorTurma = mediaNotasPorTurma;
+	public void setmediaAlunosPorTurma(HashMap<String, ArrayList<String[]>> informacoes) {
+		ArrayList<String[]> dadosFundamental;
+		ArrayList<String[]> dadosMedio;
+		Media notasPorTurma[] = null;
+		
+		dadosFundamental = informacoes.get("alunos_por_turma_ensino_fundamental");
+		dadosMedio = informacoes.get("alunos_por_turma_ensino_medio");
+		
+		notasPorTurma = new Media[dadosMedio.size()];
+		for (int i=0; i<notasPorTurma.length; i++) {
+			notasPorTurma[i] = new Media();
+			notasPorTurma[i].setEstado(this); 
+			notasPorTurma[i].setAno(Integer.parseInt(dadosMedio.get(i)[0]));
+			notasPorTurma[i].setEnsinoFundamental(Double.parseDouble(dadosFundamental.get(i)[1].replaceAll(",", ".")));
+			notasPorTurma[i].setEnsinoMedio(Double.parseDouble(dadosMedio.get(i)[1].replaceAll(",", ".")));
+		}
+		
+		this.mediaAlunosPorTurma = notasPorTurma;
 	}
 
 	public Media[] getMediaHorasAula() {
 		if (mediaHorasAula == null) {
-			Media vazio[] = { new Media(0,0,0,0,0,0) };
+			Media vazio[] = { new Media(0,0) };
 			return vazio;
 		}
 		
 		return mediaHorasAula;
 	}
 
-	public void setMediaHorasAula(Media[] mediaHorasAula) {
-		this.mediaHorasAula = mediaHorasAula;
+	public void setMediaHorasAula(HashMap<String, ArrayList<String[]>> informacoes) {
+		ArrayList<String[]> dadosFundamental;
+		ArrayList<String[]> dadosMedio;
+		Media horasAula[] = null;
+		
+		dadosFundamental = informacoes.get("horas_aula_ensino_fundamental");
+		dadosMedio = informacoes.get("horas_aula_ensino_medio");
+		
+		horasAula = new Media[dadosMedio.size()];
+		for (int i=0; i<horasAula.length; i++) {
+			horasAula[i] = new Media();
+			horasAula[i].setEstado(this); 
+			horasAula[i].setAno(Integer.parseInt(dadosMedio.get(i)[0]));
+			horasAula[i].setEnsinoFundamental(Double.parseDouble(dadosFundamental.get(i)[1].replaceAll(",", ".")));
+			horasAula[i].setEnsinoMedio(Double.parseDouble(dadosMedio.get(i)[1].replaceAll(",", ".")));
+		}
+		
+		this.mediaHorasAula = horasAula;
 	}
 
 	public Media[] getTaxaDistorcaoIdadeSerie() {
 		if (taxaDistorcaoIdadeSerie == null) {
-			Media vazio[] = { new Media(0,0,0,0,0,0) };
+			Media vazio[] = { new Media(0,0) };
 			return vazio;
 		}
 		
@@ -363,9 +422,36 @@ public class Estado {
 		this.projetoJovensPesquisadores = projetosJovensPesquisadores; 
 	}
 
+	public Media[] getTaxaDeAproveitamento() {
+		if (taxaDeAproveitamento == null) {
+			Media vazio[] = { new Media(0,0) };
+			return vazio;
+		}
+		
+		return taxaDeAproveitamento;
+	}
+
+	public void setTaxaDeAproveitamento(Media[] taxaDeAproveitamento) {
+		this.taxaDeAproveitamento = taxaDeAproveitamento;
+	}
+
+	public Media[] getTaxaDeAbandono() {
+		if (taxaDeAbandono == null) {
+			Media vazio[] = { new Media(0,0) };
+			return vazio;
+		}
+		
+		return taxaDeAbandono;
+	}
+
+	public void setTaxaDeAbandono(Media[] taxaDeAbandono) {
+		this.taxaDeAbandono = taxaDeAbandono;
+	}
+
 	private void preencheDados(HashMap<String, ArrayList<String[]>> informacoes) {
 		
 		this.setPopulacao(informacoes);
+		this.setCensos(informacoes);
 		this.setIdebs(informacoes);
 		this.setParticipacaoPercentualPIB(informacoes);
 		this.setPrimeirosProjetos(informacoes);
@@ -373,6 +459,8 @@ public class Estado {
 		this.setProjetosApoioCnpq(informacoes);
 		this.setProjetosInct(informacoes);
 		this.setProjetosCienciaTecnologia(informacoes);
+		this.setmediaAlunosPorTurma(informacoes);
+		this.setMediaHorasAula(informacoes);
 
 	}
 	

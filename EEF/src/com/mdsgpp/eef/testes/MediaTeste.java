@@ -10,83 +10,39 @@ public class MediaTeste extends AndroidTestCase {
 
 	private Media media;
 	private Estado estado;
-	private double creche, preEscola, anosIniciais, anosFinais, totalMedio, medioNaoSeriado;
+	private double ensinoFundamental, ensinoMedio;
 	
 	
 	public void setUp() throws Exception {
 		this.media = new Media();
 		this.estado = new Estado();
 		
-		this.creche = 200.50;
-		this.preEscola = 300.30;
-		this.anosIniciais = 450.00;
-		this.anosFinais = 210.21;
-		this.totalMedio = 90.90;
-		this.medioNaoSeriado = 105.17;
+		this.ensinoFundamental = 450.00;
+		this.ensinoMedio = 90.90;
 	}
 
 	
 	public void tearDown() throws Exception {
-	}
-
-	
-	public void testCreche() {
-		double crecheAtual;
-		
-		this.media.setCreche(this.creche);
-		crecheAtual = this.media.getCreche();
-		
-		assertEquals(this.creche, crecheAtual, 0.0);
-	}
-	
-	
-	public void testPreEscola() {
-		double preEscolaAtual;
-		
-		this.media.setPreEscola(this.preEscola);
-		preEscolaAtual = this.media.getPreEscola();
-		
-		assertEquals(this.preEscola, preEscolaAtual, 0.0);
-	}
-	
-
-	public void testAnosIniciais() {
-		double anosIniciaisAtual;
-		
-		this.media.setAnosIniciais(this.anosIniciais);
-		anosIniciaisAtual = this.media.getAnosIniciais();
-		
-		assertEquals(this.anosIniciais, anosIniciaisAtual, 0.0);
 	}
 	
 	
 	public void testAnosFinais() {
 		double anosFinaisAtual;
 		
-		this.media.setAnosFinais(this.anosFinais);
-		anosFinaisAtual = this.media.getAnosFinais();
+		this.media.setEnsinoFundamental(this.ensinoFundamental);
+		anosFinaisAtual = this.media.getEnsinoFundamental();
 		
-		assertEquals(this.anosFinais, anosFinaisAtual, 0.0);
+		assertEquals(this.ensinoFundamental, anosFinaisAtual, 0.0);
 	}
 	
 	
 	public void testTotalMedio() {
 		double totalMedioAtual;
 		
-		this.media.setTotalMedio(this.totalMedio);
-		totalMedioAtual = this.media.getTotalMedio();
+		this.media.setEnsinoMedio(this.ensinoMedio);
+		totalMedioAtual = this.media.getEnsinoMedio();
 		
-		assertEquals(this.totalMedio, totalMedioAtual, 0.0);
-	}
-	
-
-	public void testMedioNaoSeriado() {
-		double medioNaoSeriadoAtual;
-		
-		this.media.setMedioNaoSeriado(this.medioNaoSeriado);
-		medioNaoSeriadoAtual = this.media.getMedioNaoSeriado();
-		
-		assertEquals(this.medioNaoSeriado, medioNaoSeriadoAtual, 0.0);
+		assertEquals(this.ensinoMedio, totalMedioAtual, 0.0);
 	}
 	
 	

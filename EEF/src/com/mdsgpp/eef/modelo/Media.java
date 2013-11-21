@@ -1,61 +1,33 @@
 package com.mdsgpp.eef.modelo;
 
 public class Media {
-		private double creche;
-		private double preEscola;
-		private double anosIniciais;
-		private double anosFinais;
-		private double totalMedio;
-		private double medioNaoSeriado;
+		private double ensinoFundamental;
+		private double ensinoMedio;
+		private int ano;
 		private Estado estado;
 		
 		public Media() {
 		}
 		
-		public Media(double creche, double preEscola, double anosIniciais, double anosFinais,
-				double totalMedio, double medioNaoSeriado){
-			this.creche = creche;
-			this.preEscola = preEscola;
-			this.anosIniciais = anosIniciais;
-			this.totalMedio = totalMedio;
-			this.medioNaoSeriado = medioNaoSeriado;  
-			
+		public Media(double ensinoFundamental, double ensinoMedio){
+			this.ensinoFundamental = ensinoFundamental;
+			this.ensinoMedio = ensinoMedio;
 		}
 		
-		public double getCreche() {
-			return creche;
+		public double getEnsinoFundamental() {
+			return ensinoFundamental;
 		}
 
-		public void setCreche(double creche) {
-			this.creche = creche;
+		public void setEnsinoFundamental(double ensinoFundamental) {
+			this.ensinoFundamental = ensinoFundamental;
 		}
 
-		public double getPreEscola() {
-			return preEscola;
+		public double getEnsinoMedio() {
+			return ensinoMedio;
 		}
 
-		public void setPreEscola(double preEscola) {
-			this.preEscola = preEscola;
-		}
-
-		public double getAnosIniciais() {
-			return anosIniciais;
-		}
-
-		public void setAnosIniciais(double anosIniciais) {
-			this.anosIniciais = anosIniciais;
-		}
-
-		public double getAnosFinais() {
-			return anosFinais;
-		}
-
-		public void setAnosFinais(double anosFinais) {
-			this.anosFinais = anosFinais;
-		}
-
-		public void setMedioNaoSeriado(double medioNaoSeriado) {
-			this.medioNaoSeriado = medioNaoSeriado;
+		public void setEnsinoMedio(double ensinoMedio) {
+			this.ensinoMedio = ensinoMedio;
 		}
 
 		public Estado getEstado() {
@@ -66,16 +38,12 @@ public class Media {
 			this.estado = estado;
 		}
 
-		public double getTotalMedio() {
-			return totalMedio;
+		public int getAno() {
+			return ano;
 		}
 
-		public void setTotalMedio(double totalMedio) {
-			this.totalMedio = totalMedio;
-		}
-
-		public double getMedioNaoSeriado() {
-			return medioNaoSeriado;
+		public void setAno(int ano) {
+			this.ano = ano;
 		}
 		
 }
