@@ -121,6 +121,10 @@
             android:label="@string/title_activity_tela_consulta_por_indicativo"
             android:screenOrientation="portrait" >
         </activity>
+        <activity
+            android:name="com.mdsgpp.eef.visao.TelaResultadoConsultaPorIndicativo"
+            android:label="@string/title_activity_tela_resultado_consulta_por_indicativo" >
+        </activity>
     </application>
 
 </manifest>

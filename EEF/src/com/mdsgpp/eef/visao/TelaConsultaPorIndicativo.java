@@ -118,7 +118,7 @@ public void onRadioButtonClicked(View view) {
 	}
 	
 	public void clickBotaoVerificaEstadosPorIndicativo(View view) {
-		Intent intent = new Intent(this, TelaGrafico.class);
+		Intent intent = new Intent(this, TelaResultadoConsultaPorIndicativo.class);
 
 		intent.putExtra("INDICATIVO", indicativo);
 		intent.putExtra("TITULO", titulo);

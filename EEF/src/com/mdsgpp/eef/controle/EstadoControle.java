@@ -38,8 +38,6 @@ public class EstadoControle {
 		String nomeSigla[] = informacoesParse.get("nome_e_sigla").get(0);
 		Estado estado = new Estado(nomeSigla[0], nomeSigla[1], informacoesParse);
 		
-		Log.i("teste nome", nomeSigla[0]);
-		
 		escreveEstado(estado);
 		
 		return this.informacoesEstado;

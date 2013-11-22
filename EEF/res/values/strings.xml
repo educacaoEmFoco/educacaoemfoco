@@ -89,8 +89,7 @@
     <!-- Strings da tela consulta por indicativo -->
     <string name="titulo_escolhe_estado_por_indicativo">Escolha o indicativo</string>
     <string name="bt_verifica_estados_por_indicativo">Verificar estados</string>
-    
-    
+
     <!-- Strings da tela sobre feed -->
 
     <string name="tela_sobre_feed">Fonte de Informações do EEF</string>
@@ -127,5 +126,6 @@
     <string name="title_botao_comparar">Comparar</string>
     <string name="informacao_botao_comparar">Após a seleção dos 2 estados desejados,esta opção encaminha o usuário para uma tela onde devem ser definido(s) qual(s) indicativo(s) deseja visualizar na comparação.</string>
     <string name="title_activity_tela_consulta_por_indicativo">TelaConsultaPorIndicativo</string>
+    <string name="title_activity_tela_resultado_consulta_por_indicativo">TelaResultadoConsultaPorIndicativo</string>
 
 </resources>
