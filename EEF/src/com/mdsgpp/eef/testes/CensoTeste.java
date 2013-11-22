@@ -10,7 +10,7 @@ public class CensoTeste extends AndroidTestCase {
 
 	private Censo censo;
 	private Estado estado;
-	private double creche, preEscola, anosIniciaisFundamental, anosFinaisFundamental, 
+	private double anosIniciaisFundamental, anosFinaisFundamental, 
 		ensinoMedio, fundamentalEJA, medioEJA;
 	
 	
@@ -18,8 +18,6 @@ public class CensoTeste extends AndroidTestCase {
 		this.censo = new Censo();
 		this.estado = new Estado();
 		
-		this.creche = 510.60;
-		this.preEscola = 730.31;
 		this.anosIniciaisFundamental = 87.11;
 		this.anosFinaisFundamental = 880.98;
 		this.ensinoMedio = 12.23;
@@ -30,27 +28,6 @@ public class CensoTeste extends AndroidTestCase {
 	
 	public void tearDown() throws Exception {
 	}
-
-	
-	public void testCreche() {
-		double crecheAtual;
-		
-		this.censo.setCreche(this.creche);
-		crecheAtual = this.censo.getCreche();
-		
-		assertEquals(this.creche, crecheAtual, 0.0);
-	}
-	
-	
-	public void testPreEscola() {
-		double preEscolaAtual;
-		
-		this.censo.setPreEscola(this.preEscola);
-		preEscolaAtual = this.censo.getPreEscola();
-		
-		assertEquals(this.preEscola, preEscolaAtual, 0.0);
-	}
-	
 	
 	public void testAnosIniciaisFundamental() {
 		double anosIniciaisFundamentalAtual;

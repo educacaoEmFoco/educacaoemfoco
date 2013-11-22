@@ -1,11 +1,6 @@
 package com.mdsgpp.eef.testes;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.util.ArrayList;
 
 import com.mdsgpp.eef.modelo.Feed;
 import com.mdsgpp.eef.modelo.Noticias;
@@ -18,7 +13,6 @@ public class FeedPersistenciaTeste extends AndroidTestCase {
 	private Feed feed;
 	private Context context;
 	private Noticias noticia;
-	private ArrayList<Noticias> dadosFeed;
 
 	protected void setUp() throws Exception {
 		super.setUp();
@@ -45,7 +39,7 @@ public class FeedPersistenciaTeste extends AndroidTestCase {
 		assertEquals("FeedPersistencia", nomeClasseRetorno);
 
 	}
-
+	
 	public void testWriteFeedFile() throws IOException, ClassNotFoundException {
 
 		Feed feedRead;

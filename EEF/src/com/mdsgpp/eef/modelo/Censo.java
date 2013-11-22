@@ -2,8 +2,6 @@ package com.mdsgpp.eef.modelo;
 
 public class Censo {
 
-	private double creche;//somente os dados integrais referentes à "Estadual Municipal"
-	private double preEscola;
 	private double anosIniciaisFundamental;
 	private double anosFinaisFundamental;
 	private double ensinoMedio;
@@ -15,31 +13,14 @@ public class Censo {
 	public Censo() {
 	}
 
-	public Censo(double creche, double preEscola, double anosIniciaisFundamental, double anosFinaisFundamental,
+	public Censo(double anosIniciaisFundamental, double anosFinaisFundamental,
 			     double ensinoMedio, double fundamentalEJA, double medioEJA){
-		this.creche = creche;
-		this.preEscola = preEscola;
+
 		this.anosIniciaisFundamental = anosIniciaisFundamental;
 		this.anosFinaisFundamental = anosFinaisFundamental;
 		this.ensinoMedio = ensinoMedio;
 		this.fundamentalEJA = fundamentalEJA;
 		this.medioEJA = medioEJA;
-	}
-	
-	public double getCreche() {
-		return creche;
-	}
-
-	public void setCreche(double creche) {
-		this.creche = creche;
-	}
-
-	public double getPreEscola() {
-		return preEscola;
-	}
-
-	public void setPreEscola(double preEscola) {
-		this.preEscola = preEscola;
 	}
 
 	public double getAnosIniciaisFundamental() {

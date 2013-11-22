@@ -1,8 +1,5 @@
 package com.mdsgpp.eef.testes;
 
-import org.junit.Before;
-import org.junit.Test;
-
 import android.test.AndroidTestCase;
 
 import com.mdsgpp.eef.modelo.Feed;
