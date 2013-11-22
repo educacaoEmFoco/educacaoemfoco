@@ -79,6 +79,14 @@
                 android:drawableTop="@drawable/icone_listar"
                 android:onClick="clickBotaoFeed"
                 android:text="@string/menu_botao_feed" />
+              <Button
+                android:id="@+id/botao_consulta_por_indicativo"
+                style="@style/botaoMenu"
+                android:layout_width="123dp"
+                android:layout_height="match_parent"
+                android:drawableTop="@drawable/icone_listar"
+                android:onClick="clickBotaoConsultaPorIndicativo"
+                android:text="@string/menu_botao_consulta_por_indicativo" />
 
         </LinearLayout>
     </LinearLayout>

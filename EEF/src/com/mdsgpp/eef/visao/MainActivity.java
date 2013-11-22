@@ -50,4 +50,8 @@ public class MainActivity extends Activity {
     	Intent intent = new Intent(this, TelaFeed.class);
     	startActivity(intent);
     }
+    public void clickBotaoConsultaPorIndicativo(View view){
+    	Intent intent = new Intent(this, TelaConsultaPorIndicativo.class);
+    	startActivity(intent);
+    }
 }

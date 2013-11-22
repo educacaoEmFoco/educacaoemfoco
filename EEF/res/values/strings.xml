@@ -15,6 +15,7 @@
     <string name="string_vazia"></string>
     <string name="menu_botao_consulta">Consulta</string>
     <string name="menu_botao_feed">Feed</string>
+    <string name="menu_botao_consulta_por_indicativo">Consulta por indicativo</string>
 
     <!-- Strings da tela indicativos consultados -->
     <string name="botao_tela_indicativos">Ir</string>
@@ -85,10 +86,14 @@
     <string name="title_activity_receptor_dados">ReceptorDados</string>
     <string name="title_activity_tela_feed_sobre">TelaFeedSobre</string>
 
-	<!-- Strings da tela sobre feed -->
-	
-	<string name = "tela_sobre_feed">Fonte de Informações do EEF</string>
-	<string name = "descricao_sobre_feed">As notícias informadas pelo aplicativo Educação em Foco são originárias do site:\n
+    <!-- Strings da tela consulta por indicativo -->
+    <string name="titulo_escolhe_estado_por_indicativo">Escolha o indicativo</string>
+    
+    
+    <!-- Strings da tela sobre feed -->
+
+    <string name="tela_sobre_feed">Fonte de Informações do EEF</string>
+    <string name="descricao_sobre_feed">As notícias informadas pelo aplicativo Educação em Foco são originárias do site:\n
 	* http://noticias.gov.br/noticias/rss?id=AFSZW.\n
 	Entretanto, as notícias retiradas são apenas relacionadas a educação brasileira.\n
 	Caso o aplicativo seja atualizado para abranger mais fontes de informação, esta tela será atualizada para refletir tais mudanças.</string>
@@ -109,7 +114,8 @@
     <string name="informacao_consultar_estado1">Será apresentado um combo box com 26* unidades federativas brasileiras, 
           para a escolha daquela que o usuário deseje definir como o primeiro estado na comparação.</string>
     <string name="title_ast_adicional">*</string>
-    <string name="conteudo_sobre_comparacao">Será apresentado 2 combo box com as unidades federativas brasileiras, para que o usuário escolha dois estados diferentes para realizar a comparação dos mesmos.</string><string name="informacao_ast_adicional">O 27º estado é excluido da apresentação,pois este está selecionado no outro combo box. </string>
+    <string name="conteudo_sobre_comparacao">Será apresentado 2 combo box com as unidades federativas brasileiras, para que o usuário escolha dois estados diferentes para realizar a comparação dos mesmos.</string>
+    <string name="informacao_ast_adicional">O 27º estado é excluido da apresentação,pois este está selecionado no outro combo box. </string>
     <string name="title_consultar_estado2">Escolha o segundo estado.</string>
     <string name="informacao_consultar_estado2">Será apresentado um combo box com 26* unidades federativas brasileiras,
           para a escolha daquela que o usuário deseje definir como o segundo estado na comparação.</string>
@@ -119,6 +125,6 @@
     <string name="title_activity_tela_sobre_comparacao">TelaSobreComparacao</string>
     <string name="title_botao_comparar">Comparar</string>
     <string name="informacao_botao_comparar">Após a seleção dos 2 estados desejados,esta opção encaminha o usuário para uma tela onde devem ser definido(s) qual(s) indicativo(s) deseja visualizar na comparação.</string>
-
+    <string name="title_activity_tela_consulta_por_indicativo">TelaConsultaPorIndicativo</string>
 
 </resources>
