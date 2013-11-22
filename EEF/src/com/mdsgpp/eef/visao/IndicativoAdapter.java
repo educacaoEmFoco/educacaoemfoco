@@ -3,8 +3,8 @@ package com.mdsgpp.eef.visao;
 import java.io.IOException;
 import java.util.HashMap;
 
+import com.mdsgpp.eef.R;
 import com.mdsgpp.eef.controle.EstadoControle;
-import com.mdsgpp.eef.modelo.Estado;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -38,7 +38,7 @@ public class IndicativoAdapter extends BaseAdapter{
 	}
 
 	@Override
-	public Object getItem(int posicao) {
+	public HashMap<String, String> getItem(int posicao) {
 		HashMap<String, String> estado = null;
 		try {
 			estado = EstadoControle.getInstancia(context).lerEstado(posicao);
@@ -56,7 +56,25 @@ public class IndicativoAdapter extends BaseAdapter{
 	@Override
 	public View getView(int posicao, View view, ViewGroup viewGroup) {
 		
-		return null;
+		if(view == null) {
+			view = this.inflater.inflate(R.layout.listview_item_indicativos, null);
+			holder = new ViewHolder();
+		
+			holder.tvNome = (TextView) view.findViewById(R.id.textview_lista_indicativos_nome);
+			holder.tvValorIndicativo = (TextView) view.findViewById(R.id.textview_lista_indicativos_conteudo);
+			
+			view.setTag(holder);
+			
+		} else {
+			holder = (ViewHolder) view.getTag();
+		}
+		
+		estado = getItem(posicao);
+		
+		holder.tvNome.setText(estado.get("nome"));
+		holder.tvValorIndicativo.setText(estado.get(indicativoEscolhido));
+		
+		return view;
 	}
 	
 }
