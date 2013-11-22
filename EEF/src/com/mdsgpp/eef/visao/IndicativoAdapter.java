@@ -1,5 +1,6 @@
 package com.mdsgpp.eef.visao;
 
+import java.io.IOException;
 import java.util.HashMap;
 
 import com.mdsgpp.eef.controle.EstadoControle;
@@ -12,7 +13,7 @@ import android.widget.BaseAdapter;
 
 public class IndicativoAdapter extends BaseAdapter{
 	
-	private HashMap<String, String> estados;
+	private HashMap<String, String> estado;
 	private String indicativoEscolhido;
 	private Context context;
 	
@@ -23,20 +24,23 @@ public class IndicativoAdapter extends BaseAdapter{
 	
 	@Override
 	public int getCount() {
-		
-		return 0;
+		return 27;
 	}
 
 	@Override
-	public Object getItem(int arg0) {
-		
-		return null;
+	public Object getItem(int posicao) {
+		HashMap<String, String> estado = null;
+		try {
+			estado = EstadoControle.getInstancia(context).lerEstado(posicao);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return estado;
 	}
 
 	@Override
-	public long getItemId(int arg0) {
-		
-		return 0;
+	public long getItemId(int posicao) {
+		return posicao;
 	}
 
 	@Override
