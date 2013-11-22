@@ -7,19 +7,29 @@ import com.mdsgpp.eef.controle.EstadoControle;
 import com.mdsgpp.eef.modelo.Estado;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.TextView;
 
 public class IndicativoAdapter extends BaseAdapter{
 	
 	private HashMap<String, String> estado;
 	private String indicativoEscolhido;
 	private Context context;
+	private ViewHolder holder;
+	private LayoutInflater inflater;
+	
+	static class ViewHolder{
+		private TextView tvNome;
+		private TextView tvValorIndicativo;
+	}
 	
 	public IndicativoAdapter(String indicativoEscolhido, Context context){
 		this.indicativoEscolhido = indicativoEscolhido;
 		this.context = context;
+		this.inflater = LayoutInflater.from(context);
 	}
 	
 	@Override
@@ -44,7 +54,7 @@ public class IndicativoAdapter extends BaseAdapter{
 	}
 
 	@Override
-	public View getView(int arg0, View arg1, ViewGroup arg2) {
+	public View getView(int posicao, View view, ViewGroup viewGroup) {
 		
 		return null;
 	}
