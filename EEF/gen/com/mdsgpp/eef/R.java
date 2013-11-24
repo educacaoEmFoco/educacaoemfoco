@@ -59,7 +59,7 @@ public final class R {
         public static final int tocantins=0x7f02001f;
     }
     public static final class id {
-        public static final int action_settings=0x7f0900a9;
+        public static final int action_settings=0x7f0900aa;
         public static final int botao_consulta=0x7f090006;
         public static final int botao_consulta_por_indicativo=0x7f090008;
         public static final int botao_feed=0x7f090007;
@@ -91,7 +91,7 @@ public final class R {
         public static final int linearlayout_siglas=0x7f09001a;
         public static final int listView1=0x7f090081;
         public static final int listview_tela_estados=0x7f090090;
-        public static final int listview_tela_resultado_consulta_por_indicativo=0x7f090091;
+        public static final int listview_tela_resultado_consulta_por_indicativo=0x7f090092;
         public static final int participacaoPercentualPIBConteudo=0x7f090010;
         public static final int participacaoPercentualPIBTitle=0x7f09000f;
         public static final int primeiros_projetos=0x7f090017;
@@ -122,22 +122,22 @@ public final class R {
         public static final int relativelayout=0x7f090045;
         public static final int scrollView1=0x7f09000a;
         public static final int scrollViewConsulta=0x7f090087;
-        public static final int sobre_menu_ast_adicional_title=0x7f0900a0;
-        public static final int sobre_menu_botao_sobre_consulta_title=0x7f09009f;
-        public static final int sobre_menu_comparar_estados_conteudo=0x7f090095;
-        public static final int sobre_menu_comparar_estados_title=0x7f090094;
-        public static final int sobre_menu_consultar_estado1_title=0x7f09009b;
-        public static final int sobre_menu_consultar_estado2_title=0x7f09009d;
-        public static final int sobre_menu_consultar_estados_conteudo=0x7f090093;
-        public static final int sobre_menu_consultar_estados_title=0x7f090092;
-        public static final int sobre_menu_informacao_ast_adicional=0x7f0900a1;
-        public static final int sobre_menu_informacao_botao_sobre_consulta=0x7f09009a;
-        public static final int sobre_menu_informacao_consultar_estado1=0x7f09009c;
-        public static final int sobre_menu_informacao_consultar_estado2=0x7f09009e;
-        public static final int sobre_menu_noticias_conteudo=0x7f090097;
-        public static final int sobre_menu_noticias_title=0x7f090096;
-        public static final int sobre_tela_comparacao_conteudo=0x7f090099;
-        public static final int sobre_tela_comparacao_title=0x7f090098;
+        public static final int sobre_menu_ast_adicional_title=0x7f0900a1;
+        public static final int sobre_menu_botao_sobre_consulta_title=0x7f0900a0;
+        public static final int sobre_menu_comparar_estados_conteudo=0x7f090096;
+        public static final int sobre_menu_comparar_estados_title=0x7f090095;
+        public static final int sobre_menu_consultar_estado1_title=0x7f09009c;
+        public static final int sobre_menu_consultar_estado2_title=0x7f09009e;
+        public static final int sobre_menu_consultar_estados_conteudo=0x7f090094;
+        public static final int sobre_menu_consultar_estados_title=0x7f090093;
+        public static final int sobre_menu_informacao_ast_adicional=0x7f0900a2;
+        public static final int sobre_menu_informacao_botao_sobre_consulta=0x7f09009b;
+        public static final int sobre_menu_informacao_consultar_estado1=0x7f09009d;
+        public static final int sobre_menu_informacao_consultar_estado2=0x7f09009f;
+        public static final int sobre_menu_noticias_conteudo=0x7f090098;
+        public static final int sobre_menu_noticias_title=0x7f090097;
+        public static final int sobre_tela_comparacao_conteudo=0x7f09009a;
+        public static final int sobre_tela_comparacao_title=0x7f090099;
         public static final int spinner1=0x7f090051;
         public static final int spinner2=0x7f090052;
         public static final int textView1=0x7f090054;
@@ -208,9 +208,9 @@ public final class R {
         public static final int textView_projetos_pesquisa_quantidade=0x7f090079;
         public static final int textView_projetos_pesquisa_quantidade1=0x7f090036;
         public static final int textView_projetos_pesquisa_quantidade2=0x7f090037;
-        public static final int textView_rss_category=0x7f0900a7;
-        public static final int textView_rss_description=0x7f0900a8;
-        public static final int textView_rss_title=0x7f0900a6;
+        public static final int textView_rss_category=0x7f0900a8;
+        public static final int textView_rss_description=0x7f0900a9;
+        public static final int textView_rss_title=0x7f0900a7;
         public static final int textView_sigla=0x7f090068;
         public static final int textView_sigla1=0x7f09001b;
         public static final int textView_sigla2=0x7f09001d;
@@ -224,10 +224,11 @@ public final class R {
         public static final int textView_valores_projeto_pesquisa2=0x7f090039;
         public static final int textView_x=0x7f09001c;
         public static final int text_view_titulo_grafico=0x7f090085;
-        public static final int textview_lista_estados=0x7f0900a3;
-        public static final int textview_lista_indicativos_conteudo=0x7f0900a5;
-        public static final int textview_lista_indicativos_nome=0x7f0900a4;
-        public static final int textview_lista_siglas=0x7f0900a2;
+        public static final int text_view_titulo_indicativo=0x7f090091;
+        public static final int textview_lista_estados=0x7f0900a4;
+        public static final int textview_lista_indicativos_conteudo=0x7f0900a6;
+        public static final int textview_lista_indicativos_nome=0x7f0900a5;
+        public static final int textview_lista_siglas=0x7f0900a3;
         public static final int verificaEstadosPorIndicativo=0x7f090064;
     }
     public static final class layout {
