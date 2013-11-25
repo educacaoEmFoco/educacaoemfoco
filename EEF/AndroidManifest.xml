@@ -104,12 +104,10 @@
             android:name="com.mdsgpp.eef.visao.TelaSobreIndicativos"
             android:label="@string/title_activity_sobre_indicativos" >
         </activity>
-            
         <activity
             android:name="com.mdsgpp.eef.SobreMenuActivity"
             android:label="@string/title_activity_sobre_menu" >
         </activity>
-        
         <activity
             android:name="com.mdsgpp.eef.visao.TelaSobreConsulta"
             android:label="@string/title_activity_tela_sobre_consulta" >
@@ -117,6 +115,14 @@
         <activity
             android:name="com.mdsgpp.eef.visao.TelaSobreComparacao"
             android:label="@string/title_activity_tela_sobre_comparacao" >
+        </activity>
+        <activity
+            android:name="com.mdsgpp.eef.visao.TelaConsultas"
+            android:label="@string/title_activity_tela_consultas" >
+        </activity>
+        <activity
+            android:name="com.mdsgpp.eef.visao.TelaConsultasGerais"
+            android:label="@string/title_activity_tela_consultas_gerais" >
         </activity>
     </application>
 

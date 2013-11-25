@@ -3,7 +3,7 @@
 
     <!-- Strings da tela inicial -->
 
-    <string name="app_name">EEF</string>
+    <string name="app_name">Educação em Foco</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_tela_estado">Indicativos de Estado</string>
     <string name="title_activity_tela_comparacao">Comparação de Estados</string>
@@ -14,7 +14,7 @@
     <string name="titulo_escolhe_indicativo_grafico">Escolha o indicativo para gerar o gráfico:</string>
     <string name="string_vazia"></string>
     <string name="menu_botao_consulta">Consulta</string>
-    <string name="menu_botao_feed">Feed</string>
+    <string name="menu_botao_feed">Notícias</string>
 
     <!-- Strings da tela indicativos consultados -->
     <string name="botao_tela_indicativos">Ir</string>
@@ -52,6 +52,11 @@
     <string name="tela_compara_estados">Estados </string>
     <string name="titulo_menu">Educação em Foco</string>
     <string name="string_x"> x </string>
+    
+     <!-- Strings da tela consultas gerais -->
+     
+     <string name="botao_historico"> Histórico</string>
+     <string name="botao_estado"> Estado</string>
 
     <!-- Strings da tela sobre -->
 
@@ -85,10 +90,10 @@
     <string name="title_activity_receptor_dados">ReceptorDados</string>
     <string name="title_activity_tela_feed_sobre">TelaFeedSobre</string>
 
-	<!-- Strings da tela sobre feed -->
-	
-	<string name = "tela_sobre_feed">Fonte de Informações do EEF</string>
-	<string name = "descricao_sobre_feed">As notícias informadas pelo aplicativo Educação em Foco são originárias do site:\n
+    <!-- Strings da tela sobre feed -->
+
+    <string name="tela_sobre_feed">Fonte de Informações do EEF</string>
+    <string name="descricao_sobre_feed">As notícias informadas pelo aplicativo Educação em Foco são originárias do site:\n
 	* http://noticias.gov.br/noticias/rss?id=AFSZW.\n
 	Entretanto, as notícias retiradas são apenas relacionadas a educação brasileira.\n
 	Caso o aplicativo seja atualizado para abranger mais fontes de informação, esta tela será atualizada para refletir tais mudanças.</string>
@@ -109,7 +114,8 @@
     <string name="informacao_consultar_estado1">Será apresentado um combo box com 26* unidades federativas brasileiras, 
           para a escolha daquela que o usuário deseje definir como o primeiro estado na comparação.</string>
     <string name="title_ast_adicional">*</string>
-    <string name="conteudo_sobre_comparacao">Será apresentado 2 combo box com as unidades federativas brasileiras, para que o usuário escolha dois estados diferentes para realizar a comparação dos mesmos.</string><string name="informacao_ast_adicional">O 27º estado é excluido da apresentação,pois este está selecionado no outro combo box. </string>
+    <string name="conteudo_sobre_comparacao">Será apresentado 2 combo box com as unidades federativas brasileiras, para que o usuário escolha dois estados diferentes para realizar a comparação dos mesmos.</string>
+    <string name="informacao_ast_adicional">O 27º estado é excluido da apresentação,pois este está selecionado no outro combo box. </string>
     <string name="title_consultar_estado2">Escolha o segundo estado.</string>
     <string name="informacao_consultar_estado2">Será apresentado um combo box com 26* unidades federativas brasileiras,
           para a escolha daquela que o usuário deseje definir como o segundo estado na comparação.</string>
@@ -119,6 +125,7 @@
     <string name="title_activity_tela_sobre_comparacao">TelaSobreComparacao</string>
     <string name="title_botao_comparar">Comparar</string>
     <string name="informacao_botao_comparar">Após a seleção dos 2 estados desejados,esta opção encaminha o usuário para uma tela onde devem ser definido(s) qual(s) indicativo(s) deseja visualizar na comparação.</string>
-
+    <string name="title_activity_tela_consultas">TelaConsultas</string>
+    <string name="title_activity_tela_consultas_gerais">TelaConsultasGerais</string>
 
 </resources>

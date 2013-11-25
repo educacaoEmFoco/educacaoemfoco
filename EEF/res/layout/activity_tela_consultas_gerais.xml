@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayoutVertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp"
+    android:background="@drawable/background_sombra"
+    android:gravity="left"
+    android:orientation="vertical"
+    android:padding="25dp" >
+
+    <Button
+        android:id="@+id/buttonConsultaHistorico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="clickBotaoListaEstados"
+        android:text="@string/botao_historico" >
+    </Button>
+
+    <Button
+        android:id="@+id/buttonConsultaEstado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="clickBotaoHistorico"
+        android:text="@string/botao_estado" >
+    </Button>
+
+</LinearLayout>

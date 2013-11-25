@@ -25,12 +25,7 @@ public class MainActivity extends Activity {
     
     
     // Eventos 
-    
-    public void clickBotaoListaEstados(View view) {
-    	Intent intent = new Intent(this, TelaListaEstado.class);
-		startActivity(intent);
-    }
-    
+   
     public void clickBotaoComparacao(View view) {
     	Intent intent = new Intent(this, TelaComparacao.class);
 		startActivity(intent);
@@ -42,7 +37,7 @@ public class MainActivity extends Activity {
     }
     
     public void clickBotaoConsulta(View view){
-    	Intent intent = new Intent(this, TelaConsultaIndicativo.class);
+    	Intent intent = new Intent(this, TelaConsultasGerais.class);
     	startActivity(intent);
     }
     

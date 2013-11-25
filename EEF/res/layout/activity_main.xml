@@ -5,91 +5,52 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
-    <TextView
-        android:id="@+id/textViewTitulo"
-        style="@style/titulo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="35dp"
-        android:layout_marginRight="35dp"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:text="@string/titulo_menu" />
-
     <LinearLayout
         android:id="@+id/linearLayoutVertical"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
         android:layout_margin="15dp"
         android:background="@drawable/background_sombra"
-        android:gravity="center"
+        android:gravity="left"
         android:orientation="vertical"
         android:padding="25dp" >
 
-        <LinearLayout
-            android:id="@+id/linearLayoutHorizontal"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal" >
+        <Button
+            android:id="@+id/botao_feed"
+            style="@style/botaoMenu"
+            android:layout_width="123dp"
+            android:layout_height="match_parent"
+            android:drawableTop="@drawable/icone_listar"
+            android:onClick="clickBotaoFeed"
+            android:text="@string/menu_botao_feed" />
 
-            <Button
-                android:id="@+id/botao_lista_estados"
-                style="@style/botaoMenu"
-                android:layout_width="123dp"
-                android:layout_height="match_parent"
-                android:drawableTop="@drawable/icone_listar"
-                android:onClick="clickBotaoListaEstados"
-                android:text="@string/menu_botao_lista_estados" />
+        <Button
+            android:id="@+id/botao_consulta"
+            style="@style/botaoMenu"
+            android:layout_width="123dp"
+            android:layout_height="match_parent"
+            android:drawableTop="@drawable/icone_listar"
+            android:onClick="clickBotaoConsulta"
+            android:text="@string/menu_botao_consulta" />
 
-            <Button
-                android:id="@+id/buttonComparacao"
-                style="@style/botaoMenu"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:drawableTop="@drawable/icone_comparacao"
-                android:onClick="clickBotaoComparacao"
-                android:text="@string/menu_botao_comparacao" />
-        </LinearLayout>
+        <Button
+            android:id="@+id/buttonComparacao"
+            style="@style/botaoMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableTop="@drawable/icone_comparacao"
+            android:onClick="clickBotaoComparacao"
+            android:text="@string/menu_botao_comparacao" />
 
-        <LinearLayout
-            android:id="@+id/linearLayoutHorizontal2"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal" >
-
-            <Button
-                android:id="@+id/botao_consulta"
-                style="@style/botaoMenu"
-                android:layout_width="123dp"
-                android:layout_height="match_parent"
-                android:drawableTop="@drawable/icone_listar"
-                android:onClick="clickBotaoConsulta"
-                android:text="@string/menu_botao_consulta" />
-
-            <Button
-                android:id="@+id/botao_feed"
-                style="@style/botaoMenu"
-                android:layout_width="123dp"
-                android:layout_height="match_parent"
-                android:drawableTop="@drawable/icone_listar"
-                android:onClick="clickBotaoFeed"
-                android:text="@string/menu_botao_feed" />
-
-        </LinearLayout>
     </LinearLayout>
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/buttonSobre"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/textViewTitulo"
         android:layout_below="@+id/linearLayoutVertical"
+        android:layout_alignRight ="@+id/linearLayoutVertical"
         android:layout_marginTop="40dp"
         android:onClick="clickBotaoSobre"
         android:text="@string/botao_sobre" />
