@@ -10,19 +10,19 @@
     android:padding="25dp" >
 
     <Button
-        android:id="@+id/buttonConsultaHistorico"
+        android:id="@+id/buttonEstados"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="clickBotaoHistorico"
-        android:text="@string/botao_historico" >
+        android:onClick="clickBotaoComparacao"
+        android:text="@string/botao_estado" >
     </Button>
 
     <Button
-        android:id="@+id/buttonConsultaEstado"
+        android:id="@+id/buttonIndicativos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="clickBotaoListaEstado"
-        android:text="@string/botao_estado" >
+        android:onClick="clickBotaoIndicativos"
+        android:text="@string/botao_indicativos" >
     </Button>
 
 </LinearLayout>

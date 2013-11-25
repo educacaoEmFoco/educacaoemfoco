@@ -30,7 +30,7 @@
             android:layout_width="123dp"
             android:layout_height="match_parent"
             android:drawableTop="@drawable/icone_listar"
-            android:onClick="clickBotaoConsulta"
+            android:onClick="clickBotaoConsultaGeral"
             android:text="@string/menu_botao_consulta" />
 
         <Button
@@ -39,7 +39,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:drawableTop="@drawable/icone_comparacao"
-            android:onClick="clickBotaoComparacao"
+            android:onClick="clickBotaoComparacaoGeral"
             android:text="@string/menu_botao_comparacao" />
 
     </LinearLayout>

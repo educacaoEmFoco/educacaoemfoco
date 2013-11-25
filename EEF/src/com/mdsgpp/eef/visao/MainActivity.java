@@ -26,8 +26,8 @@ public class MainActivity extends Activity {
     
     // Eventos 
    
-    public void clickBotaoComparacao(View view) {
-    	Intent intent = new Intent(this, TelaComparacao.class);
+    public void clickBotaoComparacaoGeral(View view) {
+    	Intent intent = new Intent(this, TelaComparacoesGerais.class);
 		startActivity(intent);
     }
 
@@ -36,7 +36,7 @@ public class MainActivity extends Activity {
     	startActivity(intent);
     }
     
-    public void clickBotaoConsulta(View view){
+    public void clickBotaoConsultaGeral(View view){
     	Intent intent = new Intent(this, TelaConsultasGerais.class);
     	startActivity(intent);
     }

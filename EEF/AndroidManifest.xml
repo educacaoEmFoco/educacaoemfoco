@@ -124,6 +124,10 @@
             android:name="com.mdsgpp.eef.visao.TelaConsultasGerais"
             android:label="@string/title_activity_tela_consultas_gerais" >
         </activity>
+        <activity
+            android:name="com.mdsgpp.eef.visao.TelaComparacoesGerais"
+            android:label="@string/title_activity_tela_comparacoes_gerais" >
+        </activity>
     </application>
 
 </manifest>
