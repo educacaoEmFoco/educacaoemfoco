@@ -125,6 +125,10 @@
             android:name="com.mdsgpp.eef.visao.TelaResultadoConsultaPorIndicativo"
             android:label="@string/title_activity_tela_resultado_consulta_por_indicativo" >
         </activity>
+        <activity
+            android:name="com.mdsgpp.eef.TelaEscolheTipoDeConsulta"
+            android:label="@string/title_activity_tela_escolhe_tipo_de_consulta" >
+        </activity>
     </application>
 
 </manifest>

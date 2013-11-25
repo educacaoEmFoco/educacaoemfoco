@@ -1,6 +1,7 @@
 package com.mdsgpp.eef.visao;
 
 import com.mdsgpp.eef.R;
+import com.mdsgpp.eef.TelaEscolheTipoDeConsulta;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -27,7 +28,7 @@ public class MainActivity extends Activity {
     // Eventos 
     
     public void clickBotaoListaEstados(View view) {
-    	Intent intent = new Intent(this, TelaListaEstado.class);
+    	Intent intent = new Intent(this, TelaEscolheTipoDeConsulta.class);
 		startActivity(intent);
     }
     

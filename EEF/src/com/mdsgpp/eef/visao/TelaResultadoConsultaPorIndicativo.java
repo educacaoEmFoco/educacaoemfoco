@@ -24,13 +24,7 @@ public class TelaResultadoConsultaPorIndicativo extends Activity {
 		
 		carregaIndicativosDosEstados();
 		
-		//carregaTitulo();
-
-		Intent intent = getIntent();
-		
-		String titulo = intent.getStringExtra("TITULO");
-		
-		textViewTitulo.setText(titulo);
+		carregaTitulo();
 	}
 
 	@Override
@@ -48,7 +42,6 @@ public class TelaResultadoConsultaPorIndicativo extends Activity {
 
 			IndicativoAdapter adapter = new IndicativoAdapter(indicativo,
 					context);
-			
 			listaDeEstados.setAdapter(adapter);
 	}
 	
@@ -59,6 +52,7 @@ public class TelaResultadoConsultaPorIndicativo extends Activity {
 	
 	public void carregaTitulo(){
 		Intent intent = getIntent();
+		
 		String titulo = intent.getStringExtra("TITULO");
 		
 		textViewTitulo.setText(titulo);

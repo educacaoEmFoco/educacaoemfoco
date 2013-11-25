@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import android.content.Context;
-import android.util.Log;
 
 import com.mdsgpp.eef.modelo.Estado;
 
