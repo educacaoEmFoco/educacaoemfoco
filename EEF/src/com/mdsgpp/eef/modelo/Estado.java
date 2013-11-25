@@ -3,6 +3,8 @@ package com.mdsgpp.eef.modelo;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import android.util.Log;
+
 public class Estado {
 
 	private String nome;
@@ -55,11 +57,11 @@ public class Estado {
 			censo[i] = new Censo();
 			censo[i].setEstado(this); 
 			censo[i].setAno(Integer.parseInt(dadosMedio.get(i)[0]));
-			censo[i].setAnosFinaisFundamental(Double.parseDouble(dadosFundamentalFinais.get(i)[1].replaceAll(",", ".")));
-			censo[i].setEnsinoMedio(Double.parseDouble(dadosMedio.get(i)[1].replaceAll(",", ".")));
-			censo[i].setAnosIniciaisFundamental(Double.parseDouble(dadosFundamentalIniciais.get(i)[1].replaceAll(",", ".")));
-			censo[i].setMedioEJA(Double.parseDouble(dadosEjaMedio.get(i)[1].replaceAll(",", ".")));
-			censo[i].setFundamentalEJA(Double.parseDouble(dadosEjaFundamental.get(i)[1].replaceAll(",", ".")));
+			censo[i].setAnosFinaisFundamental(Double.parseDouble(dadosFundamentalFinais.get(i)[1].replaceAll("\\.", "")));
+			censo[i].setEnsinoMedio(Double.parseDouble(dadosMedio.get(i)[1].replaceAll("\\.", "")));
+			censo[i].setAnosIniciaisFundamental(Double.parseDouble(dadosFundamentalIniciais.get(i)[1].replaceAll("\\.", "")));
+			censo[i].setMedioEJA(Double.parseDouble(dadosEjaMedio.get(i)[1].replaceAll("\\.", "")));
+			censo[i].setFundamentalEJA(Double.parseDouble(dadosEjaFundamental.get(i)[1].replaceAll("\\.", "")));
 		}
 		
 		this.censos = censo;
