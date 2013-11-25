@@ -128,4 +128,8 @@
     <string name="title_activity_tela_consultas">TelaConsultas</string>
     <string name="title_activity_tela_consultas_gerais">TelaConsultasGerais</string>
 
+    <!-- Strings da tela Comparação -->
+    
+    <string name="title_radio_button_marcar_todas">Marcar todos indicativos</string>
+    <string name="title_radio_button_desmarcar_todas">Desmarcar todos indicativos</string>
 </resources>

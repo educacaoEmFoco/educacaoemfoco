@@ -14,7 +14,26 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical">
+
+       <RadioGroup
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
     
+    	<RadioButton
+        android:id="@+id/radioButtonMarcar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_radio_button_marcar_todas" />
+
+    	<RadioButton
+        android:id="@+id/radioButtonDesmarcar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_radio_button_desmarcar_todas" />
+
+    </RadioGroup>	
 
     <CheckBox
         android:id="@+id/checkBox_ideb"

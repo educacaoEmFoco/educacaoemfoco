@@ -7,7 +7,7 @@ public class TelaComparacao extends Comparacao {
 	@Override
 	public void clickBotaoComparacaoEstados(View view) {
 		preencheTodosEstados();
-		Intent intent = new Intent(this, TelaComparaEstados.class);
+		Intent intent = new Intent(this, TelaIndicativosConsultados.class);
 		getEstadosSpinner01().getSelectedItem().toString();
 		getEstadosSpinner().getSelectedItem().toString();
 

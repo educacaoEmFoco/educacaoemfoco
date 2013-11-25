@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.RadioButton;
 
 public class TelaIndicativosConsultados extends Activity {
 	
@@ -37,6 +38,7 @@ public class TelaIndicativosConsultados extends Activity {
 	}
 	
 	
+	
 	private void inicializaCheckBox() {
 		cbIdeb = (CheckBox) findViewById(R.id.checkBox_ideb);
 		cbPib = (CheckBox) findViewById(R.id.checkBox_participacao_pib);
@@ -47,6 +49,22 @@ public class TelaIndicativosConsultados extends Activity {
 		cbProjetosIniciacao = (CheckBox) findViewById(R.id.checkBox_projetos_iniciacao);
 		cbProjetosJovens = (CheckBox) findViewById(R.id.checkBox_projetos_jovens);
 	}
+	
+	
+public void onRadioButtonClicked(View view) {
+		
+        boolean checked = ((RadioButton) view).isChecked();
+        switch(view.getId()) {
+            case R.id.radioButtonMarcar:
+                if (checked)
+                	
+                break;
+            case R.id.radioButtonDesmarcar:
+                if (checked)
+                	
+                break;
+        }
+}
 	
 	private void capturaValores() {
 		bIdeb = cbIdeb.isChecked();
