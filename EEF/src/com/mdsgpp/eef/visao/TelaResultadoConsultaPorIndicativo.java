@@ -9,12 +9,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.view.Menu;
 import android.widget.ListView;
-import android.widget.TextView;
 
 public class TelaResultadoConsultaPorIndicativo extends Activity {
 	private final Context context = this;
 	private ListView listaDeEstados = null;
-	private TextView textViewTitulo = null;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +22,6 @@ public class TelaResultadoConsultaPorIndicativo extends Activity {
 		
 		carregaIndicativosDosEstados();
 		
-		carregaTitulo();
 	}
 
 	@Override
@@ -39,23 +36,17 @@ public class TelaResultadoConsultaPorIndicativo extends Activity {
 			Intent intent = getIntent();
 			
 			String indicativo = intent.getStringExtra("INDICATIVO");
-
-			IndicativoAdapter adapter = new IndicativoAdapter(indicativo,
+			String titulo = intent.getStringExtra("TITULO");
+			
+			IndicativoAdapter adapter = new IndicativoAdapter(titulo, indicativo,
 					context);
+			
 			listaDeEstados.setAdapter(adapter);
 	}
 	
 	public void inicializaViews(){
 		listaDeEstados = (ListView) findViewById(R.id.listview_tela_resultado_consulta_por_indicativo);
-		textViewTitulo = (TextView) findViewById(R.id.text_view_titulo_indicativo);
 	}
 	
-	public void carregaTitulo(){
-		Intent intent = getIntent();
-		
-		String titulo = intent.getStringExtra("TITULO");
-		
-		textViewTitulo.setText(titulo);
-	}
 	
 }

@@ -8,13 +8,6 @@
      android:paddingTop="@dimen/activity_vertical_margin"
      tools:context=".TelaResultadoConsultaPorIndicativo" >
 	
-    <TextView
-        android:id="@+id/text_view_titulo_indicativo"
-        style="@style/titulo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/string_vazia" />
      <ListView
     	android:id="@+id/listview_tela_resultado_consulta_por_indicativo"
     	android:layout_width="match_parent"

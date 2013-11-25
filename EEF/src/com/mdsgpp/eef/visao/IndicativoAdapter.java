@@ -17,17 +17,20 @@ public class IndicativoAdapter extends BaseAdapter{
 	
 	private HashMap<String, String> estado;
 	private String indicativoEscolhido;
+	private String titulo;
 	private Context context;
 	private ViewHolder holder;
 	private LayoutInflater inflater;
 	
 	static class ViewHolder{
+		private TextView tvTitulo;
 		private TextView tvNome;
 		private TextView tvValorIndicativo;
 	}
 	
-	public IndicativoAdapter(String indicativoEscolhido, Context context){
+	public IndicativoAdapter(String titulo,String indicativoEscolhido, Context context){
 		this.indicativoEscolhido = indicativoEscolhido;
+		this.titulo = titulo;
 		this.context = context;
 		this.inflater = LayoutInflater.from(context);
 	}
@@ -55,10 +58,14 @@ public class IndicativoAdapter extends BaseAdapter{
 
 	@Override
 	public View getView(int posicao, View view, ViewGroup viewGroup) {
-		
 		if(view == null) {
 			view = this.inflater.inflate(R.layout.listview_item_indicativos, null);
 			holder = new ViewHolder();
+				
+				if(posicao==0){
+					holder.tvTitulo = (TextView) view.findViewById(R.id.text_view_titulo_indicativo);
+					holder.tvTitulo.setText(titulo);
+				}
 		
 			holder.tvNome = (TextView) view.findViewById(R.id.textview_lista_indicativos_nome);
 			holder.tvValorIndicativo = (TextView) view.findViewById(R.id.textview_lista_indicativos_conteudo);
