@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
+import android.view.Gravity;
 
 public class IndicativoAdapter extends BaseAdapter{
 	
@@ -23,7 +24,6 @@ public class IndicativoAdapter extends BaseAdapter{
 	private LayoutInflater inflater;
 	
 	static class ViewHolder{
-		private TextView tvTitulo;
 		private TextView tvNome;
 		private TextView tvValorIndicativo;
 	}
@@ -37,7 +37,7 @@ public class IndicativoAdapter extends BaseAdapter{
 	
 	@Override
 	public int getCount() {
-		return 27;
+		return 28;
 	}
 
 	@Override
@@ -56,17 +56,13 @@ public class IndicativoAdapter extends BaseAdapter{
 		return posicao;
 	}
 
+	
 	@Override
 	public View getView(int posicao, View view, ViewGroup viewGroup) {
 		if(view == null) {
 			view = this.inflater.inflate(R.layout.listview_item_indicativos, null);
 			holder = new ViewHolder();
 				
-				if(posicao==0){
-					holder.tvTitulo = (TextView) view.findViewById(R.id.text_view_titulo_indicativo);
-					holder.tvTitulo.setText(titulo);
-				}
-		
 			holder.tvNome = (TextView) view.findViewById(R.id.textview_lista_indicativos_nome);
 			holder.tvValorIndicativo = (TextView) view.findViewById(R.id.textview_lista_indicativos_conteudo);
 			
@@ -76,10 +72,16 @@ public class IndicativoAdapter extends BaseAdapter{
 			holder = (ViewHolder) view.getTag();
 		}
 		
-		estado = getItem(posicao);
-		
-		holder.tvNome.setText(estado.get("nome"));
-		holder.tvValorIndicativo.setText(estado.get(indicativoEscolhido));
+		if(posicao==0){
+			holder.tvNome.setText(titulo);
+		} else{
+			
+			estado = getItem(posicao-1);
+			
+			holder.tvNome.setText(estado.get("nome"));
+			holder.tvValorIndicativo.setText(estado.get(indicativoEscolhido));
+			
+		}
 		
 		return view;
 	}
