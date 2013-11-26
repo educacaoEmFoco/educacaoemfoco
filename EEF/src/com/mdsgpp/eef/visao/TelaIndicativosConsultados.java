@@ -24,9 +24,9 @@ public class TelaIndicativosConsultados extends Activity {
 		setContentView(R.layout.activity_tela_indicativos_consultados);
 		Intent intentAuxiliar = getIntent();
 		
-		posicao01 = intentAuxiliar.getIntExtra("POSICAO_ESTADO01", 0);
+		posicao01 = intentAuxiliar.getIntExtra("INDEX_ESTADO1_ESCOLHIDO", 0);
 		
-		posicao02 = intentAuxiliar.getIntExtra("POSICAO_ESTADO02", 0);
+		posicao02 = intentAuxiliar.getIntExtra("INDEX_ESTADO2_ESCOLHIDO", 0);
 		
 	}
 
@@ -92,8 +92,8 @@ public void onRadioButtonClicked(View view) {
 		intent.putExtra("CB_PROJETOS_INICIACAO", bProjetosIniciacao);
 		intent.putExtra("CB_PROJETOS_JOVENS", bProjetosJovens);
 		
-		intent.putExtra("POSICAO_ESTADO_01",posicao01 );
-		intent.putExtra("POSICAO_ESTADO_02",posicao02 );
+		intent.putExtra("INDEX_ESTADO1_ESCOLHIDO",posicao01 );
+		intent.putExtra("INDEX_ESTADO2_ESCOLHIDO",posicao02 );
 		
 		startActivity(intent);
 		

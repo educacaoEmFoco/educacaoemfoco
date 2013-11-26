@@ -66,7 +66,7 @@ public class TelaGrafico extends Activity {
 			criaGrafico(informacoesEstado1, informacoesEstado2);
 			
 		} catch (IOException e) {
-			Toast.makeText(getApplicationContext(), "Houve um erro no acesso Ã s informaÃ§Ãµes.", Toast.LENGTH_SHORT).show();
+			Toast.makeText(getApplicationContext(), "Houve um erro no acesso às informações.", Toast.LENGTH_SHORT).show();
 			Log.i("IOException - TelaComparaEstados",e.toString());
 		}
 	}

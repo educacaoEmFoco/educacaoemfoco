@@ -11,10 +11,10 @@ public class Estado {
 	private String sigla;
 	private double participacaoPercentualPIB[];
 	private int populacao;
-	private Censo censos[];
+	private Censo censos[];//novo funcionando
 	private Ideb idebs[];
-	private Media mediaAlunosPorTurma[];
-	private Media mediaHorasAula[];
+	private Media mediaAlunosPorTurma[];//novo funcionando
+	private Media mediaHorasAula[];//novo funcionando
 	private Projeto projetosCienciaTecnologia[];
 	private Projeto primeirosProjetos[];
 	private Projeto projetoInct[];

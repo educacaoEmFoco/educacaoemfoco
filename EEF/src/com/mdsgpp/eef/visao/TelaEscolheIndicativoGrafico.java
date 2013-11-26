@@ -11,7 +11,7 @@ import android.widget.RadioButton;
 
 public class TelaEscolheIndicativoGrafico extends Activity {
 	private String indicativo = "populacao";
-	private String titulo = "Popula√ß√£o";
+	private String titulo = "PopulaÁ„o";
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -44,27 +44,27 @@ public void onRadioButtonClicked(View view) {
             case R.id.radio_difusao_tecnologica_investimento:
                 if (checked)
                 	indicativo = "valor_ciencia_tecnologia";
-                	titulo = "Projeto de Difus√£o Tecnol√≥gica (R$)";
+                	titulo = "Projeto de Difus„o TecnolÛgica (R$)";
                 break;
             case R.id.radio_difusao_tecnologica_qtd:
                 if (checked)
                 	indicativo = "projetos_ciencia_tecnologia";
-                	titulo = "Projeto de Difus√£o Tecnol√≥gica (Qtd.)";
+                	titulo = "Projeto de Difus„o TecnolÛgica (Qtd.)";
                 break;
             case R.id.radio_ideb_fundamental_finais:
                 if (checked)
                 	indicativo = "ideb_fundamental_final";
-                	titulo = "IDEB do Ensino Fundamental (S√©ries Finais)";
+                	titulo = "IDEB do Ensino Fundamental (SÈries Finais)";
                 break;
             case R.id.radio_ideb_fundamental_iniciai:
                 if (checked)
                 	indicativo = "ideb_fundamental_inicial";
-                titulo = "IDEB do Ensino Fundamental (S√©ries Iniciais)";
+                titulo = "IDEB do Ensino Fundamental (SÈries Iniciais)";
                 break;
             case R.id.radio_ideb_medio:
                 if (checked)
                 	indicativo = "ideb_ensino_medio";
-                	titulo = "IDEB do Ensino M√©dio";
+                	titulo = "IDEB do Ensino MÈdio";
                 break;
             case R.id.radio_jovens_pesquisadores_investimento:
                 if (checked)
@@ -81,13 +81,13 @@ public void onRadioButtonClicked(View view) {
             case R.id.radio_pib:
                 if (checked)
                 	indicativo = "percentual_participacao_pib";
-                	titulo = "Participa√ß√£o Estadual no PIB (%)";
+                	titulo = "ParticipaÁ„o Estadual no PIB (%)";
                 break;
                 
             case R.id.radio_populacao:
                 if (checked)
                 	indicativo = "populacao";
-                	titulo = "Popula√ß√£o";
+                	titulo = "PopulaÁ„o";
                 break;
                 
             case R.id.radio_primeiros_projetos_investimento:
