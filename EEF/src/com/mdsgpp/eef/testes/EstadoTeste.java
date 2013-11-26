@@ -32,8 +32,7 @@ public class EstadoTeste extends AndroidTestCase {
 	ArrayList<String[]> dadosProjetosTecnologia;
 	ArrayList<String[]> dadosValoresProjetosTecnologia;
 	private String valores[];
-	
-	
+		
 	public void setUp() throws Exception {
 		
 		// Objetos utilizados para realizar os testes
@@ -195,9 +194,12 @@ public class EstadoTeste extends AndroidTestCase {
 	 
 	
 	public void testProjetoCienciaTecnologia(){
+		String[] indicativosProjetosCienciaTecnologia = { "numero_projetos", "valor_investido" };
 		Projeto[] ProjetosTecnologia;
-		estado.setProjetosCienciaTecnologia(informacoes);
+		
+		estado.setProjetosCienciaTecnologia(informacoes, indicativosProjetosCienciaTecnologia);
 		ProjetosTecnologia = estado.getProjetosCienciaTecnologia();
+		
 		assertEquals(10,ProjetosTecnologia[0].getQuantidade());
 		assertEquals(10000.50,ProjetosTecnologia[0].getValor(),0.00001);
 		assertEquals(2001,ProjetosTecnologia[0].getAno());
@@ -206,9 +208,12 @@ public class EstadoTeste extends AndroidTestCase {
 	
 	
 	public void testPrimeirosProjetos(){
+		String[] indicativosPrimeirosProjetos = { "programa_primeiros_projetos", "valores_programa_primeiros_projetos" };
 		Projeto[] PrimeirosProjetos;
-		estado.setPrimeirosProjetos(informacoes);
+		
+		estado.setPrimeirosProjetos(informacoes, indicativosPrimeirosProjetos);
 		PrimeirosProjetos = estado.getPrimeirosProjetos();
+		
 		assertEquals(10,PrimeirosProjetos[0].getQuantidade());
 		assertEquals(10000.50,PrimeirosProjetos[0].getValor(),0.00001);
 		assertEquals(2001,PrimeirosProjetos[0].getAno());
@@ -218,9 +223,12 @@ public class EstadoTeste extends AndroidTestCase {
 	
 	
 	public void testProjetosInct(){
+		String[] indicativosProjetosInct = { "projetos_inct", "valores_projetos_inct" };
 		Projeto[] ProjetosInct;
-		estado.setProjetosInct(informacoes);
+		
+		estado.setProjetosInct(informacoes, indicativosProjetosInct);
 		ProjetosInct = estado.getProjetosInct();
+		
 		assertEquals(10,ProjetosInct[0].getQuantidade());
 		assertEquals(10000.50,ProjetosInct[0].getValor(),0.00001);
 		assertEquals(2001,ProjetosInct[0].getAno());
@@ -228,18 +236,24 @@ public class EstadoTeste extends AndroidTestCase {
 	
 	
 	public void testProjetosApoioCnpq(){
+		String[] indicativosApoioCnpq = { "projetos_apoio_pesquisa_cnpq", "valores_projetos_apoio_pesquisa_cnpq" };
 		Projeto[] ProjetosApoioCnpq;
-		estado.setProjetosApoioCnpq(informacoes);
+		
+		estado.setProjetosApoioCnpq(informacoes, indicativosApoioCnpq);
 		ProjetosApoioCnpq = estado.getProjetosApoioCnpq();
+		
 		assertEquals(10,ProjetosApoioCnpq[0].getQuantidade());
 		assertEquals(10000.50,ProjetosApoioCnpq[0].getValor(),0.00001);
 		assertEquals(2001,ProjetosApoioCnpq[0].getAno());
 	}
 	
 	public void testProjetoJovensPesquisadores(){
+		String[] indicativosJovensPesquisadores = { "jovens_pesquisadores", "valores_jovens_pesquisadores" };
 		Projeto[] ProjetoJovensPesquisadores;
-		estado.setProjetoJovensPesquisadores(informacoes);
+		
+		estado.setProjetoJovensPesquisadores(informacoes, indicativosJovensPesquisadores);
 		ProjetoJovensPesquisadores = estado.getProjetoJovensPesquisadores();
+		
 		assertEquals(10,ProjetoJovensPesquisadores[0].getQuantidade());
 		assertEquals(10000.50,ProjetoJovensPesquisadores[0].getValor(),0.00001);
 		assertEquals(2001,ProjetoJovensPesquisadores[0].getAno());
