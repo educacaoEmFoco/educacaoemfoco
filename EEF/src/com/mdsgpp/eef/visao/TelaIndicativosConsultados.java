@@ -13,9 +13,9 @@ import android.widget.RadioButton;
 public class TelaIndicativosConsultados extends Activity {
 	
 	CheckBox cbIdeb, cbPib, cbPopulacao, cbPrimeirosProjetos, cbProjetosCnpq,
-			cbProjetosDifusao, cbProjetosIniciacao, cbProjetosJovens;
+			cbProjetosDifusao, cbProjetosIniciacao, cbProjetosJovens, cbCenso, cbAlunosTurma, cbHorasAula, cbTaxaDistorcao, cbTaxaAbandono, cbAprovacao;
 	boolean bIdeb, bPib, bPopulacao, bPrimeirosProjetos, bProjetosCnpq,
-			bProjetosDifusao, bProjetosIniciacao, bProjetosJovens;
+			bProjetosDifusao, bProjetosIniciacao, bProjetosJovens, bCenso, bAlunosTurma, bHorasAula, bTaxaDistorcao, bTaxaAbandono, bAprovacao;
 	int posicao01, posicao02;
 
 	@Override
@@ -48,6 +48,13 @@ public class TelaIndicativosConsultados extends Activity {
 		cbProjetosDifusao = (CheckBox) findViewById(R.id.checkBox_projetos_difusao);
 		cbProjetosIniciacao = (CheckBox) findViewById(R.id.checkBox_projetos_iniciacao);
 		cbProjetosJovens = (CheckBox) findViewById(R.id.checkBox_projetos_jovens);
+		
+		cbCenso = (CheckBox) findViewById(R.id.checkBox_censo);
+		cbAlunosTurma = (CheckBox) findViewById(R.id.checkBox_quantidade_aluno);
+		cbHorasAula = (CheckBox) findViewById(R.id.checkBox_horas_aula);
+		cbTaxaDistorcao = (CheckBox) findViewById(R.id.checkBox_taxa_distorcao);
+		cbTaxaAbandono = (CheckBox) findViewById(R.id.checkBox_taxa_abandono);
+		cbAprovacao = (CheckBox) findViewById(R.id.checkBox_taxa_aprovacao);
 	}
 	
 	
@@ -76,6 +83,13 @@ public void onRadioButtonClicked(View view) {
 		bProjetosIniciacao = cbProjetosIniciacao.isChecked();
 		bProjetosJovens = cbProjetosJovens.isChecked();
 		
+		bCenso = cbCenso.isChecked();
+		bAlunosTurma = cbAlunosTurma.isChecked();
+		bHorasAula = cbHorasAula.isChecked();
+		bTaxaDistorcao = cbTaxaDistorcao.isChecked();
+		bTaxaAbandono = cbTaxaAbandono.isChecked();
+		bAprovacao = cbAprovacao.isChecked();
+		
 	}
 	
 	public void clickBotao(View view) {
@@ -91,6 +105,13 @@ public void onRadioButtonClicked(View view) {
 		intent.putExtra("CB_PROJETOS_DIFUSAO", bProjetosDifusao);
 		intent.putExtra("CB_PROJETOS_INICIACAO", bProjetosIniciacao);
 		intent.putExtra("CB_PROJETOS_JOVENS", bProjetosJovens);
+		
+		intent.putExtra("CB_ALUNOS_TURMA", bAlunosTurma);
+		intent.putExtra("CB_APROVACAO", bAprovacao);
+		intent.putExtra("CB_CENSO", bCenso);
+		intent.putExtra("CB_HORAS_AULA", bHorasAula);
+		intent.putExtra("CB_TAXA_ABANDONO", bTaxaAbandono);
+		intent.putExtra("CB_TAXA_DISTORCAO", bTaxaDistorcao);
 		
 		intent.putExtra("INDEX_ESTADO1_ESCOLHIDO",posicao01 );
 		intent.putExtra("INDEX_ESTADO2_ESCOLHIDO",posicao02 );
