@@ -8,10 +8,10 @@
         android:id="@+id/relativelayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="100dp"
-        android:layout_marginLeft="100dp"
-        android:layout_marginRight="100dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
         android:background="@color/white"
         android:orientation="vertical" >
 
@@ -56,7 +56,7 @@
                 style="@style/comparacao_valor_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
+                android:layout_marginLeft="15dp"
                 android:text="@string/string_vazia" />
 
             <TextView
@@ -72,7 +72,7 @@
                 style="@style/comparacao_valor_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
+                android:layout_marginLeft="15dp"
                 android:text="@string/string_vazia" />
 
             <TextView
@@ -88,7 +88,7 @@
                 style="@style/comparacao_valor_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
+                android:layout_marginLeft="15dp"
                 android:text="@string/string_vazia" />
 
             <TextView
@@ -96,7 +96,7 @@
                 style="@style/comparacao_valor_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
+                android:layout_marginLeft="15dp"
                 android:text="@string/string_vazia" />
 
             <TextView
@@ -112,7 +112,7 @@
                 style="@style/comparacao_valor_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
+                android:layout_marginLeft="15dp"
                 android:text="@string/string_vazia" />
 
             <TextView
@@ -120,7 +120,7 @@
                 style="@style/comparacao_valor_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
+                android:layout_marginLeft="15dp"
                 android:text="@string/string_vazia" />
 
             <TextView
@@ -128,7 +128,7 @@
                 style="@style/comparacao_valor_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
+                android:layout_marginLeft="15dp"
                 android:text="@string/string_vazia" />
 
             <TextView
@@ -144,7 +144,7 @@
                 style="@style/comparacao_valor_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
+                android:layout_marginLeft="15dp"
                 android:text="@string/string_vazia" />
 
             <TextView
@@ -152,7 +152,7 @@
                 style="@style/comparacao_valor_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
+                android:layout_marginLeft="15dp"
                 android:text="@string/string_vazia" />
 
             <TextView
@@ -168,7 +168,7 @@
                 style="@style/comparacao_valor_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
+                android:layout_marginLeft="15dp"
                 android:text="@string/string_vazia" />
 
             <TextView
@@ -176,7 +176,7 @@
                 style="@style/comparacao_valor_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
+                android:layout_marginLeft="15dp"
                 android:text="@string/string_vazia" />
 
             <TextView
@@ -192,7 +192,7 @@
                 style="@style/comparacao_valor_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
+                android:layout_marginLeft="15dp"
                 android:text="@string/string_vazia" />
 
             <TextView
@@ -200,7 +200,7 @@
                 style="@style/comparacao_valor_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
+                android:layout_marginLeft="15dp"
                 android:text="@string/string_vazia" />
 
             <TextView
@@ -216,7 +216,7 @@
                 style="@style/comparacao_valor_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
+                android:layout_marginLeft="15dp"
                 android:text="@string/string_vazia" />
 
             <TextView
@@ -224,7 +224,7 @@
                 style="@style/comparacao_valor_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
+                android:layout_marginLeft="15dp"
                 android:text="@string/string_vazia" />
 
             <TextView
@@ -386,14 +386,6 @@
                 android:text="@string/string_vazia" />
 
             <TextView
-                android:id="@+id/textView_censo_medio2"
-                style="@style/comparacao_valor_2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:text="@string/string_vazia" />
-
-            <TextView
                 android:id="@+id/textView_censo_fundamental_eja1"
                 style="@style/comparacao_valor_1"
                 android:layout_width="wrap_content"
@@ -415,7 +407,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:gravity="left"
+            android:gravity="right"
             android:orientation="vertical"
             android:paddingBottom="30dp"
             android:paddingLeft="200dp"
@@ -452,7 +444,7 @@
                 style="@style/comparacao_valor_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
+                android:layout_marginLeft="15dp"
                 android:text="@string/string_vazia" />
 
             <TextView
@@ -469,7 +461,7 @@
                 style="@style/comparacao_valor_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
+                android:layout_marginLeft="15dp"
                 android:text="@string/string_vazia" />
 
             <TextView
@@ -486,7 +478,7 @@
                 style="@style/comparacao_valor_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
+                android:layout_marginLeft="15dp"
                 android:text="@string/string_vazia" />
 
             <TextView
@@ -494,7 +486,7 @@
                 style="@style/comparacao_valor_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
+                android:layout_marginLeft="15dp"
                 android:text="@string/string_vazia" />
 
             <TextView
@@ -511,7 +503,7 @@
                 style="@style/comparacao_valor_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
+                android:layout_marginLeft="15dp"
                 android:text="@string/string_vazia" />
 
             <TextView
@@ -519,7 +511,7 @@
                 style="@style/comparacao_valor_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
+                android:layout_marginLeft="15dp"
                 android:text="@string/string_vazia" />
 
             <TextView
@@ -527,7 +519,7 @@
                 style="@style/comparacao_valor_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
+                android:layout_marginLeft="15dp"
                 android:text="@string/string_vazia" />
 
             <TextView
@@ -544,7 +536,7 @@
                 style="@style/comparacao_valor_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
+                android:layout_marginLeft="15dp"
                 android:text="@string/string_vazia" />
 
             <TextView
@@ -552,7 +544,7 @@
                 style="@style/comparacao_valor_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
+                android:layout_marginLeft="15dp"
                 android:text="@string/string_vazia" />
 
             <TextView
@@ -569,7 +561,7 @@
                 style="@style/comparacao_valor_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
+                android:layout_marginLeft="15dp"
                 android:text="@string/string_vazia" />
 
             <TextView
@@ -577,7 +569,7 @@
                 style="@style/comparacao_valor_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
+                android:layout_marginLeft="15dp"
                 android:text="@string/string_vazia" />
 
             <TextView
@@ -594,7 +586,7 @@
                 style="@style/comparacao_valor_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
+                android:layout_marginLeft="15dp"
                 android:text="@string/string_vazia" />
 
             <TextView
@@ -602,7 +594,7 @@
                 style="@style/comparacao_valor_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
+                android:layout_marginLeft="15dp"
                 android:text="@string/string_vazia" />
 
             <TextView
@@ -619,7 +611,7 @@
                 style="@style/comparacao_valor_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
+                android:layout_marginLeft="15dp"
                 android:text="@string/string_vazia" />
 
             <TextView
@@ -627,7 +619,7 @@
                 style="@style/comparacao_valor_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
+                android:layout_marginLeft="15dp"
                 android:text="@string/string_vazia" />
 
             <TextView
@@ -644,7 +636,7 @@
                 style="@style/comparacao_valor_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
+                android:layout_marginLeft="15dp"
                 android:text="@string/string_vazia" />
 
             <TextView
@@ -652,7 +644,7 @@
                 style="@style/comparacao_valor_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
+                android:layout_marginLeft="15dp"
                 android:text="@string/string_vazia" />
 
             <TextView
@@ -669,7 +661,7 @@
                 style="@style/comparacao_valor_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
+                android:layout_marginLeft="15dp"
                 android:text="@string/string_vazia" />
 
             <TextView
@@ -677,7 +669,7 @@
                 style="@style/comparacao_valor_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
+                android:layout_marginLeft="15dp"
                 android:text="@string/string_vazia" />
 
             <TextView
@@ -694,7 +686,7 @@
                 style="@style/comparacao_valor_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
+                android:layout_marginLeft="15dp"
                 android:text="@string/string_vazia" />
 
             <TextView
@@ -702,7 +694,7 @@
                 style="@style/comparacao_valor_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
+                android:layout_marginLeft="15dp"
                 android:text="@string/string_vazia" />
 
             <TextView
@@ -719,7 +711,7 @@
                 style="@style/comparacao_valor_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
+                android:layout_marginLeft="15dp"
                 android:text="@string/string_vazia" />
 
             <TextView
@@ -727,7 +719,7 @@
                 style="@style/comparacao_valor_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
+                android:layout_marginLeft="15dp"
                 android:text="@string/string_vazia" />
 
             <TextView
@@ -737,14 +729,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:text="@string/taxa_abandono"
-                android:visibility="invisible"/>
+                android:visibility="invisible" />
 
             <TextView
                 android:id="@+id/textView_taxa_abandono_fundamental2"
                 style="@style/comparacao_valor_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
+                android:layout_marginLeft="15dp"
                 android:text="@string/string_vazia" />
 
             <TextView
@@ -752,24 +744,24 @@
                 style="@style/comparacao_valor_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
+                android:layout_marginLeft="15dp"
                 android:text="@string/string_vazia" />
-            
+
             <TextView
-            android:id="@+id/textView_censo2"
-            style="@style/comparacao_subTitulo_1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="@string/censo"
-            android:visibility="invisible" />
+                android:id="@+id/textView_censo2"
+                style="@style/comparacao_subTitulo_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/censo"
+                android:visibility="invisible" />
 
             <TextView
                 android:id="@+id/textView_censo_iniciais_fundamental2"
-                style="@style/comparacao_valor_1"
+                style="@style/comparacao_valor_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
+                android:layout_marginLeft="15dp"
                 android:text="@string/string_vazia" />
 
             <TextView
@@ -777,7 +769,15 @@
                 style="@style/comparacao_valor_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
+                android:layout_marginLeft="15dp"
+                android:text="@string/string_vazia" />
+
+            <TextView
+                android:id="@+id/textView_censo_medio2"
+                style="@style/comparacao_valor_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
                 android:text="@string/string_vazia" />
 
             <TextView
@@ -785,7 +785,7 @@
                 style="@style/comparacao_valor_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
+                android:layout_marginLeft="15dp"
                 android:text="@string/string_vazia" />
 
             <TextView
@@ -793,7 +793,7 @@
                 style="@style/comparacao_valor_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
+                android:layout_marginLeft="15dp"
                 android:text="@string/string_vazia" />
         </LinearLayout>
     </RelativeLayout>
