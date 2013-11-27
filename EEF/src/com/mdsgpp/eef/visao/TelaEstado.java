@@ -34,7 +34,22 @@ public class TelaEstado extends Activity {
 	private TextView textViewValorJovensPesquisadores;
 	private TextView textViewQuantidadeProjetosIniciacao;
 	private TextView textViewValorProjetosIniciacao;
-	private ImageView imageViewBandeiras;
+	private ImageView imageViewBandeiras;	
+	private TextView textViewCensoIniciaisFundamental;
+	private TextView textViewCensoFinaisFundamental;
+	private TextView textViewCensoMedio;
+	private TextView textViewCensoEjaFundamental;
+	private TextView textViewCensoEjaMedio;
+	private TextView textViewMediaAlunosPorTurmaFundamental;
+	private TextView textViewMediaAlunosPorTurmaMedio;
+	private TextView textViewMediaHorasAulaFundamental;
+	private TextView textViewMediaHorasAulaMedio;
+	private TextView textViewTaxaDistorcaoIdadeSerieFundamental;
+	private TextView textViewTaxaDistorcaoIdadeSerieMedio;
+	private TextView textViewTaxaDeAproveitamentoFundamental;
+	private TextView textViewTaxaDeAproveitamentoMedio;
+	private TextView textViewTaxaDeAbandonoFundamental;
+	private TextView textViewTaxaDeAbandonoMedio;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +70,7 @@ public class TelaEstado extends Activity {
 		Intent intent = getIntent();
 		int posicao = intent.getIntExtra("INDEX_ESTADO_ESCOLHIDO", 0);	
 		
-		InicializaCamposTexto();
+		inicializaCamposTexto();
 		
 	    HashMap<String, String> informacoes = new HashMap <String, String>();
 	    
@@ -69,7 +84,7 @@ public class TelaEstado extends Activity {
 		}
 	}
 	
-	private void InicializaCamposTexto() {
+	private void inicializaCamposTexto() {
 		
 		textViewSigla = (TextView) findViewById(R.id.textView_sigla);
 		textViewNome = (TextView) findViewById(R.id.textView_nome_estado);
@@ -88,6 +103,22 @@ public class TelaEstado extends Activity {
 		textViewValorJovensPesquisadores= (TextView) findViewById(R.id.textView_jovens_pesquisadores_valor);
 		textViewQuantidadeProjetosIniciacao = (TextView) findViewById(R.id.textView_projetos_iniciacao_quantidade);
 		textViewValorProjetosIniciacao = (TextView) findViewById(R.id.textView_projetos_iniciacao_valor);
+		
+		textViewCensoIniciaisFundamental = (TextView) findViewById(R.id.textView_censo_iniciais_fundamental);
+		textViewCensoFinaisFundamental = (TextView) findViewById(R.id.textView_censo_finais_fundamental);
+		textViewCensoMedio = (TextView) findViewById(R.id.textView_censo_medio);
+		textViewCensoEjaFundamental = (TextView) findViewById(R.id.textView_censo_fundamental_eja);
+		textViewCensoEjaMedio = (TextView) findViewById(R.id.textView_censo_medio_eja);
+		textViewMediaAlunosPorTurmaFundamental = (TextView) findViewById(R.id.textView_media_alunos_por_turma_fundamental);
+		textViewMediaAlunosPorTurmaMedio = (TextView) findViewById(R.id.textView_media_alunos_por_turma_medio);
+		textViewMediaHorasAulaFundamental = (TextView) findViewById(R.id.textView_horas_aula_ensino_fundamental);
+		textViewMediaHorasAulaMedio = (TextView) findViewById(R.id.textView_horas_aula_ensino_medio);
+		textViewTaxaDistorcaoIdadeSerieFundamental = (TextView) findViewById(R.id.textView_taxa_distorcao_fundamental);
+		textViewTaxaDistorcaoIdadeSerieMedio = (TextView) findViewById(R.id.textView_taxa_distorcao_medio);
+		textViewTaxaDeAproveitamentoFundamental = (TextView) findViewById(R.id.textView_taxa_aprovacao_fundamental);
+		textViewTaxaDeAproveitamentoMedio = (TextView) findViewById(R.id.textView_taxa_aprovacao_medio);
+		textViewTaxaDeAbandonoFundamental = (TextView) findViewById(R.id.textView_taxa_abandono_fundamental);
+		textViewTaxaDeAbandonoMedio = (TextView) findViewById(R.id.textView_taxa_abandono_medio);
 	}
 	
 	private void preencheCamposTexto(HashMap<String, String> informacoes) {
@@ -108,6 +139,22 @@ public class TelaEstado extends Activity {
 		textViewValorJovensPesquisadores.setText(informacoes.get("valor_projetos_jovens_pesquisadores"));
 		textViewQuantidadeProjetosIniciacao.setText(informacoes.get("quantidade_projetos_inct"));
 		textViewValorProjetosIniciacao.setText(informacoes.get("valor_projetos_inct"));
+		
+		textViewCensoIniciaisFundamental.setText(informacoes.get("censo_anos_iniciais_fundamental"));
+		textViewCensoFinaisFundamental.setText(informacoes.get("censo_anos_finais_fundamental"));
+		textViewCensoMedio.setText(informacoes.get("censo_ensino_medio"));
+		textViewCensoEjaFundamental.setText(informacoes.get("censo_eja_fundamental"));
+		textViewCensoEjaMedio.setText(informacoes.get("censo_eja_medio"));
+		textViewMediaAlunosPorTurmaFundamental.setText(informacoes.get("alunos_por_turma_ensino_fundamental"));
+		textViewMediaAlunosPorTurmaMedio.setText(informacoes.get("alunos_por_turma_ensino_medio"));
+		textViewMediaHorasAulaFundamental.setText(informacoes.get("horas_aula_ensino_fundamental"));
+		textViewMediaHorasAulaMedio.setText(informacoes.get("horas_aula_ensino_medio"));
+		textViewTaxaDistorcaoIdadeSerieFundamental.setText(informacoes.get("taxa_distorcao_fundamental"));
+		textViewTaxaDistorcaoIdadeSerieMedio.setText(informacoes.get("taxa_distorcao_medio"));
+		textViewTaxaDeAproveitamentoFundamental.setText(informacoes.get("taxa_aprovacao_fundamental"));
+		textViewTaxaDeAproveitamentoMedio.setText(informacoes.get("taxa_aprovacao_medio"));
+		textViewTaxaDeAbandonoFundamental.setText(informacoes.get("taxa_aprovacao_fundamental"));
+		textViewTaxaDeAbandonoMedio.setText(informacoes.get("taxa_aprovacao_medio"));
 		
 	}
 	

@@ -11,18 +11,18 @@ public class Estado {
 	private String sigla;
 	private double participacaoPercentualPIB[];
 	private int populacao;
-	private Censo censos[];
+	private Censo censos[];//controle;xml;declarados;inicializado;
 	private Ideb idebs[];
-	private Media mediaAlunosPorTurma[];
-	private Media mediaHorasAula[];
+	private Media mediaAlunosPorTurma[];//controle;xml;declarados;inicializado;
+	private Media mediaHorasAula[];//controle;xml;declarados;inicializado;
 	private Projeto projetosCienciaTecnologia[];
 	private Projeto primeirosProjetos[];
 	private Projeto projetoInct[];
 	private Projeto projetosApoioCnpq[];
 	private Projeto projetoJovensPesquisadores[];
-	private Media taxaDistorcaoIdadeSerie[]; //
-	private Media taxaDeAproveitamento[]; //
-	private Media taxaDeAbandono[];//
+	private Media taxaDistorcaoIdadeSerie[]; //controle;xml;declarados;inicializado;
+	private Media taxaDeAproveitamento[]; //controle;duvida: aprovaçao ou aproveitamento?;xml;declarados;inicializado;
+	private Media taxaDeAbandono[];//controle;xml;declaradoa;inicializado;
 	
 	public Estado(){
 	}
@@ -57,11 +57,11 @@ public class Estado {
 			censo[i] = new Censo();
 			censo[i].setEstado(this); 
 			censo[i].setAno(Integer.parseInt(dadosMedio.get(i)[0]));
-			censo[i].setAnosFinaisFundamental(Double.parseDouble(dadosFundamentalFinais.get(i)[1].replaceAll("\\.", "")));
-			censo[i].setEnsinoMedio(Double.parseDouble(dadosMedio.get(i)[1].replaceAll("\\.", "")));
-			censo[i].setAnosIniciaisFundamental(Double.parseDouble(dadosFundamentalIniciais.get(i)[1].replaceAll("\\.", "")));
-			censo[i].setMedioEJA(Double.parseDouble(dadosEjaMedio.get(i)[1].replaceAll("\\.", "")));
-			censo[i].setFundamentalEJA(Double.parseDouble(dadosEjaFundamental.get(i)[1].replaceAll("\\.", "")));
+			censo[i].setAnosFinaisFundamental(Double.parseDouble(dadosFundamentalFinais.get(i)[1]/*.replaceAll("\\.", "")*/));
+			censo[i].setEnsinoMedio(Double.parseDouble(dadosMedio.get(i)[1]/*.replaceAll("\\.", "")*/));
+			censo[i].setAnosIniciaisFundamental(Double.parseDouble(dadosFundamentalIniciais.get(i)[1]/*.replaceAll("\\.", "")*/));
+			censo[i].setMedioEJA(Double.parseDouble(dadosEjaMedio.get(i)[1]/*.replaceAll("\\.", "")*/));
+			censo[i].setFundamentalEJA(Double.parseDouble(dadosEjaFundamental.get(i)[1]/*.replaceAll("\\.", "")*/));
 		}
 		
 		this.censos = censo;

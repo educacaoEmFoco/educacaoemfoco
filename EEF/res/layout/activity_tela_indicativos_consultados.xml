@@ -16,73 +16,111 @@
     android:orientation="vertical">
 
        <RadioGroup
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:gravity="center_vertical"
-    android:orientation="vertical" >
-    
-    	<RadioButton
-        android:id="@+id/radioButtonMarcar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/title_radio_button_marcar_todas" />
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:gravity="center_vertical"
+           android:orientation="vertical" >
 
-    	<RadioButton
-        android:id="@+id/radioButtonDesmarcar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/title_radio_button_desmarcar_todas" />
+           <RadioButton
+               android:id="@+id/radioButtonMarcar"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="@string/title_radio_button_marcar_todas" />
 
-    </RadioGroup>	
+           <RadioButton
+               android:id="@+id/radioButtonDesmarcar"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="@string/title_radio_button_desmarcar_todas" />
 
-    <CheckBox
-        android:id="@+id/checkBox_ideb"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="54dp"
-        android:text="@string/participacao_IDEB" />
+           <CheckBox
+               android:id="@+id/checkBox_ideb"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="15dp"
+               android:text="@string/participacao_IDEB" />
 
-    <CheckBox
-        android:id="@+id/checkBox_primeiros_projeto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/Programa_primeiros_projetos" />
+           <CheckBox
+               android:id="@+id/checkBox_primeiros_projeto"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="@string/Programa_primeiros_projetos" />
 
-    <CheckBox
-        android:id="@+id/checkBox_projetos_cnpq"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/Projetos_pesquisa_CNPq" />
+           <CheckBox
+               android:id="@+id/checkBox_projetos_cnpq"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="@string/Projetos_pesquisa_CNPq" />
 
-    <CheckBox
-        android:id="@+id/checkBox_projetos_jovens"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/jovens_pesquisadores" />
+           <CheckBox
+               android:id="@+id/checkBox_projetos_jovens"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="@string/jovens_pesquisadores" />
 
-    <CheckBox
-        android:id="@+id/checkBox_projetos_iniciacao"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/projeto_iniciacao" />
+           <CheckBox
+               android:id="@+id/checkBox_projetos_iniciacao"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="@string/projeto_iniciacao" />
 
-    <CheckBox
-        android:id="@+id/checkBox_projetos_difusao"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/numero_projetos" />
+           <CheckBox
+               android:id="@+id/checkBox_projetos_difusao"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="@string/numero_projetos" />
 
-    <CheckBox
-        android:id="@+id/checkBox_populacao"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/populacao" />
+           <CheckBox
+               android:id="@+id/checkBox_populacao"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="@string/populacao" />
 
-    <CheckBox
-        android:id="@+id/checkBox_participacao_pib"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/participacao_percentual_PIB" />
+           <CheckBox
+               android:id="@+id/checkBox_participacao_pib"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="@string/participacao_percentual_PIB" />
+           
+           
+           
+           <CheckBox
+               android:id="@+id/checkBox_censo"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="@string/censo" />
+
+           <CheckBox
+               android:id="@+id/checkBox_horas_aula"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="@string/horas_aula_ensino" />
+
+           <CheckBox
+               android:id="@+id/checkBox_quantidade_aluno"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="@string/media_alunos_por_turma" />
+           
+           <CheckBox
+               android:id="@+id/checkBox_taxa_distorcao"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="@string/taxa_distorcao" />
+
+           <CheckBox
+               android:id="@+id/checkBox_taxa_abandono"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="@string/taxa_abandono" />
+
+           <CheckBox
+               android:id="@+id/checkBox_taxa_aprovacao"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="@string/taxa_aprovacao" />
+           
+       </RadioGroup>
     
     <Button
         android:id="@+id/button1"

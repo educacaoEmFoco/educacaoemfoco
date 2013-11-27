@@ -38,6 +38,12 @@
     <string name="jovens_pesquisadores_investimento">Jovens pesquisadores (R$)</string>
     <string name="projeto_iniciacao_qtd">Projetos INCT (Qtd.)</string>
     <string name="projeto_iniciacao_investimento">Projetos INCT (R$)</string>
+    <string name="media_alunos_por_turma">Média de Alunos por Turma (Qtd.)</string>
+    <string name="horas_aula_ensino">Horas médias por Aula (Horas)</string>
+    <string name="taxa_distorcao">Taxa de Distorção de Idade (%)</string>
+    <string name="taxa_aprovacao">Taxa de Aprovação (%)</string>
+    <string name="taxa_abandono">Taxa de Abandono da Escola(%)</string>
+    <string name="censo">Censo Escolar(%)</string>
     <string name="bt_grafico">Gráfico</string>
 
     <!-- Strings da tela estado -->
