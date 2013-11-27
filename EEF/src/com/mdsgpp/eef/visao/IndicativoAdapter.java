@@ -67,23 +67,21 @@ public class IndicativoAdapter extends BaseAdapter{
 			holder.tvValorIndicativo = (TextView) view.findViewById(R.id.textview_lista_indicativos_conteudo);
 			
 			view.setTag(holder);
-			
 		} else {
 			holder = (ViewHolder) view.getTag();
 		}
 		
-		if(posicao==0){
+		if(posicao==0){//Titulo
 			holder.tvNome.setText(titulo);
-		} else{
-			
+			holder.tvNome.setGravity(Gravity.CENTER);
+			holder.tvValorIndicativo.setVisibility(View.GONE);
+		} else {//Indicativos e seus valores
 			estado = getItem(posicao-1);
-			
 			holder.tvNome.setText(estado.get("nome"));
 			holder.tvValorIndicativo.setText(estado.get(indicativoEscolhido));
-			
+			holder.tvValorIndicativo.setVisibility(View.VISIBLE);
 		}
 		
 		return view;
 	}
-	
 }
