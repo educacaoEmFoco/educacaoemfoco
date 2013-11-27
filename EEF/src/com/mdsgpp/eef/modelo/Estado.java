@@ -11,18 +11,18 @@ public class Estado {
 	private String sigla;
 	private double participacaoPercentualPIB[];
 	private int populacao;
-	private Censo censos[];//novo funcionando
+	private Censo censos[];
 	private Ideb idebs[];
-	private Media mediaAlunosPorTurma[];//novo funcionando
-	private Media mediaHorasAula[];//novo funcionando
+	private Media mediaAlunosPorTurma[];
+	private Media mediaHorasAula[];
 	private Projeto projetosCienciaTecnologia[];
 	private Projeto primeirosProjetos[];
 	private Projeto projetoInct[];
 	private Projeto projetosApoioCnpq[];
 	private Projeto projetoJovensPesquisadores[];
-	private Media taxaDistorcaoIdadeSerie[]; //pendente
-	private Media taxaDeAproveitamento[]; //pendente
-	private Media taxaDeAbandono[];//pendente
+	private Media taxaDistorcaoIdadeSerie[]; //
+	private Media taxaDeAproveitamento[]; //
+	private Media taxaDeAbandono[];//
 	
 	public Estado(){
 	}
@@ -109,7 +109,6 @@ public class Estado {
 		return idebs;
 	}
 	
-	
 	public void setIdebs(HashMap<String, ArrayList<String[]>> informacoes) {
 		ArrayList<String[]> dadosFundamentalFinais;
 		ArrayList<String[]> dadosFundamentalIniciais;
@@ -158,6 +157,8 @@ public class Estado {
 	public Media[] getMediaAlunosPorTurma() {
 		if (mediaAlunosPorTurma == null) {
 			Media vazio[] = { new Media(0,0) };
+			vazio[0].setAno(0);
+			
 			return vazio;
 		}
 		
@@ -171,6 +172,8 @@ public class Estado {
 	public Media[] getMediaHorasAula() {
 		if (mediaHorasAula == null) {
 			Media vazio[] = { new Media(0,0) };
+			vazio[0].setAno(0);
+			
 			return vazio;
 		}
 		
@@ -184,6 +187,8 @@ public class Estado {
 	public Media[] getTaxaDistorcaoIdadeSerie() {
 		if (taxaDistorcaoIdadeSerie == null) {
 			Media vazio[] = { new Media(0,0) };
+			vazio[0].setAno(0);
+			
 			return vazio;
 		}
 		
@@ -223,7 +228,9 @@ public class Estado {
 			Projeto vazio[] = { new Projeto() };
 			vazio[0].setQuantidade(0);
 			vazio[0].setValor(0);
+			vazio[0].setAno(0);
 			
+			return vazio;
 		}
 		
 		return projetosCienciaTecnologia;
@@ -265,6 +272,7 @@ public class Estado {
 			Projeto vazio[] = { new Projeto() };
 			vazio[0].setQuantidade(0);
 			vazio[0].setValor(0);
+			vazio[0].setAno(0);
 			
 			return vazio;
 		}
@@ -281,6 +289,7 @@ public class Estado {
 			Projeto vazio[] = { new Projeto() };
 			vazio[0].setQuantidade(0);
 			vazio[0].setValor(0);
+			vazio[0].setAno(0);
 			
 			return vazio;
 		}
@@ -297,6 +306,7 @@ public class Estado {
 			Projeto vazio[] = { new Projeto() };
 			vazio[0].setQuantidade(0);
 			vazio[0].setValor(0);
+			vazio[0].setAno(0);
 			
 			return vazio;
 		}
@@ -313,6 +323,7 @@ public class Estado {
 			Projeto vazio[] = { new Projeto() };
 			vazio[0].setQuantidade(0);
 			vazio[0].setValor(0);
+			vazio[0].setAno(0);
 			
 			return vazio;
 		}
@@ -327,6 +338,8 @@ public class Estado {
 	public Media[] getTaxaDeAproveitamento() {
 		if (taxaDeAproveitamento == null) {
 			Media vazio[] = { new Media(0,0) };
+			vazio[0].setAno(0);
+			
 			return vazio;
 		}
 		
@@ -340,6 +353,8 @@ public class Estado {
 	public Media[] getTaxaDeAbandono() {
 		if (taxaDeAbandono == null) {
 			Media vazio[] = { new Media(0,0) };
+			vazio[0].setAno(0);
+			
 			return vazio;
 		}
 		
@@ -350,7 +365,7 @@ public class Estado {
 		this.taxaDeAbandono = this.setMedia(informacoes, nomesIndicativo);
 	}
 
-	private void preencheDados(HashMap<String, ArrayList<String[]>> informacoes) {
+	public void preencheDados(HashMap<String, ArrayList<String[]>> informacoes) {
 		String[] indicativosMediaHorasAula = { "horas_aula_ensino_fundamental", "horas_aula_ensino_medio" };
 		String[] indicativosMediaAlunosPorTurma = { "alunos_por_turma_ensino_fundamental", "alunos_por_turma_ensino_medio" };
 		String[] indicativosProjetosCienciaTecnologia = { "numero_projetos", "valor_investido" };

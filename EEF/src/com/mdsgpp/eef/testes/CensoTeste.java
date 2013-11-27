@@ -12,6 +12,7 @@ public class CensoTeste extends AndroidTestCase {
 	private Estado estado;
 	private double anosIniciaisFundamental, anosFinaisFundamental, 
 		ensinoMedio, fundamentalEJA, medioEJA;
+	private int ano;
 	
 	
 	public void setUp() throws Exception {
@@ -23,6 +24,7 @@ public class CensoTeste extends AndroidTestCase {
 		this.ensinoMedio = 12.23;
 		this.fundamentalEJA = 99.90;
 		this.medioEJA = 460.21;
+		this.ano = 2005;
 	}
 
 	
@@ -85,5 +87,14 @@ public class CensoTeste extends AndroidTestCase {
 		estadoAtual = this.censo.getEstado();
 		
 		assertEquals(this.estado, estadoAtual);
+	}
+	
+	public void testAno() {
+		int anoAtual;
+		
+		this.censo.setAno(this.ano);
+		anoAtual = this.censo.getAno();
+		
+		assertEquals(this.ano, anoAtual);
 	}
 }
