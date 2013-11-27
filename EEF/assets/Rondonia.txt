@@ -113,6 +113,18 @@ alunos_por_turma_ensino_medio
 2010: 28,3
 
 
+horas_aula_educacao_infantil
+2010: 4,8
+
+
+horas_aula_ensino_fundamental
+2010: 4,3
+
+
+horas_aula_ensino_medio
+2010: 4,4
+
+
 jovens_pesquisadores
 2005: 0
 2006: 0
