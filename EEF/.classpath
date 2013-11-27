@@ -6,6 +6,6 @@
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="gen"/>
-	<classpathentry kind="lib" path="C:/Users/Gabriel/Documents/android/adt-bundle-windows-x86_64-20130717/sdk/platforms/android-16/uiautomator.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Program Files (x86)/Eclipse/adt-bundle-windows-x86_64-20130917/sdk/platforms/android-18/uiautomator.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

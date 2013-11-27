@@ -42,6 +42,7 @@ public class FeedPersistenciaTeste extends AndroidTestCase {
 	
 	public void testWriteFeedFile() throws IOException, ClassNotFoundException {
 
+		@SuppressWarnings("unused")
 		Feed feedRead;
 
 		FeedPersistencia.getInstance(getContext()).writeFeedFile(feed);
