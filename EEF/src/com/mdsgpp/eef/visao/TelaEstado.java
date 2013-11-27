@@ -70,7 +70,7 @@ public class TelaEstado extends Activity {
 		Intent intent = getIntent();
 		int posicao = intent.getIntExtra("INDEX_ESTADO_ESCOLHIDO", 0);	
 		
-		InicializaCamposTexto();
+		inicializaCamposTexto();
 		
 	    HashMap<String, String> informacoes = new HashMap <String, String>();
 	    
@@ -84,7 +84,7 @@ public class TelaEstado extends Activity {
 		}
 	}
 	
-	private void InicializaCamposTexto() {
+	private void inicializaCamposTexto() {
 		
 		textViewSigla = (TextView) findViewById(R.id.textView_sigla);
 		textViewNome = (TextView) findViewById(R.id.textView_nome_estado);
@@ -140,7 +140,21 @@ public class TelaEstado extends Activity {
 		textViewQuantidadeProjetosIniciacao.setText(informacoes.get("quantidade_projetos_inct"));
 		textViewValorProjetosIniciacao.setText(informacoes.get("valor_projetos_inct"));
 		
-		
+		textViewCensoIniciaisFundamental.setText(informacoes.get("censo_anos_iniciais_fundamental"));
+		textViewCensoFinaisFundamental.setText(informacoes.get("censo_anos_finais_fundamental"));
+		textViewCensoMedio.setText(informacoes.get("censo_ensino_medio"));
+		textViewCensoEjaFundamental.setText(informacoes.get("censo_eja_fundamental"));
+		textViewCensoEjaMedio.setText(informacoes.get("censo_eja_medio"));
+		textViewMediaAlunosPorTurmaFundamental.setText(informacoes.get("alunos_por_turma_ensino_fundamental"));
+		textViewMediaAlunosPorTurmaMedio.setText(informacoes.get("alunos_por_turma_ensino_medio"));
+		textViewMediaHorasAulaFundamental.setText(informacoes.get("horas_aula_ensino_fundamental"));
+		textViewMediaHorasAulaMedio.setText(informacoes.get("horas_aula_ensino_medio"));
+		textViewTaxaDistorcaoIdadeSerieFundamental.setText(informacoes.get("taxa_distorcao_fundamental"));
+		textViewTaxaDistorcaoIdadeSerieMedio.setText(informacoes.get("taxa_distorcao_medio"));
+		textViewTaxaDeAproveitamentoFundamental.setText(informacoes.get("taxa_aprovacao_fundamental"));
+		textViewTaxaDeAproveitamentoMedio.setText(informacoes.get("taxa_aprovacao_medio"));
+		textViewTaxaDeAbandonoFundamental.setText(informacoes.get("taxa_aprovacao_fundamental"));
+		textViewTaxaDeAbandonoMedio.setText(informacoes.get("taxa_aprovacao_medio"));
 		
 	}
 	
