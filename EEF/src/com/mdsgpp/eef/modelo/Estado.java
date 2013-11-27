@@ -134,6 +134,13 @@ public class Estado {
 		this.idebs = ideb;
 	}
 
+	public Media[] retornaMediaVazia() {
+		Media vazio[] = { new Media(0,0) };
+		vazio[0].setAno(0);
+		
+		return vazio;
+	}
+	
 	public Media[] setMedia(HashMap<String, ArrayList<String[]>> informacoes, String[] nomesIndicativo) {
 		ArrayList<String[]> dadosFundamental;
 		ArrayList<String[]> dadosMedio;
@@ -156,10 +163,7 @@ public class Estado {
 	
 	public Media[] getMediaAlunosPorTurma() {
 		if (mediaAlunosPorTurma == null) {
-			Media vazio[] = { new Media(0,0) };
-			vazio[0].setAno(0);
-			
-			return vazio;
+			return retornaMediaVazia();
 		}
 		
 		return mediaAlunosPorTurma;
@@ -171,10 +175,7 @@ public class Estado {
 
 	public Media[] getMediaHorasAula() {
 		if (mediaHorasAula == null) {
-			Media vazio[] = { new Media(0,0) };
-			vazio[0].setAno(0);
-			
-			return vazio;
+			return retornaMediaVazia();
 		}
 		
 		return mediaHorasAula;
@@ -186,10 +187,7 @@ public class Estado {
 
 	public Media[] getTaxaDistorcaoIdadeSerie() {
 		if (taxaDistorcaoIdadeSerie == null) {
-			Media vazio[] = { new Media(0,0) };
-			vazio[0].setAno(0);
-			
-			return vazio;
+			return retornaMediaVazia();
 		}
 		
 		return taxaDistorcaoIdadeSerie;
@@ -223,17 +221,13 @@ public class Estado {
 		this.sigla = sigla;
 	}
 	
-	public Projeto[] getProjetosCienciaTecnologia() {
-		if(projetosCienciaTecnologia == null){
-			Projeto vazio[] = { new Projeto() };
-			vazio[0].setQuantidade(0);
-			vazio[0].setValor(0);
-			vazio[0].setAno(0);
-			
-			return vazio;
-		}
+	public Projeto[] retornaProjetoVazio() {
+		Projeto vazio[] = { new Projeto() };
+		vazio[0].setQuantidade(0);
+		vazio[0].setValor(0);
+		vazio[0].setAno(0);
 		
-		return projetosCienciaTecnologia;
+		return vazio;
 	}
 	
 	public Projeto[] setProjetos(HashMap<String, ArrayList<String[]>> informacoes, String[] nomesIndicativo) {
@@ -262,6 +256,14 @@ public class Estado {
 		
 		return projetosLido;
 	}
+	
+	public Projeto[] getProjetosCienciaTecnologia() {
+		if(projetosCienciaTecnologia == null){
+			return retornaProjetoVazio();
+		}
+		
+		return projetosCienciaTecnologia;
+	}
 
 	public void setProjetosCienciaTecnologia(HashMap<String, ArrayList<String[]>> informacoes, String[] nomesIndicativo) {
 		this.projetosCienciaTecnologia = this.setProjetos(informacoes, nomesIndicativo);
@@ -269,12 +271,7 @@ public class Estado {
 	
 	public Projeto[] getPrimeirosProjetos() {
 		if (primeirosProjetos == null) {
-			Projeto vazio[] = { new Projeto() };
-			vazio[0].setQuantidade(0);
-			vazio[0].setValor(0);
-			vazio[0].setAno(0);
-			
-			return vazio;
+			return retornaProjetoVazio();
 		}
 		
 		return primeirosProjetos;
@@ -286,12 +283,7 @@ public class Estado {
 
 	public Projeto[] getProjetosInct() {
 		if (projetoInct == null) {
-			Projeto vazio[] = { new Projeto() };
-			vazio[0].setQuantidade(0);
-			vazio[0].setValor(0);
-			vazio[0].setAno(0);
-			
-			return vazio;
+			return retornaProjetoVazio();
 		}
 		
 		return projetoInct;
@@ -303,12 +295,7 @@ public class Estado {
 
 	public Projeto[] getProjetosApoioCnpq() {
 		if (projetosApoioCnpq == null) {
-			Projeto vazio[] = { new Projeto() };
-			vazio[0].setQuantidade(0);
-			vazio[0].setValor(0);
-			vazio[0].setAno(0);
-			
-			return vazio;
+			return retornaProjetoVazio();
 		}
 		
 		return projetosApoioCnpq;
@@ -320,12 +307,7 @@ public class Estado {
 
 	public Projeto[] getProjetoJovensPesquisadores() {
 		if (projetoJovensPesquisadores == null) {
-			Projeto vazio[] = { new Projeto() };
-			vazio[0].setQuantidade(0);
-			vazio[0].setValor(0);
-			vazio[0].setAno(0);
-			
-			return vazio;
+			return retornaProjetoVazio();
 		}
 		
 		return projetoJovensPesquisadores;
@@ -337,10 +319,7 @@ public class Estado {
 
 	public Media[] getTaxaDeAproveitamento() {
 		if (taxaDeAproveitamento == null) {
-			Media vazio[] = { new Media(0,0) };
-			vazio[0].setAno(0);
-			
-			return vazio;
+			return retornaMediaVazia();
 		}
 		
 		return taxaDeAproveitamento;
@@ -352,10 +331,7 @@ public class Estado {
 
 	public Media[] getTaxaDeAbandono() {
 		if (taxaDeAbandono == null) {
-			Media vazio[] = { new Media(0,0) };
-			vazio[0].setAno(0);
-			
-			return vazio;
+			return retornaMediaVazia();
 		}
 		
 		return taxaDeAbandono;
