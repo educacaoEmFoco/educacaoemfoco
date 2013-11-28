@@ -11,6 +11,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.util.Log;
 import android.view.Menu;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -172,6 +173,10 @@ public class TelaEstado extends Activity {
 		int idBandeira = getResources().getIdentifier(bandeiras[posicao], "drawable", getPackageName());
 		imageViewBandeiras.setImageResource(idBandeira);
 	}
-
+	
+	public void clickBotaoHisticoEstado(View view) {
+		Intent intent = new Intent(this, MainActivity.class);
+		startActivity(intent);
+	}
 
 }
