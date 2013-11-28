@@ -42,7 +42,7 @@
     <!-- Strings da tela indicativos consultados -->
     <string name="botao_tela_indicativos">Ir</string>
 
-    
+
     <!-- Strings da tela indicativos consultados -->
     <string name="botao_indicativos">Indicativos</string>
 
@@ -76,7 +76,7 @@
     <string name="bt_historico">Historico</string>
     <string name="bt_estados">Estados</string>
 
-    
+
     <!-- Strings da tela estado -->
     <string name="participacao_PIB">Participacao Estadual no PIB</string>
     <string name="numero_projetos">Projetos de Difusão Tecnológica</string>
@@ -178,13 +178,22 @@
     <string name="informacao_botao_sobre_consulta">Após a seleção dos 2 estados desejados,esta opção encaminha o usuário para uma tela onde devem ser definido(s) qual(s) indicativo(s) deseja visualizar na comparação.</string>
     <string name="title_botao_comparar">Comparar</string>
     <string name="informacao_botao_comparar">Após a seleção dos 2 estados desejados,esta opção encaminha o usuário para uma tela onde devem ser definido(s) qual(s) indicativo(s) deseja visualizar na comparação.</string>
+    <string name="title_activity_tela_consultas">TelaConsultas</string>
 
-    
-    
 
     <!-- Strings da tela Comparação -->
     <string name="title_radio_button_marcar_todas">Marcar todos indicativos</string>
     <string name="title_radio_button_desmarcar_todas">Desmarcar todos indicativos</string>
     <string name="title_comparar_estados">Comparar Estados</string>
+    <string name="title_activity_tela_escolhe_tipo_de_consulta">TelaEscolheTipoDeConsulta</string>
+   
+    
+    <!-- Strings da tela Comparações Gerais -->
+    <string name="title_activity_tela_sobre_comparacoes_gerais">TelaSobreComparacoesGerais</string>
+    <string name="title_sobre_comparacacoes_gerais_estados">Comparação por estado: </string>
+    <string name="title_sobre_comparacacoes_gerais_indicativos">Comparação por indicativo: </string>
+    <string name="comparacoes_gerais_conteudo_estados">O usuário escolherá dois estados para comparar os indicativos dos mesmos.</string>
+    <string name="comparacoes_gerais_conteudo_indicativos">O usuário escolherá os indicativos que deseja comparar em relação a todos os estados.</string>
 
 </resources>
+
