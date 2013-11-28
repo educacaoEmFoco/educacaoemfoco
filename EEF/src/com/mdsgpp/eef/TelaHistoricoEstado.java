@@ -75,7 +75,7 @@ public class TelaHistoricoEstado extends Activity {
 		
 		try {
 			
-			informacoes = EstadoControle.getInstancia(this).lerEstado(posicao);
+			informacoes = EstadoControle.getInstancia(this).lerEstadoCompleto(posicao);
 			preencheCamposTexto(informacoes);
 			setImagem(posicao);
 			
@@ -92,7 +92,6 @@ public class TelaHistoricoEstado extends Activity {
 		textViewPopulacao = (TextView) findViewById(R.id.textView_populacao_valor);
 		textViewParticipacaoPib = (TextView) findViewById(R.id.textView_participacao_pib_valor);
 		textViewQuantidadeProjetosCienciaTecnologia = (TextView) findViewById(R.id.textView_numero_projetos_quantidade);
-		textViewValorProjetosCienciaTecnologia = (TextView) findViewById(R.id.textView_valor_investido_projetos);
 		textViewFundamentalIdeb = (TextView) findViewById(R.id.textView_ideb_fundamental);
 		textViewEnsinoMedioIdeb = (TextView) findViewById(R.id.textView_ideb_ensinomedio);
 		textViewIniciaisIdeb = (TextView) findViewById(R.id.textView_ideb_iniciais);
@@ -128,7 +127,6 @@ public class TelaHistoricoEstado extends Activity {
 		textViewPopulacao.setText(informacoes.get("populacao"));
 		textViewParticipacaoPib.setText(informacoes.get("percentual_participacao_pib"));
 		textViewQuantidadeProjetosCienciaTecnologia.setText(informacoes.get("projetos_ciencia_tecnologia"));
-		textViewValorProjetosCienciaTecnologia.setText(informacoes.get("valor_ciencia_tecnologia"));
 		textViewFundamentalIdeb.setText(informacoes.get("ideb_fundamental_final"));
 		textViewEnsinoMedioIdeb.setText(informacoes.get("ideb_ensino_medio"));
 		textViewIniciaisIdeb.setText(informacoes.get("ideb_fundamental_inicial"));

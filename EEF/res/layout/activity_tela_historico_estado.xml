@@ -91,14 +91,6 @@
             android:text="@string/string_vazia" />
 
         <TextView
-            android:id="@+id/textView_valor_investido_projetos"
-            style="@style/valor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:text="@string/string_vazia" />
-
-        <TextView
             android:id="@+id/textView_ideb"
             style="@style/subTitulo"
             android:layout_width="wrap_content"
