@@ -21,10 +21,7 @@ public class TelaHistoricoEstado extends Activity {
 	private TextView textViewPopulacao;
 	private TextView textViewParticipacaoPib;
 	private TextView textViewQuantidadeProjetosCienciaTecnologia;
-	private TextView textViewValorProjetosCienciaTecnologia;
-	private TextView textViewFundamentalIdeb;
-	private TextView textViewEnsinoMedioIdeb;
-	private TextView textViewIniciaisIdeb;
+	private TextView textViewIdebs;
 	private	TextView textViewQuantidadePrimeirosProjetos;
 	private TextView textViewValorPrimeirosProjetos;
 	private TextView textViewQuantidadePesquisa;
@@ -92,9 +89,7 @@ public class TelaHistoricoEstado extends Activity {
 		textViewPopulacao = (TextView) findViewById(R.id.textView_populacao_valor);
 		textViewParticipacaoPib = (TextView) findViewById(R.id.textView_participacao_pib_valor);
 		textViewQuantidadeProjetosCienciaTecnologia = (TextView) findViewById(R.id.textView_numero_projetos_quantidade);
-		textViewFundamentalIdeb = (TextView) findViewById(R.id.textView_ideb_fundamental);
-		textViewEnsinoMedioIdeb = (TextView) findViewById(R.id.textView_ideb_ensinomedio);
-		textViewIniciaisIdeb = (TextView) findViewById(R.id.textView_ideb_iniciais);
+		textViewIdebs = (TextView) findViewById(R.id.textView_idebs);
 		textViewQuantidadePrimeirosProjetos = (TextView) findViewById(R.id.textView_primeiros_projetos_quantidade);
 		textViewValorPrimeirosProjetos = (TextView) findViewById(R.id.textView_programa_primeiros_projetos_valor);
 		textViewQuantidadePesquisa = (TextView) findViewById(R.id.textView_projetos_pesquisa_quantidade);
@@ -127,9 +122,7 @@ public class TelaHistoricoEstado extends Activity {
 		textViewPopulacao.setText(informacoes.get("populacao"));
 		textViewParticipacaoPib.setText(informacoes.get("percentual_participacao_pib"));
 		textViewQuantidadeProjetosCienciaTecnologia.setText(informacoes.get("projetos_ciencia_tecnologia"));
-		textViewFundamentalIdeb.setText(informacoes.get("ideb_fundamental_final"));
-		textViewEnsinoMedioIdeb.setText(informacoes.get("ideb_ensino_medio"));
-		textViewIniciaisIdeb.setText(informacoes.get("ideb_fundamental_inicial"));
+		textViewIdebs.setText(informacoes.get("ideb"));
 		textViewQuantidadePrimeirosProjetos.setText(informacoes.get("quantidade_primeiros_projetos"));
 		textViewValorPrimeirosProjetos.setText(informacoes.get("valor_primeiros_projetos"));
 	    textViewQuantidadePesquisa.setText(informacoes.get("quantidade_projeto_cnpq"));
