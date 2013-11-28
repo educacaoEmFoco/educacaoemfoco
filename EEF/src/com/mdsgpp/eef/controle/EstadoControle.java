@@ -57,11 +57,8 @@ public class EstadoControle {
 
 	private void escreveEstado(Estado estado) {
 		
-		this.informacoesEstado.clear();
+		PreencherNomeSiglaEPopulacao(estado);
 		
-		this.informacoesEstado.put("sigla", estado.getSigla() );
-		this.informacoesEstado.put("nome", estado.getNome() );;
-		this.informacoesEstado.put("populacao", dfPopulacao.format( estado.getPopulacao() ) + " habitantes" );
 		this.informacoesEstado.put("percentual_participacao_pib", dfPorcentagem.format( estado.getParticipacaoPercentualPIB()[estado.getParticipacaoPercentualPIB().length-1] ) + "%" );
 		this.informacoesEstado.put("projetos_ciencia_tecnologia","Quantidade: " + estado.getProjetosCienciaTecnologia()[estado.getProjetosCienciaTecnologia().length-1].getQuantidade() + " projetos" );
 		this.informacoesEstado.put("valor_ciencia_tecnologia", "Valor investido: R$ " + dfValor.format( estado.getProjetosCienciaTecnologia()[estado.getProjetosCienciaTecnologia().length-1].getValor() ) + " (em mil)" );
@@ -97,12 +94,8 @@ public class EstadoControle {
 	
 	private void escreveEstadoComTodasInformacoes(Estado estado) {
 		String temp="";
-		
-		this.informacoesEstado.clear();
-		
-		this.informacoesEstado.put("sigla", estado.getSigla() );
-		this.informacoesEstado.put("nome", estado.getNome() );;
-		this.informacoesEstado.put("populacao", dfPopulacao.format( estado.getPopulacao() ) + " habitantes" );
+
+		PreencherNomeSiglaEPopulacao(estado);
 		
 		for(int i=0, ano = 1995; i<estado.getParticipacaoPercentualPIB().length; i++, ano++)
 			temp += ano + ": " + dfPorcentagem.format(estado.getParticipacaoPercentualPIB()[i]) + "%\n";
@@ -159,6 +152,14 @@ public class EstadoControle {
 		this.informacoesEstado.put("censo_eja_fundamental", "Censo EJA (Fundamental): "+  dfPorcentagem.format( estado.getCensos()[estado.getCensos().length-1].getFundamentalEJA()));
 		this.informacoesEstado.put("censo_eja_medio", "Censo EJA (Medio): "+  dfPorcentagem.format( estado.getCensos()[estado.getCensos().length-1].getMedioEJA()));	
 		
+	}
+
+	private void PreencherNomeSiglaEPopulacao(Estado estado) {
+		this.informacoesEstado.clear();
+		
+		this.informacoesEstado.put("sigla", estado.getSigla() );
+		this.informacoesEstado.put("nome", estado.getNome() );;
+		this.informacoesEstado.put("populacao", dfPopulacao.format( estado.getPopulacao() ) + " habitantes" );
 	}
 
 }
