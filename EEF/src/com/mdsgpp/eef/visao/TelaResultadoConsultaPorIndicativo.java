@@ -28,7 +28,7 @@ public class TelaResultadoConsultaPorIndicativo extends Activity {
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(
-				R.menu.tela_resultado_consulta_por_indicativo, menu);
+				R.menu.menu_telas_sem_sobre, menu);
 		return true;
 	}
 	

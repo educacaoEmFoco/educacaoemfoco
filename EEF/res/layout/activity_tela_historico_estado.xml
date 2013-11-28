@@ -8,6 +8,7 @@
         android:id="@+id/linearlayout_estado"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:background="@color/white"
@@ -381,5 +382,8 @@
             android:text="@string/string_vazia" />
   
     </LinearLayout>
+=======
+        android:text="@string/string_vazia" />
+>>>>>>> ed955e99f14f77cfa8537f3c5cc7c3c2a9b897f3
 
 </ScrollView>

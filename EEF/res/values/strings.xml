@@ -1,13 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- Strings da tela inicial -->
-
-    <string name="app_name">Educação em Foco</string>
-    <string name="action_settings">Settings</string>
-    <string name="title_activity_tela_estado">Indicativos de Estado</string>
+    <!-- Title: Activities -->
     <string name="title_activity_tela_comparacao">Comparação de Estados</string>
     <string name="title_activity_tela_lista_estado">Lista de estados</string>
+    <string name="title_activity_tela_sobre">Sobre o EEF</string>
+    <string name="title_activity_tela_consulta_indicativo">Consulta de Indicativos</string>
+    <string name="title_activity_tela_indicativos_consultados">Escolha os indicativos</string>
+    <string name="title_activity_tela_resultado_consulta">Comparação de Estados</string>
+    <string name="title_activity_tela_feed">Notícias</string>
+    <string name="title_activity_tela_feed_sobre">Sobre as Notícias</string>
+    <string name="title_activity_tela_estado">Indicativos do Estado</string>
+    <string name="title_activity_tela_escolhe_indicativo_grafico">Escolha um Indicativo</string>
+    <string name="title_activity_grafico">Gráfico</string>
+    <string name="title_activity_tela_grafico">Gráfico</string>
+    <string name="title_activity_sobre_indicativos">Sobre os Indicativos</string>
+    <string name="title_activity_tela_sobre_consulta">Sobre a Consulta</string>
+    <string name="title_noticias_sobre">Notícias</string>
+    <string name="title_activity_tela_comparacoes_gerais">Comparacões</string>
+    <string name="title_activity_tela_consulta_por_indicativo">Consulta por Indicativo</string>
+    <string name="title_activity_tela_resultado_consulta_por_indicativo">Resultado da Consulta</string>
+    <string name="title_activity_tela_consultas_gerais">Consultas</string>
+    <string name="title_activity_tela_sobre_comparacao">Sobre a Comparação</string>
+    <string name="title_activity_tela_historico_estado">Histórico de Indicativo</string>
+    
+    
+    
+    <!-- Strings da tela inicial -->
+    <string name="app_name">Educação em Foco</string>
+    <string name="action_settings">Settings</string>
     <string name="menu_botao_lista_estados">Lista de Estados</string>
     <string name="menu_botao_comparacao">Comparar</string>
     <string name="botao_gera_grafico">Gerar grafico</string>
@@ -17,12 +38,15 @@
     <string name="menu_botao_feed">Notícias</string>
     <string name="menu_botao_consulta_por_indicativo">Consulta por indicativo</string>
 
+    
     <!-- Strings da tela indicativos consultados -->
     <string name="botao_tela_indicativos">Ir</string>
+
 
     <!-- Strings da tela indicativos consultados -->
     <string name="botao_indicativos">Indicativos</string>
 
+    
     <!-- Strings da Escolhe Indicativo Grafico -->
     <string name="populacao">População</string>
     <string name="participacao_PIB_percentual">Participação Estadual no PIB (%)</string>
@@ -47,12 +71,13 @@
     <string name="censo">Censo Escolar(%)</string>
     <string name="bt_grafico">Gráfico</string>
 
+    
     <!-- Strings da tela escolhe tipo de consulta -->
     <string name="bt_historico">Historico</string>
     <string name="bt_estados">Estados</string>
 
-    <!-- Strings da tela estado -->
 
+    <!-- Strings da tela estado -->
     <string name="participacao_PIB">Participacao Estadual no PIB</string>
     <string name="numero_projetos">Projetos de Difusão Tecnológica</string>
     <string name="participacao_IDEB">IDEB</string>
@@ -62,53 +87,45 @@
     <string name="projeto_iniciacao">Projetos INCT</string>
     <string name="estados_opcao">Escolha dois estados: </string>
     <string name="compara_estados">Comparar</string>
-    <string name="title_activity_tela_compara_estados">Comparativo de estados</string>
-    <string name="tela_compara_estados">Estados </string>
     <string name="titulo_menu">Educação em Foco</string>
     <string name="string_x"> x </string>
     <string name="botao_historico_estado"> Historico </string>
 
+    
     <!-- Strings da tela consultas gerais -->
-
     <string name="botao_historico"> Histórico</string>
     <string name="botao_estado"> Estado</string>
 
+    
     <!-- Strings da tela sobre -->
-
     <string name="tela_sobre">Dados usados no EEF</string>
     <string name="participacao_percentual_PIB"> Participação Estadual no PIB: </string>
     <string name="participacao_percentual_PIB_conteudo"> Porcentagem referente a participação de cada estado na soma total do PIB nacional </string>
     <string name="projetos_difusao">Projetos de Difusão Tecnologica:</string>
     <string name="projetos_difusao_conteudo">  Número de projetos de difusão e popularização de ciência e tecnologia apoiados.
-         Inclui apoio a diversos projetos de difusão e popularização da ciência e tecnologia;</string>
+    		Inclui apoio a diversos projetos de difusão e popularização da ciência e tecnologia;</string>
     <string name="ideb"> IDEB - Indice de Desenvolvimento da Educação Básica: </string>
     <string name="ideb_conteudo"> O IDEB é um indicador criado pelo governo federal para medir a qualidade do ensino nas escolas públicas. 
-     A escala de notas vai de 0 a 10.</string>
+    		A escala de notas vai de 0 a 10.</string>
     <string name="primeiros_projetos"> Programa Primeiros Projetos:  </string>
     <string name="primeiros_projetos_conteudo"> Programa de apoio à infraestrutura de ciência e técnologia para jovens pesquisadores. </string>
     <string name="projetos_apoio_cnpq"> Projetos de pesquisa e apoio CNPq:  </string>
     <string name="projetos_apoio_cnpq_conteudo"> Número de projetos contratados pelos Principais Programas de Apoio à Pesquisa do CNPq.  </string>
     <string name="projetos_jovens_pesquisadores"> Projetos Jovens Pesquisadores:  </string>
     <string name="projetos_jovens_pesquisadores_conteudo"> Número de projetos contratados pelo Programa Jovens Pesquisadores.
-          A UF considerada é a UF da instituição de destino.  </string>
+    		A UF considerada é a UF da instituição de destino.  </string>
     <string name="projetos_inct"> Projetos Instituto Nacional de Ciência e Tecnologia - INCT: </string>
     <string name="projetos_inct_conteudo"> Número de projetos contratados dos Institutos Nacionais de Ciência e Tecnologia. </string>
     <string name="botao_sobre">Sobre</string>
-    <string name="title_activity_tela_sobre">TelaSobre</string>
-    <string name="title_activity_tela">Tela</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="title_activity_tela_consulta_indicativo">TelaConsultaIndicativo</string>
-    <string name="title_activity_tela_indicativos_consultados">TelaIndicativosConsultados</string>
-    <string name="title_activity_tela_resultado_consulta">TelaResultadoConsulta</string>
-    <string name="title_activity_tela_feed">TelaFeed</string>
-    <string name="title_activity_feed_adapter">FeedAdapter</string>
-    <string name="title_activity_receptor_dados">ReceptorDados</string>
-    <string name="title_activity_tela_feed_sobre">TelaFeedSobre</string>
-
+    
+    
     <!-- Strings da tela consulta por indicativo -->
     <string name="titulo_escolhe_estado_por_indicativo">Escolha o indicativo</string>
     <string name="bt_verifica_estados_por_indicativo">Verificar estados</string>
+    <string name="title_consultar_estados">Consultar Estados</string>
+    <string name="title_consultar_estado1">Escolha o primeiro estado.</string>
 
+    
     <!-- Strings da tela resultado da consulta por indicativo -->
     <string name="acre">Acre</string>
     <string name="alagoas">Alagoas</string>
@@ -138,52 +155,45 @@
     <string name="sergipe">Sergipe</string>
     <string name="tocantins">Tocantins</string>
 
+    
     <!-- Strings da tela sobre feed -->
-
     <string name="tela_sobre_feed">Fonte de Informações do EEF</string>
     <string name="descricao_sobre_feed">As notícias informadas pelo aplicativo Educação em Foco são originárias do site:\n
-	* http://noticias.gov.br/noticias/rss?id=AFSZW.\n
-	Entretanto, as notícias retiradas são apenas relacionadas a educação brasileira.\n
-	Caso o aplicativo seja atualizado para abranger mais fontes de informação, esta tela será atualizada para refletir tais mudanças.</string>
-    <string name="title_activity_aadsa">Aadsa</string>
-    <string name="title_activity_tela_escolhe_indicativo_grafico">TelaEscolheIndicativoGrafico</string>
-    <string name="title_activity_grafico">Grafico</string>
-    <string name="title_activity_tela_grafico">TelaGrafico</string>
-    <string name="title_activity_sobre_indicativos">SobreIndicativosActivity</string>
-    <string name="title_consultar_estados">Consultar Estados</string>
+			* http://noticias.gov.br/noticias/rss?id=AFSZW.\n
+			Entretanto, as notícias retiradas são apenas relacionadas a educação brasileira.\n
+			Caso o aplicativo seja atualizado para abranger mais fontes de informação, esta tela será atualizada para refletir tais mudanças.</string>
     <string name="consultar_estados_conteudo">Selecionando a opção de consultar estados você será redirecionado para uma tela onde irá aparecer a lista de todos os estados, para que você possa consultar os dados do mesmo.</string>
-    <string name="title_comparar_estados">Comparar Estados</string>
-    <string name="title_activity_sobre_menu">SobreMenuActivity</string>
     <string name="comparar_estados_conteudo">Selecionando a opção de comparar os estados você será redirecionado para uma tela onde você  poderá selecionar se deseja comparar por estado ou por indicativo.</string>
-    <string name="title_noticias_sobre">Notícias</string>
     <string name="noticias_sobre_conteudo">Selecionando a opção de notícias você será redirecionado para uma tela onde você  poderá visualizar as últimas notícias publicadas no site noticias.gov.br</string>
-    <string name="title_activity_tela_sobre_consulta">TelaSobreConsulta</string>
-    <string name="title_consultar_estado1">Escolha o primeiro estado.</string>
     <string name="informacao_consultar_estado1">Será apresentado um combo box com 26* unidades federativas brasileiras, 
-          para a escolha daquela que o usuário deseje definir como o primeiro estado na comparação.</string>
-    <string name="title_ast_adicional">*</string>
+    		para a escolha daquela que o usuário deseje definir como o primeiro estado na comparação.</string>
     <string name="conteudo_sobre_comparacao">Será apresentado 2 combo box com as unidades federativas brasileiras, para que o usuário escolha dois estados diferentes para realizar a comparação dos mesmos.</string>
     <string name="informacao_ast_adicional">O 27º estado é excluido da apresentação,pois este está selecionado no outro combo box. </string>
     <string name="title_consultar_estado2">Escolha o segundo estado.</string>
+    <string name="title_ast_adicional">*</string>
     <string name="informacao_consultar_estado2">Será apresentado um combo box com 26* unidades federativas brasileiras,
-          para a escolha daquela que o usuário deseje definir como o segundo estado na comparação.</string>
+    		para a escolha daquela que o usuário deseje definir como o segundo estado na comparação.</string>
     <string name="title_botao_sobre_consulta">Sobre</string>
     <string name="title_sobre_comparacao">Sobre Comparação</string>
     <string name="informacao_botao_sobre_consulta">Após a seleção dos 2 estados desejados,esta opção encaminha o usuário para uma tela onde devem ser definido(s) qual(s) indicativo(s) deseja visualizar na comparação.</string>
-    <string name="title_activity_tela_sobre_comparacao">TelaSobreComparacao</string>
     <string name="title_botao_comparar">Comparar</string>
     <string name="informacao_botao_comparar">Após a seleção dos 2 estados desejados,esta opção encaminha o usuário para uma tela onde devem ser definido(s) qual(s) indicativo(s) deseja visualizar na comparação.</string>
     <string name="title_activity_tela_consultas">TelaConsultas</string>
-    <string name="title_activity_tela_consultas_gerais">TelaConsultasGerais</string>
+
 
     <!-- Strings da tela Comparação -->
-
     <string name="title_radio_button_marcar_todas">Marcar todos indicativos</string>
     <string name="title_radio_button_desmarcar_todas">Desmarcar todos indicativos</string>
-    <string name="title_activity_tela_comparacoes_gerais">TelaComparacoesGerais</string>
-    <string name="title_activity_tela_consulta_por_indicativo">TelaConsultaPorIndicativo</string>
-    <string name="title_activity_tela_resultado_consulta_por_indicativo">TelaResultadoConsultaPorIndicativo</string>
+    <string name="title_comparar_estados">Comparar Estados</string>
     <string name="title_activity_tela_escolhe_tipo_de_consulta">TelaEscolheTipoDeConsulta</string>
-    <string name="title_activity_tela_historico_estado">TelaHistoricoEstado</string>
+   
+    
+    <!-- Strings da tela Comparações Gerais -->
+    <string name="title_activity_tela_sobre_comparacoes_gerais">TelaSobreComparacoesGerais</string>
+    <string name="title_sobre_comparacacoes_gerais_estados">Comparação por estado: </string>
+    <string name="title_sobre_comparacacoes_gerais_indicativos">Comparação por indicativo: </string>
+    <string name="comparacoes_gerais_conteudo_estados">O usuário escolherá dois estados para comparar os indicativos dos mesmos.</string>
+    <string name="comparacoes_gerais_conteudo_indicativos">O usuário escolherá os indicativos que deseja comparar em relação a todos os estados.</string>
 
 </resources>
+

@@ -19,7 +19,7 @@ public class TelaComparacoesGerais extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.tela_comparacoes_gerais, menu);
+		getMenuInflater().inflate(R.menu.menu_telas_sem_sobre, menu);
 		return true;
 	}
 
@@ -28,9 +28,13 @@ public class TelaComparacoesGerais extends Activity {
 		startActivity(intent);
 	}
 	
-
 	public void clickBotaoIndicativos(View view) {
-		Intent intent = new Intent(this, TelaIndicativosConsultados.class);
+		Intent intent = new Intent(this, TelaConsultaPorIndicativo.class);
+		startActivity(intent);
+	}
+	
+	public void clickBotaoSobreComparacoesGerais(View view) {
+		Intent intent = new Intent(this, TelaSobreComparacoesGerais.class);
 		startActivity(intent);
 	}
 }
