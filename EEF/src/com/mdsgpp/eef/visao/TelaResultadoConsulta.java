@@ -120,6 +120,8 @@ public class TelaResultadoConsulta extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_tela_compara_estados);
+		
+		InicializaCamposTexto();
 		capturaInformacoes();
 		escondeCamposDeTexto();
 	}
@@ -156,8 +158,6 @@ public class TelaResultadoConsulta extends Activity {
 		bTaxaDistorcao = intent.getBooleanExtra("CB_TAXA_DISTORCAO", false);
 		bTaxaAbandono = intent.getBooleanExtra("CB_TAXA_ABANDONO", false);
 		bAprovacao = intent.getBooleanExtra("CB_APROVACAO", false);
-		
-		InicializaCamposTexto();
 
 		HashMap<String, String> informacoesEstado1 = new HashMap<String, String>();
 		HashMap<String, String> informacoesEstado2 = new HashMap<String, String>();
@@ -240,7 +240,7 @@ public class TelaResultadoConsulta extends Activity {
 		textViewMediaAlunosPorTurmaFundamental2.setText(informacoes2.get("alunos_por_turma_ensino_fundamental").split(":")[1]);
 		textViewMediaAlunosPorTurmaMedio2.setText(informacoes2.get("alunos_por_turma_ensino_medio").split(":")[1]);
 		textViewMediaHorasAulaFundamental2.setText(informacoes2.get("horas_aula_ensino_fundamental").split(":")[1]);
-		textViewMediaHorasAulaMedio2.setText(informacoes2.get("horas_aula_ensino_medio"));
+		textViewMediaHorasAulaMedio2.setText(informacoes2.get("horas_aula_ensino_medio").split(":")[1]);
 		textViewTaxaDistorcaoIdadeSerieFundamental2.setText(informacoes2.get("taxa_distorcao_fundamental").split(":")[1]);
 		textViewTaxaDistorcaoIdadeSerieMedio2.setText(informacoes2.get("taxa_distorcao_medio").split(":")[1]);
 		textViewTaxaDeAproveitamentoFundamental2.setText(informacoes2.get("taxa_aprovacao_fundamental").split(":")[1]);
@@ -283,7 +283,6 @@ public class TelaResultadoConsulta extends Activity {
 		textViewMediaAlunosPorTurma1  = (TextView) findViewById(R.id.textView_media_alunos_por_turma1);
 		textViewMediaHorasAula1 = (TextView) findViewById(R.id.textView_horas_aula_ensino1);
 		textViewTaxaDistorcao1 = (TextView) findViewById(R.id.textView_taxa_distorcao1);
-		
 		textViewCensoIniciaisFundamental1 = (TextView) findViewById(R.id.textView_censo_iniciais_fundamental1);
 		textViewCensoFinaisFundamental1 = (TextView) findViewById(R.id.textView_censo_finais_fundamental1);
 		textViewCensoMedio1 = (TextView) findViewById(R.id.textView_censo_medio1);
@@ -319,18 +318,19 @@ public class TelaResultadoConsulta extends Activity {
 		textViewProjetosPesquisa2 = (TextView) findViewById(R.id.textView_projetos_pesquisa2);
 		textViewQuantidadePesquisa2 = (TextView) findViewById(R.id.textView_projetos_pesquisa_quantidade2);
 		textViewValoresPesquisa2 = (TextView) findViewById(R.id.textView_valores_projeto_pesquisa2);
+		textViewJovensPesquisadores2 = (TextView) findViewById(R.id.textView_jovens_pesquisadores2);
 		textViewQuantidadeJovensPesquisadores2 = (TextView) findViewById(R.id.textView_jovens_pesquisadores_quantidade2);
 		textViewValorJovensPesquisadores2 = (TextView) findViewById(R.id.textView_jovens_pesquisadores_valor2);
 		textViewProjetosIniciacao2 = (TextView) findViewById(R.id.textView_projetos_iniciacao2);
 		textViewQuantidadeProjetosIniciacao2 = (TextView) findViewById(R.id.textView_projetos_iniciacao_quantidade2);
 		textViewValorProjetosIniciacao2 = (TextView) findViewById(R.id.textView_projetos_iniciacao_valor2);
 		
-		textViewTaxaDeAbandono2 = (TextView) findViewById(R.id.textView_taxa_abandono);
-		textViewTaxaDeAproveitamento2  = (TextView) findViewById(R.id.textView_taxa_aprovacao); 
-		textViewCenso2  = (TextView) findViewById(R.id.textView_censo);
-		textViewMediaAlunosPorTurma2  = (TextView) findViewById(R.id.textView_media_alunos_por_turma);
-		textViewMediaHorasAula2 = (TextView) findViewById(R.id.textView_horas_aula_ensino);
-		textViewTaxaDistorcao2 = (TextView) findViewById(R.id.textView_taxa_distorcao);
+		textViewTaxaDeAbandono2 = (TextView) findViewById(R.id.textView_taxa_abandono2);
+		textViewTaxaDeAproveitamento2  = (TextView) findViewById(R.id.textView_taxa_aprovacao2); 
+		textViewCenso2  = (TextView) findViewById(R.id.textView_censo2);
+		textViewMediaAlunosPorTurma2  = (TextView) findViewById(R.id.textView_media_alunos_por_turma2);
+		textViewMediaHorasAula2 = (TextView) findViewById(R.id.textView_horas_aula_ensino2);
+		textViewTaxaDistorcao2 = (TextView) findViewById(R.id.textView_taxa_distorcao2);
 
 		textViewCensoIniciaisFundamental2 = (TextView) findViewById(R.id.textView_censo_iniciais_fundamental2);
 		textViewCensoFinaisFundamental2 = (TextView) findViewById(R.id.textView_censo_finais_fundamental2);
@@ -444,12 +444,19 @@ public class TelaResultadoConsulta extends Activity {
 		setVisibility(textViewTaxaDeAproveitamentoMedio2, bAprovacao);
 		
 		try {
+			Log.i("teste visibility", "populacao");
 			setVisibility(textViewPopulacao2, bPopulacao);
+			Log.i("teste visibility", "ideb");
 			setVisibility(textViewIdeb2, bIdeb);
+			Log.i("teste visibility", "participacao");
 			setVisibility(textViewParticipacaoEstadualPib2, bPib);
+			Log.i("teste visibility", "primeiros projetos");
 			setVisibility(textViewProgramaPrimeirosProjetos2, bPrimeirosProjetos);
+			Log.i("teste visibility", "cnpq");
 			setVisibility(textViewProjetosPesquisa2, bProjetosCnpq);
+			Log.i("teste visibility", "jovens");
 			setVisibility(textViewJovensPesquisadores2, bProjetosJovens);
+			Log.i("teste visibility", "inct");
 			setVisibility(textViewProjetosIniciacao2, bProjetosIniciacao);
 			setVisibility(textViewNumeroProjetos2, bProjetosDifusao);
 			setVisibility(textViewCenso2, bCenso);
@@ -458,7 +465,6 @@ public class TelaResultadoConsulta extends Activity {
 			setVisibility(textViewTaxaDistorcao2, bTaxaDistorcao);
 			setVisibility(textViewTaxaDeAbandono2, bTaxaAbandono);
 			setVisibility(textViewTaxaDeAproveitamento2, bAprovacao);
-			setVisibility(textViewPopulacao2, bPopulacao);
 		} catch(NullPointerException npe) {
 			Log.i("NullPointerException - layout portrait não possui estes id's",npe.toString());
 		}

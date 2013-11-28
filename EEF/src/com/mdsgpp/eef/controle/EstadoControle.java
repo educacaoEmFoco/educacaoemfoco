@@ -54,9 +54,9 @@ public class EstadoControle {
 		this.informacoesEstado.put("percentual_participacao_pib", dfPorcentagem.format( estado.getParticipacaoPercentualPIB()[estado.getParticipacaoPercentualPIB().length-1] ) + "%" );
 		this.informacoesEstado.put("projetos_ciencia_tecnologia","Quantidade: " + estado.getProjetosCienciaTecnologia()[estado.getProjetosCienciaTecnologia().length-1].getQuantidade() + " projetos" );
 		this.informacoesEstado.put("valor_ciencia_tecnologia", "Valor investido: R$ " + dfValor.format( estado.getProjetosCienciaTecnologia()[estado.getProjetosCienciaTecnologia().length-1].getValor() ) + " (em mil)" );
-		this.informacoesEstado.put("ideb_fundamental_final", "Ensino Fundamental (séries finais): "+ dfPorcentagem.format( estado.getIdebs()[estado.getIdebs().length-1].getFundamental()) );
-		this.informacoesEstado.put("ideb_ensino_medio", "Ensino Médio: " +dfPorcentagem.format(  estado.getIdebs()[estado.getIdebs().length-1].getMedio() ) + "" );
-		this.informacoesEstado.put("ideb_fundamental_inicial", "Ensino Fundamental (Séries iniciais): " + dfPorcentagem.format( estado.getIdebs()[estado.getIdebs().length-1].getSeriesIniciais() ) + "");
+		this.informacoesEstado.put("ideb_fundamental_final", "Ensino Fundamental (sï¿½ries finais): "+ dfPorcentagem.format( estado.getIdebs()[estado.getIdebs().length-1].getFundamental()) );
+		this.informacoesEstado.put("ideb_ensino_medio", "Ensino Mï¿½dio: " +dfPorcentagem.format(  estado.getIdebs()[estado.getIdebs().length-1].getMedio() ) + "" );
+		this.informacoesEstado.put("ideb_fundamental_inicial", "Ensino Fundamental (Sï¿½ries iniciais): " + dfPorcentagem.format( estado.getIdebs()[estado.getIdebs().length-1].getSeriesIniciais() ) + "");
 		this.informacoesEstado.put("quantidade_primeiros_projetos","Quantidade: "+ estado.getPrimeirosProjetos()[estado.getPrimeirosProjetos().length-1].getQuantidade() + " projetos");
 		this.informacoesEstado.put("valor_primeiros_projetos","Valor investido: R$ "+ dfValor.format( estado.getPrimeirosProjetos()[estado.getPrimeirosProjetos().length-1].getValor() ) + " (em mil)");
 		this.informacoesEstado.put("quantidade_projeto_cnpq","Quantidade: " + estado.getProjetosApoioCnpq()[estado.getProjetosApoioCnpq().length-1].getQuantidade() + " projetos");
@@ -69,16 +69,16 @@ public class EstadoControle {
 		this.informacoesEstado.put("alunos_por_turma_ensino_fundamental", "Quantidade media de alunos por turma (Fundamental): "+  dfValor.format( estado.getMediaAlunosPorTurma()[estado.getMediaAlunosPorTurma().length-1].getEnsinoFundamental()) );
 		this.informacoesEstado.put("alunos_por_turma_ensino_medio", "Quantidade media de alunos por turma (Medio): "+  dfValor.format( estado.getMediaAlunosPorTurma()[estado.getMediaAlunosPorTurma().length-1].getEnsinoMedio()));	
 		this.informacoesEstado.put("horas_aula_ensino_fundamental", "Quantidade media de horas de aula(Fundamental): "+  dfValor.format( estado.getMediaHorasAula()[estado.getMediaHorasAula().length-1].getEnsinoFundamental()) );
-		this.informacoesEstado.put("horas_aula_ensino_medio", "Quantidade media de horas de aula (Medio:) "+  dfValor.format( estado.getMediaHorasAula()[estado.getMediaHorasAula().length-1].getEnsinoMedio()));	
-		this.informacoesEstado.put("taxa_distorcao_fundamental", "Quantidade de Distorção da Idade(Fundamental): "+  dfPorcentagem.format( estado.getTaxaDistorcaoIdadeSerie()[estado.getTaxaDistorcaoIdadeSerie().length-1].getEnsinoFundamental()) );
-		this.informacoesEstado.put("taxa_distorcao_medio", "Quantidade de Distorção da Idade (Medio): "+  dfPorcentagem.format( estado.getTaxaDistorcaoIdadeSerie()[estado.getTaxaDistorcaoIdadeSerie().length-1].getEnsinoMedio()));	
-		this.informacoesEstado.put("taxa_aprovacao_fundamental", "Taxa de Aprovação (Fundamental): "+  dfPorcentagem.format( estado.getTaxaDeAproveitamento()[estado.getTaxaDeAproveitamento().length-1].getEnsinoFundamental()) );
-		this.informacoesEstado.put("taxa_aprovacao_medio", "Taxa de Aprovação (Medio): "+  dfPorcentagem.format( estado.getTaxaDeAproveitamento()[estado.getTaxaDeAproveitamento().length-1].getEnsinoMedio()));	
+		this.informacoesEstado.put("horas_aula_ensino_medio", "Quantidade media de horas de aula (Medio): "+  dfValor.format( estado.getMediaHorasAula()[estado.getMediaHorasAula().length-1].getEnsinoMedio()));	
+		this.informacoesEstado.put("taxa_distorcao_fundamental", "Quantidade de Distorï¿½ï¿½o da Idade(Fundamental): "+  dfPorcentagem.format( estado.getTaxaDistorcaoIdadeSerie()[estado.getTaxaDistorcaoIdadeSerie().length-1].getEnsinoFundamental()) );
+		this.informacoesEstado.put("taxa_distorcao_medio", "Quantidade de Distorï¿½ï¿½o da Idade (Medio): "+  dfPorcentagem.format( estado.getTaxaDistorcaoIdadeSerie()[estado.getTaxaDistorcaoIdadeSerie().length-1].getEnsinoMedio()));	
+		this.informacoesEstado.put("taxa_aprovacao_fundamental", "Taxa de Aprovaï¿½ï¿½o (Fundamental): "+  dfPorcentagem.format( estado.getTaxaDeAproveitamento()[estado.getTaxaDeAproveitamento().length-1].getEnsinoFundamental()) );
+		this.informacoesEstado.put("taxa_aprovacao_medio", "Taxa de Aprovaï¿½ï¿½o (Medio): "+  dfPorcentagem.format( estado.getTaxaDeAproveitamento()[estado.getTaxaDeAproveitamento().length-1].getEnsinoMedio()));	
 		this.informacoesEstado.put("taxa_abandono_fundamental", "Taxa de Abandono (Fundamental): "+  dfPorcentagem.format( estado.getTaxaDeAbandono()[estado.getTaxaDeAbandono().length-1].getEnsinoFundamental()) );
 		this.informacoesEstado.put("taxa_abandono_medio", "Taxa de Abandono (Medio): "+  dfPorcentagem.format( estado.getTaxaDeAbandono()[estado.getTaxaDeAbandono().length-1].getEnsinoMedio()));	
 		this.informacoesEstado.put("censo_anos_iniciais_fundamental", "Censo Anos Iniciais (Fundamental): "+  dfPorcentagem.format( estado.getCensos()[estado.getCensos().length-1].getAnosIniciaisFundamental()));	
 		this.informacoesEstado.put("censo_anos_finais_fundamental", "Censo Anos Finais (Fundamental): "+  dfPorcentagem.format( estado.getCensos()[estado.getCensos().length-1].getAnosFinaisFundamental()));
-		this.informacoesEstado.put("censo_ensino_medio", "Censo Ensino Médio: "+  dfPorcentagem.format( estado.getCensos()[estado.getCensos().length-1].getEnsinoMedio()));	
+		this.informacoesEstado.put("censo_ensino_medio", "Censo Ensino Mï¿½dio: "+  dfPorcentagem.format( estado.getCensos()[estado.getCensos().length-1].getEnsinoMedio()));	
 		this.informacoesEstado.put("censo_eja_fundamental", "Censo EJA (Fundamental): "+  dfPorcentagem.format( estado.getCensos()[estado.getCensos().length-1].getFundamentalEJA()));
 		this.informacoesEstado.put("censo_eja_medio", "Censo EJA (Medio): "+  dfPorcentagem.format( estado.getCensos()[estado.getCensos().length-1].getMedioEJA()));	
 		

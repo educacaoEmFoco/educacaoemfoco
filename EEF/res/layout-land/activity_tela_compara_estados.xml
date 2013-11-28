@@ -436,8 +436,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="@string/populacao"
-                android:visibility="invisible" />
+                android:text="@string/populacao" />
 
             <TextView
                 android:id="@+id/textView_populacao_valor2"
@@ -453,8 +452,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="@string/participacao_PIB"
-                android:visibility="invisible" />
+                android:text="@string/participacao_PIB" />
 
             <TextView
                 android:id="@+id/textView_participacao_pib_valor2"
@@ -470,8 +468,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="@string/numero_projetos"
-                android:visibility="invisible" />
+                android:text="@string/numero_projetos" />
 
             <TextView
                 android:id="@+id/textView_numero_projetos_quantidade2"
@@ -495,8 +492,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="@string/participacao_IDEB"
-                android:visibility="invisible" />
+                android:text="@string/participacao_IDEB" />
 
             <TextView
                 android:id="@+id/textView_ideb_fundamental2"
@@ -528,8 +524,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="@string/Programa_primeiros_projetos"
-                android:visibility="invisible" />
+                android:text="@string/Programa_primeiros_projetos" />
 
             <TextView
                 android:id="@+id/textView_primeiros_projetos_quantidade2"
@@ -553,8 +548,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="@string/Projetos_pesquisa_CNPq"
-                android:visibility="invisible" />
+                android:text="@string/Projetos_pesquisa_CNPq" />
 
             <TextView
                 android:id="@+id/textView_projetos_pesquisa_quantidade2"
@@ -578,8 +572,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="@string/jovens_pesquisadores"
-                android:visibility="invisible" />
+                android:text="@string/jovens_pesquisadores" />
 
             <TextView
                 android:id="@+id/textView_jovens_pesquisadores_quantidade2"
@@ -603,8 +596,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="@string/projeto_iniciacao"
-                android:visibility="invisible" />
+                android:text="@string/projeto_iniciacao" />
 
             <TextView
                 android:id="@+id/textView_projetos_iniciacao_quantidade2"
@@ -628,8 +620,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="@string/media_alunos_por_turma"
-                android:visibility="invisible" />
+                android:text="@string/media_alunos_por_turma" />
 
             <TextView
                 android:id="@+id/textView_media_alunos_por_turma_fundamental2"
@@ -653,8 +644,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="@string/horas_aula_ensino"
-                android:visibility="invisible" />
+                android:text="@string/horas_aula_ensino" />
 
             <TextView
                 android:id="@+id/textView_horas_aula_ensino_fundamental2"
@@ -678,8 +668,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="@string/taxa_distorcao"
-                android:visibility="invisible" />
+                android:text="@string/taxa_distorcao" />
 
             <TextView
                 android:id="@+id/textView_taxa_distorcao_fundamental2"
@@ -703,8 +692,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="@string/taxa_aprovacao"
-                android:visibility="invisible" />
+                android:text="@string/taxa_aprovacao" />
 
             <TextView
                 android:id="@+id/textView_taxa_aprovacao_fundamental2"
@@ -728,8 +716,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="@string/taxa_abandono"
-                android:visibility="invisible" />
+                android:text="@string/taxa_abandono" />
 
             <TextView
                 android:id="@+id/textView_taxa_abandono_fundamental2"
@@ -753,8 +740,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="@string/censo"
-                android:visibility="invisible" />
+                android:text="@string/censo" />
 
             <TextView
                 android:id="@+id/textView_censo_iniciais_fundamental2"
