@@ -25,8 +25,7 @@ public class TelaHistoricoEstado extends Activity {
 	private TextView textViewParticipacaoPib;
 	private TextView textViewQuantidadeProjetosCienciaTecnologia;
 	private TextView textViewIdebs;
-	private	TextView textViewQuantidadePrimeirosProjetos;
-	private TextView textViewValorPrimeirosProjetos;
+	private	TextView textViewPrimeirosProjetos;
 	private TextView textViewQuantidadePesquisa;
 	private TextView textViewQuantidadeJovensPesquisadores;
 	private TextView textViewValoresPesquisa;
@@ -93,8 +92,7 @@ public class TelaHistoricoEstado extends Activity {
 		textViewParticipacaoPib = (TextView) findViewById(R.id.textView_participacao_pib_valor);
 		textViewQuantidadeProjetosCienciaTecnologia = (TextView) findViewById(R.id.textView_numero_projetos_quantidade);
 		textViewIdebs = (TextView) findViewById(R.id.textView_idebs);
-		textViewQuantidadePrimeirosProjetos = (TextView) findViewById(R.id.textView_primeiros_projetos_quantidade);
-		textViewValorPrimeirosProjetos = (TextView) findViewById(R.id.textView_programa_primeiros_projetos_valor);
+		textViewPrimeirosProjetos = (TextView) findViewById(R.id.textView_primeiros_projetos);
 		textViewQuantidadePesquisa = (TextView) findViewById(R.id.textView_projetos_pesquisa_quantidade);
 		textViewValoresPesquisa = (TextView) findViewById(R.id.textView_valores_projeto_pesquisa);
 		textViewQuantidadeJovensPesquisadores = (TextView) findViewById(R.id.textView_jovens_pesquisadores_quantidade);
@@ -126,8 +124,7 @@ public class TelaHistoricoEstado extends Activity {
 		textViewParticipacaoPib.setText(informacoes.get("percentual_participacao_pib"));
 		textViewQuantidadeProjetosCienciaTecnologia.setText(informacoes.get("projetos_ciencia_tecnologia"));
 		textViewIdebs.setText(informacoes.get("ideb"));
-		textViewQuantidadePrimeirosProjetos.setText(informacoes.get("quantidade_primeiros_projetos"));
-		textViewValorPrimeirosProjetos.setText(informacoes.get("valor_primeiros_projetos"));
+		textViewPrimeirosProjetos.setText(informacoes.get("primeiros_projetos"));
 	    textViewQuantidadePesquisa.setText(informacoes.get("quantidade_projeto_cnpq"));
 		textViewValoresPesquisa.setText(informacoes.get("valor_projetos_cnpq"));
 		textViewQuantidadeJovensPesquisadores.setText(informacoes.get("quantidade_projeto_jovens_pesquisadores"));

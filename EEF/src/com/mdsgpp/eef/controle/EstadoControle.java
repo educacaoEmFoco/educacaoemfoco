@@ -96,7 +96,7 @@ public class EstadoControle {
 	}
 	
 	private void escreveEstadoComTodasInformacoes(Estado estado) {
-		String pib = "", projetosDT="", idebs="";
+		String pib = "", projetosDT="", idebs="", primeirosProj="";
 		
 		this.informacoesEstado.clear();
 		
@@ -116,14 +116,18 @@ public class EstadoControle {
 		
 		for(int i=0, ano=2005; i<estado.getIdebs().length; i++, ano++){
 			idebs += ano + ": " + "Ensino Fundamental (séries finais): "+ dfPorcentagem.format( estado.getIdebs()[i].getFundamental()) + "\n" +
-					"\t\t " + "Ensino Médio: " +dfPorcentagem.format(  estado.getIdebs()[i].getMedio() ) + "\n" +
-					"\t\t " + "Ensino Fundamental (Séries iniciais): " + dfPorcentagem.format( estado.getIdebs()[i].getSeriesIniciais() ) + "\n\n";
+					"\t\t  " + "Ensino Médio: " +dfPorcentagem.format(  estado.getIdebs()[i].getMedio() ) + "\n" +
+					"\t\t  " + "Ensino Fundamental (Séries iniciais): " + dfPorcentagem.format( estado.getIdebs()[i].getSeriesIniciais() ) + "\n\n";
 			
 		}
 		this.informacoesEstado.put("ideb", idebs);
 		
-		this.informacoesEstado.put("quantidade_primeiros_projetos","Quantidade: "+ estado.getPrimeirosProjetos()[estado.getPrimeirosProjetos().length-1].getQuantidade() + " projetos");
-		this.informacoesEstado.put("valor_primeiros_projetos","Valor investido: R$ "+ dfValor.format( estado.getPrimeirosProjetos()[estado.getPrimeirosProjetos().length-1].getValor() ) + " (em mil)");
+		for(int i=0, ano=2005; i<estado.getPrimeirosProjetos().length; i++, ano++){
+			primeirosProj += ano + ": " + "Quantidade: "+ estado.getPrimeirosProjetos()[i].getQuantidade() + " projetos\n" +
+							 "\t\t  " + "Valor investido: R$ "+ dfValor.format( estado.getPrimeirosProjetos()[estado.getPrimeirosProjetos().length-1].getValor() ) + " (em mil)\n\n";
+		}
+		this.informacoesEstado.put("primeiros_projetos",primeirosProj);
+		
 		this.informacoesEstado.put("quantidade_projeto_cnpq","Quantidade: " + estado.getProjetosApoioCnpq()[estado.getProjetosApoioCnpq().length-1].getQuantidade() + " projetos");
 		this.informacoesEstado.put("valor_projetos_cnpq","Valor investido: R$ " + dfValor.format( estado.getProjetosApoioCnpq()[estado.getProjetosApoioCnpq().length-1].getValor() ) + " (em mil)");
 		this.informacoesEstado.put("quantidade_projeto_jovens_pesquisadores","Quantidade: " + estado.getProjetoJovensPesquisadores()[estado.getProjetoJovensPesquisadores().length-1].getQuantidade() + " projetos");

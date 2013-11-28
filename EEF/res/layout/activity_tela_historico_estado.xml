@@ -8,7 +8,6 @@
         android:id="@+id/linearlayout_estado"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:background="@color/white"
@@ -118,15 +117,7 @@
             android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/textView_primeiros_projetos_quantidade"
-            style="@style/valor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:text="@string/string_vazia" />
-
-        <TextView
-            android:id="@+id/textView_programa_primeiros_projetos_valor"
+            android:id="@+id/textView_primeiros_projetos"
             style="@style/valor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -382,8 +373,4 @@
             android:text="@string/string_vazia" />
   
     </LinearLayout>
-=======
-        android:text="@string/string_vazia" />
->>>>>>> ed955e99f14f77cfa8537f3c5cc7c3c2a9b897f3
-
 </ScrollView>
