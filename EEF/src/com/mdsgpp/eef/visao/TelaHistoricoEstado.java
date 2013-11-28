@@ -26,7 +26,6 @@ public class TelaHistoricoEstado extends Activity {
 	private TextView textViewQuantidadeProjetosCienciaTecnologia;
 	private TextView textViewIdebs;
 	private	TextView textViewPrimeirosProjetos;
-	private TextView textViewQuantidadePesquisa;
 	private TextView textViewQuantidadeJovensPesquisadores;
 	private TextView textViewValoresPesquisa;
 	private TextView textViewValorJovensPesquisadores;
@@ -93,7 +92,6 @@ public class TelaHistoricoEstado extends Activity {
 		textViewQuantidadeProjetosCienciaTecnologia = (TextView) findViewById(R.id.textView_numero_projetos_quantidade);
 		textViewIdebs = (TextView) findViewById(R.id.textView_idebs);
 		textViewPrimeirosProjetos = (TextView) findViewById(R.id.textView_primeiros_projetos);
-		textViewQuantidadePesquisa = (TextView) findViewById(R.id.textView_projetos_pesquisa_quantidade);
 		textViewValoresPesquisa = (TextView) findViewById(R.id.textView_valores_projeto_pesquisa);
 		textViewQuantidadeJovensPesquisadores = (TextView) findViewById(R.id.textView_jovens_pesquisadores_quantidade);
 		textViewValorJovensPesquisadores= (TextView) findViewById(R.id.textView_jovens_pesquisadores_valor);
@@ -125,8 +123,7 @@ public class TelaHistoricoEstado extends Activity {
 		textViewQuantidadeProjetosCienciaTecnologia.setText(informacoes.get("projetos_ciencia_tecnologia"));
 		textViewIdebs.setText(informacoes.get("ideb"));
 		textViewPrimeirosProjetos.setText(informacoes.get("primeiros_projetos"));
-	    textViewQuantidadePesquisa.setText(informacoes.get("quantidade_projeto_cnpq"));
-		textViewValoresPesquisa.setText(informacoes.get("valor_projetos_cnpq"));
+		textViewValoresPesquisa.setText(informacoes.get("cnpq"));
 		textViewQuantidadeJovensPesquisadores.setText(informacoes.get("quantidade_projeto_jovens_pesquisadores"));
 		textViewValorJovensPesquisadores.setText(informacoes.get("valor_projetos_jovens_pesquisadores"));
 		textViewQuantidadeProjetosIniciacao.setText(informacoes.get("quantidade_projetos_inct"));

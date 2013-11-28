@@ -134,14 +134,6 @@
             android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/textView_projetos_pesquisa_quantidade"
-            style="@style/valor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:text="@string/string_vazia" />
-
-        <TextView
             android:id="@+id/textView_valores_projeto_pesquisa"
             style="@style/valor"
             android:layout_width="wrap_content"

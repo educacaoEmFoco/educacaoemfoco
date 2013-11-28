@@ -96,7 +96,7 @@ public class EstadoControle {
 	}
 	
 	private void escreveEstadoComTodasInformacoes(Estado estado) {
-		String pib = "", projetosDT="", idebs="", primeirosProj="";
+		String temp="";
 		
 		this.informacoesEstado.clear();
 		
@@ -105,31 +105,39 @@ public class EstadoControle {
 		this.informacoesEstado.put("populacao", dfPopulacao.format( estado.getPopulacao() ) + " habitantes" );
 		
 		for(int i=0, ano = 1995; i<estado.getParticipacaoPercentualPIB().length; i++, ano++)
-			pib += ano + ": " + dfPorcentagem.format(estado.getParticipacaoPercentualPIB()[i]) + "%\n";
-		this.informacoesEstado.put("percentual_participacao_pib", pib);
+			temp += ano + ": " + dfPorcentagem.format(estado.getParticipacaoPercentualPIB()[i]) + "%\n";
+		this.informacoesEstado.put("percentual_participacao_pib", temp);
+		temp = "";
 		
 		for(int i=0, ano = 2003; i<estado.getProjetosCienciaTecnologia().length; i++, ano++){
-			projetosDT += ano + ": " + "Quantidade: "+ estado.getProjetosCienciaTecnologia()[i].getQuantidade() + " projetos\n" +
-			"\t\t " + "  Valor investido: R$ " + dfValor.format(estado.getProjetosCienciaTecnologia()[i].getValor()) + " (em mil)\n\n";
+			temp += ano + ": " + "Quantidade: "+ estado.getProjetosCienciaTecnologia()[i].getQuantidade() + " projetos\n" +
+					"\t\t " + "  Valor investido: R$ " + dfValor.format(estado.getProjetosCienciaTecnologia()[i].getValor()) + " (em mil)\n\n";
 		}
-		this.informacoesEstado.put("projetos_ciencia_tecnologia",projetosDT);
+		this.informacoesEstado.put("projetos_ciencia_tecnologia",temp);
+		temp="";
 		
 		for(int i=0, ano=2005; i<estado.getIdebs().length; i++, ano++){
-			idebs += ano + ": " + "Ensino Fundamental (séries finais): "+ dfPorcentagem.format( estado.getIdebs()[i].getFundamental()) + "\n" +
+			temp += ano + ": " + "Ensino Fundamental (séries finais): "+ dfPorcentagem.format( estado.getIdebs()[i].getFundamental()) + "\n" +
 					"\t\t  " + "Ensino Médio: " +dfPorcentagem.format(  estado.getIdebs()[i].getMedio() ) + "\n" +
 					"\t\t  " + "Ensino Fundamental (Séries iniciais): " + dfPorcentagem.format( estado.getIdebs()[i].getSeriesIniciais() ) + "\n\n";
 			
 		}
-		this.informacoesEstado.put("ideb", idebs);
+		this.informacoesEstado.put("ideb", temp);
 		
 		for(int i=0, ano=2005; i<estado.getPrimeirosProjetos().length; i++, ano++){
-			primeirosProj += ano + ": " + "Quantidade: "+ estado.getPrimeirosProjetos()[i].getQuantidade() + " projetos\n" +
-							 "\t\t  " + "Valor investido: R$ "+ dfValor.format( estado.getPrimeirosProjetos()[estado.getPrimeirosProjetos().length-1].getValor() ) + " (em mil)\n\n";
+			temp += ano + ": " + "Quantidade: "+ estado.getPrimeirosProjetos()[i].getQuantidade() + " projetos\n" +
+					"\t\t  " + "Valor investido: R$ "+ dfValor.format( estado.getPrimeirosProjetos()[estado.getPrimeirosProjetos().length-1].getValor() ) + " (em mil)\n\n";
 		}
-		this.informacoesEstado.put("primeiros_projetos",primeirosProj);
+		this.informacoesEstado.put("primeiros_projetos",temp);
+		temp="";
 		
-		this.informacoesEstado.put("quantidade_projeto_cnpq","Quantidade: " + estado.getProjetosApoioCnpq()[estado.getProjetosApoioCnpq().length-1].getQuantidade() + " projetos");
-		this.informacoesEstado.put("valor_projetos_cnpq","Valor investido: R$ " + dfValor.format( estado.getProjetosApoioCnpq()[estado.getProjetosApoioCnpq().length-1].getValor() ) + " (em mil)");
+		for(int i=0, ano=2005; i<estado.getPrimeirosProjetos().length; i++, ano++){
+			temp += ano + ": " + "Quantidade: " + estado.getProjetosApoioCnpq()[i].getQuantidade() + " projetos\n" +
+					"\t\t  " + "Valor investido: R$ " + dfValor.format( estado.getProjetosApoioCnpq()[i].getValor() ) + " (em mil)\n\n";	
+		}
+		this.informacoesEstado.put("cnpq",temp);
+		temp="";
+		
 		this.informacoesEstado.put("quantidade_projeto_jovens_pesquisadores","Quantidade: " + estado.getProjetoJovensPesquisadores()[estado.getProjetoJovensPesquisadores().length-1].getQuantidade() + " projetos");
 		this.informacoesEstado.put("valor_projetos_jovens_pesquisadores","Valor investido: R$ " + dfValor.format( estado.getProjetoJovensPesquisadores()[estado.getProjetoJovensPesquisadores().length-1].getValor() ) + " (em mil)");
 		this.informacoesEstado.put("quantidade_projetos_inct","Quantidade: " + estado.getProjetosInct()[estado.getProjetosInct().length-1].getQuantidade() + " projetos");
