@@ -39,7 +39,7 @@ public class FeedPersistenciaTeste extends AndroidTestCase {
 		assertEquals("FeedPersistencia", nomeClasseRetorno);
 
 	}
-	
+
 	public void testWriteFeedFile() throws IOException, ClassNotFoundException {
 
 		@SuppressWarnings("unused")

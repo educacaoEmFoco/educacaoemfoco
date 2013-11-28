@@ -1,34 +1,37 @@
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/linearLayoutHorizontal"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation ="horizontal"
-    android:background="@color/white" >
-   
-   
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    
+    <ImageView   
+       	android:id="@+id/imageView_bandeiras"
+		android:layout_height="wrap_content"
+		android:layout_alignParentLeft="true"
+  		android:layout_width="50dp" 
+   		android:layout_marginLeft="5dp"
+		android:contentDescription="@string/string_vazia"/>
+  
     <TextView android:id="@+id/textview_lista_siglas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+    	android:layout_alignParentLeft="true"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
-        android:layout_marginLeft="15dp"
+        android:layout_marginLeft="70dp"
         android:text=""
         android:textSize="30sp"
         style="@style/titulo" />
     
-    
-   
     <TextView android:id="@+id/textview_lista_estados"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
-        android:layout_marginLeft="30dp"
+        android:layout_marginLeft="35dp"
         android:text=""
         android:textSize="20sp"
         style="@style/titulo"/>
    
     	    	    	
     
-</LinearLayout>
+</RelativeLayout>

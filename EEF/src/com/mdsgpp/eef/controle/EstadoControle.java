@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import android.content.Context;
-import android.util.Log;
 
 import com.mdsgpp.eef.modelo.Estado;
 
@@ -37,8 +36,6 @@ public class EstadoControle {
 		
 		String nomeSigla[] = informacoesParse.get("nome_e_sigla").get(0);
 		Estado estado = new Estado(nomeSigla[0], nomeSigla[1], informacoesParse);
-		
-		Log.i("teste nome", nomeSigla[0]);
 		
 		escreveEstado(estado);
 		

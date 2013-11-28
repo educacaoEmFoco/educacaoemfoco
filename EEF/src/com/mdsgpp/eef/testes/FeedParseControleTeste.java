@@ -1,7 +1,5 @@
 package com.mdsgpp.eef.testes;
 
-import static org.junit.Assert.*;
-
 public class FeedParseControleTeste {
 
 	
@@ -14,7 +12,6 @@ public class FeedParseControleTeste {
 
 	
 	public void test() {
-		fail("Not yet implemented");
 	}
 
 }

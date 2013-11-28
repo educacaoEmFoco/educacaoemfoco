@@ -15,6 +15,7 @@
     <string name="string_vazia"></string>
     <string name="menu_botao_consulta">Consulta</string>
     <string name="menu_botao_feed">Notícias</string>
+    <string name="menu_botao_consulta_por_indicativo">Consulta por indicativo</string>
 
     <!-- Strings da tela indicativos consultados -->
     <string name="botao_tela_indicativos">Ir</string>
@@ -46,6 +47,10 @@
     <string name="censo">Censo Escolar(%)</string>
     <string name="bt_grafico">Gráfico</string>
 
+    <!-- Strings da tela escolhe tipo de consulta -->
+    <string name="bt_historico">Historico</string>
+    <string name="bt_estados">Estados</string>
+    
     <!-- Strings da tela estado -->
 
     <string name="participacao_PIB">Participacao Estadual no PIB</string>
@@ -99,6 +104,39 @@
     <string name="title_activity_receptor_dados">ReceptorDados</string>
     <string name="title_activity_tela_feed_sobre">TelaFeedSobre</string>
 
+    <!-- Strings da tela consulta por indicativo -->
+    <string name="titulo_escolhe_estado_por_indicativo">Escolha o indicativo</string>
+    <string name="bt_verifica_estados_por_indicativo">Verificar estados</string>
+
+    <!-- Strings da tela resultado da consulta por indicativo -->
+    <string name="acre">Acre</string>
+    <string name="alagoas">Alagoas</string>
+    <string name="amapa">Amapa</string>
+    <string name="amazonas">Amazonas</string>
+    <string name="bahia">Bahia</string>
+    <string name="ceara">Ceará</string>
+    <string name="df">Distrito Federal</string>
+    <string name="espiritoSanto">Esprito Santo</string>
+    <string name="goias">Goias</string>
+    <string name="maranhao">Maranhão</string>
+    <string name="matoGrossoDoSul">Mato Grosso do Sul</string>
+    <string name="matoGrosso">Mato Grosso</string>
+    <string name="minasGerais">Minas Gerais</string>
+    <string name="para">Pará</string>
+    <string name="paraiba">Paraíba</string>
+    <string name="parana">Paraná</string>
+    <string name="pernambuco">Pernambuco</string>
+    <string name="piaui">Piaui</string>
+    <string name="rioDeJaneiro">RioDeJaneiro</string>
+    <string name="rioGrandeDoNorte">Rio Grande do Norte</string>
+    <string name="rioGrandeDoSul">Rio Grande do Sul</string>
+    <string name="rondonia">Rondonia</string>
+    <string name="roraima">Roraima</string>
+    <string name="santaCatarina">Santa Catarina</string>
+    <string name="saoPaulo">São Paulo</string>
+    <string name="sergipe">Sergipe</string>
+    <string name="tocantins">Tocantins</string>
+
     <!-- Strings da tela sobre feed -->
 
     <string name="tela_sobre_feed">Fonte de Informações do EEF</string>
@@ -134,6 +172,7 @@
     <string name="title_activity_tela_sobre_comparacao">TelaSobreComparacao</string>
     <string name="title_botao_comparar">Comparar</string>
     <string name="informacao_botao_comparar">Após a seleção dos 2 estados desejados,esta opção encaminha o usuário para uma tela onde devem ser definido(s) qual(s) indicativo(s) deseja visualizar na comparação.</string>
+
     <string name="title_activity_tela_consultas">TelaConsultas</string>
     <string name="title_activity_tela_consultas_gerais">TelaConsultasGerais</string>
 
@@ -143,4 +182,8 @@
     <string name="title_radio_button_desmarcar_todas">Desmarcar todos indicativos</string>
     <string name="title_activity_tela_comparacoes_gerais">TelaComparacoesGerais</string>
 
+    <string name="title_activity_tela_consulta_por_indicativo">TelaConsultaPorIndicativo</string>
+    <string name="title_activity_tela_resultado_consulta_por_indicativo">TelaResultadoConsultaPorIndicativo</string>
+    <string name="title_activity_tela_escolhe_tipo_de_consulta">TelaEscolheTipoDeConsulta</string>
+    
 </resources>

@@ -25,9 +25,10 @@ public class MainActivity extends Activity {
     
     
     // Eventos 
-   
+  
     public void clickBotaoComparacaoGeral(View view) {
     	Intent intent = new Intent(this, TelaComparacoesGerais.class);
+
 		startActivity(intent);
     }
 
@@ -43,6 +44,10 @@ public class MainActivity extends Activity {
     
     public void clickBotaoFeed(View view){
     	Intent intent = new Intent(this, TelaFeed.class);
+    	startActivity(intent);
+    }
+    public void clickBotaoConsultaPorIndicativo(View view){
+    	Intent intent = new Intent(this, TelaConsultaPorIndicativo.class);
     	startActivity(intent);
     }
 }

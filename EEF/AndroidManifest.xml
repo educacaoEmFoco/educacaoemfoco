@@ -128,6 +128,19 @@
             android:name="com.mdsgpp.eef.visao.TelaComparacoesGerais"
             android:label="@string/title_activity_tela_comparacoes_gerais" >
         </activity>
+        <activity
+            android:name="com.mdsgpp.eef.visao.TelaConsultaPorIndicativo"
+            android:label="@string/title_activity_tela_consulta_por_indicativo"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.mdsgpp.eef.visao.TelaResultadoConsultaPorIndicativo"
+            android:label="@string/title_activity_tela_resultado_consulta_por_indicativo" >
+        </activity>
+        <activity
+            android:name="com.mdsgpp.eef.visao.TelaEscolheTipoDeConsulta"
+            android:label="@string/title_activity_tela_escolhe_tipo_de_consulta" >
+        </activity>
     </application>
 
 </manifest>

@@ -4,8 +4,6 @@ import java.io.IOException;
 import java.text.DecimalFormat;
 import java.util.HashMap;
 
-import org.junit.Test;
-
 import com.mdsgpp.eef.controle.EstadoControle;
 
 import android.test.AndroidTestCase;
@@ -100,7 +98,6 @@ public class EstadoControleTeste extends AndroidTestCase{
 
 	}
 
-	@Test
 	public void testInstancia() throws IOException {
 		assertEquals(instancia, instancia2);
 		assertEquals(instancia, instancia3);
