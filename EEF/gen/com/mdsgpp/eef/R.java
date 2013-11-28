@@ -135,10 +135,10 @@ public final class R {
         public static final int relativelayout=0x7f090064;
         public static final int scrollView1=0x7f090005;
         public static final int scrollViewConsulta=0x7f0900ca;
-        public static final int sobre_comparacoes_gerais_conteudo_estados=0x7f0900e7;
-        public static final int sobre_comparacoes_gerais_conteudo_indicativos=0x7f0900e9;
+        public static final int sobre_comparacoes_gerais_conteudo_estados=0x7f0900e9;
+        public static final int sobre_comparacoes_gerais_conteudo_indicativos=0x7f0900e8;
         public static final int sobre_comparacoes_gerais_estados_title=0x7f0900e6;
-        public static final int sobre_comparacoes_gerais_indicativos_title=0x7f0900e8;
+        public static final int sobre_comparacoes_gerais_indicativos_title=0x7f0900e7;
         public static final int sobre_menu_ast_adicional_title=0x7f0900ef;
         public static final int sobre_menu_botao_sobre_consulta_title=0x7f0900ee;
         public static final int sobre_menu_comparar_estados_conteudo=0x7f0900e0;

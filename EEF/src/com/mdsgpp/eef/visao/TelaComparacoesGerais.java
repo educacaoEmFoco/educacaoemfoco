@@ -28,9 +28,13 @@ public class TelaComparacoesGerais extends Activity {
 		startActivity(intent);
 	}
 	
-
 	public void clickBotaoIndicativos(View view) {
 		Intent intent = new Intent(this, TelaIndicativosConsultados.class);
+		startActivity(intent);
+	}
+	
+	public void clickBotaoSobreComparacoesGerais(View view) {
+		Intent intent = new Intent(this, TelaSobreComparacoesGerais.class);
 		startActivity(intent);
 	}
 }

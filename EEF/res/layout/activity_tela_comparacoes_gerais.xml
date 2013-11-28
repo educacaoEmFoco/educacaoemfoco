@@ -11,18 +11,30 @@
 
     <Button
         android:id="@+id/buttonEstados"
-        android:layout_width="12dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:onClick="clickBotaoComparacao"
         android:text="@string/botao_estado" >
+
     </Button>
 
     <Button
         android:id="@+id/buttonIndicativos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:onClick="clickBotaoIndicativos"
         android:text="@string/botao_indicativos" >
+
     </Button>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:onClick="clickBotaoSobreComparacoesGerais"
+        android:text="@string/botao_sobre" />
 
 </LinearLayout>
