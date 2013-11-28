@@ -11,6 +11,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.util.Log;
 import android.view.Menu;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -62,7 +63,7 @@ public class TelaEstado extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.tela_estado, menu);
+		getMenuInflater().inflate(R.menu.menu_telas_sem_sobre, menu);
 		return true;
 	}
 	
@@ -172,6 +173,15 @@ public class TelaEstado extends Activity {
 		int idBandeira = getResources().getIdentifier(bandeiras[posicao], "drawable", getPackageName());
 		imageViewBandeiras.setImageResource(idBandeira);
 	}
-
+	
+	public void clickBotaoHisticoEstado(View view) {
+		Intent intentAux = getIntent();
+		int posicao = intentAux.getIntExtra("INDEX_ESTADO_ESCOLHIDO", 0);
+		
+		Intent intent = new Intent(this, TelaHistoricoEstado.class);
+		intent.putExtra("ESTADO", posicao);
+		
+		startActivity(intent);
+	}
 
 }

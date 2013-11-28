@@ -39,6 +39,14 @@
             android:layout_marginBottom="10dp"
             android:gravity="center"
             android:text="@string/string_vazia" />
+        
+        <Button
+            android:id="@+id/bt_historico_estado"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="clickBotaoHisticoEstado"
+            android:text="@string/botao_historico_estado" />
 
         <TextView
             android:id="@+id/textView_populacao"

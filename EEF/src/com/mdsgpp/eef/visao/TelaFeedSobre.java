@@ -17,7 +17,7 @@ public class TelaFeedSobre extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.tela_feed_sobre, menu);
+		getMenuInflater().inflate(R.menu.menu_telas, menu);
 		return true;
 	}
 
