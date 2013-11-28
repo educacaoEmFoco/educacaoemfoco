@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.HashMap;
 
 import com.mdsgpp.eef.R;
+import com.mdsgpp.eef.TelaHistoricoEstado;
 import com.mdsgpp.eef.controle.EstadoControle;
 
 import android.os.Bundle;
@@ -175,7 +176,12 @@ public class TelaEstado extends Activity {
 	}
 	
 	public void clickBotaoHisticoEstado(View view) {
-		Intent intent = new Intent(this, MainActivity.class);
+		Intent intentAux = getIntent();
+		int posicao = intentAux.getIntExtra("INDEX_ESTADO_ESCOLHIDO", 0);
+		
+		Intent intent = new Intent(this, TelaHistoricoEstado.class);
+		intent.putExtra("ESTADO", posicao);
+		
 		startActivity(intent);
 	}
 

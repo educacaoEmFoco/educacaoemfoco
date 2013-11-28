@@ -322,17 +322,18 @@ public final class R {
         public static final int activity_tela_feed=0x7f03000d;
         public static final int activity_tela_feed_sobre=0x7f03000e;
         public static final int activity_tela_grafico=0x7f03000f;
-        public static final int activity_tela_indicativos_consultados=0x7f030010;
-        public static final int activity_tela_lista_estado=0x7f030011;
-        public static final int activity_tela_resultado_consulta_por_indicativo=0x7f030012;
-        public static final int activity_tela_sobre=0x7f030013;
-        public static final int activity_tela_sobre_comparacao=0x7f030014;
-        public static final int activity_tela_sobre_consulta=0x7f030015;
-        public static final int listview_item=0x7f030016;
-        public static final int listview_item_indicativos=0x7f030017;
-        public static final int rss_listview_item=0x7f030018;
-        public static final int spinner_item=0x7f030019;
-        public static final int spinner_item2=0x7f03001a;
+        public static final int activity_tela_historico_estado=0x7f030010;
+        public static final int activity_tela_indicativos_consultados=0x7f030011;
+        public static final int activity_tela_lista_estado=0x7f030012;
+        public static final int activity_tela_resultado_consulta_por_indicativo=0x7f030013;
+        public static final int activity_tela_sobre=0x7f030014;
+        public static final int activity_tela_sobre_comparacao=0x7f030015;
+        public static final int activity_tela_sobre_consulta=0x7f030016;
+        public static final int listview_item=0x7f030017;
+        public static final int listview_item_indicativos=0x7f030018;
+        public static final int rss_listview_item=0x7f030019;
+        public static final int spinner_item=0x7f03001a;
+        public static final int spinner_item2=0x7f03001b;
     }
     public static final class menu {
         public static final int feed_adapter=0x7f080000;
@@ -356,13 +357,14 @@ public final class R {
         public static final int tela_feed=0x7f080012;
         public static final int tela_feed_sobre=0x7f080013;
         public static final int tela_grafico=0x7f080014;
-        public static final int tela_indicativos_consultados=0x7f080015;
-        public static final int tela_lista_estado=0x7f080016;
-        public static final int tela_resultado_consulta=0x7f080017;
-        public static final int tela_resultado_consulta_por_indicativo=0x7f080018;
-        public static final int tela_sobre=0x7f080019;
-        public static final int tela_sobre_comparacao=0x7f08001a;
-        public static final int tela_sobre_consulta=0x7f08001b;
+        public static final int tela_historico_estado=0x7f080015;
+        public static final int tela_indicativos_consultados=0x7f080016;
+        public static final int tela_lista_estado=0x7f080017;
+        public static final int tela_resultado_consulta=0x7f080018;
+        public static final int tela_resultado_consulta_por_indicativo=0x7f080019;
+        public static final int tela_sobre=0x7f08001a;
+        public static final int tela_sobre_comparacao=0x7f08001b;
+        public static final int tela_sobre_consulta=0x7f08001c;
     }
     public static final class string {
         public static final int Programa_primeiros_projetos=0x7f06002a;
@@ -509,6 +511,7 @@ public final class R {
         public static final int title_activity_tela_feed=0x7f06004d;
         public static final int title_activity_tela_feed_sobre=0x7f060050;
         public static final int title_activity_tela_grafico=0x7f060073;
+        public static final int title_activity_tela_historico_estado=0x7f060092;
         public static final int title_activity_tela_indicativos_consultados=0x7f06004b;
         public static final int title_activity_tela_lista_estado=0x7f060004;
         public static final int title_activity_tela_resultado_consulta=0x7f06004c;

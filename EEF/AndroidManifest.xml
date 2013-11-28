@@ -141,6 +141,10 @@
             android:name="com.mdsgpp.eef.visao.TelaEscolheTipoDeConsulta"
             android:label="@string/title_activity_tela_escolhe_tipo_de_consulta" >
         </activity>
+        <activity
+            android:name="com.mdsgpp.eef.TelaHistoricoEstado"
+            android:label="@string/title_activity_tela_historico_estado" >
+        </activity>
     </application>
 
 </manifest>

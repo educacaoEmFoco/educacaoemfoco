@@ -19,7 +19,7 @@
 
     <!-- Strings da tela indicativos consultados -->
     <string name="botao_tela_indicativos">Ir</string>
-    
+
     <!-- Strings da tela indicativos consultados -->
     <string name="botao_indicativos">Indicativos</string>
 
@@ -50,7 +50,7 @@
     <!-- Strings da tela escolhe tipo de consulta -->
     <string name="bt_historico">Historico</string>
     <string name="bt_estados">Estados</string>
-    
+
     <!-- Strings da tela estado -->
 
     <string name="participacao_PIB">Participacao Estadual no PIB</string>
@@ -67,7 +67,6 @@
     <string name="titulo_menu">Educação em Foco</string>
     <string name="string_x"> x </string>
     <string name="botao_historico_estado"> Historico </string>
-    
 
     <!-- Strings da tela consultas gerais -->
 
@@ -174,7 +173,6 @@
     <string name="title_activity_tela_sobre_comparacao">TelaSobreComparacao</string>
     <string name="title_botao_comparar">Comparar</string>
     <string name="informacao_botao_comparar">Após a seleção dos 2 estados desejados,esta opção encaminha o usuário para uma tela onde devem ser definido(s) qual(s) indicativo(s) deseja visualizar na comparação.</string>
-
     <string name="title_activity_tela_consultas">TelaConsultas</string>
     <string name="title_activity_tela_consultas_gerais">TelaConsultasGerais</string>
 
@@ -183,9 +181,9 @@
     <string name="title_radio_button_marcar_todas">Marcar todos indicativos</string>
     <string name="title_radio_button_desmarcar_todas">Desmarcar todos indicativos</string>
     <string name="title_activity_tela_comparacoes_gerais">TelaComparacoesGerais</string>
-
     <string name="title_activity_tela_consulta_por_indicativo">TelaConsultaPorIndicativo</string>
     <string name="title_activity_tela_resultado_consulta_por_indicativo">TelaResultadoConsultaPorIndicativo</string>
     <string name="title_activity_tela_escolhe_tipo_de_consulta">TelaEscolheTipoDeConsulta</string>
-    
+    <string name="title_activity_tela_historico_estado">TelaHistoricoEstado</string>
+
 </resources>
