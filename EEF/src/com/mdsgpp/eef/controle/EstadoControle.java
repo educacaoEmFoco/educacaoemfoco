@@ -7,8 +7,6 @@ import java.util.HashMap;
 
 
 import android.content.Context;
-import android.util.Log;
-
 import com.mdsgpp.eef.modelo.Estado;
 
 public class EstadoControle {
