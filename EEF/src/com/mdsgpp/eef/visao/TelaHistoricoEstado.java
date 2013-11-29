@@ -28,7 +28,6 @@ public class TelaHistoricoEstado extends Activity {
 	private	TextView textViewPrimeirosProjetos;
 	private TextView textViewValoresPesquisa;
 	private TextView textViewValorJovensPesquisadores;
-	private TextView textViewQuantidadeProjetosIniciacao;
 	private TextView textViewValorProjetosIniciacao;
 	private ImageView imageViewBandeiras;	
 	private TextView textViewCensoIniciaisFundamental;
@@ -36,8 +35,7 @@ public class TelaHistoricoEstado extends Activity {
 	private TextView textViewCensoMedio;
 	private TextView textViewCensoEjaFundamental;
 	private TextView textViewCensoEjaMedio;
-	private TextView textViewMediaAlunosPorTurmaFundamental;
-	private TextView textViewMediaAlunosPorTurmaMedio;
+	private TextView textViewMediaAlunosPorTurmaValor;
 	private TextView textViewMediaHorasAulaFundamental;
 	private TextView textViewMediaHorasAulaMedio;
 	private TextView textViewTaxaDistorcaoIdadeSerieFundamental;
@@ -93,7 +91,6 @@ public class TelaHistoricoEstado extends Activity {
 		textViewPrimeirosProjetos = (TextView) findViewById(R.id.textView_primeiros_projetos);
 		textViewValoresPesquisa = (TextView) findViewById(R.id.textView_valores_projeto_pesquisa);
 		textViewValorJovensPesquisadores= (TextView) findViewById(R.id.textView_jovens_pesquisadores_valor);
-		textViewQuantidadeProjetosIniciacao = (TextView) findViewById(R.id.textView_projetos_iniciacao_quantidade);
 		textViewValorProjetosIniciacao = (TextView) findViewById(R.id.textView_projetos_iniciacao_valor);
 		
 		textViewCensoIniciaisFundamental = (TextView) findViewById(R.id.textView_censo_iniciais_fundamental);
@@ -101,8 +98,7 @@ public class TelaHistoricoEstado extends Activity {
 		textViewCensoMedio = (TextView) findViewById(R.id.textView_censo_medio);
 		textViewCensoEjaFundamental = (TextView) findViewById(R.id.textView_censo_fundamental_eja);
 		textViewCensoEjaMedio = (TextView) findViewById(R.id.textView_censo_medio_eja);
-		textViewMediaAlunosPorTurmaFundamental = (TextView) findViewById(R.id.textView_media_alunos_por_turma_fundamental);
-		textViewMediaAlunosPorTurmaMedio = (TextView) findViewById(R.id.textView_media_alunos_por_turma_medio);
+		textViewMediaAlunosPorTurmaValor = (TextView) findViewById(R.id.textView_media_alunos_por_turma_valor);
 		textViewMediaHorasAulaFundamental = (TextView) findViewById(R.id.textView_horas_aula_ensino_fundamental);
 		textViewMediaHorasAulaMedio = (TextView) findViewById(R.id.textView_horas_aula_ensino_medio);
 		textViewTaxaDistorcaoIdadeSerieFundamental = (TextView) findViewById(R.id.textView_taxa_distorcao_fundamental);
@@ -123,16 +119,14 @@ public class TelaHistoricoEstado extends Activity {
 		textViewPrimeirosProjetos.setText(informacoes.get("primeiros_projetos"));
 		textViewValoresPesquisa.setText(informacoes.get("cnpq"));
 		textViewValorJovensPesquisadores.setText(informacoes.get("jovens_pesquisadores"));
-		textViewQuantidadeProjetosIniciacao.setText(informacoes.get("quantidade_projetos_inct"));
-		textViewValorProjetosIniciacao.setText(informacoes.get("valor_projetos_inct"));
+		textViewValorProjetosIniciacao.setText(informacoes.get("projetos_inct"));
 		
+		textViewMediaAlunosPorTurmaValor.setText(informacoes.get("alunos_por_turma_ensino_medio"));
 		textViewCensoIniciaisFundamental.setText(informacoes.get("censo_anos_iniciais_fundamental"));
 		textViewCensoFinaisFundamental.setText(informacoes.get("censo_anos_finais_fundamental"));
 		textViewCensoMedio.setText(informacoes.get("censo_ensino_medio"));
 		textViewCensoEjaFundamental.setText(informacoes.get("censo_eja_fundamental"));
 		textViewCensoEjaMedio.setText(informacoes.get("censo_eja_medio"));
-		textViewMediaAlunosPorTurmaFundamental.setText(informacoes.get("alunos_por_turma_ensino_fundamental"));
-		textViewMediaAlunosPorTurmaMedio.setText(informacoes.get("alunos_por_turma_ensino_medio"));
 		textViewMediaHorasAulaFundamental.setText(informacoes.get("horas_aula_ensino_fundamental"));
 		textViewMediaHorasAulaMedio.setText(informacoes.get("horas_aula_ensino_medio"));
 		textViewTaxaDistorcaoIdadeSerieFundamental.setText(informacoes.get("taxa_distorcao_fundamental"));

@@ -5,7 +5,6 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import org.junit.rules.TemporaryFolder;
 
 import android.content.Context;
 
@@ -140,11 +139,23 @@ public class EstadoControle {
 		this.informacoesEstado.put("jovens_pesquisadores",temp);
 		temp="";
 		
-		this.informacoesEstado.put("quantidade_projetos_inct","Quantidade: " + estado.getProjetosInct()[estado.getProjetosInct().length-1].getQuantidade() + " projetos");
-		this.informacoesEstado.put("valor_projetos_inct","Valor investido: R$ " + dfValor.format( estado.getProjetosInct()[estado.getProjetosInct().length-1].getValor() ) + " (em mil)");
+		for(int i=0, ano=2008; i<estado.getProjetosInct().length; i++, ano++){
+			temp += ano + ": " + "Quantidade: " + estado.getProjetosInct()[i].getQuantidade() + " projetos\n" +
+					"\t\t  " +"Valor investido: R$ " + dfValor.format( estado.getProjetosInct()[i].getValor() ) + " (em mil)\n\n";
+		}
+		this.informacoesEstado.put("projetos_inct",temp);
+		temp="";
 		
-		this.informacoesEstado.put("alunos_por_turma_ensino_fundamental", "Quantidade media de alunos por turma (Fundamental): "+  dfValor.format( estado.getMediaAlunosPorTurma()[estado.getMediaAlunosPorTurma().length-1].getEnsinoFundamental()) );
-		this.informacoesEstado.put("alunos_por_turma_ensino_medio", "Quantidade media de alunos por turma (Medio): "+  dfValor.format( estado.getMediaAlunosPorTurma()[estado.getMediaAlunosPorTurma().length-1].getEnsinoMedio()));	
+		for(int i=0, ano=2008; i<estado.getMediaAlunosPorTurma().length; i++,ano++){
+			temp += ano + ": " + "Quantidade media de alunos por turma (Fundamental): "+  
+					dfValor.format( estado.getMediaAlunosPorTurma()[i].getEnsinoFundamental() )+ "\n" +
+				    "Quantidade media de alunos por turma (Medio): "+  
+							dfValor.format( estado.getMediaAlunosPorTurma()[i].getEnsinoMedio()) + "\n\n";
+		
+		}
+		this.informacoesEstado.put("alunos_por_turma_ensino_medio", temp);
+		temp="";
+		
 		this.informacoesEstado.put("horas_aula_ensino_fundamental", "Quantidade media de horas de aula(Fundamental): "+  dfValor.format( estado.getMediaHorasAula()[estado.getMediaHorasAula().length-1].getEnsinoFundamental()) );
 		this.informacoesEstado.put("horas_aula_ensino_medio", "Quantidade media de horas de aula (Medio): "+  dfValor.format( estado.getMediaHorasAula()[estado.getMediaHorasAula().length-1].getEnsinoMedio()));	
 		this.informacoesEstado.put("taxa_distorcao_fundamental", "Quantidade de Distorééo da Idade(Fundamental): "+  dfPorcentagem.format( estado.getTaxaDistorcaoIdadeSerie()[estado.getTaxaDistorcaoIdadeSerie().length-1].getEnsinoFundamental()) );
