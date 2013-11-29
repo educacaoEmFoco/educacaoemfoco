@@ -22,11 +22,6 @@ public class TelaConsultasGerais extends Activity {
 		return true;
 	}
 
-	public void clickBotaoHistorico(View view) {
-		Intent intent = new Intent(this, MainActivity.class);
-		startActivity(intent);
-	}
-
 	public void clickBotaoListaEstado(View view) {
 		Intent intent = new Intent(this, TelaListaEstado.class);
 		startActivity(intent);
