@@ -150,7 +150,7 @@ public class EstadoControle {
 		for(int i=0, ano=2007; i<estado.getMediaAlunosPorTurma().length; i++,ano++){
 			temp += ano + ": " + "Quantidade media de alunos por turma (Fundamental): "+  
 					dfValor.format( estado.getMediaAlunosPorTurma()[i].getEnsinoFundamental() )+ "\n" +
-				    "Quantidade media de alunos por turma (Medio): "+  
+					"Quantidade media de alunos por turma (Medio): "+  
 							dfValor.format( estado.getMediaAlunosPorTurma()[i].getEnsinoMedio()) + "\n\n";
 		
 		}
@@ -177,8 +177,8 @@ public class EstadoControle {
 		
 		for(int i=0, ano=2007; i<estado.getTaxaDeAproveitamento().length; i++,ano++){
 			temp += ano + ": " + "Taxa de Aprovação (Fundamental): "+  
-					dfPorcentagem.format( estado.getTaxaDeAproveitamento()[i].getEnsinoFundamental()) +
-					"Taxa de Aprovação (Medio): "+  dfPorcentagem.format( estado.getTaxaDeAproveitamento()[i].getEnsinoMedio()) + "\n\n";
+					dfPorcentagem.format( estado.getTaxaDeAproveitamento()[i].getEnsinoFundamental()) + "\n" +
+					"\t\t  " +"Taxa de Aprovação (Medio): "+  dfPorcentagem.format( estado.getTaxaDeAproveitamento()[i].getEnsinoMedio()) + "\n\n";
 		}
 		this.informacoesEstado.put("taxa_aprovacao", temp);
 		temp="";
@@ -186,7 +186,7 @@ public class EstadoControle {
 		for(int i=0, ano=2007; i<estado.getTaxaDeAbandono().length; ano++, i++){
 			temp += ano + ": " + "Taxa de Abandono (Fundamental): "+  
 					dfPorcentagem.format( estado.getTaxaDeAbandono()[i].getEnsinoFundamental()) + "\n" +
-					"Taxa de Abandono (Medio): "+  dfPorcentagem.format( estado.getTaxaDeAbandono()[i].getEnsinoMedio())+"\n\n";
+					"\t\t  " +"Taxa de Abandono (Medio): "+  dfPorcentagem.format( estado.getTaxaDeAbandono()[i].getEnsinoMedio())+"\n\n";
 		}
 		this.informacoesEstado.put("taxa_abandono",temp);
 		temp="";
