@@ -36,7 +36,7 @@
         <Button
             android:id="@+id/buttonComparacao"
             style="@style/botaoMenu"
-            android:layout_width="wrap_content"
+            android:layout_width="123dp"
             android:layout_height="match_parent"
             android:drawableTop="@drawable/icone_comparacao"
             android:onClick="clickBotaoComparacaoGeral"
