@@ -5,6 +5,8 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import org.junit.rules.TemporaryFolder;
+
 import android.content.Context;
 
 import com.mdsgpp.eef.modelo.Estado;
@@ -117,22 +119,27 @@ public class EstadoControle {
 		}
 		this.informacoesEstado.put("ideb", temp);
 		
-		for(int i=0, ano=2005; i<estado.getPrimeirosProjetos().length; i++, ano++){
+		for(int i=0, ano=2007; i<estado.getPrimeirosProjetos().length; i++, ano++){
 			temp += ano + ": " + "Quantidade: "+ estado.getPrimeirosProjetos()[i].getQuantidade() + " projetos\n" +
 					"\t\t  " + "Valor investido: R$ "+ dfValor.format( estado.getPrimeirosProjetos()[estado.getPrimeirosProjetos().length-1].getValor() ) + " (em mil)\n\n";
 		}
 		this.informacoesEstado.put("primeiros_projetos",temp);
 		temp="";
 		
-		for(int i=0, ano=2005; i<estado.getPrimeirosProjetos().length; i++, ano++){
+		for(int i=0, ano=2001; i<estado.getProjetosApoioCnpq().length; i++, ano++){
 			temp += ano + ": " + "Quantidade: " + estado.getProjetosApoioCnpq()[i].getQuantidade() + " projetos\n" +
 					"\t\t  " + "Valor investido: R$ " + dfValor.format( estado.getProjetosApoioCnpq()[i].getValor() ) + " (em mil)\n\n";	
 		}
 		this.informacoesEstado.put("cnpq",temp);
 		temp="";
 		
-		this.informacoesEstado.put("quantidade_projeto_jovens_pesquisadores","Quantidade: " + estado.getProjetoJovensPesquisadores()[estado.getProjetoJovensPesquisadores().length-1].getQuantidade() + " projetos");
-		this.informacoesEstado.put("valor_projetos_jovens_pesquisadores","Valor investido: R$ " + dfValor.format( estado.getProjetoJovensPesquisadores()[estado.getProjetoJovensPesquisadores().length-1].getValor() ) + " (em mil)");
+		for(int i=0, ano=2005; i<estado.getProjetoJovensPesquisadores().length; i++, ano++){
+			temp += ano + ": " + "Quantidade: " + estado.getProjetoJovensPesquisadores()[i].getQuantidade() + " projetos\n" +
+					"\t\t  " +"Valor investido: R$ " + dfValor.format( estado.getProjetoJovensPesquisadores()[i].getValor() ) + " (em mil)\n\n" ;
+		}
+		this.informacoesEstado.put("jovens_pesquisadores",temp);
+		temp="";
+		
 		this.informacoesEstado.put("quantidade_projetos_inct","Quantidade: " + estado.getProjetosInct()[estado.getProjetosInct().length-1].getQuantidade() + " projetos");
 		this.informacoesEstado.put("valor_projetos_inct","Valor investido: R$ " + dfValor.format( estado.getProjetosInct()[estado.getProjetosInct().length-1].getValor() ) + " (em mil)");
 		
