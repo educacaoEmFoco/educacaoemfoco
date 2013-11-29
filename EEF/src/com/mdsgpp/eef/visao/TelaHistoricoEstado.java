@@ -38,8 +38,7 @@ public class TelaHistoricoEstado extends Activity {
 	private TextView textViewMediaHorasAulaMedio;
 	private TextView textViewTaxaDistorcaoIdadeSerieValor;
 	private TextView textViewTaxaDeAproveitamentoValor;
-	private TextView textViewTaxaDeAbandonoFundamental;
-	private TextView textViewTaxaDeAbandonoMedio;
+	private TextView textViewTaxaDeAbandonoValor;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -99,8 +98,7 @@ public class TelaHistoricoEstado extends Activity {
 		textViewMediaHorasAulaMedio = (TextView) findViewById(R.id.textView_horas_aula_ensino_medio);
 		textViewTaxaDistorcaoIdadeSerieValor = (TextView) findViewById(R.id.textView_taxa_distorcao_valor);
 		textViewTaxaDeAproveitamentoValor = (TextView) findViewById(R.id.textView_taxa_aprovacao_valor);
-		textViewTaxaDeAbandonoFundamental = (TextView) findViewById(R.id.textView_taxa_abandono_fundamental);
-		textViewTaxaDeAbandonoMedio = (TextView) findViewById(R.id.textView_taxa_abandono_medio);
+		textViewTaxaDeAbandonoValor = (TextView) findViewById(R.id.textView_taxa_abandono_valor);
 	}
 	
 	private void preencheCamposTexto(HashMap<String, String> informacoes) {
@@ -125,8 +123,7 @@ public class TelaHistoricoEstado extends Activity {
 		textViewMediaHorasAulaMedio.setText(informacoes.get("horas_aula_ensino_medio"));
 		textViewTaxaDistorcaoIdadeSerieValor.setText(informacoes.get("taxa_distorcao"));
 		textViewTaxaDeAproveitamentoValor.setText(informacoes.get("taxa_aprovacao"));
-		textViewTaxaDeAbandonoFundamental.setText(informacoes.get("taxa_abandono_fundamental"));
-		textViewTaxaDeAbandonoMedio.setText(informacoes.get("taxa_abandono_medio"));
+		textViewTaxaDeAbandonoValor.setText(informacoes.get("taxa_abandono"));
 		
 	}
 	

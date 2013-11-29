@@ -269,15 +269,7 @@
             android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/textView_taxa_abandono_fundamental"
-            style="@style/valor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:text="@string/string_vazia" />
-
-        <TextView
-            android:id="@+id/textView_taxa_abandono_medio"
+            android:id="@+id/textView_taxa_abandono_valor"
             style="@style/valor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
