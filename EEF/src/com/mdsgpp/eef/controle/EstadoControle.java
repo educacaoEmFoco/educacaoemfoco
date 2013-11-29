@@ -7,6 +7,7 @@ import java.util.HashMap;
 
 
 import android.content.Context;
+import android.util.Log;
 
 import com.mdsgpp.eef.modelo.Estado;
 
@@ -174,8 +175,14 @@ public class EstadoControle {
 		this.informacoesEstado.put("taxa_distorcao", temp);
 		temp="";
 		
-		this.informacoesEstado.put("taxa_aprovacao_fundamental", "Taxa de Aprovação (Fundamental): "+  dfPorcentagem.format( estado.getTaxaDeAproveitamento()[estado.getTaxaDeAproveitamento().length-1].getEnsinoFundamental()) );
-		this.informacoesEstado.put("taxa_aprovacao_medio", "Taxa de Aprovação (Medio): "+  dfPorcentagem.format( estado.getTaxaDeAproveitamento()[estado.getTaxaDeAproveitamento().length-1].getEnsinoMedio()));	
+		for(int i=0, ano=2007; i<estado.getTaxaDeAproveitamento().length; i++,ano++){
+			temp += ano + ": " + "Taxa de Aprovação (Fundamental): "+  
+					dfPorcentagem.format( estado.getTaxaDeAproveitamento()[i].getEnsinoFundamental()) +
+					"Taxa de Aprovação (Medio): "+  dfPorcentagem.format( estado.getTaxaDeAproveitamento()[i].getEnsinoMedio()) + "\n\n";
+			Log.i("aproveitamento", estado.getTaxaDeAproveitamento()[i].getEnsinoFundamental()+"");
+		}
+		this.informacoesEstado.put("taxa_aprovacao", temp);	
+		
 		this.informacoesEstado.put("taxa_abandono_fundamental", "Taxa de Abandono (Fundamental): "+  dfPorcentagem.format( estado.getTaxaDeAbandono()[estado.getTaxaDeAbandono().length-1].getEnsinoFundamental()) );
 		this.informacoesEstado.put("taxa_abandono_medio", "Taxa de Abandono (Medio): "+  dfPorcentagem.format( estado.getTaxaDeAbandono()[estado.getTaxaDeAbandono().length-1].getEnsinoMedio()));	
 		this.informacoesEstado.put("censo_anos_iniciais_fundamental", "Censo Anos Iniciais (Fundamental): "+  dfPorcentagem.format( estado.getCensos()[estado.getCensos().length-1].getAnosIniciaisFundamental()));	
