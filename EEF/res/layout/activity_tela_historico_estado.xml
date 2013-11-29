@@ -285,39 +285,8 @@
             android:text="@string/censo"
             android:textSize="20sp" />
 
-        <TextView
-            android:id="@+id/textView_censo_iniciais_fundamental"
-            style="@style/valor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:text="@string/string_vazia" />
-
-        <TextView
-            android:id="@+id/textView_censo_finais_fundamental"
-            style="@style/valor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:text="@string/string_vazia" />
-        
-        <TextView
-            android:id="@+id/textView_censo_medio"
-            style="@style/valor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:text="@string/string_vazia" />
-
-        <TextView
-            android:id="@+id/textView_censo_fundamental_eja"
-            style="@style/valor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:text="@string/string_vazia" />
-        <TextView
-            android:id="@+id/textView_censo_medio_eja"
+         <TextView
+            android:id="@+id/textView_censo_medio_valor"
             style="@style/valor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
