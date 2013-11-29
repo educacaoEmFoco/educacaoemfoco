@@ -7,7 +7,6 @@ import java.util.HashMap;
 
 
 import android.content.Context;
-import android.util.Log;
 
 import com.mdsgpp.eef.modelo.Estado;
 
@@ -191,11 +190,15 @@ public class EstadoControle {
 		this.informacoesEstado.put("taxa_abandono",temp);
 		temp="";
 		
-		this.informacoesEstado.put("censo_anos_iniciais_fundamental", "Censo Anos Iniciais (Fundamental): "+  dfPorcentagem.format( estado.getCensos()[estado.getCensos().length-1].getAnosIniciaisFundamental()));	
-		this.informacoesEstado.put("censo_anos_finais_fundamental", "Censo Anos Finais (Fundamental): "+  dfPorcentagem.format( estado.getCensos()[estado.getCensos().length-1].getAnosFinaisFundamental()));
-		this.informacoesEstado.put("censo_ensino_medio", "Censo Ensino Médio: "+  dfPorcentagem.format( estado.getCensos()[estado.getCensos().length-1].getEnsinoMedio()));	
-		this.informacoesEstado.put("censo_eja_fundamental", "Censo EJA (Fundamental): "+  dfPorcentagem.format( estado.getCensos()[estado.getCensos().length-1].getFundamentalEJA()));
-		this.informacoesEstado.put("censo_eja_medio", "Censo EJA (Medio): "+  dfPorcentagem.format( estado.getCensos()[estado.getCensos().length-1].getMedioEJA()));	
+		for(int i=0, ano=2010; i<estado.getCensos().length; ano++, i++){
+			temp += ano + ": " + "Censo Anos Iniciais (Fundamental): "+
+					dfPorcentagem.format( estado.getCensos()[i].getAnosIniciaisFundamental()) + "\n" +
+					"\t\t  " +"Censo Anos Finais (Fundamental): "+  dfPorcentagem.format( estado.getCensos()[i].getAnosFinaisFundamental()) + "\n" +
+					"\t\t  " +"Censo Ensino Médio: "+  dfPorcentagem.format( estado.getCensos()[i].getEnsinoMedio()) + "\n" +
+					"\t\t  " +"Censo EJA (Fundamental): "+  dfPorcentagem.format( estado.getCensos()[i].getFundamentalEJA()) + "\n" +
+					"\t\t  " +"Censo EJA (Medio): "+  dfPorcentagem.format( estado.getCensos()[estado.getCensos().length-1].getMedioEJA())+ "\n\n" ;
+		}
+		this.informacoesEstado.put("censo", temp);	
 		
 	}
 
