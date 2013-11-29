@@ -4,8 +4,6 @@ import java.io.IOException;
 import java.util.HashMap;
 
 import com.mdsgpp.eef.R;
-import com.mdsgpp.eef.R.layout;
-import com.mdsgpp.eef.R.menu;
 import com.mdsgpp.eef.controle.EstadoControle;
 
 import android.os.Bundle;
@@ -127,8 +125,8 @@ public class TelaHistoricoEstado extends Activity {
 		textViewMediaHorasAulaMedio.setText(informacoes.get("horas_aula_ensino_medio"));
 		textViewTaxaDistorcaoIdadeSerieValor.setText(informacoes.get("taxa_distorcao"));
 		textViewTaxaDeAproveitamentoValor.setText(informacoes.get("taxa_aprovacao"));
-		textViewTaxaDeAbandonoFundamental.setText(informacoes.get("taxa_aprovacao_fundamental"));
-		textViewTaxaDeAbandonoMedio.setText(informacoes.get("taxa_aprovacao_medio"));
+		textViewTaxaDeAbandonoFundamental.setText(informacoes.get("taxa_abandono_fundamental"));
+		textViewTaxaDeAbandonoMedio.setText(informacoes.get("taxa_abandono_medio"));
 		
 	}
 	
