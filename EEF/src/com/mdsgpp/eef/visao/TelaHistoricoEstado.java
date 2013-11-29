@@ -38,8 +38,7 @@ public class TelaHistoricoEstado extends Activity {
 	private TextView textViewMediaAlunosPorTurmaValor;
 	private TextView textViewMediaHorasAulaFundamental;
 	private TextView textViewMediaHorasAulaMedio;
-	private TextView textViewTaxaDistorcaoIdadeSerieFundamental;
-	private TextView textViewTaxaDistorcaoIdadeSerieMedio;
+	private TextView textViewTaxaDistorcaoIdadeSerieValor;
 	private TextView textViewTaxaDeAproveitamentoFundamental;
 	private TextView textViewTaxaDeAproveitamentoMedio;
 	private TextView textViewTaxaDeAbandonoFundamental;
@@ -101,8 +100,7 @@ public class TelaHistoricoEstado extends Activity {
 		textViewMediaAlunosPorTurmaValor = (TextView) findViewById(R.id.textView_media_alunos_por_turma_valor);
 		textViewMediaHorasAulaFundamental = (TextView) findViewById(R.id.textView_horas_aula_ensino_fundamental);
 		textViewMediaHorasAulaMedio = (TextView) findViewById(R.id.textView_horas_aula_ensino_medio);
-		textViewTaxaDistorcaoIdadeSerieFundamental = (TextView) findViewById(R.id.textView_taxa_distorcao_fundamental);
-		textViewTaxaDistorcaoIdadeSerieMedio = (TextView) findViewById(R.id.textView_taxa_distorcao_medio);
+		textViewTaxaDistorcaoIdadeSerieValor = (TextView) findViewById(R.id.textView_taxa_distorcao_valor);
 		textViewTaxaDeAproveitamentoFundamental = (TextView) findViewById(R.id.textView_taxa_aprovacao_fundamental);
 		textViewTaxaDeAproveitamentoMedio = (TextView) findViewById(R.id.textView_taxa_aprovacao_medio);
 		textViewTaxaDeAbandonoFundamental = (TextView) findViewById(R.id.textView_taxa_abandono_fundamental);
@@ -129,8 +127,7 @@ public class TelaHistoricoEstado extends Activity {
 		textViewCensoEjaMedio.setText(informacoes.get("censo_eja_medio"));
 		textViewMediaHorasAulaFundamental.setText(informacoes.get("horas_aula_ensino_fundamental"));
 		textViewMediaHorasAulaMedio.setText(informacoes.get("horas_aula_ensino_medio"));
-		textViewTaxaDistorcaoIdadeSerieFundamental.setText(informacoes.get("taxa_distorcao_fundamental"));
-		textViewTaxaDistorcaoIdadeSerieMedio.setText(informacoes.get("taxa_distorcao_medio"));
+		textViewTaxaDistorcaoIdadeSerieValor.setText(informacoes.get("taxa_distorcao"));
 		textViewTaxaDeAproveitamentoFundamental.setText(informacoes.get("taxa_aprovacao_fundamental"));
 		textViewTaxaDeAproveitamentoMedio.setText(informacoes.get("taxa_aprovacao_medio"));
 		textViewTaxaDeAbandonoFundamental.setText(informacoes.get("taxa_aprovacao_fundamental"));
