@@ -24,7 +24,7 @@ public class TelaEscolheIndicativoGrafico extends Activity {
 			rbPrimeirosProjetosQuantidade, rbPrimeirosProjetosValores,
 			rbProjetosCnpqQuantidade, rbProjetosCnpqValores, rbProjetosDifusaoQuantidade, 
 			rbProjetosDifusaoValores, rbProjetosIniciacaoQuantidade, rbProjetosIniciacaoValores, 
-			rbProjetosJovensQuantidade, rbProjetosJovensValores;
+			rbProjetosJovensQuantidade, rbProjetosJovensValores, rbAlunosTurmaFundamental, rbAlunosTurmaMedio;
 	
 	
 	@Override
@@ -70,7 +70,9 @@ public class TelaEscolheIndicativoGrafico extends Activity {
 		rbIdebIniciais = (RadioButton) findViewById(R.id.radio_ideb_fundamental_iniciai);
 		rbIdebFinais = (RadioButton) findViewById(R.id.radio_ideb_fundamental_finais);
 		rbIdebMedio = (RadioButton) findViewById(R.id.radio_ideb_medio);
+		
 		rbPib = (RadioButton) findViewById(R.id.radio_pib);
+		
 		rbPopulacao = (RadioButton) findViewById(R.id.radio_populacao);
 		
 		rbPrimeirosProjetosQuantidade = (RadioButton) findViewById(R.id.radio_primeiros_projetos_qtd);
@@ -87,6 +89,10 @@ public class TelaEscolheIndicativoGrafico extends Activity {
 		
 		rbProjetosJovensQuantidade = (RadioButton) findViewById(R.id.radio_jovens_pesquisadores_qtd);
 		rbProjetosJovensValores = (RadioButton) findViewById(R.id.radio_jovens_pesquisadores_investimento);
+
+		rbAlunosTurmaFundamental = (RadioButton) findViewById(R.id.radio_alunos_por_turma_fundamental);
+		rbAlunosTurmaMedio = (RadioButton) findViewById(R.id.radio_alunos_por_turma_medio);
+		
 		
 		
 	}

@@ -142,6 +142,22 @@
                 android:layout_marginTop="5dp"
                 android:onClick="onRadioButtonClicked"
                 android:text="@string/projeto_iniciacao_investimento" />
+            
+            <RadioButton
+                android:id="@+id/radio_alunos_por_turma_fundamental"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/alunos_por_turma_fundamental" />
+            
+            <RadioButton
+                android:id="@+id/radio_alunos_por_turma_medio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/alunos_por_turma_medio" />
 
             <LinearLayout
                 android:layout_width="match_parent"

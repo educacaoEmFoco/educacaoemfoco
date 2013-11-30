@@ -69,6 +69,8 @@
     <string name="taxa_aprovacao">Taxa de Aprovação (%)</string>
     <string name="taxa_abandono">Taxa de Abandono da Escola(%)</string>
     <string name="censo">Censo Escolar(%)</string>
+    <string name="alunos_por_turma_fundamental">Média de Alunos por Turma do Ensino Fundamental(Qtd.)</string>
+    <string name="alunos_por_turma_medio">Média de Alunos por Turma do Ensino Médio(Qtd.)</string>
     <string name="bt_grafico">Gráfico</string>
 
     

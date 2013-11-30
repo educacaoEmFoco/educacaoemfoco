@@ -136,8 +136,23 @@ public class TelaHistoricoEstado extends Activity {
 		
 		int posicao = intent1.getIntExtra("ESTADO", 0);
 		
-    	Intent intent = new Intent(this, TelaFeed.class);
+    	Intent intent = new Intent(this, TelaEscolheIndicativoGrafico.class);
     	intent.putExtra("ESTADO", posicao);
+    	
+		intent.putExtra("CB_IDEB", true);
+		intent.putExtra("CB_PIB", true);
+		intent.putExtra("CB_POPULACAO", true);
+		intent.putExtra("CB_PRIMEIROS_PROJETOS", true);
+		intent.putExtra("CB_PROJETOS_CNPQ", true);
+		intent.putExtra("CB_PROJETOS_DIFUSAO", true);
+		intent.putExtra("CB_PROJETOS_INICIACAO", true);
+		intent.putExtra("CB_PROJETOS_JOVENS", true);
+		intent.putExtra("CB_ALUNOS_TURMA", true);
+		intent.putExtra("CB_APROVACAO",true);
+		intent.putExtra("CB_CENSO", true);
+		intent.putExtra("CB_HORAS_AULA", true);
+		intent.putExtra("CB_TAXA_ABANDONO", true);
+		intent.putExtra("CB_TAXA_DISTORCAO", true);
 		
 		startActivity(intent);
     }
