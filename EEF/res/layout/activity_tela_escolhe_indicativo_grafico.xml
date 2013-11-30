@@ -229,7 +229,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:onClick="onRadioButtonClicked"
-                android:text="@string/censo_anos_finais_fundamental" />
+                android:text="@string/censo_anos_iniciais_fundamental" />
             
             <RadioButton
                 android:id="@+id/radio_censo_finais_fundamental"

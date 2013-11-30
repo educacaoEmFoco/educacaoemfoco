@@ -136,7 +136,7 @@ public class TelaHistoricoEstado extends Activity {
 		
 		int posicao = intent1.getIntExtra("ESTADO", 0);
 		
-    	Intent intent = new Intent(this, TelaEscolheIndicativoGrafico.class);
+    	Intent intent = new Intent(this, TelaEscolheIndicativoGraficoLinha.class);
     	intent.putExtra("ESTADO", posicao);
     	
 		intent.putExtra("CB_IDEB", true);
