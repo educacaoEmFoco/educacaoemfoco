@@ -18,31 +18,30 @@
         <Button
             android:id="@+id/botao_feed"
             style="@style/botaoMenu"
-            android:layout_width="match_parent"
+            android:layout_width="227dp"
             android:layout_height="match_parent"
             android:drawableTop="@drawable/noticias"
-            android:onClick="clickBotaoFeed"
-            android:text="@string/string_vazia" />
+            android:onClick="clickBotaoFeed" />
 
         <Button
             android:id="@+id/botao_consulta"
             style="@style/botaoMenu"
-            android:layout_width="123dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_gravity="left"
             android:drawableTop="@drawable/icone_listar"
-            android:onClick="clickBotaoConsultaGeral"
-            android:text="@string/menu_botao_consulta" />
+            android:onClick="clickBotaoConsultaGeral" >
+        </Button>
 
         <Button
             android:id="@+id/buttonComparacao"
             style="@style/botaoMenu"
-            android:layout_width="123dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_gravity="left"
             android:drawableTop="@drawable/icone_comparacao"
-            android:onClick="clickBotaoComparacaoGeral"
-            android:text="@string/menu_botao_comparacao" />
-
+            android:onClick="clickBotaoComparacaoGeral" >
+        </Button>
     </LinearLayout>
-
 
 </RelativeLayout>

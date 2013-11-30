@@ -5,11 +5,13 @@ import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import com.mdsgpp.eef.R;
 import com.mdsgpp.eef.modelo.Feed;
 import com.mdsgpp.eef.parse.FeedParser;
 import com.mdsgpp.eef.parse.FeedPersistencia;
 import com.mdsgpp.eef.visao.ReceptorDados;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.widget.Toast;
@@ -19,10 +21,21 @@ public class FeedControle extends AsyncTask<String, Void, Feed> {
 	private Context context;
 	private boolean updated = false;
 	private ReceptorDados dataReceiver;
+	private ProgressDialog barraProgresso;
 
 	public FeedControle(Context context, ReceptorDados dataReceiver) {
 		this.dataReceiver = dataReceiver;
 		this.context = context;
+	}
+	
+	@Override
+	protected void onPreExecute() {
+		barraProgresso = new ProgressDialog(context,R.style.CustomProgressBar);
+		barraProgresso.setIndeterminate(true);
+		barraProgresso.setMessage("Carregando Notícias!");
+		barraProgresso.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+		barraProgresso.show();
+		super.onPreExecute();
 	}
 
 	// While the execution of the task
@@ -63,6 +76,10 @@ public class FeedControle extends AsyncTask<String, Void, Feed> {
 
 	// After the execution of the task
 	protected void onPostExecute(Feed feed) {
+		
+		if (barraProgresso != null) {
+			barraProgresso.dismiss();
+		}
 		
 		if (!this.updated) {
 			Toast.makeText(this.context, "Couldn't update the news! :(",
