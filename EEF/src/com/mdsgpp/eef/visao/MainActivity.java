@@ -51,7 +51,7 @@ public class MainActivity extends Activity {
     }
     
     public void clickBotaoConsultaGeral(View view){
-    	Intent intent = new Intent(this, TelaConsultasGerais.class);
+    	Intent intent = new Intent(this, TelaListaEstado.class);
     	startActivity(intent);
     }
     
