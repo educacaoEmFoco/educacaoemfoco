@@ -2,14 +2,15 @@ package com.mdsgpp.eef.visao;
 
 import com.mdsgpp.eef.R;
 
-import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.widget.RadioButton;
 
-public class TelaEscolheIndicativoGrafico extends Activity {
+public abstract class EscolheIndicativo extends Activity{
+
 	private String indicativo = "populacao";
 	private String titulo = "Popula��o";
 
@@ -24,7 +25,10 @@ public class TelaEscolheIndicativoGrafico extends Activity {
 			rbPrimeirosProjetosQuantidade, rbPrimeirosProjetosValores,
 			rbProjetosCnpqQuantidade, rbProjetosCnpqValores, rbProjetosDifusaoQuantidade, 
 			rbProjetosDifusaoValores, rbProjetosIniciacaoQuantidade, rbProjetosIniciacaoValores, 
-			rbProjetosJovensQuantidade, rbProjetosJovensValores;
+			rbProjetosJovensQuantidade, rbProjetosJovensValores, rbAlunosTurmaFundamental, rbAlunosTurmaMedio,
+			rbHorasAulaFundamental, rbHorasAulaMedio, rbTaxaDeDistorcaoFundamental, rbTaxaDeDistorcaoMedio,
+			rbTaxaDeAprocaoFundamental, rbTaxaDeAprovacaoMedio, rbTaxaDeAbandonoFundamental, rbTaxaDeAbandonoMedio,
+			rbCensoAnosIniciaisFundamental, rbCensoAnosFinaisFundamental, rbCensoEsninoMedio, rbCensoEJAFundamental, rbCensoEJAMedio;
 	
 	
 	@Override
@@ -64,13 +68,16 @@ public class TelaEscolheIndicativoGrafico extends Activity {
 		bTaxaDistorcao = intentRecebida.getBooleanExtra("CB_TAXA_DISTORCAO", false);
 		bTaxaAbandono = intentRecebida.getBooleanExtra("CB_TAXA_ABANDONO", false);
 		bAprovacao = intentRecebida.getBooleanExtra("CB_APROVACAO", false);
+		
 	}
 	
 	public void inicializaRadioButtons() {
 		rbIdebIniciais = (RadioButton) findViewById(R.id.radio_ideb_fundamental_iniciai);
 		rbIdebFinais = (RadioButton) findViewById(R.id.radio_ideb_fundamental_finais);
 		rbIdebMedio = (RadioButton) findViewById(R.id.radio_ideb_medio);
+		
 		rbPib = (RadioButton) findViewById(R.id.radio_pib);
+		
 		rbPopulacao = (RadioButton) findViewById(R.id.radio_populacao);
 		
 		rbPrimeirosProjetosQuantidade = (RadioButton) findViewById(R.id.radio_primeiros_projetos_qtd);
@@ -87,7 +94,27 @@ public class TelaEscolheIndicativoGrafico extends Activity {
 		
 		rbProjetosJovensQuantidade = (RadioButton) findViewById(R.id.radio_jovens_pesquisadores_qtd);
 		rbProjetosJovensValores = (RadioButton) findViewById(R.id.radio_jovens_pesquisadores_investimento);
+
+		rbAlunosTurmaFundamental = (RadioButton) findViewById(R.id.radio_alunos_por_turma_fundamental);
+		rbAlunosTurmaMedio = (RadioButton) findViewById(R.id.radio_alunos_por_turma_medio);
 		
+		rbHorasAulaFundamental = (RadioButton) findViewById(R.id.radio_horas_aula_fundamental);
+		rbHorasAulaMedio = (RadioButton) findViewById(R.id.radio_horas_aula_medio);
+
+		rbTaxaDeDistorcaoFundamental = (RadioButton) findViewById(R.id.radio_taxa_distorcao_fundamental);
+		rbTaxaDeDistorcaoMedio = (RadioButton) findViewById(R.id.radio_taxa_distorcao_medio);
+		
+		rbTaxaDeAprocaoFundamental = (RadioButton) findViewById(R.id.radio_taxa_aprovacao_fundamental);
+		rbTaxaDeAprovacaoMedio = (RadioButton) findViewById(R.id.radio_taxa_aprovacao_medio);
+		
+		rbTaxaDeAbandonoFundamental = (RadioButton) findViewById(R.id.radio_taxa_abandono_fundamental);
+		rbTaxaDeAbandonoMedio = (RadioButton) findViewById(R.id.radio_taxa_abandono_medio);
+		
+		rbCensoAnosIniciaisFundamental= (RadioButton) findViewById(R.id.radio_censo_iniciais_fundamental);
+		rbCensoAnosFinaisFundamental= (RadioButton) findViewById(R.id.radio_censo_finais_fundamental);
+		rbCensoEsninoMedio= (RadioButton) findViewById(R.id.radio_censo_ensino_medio);
+		rbCensoEJAFundamental= (RadioButton) findViewById(R.id.radio_censo_eja_fundamental);
+		rbCensoEJAMedio= (RadioButton) findViewById(R.id.radio_censo_eja_medio);
 		
 	}
 	
@@ -112,112 +139,62 @@ public class TelaEscolheIndicativoGrafico extends Activity {
 		setVisibility(rbProjetosIniciacaoValores, bProjetosIniciacao);
 		setVisibility(rbProjetosJovensQuantidade, bProjetosJovens);
 		setVisibility(rbProjetosJovensValores, bProjetosJovens);
+		setVisibility(rbAlunosTurmaFundamental, bAlunosTurma);
+		setVisibility(rbAlunosTurmaMedio, bAlunosTurma);
+		setVisibility(rbHorasAulaFundamental, bHorasAula);
+		setVisibility(rbHorasAulaMedio, bHorasAula);
+		setVisibility(rbTaxaDeDistorcaoFundamental, bTaxaDistorcao);
+		setVisibility(rbTaxaDeDistorcaoMedio, bTaxaDistorcao);
+		setVisibility(rbTaxaDeAprocaoFundamental, bAprovacao);
+		setVisibility(rbTaxaDeAprovacaoMedio, bAprovacao);
+		setVisibility(rbTaxaDeAbandonoFundamental, bTaxaAbandono);
+		setVisibility(rbTaxaDeAbandonoMedio, bTaxaAbandono);
+		setVisibility(rbCensoAnosIniciaisFundamental, bCenso);
+		setVisibility(rbCensoAnosFinaisFundamental, bCenso);
+		setVisibility(rbCensoEsninoMedio, bCenso);
+		setVisibility(rbCensoEJAFundamental, bCenso);
+		setVisibility(rbCensoEJAMedio, bCenso);
 	}
 	
-	public void onRadioButtonClicked(View view) {
+	public abstract void onRadioButtonClicked(View view);
 
-		boolean checked = ((RadioButton) view).isChecked();
-		
-		switch (view.getId()) {
-		case R.id.radio_apoio_cnpq_investimento:
-			if (checked)
-				indicativo = "valor_projetos_cnpq";
-			titulo = "Projetos de Pesquisa Apoio CNPq (R$)";
-			break;
-		case R.id.radio_apoio_cnpq_qtd:
-			if (checked)
-				indicativo = "quantidade_projeto_cnpq";
-			titulo = "Projetos de Pesquisa Apoio CNPq (Qtd.)";
-			break;
-		case R.id.radio_difusao_tecnologica_investimento:
-			if (checked)
-				indicativo = "valor_ciencia_tecnologia";
-			titulo = "Projeto de Difus�o Tecnol�gica (R$)";
-			break;
-		case R.id.radio_difusao_tecnologica_qtd:
-			if (checked)
-				indicativo = "projetos_ciencia_tecnologia";
-			titulo = "Projeto de Difus�o Tecnol�gica (Qtd.)";
-			break;
-		case R.id.radio_ideb_fundamental_finais:
-			if (checked)
-				indicativo = "ideb_fundamental_final";
-			titulo = "IDEB do Ensino Fundamental (S�ries Finais)";
-			break;
-		case R.id.radio_ideb_fundamental_iniciai:
-			if (checked)
-				indicativo = "ideb_fundamental_inicial";
-			titulo = "IDEB do Ensino Fundamental (S�ries Iniciais)";
-			break;
-		case R.id.radio_ideb_medio:
-			if (checked)
-				indicativo = "ideb_ensino_medio";
-			titulo = "IDEB do Ensino M�dio";
-			break;
-		case R.id.radio_jovens_pesquisadores_investimento:
-			if (checked)
-				indicativo = "valor_projetos_jovens_pesquisadores";
-			titulo = "Jovens pesquisadores (R$)";
-			break;
-
-		case R.id.radio_jovens_pesquisadores_qtd:
-			if (checked)
-				indicativo = "quantidade_projeto_jovens_pesquisadores";
-			titulo = "Jovens pesquisadores (Qtd.)";
-			break;
-
-		case R.id.radio_pib:
-			if (checked)
-				indicativo = "percentual_participacao_pib";
-			titulo = "Participa��o Estadual no PIB (%)";
-			break;
-
-		case R.id.radio_populacao:
-			if (checked)
-				indicativo = "populacao";
-			titulo = "Popula��o";
-			break;
-
-		case R.id.radio_primeiros_projetos_investimento:
-			if (checked)
-				indicativo = "valor_primeiros_projetos";
-			titulo = "Programa Primeiros Projetos (R$)";
-			break;
-
-		case R.id.radio_primeiros_projetos_qtd:
-			if (checked)
-				indicativo = "quantidade_primeiros_projetos";
-			titulo = "Programa Primeiros Projetos (Qtd.)";
-			break;
-
-		case R.id.radio_projetos_inct_investimento:
-			if (checked)
-				indicativo = "valor_projetos_inct";
-			titulo = "Projetos INCT (R$)";
-			break;
-
-		case R.id.radio_projetos_inct_qtd:
-			if (checked)
-				indicativo = "quantidade_projetos_inct";
-			titulo = "Projetos INCT (Qtd.)";
-			break;
-		}
-	}
-
-	public void clickBotaoGrafico(View view) {
-		Intent intent = new Intent(this, TelaGrafico.class);
-		
-		intent.putExtra("INDEX_ESTADO1_ESCOLHIDO", posicao1);
-		intent.putExtra("INDEX_ESTADO2_ESCOLHIDO", posicao2);
-		intent.putExtra("INDICATIVO", indicativo);
-		intent.putExtra("TITULO", titulo);
-
-		startActivity(intent);		
-	}
+	public abstract void clickBotaoGrafico(View view);
 
 	public void clickBotaoSobreIndicativos(View view) {
-		Intent intent = new Intent(this, TelaEscolheIndicativoGrafico.class);
+		Intent intent = new Intent(this, TelaEscolheIndicativoGraficoComparacao.class);
 		startActivity(intent);
 	}
 
+	public String getIndicativo() {
+		return indicativo;
+	}
+
+	public void setIndicativo(String indicativo) {
+		this.indicativo = indicativo;
+	}
+
+	public String getTitulo() {
+		return titulo;
+	}
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+
+	public int getPosicao1() {
+		return posicao1;
+	}
+
+	public void setPosicao1(int posicao1) {
+		this.posicao1 = posicao1;
+	}
+
+	public int getPosicao2() {
+		return posicao2;
+	}
+
+	public void setPosicao2(int posicao2) {
+		this.posicao2 = posicao2;
+	}
+	
 }
