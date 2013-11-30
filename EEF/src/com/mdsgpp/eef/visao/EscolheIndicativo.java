@@ -16,7 +16,7 @@ public abstract class EscolheIndicativo extends Activity{
 	private String indicativo = "populacao";
 	private String titulo = "Popula��o";
 
-	private int posicao1, posicao2;
+	private int posicao1, posicao2, posicaoHistorico;
 	
 	private boolean bCenso, bAlunosTurma, bHorasAula, bTaxaDistorcao,
 			bTaxaAbandono, bAprovacao, bIdeb, bPib, bPopulacao,
@@ -78,6 +78,7 @@ public abstract class EscolheIndicativo extends Activity{
 		
 		posicao1 = intentRecebida.getIntExtra("INDEX_ESTADO1_ESCOLHIDO", 0);
 		posicao2 = intentRecebida.getIntExtra("INDEX_ESTADO2_ESCOLHIDO", 0);
+		posicaoHistorico = intentRecebida.getIntExtra("ESTADO", 0);
 
 		bIdeb = intentRecebida.getBooleanExtra("CB_IDEB", false);
 		bPib = intentRecebida.getBooleanExtra("CB_PIB", false);
@@ -221,5 +222,14 @@ public abstract class EscolheIndicativo extends Activity{
 	public void setPosicao2(int posicao2) {
 		this.posicao2 = posicao2;
 	}
+
+	public int getPosicaoHistorico() {
+		return posicaoHistorico;
+	}
+
+	public void setPosicaoHistorico(int posicaoHistorico) {
+		this.posicaoHistorico = posicaoHistorico;
+	}
+
 	
 }
