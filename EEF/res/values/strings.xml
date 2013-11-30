@@ -203,5 +203,5 @@
     <string name="hello_world">Hello world!</string>
 	
     <!-- Strings da tela sobre Lista Estado -->
-    <string name="lista_estado_conteudo">Lista dos estados a ser consultados.</string>
+    <string name="lista_estado_conteudo">O usuário escolhe o estado afim de consultar os dados do mesmo.</string>
 </resources>
