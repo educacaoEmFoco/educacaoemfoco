@@ -199,6 +199,7 @@ public class TelaEstado extends Activity {
 	public void clickBotaoHistoricoEstado(View view) {
 		Intent intentAux = getIntent();
 		int posicao = intentAux.getIntExtra("INDEX_ESTADO_ESCOLHIDO", 0);
+		Log.i("posicao tela estado", posicao+"");
 		
 		Intent intent = new Intent(this, TelaHistoricoEstado.class);
 		intent.putExtra("ESTADO", posicao);
