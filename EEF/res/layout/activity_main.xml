@@ -18,11 +18,11 @@
         <Button
             android:id="@+id/botao_feed"
             style="@style/botaoMenu"
-            android:layout_width="123dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:drawableTop="@drawable/icone_listar"
+            android:drawableTop="@drawable/noticias"
             android:onClick="clickBotaoFeed"
-            android:text="@string/menu_botao_feed" />
+            android:text="@string/string_vazia" />
 
         <Button
             android:id="@+id/botao_consulta"
@@ -44,15 +44,5 @@
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/buttonSobre"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/linearLayoutVertical"
-        android:layout_alignRight ="@+id/linearLayoutVertical"
-        android:layout_marginTop="40dp"
-        android:onClick="clickBotaoSobre"
-        android:text="@string/botao_sobre" />
 
 </RelativeLayout>

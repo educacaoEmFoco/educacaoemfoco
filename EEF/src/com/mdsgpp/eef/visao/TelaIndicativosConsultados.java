@@ -36,7 +36,7 @@ public class TelaIndicativosConsultados extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.menu_telas_sem_sobre, menu);
+		getMenuInflater().inflate(R.menu.menu_telas, menu);
 		return true;
 	}
 
@@ -99,7 +99,7 @@ public class TelaIndicativosConsultados extends Activity {
 		marcaOuDesmarcaCheckBox(false);
 	}
 	
-	public void clickBotao(View view) {
+	public void clickBotaoTodosIndicativos(View view) {
 		capturaValores();
 
 		Intent intent = new Intent(this, TelaResultadoConsulta.class);

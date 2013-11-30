@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 
 public class MainActivity extends Activity {
@@ -20,21 +21,33 @@ public class MainActivity extends Activity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_telas, menu);
+        
         return true;
     }	
+        
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+    	
+		switch (item.getItemId()) {
+		case R.id.sobre:
+			abreTelaSobre();
+			break;
+		default:
+			break;
+		}
+		
+    	return true;
+    }
     
-    
-    // Eventos 
-  
+    public void abreTelaSobre() {
+    	Intent intent = new Intent(this, TelaSobre.class);
+    	startActivity(intent);
+    }
+
     public void clickBotaoComparacaoGeral(View view) {
     	Intent intent = new Intent(this, TelaComparacoesGerais.class);
 
 		startActivity(intent);
-    }
-
-    public void clickBotaoSobre(View view){
-    	Intent intent = new Intent(this, TelaSobre.class);
-    	startActivity(intent);
     }
     
     public void clickBotaoConsultaGeral(View view){
