@@ -29,12 +29,4 @@
         android:onClick="clickBotaoIndicativos" >
     </Button>
 
-    <Button
-        android:id="@+id/buttonSobreComparacoesGerais"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:onClick="clickBotaoSobreComparacoesGerais"
-        android:text="@string/botao_sobre"></Button>
-
 </LinearLayout>
