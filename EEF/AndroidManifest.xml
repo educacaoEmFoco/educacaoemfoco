@@ -109,6 +109,13 @@
             android:screenOrientation="portrait" >
         </activity>
         <activity
+            android:name="com.mdsgpp.eef.visao.TelaGraficoLinha"
+            android:icon="@drawable/home"
+            android:label="@string/title_activity_tela_grafico"
+            android:parentActivityName="MainActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
             android:name="com.mdsgpp.eef.visao.TelaSobreIndicativos"
             android:icon="@drawable/home"
             android:label="@string/title_activity_sobre_indicativos"
