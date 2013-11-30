@@ -216,7 +216,7 @@ public class TelaEscolheIndicativoGrafico extends Activity {
 	}
 
 	public void clickBotaoSobreIndicativos(View view) {
-		Intent intent = new Intent(this, TelaSobreIndicativos.class);
+		Intent intent = new Intent(this, TelaEscolheIndicativoGrafico.class);
 		startActivity(intent);
 	}
 

@@ -292,6 +292,14 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:text="@string/string_vazia" />
+      
+         <Button
+	        android:id="@+id/buttonIndicativos"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center"
+	        android:onClick="clickBotaoEscolherIndicativoParaGerarGrafico"
+	        android:text="@string/botao_indicativos"/> 
   
     </LinearLayout>
 </ScrollView>

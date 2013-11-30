@@ -11,6 +11,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.util.Log;
 import android.view.Menu;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -129,5 +130,16 @@ public class TelaHistoricoEstado extends Activity {
 		int idBandeira = getResources().getIdentifier(bandeiras[posicao], "drawable", getPackageName());
 		imageViewBandeiras.setImageResource(idBandeira);
 	}
+	
+    public void clickBotaoEscolherIndicativoParaGerarGrafico(View view){
+		Intent intent1 = getIntent();
+		
+		int posicao = intent1.getIntExtra("ESTADO", 0);
+		
+    	Intent intent = new Intent(this, TelaFeed.class);
+    	intent.putExtra("ESTADO", posicao);
+		
+		startActivity(intent);
+    }
 
 }
