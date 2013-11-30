@@ -125,12 +125,16 @@
     <string name="projetos_inct"> Projetos Instituto Nacional de Ciência e Tecnologia - INCT: </string>
     <string name="projetos_inct_conteudo"> Número de projetos contratados dos Institutos Nacionais de Ciência e Tecnologia. </string>
     <string name="botao_sobre">Sobre</string>
+    <string name="botao_sobre_descricao">	Através dessa tela é possivel ao usuário escolher um dos indicativos abaixo e a partir da seleção visualizar o indicativo para todos os estados</string>
 
     <!-- Strings da tela consulta por indicativo -->
     <string name="titulo_escolhe_estado_por_indicativo">Escolha o indicativo</string>
     <string name="bt_verifica_estados_por_indicativo">Verificar estados</string>
     <string name="title_consultar_estados">Consultar Estados</string>
     <string name="title_consultar_estado1">Escolha o primeiro estado.</string>
+    
+    <!-- Strings da tela sobre escolha indigativo -->
+    <string name="botao_sobre_escolha_indicativo">Através dessa tela é possível selecionar um ou mais indicativos e após ele selecionar o botão avançar ,será redirecionado a tela de comparação do indicativo(s) escolhido entre os dois estados.Também nessa tela o usuário tem a opção de marcar todos os indicativos ou desmarcar todos os indicativos</string>
 
     <!-- Strings da tela resultado da consulta por indicativo -->
     <string name="acre">Acre</string>
@@ -201,6 +205,12 @@
     <string name="title_sobre_comparacacoes_gerais_indicativos">Comparação por indicativo: </string>
     <string name="comparacoes_gerais_conteudo_estados">O usuário escolherá dois estados para comparar os indicativos dos mesmos.</string>
     <string name="comparacoes_gerais_conteudo_indicativos">O usuário escolherá os indicativos que deseja comparar em relação a todos os estados.</string>
+<<<<<<< HEAD
+    <string name="title_activity_tela_sobre_escolha_indicativo">MainActivity</string>
+    <string name="hello_world">Hello world!</string>
+
+</resources>
+=======
     <string name="hello_world">Hello world!</string>
 
     <!-- Strings da tela sobre Lista Estado -->
@@ -209,3 +219,4 @@
     <!-- Strings da tela sobre Lista Estado -->
     <string name="estado_conteudo">É apresentado os dados dos indicativos do estado selecionado, com a opção de verificar o histórico.</string>
 </resources>
+>>>>>>> 5e895bc561df5972e5b1891e27efea0d334c523e
