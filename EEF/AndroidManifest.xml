@@ -10,8 +10,8 @@
         android:targetPackage="com.mdsgpp.eef" />
 
     <uses-sdk
-        android:minSdkVersion="10"
-        android:targetSdkVersion="16" />
+        android:minSdkVersion="14"
+        android:targetSdkVersion="17" />
 
     <uses-permission android:name="android.permission.INTERNET" />
 
