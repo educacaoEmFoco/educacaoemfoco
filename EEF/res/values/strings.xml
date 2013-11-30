@@ -23,8 +23,9 @@
     <string name="title_activity_tela_consultas_gerais">Consultas</string>
     <string name="title_activity_tela_sobre_comparacao">Sobre a Comparação</string>
     <string name="title_activity_tela_historico_estado">Histórico de Indicativo</string>
-	<string name="title_activity_tela_sobre_lista_estado">Lista Estados</string>
-    
+    <string name="title_activity_tela_sobre_lista_estado">Lista Estados</string>
+    <string name="title_activity_tela_sobre_estado">Estado</string>
+
     <!-- Strings da tela inicial -->
     <string name="app_name">Educação em Foco</string>
     <string name="action_settings">Settings</string>
@@ -201,7 +202,10 @@
     <string name="comparacoes_gerais_conteudo_estados">O usuário escolherá dois estados para comparar os indicativos dos mesmos.</string>
     <string name="comparacoes_gerais_conteudo_indicativos">O usuário escolherá os indicativos que deseja comparar em relação a todos os estados.</string>
     <string name="hello_world">Hello world!</string>
-	
+
     <!-- Strings da tela sobre Lista Estado -->
     <string name="lista_estado_conteudo">O usuário escolhe o estado afim de consultar os dados do mesmo.</string>
+
+    <!-- Strings da tela sobre Lista Estado -->
+    <string name="estado_conteudo">É apresentado os dados dos indicativos do estado selecionado, com a opção de verificar o histórico.</string>
 </resources>
