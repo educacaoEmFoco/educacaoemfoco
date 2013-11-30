@@ -196,7 +196,7 @@ public class TelaEstado extends Activity {
 		imageViewBandeiras.setImageResource(idBandeira);
 	}
 	
-	public void clickBotaoHisticoEstado(View view) {
+	public void clickBotaoHistoricoEstado(View view) {
 		Intent intentAux = getIntent();
 		int posicao = intentAux.getIntExtra("INDEX_ESTADO_ESCOLHIDO", 0);
 		

@@ -52,7 +52,7 @@
     </style>
 
     <style name="botaoMenu" parent="@style/subTitulo">
-        <item name="android:background">#FFFFFF</item>
+        <item name="android:background">@android:color/transparent</item>
     </style>
 
     <style name="botaoGeraGrfafico" parent="@style/subTitulo">
