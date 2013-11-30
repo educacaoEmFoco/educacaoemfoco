@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.CheckBox;
 
@@ -38,6 +39,25 @@ public class TelaIndicativosConsultados extends Activity {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.menu_telas, menu);
 		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+
+		switch (item.getItemId()) {
+		case R.id.sobre:
+			abreTelaSobre();
+			break;
+		default:
+			break;
+		}
+
+		return true;
+	}
+
+	public void abreTelaSobre() {
+		Intent intent = new Intent(this, TelaSobreEscolhaIndicativo.class);
+		startActivity(intent);
 	}
 
 	private void inicializaCheckBox() {
@@ -73,7 +93,7 @@ public class TelaIndicativosConsultados extends Activity {
 		bTaxaAbandono = cbTaxaAbandono.isChecked();
 		bAprovacao = cbAprovacao.isChecked();
 	}
-	
+
 	public void marcaOuDesmarcaCheckBox(boolean opcaoEscolhida) {
 		cbIdeb.setChecked(opcaoEscolhida);
 		cbPib.setChecked(opcaoEscolhida);
@@ -90,7 +110,7 @@ public class TelaIndicativosConsultados extends Activity {
 		cbTaxaAbandono.setChecked(opcaoEscolhida);
 		cbAprovacao.setChecked(opcaoEscolhida);
 	}
-	
+
 	public void onRadioButtonMarcarTodosClicked(View view) {
 		marcaOuDesmarcaCheckBox(true);
 	}
@@ -98,7 +118,7 @@ public class TelaIndicativosConsultados extends Activity {
 	public void onRadioButtonDesmarcarTodosClicked(View view) {
 		marcaOuDesmarcaCheckBox(false);
 	}
-	
+
 	public void clickBotaoTodosIndicativos(View view) {
 		capturaValores();
 
@@ -117,7 +137,7 @@ public class TelaIndicativosConsultados extends Activity {
 		intent.putExtra("CB_HORAS_AULA", bHorasAula);
 		intent.putExtra("CB_TAXA_ABANDONO", bTaxaAbandono);
 		intent.putExtra("CB_TAXA_DISTORCAO", bTaxaDistorcao);
-		
+
 		intent.putExtra("INDEX_ESTADO1_ESCOLHIDO", posicao01);
 		intent.putExtra("INDEX_ESTADO2_ESCOLHIDO", posicao02);
 

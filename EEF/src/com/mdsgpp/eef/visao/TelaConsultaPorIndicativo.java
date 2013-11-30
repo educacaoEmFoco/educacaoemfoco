@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.RadioButton;
 
@@ -26,6 +27,24 @@ public class TelaConsultaPorIndicativo extends Activity {
 		getMenuInflater().inflate(R.menu.menu_telas, menu);
 		return true;
 	}
+	 @Override
+	    public boolean onOptionsItemSelected(MenuItem item) {
+	    	
+			switch (item.getItemId()) {
+			case R.id.sobre:
+				abreTelaSobre();
+				break;
+			default:
+				break;
+			}
+			
+	    	return true;
+	    }
+	    
+	    public void abreTelaSobre() {
+	    	Intent intent = new Intent(this, TelaSobreIndicativos.class);
+	    	startActivity(intent);
+	    }
 	
 	
 public void onRadioButtonClicked(View view) {

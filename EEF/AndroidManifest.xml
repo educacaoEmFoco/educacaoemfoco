@@ -165,6 +165,10 @@
             android:name="com.mdsgpp.eef.visao.TelaSobreComparacoesGerais"
             android:label="@string/title_activity_tela_sobre_comparacoes_gerais" >
         </activity>
+        <activity
+            android:name="com.mdsgpp.eef.visao.TelaSobreEscolhaIndicativo"
+            android:label="@string/title_activity_tela_sobre_escolha_indicativo" >
+        </activity>
     </application>
 
 </manifest>
