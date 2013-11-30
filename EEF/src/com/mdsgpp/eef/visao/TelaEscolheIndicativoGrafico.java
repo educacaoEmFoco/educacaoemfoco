@@ -24,7 +24,10 @@ public class TelaEscolheIndicativoGrafico extends Activity {
 			rbPrimeirosProjetosQuantidade, rbPrimeirosProjetosValores,
 			rbProjetosCnpqQuantidade, rbProjetosCnpqValores, rbProjetosDifusaoQuantidade, 
 			rbProjetosDifusaoValores, rbProjetosIniciacaoQuantidade, rbProjetosIniciacaoValores, 
-			rbProjetosJovensQuantidade, rbProjetosJovensValores, rbAlunosTurmaFundamental, rbAlunosTurmaMedio;
+			rbProjetosJovensQuantidade, rbProjetosJovensValores, rbAlunosTurmaFundamental, rbAlunosTurmaMedio,
+			rbHorasAulaFundamental, rbHorasAulaMedio, rbTaxaDeDistorcaoFundamental, rbTaxaDeDistorcaoMedio,
+			rbTaxaDeAprocaoFundamental, rbTaxaDeAprovacaoMedio, rbTaxaDeAbandonoFundamental, rbTaxaDeAbandonoMedio,
+			rbCensoAnosIniciaisFundamental, rbCensoAnosFinaisFundamental, rbCensoEsninoMedio, rbCensoEJAFundamental, rbCensoEJAMedio;
 	
 	
 	@Override
@@ -64,6 +67,7 @@ public class TelaEscolheIndicativoGrafico extends Activity {
 		bTaxaDistorcao = intentRecebida.getBooleanExtra("CB_TAXA_DISTORCAO", false);
 		bTaxaAbandono = intentRecebida.getBooleanExtra("CB_TAXA_ABANDONO", false);
 		bAprovacao = intentRecebida.getBooleanExtra("CB_APROVACAO", false);
+		
 	}
 	
 	public void inicializaRadioButtons() {
@@ -93,7 +97,23 @@ public class TelaEscolheIndicativoGrafico extends Activity {
 		rbAlunosTurmaFundamental = (RadioButton) findViewById(R.id.radio_alunos_por_turma_fundamental);
 		rbAlunosTurmaMedio = (RadioButton) findViewById(R.id.radio_alunos_por_turma_medio);
 		
+		rbHorasAulaFundamental = (RadioButton) findViewById(R.id.radio_horas_aula_fundamental);
+		rbHorasAulaMedio = (RadioButton) findViewById(R.id.radio_horas_aula_medio);
+
+		rbTaxaDeDistorcaoFundamental = (RadioButton) findViewById(R.id.radio_taxa_distorcao_fundamental);
+		rbTaxaDeDistorcaoMedio = (RadioButton) findViewById(R.id.radio_taxa_distorcao_medio);
 		
+		rbTaxaDeAprocaoFundamental = (RadioButton) findViewById(R.id.radio_taxa_aprovacao_fundamental);
+		rbTaxaDeAprovacaoMedio = (RadioButton) findViewById(R.id.radio_taxa_aprovacao_medio);
+		
+		rbTaxaDeAbandonoFundamental = (RadioButton) findViewById(R.id.radio_taxa_abandono_fundamental);
+		rbTaxaDeAbandonoMedio = (RadioButton) findViewById(R.id.radio_taxa_abandono_medio);
+		
+		rbCensoAnosIniciaisFundamental= (RadioButton) findViewById(R.id.radio_censo_iniciais_fundamental);
+		rbCensoAnosFinaisFundamental= (RadioButton) findViewById(R.id.radio_censo_finais_fundamental);
+		rbCensoEsninoMedio= (RadioButton) findViewById(R.id.radio_censo_ensino_medio);
+		rbCensoEJAFundamental= (RadioButton) findViewById(R.id.radio_censo_eja_fundamental);
+		rbCensoEJAMedio= (RadioButton) findViewById(R.id.radio_censo_eja_medio);
 		
 	}
 	
@@ -118,6 +138,21 @@ public class TelaEscolheIndicativoGrafico extends Activity {
 		setVisibility(rbProjetosIniciacaoValores, bProjetosIniciacao);
 		setVisibility(rbProjetosJovensQuantidade, bProjetosJovens);
 		setVisibility(rbProjetosJovensValores, bProjetosJovens);
+		setVisibility(rbAlunosTurmaFundamental, bAlunosTurma);
+		setVisibility(rbAlunosTurmaMedio, bAlunosTurma);
+		setVisibility(rbHorasAulaFundamental, bHorasAula);
+		setVisibility(rbHorasAulaMedio, bHorasAula);
+		setVisibility(rbTaxaDeDistorcaoFundamental, bTaxaDistorcao);
+		setVisibility(rbTaxaDeDistorcaoMedio, bTaxaDistorcao);
+		setVisibility(rbTaxaDeAprocaoFundamental, bAprovacao);
+		setVisibility(rbTaxaDeAprovacaoMedio, bAprovacao);
+		setVisibility(rbTaxaDeAbandonoFundamental, bTaxaAbandono);
+		setVisibility(rbTaxaDeAbandonoMedio, bTaxaAbandono);
+		setVisibility(rbCensoAnosIniciaisFundamental, bCenso);
+		setVisibility(rbCensoAnosFinaisFundamental, bCenso);
+		setVisibility(rbCensoEsninoMedio, bCenso);
+		setVisibility(rbCensoEJAFundamental, bCenso);
+		setVisibility(rbCensoEJAMedio, bCenso);
 	}
 	
 	public void onRadioButtonClicked(View view) {

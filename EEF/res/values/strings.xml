@@ -66,6 +66,19 @@
     <string name="censo">Censo Escolar(%)</string>
     <string name="alunos_por_turma_fundamental">Média de Alunos por Turma do Ensino Fundamental(Qtd.)</string>
     <string name="alunos_por_turma_medio">Média de Alunos por Turma do Ensino Médio(Qtd.)</string>
+    <string name="horas_aula_fundamental">Horas médias por aula do Ensino Fundamental</string>
+    <string name="horas_aula_medio">Horas médias por aula do Ensino Fundamental</string>
+    <string name="taxa_distorcao_fundamental">Taxa de Distorção por Idade do Ensino Fundamental (%)</string>
+    <string name="taxa_distorcao_medio">Taxa de Distorção por Idade do Ensino Médio (%)</string>
+    <string name="taxa_aprovacao_fundamental">Taxa de Aprovação do Ensino Fundamental (%)</string>
+    <string name="taxa_aprovacao_medio">Taxa de Aprovação do Ensino Médio (%)</string>
+    <string name="taxa_abandono_fundamental">Taxa de Abandono do Ensino Fundamental (%)</string>
+    <string name="taxa_abandono_medio">Taxa de Abandono do Ensino Médio (%)</string>
+    <string name="censo_anos_iniciais_fundamental">Censo Escolar dos Anos Iniciais do Ensino Fundamental (%)</string>
+    <string name="censo_anos_finais_fundamental">Censo Escolar dos Anos Finais do Ensino Fundamental (%)</string>
+    <string name="censo_ensino_medio">Censo Escolar do Ensino Médio (%)</string>
+    <string name="censo_eja_medio">Censo Escolar do EJA - Fundamental (%)</string>
+    <string name="censo_eja_fundamental">Censo Escolar do EJA - Médio (%)</string>
     <string name="bt_grafico">Gráfico</string>
 
     <!-- Strings da tela escolhe tipo de consulta -->

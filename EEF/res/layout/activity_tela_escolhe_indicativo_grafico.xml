@@ -158,6 +158,110 @@
                 android:layout_marginTop="5dp"
                 android:onClick="onRadioButtonClicked"
                 android:text="@string/alunos_por_turma_medio" />
+            
+            <RadioButton
+                android:id="@+id/radio_horas_aula_fundamental"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/horas_aula_fundamental" />
+            
+            <RadioButton
+                android:id="@+id/radio_horas_aula_medio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/horas_aula_medio" />
+            
+            <RadioButton
+                android:id="@+id/radio_taxa_distorcao_fundamental"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/taxa_distorcao_fundamental" />
+            
+            <RadioButton
+                android:id="@+id/radio_taxa_distorcao_medio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/taxa_distorcao_medio" />
+            
+            <RadioButton
+                android:id="@+id/radio_taxa_aprovacao_fundamental"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/taxa_aprovacao_fundamental" />
+            
+            <RadioButton
+                android:id="@+id/radio_taxa_aprovacao_medio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/taxa_aprovacao_medio" />
+            
+            <RadioButton
+                android:id="@+id/radio_taxa_abandono_fundamental"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/taxa_abandono_fundamental" />
+            
+            <RadioButton
+                android:id="@+id/radio_taxa_abandono_medio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/taxa_abandono_medio" />
+            
+            <RadioButton
+                android:id="@+id/radio_censo_iniciais_fundamental"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/censo_anos_finais_fundamental" />
+            
+            <RadioButton
+                android:id="@+id/radio_censo_finais_fundamental"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/censo_anos_finais_fundamental" />
+            
+            <RadioButton
+                android:id="@+id/radio_censo_ensino_medio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/censo_ensino_medio" />
+            
+            <RadioButton
+                android:id="@+id/radio_censo_eja_fundamental"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/censo_eja_fundamental" />
+            
+            <RadioButton
+                android:id="@+id/radio_censo_eja_medio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/censo_eja_medio" />
 
             <LinearLayout
                 android:layout_width="match_parent"
