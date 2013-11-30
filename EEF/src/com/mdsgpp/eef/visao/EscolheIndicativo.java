@@ -2,14 +2,15 @@ package com.mdsgpp.eef.visao;
 
 import com.mdsgpp.eef.R;
 
-import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.widget.RadioButton;
 
-public class TelaEscolheIndicativoGrafico extends Activity {
+public abstract class EscolheIndicativo extends Activity{
+
 	private String indicativo = "populacao";
 	private String titulo = "Populaï¿½ï¿½o";
 
@@ -155,201 +156,45 @@ public class TelaEscolheIndicativoGrafico extends Activity {
 		setVisibility(rbCensoEJAMedio, bCenso);
 	}
 	
-	public void onRadioButtonClicked(View view) {
+	public abstract void onRadioButtonClicked(View view);
 
-		boolean checked = ((RadioButton) view).isChecked();
-		
-		switch (view.getId()) {
-		case R.id.radio_apoio_cnpq_investimento:
-			if (checked)
-				indicativo = "valor_projetos_cnpq";
-			titulo = "Projetos de Pesquisa Apoio CNPq (R$)";
-			break;
-		case R.id.radio_apoio_cnpq_qtd:
-			if (checked)
-				indicativo = "quantidade_projeto_cnpq";
-			titulo = "Projetos de Pesquisa Apoio CNPq (Qtd.)";
-			break;
-		case R.id.radio_difusao_tecnologica_investimento:
-			if (checked)
-				indicativo = "valor_ciencia_tecnologia";
-			titulo = "Projeto de Difusï¿½o Tecnolï¿½gica (R$)";
-			break;
-		case R.id.radio_difusao_tecnologica_qtd:
-			if (checked)
-				indicativo = "projetos_ciencia_tecnologia";
-			titulo = "Projeto de Difusï¿½o Tecnolï¿½gica (Qtd.)";
-			break;
-		case R.id.radio_ideb_fundamental_finais:
-			if (checked)
-				indicativo = "ideb_fundamental_final";
-			titulo = "IDEB do Ensino Fundamental (Sï¿½ries Finais)";
-			break;
-		case R.id.radio_ideb_fundamental_iniciai:
-			if (checked)
-				indicativo = "ideb_fundamental_inicial";
-			titulo = "IDEB do Ensino Fundamental (Sï¿½ries Iniciais)";
-			break;
-		case R.id.radio_ideb_medio:
-			if (checked)
-				indicativo = "ideb_ensino_medio";
-			titulo = "IDEB do Ensino Mï¿½dio";
-			break;
-		case R.id.radio_jovens_pesquisadores_investimento:
-			if (checked)
-				indicativo = "valor_projetos_jovens_pesquisadores";
-			titulo = "Jovens pesquisadores (R$)";
-			break;
-
-		case R.id.radio_jovens_pesquisadores_qtd:
-			if (checked)
-				indicativo = "quantidade_projeto_jovens_pesquisadores";
-			titulo = "Jovens pesquisadores (Qtd.)";
-			break;
-
-		case R.id.radio_pib:
-			if (checked)
-				indicativo = "percentual_participacao_pib";
-			titulo = "Participaï¿½ï¿½o Estadual no PIB (%)";
-			break;
-
-		case R.id.radio_populacao:
-			if (checked)
-				indicativo = "populacao";
-			titulo = "Populaï¿½ï¿½o";
-			break;
-
-		case R.id.radio_primeiros_projetos_investimento:
-			if (checked)
-				indicativo = "valor_primeiros_projetos";
-			titulo = "Programa Primeiros Projetos (R$)";
-			break;
-
-		case R.id.radio_primeiros_projetos_qtd:
-			if (checked)
-				indicativo = "quantidade_primeiros_projetos";
-			titulo = "Programa Primeiros Projetos (Qtd.)";
-			break;
-
-		case R.id.radio_projetos_inct_investimento:
-			if (checked)
-				indicativo = "valor_projetos_inct";
-			titulo = "Projetos INCT (R$)";
-			break;
-
-		case R.id.radio_projetos_inct_qtd:
-			if (checked)
-				indicativo = "quantidade_projetos_inct";
-			titulo = "Projetos INCT (Qtd.)";
-			break;
-
-		case R.id.radio_alunos_por_turma_fundamental:
-			if (checked)
-				indicativo = "alunos_por_turma_ensino_medio";
-			titulo = "Média de Alunos por Turma do Ensino Fundamental(Qtd.)";
-			break;
-
-		case R.id.radio_alunos_por_turma_medio:
-			if (checked)
-				indicativo = "alunos_por_turma_ensino_medio";
-			titulo = "Média de Alunos por Turma do Ensino Médio(Qtd.)";
-			break;
-
-		case R.id.radio_horas_aula_fundamental:
-			if (checked)
-				indicativo = "horas_aula_ensino_medio";
-			titulo = "Horas médias por aula do Ensino Fundamental";
-			break;
-
-		case R.id.radio_horas_aula_medio:
-			if (checked)
-				indicativo = "horas_aula_ensino_medio";
-			titulo = "Horas médias por aula do Ensino Médio";
-			break;
-
-		case R.id.radio_taxa_distorcao_fundamental:
-			if (checked)
-				indicativo = "taxa_distorcao";
-			titulo = "Taxa de Distorção por Idade do Ensino Fundamental (%)";
-			break;
-
-		case R.id.radio_taxa_distorcao_medio:
-			if (checked)
-				indicativo = "taxa_distorcao";
-			titulo = "Taxa de Distorção por Idade do Ensino Médio (%)";
-			break;
-
-		case R.id.radio_taxa_aprovacao_fundamental:
-			if (checked)
-				indicativo = "taxa_aprovacao";
-			titulo = "Taxa de Aprovação do Ensino Fundamental (%)";
-			break;
-
-		case R.id.radio_taxa_aprovacao_medio:
-			if (checked)
-				indicativo = "taxa_aprovacao";
-			titulo = "Taxa de Aprovação do Ensino Médio (%)";
-			break;
-
-		case R.id.radio_taxa_abandono_fundamental:
-			if (checked)
-				indicativo = "taxa_abandono";
-			titulo = "Taxa de Abandono do Ensino Fundamental (%)";
-			break;
-
-		case R.id.radio_taxa_abandono_medio:
-			if (checked)
-				indicativo = "taxa_abandono";
-			titulo = "Taxa de Abandono do Ensino Médio (%)";
-			break;
-
-		case R.id.radio_censo_iniciais_fundamental:
-			if (checked)
-				indicativo = "censo";
-			titulo = "Censo Escolar dos Anos Iniciais do Ensino Fundamental (%)";
-			break;
-
-		case R.id.radio_censo_finais_fundamental:
-			if (checked)
-				indicativo = "censo";
-			titulo = "Censo Escolar dos Anos Finais do Ensino Fundamental (%)";
-			break;
-
-		case R.id.radio_censo_ensino_medio:
-			if (checked)
-				indicativo = "censo";
-			titulo = "Censo Escolar do Ensino Médio (%)";
-			break;
-
-		case R.id.radio_censo_eja_fundamental:
-			if (checked)
-				indicativo = "censo";
-			titulo = "Censo Escolar do EJA - Fundamental (%)";
-			break;
-
-		case R.id.radio_censo_eja_medio:
-			if (checked)
-				indicativo = "censo";
-			titulo = "Censo Escolar do EJA - Médio (%)";
-			break;
-
-		}
-	}
-
-	public void clickBotaoGrafico(View view) {
-		Intent intent = new Intent(this, TelaGrafico.class);
-		
-		intent.putExtra("INDEX_ESTADO1_ESCOLHIDO", posicao1);
-		intent.putExtra("INDEX_ESTADO2_ESCOLHIDO", posicao2);
-		intent.putExtra("INDICATIVO", indicativo);
-		intent.putExtra("TITULO", titulo);
-
-		startActivity(intent);		
-	}
+	public abstract void clickBotaoGrafico(View view);
 
 	public void clickBotaoSobreIndicativos(View view) {
-		Intent intent = new Intent(this, TelaEscolheIndicativoGrafico.class);
+		Intent intent = new Intent(this, TelaEscolheIndicativoGraficoComparacao.class);
 		startActivity(intent);
 	}
 
+	public String getIndicativo() {
+		return indicativo;
+	}
+
+	public void setIndicativo(String indicativo) {
+		this.indicativo = indicativo;
+	}
+
+	public String getTitulo() {
+		return titulo;
+	}
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+
+	public int getPosicao1() {
+		return posicao1;
+	}
+
+	public void setPosicao1(int posicao1) {
+		this.posicao1 = posicao1;
+	}
+
+	public int getPosicao2() {
+		return posicao2;
+	}
+
+	public void setPosicao2(int posicao2) {
+		this.posicao2 = posicao2;
+	}
+	
 }

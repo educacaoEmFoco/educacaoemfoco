@@ -472,7 +472,7 @@ public class TelaResultadoConsulta extends Activity {
 	}
 	
 	public void clickBotaoGeraGrafico(View view) {
-		Intent intent = new Intent(this, TelaEscolheIndicativoGrafico.class);
+		Intent intent = new Intent(this, TelaEscolheIndicativoGraficoComparacao.class);
 		Intent intent1 = getIntent();
 
 		int posicao1 = intent1.getIntExtra("INDEX_ESTADO1_ESCOLHIDO", 0);
