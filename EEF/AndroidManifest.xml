@@ -19,9 +19,8 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme"
-        android:launchMode="singleTask" >
-        
+        android:launchMode="singleTask"
+        android:theme="@style/AppTheme" >
         <uses-library android:name="android.test.runner" />
 
         <activity
@@ -168,31 +167,50 @@
         </activity>
         <activity
             android:name="com.mdsgpp.eef.visao.TelaHistoricoEstado"
-            android:label="@string/title_activity_tela_historico_estado"
             android:icon="@drawable/home"
+            android:label="@string/title_activity_tela_historico_estado"
             android:parentActivityName="MainActivity"
             android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.mdsgpp.eef.visao.TelaSobreComparacoesGerais"
-            android:label="@string/title_activity_tela_sobre_comparacoes_gerais"
             android:icon="@drawable/home"
+            android:label="@string/title_activity_tela_sobre_comparacoes_gerais"
             android:parentActivityName="MainActivity"
             android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.mdsgpp.eef.visao.TelaSobreListaEstado"
-            android:label="@string/title_activity_tela_sobre_lista_estado"
             android:icon="@drawable/home"
+            android:label="@string/title_activity_tela_sobre_lista_estado"
             android:parentActivityName="MainActivity"
             android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.mdsgpp.eef.visao.TelaSobreEstado"
-            android:label="@string/title_activity_tela_sobre_estado"
             android:icon="@drawable/home"
+            android:label="@string/title_activity_tela_sobre_estado"
             android:parentActivityName="MainActivity"
             android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.mdsgpp.eef.SobreComparacaoEstadosActivity"
+            android:label="@string/title_activity_sobre_comparacao_estados"
+            android:parentActivityName="MainActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.mdsgpp.eef.visao.TelaSobreEscolhaIndicativo"
+            android:label="@string/title_activity_tela_sobre_escolha_indicativo"
+            android:parentActivityName="MainActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.mdsgpp.eef.visao.TelaSobreComparacaoDeEstados"
+            android:label="@string/title_activity_tela_sobre_comparacao_de_estados"
+            android:parentActivityName="MainActivity"
+            android:screenOrientation="portrait" >
+           
         </activity>
     </application>
 
