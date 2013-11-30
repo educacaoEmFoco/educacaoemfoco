@@ -8,6 +8,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.support.v4.app.NavUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -41,6 +42,9 @@ public class TelaFeed extends Activity implements ReceptorDados {
 		case R.id.sobre:
 			abreTelaSobre();
 			break;
+		case android.R.id.home:
+	        NavUtils.navigateUpFromSameTask(this);
+	        break;
 		default:
 			break;
 		}

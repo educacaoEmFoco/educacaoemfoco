@@ -5,6 +5,7 @@ import com.mdsgpp.eef.R;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.NavUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -49,6 +50,7 @@ public abstract class EscolheIndicativo extends Activity{
 		return true;
 	}
 	
+	
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		
@@ -56,6 +58,9 @@ public abstract class EscolheIndicativo extends Activity{
 		case R.id.sobre:
 			abreTelaSobre();
 			break;
+		case android.R.id.home:
+	        NavUtils.navigateUpFromSameTask(this);
+	        break;
 		default:
 			break;
 		}

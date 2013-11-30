@@ -5,7 +5,9 @@ import com.mdsgpp.eef.R;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.support.v4.app.NavUtils;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.RadioButton;
 
@@ -27,8 +29,29 @@ public class TelaConsultaPorIndicativo extends Activity {
 		return true;
 	}
 	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		
+		switch (item.getItemId()) {
+		case R.id.sobre:
+			abreTelaSobre();
+			break;
+		case android.R.id.home:
+	        NavUtils.navigateUpFromSameTask(this);
+	        break;
+		default:
+			break;
+		}
+		
+    	return true;
+	}
 	
-public void onRadioButtonClicked(View view) {
+	public void abreTelaSobre() {
+		
+	}
+	
+	
+	public void onRadioButtonClicked(View view) {
 		
         boolean checked = ((RadioButton) view).isChecked();
         switch(view.getId()) {
