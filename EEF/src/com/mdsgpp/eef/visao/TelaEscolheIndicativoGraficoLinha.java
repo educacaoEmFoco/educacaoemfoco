@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.RadioButton;
 
 public class TelaEscolheIndicativoGraficoLinha extends EscolheIndicativo {
+	
 	public void onRadioButtonClicked(View view) {
 
 		boolean checked = ((RadioButton) view).isChecked();
@@ -187,7 +188,7 @@ public class TelaEscolheIndicativoGraficoLinha extends EscolheIndicativo {
 
 		}
 	}
-
+	
 	public void clickBotaoGrafico(View view) {
 		Intent intent = new Intent(this, MainActivity.class);
 		
@@ -195,6 +196,7 @@ public class TelaEscolheIndicativoGraficoLinha extends EscolheIndicativo {
 		intent.putExtra("INDICATIVO", getIndicativo());
 		intent.putExtra("TITULO", getTitulo());
 
-		startActivity(intent);		
+		startActivity(intent);
 	}
+	
 }

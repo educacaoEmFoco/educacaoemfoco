@@ -17,9 +17,10 @@
 		
         <ImageView   
         	android:id="@+id/imageView_bandeiras"
-			android:layout_height="wrap_content"
+			android:layout_height="0dip"
     		android:layout_weight="30" 
-   			android:layout_width="350dp" 
+   			android:layout_width="350dp"
+   			android:layout_marginTop="5dp" 
     		android:layout_gravity="center"
 			android:contentDescription="@string/string_vazia"/>
       

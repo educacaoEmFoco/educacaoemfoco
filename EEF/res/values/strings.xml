@@ -40,7 +40,7 @@
     <string name="botao_tela_indicativos">Ir</string>
 
     <!-- Strings da tela indicativos consultados -->
-    <string name="botao_indicativos">Indicativos</string>
+    <string name="botao_indicativos">Gerar gráfico</string>
 
     <!-- Strings da Escolhe Indicativo Grafico -->
     <string name="populacao">População</string>
