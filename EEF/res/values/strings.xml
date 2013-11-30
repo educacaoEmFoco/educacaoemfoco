@@ -42,7 +42,7 @@
     <string name="botao_tela_indicativos">Ir</string>
 
     <!-- Strings da tela indicativos consultados -->
-    <string name="botao_indicativos">Indicativos</string>
+    <string name="botao_indicativos">Gerar gráfico</string>
 
     <!-- Strings da Escolhe Indicativo Grafico -->
     <string name="populacao">População</string>
@@ -125,12 +125,16 @@
     <string name="projetos_inct"> Projetos Instituto Nacional de Ciência e Tecnologia - INCT: </string>
     <string name="projetos_inct_conteudo"> Número de projetos contratados dos Institutos Nacionais de Ciência e Tecnologia. </string>
     <string name="botao_sobre">Sobre</string>
+    <string name="botao_sobre_descricao">	Através dessa tela é possivel ao usuário escolher um dos indicativos abaixo e a partir da seleção visualizar o indicativo para todos os estados</string>
 
     <!-- Strings da tela consulta por indicativo -->
     <string name="titulo_escolhe_estado_por_indicativo">Escolha o indicativo</string>
     <string name="bt_verifica_estados_por_indicativo">Verificar estados</string>
     <string name="title_consultar_estados">Consultar Estados</string>
     <string name="title_consultar_estado1">Escolha o primeiro estado.</string>
+    
+    <!-- Strings da tela sobre escolha indigativo -->
+    <string name="botao_sobre_escolha_indicativo">Através dessa tela é possível selecionar um ou mais indicativos e após ele selecionar o botão avançar ,será redirecionado a tela de comparação do indicativo(s) escolhido entre os dois estados.Também nessa tela o usuário tem a opção de marcar todos os indicativos ou desmarcar todos os indicativos</string>
 
     <!-- Strings da tela resultado da consulta por indicativo -->
     <string name="acre">Acre</string>

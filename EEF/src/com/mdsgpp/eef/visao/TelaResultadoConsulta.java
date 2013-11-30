@@ -9,8 +9,10 @@ import com.mdsgpp.eef.controle.EstadoControle;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.support.v4.app.NavUtils;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -134,6 +136,27 @@ public class TelaResultadoConsulta extends Activity {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.menu_telas, menu);
 		return true;
+		
+	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		
+		switch (item.getItemId()) {
+		case R.id.sobre:
+			abreTelaSobre();
+			break;
+		case android.R.id.home:
+	        NavUtils.navigateUpFromSameTask(this);
+	        break;
+		default:
+			break;
+		}
+		
+    	return true;
+	}
+	
+	public void abreTelaSobre() {
 		
 	}
 	
