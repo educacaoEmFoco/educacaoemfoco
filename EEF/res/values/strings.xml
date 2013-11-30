@@ -25,6 +25,8 @@
     <string name="title_activity_tela_historico_estado">Histórico de Indicativo</string>
     <string name="title_activity_tela_sobre_lista_estado">Lista Estados</string>
     <string name="title_activity_tela_sobre_estado">Estado</string>
+    <string name="title_activity_tela_sobre_escolha_indicativo">Sobre Escolha de Indicativo</string>
+    <string name="title_activity_tela_sobre_comparacao_de_estados">Sobre Comparação de Estados</string>
 
     <!-- Strings da tela inicial -->
     <string name="app_name">Educação em Foco</string>

@@ -195,11 +195,22 @@
         </activity>
         <activity
             android:name="com.mdsgpp.eef.SobreComparacaoEstadosActivity"
-            android:label="@string/title_activity_sobre_comparacao_estados" >
+            android:label="@string/title_activity_sobre_comparacao_estados"
+            android:parentActivityName="MainActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.mdsgpp.eef.visao.TelaSobreEscolhaIndicativo"
+            android:label="@string/title_activity_tela_sobre_escolha_indicativo"
+            android:parentActivityName="MainActivity"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.mdsgpp.eef.visao.TelaSobreComparacaoDeEstados"
-            android:label="@string/title_activity_tela_comparacao_de_estados" >
+            android:label="@string/title_activity_tela_sobre_comparacao_de_estados"
+            android:parentActivityName="MainActivity"
+            android:screenOrientation="portrait" >
+           
         </activity>
     </application>
 
