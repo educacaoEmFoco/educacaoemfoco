@@ -28,14 +28,13 @@ public class TelaGraficoLinha extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_tela_grafico_historico);
 		inicializaCamposTexto();
-		Log.i("Shit", "yeah");
 		
 		Intent intent = getIntent();
 		temp = intent.getStringArrayListExtra("HISTORICO");
 		Log.i("Tamanho temp", temp.size()+"");
 		for(int i=0; i<temp.size(); i++)
 			historico.add(Float.parseFloat(temp.get(i)));
-		Log.i("Tamanho temp", historico.size()+"");
+		Log.i("Tamanho historico", historico.size()+"");
 			
 		plotarGrafico();
 	}

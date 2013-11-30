@@ -8,6 +8,7 @@ import com.mdsgpp.eef.controle.EstadoControle;
 import com.mdsgpp.eef.modelo.Estado;
 
 import android.content.Intent;
+import android.util.Log;
 import android.view.View;
 import android.widget.RadioButton;
 
@@ -158,6 +159,7 @@ public class TelaEscolheIndicativoGraficoLinha extends EscolheIndicativo {
 			setIndicativo("valor_projetos_inct");
 			setTitulo("Projetos INCT (R$)");
 			historico.clear();
+			Log.i("estado.getProjetosInct().lenght", estado.getProjetosInct().length+"");
 			for (int i = 0; i < estado.getProjetosInct().length - 1; i++)
 				historico.add((float) estado.getProjetosInct()[i].getValor());
 			break;
@@ -342,7 +344,8 @@ public class TelaEscolheIndicativoGraficoLinha extends EscolheIndicativo {
 
 	private Estado capturaInformacoesEstado() {
 		Estado estado1 = null;
-		int posicao = getPosicao1();
+		
+		int posicao = getPosicaoHistorico();
 		try {
 			estado1 = (Estado) EstadoControle.getInstancia(this).obterEstado(
 					posicao);
