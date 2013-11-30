@@ -44,15 +44,5 @@
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/buttonSobre"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/linearLayoutVertical"
-        android:layout_alignRight ="@+id/linearLayoutVertical"
-        android:layout_marginTop="40dp"
-        android:onClick="clickBotaoSobre"
-        android:text="@string/botao_sobre" />
 
 </RelativeLayout>
