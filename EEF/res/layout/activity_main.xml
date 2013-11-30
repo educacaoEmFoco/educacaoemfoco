@@ -18,11 +18,11 @@
         <Button
             android:id="@+id/botao_feed"
             style="@style/botaoMenu"
-            android:layout_width="123dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:drawableTop="@drawable/icone_listar"
+            android:drawableTop="@drawable/noticias"
             android:onClick="clickBotaoFeed"
-            android:text="@string/menu_botao_feed" />
+            android:text="@string/string_vazia" />
 
         <Button
             android:id="@+id/botao_consulta"

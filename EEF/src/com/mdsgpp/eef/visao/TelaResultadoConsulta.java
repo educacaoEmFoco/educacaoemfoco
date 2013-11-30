@@ -12,6 +12,7 @@ import android.content.Intent;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -114,7 +115,9 @@ public class TelaResultadoConsulta extends Activity {
 	private boolean  bCenso, bAlunosTurma, bHorasAula, bTaxaDistorcao, bTaxaAbandono, 
 			bAprovacao, bIdeb, bPib, bPopulacao, bPrimeirosProjetos, bProjetosCnpq,
 			bProjetosDifusao, bProjetosIniciacao, bProjetosJovens;
-
+	
+	private ImageView imageViewBandeira01; 
+	private ImageView imageViewBandeira02; 
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -129,7 +132,7 @@ public class TelaResultadoConsulta extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.menu_telas_sem_sobre, menu);
+		getMenuInflater().inflate(R.menu.menu_telas, menu);
 		return true;
 		
 	}
@@ -143,6 +146,8 @@ public class TelaResultadoConsulta extends Activity {
 		
 		int posicao1 = intent.getIntExtra("INDEX_ESTADO1_ESCOLHIDO",5);
 		int posicao2 = intent.getIntExtra("INDEX_ESTADO2_ESCOLHIDO",0);
+		
+		capturaBandeiras(posicao1, posicao2);
 		
 		bIdeb = intent.getBooleanExtra("CB_IDEB", false);
 		bPib = intent.getBooleanExtra("CB_PIB", false);
@@ -497,6 +502,26 @@ public class TelaResultadoConsulta extends Activity {
 		intent.putExtra("INDEX_ESTADO2_ESCOLHIDO", posicao2);
 
 		startActivity(intent);
-	}	
+	}
+	
+	public void capturaBandeiras(int posicaoEstado1, int posicaoEstado2){
+		String bandeiras[] = {"acre", "alagoas", "amapa", "amazonas", "bahia", 
+				"ceara", "distritofederal", "espiritosanto", "goias", "maranhao",
+				"matogrosso", "matogrossodosul", "minasgerais", "para", "paraiba",
+				"parana", "pernambuco", "piaui", "riodejaneiro", "riograndedonorte",
+				"riograndedosul", "rondonia", "roraima", "santacatarina", "saopaulo",
+				"sergipe", "tocantins"};	
+		
+		imageViewBandeira01 = (ImageView) findViewById(R.id.imageView_bandeiras1);
+		int idBandeira01 = getResources().getIdentifier(bandeiras[posicaoEstado1], "drawable", getPackageName());
+		imageViewBandeira01.setImageResource(idBandeira01);
+	
+		imageViewBandeira02 = (ImageView) findViewById(R.id.imageView_bandeiras2);
+		int idBandeira02 = getResources().getIdentifier(bandeiras[posicaoEstado2], "drawable", getPackageName());
+		imageViewBandeira02.setImageResource(idBandeira02);
+	
+		
+		
+	}
 }
 

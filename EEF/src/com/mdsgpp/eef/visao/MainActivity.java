@@ -25,9 +25,9 @@ public class MainActivity extends Activity {
         return true;
     }	
         
-    
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+    	
 		switch (item.getItemId()) {
 		case R.id.sobre:
 			abreTelaSobre();
@@ -51,7 +51,7 @@ public class MainActivity extends Activity {
     }
     
     public void clickBotaoConsultaGeral(View view){
-    	Intent intent = new Intent(this, TelaConsultasGerais.class);
+    	Intent intent = new Intent(this, TelaListaEstado.class);
     	startActivity(intent);
     }
     
