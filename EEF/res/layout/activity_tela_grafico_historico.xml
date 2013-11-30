@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:gravity="center" >
+
+    <TextView
+        android:id="@+id/text_view_titulo_grafico_historico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    
+    <com.echo.holographlibrary.LineGraph
+        android:layout_width="match_parent"
+        android:layout_marginTop="15dp"
+        android:layout_height="200dp"
+        android:id="@+id/graph"/>
+    
+     <TextView
+        android:id="@+id/text_view_historico1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="215dp"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+     
+     <TextView
+        android:id="@+id/text_view_historico2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="230dp"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+     
+      <TextView
+        android:id="@+id/text_view_historico3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="245dp"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+      
+       <TextView
+        android:id="@+id/text_view_historico4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="260dp"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+       
+        <TextView
+        android:id="@+id/text_view_historico5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="275dp"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>
