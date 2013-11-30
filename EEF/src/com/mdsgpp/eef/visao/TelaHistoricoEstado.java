@@ -158,6 +158,7 @@ public class TelaHistoricoEstado extends Activity {
 		Intent intent1 = getIntent();
 		
 		int posicao = intent1.getIntExtra("ESTADO", 0);
+		Log.i("posicao tela historico", posicao+"");
 		
     	Intent intent = new Intent(this, TelaEscolheIndicativoGraficoLinha.class);
     	intent.putExtra("ESTADO", posicao);

@@ -160,6 +160,7 @@ public class TelaEscolheIndicativoGraficoLinha extends EscolheIndicativo {
 			setTitulo("Projetos INCT (R$)");
 			historico.clear();
 			Log.i("estado.getProjetosInct().lenght", estado.getProjetosInct().length+"");
+			Log.i("estado", estado.getNome());
 			for (int i = 0; i < estado.getProjetosInct().length - 1; i++)
 				historico.add((float) estado.getProjetosInct()[i].getValor());
 			break;
@@ -346,6 +347,8 @@ public class TelaEscolheIndicativoGraficoLinha extends EscolheIndicativo {
 		Estado estado1 = null;
 		
 		int posicao = getPosicaoHistorico();
+		
+		Log.i("posicao", getPosicaoHistorico()+"");
 		try {
 			estado1 = (Estado) EstadoControle.getInstancia(this).obterEstado(
 					posicao);
