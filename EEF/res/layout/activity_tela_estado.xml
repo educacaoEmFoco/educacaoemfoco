@@ -14,15 +14,16 @@
         android:orientation="vertical"
         android:paddingBottom="30dp"
         android:paddingLeft="10dp" >
-
-        <ImageView
-            android:id="@+id/imageView_bandeiras"
-            android:layout_width="350dp"
-            android:layout_height="0dp"
-            android:layout_gravity="center"
-            android:layout_weight="30"
-            android:contentDescription="@string/string_vazia" />
-
+		
+        <ImageView   
+        	android:id="@+id/imageView_bandeiras"
+			android:layout_height="0dip"
+    		android:layout_weight="30" 
+   			android:layout_width="350dp"
+   			android:layout_marginTop="5dp" 
+    		android:layout_gravity="center"
+			android:contentDescription="@string/string_vazia"/>
+      
         <TextView
             android:id="@+id/textView_sigla"
             style="@style/titulo"

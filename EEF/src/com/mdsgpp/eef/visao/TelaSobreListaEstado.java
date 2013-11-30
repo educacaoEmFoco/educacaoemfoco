@@ -4,7 +4,9 @@ import com.mdsgpp.eef.R;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.support.v4.app.NavUtils;
 import android.view.Menu;
+import android.view.MenuItem;
 
 public class TelaSobreListaEstado extends Activity {
 
@@ -17,8 +19,22 @@ public class TelaSobreListaEstado extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.tela_sobre_lista_estado, menu);
+		getMenuInflater().inflate(R.menu.menu_telas_sem_sobre, menu);
 		return true;
+	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		
+		switch (item.getItemId()) {
+		case android.R.id.home:
+	        NavUtils.navigateUpFromSameTask(this);
+	        break;
+		default:
+			break;
+		}
+		
+    	return true;
 	}
 
 }
