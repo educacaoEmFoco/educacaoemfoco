@@ -8,6 +8,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -31,6 +32,25 @@ public class TelaListaEstado extends Activity {
 		getMenuInflater().inflate(R.menu.menu_telas, menu);
 		return true;
 	}
+	
+	 @Override
+	    public boolean onOptionsItemSelected(MenuItem item) {
+	    	
+			switch (item.getItemId()) {
+			case R.id.sobre:
+				abreTelaSobre();
+				break;
+			default:
+				break;
+			}
+			
+	    	return true;
+	    }
+	    
+	    public void abreTelaSobre() {
+	    	Intent intent = new Intent(this, TelaSobreListaEstado.class);
+	    	startActivity(intent);
+	    }
 	
 	private void inicializaListView() {
 		ListView listView = (ListView) findViewById(R.id.listview_tela_estados);
