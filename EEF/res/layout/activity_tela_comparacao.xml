@@ -24,19 +24,17 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/spinner1"
         android:layout_below="@+id/spinner1"
-        android:layout_marginTop="47dp" 
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:id="@+id/button1"
-        style="@style/botaoComparacao"
+        style="@style/botaoMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/spinner2"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="200dp"
+        android:drawableBottom="@drawable/compara"
         android:onClick="clickBotaoComparacaoEstados"
-        android:padding="20dp"
-        android:text="@string/compara_estados" />
+        android:padding="20dp" />
 
 </RelativeLayout>

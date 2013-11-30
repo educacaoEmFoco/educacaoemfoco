@@ -3,7 +3,6 @@ package com.mdsgpp.eef.modelo;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import android.util.Log;
 
 public class Estado {
 
@@ -251,8 +250,6 @@ public class Estado {
 			projetosLido[i].setQuantidade(Integer.parseInt(dadosQtdProjetos.get(i)[1].replaceAll(",", ".")));
 			projetosLido[i].setValor(Double.parseDouble(dadosValoresInvestidos.get(i)[1].replaceAll(",", ".")));
 		}
-		Log.i("teste_set_projetos", nomesIndicativo[0]);
-		Log.i("teste_set_projetos", nomesIndicativo[1]);
 		
 		return projetosLido;
 	}
