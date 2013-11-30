@@ -242,6 +242,97 @@ public class TelaEscolheIndicativoGrafico extends Activity {
 				indicativo = "quantidade_projetos_inct";
 			titulo = "Projetos INCT (Qtd.)";
 			break;
+
+		case R.id.radio_alunos_por_turma_fundamental:
+			if (checked)
+				indicativo = "alunos_por_turma_ensino_medio";
+			titulo = "Média de Alunos por Turma do Ensino Fundamental(Qtd.)";
+			break;
+
+		case R.id.radio_alunos_por_turma_medio:
+			if (checked)
+				indicativo = "alunos_por_turma_ensino_medio";
+			titulo = "Média de Alunos por Turma do Ensino Médio(Qtd.)";
+			break;
+
+		case R.id.radio_horas_aula_fundamental:
+			if (checked)
+				indicativo = "horas_aula_ensino_medio";
+			titulo = "Horas médias por aula do Ensino Fundamental";
+			break;
+
+		case R.id.radio_horas_aula_medio:
+			if (checked)
+				indicativo = "horas_aula_ensino_medio";
+			titulo = "Horas médias por aula do Ensino Médio";
+			break;
+
+		case R.id.radio_taxa_distorcao_fundamental:
+			if (checked)
+				indicativo = "taxa_distorcao";
+			titulo = "Taxa de Distorção por Idade do Ensino Fundamental (%)";
+			break;
+
+		case R.id.radio_taxa_distorcao_medio:
+			if (checked)
+				indicativo = "taxa_distorcao";
+			titulo = "Taxa de Distorção por Idade do Ensino Médio (%)";
+			break;
+
+		case R.id.radio_taxa_aprovacao_fundamental:
+			if (checked)
+				indicativo = "taxa_aprovacao";
+			titulo = "Taxa de Aprovação do Ensino Fundamental (%)";
+			break;
+
+		case R.id.radio_taxa_aprovacao_medio:
+			if (checked)
+				indicativo = "taxa_aprovacao";
+			titulo = "Taxa de Aprovação do Ensino Médio (%)";
+			break;
+
+		case R.id.radio_taxa_abandono_fundamental:
+			if (checked)
+				indicativo = "taxa_abandono";
+			titulo = "Taxa de Abandono do Ensino Fundamental (%)";
+			break;
+
+		case R.id.radio_taxa_abandono_medio:
+			if (checked)
+				indicativo = "taxa_abandono";
+			titulo = "Taxa de Abandono do Ensino Médio (%)";
+			break;
+
+		case R.id.radio_censo_iniciais_fundamental:
+			if (checked)
+				indicativo = "censo";
+			titulo = "Censo Escolar dos Anos Iniciais do Ensino Fundamental (%)";
+			break;
+
+		case R.id.radio_censo_finais_fundamental:
+			if (checked)
+				indicativo = "censo";
+			titulo = "Censo Escolar dos Anos Finais do Ensino Fundamental (%)";
+			break;
+
+		case R.id.radio_censo_ensino_medio:
+			if (checked)
+				indicativo = "censo";
+			titulo = "Censo Escolar do Ensino Médio (%)";
+			break;
+
+		case R.id.radio_censo_eja_fundamental:
+			if (checked)
+				indicativo = "censo";
+			titulo = "Censo Escolar do EJA - Fundamental (%)";
+			break;
+
+		case R.id.radio_censo_eja_medio:
+			if (checked)
+				indicativo = "censo";
+			titulo = "Censo Escolar do EJA - Médio (%)";
+			break;
+
 		}
 	}
 
