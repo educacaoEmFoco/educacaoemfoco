@@ -43,11 +43,11 @@
         <Button
             android:id="@+id/bt_historico_estado"
             style="@style/botaoMenu"
-            android:layout_width="146dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:drawableTop="@drawable/historico"
             android:layout_gravity="center"
-            android:onClick="clickBotaoHisticoEstado" >
+            android:onClick="clickBotaoHistoricoEstado" >
         </Button>
 
         <TextView
