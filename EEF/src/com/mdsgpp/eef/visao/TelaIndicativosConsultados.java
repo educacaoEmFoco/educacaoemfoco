@@ -41,10 +41,10 @@ public class TelaIndicativosConsultados extends Activity {
 		getMenuInflater().inflate(R.menu.menu_telas, menu);
 		return true;
 	}
-	
+
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		
+
 		switch (item.getItemId()) {
 		case R.id.sobre:
 			abreTelaSobre();
@@ -52,24 +52,6 @@ public class TelaIndicativosConsultados extends Activity {
 		case android.R.id.home:
 	        NavUtils.navigateUpFromSameTask(this);
 	        break;
-		default:
-			break;
-		}
-		
-    	return true;
-	}
-	
-	public void abreTelaSobre() {
-		
-	}
-
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-
-		switch (item.getItemId()) {
-		case R.id.sobre:
-			abreTelaSobre();
-			break;
 		default:
 			break;
 		}

@@ -35,6 +35,9 @@ public class TelaConsultaPorIndicativo extends Activity {
 			case R.id.sobre:
 				abreTelaSobre();
 				break;
+			case android.R.id.home:
+		        NavUtils.navigateUpFromSameTask(this);
+		        break;
 			default:
 				break;
 			}
@@ -46,28 +49,6 @@ public class TelaConsultaPorIndicativo extends Activity {
 	    	Intent intent = new Intent(this, TelaSobreIndicativos.class);
 	    	startActivity(intent);
 	    }
-	
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		
-		switch (item.getItemId()) {
-		case R.id.sobre:
-			abreTelaSobre();
-			break;
-		case android.R.id.home:
-	        NavUtils.navigateUpFromSameTask(this);
-	        break;
-		default:
-			break;
-		}
-		
-    	return true;
-	}
-	
-	public void abreTelaSobre() {
-		
-	}
-	
 	
 	public void onRadioButtonClicked(View view) {
 		
