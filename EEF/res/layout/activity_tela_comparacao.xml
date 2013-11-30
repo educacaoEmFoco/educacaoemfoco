@@ -2,14 +2,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/background_sombra"
+    android:gravity="center"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".TelaComparacao"
-    android:layout_gravity="center"
-    android:background="@drawable/background_sombra" >
-
+    tools:context=".TelaComparacao" >
     
     <Spinner
         android:id="@+id/spinner1"
@@ -32,22 +32,11 @@
         style="@style/botaoComparacao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/spinner2"
-        android:layout_below="@+id/spinner2"
-        android:layout_marginTop="73dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="200dp"
         android:onClick="clickBotaoComparacaoEstados"
         android:padding="20dp"
         android:text="@string/compara_estados" />
-
-    <Button
-        android:id="@+id/button2"
-        style="@style/botaoComparacao"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/button1"
-        android:layout_alignTop="@+id/button1"
-        android:onClick="clickBotaoSobreComparacao"
-        android:padding="20dp"
-        android:text="@string/botao_sobre" />
 
 </RelativeLayout>

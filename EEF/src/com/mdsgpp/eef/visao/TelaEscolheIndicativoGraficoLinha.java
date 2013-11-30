@@ -190,9 +190,9 @@ public class TelaEscolheIndicativoGraficoLinha extends EscolheIndicativo {
 	}
 	
 	public void clickBotaoGrafico(View view) {
-		Intent intent = new Intent(this, MainActivity.class);
+		Intent intent = new Intent(this, TelaGraficoLinha.class);
 		
-		intent.putExtra("INDEX_ESTADO1_ESCOLHIDO", getPosicao1());
+		intent.putExtra("INDEX_ESTADO_ESCOLHIDO", getPosicao1());
 		intent.putExtra("INDICATIVO", getIndicativo());
 		intent.putExtra("TITULO", getTitulo());
 

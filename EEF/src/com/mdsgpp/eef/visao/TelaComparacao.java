@@ -1,6 +1,9 @@
 package com.mdsgpp.eef.visao;
 
+import com.mdsgpp.eef.R;
+
 import android.content.Intent;
+import android.view.MenuItem;
 import android.view.View;
 
 public class TelaComparacao extends Comparacao {
@@ -22,6 +25,24 @@ public class TelaComparacao extends Comparacao {
 		startActivity(intent);
 		
 	}
+	
+    public boolean onOptionsItemSelected(MenuItem item) {
+    	
+		switch (item.getItemId()) {
+		case R.id.sobre:
+			abreTelaSobre();
+			break;
+		default:
+			break;
+		}
+		
+    	return true;
+    }
+    
+    public void abreTelaSobre() {
+    	Intent intent = new Intent(this, TelaSobreComparacao.class);
+    	startActivity(intent);
+    }
 	
 	public void clickBotaoSobreComparacao(View view){
     	Intent intent = new Intent(this, TelaSobreComparacao.class);

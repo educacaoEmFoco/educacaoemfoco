@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 
 public class TelaComparacoesGerais extends Activity {
@@ -22,7 +23,25 @@ public class TelaComparacoesGerais extends Activity {
 		getMenuInflater().inflate(R.menu.menu_telas, menu);
 		return true;
 	}
-
+	
+    public boolean onOptionsItemSelected(MenuItem item) {
+    	
+		switch (item.getItemId()) {
+		case R.id.sobre:
+			abreTelaSobre();
+			break;
+		default:
+			break;
+		}
+		
+    	return true;
+    }
+    
+    public void abreTelaSobre() {
+    	Intent intent = new Intent(this, TelaSobreComparacoesGerais.class);
+    	startActivity(intent);
+    }
+	
 	public void clickBotaoComparacao(View view) {
 		Intent intent = new Intent(this, TelaComparacao.class);
 		startActivity(intent);
@@ -33,9 +52,5 @@ public class TelaComparacoesGerais extends Activity {
 		startActivity(intent);
 	}
 	
-	public void clickBotaoSobreComparacoesGerais(View view) {
-		Intent intent = new Intent(this, TelaSobreComparacoesGerais.class);
-		startActivity(intent);
-	}
 }
 

@@ -11,6 +11,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -66,6 +67,25 @@ public class TelaEstado extends Activity {
 		getMenuInflater().inflate(R.menu.menu_telas, menu);
 		return true;
 	}
+	
+	 @Override
+	    public boolean onOptionsItemSelected(MenuItem item) {
+	    	
+			switch (item.getItemId()) {
+			case R.id.sobre:
+				abreTelaSobre();
+				break;
+			default:
+				break;
+			}
+			
+	    	return true;
+	    }
+	    
+	    public void abreTelaSobre() {
+	    	Intent intent = new Intent(this, TelaSobreEstado.class);
+	    	startActivity(intent);
+	    }
 	
 	private void capturaInformacoes() {
 		Intent intent = getIntent();
@@ -160,8 +180,6 @@ public class TelaEstado extends Activity {
 	}
 	
 	private void setImagem(int posicao) {
-		// O nome das bandeiras tá sem acento
-		// A slução que eu acho mais simples é ter um array com os nomes dos estados sem acento, e pegar o nome certo pela posicao
 		String bandeiras[] = {"acre", "alagoas", "amapa", "amazonas", "bahia", 
 				"ceara", "distritofederal", "espiritosanto", "goias", "maranhao",
 				"matogrosso", "matogrossodosul", "minasgerais", "para", "paraiba",

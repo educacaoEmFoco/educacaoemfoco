@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.view.Gravity;
 
@@ -23,9 +24,17 @@ public class IndicativoAdapter extends BaseAdapter{
 	private ViewHolder holder;
 	private LayoutInflater inflater;
 	
+	String bandeiras[] = {"acre", "alagoas", "amapa", "amazonas", "bahia", 
+			"ceara", "distritofederal", "espiritosanto", "goias", "maranhao",
+			"matogrosso", "matogrossodosul", "minasgerais", "para", "paraiba",
+			"parana", "pernambuco", "piaui", "riodejaneiro", "riograndedonorte",
+			"riograndedosul", "rondonia", "roraima", "santacatarina", "saopaulo",
+			"sergipe", "tocantins"};
+	
 	static class ViewHolder{
 		private TextView tvNome;
 		private TextView tvValorIndicativo;
+		private ImageView tvBandeiras;
 	}
 	
 	public IndicativoAdapter(String titulo,String indicativoEscolhido, Context context){
@@ -65,7 +74,7 @@ public class IndicativoAdapter extends BaseAdapter{
 				
 			holder.tvNome = (TextView) view.findViewById(R.id.textview_lista_indicativos_nome);
 			holder.tvValorIndicativo = (TextView) view.findViewById(R.id.textview_lista_indicativos_conteudo);
-			
+			holder.tvBandeiras = (ImageView) view.findViewById(R.id.imageview_lista_indicativos_bandeiras);
 			view.setTag(holder);
 		} else {
 			holder = (ViewHolder) view.getTag();
@@ -73,14 +82,19 @@ public class IndicativoAdapter extends BaseAdapter{
 		
 		if(posicao==0){//Titulo
 			holder.tvNome.setText(titulo);
-			holder.tvNome.setGravity(Gravity.CENTER);
+			holder.tvNome.setGravity(Gravity.CENTER_HORIZONTAL);
 			holder.tvValorIndicativo.setVisibility(View.GONE);
+			holder.tvBandeiras.setImageResource(NO_SELECTION);
 		} else {//Indicativos e seus valores
 			estado = getItem(posicao-1);
 			holder.tvNome.setText(estado.get("nome"));
 			holder.tvValorIndicativo.setText(estado.get(indicativoEscolhido));
 			holder.tvValorIndicativo.setVisibility(View.VISIBLE);
+			
+			int idBandeira = context.getResources().getIdentifier(bandeiras[posicao-1], "drawable", context.getPackageName());
+			holder.tvBandeiras.setImageResource(idBandeira);
 		}
+		
 		
 		return view;
 	}
