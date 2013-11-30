@@ -132,7 +132,7 @@
     <string name="bt_verifica_estados_por_indicativo">Verificar estados</string>
     <string name="title_consultar_estados">Consultar Estados</string>
     <string name="title_consultar_estado1">Escolha o primeiro estado.</string>
-    
+
     <!-- Strings da tela sobre escolha indigativo -->
     <string name="botao_sobre_escolha_indicativo">Através dessa tela é possível selecionar um ou mais indicativos e após ele selecionar o botão avançar ,será redirecionado a tela de comparação do indicativo(s) escolhido entre os dois estados.Também nessa tela o usuário tem a opção de marcar todos os indicativos ou desmarcar todos os indicativos</string>
 
@@ -188,6 +188,11 @@
     <string name="conteudo_sobre_comparacao">Será apresentado 2 combo box com as unidades federativas brasileiras, para que o usuário escolha dois estados diferentes para realizar a comparação dos mesmos.</string>
     <string name="informacao_botao_sobre_consulta">Após a seleção dos 2 estados desejados,esta opção encaminha o usuário para uma tela onde devem ser definido(s) qual(s) indicativo(s) deseja visualizar na comparação.</string>
 
+    <!-- Strings da tela sobre Comparação de Estado -->
+    <string name="title_sobre_comparacao_estado">Sobre Comparação de Estados</string>
+    <string name="conteudo_sobre_comparacao_estado">Está tela permite o usuário visualizar as comparações dos indicativos selecionados, dos dois estados escolhido, e clicando no botão de gerar grafico a tela é redirecionada para a tela escolha um indicativo.</string>
+   
+
     <!-- Strings da tela sobre Educação em Foco -->
     <string name="consultar_estados_conteudo">Selecionando a opção de consultar estados você será redirecionado para uma tela onde irá aparecer a lista de todos os estados, para que você possa consultar os dados do mesmo.</string>
     <string name="comparar_estados_conteudo">Selecionando a opção de comparar os estados você será redirecionado para uma tela onde você  poderá selecionar se deseja comparar por estado ou por indicativo.</string>
@@ -212,4 +217,7 @@
 
     <!-- Strings da tela sobre Lista Estado -->
     <string name="estado_conteudo">É apresentado os dados dos indicativos do estado selecionado, com a opção de verificar o histórico.</string>
+    <string name="title_activity_sobre_comparacao_estados">MainActivity</string>
+    <string name="title_activity_tela_comparacao_de_estados">MainActivity</string>
+
 </resources>
