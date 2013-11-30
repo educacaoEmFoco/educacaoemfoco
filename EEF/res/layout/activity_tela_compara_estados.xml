@@ -12,10 +12,10 @@
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:layout_marginTop="15dp"
-        android:background="@color/white"
         android:orientation="vertical"
         android:paddingBottom="30dp"
-        android:paddingLeft="10dp" >
+        android:paddingLeft="10dp"
+        android:background="@drawable/background" >
 
         <LinearLayout
             android:id="@+id/linearlayout_siglas"

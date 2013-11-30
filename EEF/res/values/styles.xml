@@ -48,7 +48,7 @@
     </style>
 
     <style name="valor">
-        <item name="android:textColor">#A69968</item>
+        <item name="android:textColor">#104D89</item>
     </style>
 
     <style name="botaoMenu" parent="@style/subTitulo">

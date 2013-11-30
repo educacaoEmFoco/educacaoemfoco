@@ -4,7 +4,8 @@
 	android:layout_height="match_parent"
 	android:paddingLeft="@dimen/activity_horizontal_margin"
 	android:paddingRight="@dimen/activity_horizontal_margin"
-	tools:context=".TelaListaEstado" >
+	tools:context=".TelaListaEstado" 
+	android:background="@drawable/background">
 
     <ListView
     	android:id="@+id/listview_tela_estados"
