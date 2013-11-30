@@ -160,8 +160,6 @@ public class TelaEstado extends Activity {
 	}
 	
 	private void setImagem(int posicao) {
-		// O nome das bandeiras tá sem acento
-		// A slução que eu acho mais simples é ter um array com os nomes dos estados sem acento, e pegar o nome certo pela posicao
 		String bandeiras[] = {"acre", "alagoas", "amapa", "amazonas", "bahia", 
 				"ceara", "distritofederal", "espiritosanto", "goias", "maranhao",
 				"matogrosso", "matogrossodosul", "minasgerais", "para", "paraiba",
