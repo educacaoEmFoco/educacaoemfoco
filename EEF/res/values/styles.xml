@@ -2,14 +2,14 @@
 
     <!--
         Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
     -->
     <style name="AppTheme" parent="android:Theme.Holo.Light">
 
         <!--
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
+            backward-compatibility can go here.
         -->
         <item name="android:textAppearance">@style/AppTheme</item>
     </style>
@@ -32,9 +32,16 @@
         <item name="android:textSize">20sp</item>
         <item name="android:padding">5dip</item>
     </style>
-    
+
     <style name="titulo">
         <item name="android:textColor">#104D89</item>
+        <item name="android:textSize">40sp</item>
+        <item name="android:typeface">serif</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+    </style>
+
+    <style name="titulo2">
+        <item name="android:textColor">#4B9BE4</item>
         <item name="android:textSize">40sp</item>
         <item name="android:typeface">serif</item>
         <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
@@ -47,17 +54,17 @@
     <style name="botaoMenu" parent="@style/subTitulo">
         <item name="android:background">#FFFFFF</item>
     </style>
-    
+
     <style name="botaoGeraGrfafico" parent="@style/subTitulo">
-          <item name="android:textColor">#104D89</item>
-          <item name="android:textSize" >20sp</item>
+        <item name="android:textColor">#104D89</item>
+        <item name="android:textSize">20sp</item>
     </style>
 
     <style name="botaoComparacao">
-          <item name="android:textColor">#104D89</item>
-          <item name="android:textSize" >20sp</item>
+        <item name="android:textColor">#104D89</item>
+        <item name="android:textSize">20sp</item>
     </style>
-    
+
     <style name="comparacao_x">
         <item name="android:textColor">#000000</item>
         <item name="android:textSize">25sp</item>
@@ -65,11 +72,10 @@
         <item name="android:padding">5dp</item>
         <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
     </style>
-    
+
     <style name="comparacao_subTitulo_1">
-        <item name="android:textColor">#4B9BE4</item>
+        <item name="android:textColor">#000000</item>
         <item name="android:textSize">20sp</item>
-        
     </style>
 
     <style name="comparacao_titulo_1">
@@ -81,14 +87,13 @@
     </style>
 
     <style name="comparacao_valor_1">
-        <item name="android:textColor">#A69968</item>
+        <item name="android:textColor">#104D89</item>
     </style>
 
     <style name="comparacao_subTitulo_2">
-        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textColor">#000000</item>
         <item name="android:textSize">20sp</item>
         <item name="android:visibility">invisible</item>
-        
     </style>
 
     <style name="comparacao_titulo_2">
@@ -100,34 +105,34 @@
     </style>
 
     <style name="comparacao_valor_2">
-        <item name="android:textColor">#104D89</item>
+        <item name="android:textColor">#4B9BE4</item>
     </style>
-    
+
     <style name="spinner_item" parent="@style/subTitulo">
         <item name="android:textSize">20sp</item>
         <item name="android:typeface">serif</item>
     </style>
-    
+
     <style name="spinner_item2" parent="@style/subTitulo2">
         <item name="android:textSize">20sp</item>
         <item name="android:typeface">serif</item>
     </style>
-    
-     <style name="tituloSobre">
+
+    <style name="tituloSobre">
         <item name="android:textColor">#104D89</item>
         <item name="android:textSize">15sp</item>
         <item name="android:typeface">serif</item>
         <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
     </style>
-    
+
     <style name="subTituloSobre">
         <item name="android:textColor">#4B9BE4</item>
         <item name="android:textSize">12sp</item>
         <item name="android:padding">5dip</item>
     </style>
-    
+
     <style name="CustomProgressBar" parent="android:Widget.ProgressBar.Horizontal">
-       <item name="android:indeterminateOnly">true</item>
+        <item name="android:indeterminateOnly">true</item>
     </style>
-    
+
 </resources>

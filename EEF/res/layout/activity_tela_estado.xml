@@ -14,15 +14,15 @@
         android:orientation="vertical"
         android:paddingBottom="30dp"
         android:paddingLeft="10dp" >
-		
-        <ImageView   
-        	android:id="@+id/imageView_bandeiras"
-			android:layout_height="wrap_content"
-    		android:layout_weight="30" 
-   			android:layout_width="350dp" 
-    		android:layout_gravity="center"
-			android:contentDescription="@string/string_vazia"/>
-      
+
+        <ImageView
+            android:id="@+id/imageView_bandeiras"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="30"
+            android:contentDescription="@string/string_vazia" />
+
         <TextView
             android:id="@+id/textView_sigla"
             style="@style/titulo"
@@ -39,14 +39,16 @@
             android:layout_marginBottom="10dp"
             android:gravity="center"
             android:text="@string/string_vazia" />
-        
+
         <Button
             android:id="@+id/bt_historico_estado"
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="clickBotaoHisticoEstado"
-            android:text="@string/botao_historico_estado" />
+            style="@style/botaoMenu"
+            android:layout_width="146dp"
+            android:layout_height="match_parent"
+            android:drawableTop="@drawable/historico"
+            android:layout_gravity="center"
+            android:onClick="clickBotaoHisticoEstado" >
+        </Button>
 
         <TextView
             android:id="@+id/textView_populacao"
@@ -238,7 +240,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:text="@string/string_vazia" />
-        
+
         <TextView
             android:id="@+id/textView_media_alunos_por_turma"
             style="@style/subTitulo"
@@ -263,7 +265,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:text="@string/string_vazia" />
-        
+
         <TextView
             android:id="@+id/textView_horas_aula_ensino"
             style="@style/subTitulo"
@@ -288,7 +290,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:text="@string/string_vazia" />
-        
+
         <TextView
             android:id="@+id/textView_taxa_distorcao"
             style="@style/subTitulo"
@@ -313,7 +315,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:text="@string/string_vazia" />
-        
+
         <TextView
             android:id="@+id/textView_taxa_aprovacao"
             style="@style/subTitulo"
@@ -338,7 +340,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:text="@string/string_vazia" />
-        
+
         <TextView
             android:id="@+id/textView_taxa_abandono"
             style="@style/subTitulo"
@@ -364,7 +366,7 @@
             android:layout_marginLeft="15dp"
             android:text="@string/string_vazia" />
 
-         <TextView
+        <TextView
             android:id="@+id/textView_censo"
             style="@style/subTitulo"
             android:layout_width="wrap_content"
@@ -388,7 +390,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:text="@string/string_vazia" />
-        
+
         <TextView
             android:id="@+id/textView_censo_medio"
             style="@style/valor"
@@ -404,6 +406,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:text="@string/string_vazia" />
+
         <TextView
             android:id="@+id/textView_censo_medio_eja"
             style="@style/valor"
@@ -411,7 +414,6 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:text="@string/string_vazia" />
-  
     </LinearLayout>
 
 </ScrollView>

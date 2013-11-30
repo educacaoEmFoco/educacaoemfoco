@@ -581,27 +581,30 @@ public final class R {
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
 
+
+
     
          */
         public static final int AppTheme=0x7f070000;
-        public static final int CustomProgressBar=0x7f070014;
-        public static final int botaoComparacao=0x7f070008;
-        public static final int botaoGeraGrfafico=0x7f070007;
-        public static final int botaoMenu=0x7f070006;
-        public static final int comparacao_subTitulo_1=0x7f07000a;
-        public static final int comparacao_subTitulo_2=0x7f07000d;
-        public static final int comparacao_titulo_1=0x7f07000b;
-        public static final int comparacao_titulo_2=0x7f07000e;
-        public static final int comparacao_valor_1=0x7f07000c;
-        public static final int comparacao_valor_2=0x7f07000f;
-        public static final int comparacao_x=0x7f070009;
-        public static final int spinner_item=0x7f070010;
-        public static final int spinner_item2=0x7f070011;
+        public static final int CustomProgressBar=0x7f070015;
+        public static final int botaoComparacao=0x7f070009;
+        public static final int botaoGeraGrfafico=0x7f070008;
+        public static final int botaoMenu=0x7f070007;
+        public static final int comparacao_subTitulo_1=0x7f07000b;
+        public static final int comparacao_subTitulo_2=0x7f07000e;
+        public static final int comparacao_titulo_1=0x7f07000c;
+        public static final int comparacao_titulo_2=0x7f07000f;
+        public static final int comparacao_valor_1=0x7f07000d;
+        public static final int comparacao_valor_2=0x7f070010;
+        public static final int comparacao_x=0x7f07000a;
+        public static final int spinner_item=0x7f070011;
+        public static final int spinner_item2=0x7f070012;
         public static final int subTitulo=0x7f070002;
         public static final int subTitulo2=0x7f070003;
-        public static final int subTituloSobre=0x7f070013;
+        public static final int subTituloSobre=0x7f070014;
         public static final int titulo=0x7f070004;
-        public static final int tituloSobre=0x7f070012;
-        public static final int valor=0x7f070005;
+        public static final int titulo2=0x7f070005;
+        public static final int tituloSobre=0x7f070013;
+        public static final int valor=0x7f070006;
     }
 }
