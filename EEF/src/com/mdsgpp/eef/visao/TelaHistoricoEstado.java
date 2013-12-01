@@ -72,7 +72,8 @@ public class TelaHistoricoEstado extends Activity {
 	}
 	
 	public void abreTelaSobre() {
-		
+		Intent intent = new Intent(this, TelaSobreHistoricoDeIndicativo.class);
+    	startActivity(intent);	
 	}
 	
 	private void capturaInformacoes() {
