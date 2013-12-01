@@ -31,6 +31,7 @@ public class TelaGraficoLinha extends Activity {
 		
 		Intent intent = getIntent();
 		temp = intent.getStringArrayListExtra("HISTORICO");
+		
 		Log.i("Tamanho temp", temp.size()+"");
 		for(int i=0; i<temp.size(); i++)
 			historico.add(Float.parseFloat(temp.get(i)));
@@ -56,7 +57,7 @@ public class TelaGraficoLinha extends Activity {
 	private void plotarGrafico() {
 		Line curva = new Line();
 		
-		for(int i=0, passo=10; i<historico.size()-1; i++,passo+=10){
+		for(int i=0, passo=10; i<historico.size(); i++,passo+=10){
 			LinePoint ponto = new LinePoint();
 			ponto.setX(passo);
 			ponto.setY(historico.get(i));
