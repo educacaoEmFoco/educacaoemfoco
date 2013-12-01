@@ -2,7 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/scrollView1"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:background="@drawable/background" >
 
     <LinearLayout
         android:id="@+id/linearlayout_estado1"
@@ -15,7 +16,7 @@
         android:orientation="vertical"
         android:paddingBottom="30dp"
         android:paddingLeft="10dp"
-        android:background="@drawable/background" >
+        android:background="@android:color/transparent" >
 
         <LinearLayout
             android:id="@+id/linearlayout_siglas"

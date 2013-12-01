@@ -6,57 +6,33 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
-<<<<<<< HEAD
     <LinearLayout
-        android:id="@+id/linearLayoutVertical"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:layout_margin="15dp"
-        android:background="@drawable/background_sombra"
         android:orientation="vertical"
-        android:padding="25dp" >
+        android:background="@android:color/transparent"
+        android:layout_centerInParent="true" >
 
         <Button
             android:id="@+id/buttonEstados"
             style="@style/botaoMenu"
-            android:layout_width="146dp"
-            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:drawableTop="@drawable/estado"
             android:onClick="clickBotaoComparacao" >
         </Button>
-=======
-    <Button
-        android:id="@+id/buttonEstados"
-        style="@style/botaoMenu"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:drawableTop="@drawable/estado"
-        android:onClick="clickBotaoComparacao" >
-    </Button>
-
-    <Button
-        android:id="@+id/buttonIndicativos"
-        style="@style/botaoMenu"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:drawableTop="@drawable/indicativos"
-        android:onClick="clickBotaoIndicativos" >
-    </Button>
->>>>>>> e2ef8577c716f4dffeb0ddf49ce683e537d52d2f
 
         <Button
             android:id="@+id/buttonIndicativos"
             style="@style/botaoMenu"
-            android:layout_width="146dp"
-            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:drawableTop="@drawable/indicativos"
             android:onClick="clickBotaoIndicativos" >
         </Button>
+        
     </LinearLayout>
+
 </RelativeLayout>

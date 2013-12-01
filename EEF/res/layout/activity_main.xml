@@ -10,10 +10,9 @@
         android:id="@+id/linearLayoutVertical"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
+        android:layout_centerInParent="true"
         android:layout_margin="15dp"
-        android:background="@drawable/background_sombra"
+        android:background="@android:color/transparent"
         android:orientation="vertical"
         android:padding="25dp" >
 
