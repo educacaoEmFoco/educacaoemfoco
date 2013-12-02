@@ -173,7 +173,7 @@
 
     <!-- Strings da tela sobre resultado da consulta -->
     <string name="title_sobre_resultado_da_consulta">Sobre Resultado da Consulta</string>
-    <string name="conteudo_sobre_resultado_da_consulta">Está tela permite o usuário vizualizar o indicativo que ele selecionou, para cada um dos estados do Brasil.</string>
+    <string name="conteudo_sobre_resultado_da_consulta">Está tela permite o usuário vizualizar o indicativo que ele selecionou, para cada um dos estados brasileiros. Os resultados apresenta são referentes ao último ano disponível. Os anos são disponíbilizados para consulta na opção "Histórico" na tela de consulta de estados.</string>
 
     <!-- Strings da tela sobre historico de indicativo -->
     <string name="title_sobre_historico_de_indicativo">Sobre Histórico de Indicativo</string>
@@ -204,7 +204,7 @@
 
     <!-- Strings da tela sobre Comparação de Estado -->
     <string name="title_sobre_comparacao_estado">Sobre Comparação de Estados</string>
-    <string name="conteudo_sobre_comparacao_estado">Está tela permite o usuário visualizar as comparações dos indicativos selecionados, dos dois estados escolhido, e clicando no botão de gerar grafico a tela é redirecionada para a tela escolha um indicativo.</string>
+    <string name="conteudo_sobre_comparacao_estado">Está tela permite o usuário visualizar as comparações dos indicativos selecionados, dos dois estados escolhido, e clicando no botão de gerar grafico a tela é redirecionada para a tela escolha um indicativo. Os resultados apresenta são referentes ao último ano disponível. Os anos são disponíbilizados para consulta na opção "Histórico" na tela de consulta de estados.</string>
 
     <!-- Strings da tela sobre Educação em Foco -->
     <string name="consultar_estados_conteudo">Selecionando a opção de consultar estados você será redirecionado para uma tela onde irá aparecer a lista de todos os estados, para que você possa consultar os dados do mesmo.</string>
@@ -223,21 +223,20 @@
     <string name="title_sobre_comparacacoes_gerais_indicativos">Comparação por indicativo: </string>
     <string name="comparacoes_gerais_conteudo_estados">O usuário escolherá dois estados para comparar os indicativos dos mesmos.</string>
     <string name="comparacoes_gerais_conteudo_indicativos">O usuário escolherá os indicativos que deseja comparar em relação a todos os estados.</string>
-    <string name="hello_world">Hello world!</string>
 
     <!-- Strings da tela sobre Lista Estado -->
     <string name="lista_estado_conteudo">O usuário escolhe o estado afim de consultar os dados do mesmo.</string>
 
     <!-- Strings da tela sobre Lista Estado -->
-    <string name="estado_conteudo">É apresentado os dados dos indicativos do estado selecionado, com a opção de verificar o histórico.</string>
+    <string name="estado_conteudo">É apresentado os dados dos indicativos do estado selecionado, com a opção de verificar o histórico. Os resultados apresenta são referentes ao último ano disponível. Os anos são disponíbilizados para consulta na opção "Histórico" na tela de consulta de estados.</string>
     <string name="title_activity_sobre_comparacao_estados">MainActivity</string>
     <string name="title_activity_tela_comparacao_de_estados">MainActivity</string>
     <string name="title_activity_sobre_historico_de_indicativo">SobreHistoricoDeIndicativo</string>
-    
+
     <!-- Strings da tela sobre Grafico -->
     <string name="grafico_conteudo">Apresenta o gráfico com os dados do indicativo selecionado.</string>
-    
+
     <!-- Strings da tela sobre EscolheIndicativoGraficoComparacao -->
-	<string name="escolhe_indicativo_grafico_comparacao_conteudo">O usuário escolhe um indicativo para gerar o gráfico com os dados do mesmo.</string>
-	
+    <string name="escolhe_indicativo_grafico_comparacao_conteudo">O usuário escolhe um indicativo para gerar o gráfico com os dados do mesmo.</string>
+
 </resources>
