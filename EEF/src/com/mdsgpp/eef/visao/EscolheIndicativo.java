@@ -14,7 +14,7 @@ import android.widget.RadioButton;
 public abstract class EscolheIndicativo extends Activity{
 
 	private String indicativo = "populacao";
-	private String titulo = "Populaï¿½ï¿½o";
+	private String titulo = "População";
 
 	private int posicao1, posicao2, posicaoHistorico;
 	

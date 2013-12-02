@@ -17,19 +17,19 @@ public class TelaEscolheIndicativoGraficoComparacao extends EscolheIndicativo {
 			setValores("quantidade_projeto_cnpq", "rojetos de Pesquisa Apoio CNPq (Qtd.)");
 			break;
 		case R.id.radio_difusao_tecnologica_investimento:
-			setValores("valor_ciencia_tecnologia", "Projeto de Difusï¿½o Tecnolï¿½gica (R$)");
+			setValores("valor_ciencia_tecnologia", "Projeto de Difusão Tecnológica (R$)");
 			break;
 		case R.id.radio_difusao_tecnologica_qtd:
-			setValores("projetos_ciencia_tecnologia", "Projeto de Difusï¿½o Tecnolï¿½gica (Qtd.)");
+			setValores("projetos_ciencia_tecnologia", "Projeto de Difusãoo Tecnológica (Qtd.)");
 			break;
 		case R.id.radio_ideb_fundamental_finais:
-			setValores("ideb_fundamental_final", "IDEB do Ensino Fundamental (Sï¿½ries Finais)");
+			setValores("ideb_fundamental_final", "IDEB do Ensino Fundamental (Séries Finais)");
 			break;
 		case R.id.radio_ideb_fundamental_iniciai:
-			setValores("ideb_fundamental_inicial", "IDEB do Ensino Fundamental (Sï¿½ries Iniciais)");
+			setValores("ideb_fundamental_inicial", "IDEB do Ensino Fundamental (Séries Iniciais)");
 			break;
 		case R.id.radio_ideb_medio:
-			setValores("ideb_ensino_medio", "IDEB do Ensino Mï¿½dio");
+			setValores("ideb_ensino_medio", "IDEB do Ensino Médio");
 			break;
 		case R.id.radio_jovens_pesquisadores_investimento:
 			setValores("valor_projetos_jovens_pesquisadores", "Jovens pesquisadores (R$)");
@@ -38,7 +38,7 @@ public class TelaEscolheIndicativoGraficoComparacao extends EscolheIndicativo {
 			setValores("quantidade_projeto_jovens_pesquisadores", "Jovens pesquisadores (Qtd.)");
 			break;
 		case R.id.radio_pib:
-			setValores("percentual_participacao_pib", "Participaï¿½ï¿½o Estadual no PIB (%)");
+			setValores("percentual_participacao_pib", "Participação Estadual no PIB (%)");
 			break;
 		case R.id.radio_populacao:
 			setValores("populacao", "População");

@@ -1,8 +1,6 @@
 package com.mdsgpp.eef.visao;
 
 import com.mdsgpp.eef.R;
-import com.mdsgpp.eef.R.layout;
-import com.mdsgpp.eef.R.menu;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -20,7 +18,7 @@ public class TelaSobreResultadoDaConsulta extends Activity {
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater()
-				.inflate(R.menu.tela_sobre_resultado_da_consulta, menu);
+				.inflate(R.menu.menu_telas_sem_sobre, menu);
 		return true;
 	}
 

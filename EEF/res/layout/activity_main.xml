@@ -12,16 +12,17 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_margin="15dp"
-        android:background="@android:color/transparent"
+        android:background="@drawable/background_sombra"
         android:orientation="vertical"
         android:padding="25dp" >
 
         <Button
             android:id="@+id/botao_feed"
             style="@style/botaoMenu"
-            android:layout_width="227dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:drawableTop="@drawable/noticias"
+            android:layout_gravity="center"
+            android:drawableTop="@drawable/icone_noticias"
             android:onClick="clickBotaoFeed" />
 
         <Button
@@ -29,7 +30,7 @@
             style="@style/botaoMenu"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_gravity="left"
+            android:layout_gravity="center"
             android:drawableTop="@drawable/icone_listar"
             android:onClick="clickBotaoConsultaGeral" />
 
@@ -38,7 +39,8 @@
             style="@style/botaoMenu"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_gravity="left"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
             android:drawableTop="@drawable/icone_comparacao"
             android:onClick="clickBotaoComparacaoGeral" />
     </LinearLayout>

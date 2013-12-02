@@ -48,12 +48,12 @@ public final class R {
         public static final int ic_launcher=0x7f020014;
         public static final int icone_comparacao=0x7f020015;
         public static final int icone_listar=0x7f020016;
-        public static final int indicativos=0x7f020017;
-        public static final int maranhao=0x7f020018;
-        public static final int matogrosso=0x7f020019;
-        public static final int matogrossodosul=0x7f02001a;
-        public static final int minasgerais=0x7f02001b;
-        public static final int noticias=0x7f02001c;
+        public static final int icone_noticias=0x7f020017;
+        public static final int indicativos=0x7f020018;
+        public static final int maranhao=0x7f020019;
+        public static final int matogrosso=0x7f02001a;
+        public static final int matogrossodosul=0x7f02001b;
+        public static final int minasgerais=0x7f02001c;
         public static final int para=0x7f02001d;
         public static final int paraiba=0x7f02001e;
         public static final int parana=0x7f02001f;
@@ -73,7 +73,6 @@ public final class R {
         public static final int tocantins=0x7f02002d;
     }
     public static final class id {
-        public static final int action_settings=0x7f090119;
         public static final int botao_consulta=0x7f090002;
         public static final int botao_feed=0x7f090001;
         public static final int botao_gera_grafico=0x7f09001e;
@@ -392,14 +391,6 @@ public final class R {
     public static final class menu {
         public static final int menu_telas=0x7f080000;
         public static final int menu_telas_sem_sobre=0x7f080001;
-        public static final int sobre_comparacao_de_estados=0x7f080002;
-        public static final int sobre_comparacao_estados=0x7f080003;
-        public static final int sobre_historico_de_indicativo=0x7f080004;
-        public static final int tela_comparacao_de_estados=0x7f080005;
-        public static final int tela_sobre_escolha_indicativo=0x7f080006;
-        public static final int tela_sobre_estado=0x7f080007;
-        public static final int tela_sobre_lista_estado=0x7f080008;
-        public static final int tela_sobre_resultado_da_consulta=0x7f080009;
     }
     public static final class string {
         public static final int Programa_primeiros_projetos=0x7f060051;
