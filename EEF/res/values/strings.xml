@@ -27,6 +27,8 @@
     <string name="title_activity_tela_sobre_estado">Estado</string>
     <string name="title_activity_tela_sobre_escolha_indicativo">Sobre Escolha de Indicativo</string>
     <string name="title_activity_tela_sobre_comparacao_de_estados">Sobre Comparação de Estados</string>
+    <string name="title_activity_tela_sobre_resultado_da_consulta">Sobre Resultado da Consulta</string>
+    <string name="title_activity_tela_sobre_historico_de_indicativo">Sobre Histórico de Indicativo</string>
 
     <!-- Strings da tela inicial -->
     <string name="app_name">Educação em Foco</string>
@@ -167,6 +169,14 @@
     <string name="sergipe">Sergipe</string>
     <string name="tocantins">Tocantins</string>
 
+    <!-- Strings da tela sobre resultado da consulta -->
+    <string name="title_sobre_resultado_da_consulta">Sobre Resultado da Consulta</string>
+    <string name="conteudo_sobre_resultado_da_consulta">Está tela permite o usuário vizualizar o indicativo que ele selecionou, para cada um dos estados do Brasil.</string>
+
+    <!-- Strings da tela sobre historico de indicativo -->
+    <string name="title_sobre_historico_de_indicativo">Sobre Histórico de Indicativo</string>
+    <string name="conteudo_sobre_historico_de_indicativo">O usuário visualiza o histórico de cada indicativo do estado que foi selecionado.Também é possível gerar um gráfico do indicativo através do botão gerar gráfico.</string>
+
     <!-- Strings da tela sobre feed -->
     <string name="tela_sobre_feed">Fonte de Informações do EEF</string>
     <string name="descricao_sobre_feed">As notícias informadas pelo aplicativo Educação em Foco são originárias do site:\n
@@ -193,7 +203,6 @@
     <!-- Strings da tela sobre Comparação de Estado -->
     <string name="title_sobre_comparacao_estado">Sobre Comparação de Estados</string>
     <string name="conteudo_sobre_comparacao_estado">Está tela permite o usuário visualizar as comparações dos indicativos selecionados, dos dois estados escolhido, e clicando no botão de gerar grafico a tela é redirecionada para a tela escolha um indicativo.</string>
-   
 
     <!-- Strings da tela sobre Educação em Foco -->
     <string name="consultar_estados_conteudo">Selecionando a opção de consultar estados você será redirecionado para uma tela onde irá aparecer a lista de todos os estados, para que você possa consultar os dados do mesmo.</string>
@@ -221,5 +230,6 @@
     <string name="estado_conteudo">É apresentado os dados dos indicativos do estado selecionado, com a opção de verificar o histórico.</string>
     <string name="title_activity_sobre_comparacao_estados">MainActivity</string>
     <string name="title_activity_tela_comparacao_de_estados">MainActivity</string>
+    <string name="title_activity_sobre_historico_de_indicativo">SobreHistoricoDeIndicativo</string>
 
 </resources>

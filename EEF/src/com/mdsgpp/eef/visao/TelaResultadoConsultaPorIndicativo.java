@@ -52,6 +52,8 @@ public class TelaResultadoConsultaPorIndicativo extends Activity {
 	}
 	
 	public void abreTelaSobre() {
+		Intent intent = new Intent(this, TelaSobreResultadoDaConsulta.class);
+    	startActivity(intent);
 		
 	}
 	

@@ -22,20 +22,22 @@ public class TelaGraficoLinha extends Activity {
 	private TextView tituloGrafico;
 	private ArrayList<Float> historico = new ArrayList<Float>();
 	private ArrayList<String> temp;
+	private String titulo;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_tela_grafico_historico);
+		
 		inicializaCamposTexto();
 		
 		Intent intent = getIntent();
 		temp = intent.getStringArrayListExtra("HISTORICO");
+		titulo = intent.getStringExtra("TITULO");
+		tituloGrafico.setText(titulo);
 		
-		Log.i("Tamanho temp", temp.size()+"");
 		for(int i=0; i<temp.size(); i++)
 			historico.add(Float.parseFloat(temp.get(i)));
-		Log.i("Tamanho historico", historico.size()+"");
 			
 		plotarGrafico();
 	}
@@ -55,6 +57,8 @@ public class TelaGraficoLinha extends Activity {
 	}
 	
 	private void plotarGrafico() {
+		tituloGrafico.setText(titulo);
+		
 		Line curva = new Line();
 		
 		for(int i=0, passo=10; i<historico.size(); i++,passo+=10){
@@ -66,7 +70,21 @@ public class TelaGraficoLinha extends Activity {
 		curva.setColor(Color.parseColor("#4682B4"));
 		LineGraph li = (LineGraph)findViewById(R.id.graph);
 		li.addLine(curva);
-		li.setRangeY(0, 1000);
+		
+		float yMaximo=0;
+		yMaximo = calculaValorMaximoHistorico(yMaximo);
+		
+		li.setRangeY(0, yMaximo);
 		li.setLineToFill(0);
+	}
+
+
+
+	private float calculaValorMaximoHistorico(float maximo) {
+		for(int i=0; i<historico.size(); i++){
+			if(historico.get(i) > maximo)
+				maximo = (float) (historico.get(i) + historico.get(i) * 0.1);  
+		}
+		return maximo;
 	}
 }
