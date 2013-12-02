@@ -47,7 +47,7 @@ public class TelaComparacao extends Comparacao {
     	startActivity(intent);
     }
 	
-	public void clickBotaoSobreComparacao(View view){
+	public void clickBotaoSobreComparacao(View view) {
     	Intent intent = new Intent(this, TelaSobreComparacao.class);
     	startActivity(intent);
     }

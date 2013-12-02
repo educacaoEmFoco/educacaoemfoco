@@ -3,147 +3,31 @@ package com.mdsgpp.eef.visao;
 import com.mdsgpp.eef.R;
 
 import android.os.Bundle;
-import android.app.Activity;
 import android.content.Intent;
-import android.support.v4.app.NavUtils;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.widget.RadioButton;
+import android.widget.TextView;
 
-public class TelaConsultaPorIndicativo extends Activity {
-
-	private String indicativo = "populacao";
-	private String titulo = "Populacao";
+public class TelaConsultaPorIndicativo extends EscolheIndicativo {
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_tela_consulta_por_indicativo);
+		setContentView(R.layout.activity_tela_escolhe_indicativo_grafico);
+		
+		TextView txtViewTitulo = (TextView) findViewById(R.id.textview_titulo);
+		txtViewTitulo.setText("Escolha um indicativo para gerar a lista: ");
 	}
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.menu_telas, menu);
-		return true;
-	}
-	 @Override
-	    public boolean onOptionsItemSelected(MenuItem item) {
-	    	
-			switch (item.getItemId()) {
-			case R.id.sobre:
-				abreTelaSobre();
-				break;
-			case android.R.id.home:
-		        NavUtils.navigateUpFromSameTask(this);
-		        break;
-			default:
-				break;
-			}
-			
-	    	return true;
-	    }
-	    
-	    public void abreTelaSobre() {
-	    	Intent intent = new Intent(this, TelaSobreIndicativos.class);
-	    	startActivity(intent);
-	    }
-	
-	public void onRadioButtonClicked(View view) {
-		
-        boolean checked = ((RadioButton) view).isChecked();
-        switch(view.getId()) {
-            case R.id.radio_apoio_cnpq_investimento:
-                if (checked)
-                	indicativo = "valor_projetos_cnpq";
-                	titulo = "Projetos de Pesquisa Apoio CNPq (R$)";
-                break;
-            case R.id.radio_apoio_cnpq_qtd:
-                if (checked)
-                	indicativo = "quantidade_projeto_cnpq";
-                	titulo = "Projetos de Pesquisa Apoio CNPq (Qtd.)";
-                break;
-            case R.id.radio_difusao_tecnologica_investimento:
-                if (checked)
-                	indicativo = "valor_ciencia_tecnologia";
-                	titulo = "Projeto de Difusão Tecnológica (R$)";
-                break;
-            case R.id.radio_difusao_tecnologica_qtd:
-                if (checked)
-                	indicativo = "projetos_ciencia_tecnologia";
-                	titulo = "Projeto de Difusão Tecnológica (Qtd.)";
-                break;
-            case R.id.radio_ideb_fundamental_finais:
-                if (checked)
-                	indicativo = "ideb_fundamental_final";
-                	titulo = "IDEB do Ensino Fundamental (Séries Finais)";
-                break;
-            case R.id.radio_ideb_fundamental_iniciai:
-                if (checked)
-                	indicativo = "ideb_fundamental_inicial";
-                titulo = "IDEB do Ensino Fundamental (Séries Iniciais)";
-                break;
-            case R.id.radio_ideb_medio:
-                if (checked)
-                	indicativo = "ideb_ensino_medio";
-                	titulo = "IDEB do Ensino Médio";
-                break;
-            case R.id.radio_jovens_pesquisadores_investimento:
-                if (checked)
-                	indicativo = "valor_projetos_jovens_pesquisadores";
-                	titulo = "Jovens pesquisadores (R$)";
-                break;
-                
-            case R.id.radio_jovens_pesquisadores_qtd:
-                if (checked)
-                	indicativo = "quantidade_projeto_jovens_pesquisadores";
-                	titulo = "Jovens pesquisadores (Qtd.)";
-                break;
-                
-            case R.id.radio_pib:
-                if (checked)
-                	indicativo = "percentual_participacao_pib";
-                	titulo = "Participação Estadual no PIB (%)";
-                break;
-                
-            case R.id.radio_populacao:
-                if (checked)
-                	indicativo = "populacao";
-                	titulo = "População";
-                break;
-                
-            case R.id.radio_primeiros_projetos_investimento:
-                    if (checked)
-                    	indicativo = "valor_primeiros_projetos";
-                    	titulo = "Programa Primeiros Projetos (R$)";
-                    break;
-                    
-                case R.id.radio_primeiros_projetos_qtd:
-                    if (checked)
-                    	indicativo = "quantidade_primeiros_projetos";
-                    	titulo = "Programa Primeiros Projetos (Qtd.)";
-                    break;
-                    
-                case R.id.radio_projetos_inct_investimento:
-                    if (checked)
-                    	indicativo = "valor_projetos_inct";
-                    	titulo = "Projetos INCT (R$)";
-                    break;
-                    
-                case R.id.radio_projetos_inct_qtd:
-                    if (checked)
-                    	indicativo = "quantidade_projetos_inct";
-                    	titulo = "Projetos INCT (Qtd.)";
-                    break;
-        }
+	public void abreTelaSobre() {
+		Intent intent = new Intent(this, TelaSobreIndicativos.class);
+		startActivity(intent);
 	}
 	
-	public void clickBotaoVerificaEstadosPorIndicativo(View view) {
+	public void clickBotaoAvancar(View view) {
 		Intent intent = new Intent(this, TelaResultadoConsultaPorIndicativo.class);
 
-		intent.putExtra("INDICATIVO", indicativo);
-		intent.putExtra("TITULO", titulo);
+		intent.putExtra("INDICATIVO", getIndicativo());
+		intent.putExtra("TITULO", getTitulo());
 
 		startActivity(intent);
 	}

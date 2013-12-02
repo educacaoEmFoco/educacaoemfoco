@@ -117,7 +117,6 @@ public abstract class Comparacao extends Activity{
 		estados.add("Mato Grosso do Sul");
 		estados.add("Minas Gerais");
 		estados.add("Pará");
-		estados.add("Pará");
 		estados.add("Paraná");
 		estados.add("Pernambuco");
 		estados.add("Piauí");

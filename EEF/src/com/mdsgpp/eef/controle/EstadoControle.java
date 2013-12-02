@@ -269,7 +269,7 @@ public class EstadoControle {
 		this.informacoesEstado.put("percentual_participacao_pib", temp);
 		temp = "";
 
-		for (int i = 0, ano = 2003; i < estado.getProjetosCienciaTecnologia().length; i++, ano++) {
+		for (int i = 0, ano = 2003; i < estado.getProjetosCienciaTecnologia().length-1; i++, ano++) {
 			temp += ano
 					+ ": "
 					+ "Quantidade: "
@@ -283,7 +283,7 @@ public class EstadoControle {
 		this.informacoesEstado.put("projetos_ciencia_tecnologia", temp);
 		temp = "";
 
-		for (int i = 0, ano = 2005; i < estado.getIdebs().length; i++, ano++) {
+		for (int i = 0, ano = 2005; i < estado.getIdebs().length; i++, ano += 2) {
 			temp += ano
 					+ ": "
 					+ "Ensino Fundamental (séries finais): "
@@ -301,8 +301,9 @@ public class EstadoControle {
 
 		}
 		this.informacoesEstado.put("ideb", temp);
+		temp = "";
 
-		for (int i = 0, ano = 2007; i < estado.getPrimeirosProjetos().length; i++, ano++) {
+		for (int i = 0, ano = 2007; i < estado.getPrimeirosProjetos().length-1; i++, ano++) {
 			temp += ano
 					+ ": "
 					+ "Quantidade: "
@@ -317,7 +318,7 @@ public class EstadoControle {
 		this.informacoesEstado.put("primeiros_projetos", temp);
 		temp = "";
 
-		for (int i = 0, ano = 2001; i < estado.getProjetosApoioCnpq().length; i++, ano++) {
+		for (int i = 0, ano = 2001; i < estado.getProjetosApoioCnpq().length-1; i++, ano++) {
 			temp += ano
 					+ ": "
 					+ "Quantidade: "
@@ -331,7 +332,7 @@ public class EstadoControle {
 		this.informacoesEstado.put("cnpq", temp);
 		temp = "";
 
-		for (int i = 0, ano = 2005; i < estado.getProjetoJovensPesquisadores().length; i++, ano++) {
+		for (int i = 0, ano = 2005; i < estado.getProjetoJovensPesquisadores().length-1; i++, ano++) {
 			temp += ano
 					+ ": "
 					+ "Quantidade: "
@@ -345,7 +346,7 @@ public class EstadoControle {
 		this.informacoesEstado.put("jovens_pesquisadores", temp);
 		temp = "";
 
-		for (int i = 0, ano = 2008; i < estado.getProjetosInct().length; i++, ano++) {
+		for (int i = 0, ano = 2008; i < estado.getProjetosInct().length-1; i++, ano++) {
 			temp += ano + ": " + "Quantidade: "
 					+ estado.getProjetosInct()[i].getQuantidade()
 					+ " projetos\n" + "\t\t  " + "Valor investido: R$ "

@@ -80,7 +80,7 @@ public class IndicativoAdapter extends BaseAdapter{
 			holder = (ViewHolder) view.getTag();
 		}
 		
-		if(posicao==0){//Titulo
+		if(posicao == 0){//Titulo
 			holder.tvNome.setText(titulo);
 			holder.tvNome.setGravity(Gravity.CENTER_HORIZONTAL);
 			holder.tvValorIndicativo.setVisibility(View.GONE);
@@ -88,7 +88,7 @@ public class IndicativoAdapter extends BaseAdapter{
 		} else {//Indicativos e seus valores
 			estado = getItem(posicao-1);
 			holder.tvNome.setText(estado.get("nome"));
-			holder.tvValorIndicativo.setText(estado.get(indicativoEscolhido));
+			holder.tvValorIndicativo.setText( pegaValor(estado.get(indicativoEscolhido)) );
 			holder.tvValorIndicativo.setVisibility(View.VISIBLE);
 			
 			int idBandeira = context.getResources().getIdentifier(bandeiras[posicao-1], "drawable", context.getPackageName());
@@ -97,5 +97,14 @@ public class IndicativoAdapter extends BaseAdapter{
 		
 		
 		return view;
+	}
+	
+	private String pegaValor(String linha) {
+		if (linha.contains(":")) {
+			String partes[] = linha.split(": ");
+			return partes[1];
+		}
+		
+		return linha;
 	}
 }

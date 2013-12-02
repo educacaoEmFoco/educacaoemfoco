@@ -1,137 +1,145 @@
 package com.mdsgpp.eef.visao;
 
 import android.content.Intent;
-import android.view.MenuItem;
+import android.os.Bundle;
 import android.view.View;
+import android.widget.RadioButton;
 
 import com.mdsgpp.eef.R;
 
 public class TelaEscolheIndicativoGraficoComparacao extends EscolheIndicativo {
-	public void onRadioButtonClicked(View view) {
+	
+	private int posicao1, posicao2;
+	
+	private boolean bCenso, bAlunosTurma, bHorasAula, bTaxaDistorcao,
+			bTaxaAbandono, bAprovacao, bIdeb, bPib, bPopulacao,
+			bPrimeirosProjetos, bProjetosCnpq, bProjetosDifusao,
+			bProjetosIniciacao, bProjetosJovens;
 
-		switch (view.getId()) {
-		case R.id.radio_apoio_cnpq_investimento:
-			setValores("valor_projetos_cnpq", "Projetos de Pesquisa Apoio CNPq (R$)");
-			break;
-		case R.id.radio_apoio_cnpq_qtd:
-			setValores("quantidade_projeto_cnpq", "rojetos de Pesquisa Apoio CNPq (Qtd.)");
-			break;
-		case R.id.radio_difusao_tecnologica_investimento:
-			setValores("valor_ciencia_tecnologia", "Projeto de Difusão Tecnológica (R$)");
-			break;
-		case R.id.radio_difusao_tecnologica_qtd:
-			setValores("projetos_ciencia_tecnologia", "Projeto de Difusãoo Tecnológica (Qtd.)");
-			break;
-		case R.id.radio_ideb_fundamental_finais:
-			setValores("ideb_fundamental_final", "IDEB do Ensino Fundamental (Séries Finais)");
-			break;
-		case R.id.radio_ideb_fundamental_iniciai:
-			setValores("ideb_fundamental_inicial", "IDEB do Ensino Fundamental (Séries Iniciais)");
-			break;
-		case R.id.radio_ideb_medio:
-			setValores("ideb_ensino_medio", "IDEB do Ensino Médio");
-			break;
-		case R.id.radio_jovens_pesquisadores_investimento:
-			setValores("valor_projetos_jovens_pesquisadores", "Jovens pesquisadores (R$)");
-			break;
-		case R.id.radio_jovens_pesquisadores_qtd:
-			setValores("quantidade_projeto_jovens_pesquisadores", "Jovens pesquisadores (Qtd.)");
-			break;
-		case R.id.radio_pib:
-			setValores("percentual_participacao_pib", "Participação Estadual no PIB (%)");
-			break;
-		case R.id.radio_populacao:
-			setValores("populacao", "População");
-			break;
-		case R.id.radio_primeiros_projetos_investimento:
-			setValores("valor_primeiros_projetos", "Programa Primeiros Projetos (R$)");
-			break;
-		case R.id.radio_primeiros_projetos_qtd:
-			setValores("quantidade_primeiros_projetos", "Programa Primeiros Projetos (Qtd.)");
-			break;
-		case R.id.radio_projetos_inct_investimento:
-			setValores("valor_projetos_inct", "Projetos INCT (R$)");
-			break;
-		case R.id.radio_projetos_inct_qtd:
-			setValores("quantidade_projetos_inct", "Projetos INCT (Qtd.)");
-			break;
-		case R.id.radio_alunos_por_turma_fundamental:
-			setValores("alunos_por_turma_ensino_fundamental", "Média de Alunos por Turma do Ensino Fundamental (Qtd.)");
-			break;
-		case R.id.radio_alunos_por_turma_medio:
-			setValores("alunos_por_turma_ensino_medio", "Média de Alunos por Turma do Ensino Médio (Qtd.)");
-			break;
-		case R.id.radio_horas_aula_fundamental:
-			setValores("horas_aula_ensino_fundamental", "Média de horas aula diárias do Ensino Fundamental");
-			break;
-		case R.id.radio_horas_aula_medio:
-			setValores("horas_aula_ensino_medio", "Média de horas aula diárias do Ensino Médio");
-			break;
-		case R.id.radio_taxa_distorcao_fundamental:
-			setValores("taxa_distorcao_fundamental", "Taxa de Distorção Idade/Série do Ensino Fundamental (%)");
-			break;
-		case R.id.radio_taxa_distorcao_medio:
-			setValores("taxa_distorcao_medio", "Taxa de Distorção Idade/Série do Ensino Médio (%)");
-			break;
-		case R.id.radio_taxa_aprovacao_fundamental:
-			setValores("taxa_aprovacao_fundamental", "Taxa de Aproveitamento do Ensino Fundamental (%)");
-			break;
-		case R.id.radio_taxa_aprovacao_medio:
-			setValores("taxa_aprovacao_medio", "Taxa de Aproveitamento do Ensino Médio (%)");
-			break;
-		case R.id.radio_taxa_abandono_fundamental:
-			setValores("taxa_abandono_fundamental", "Taxa de Abandono do Ensino Fundamental (%)");
-			break;
-		case R.id.radio_taxa_abandono_medio:
-			setValores("taxa_abandono_medio", "Taxa de Abandono do Ensino Médio (%)");
-			break;
-		case R.id.radio_censo_iniciais_fundamental:
-			setValores("censo_anos_iniciais_fundamental", "Censo Escolar dos Anos Iniciais do Ensino Fundamental (Matriculados)");
-			break;
-		case R.id.radio_censo_finais_fundamental:
-			setValores("censo_anos_finais_fundamental", "Censo Escolar dos Anos Finais do Ensino Fundamental (Matriculados)");
-			break;
-		case R.id.radio_censo_ensino_medio:
-			setValores("censo_ensino_medio", "Censo Escolar do Ensino Médio (Matriculados)");
-			break;
-		case R.id.radio_censo_eja_fundamental:
-			setValores("censo_eja_fundamental", "Censo Escolar do EJA - Fundamental (Matriculados)");
-			break;
-		case R.id.radio_censo_eja_medio:
-			setValores("censo_eja_medio", "Censo Escolar do EJA - Médio (Matriculados)");
-			break;
-		}
-	}
+	private RadioButton rbIdebIniciais, rbIdebFinais, rbIdebMedio, rbPib, rbPopulacao, 
+			rbPrimeirosProjetosQuantidade, rbPrimeirosProjetosValores,
+			rbProjetosCnpqQuantidade, rbProjetosCnpqValores, rbProjetosDifusaoQuantidade, 
+			rbProjetosDifusaoValores, rbProjetosIniciacaoQuantidade, rbProjetosIniciacaoValores, 
+			rbProjetosJovensQuantidade, rbProjetosJovensValores, rbAlunosTurmaFundamental, rbAlunosTurmaMedio,
+			rbHorasAulaFundamental, rbHorasAulaMedio, rbTaxaDeDistorcaoFundamental, rbTaxaDeDistorcaoMedio,
+			rbTaxaDeAprocaoFundamental, rbTaxaDeAprovacaoMedio, rbTaxaDeAbandonoFundamental, rbTaxaDeAbandonoMedio,
+			rbCensoAnosIniciaisFundamental, rbCensoAnosFinaisFundamental, rbCensoEsninoMedio, rbCensoEJAFundamental, rbCensoEJAMedio;
 
-	public void setValores(String indivativo, String titulo) {
-		setIndicativo(indivativo);
-		setTitulo(titulo);
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_tela_escolhe_indicativo_grafico);
+		
+		inicializaRadioButtons();
+		capturaInformacoes();
+		escondeRadioButtons();
 	}
 	
-	public void clickBotaoGrafico(View view) {
+	public void capturaInformacoes() {
+		Intent intentRecebida = getIntent();
+		
+		posicao1 = intentRecebida.getIntExtra("INDEX_ESTADO1_ESCOLHIDO", 0);
+		posicao2 = intentRecebida.getIntExtra("INDEX_ESTADO2_ESCOLHIDO", 0);
+
+		bIdeb = intentRecebida.getBooleanExtra("CB_IDEB", false);
+		bPib = intentRecebida.getBooleanExtra("CB_PIB", false);
+		bPopulacao = intentRecebida.getBooleanExtra("CB_POPULACAO", false);
+		bPrimeirosProjetos = intentRecebida.getBooleanExtra("CB_PRIMEIROS_PROJETOS", false);
+		bProjetosCnpq = intentRecebida.getBooleanExtra("CB_PROJETOS_CNPQ", false);
+		bProjetosDifusao = intentRecebida.getBooleanExtra("CB_PROJETOS_DIFUSAO", false);
+		bProjetosIniciacao = intentRecebida.getBooleanExtra("CB_PROJETOS_INICIACAO", false);
+		bProjetosJovens = intentRecebida.getBooleanExtra("CB_PROJETOS_JOVENS", false);
+		bCenso = intentRecebida.getBooleanExtra("CB_CENSO", false);
+		bAlunosTurma = intentRecebida.getBooleanExtra("CB_ALUNOS_TURMA", false);
+		bHorasAula = intentRecebida.getBooleanExtra("CB_HORAS_AULA", false);
+		bTaxaDistorcao = intentRecebida.getBooleanExtra("CB_TAXA_DISTORCAO", false);
+		bTaxaAbandono = intentRecebida.getBooleanExtra("CB_TAXA_ABANDONO", false);
+		bAprovacao = intentRecebida.getBooleanExtra("CB_APROVACAO", false);
+		
+	}
+	
+	public void inicializaRadioButtons() {
+		rbIdebIniciais = (RadioButton) findViewById(R.id.radio_ideb_fundamental_iniciai);
+		rbIdebFinais = (RadioButton) findViewById(R.id.radio_ideb_fundamental_finais);
+		rbIdebMedio = (RadioButton) findViewById(R.id.radio_ideb_medio);
+		rbPib = (RadioButton) findViewById(R.id.radio_pib);
+		rbPopulacao = (RadioButton) findViewById(R.id.radio_populacao);
+		rbPrimeirosProjetosQuantidade = (RadioButton) findViewById(R.id.radio_primeiros_projetos_qtd);
+		rbPrimeirosProjetosValores = (RadioButton) findViewById(R.id.radio_primeiros_projetos_investimento);
+		rbProjetosCnpqQuantidade = (RadioButton) findViewById(R.id.radio_apoio_cnpq_qtd);
+		rbProjetosCnpqValores = (RadioButton) findViewById(R.id.radio_apoio_cnpq_investimento);
+		rbProjetosDifusaoQuantidade = (RadioButton) findViewById(R.id.radio_difusao_tecnologica_qtd);
+		rbProjetosDifusaoValores = (RadioButton) findViewById(R.id.radio_difusao_tecnologica_investimento);
+		rbProjetosIniciacaoQuantidade = (RadioButton) findViewById(R.id.radio_projetos_inct_qtd);
+		rbProjetosIniciacaoValores = (RadioButton) findViewById(R.id.radio_projetos_inct_investimento);
+		rbProjetosJovensQuantidade = (RadioButton) findViewById(R.id.radio_jovens_pesquisadores_qtd);
+		rbProjetosJovensValores = (RadioButton) findViewById(R.id.radio_jovens_pesquisadores_investimento);
+		rbAlunosTurmaFundamental = (RadioButton) findViewById(R.id.radio_alunos_por_turma_fundamental);
+		rbAlunosTurmaMedio = (RadioButton) findViewById(R.id.radio_alunos_por_turma_medio);
+		rbHorasAulaFundamental = (RadioButton) findViewById(R.id.radio_horas_aula_fundamental);
+		rbHorasAulaMedio = (RadioButton) findViewById(R.id.radio_horas_aula_medio);
+		rbTaxaDeDistorcaoFundamental = (RadioButton) findViewById(R.id.radio_taxa_distorcao_fundamental);
+		rbTaxaDeDistorcaoMedio = (RadioButton) findViewById(R.id.radio_taxa_distorcao_medio);
+		rbTaxaDeAprocaoFundamental = (RadioButton) findViewById(R.id.radio_taxa_aprovacao_fundamental);
+		rbTaxaDeAprovacaoMedio = (RadioButton) findViewById(R.id.radio_taxa_aprovacao_medio);
+		rbTaxaDeAbandonoFundamental = (RadioButton) findViewById(R.id.radio_taxa_abandono_fundamental);
+		rbTaxaDeAbandonoMedio = (RadioButton) findViewById(R.id.radio_taxa_abandono_medio);
+		rbCensoAnosIniciaisFundamental = (RadioButton) findViewById(R.id.radio_censo_iniciais_fundamental);
+		rbCensoAnosFinaisFundamental = (RadioButton) findViewById(R.id.radio_censo_finais_fundamental);
+		rbCensoEsninoMedio = (RadioButton) findViewById(R.id.radio_censo_ensino_medio);
+		rbCensoEJAFundamental = (RadioButton) findViewById(R.id.radio_censo_eja_fundamental);
+		rbCensoEJAMedio = (RadioButton) findViewById(R.id.radio_censo_eja_medio);
+		
+	}
+	
+	public void setVisibility(RadioButton radioButton, boolean visibilidade) {
+		int valorVisibilidade = (visibilidade) ? View.VISIBLE : View.GONE;
+		radioButton.setVisibility(valorVisibilidade);
+	}
+	
+	public void escondeRadioButtons() {
+		setVisibility(rbIdebIniciais, bIdeb);
+		setVisibility(rbIdebFinais, bIdeb);
+		setVisibility(rbIdebMedio, bIdeb);
+		setVisibility(rbPib, bPib);
+		setVisibility(rbPopulacao, bPopulacao);
+		setVisibility(rbPrimeirosProjetosQuantidade, bPrimeirosProjetos);
+		setVisibility(rbPrimeirosProjetosValores, bPrimeirosProjetos);
+		setVisibility(rbProjetosCnpqQuantidade, bProjetosCnpq);
+		setVisibility(rbProjetosCnpqValores, bProjetosCnpq);
+		setVisibility(rbProjetosDifusaoQuantidade, bProjetosDifusao);
+		setVisibility(rbProjetosDifusaoValores, bProjetosDifusao);
+		setVisibility(rbProjetosIniciacaoQuantidade, bProjetosIniciacao);
+		setVisibility(rbProjetosIniciacaoValores, bProjetosIniciacao);
+		setVisibility(rbProjetosJovensQuantidade, bProjetosJovens);
+		setVisibility(rbProjetosJovensValores, bProjetosJovens);
+		setVisibility(rbAlunosTurmaFundamental, bAlunosTurma);
+		setVisibility(rbAlunosTurmaMedio, bAlunosTurma);
+		setVisibility(rbHorasAulaFundamental, bHorasAula);
+		setVisibility(rbHorasAulaMedio, bHorasAula);
+		setVisibility(rbTaxaDeDistorcaoFundamental, bTaxaDistorcao);
+		setVisibility(rbTaxaDeDistorcaoMedio, bTaxaDistorcao);
+		setVisibility(rbTaxaDeAprocaoFundamental, bAprovacao);
+		setVisibility(rbTaxaDeAprovacaoMedio, bAprovacao);
+		setVisibility(rbTaxaDeAbandonoFundamental, bTaxaAbandono);
+		setVisibility(rbTaxaDeAbandonoMedio, bTaxaAbandono);
+		setVisibility(rbCensoAnosIniciaisFundamental, bCenso);
+		setVisibility(rbCensoAnosFinaisFundamental, bCenso);
+		setVisibility(rbCensoEsninoMedio, bCenso);
+		setVisibility(rbCensoEJAFundamental, bCenso);
+		setVisibility(rbCensoEJAMedio, bCenso);
+	}
+	
+	public void clickBotaoAvancar(View view) {
 		Intent intent = new Intent(this, TelaGrafico.class);
 		
-		intent.putExtra("INDEX_ESTADO1_ESCOLHIDO", getPosicao1());
-		intent.putExtra("INDEX_ESTADO2_ESCOLHIDO", getPosicao2());
+		intent.putExtra("INDEX_ESTADO1_ESCOLHIDO", posicao1);
+		intent.putExtra("INDEX_ESTADO2_ESCOLHIDO", posicao2);
 		intent.putExtra("INDICATIVO", getIndicativo());
 		intent.putExtra("TITULO", getTitulo());
 
 		startActivity(intent);		
 	}
-	
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-    	
-		switch (item.getItemId()) {
-		case R.id.sobre:
-			abreTelaSobre();
-			break;
-		default:
-			break;
-		}
-		
-    	return true;
-    }
     
     public void abreTelaSobre() {
     	Intent intent = new Intent(this, TelaSobreEscolheIndicativoGraficoComparacao.class);

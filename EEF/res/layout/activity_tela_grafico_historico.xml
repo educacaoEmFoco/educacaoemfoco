@@ -25,4 +25,21 @@
         android:layout_below="@id/text_view_titulo_grafico_historico"
         android:layout_marginTop="30dp" />
 
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/graph"
+        android:layout_below="@id/graph"
+        android:layout_marginTop="30dp" >
+
+        <TextView
+            android:id="@+id/text_view_grafico_historico"
+            style="@style/valor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="@string/string_vazia" />
+    </ScrollView>
+
 </RelativeLayout>
