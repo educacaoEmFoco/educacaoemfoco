@@ -29,9 +29,9 @@ public abstract class Comparacao extends Activity{
 		setContentView(R.layout.activity_tela_comparacao);
 
 		inicializaSpinners();
-		preencheEstados(estados01);
-		preencheEstados(estados02);
-		preencheEstados(todosEstados);
+		estados01 = preencheEstados(estados01);
+		estados02 =preencheEstados(estados02);
+		todosEstados = preencheEstados(todosEstados);
 
 		setAdapterSpinner01();
 		setAdapterSpinner02();
@@ -100,7 +100,7 @@ public abstract class Comparacao extends Activity{
 		estadosSpinner.setAdapter(estadosAdapter02);
 	}
 
-	private void preencheEstados(ArrayList<String> estados) {
+	private ArrayList<String> preencheEstados(ArrayList<String> estados) {
 		estados.clear();
 
 		estados.add("Acre");
@@ -117,6 +117,7 @@ public abstract class Comparacao extends Activity{
 		estados.add("Mato Grosso do Sul");
 		estados.add("Minas Gerais");
 		estados.add("Pará");
+		estados.add("Paraíba");
 		estados.add("Paraná");
 		estados.add("Pernambuco");
 		estados.add("Piauí");
@@ -135,7 +136,7 @@ public abstract class Comparacao extends Activity{
 
 	private void atualizaValoresSpinner01(String nome) {
 		String estadoSelecionado = estadosSpinner01.getSelectedItem().toString();
-		preencheEstados(estados01);
+		estados01 = preencheEstados(estados01);
 		estados01.remove(nome);
 		estadosAdapter01.notifyDataSetChanged();
 		estadosSpinner01.setSelection(estados01.indexOf(estadoSelecionado));
@@ -143,7 +144,7 @@ public abstract class Comparacao extends Activity{
 
 	private void atualizaValoresSpinner02(String nome) {
 		String estadoSelecionado = estadosSpinner.getSelectedItem().toString();
-		preencheEstados(estados02);
+		estados02 = preencheEstados(estados02);
 		estados02.remove(nome);
 		estadosAdapter02.notifyDataSetChanged();
 		estadosSpinner.setSelection(estados02.indexOf(estadoSelecionado));
