@@ -236,7 +236,8 @@
     
     <!-- Strings da tela sobre Grafico -->
     <string name="grafico_conteudo">Apresenta o gráfico com os dados do indicativo selecionado.</string>
+    
     <!-- Strings da tela sobre EscolheIndicativoGraficoComparacao -->
-	<string name="escolhe_indicativo_grafico_comparacao_conteudo"></string>
+	<string name="escolhe_indicativo_grafico_comparacao_conteudo">O usuário escolhe um indicativo para gerar o gráfico com os dados do mesmo.</string>
 	
 </resources>
