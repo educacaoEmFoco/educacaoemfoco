@@ -66,7 +66,21 @@ public class TelaGraficoLinha extends Activity {
 		curva.setColor(Color.parseColor("#4682B4"));
 		LineGraph li = (LineGraph)findViewById(R.id.graph);
 		li.addLine(curva);
-		li.setRangeY(0, 1000);
+		
+		float yMaximo=0;
+		yMaximo = calculaMaximo(yMaximo);
+		
+		li.setRangeY(0, yMaximo);
 		li.setLineToFill(0);
+	}
+
+
+
+	private float calculaMaximo(float maximo) {
+		for(int i=0; i<historico.size(); i++){
+			if(historico.get(i) > maximo)
+				maximo = (float) (historico.get(i) + historico.get(i) * 0.1);  
+		}
+		return maximo;
 	}
 }
