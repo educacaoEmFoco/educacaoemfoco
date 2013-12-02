@@ -66,8 +66,8 @@
     <string name="horas_aula_ensino">Horas médias por Aula (Horas)</string>
     <string name="taxa_distorcao">Taxa de Distorção de Idade (%)</string>
     <string name="taxa_aprovacao">Taxa de Aprovação (%)</string>
-    <string name="taxa_abandono">Taxa de Abandono da Escola(%)</string>
-    <string name="censo">Censo Escolar(%)</string>
+    <string name="taxa_abandono">Taxa de Abandono da Escola (%)</string>
+    <string name="censo">Censo Escolar (matriculados)</string>
     <string name="alunos_por_turma_fundamental">Média de Alunos por Turma do Ensino Fundamental(Qtd.)</string>
     <string name="alunos_por_turma_medio">Média de Alunos por Turma do Ensino Médio(Qtd.)</string>
     <string name="horas_aula_fundamental">Horas médias por aula do Ensino Fundamental</string>

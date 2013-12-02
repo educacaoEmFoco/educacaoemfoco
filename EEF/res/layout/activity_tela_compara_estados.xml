@@ -75,6 +75,15 @@
                 android:layout_weight="30"
                 android:contentDescription="@string/string_vazia" />
         </LinearLayout>
+        
+        <Button
+            android:id="@+id/botao_gera_grafico"
+            style="@style/botaoMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/botao_grafico"
+            android:onClick="clickBotaoGeraGrafico"
+            android:padding="10dp" />
 
         <TextView
             android:id="@+id/textView_populacao1"
@@ -674,14 +683,6 @@
             android:layout_marginLeft="15dp"
             android:text="@string/string_vazia" />
 
-        <Button
-            android:id="@+id/botao_gera_grafico"
-            style="@style/botaoMenu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="clickBotaoGeraGrafico"
-            android:padding="20dp"
-            android:text="@string/botao_gera_grafico" />
     </LinearLayout>
 
 </ScrollView>

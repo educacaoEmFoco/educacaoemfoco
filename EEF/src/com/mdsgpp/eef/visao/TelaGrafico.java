@@ -123,6 +123,7 @@ public class TelaGrafico extends Activity {
 		
 		String estado1IndicativoString = informacoesEstado1.get(indicativo);
 		String estado2IndicativoString = informacoesEstado2.get(indicativo);
+	
 				
 		estado1IndicativoString = estado1IndicativoString.replaceAll("[^\\d,]", "");/*como os dados viram como estão escritos na tela
 																					   aqui nós pegamos somente os não digitos (numeros)

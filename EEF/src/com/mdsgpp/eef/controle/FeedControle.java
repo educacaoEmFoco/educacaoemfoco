@@ -38,12 +38,10 @@ public class FeedControle extends AsyncTask<String, Void, Feed> {
 		super.onPreExecute();
 	}
 
-	// While the execution of the task
 	protected Feed doInBackground(String... urls) {
 
 		Feed feed = null;
 
-		// Try to download the feed data
 		try {
 			URL url = new URL(urls[0]);
 			FeedParser handler = new FeedParser();
@@ -61,7 +59,6 @@ public class FeedControle extends AsyncTask<String, Void, Feed> {
 			e.printStackTrace();
 		}
 
-		// Try to read the feed data from the .txt file
 		try {
 			feed = FeedPersistencia.getInstance(this.context).readFeedFile();
 		} catch (IOException e) {
@@ -82,7 +79,7 @@ public class FeedControle extends AsyncTask<String, Void, Feed> {
 		}
 		
 		if (!this.updated) {
-			Toast.makeText(this.context, "Couldn't update the news! :(",
+			Toast.makeText(this.context, "Não foi possível atualizar as notícias! :(",
 					Toast.LENGTH_LONG).show();
 		}
 

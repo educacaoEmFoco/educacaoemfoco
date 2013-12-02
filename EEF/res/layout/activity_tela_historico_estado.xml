@@ -11,20 +11,20 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
+        android:background="@android:color/transparent"
         android:orientation="vertical"
         android:paddingBottom="30dp"
-        android:paddingLeft="10dp"
-        android:background="@android:color/transparent" >
-        
-        <ImageView   
-        	android:id="@+id/imageView_bandeiras"
-			android:layout_height="0dip"
-    		android:layout_weight="30" 
-   			android:layout_width="350dp"
-   			android:layout_marginTop="5dp" 
-    		android:layout_gravity="center"
-			android:contentDescription="@string/string_vazia"/>
-      
+        android:paddingLeft="10dp" >
+
+        <ImageView
+            android:id="@+id/imageView_bandeiras"
+            android:layout_width="350dp"
+            android:layout_height="0dip"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_weight="30"
+            android:contentDescription="@string/string_vazia" />
+
         <TextView
             android:id="@+id/textView_sigla"
             style="@style/titulo"
@@ -43,16 +43,16 @@
             android:text="@string/string_vazia" />
 
         <Button
-	        android:id="@+id/buttonIndicativos"
-	        style="@style/botaoMenu"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_gravity="center"
-	        android:layout_marginTop="5dp"
-	        android:drawableTop="@drawable/grafico"
-	        android:onClick="clickBotaoEscolherIndicativoParaGerarGrafico"
-	        android:text="@string/botao_indicativos" />
-        
+            android:id="@+id/buttonIndicativos"
+            style="@style/botaoMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:drawableTop="@drawable/botao_grafico"
+            android:onClick="clickBotaoEscolherIndicativoParaGerarGrafico"
+            android:text="@string/string_vazia" />
+
         <TextView
             android:id="@+id/textView_populacao"
             style="@style/subTitulo"
@@ -195,7 +195,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:text="@string/string_vazia" />
-        
+
         <TextView
             android:id="@+id/textView_media_alunos_por_turma"
             style="@style/subTitulo"
@@ -212,7 +212,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:text="@string/string_vazia" />
-        
+
         <TextView
             android:id="@+id/textView_horas_aula_ensino"
             style="@style/subTitulo"
@@ -237,7 +237,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:text="@string/string_vazia" />
-        
+
         <TextView
             android:id="@+id/textView_taxa_distorcao"
             style="@style/subTitulo"
@@ -254,7 +254,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:text="@string/string_vazia" />
-        
+
         <TextView
             android:id="@+id/textView_taxa_aprovacao"
             style="@style/subTitulo"
@@ -271,7 +271,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:text="@string/string_vazia" />
-        
+
         <TextView
             android:id="@+id/textView_taxa_abandono"
             style="@style/subTitulo"
@@ -289,7 +289,7 @@
             android:layout_marginLeft="15dp"
             android:text="@string/string_vazia" />
 
-         <TextView
+        <TextView
             android:id="@+id/textView_censo"
             style="@style/subTitulo"
             android:layout_width="wrap_content"
@@ -298,13 +298,13 @@
             android:text="@string/censo"
             android:textSize="20sp" />
 
-         <TextView
+        <TextView
             android:id="@+id/textView_censo_medio_valor"
             style="@style/valor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:text="@string/string_vazia" />
-  
     </LinearLayout>
+
 </ScrollView>

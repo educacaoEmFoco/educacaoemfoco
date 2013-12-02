@@ -2,7 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/scrollView1"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:background="@drawable/background" >
 
     <RelativeLayout
         android:id="@+id/relativelayout"
@@ -12,7 +13,7 @@
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:layout_marginTop="15dp"
-        android:background="@color/white"
+        android:background="@android:color/transparent"
         android:orientation="vertical" >
 
         <LinearLayout
@@ -34,8 +35,6 @@
                 android:gravity="left"
                 android:text="@string/string_vazia" />
 
-            
-
             <TextView
                 android:id="@+id/textView_nome_estado1"
                 style="@style/comparacao_titulo_1"
@@ -44,12 +43,12 @@
                 android:layout_marginBottom="5dp"
                 android:gravity="left"
                 android:text="@string/string_vazia" />
-            
+
             <ImageView
                 android:id="@+id/imageView_bandeiras1"
                 android:layout_width="350dp"
                 android:layout_height="0dp"
-                android:layout_gravity="right"
+                android:layout_gravity="left"
                 android:layout_weight="30"
                 android:contentDescription="@string/string_vazia" />
 
@@ -429,7 +428,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="right"
-                android:text="@string/string_vazia" />          
+                android:text="@string/string_vazia" />
 
             <TextView
                 android:id="@+id/textView_nome_estado2"
@@ -439,8 +438,8 @@
                 android:layout_marginBottom="5dp"
                 android:gravity="right"
                 android:text="@string/string_vazia" />
-            
-             <ImageView
+
+            <ImageView
                 android:id="@+id/imageView_bandeiras2"
                 android:layout_width="350dp"
                 android:layout_height="0dp"
@@ -800,6 +799,17 @@
                 android:layout_marginLeft="15dp"
                 android:text="@string/string_vazia" />
         </LinearLayout>
+        
+        <Button
+            android:id="@+id/botao_gera_grafico"
+            style="@style/botaoMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linearlayout_estado1"
+            android:drawableTop="@drawable/botao_grafico"
+            android:onClick="clickBotaoGeraGrafico"
+            android:padding="10dp" />
+        
     </RelativeLayout>
 
 </ScrollView>
