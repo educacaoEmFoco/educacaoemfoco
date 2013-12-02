@@ -129,6 +129,8 @@ public abstract class Comparacao extends Activity{
 		estados.add("São Paulo");
 		estados.add("Sergipe");
 		estados.add("Tocantins");
+		
+		return estados;
 	}
 
 	private void atualizaValoresSpinner01(String nome) {
