@@ -228,6 +228,14 @@
             android:parentActivityName="MainActivity"
             android:screenOrientation="portrait" >
         </activity>
+        <activity
+            android:name="com.mdsgpp.eef.visao.TelaSobreGrafico"
+            android:label="@string/title_activity_tela_sobre_grafico" >
+        </activity>
+        <activity
+            android:name="com.mdsgpp.eef.visao.TelaSobreEscolheIndicativoGraficoComparacao"
+            android:label="@string/title_activity_tela_sobre_escolhe_indicativo_grafico_comparacao" >
+        </activity>
     </application>
 
 </manifest>

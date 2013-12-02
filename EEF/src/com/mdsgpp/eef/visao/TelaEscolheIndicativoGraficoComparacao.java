@@ -1,7 +1,7 @@
 package com.mdsgpp.eef.visao;
 
 import android.content.Intent;
-import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 
 import com.mdsgpp.eef.R;
@@ -86,11 +86,9 @@ public class TelaEscolheIndicativoGraficoComparacao extends EscolheIndicativo {
 			setValores("taxa_abandono_medio", "Taxa de Abandono do Ensino Médio (%)");
 			break;
 		case R.id.radio_censo_iniciais_fundamental:
-			Log.i("selecionado", "selecionado");
 			setValores("censo_anos_iniciais_fundamental", "Censo Escolar dos Anos Iniciais do Ensino Fundamental (Matriculados)");
 			break;
 		case R.id.radio_censo_finais_fundamental:
-			Log.i("selecionado", "selecionado");
 			setValores("censo_anos_finais_fundamental", "Censo Escolar dos Anos Finais do Ensino Fundamental (Matriculados)");
 			break;
 		case R.id.radio_censo_ensino_medio:
@@ -120,4 +118,23 @@ public class TelaEscolheIndicativoGraficoComparacao extends EscolheIndicativo {
 
 		startActivity(intent);		
 	}
+	
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+    	
+		switch (item.getItemId()) {
+		case R.id.sobre:
+			abreTelaSobre();
+			break;
+		default:
+			break;
+		}
+		
+    	return true;
+    }
+    
+    public void abreTelaSobre() {
+    	Intent intent = new Intent(this, TelaSobreEscolheIndicativoGraficoComparacao.class);
+    	startActivity(intent);
+    }
 }

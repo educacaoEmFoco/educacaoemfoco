@@ -67,7 +67,8 @@ public class TelaEscolheIndicativoGraficoLinha extends Activity{
 	}
 	
 	public void abreTelaSobre() {
-		
+		Intent intent = new Intent(this, TelaSobreEscolheIndicativoGraficoComparacao.class);
+    	startActivity(intent);
 	}	
 
 	public void onRadioButtonClicked(View view) {

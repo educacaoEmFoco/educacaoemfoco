@@ -67,7 +67,8 @@ public class TelaGraficoLinha extends Activity {
 	}
 	
 	public void abreTelaSobre() {
-		
+		Intent intent = new Intent(this, TelaSobreGrafico.class);
+    	startActivity(intent);
 	}
 	
 
