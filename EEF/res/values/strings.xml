@@ -29,6 +29,8 @@
     <string name="title_activity_tela_sobre_comparacao_de_estados">Sobre Comparação de Estados</string>
     <string name="title_activity_tela_sobre_resultado_da_consulta">Sobre Resultado da Consulta</string>
     <string name="title_activity_tela_sobre_historico_de_indicativo">Sobre Histórico de Indicativo</string>
+    <string name="title_activity_tela_sobre_grafico">Sobre Gráfico</string>
+    <string name="title_activity_tela_sobre_escolhe_indicativo_grafico_comparacao">Sobre Escolha um Indicativo</string>
 
     <!-- Strings da tela inicial -->
     <string name="app_name">Educação em Foco</string>
@@ -231,5 +233,10 @@
     <string name="title_activity_sobre_comparacao_estados">MainActivity</string>
     <string name="title_activity_tela_comparacao_de_estados">MainActivity</string>
     <string name="title_activity_sobre_historico_de_indicativo">SobreHistoricoDeIndicativo</string>
-
+    
+    <!-- Strings da tela sobre Grafico -->
+    <string name="grafico_conteudo">Apresenta o gráfico com os dados do indicativo selecionado.</string>
+    <!-- Strings da tela sobre EscolheIndicativoGraficoComparacao -->
+	<string name="escolhe_indicativo_grafico_comparacao_conteudo"></string>
+	
 </resources>
