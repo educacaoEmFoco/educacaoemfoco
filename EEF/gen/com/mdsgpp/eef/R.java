@@ -459,17 +459,16 @@ public final class R {
         public static final int df=0x7f06007a;
         /**  Strings da tela sobre EscolheIndicativoGraficoComparacao 
          */
-        public static final int escolhe_indicativo_grafico_comparacao_conteudo=0x7f0600b6;
+        public static final int escolhe_indicativo_grafico_comparacao_conteudo=0x7f0600b5;
         public static final int espiritoSanto=0x7f06007b;
         /**  Strings da tela sobre Lista Estado 
          */
-        public static final int estado_conteudo=0x7f0600b1;
+        public static final int estado_conteudo=0x7f0600b0;
         public static final int estados_opcao=0x7f060057;
         public static final int goias=0x7f06007c;
         /**  Strings da tela sobre Grafico 
          */
-        public static final int grafico_conteudo=0x7f0600b5;
-        public static final int hello_world=0x7f0600af;
+        public static final int grafico_conteudo=0x7f0600b4;
         public static final int horas_aula_ensino=0x7f060039;
         public static final int horas_aula_fundamental=0x7f060040;
         public static final int horas_aula_medio=0x7f060041;
@@ -485,7 +484,7 @@ public final class R {
         public static final int jovens_pesquisadores_qtd=0x7f060034;
         /**  Strings da tela sobre Lista Estado 
          */
-        public static final int lista_estado_conteudo=0x7f0600b0;
+        public static final int lista_estado_conteudo=0x7f0600af;
         public static final int maranhao=0x7f06007d;
         public static final int matoGrosso=0x7f06007f;
         public static final int matoGrossoDoSul=0x7f06007e;
@@ -561,13 +560,13 @@ public final class R {
          */
         public static final int tela_sobre_feed=0x7f060093;
         public static final int title_activity_grafico=0x7f06000a;
-        public static final int title_activity_sobre_comparacao_estados=0x7f0600b2;
-        public static final int title_activity_sobre_historico_de_indicativo=0x7f0600b4;
+        public static final int title_activity_sobre_comparacao_estados=0x7f0600b1;
+        public static final int title_activity_sobre_historico_de_indicativo=0x7f0600b3;
         public static final int title_activity_sobre_indicativos=0x7f06000c;
         /**  Title: Activities 
          */
         public static final int title_activity_tela_comparacao=0x7f060000;
-        public static final int title_activity_tela_comparacao_de_estados=0x7f0600b3;
+        public static final int title_activity_tela_comparacao_de_estados=0x7f0600b2;
         public static final int title_activity_tela_comparacoes_gerais=0x7f06000f;
         public static final int title_activity_tela_consulta_indicativo=0x7f060003;
         public static final int title_activity_tela_consulta_por_indicativo=0x7f060010;
