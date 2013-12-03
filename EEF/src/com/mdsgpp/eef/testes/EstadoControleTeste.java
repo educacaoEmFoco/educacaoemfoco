@@ -9,8 +9,9 @@ import com.mdsgpp.eef.controle.EstadoControle;
 import android.test.AndroidTestCase;
 
 public class EstadoControleTeste extends AndroidTestCase{
-	
+
 	private HashMap<String, String> informacoes;
+	private HashMap<String, String> informacoesCompletas;
 	private EstadoControle instancia;
 	private EstadoControle instancia2;
 	private EstadoControle instancia3;
@@ -25,6 +26,7 @@ public class EstadoControleTeste extends AndroidTestCase{
 		
 		instancia = EstadoControle.getInstancia(getContext());
 		informacoes = new HashMap<String, String>();
+		informacoesCompletas =  new HashMap<String, String>();
 		
 		instancia2 = EstadoControle.getInstancia(getContext());
 		instancia3 = EstadoControle.getInstancia(getContext());
@@ -44,6 +46,10 @@ public class EstadoControleTeste extends AndroidTestCase{
 		this.informacoes.put("valor_projetos_cnpq","Valor investido: R$ " + dfValor.format( 1905.13000000053 ) + " (em mil)");
 		this.informacoes.put("quantidade_projeto_jovens_pesquisadores","Quantidade: " + 3 + " projetos");
 		this.informacoes.put("valor_projetos_jovens_pesquisadores","Valor investido: R$ " + dfValor.format( 138.250000000029 ) + " (em mil)");
+		
+		this.informacoesCompletas.put("sigla", "AC");
+		this.informacoesCompletas.put("nome", "Acre");
+		this.informacoesCompletas.put("populacao",  dfPopulacao.format(691132) + " habitantes");
 	}
 		
 	
@@ -97,6 +103,18 @@ public class EstadoControleTeste extends AndroidTestCase{
 
 
 	}
+	
+	public void testLerEstadoCompleto() throws IOException {
+		assertEquals(this.informacoesCompletas.get("nome"),
+				 EstadoControle.getInstancia(getContext()).lerEstadoCompleto(0).get("nome"));
+
+		assertEquals(this.informacoesCompletas.get("sigla"),
+						 EstadoControle.getInstancia(getContext()).lerEstadoCompleto(0).get("sigla"));
+		
+		assertEquals(this.informacoesCompletas.get("populacao"),
+				 EstadoControle.getInstancia(getContext()).lerEstadoCompleto(0).get("populacao"));
+	}
+	
 
 	public void testInstancia() throws IOException {
 		assertEquals(instancia, instancia2);
