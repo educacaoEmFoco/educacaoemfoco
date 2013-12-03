@@ -13,6 +13,7 @@
 
         <TextView
             android:id="@+id/textview_titulo"
+            style="@style/tituloSobre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="onRadioButtonClicked"
@@ -26,6 +27,7 @@
 
             <RadioButton
                 android:id="@+id/radio_populacao"
+                style="@style/subTituloSobre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
@@ -35,6 +37,7 @@
 
             <RadioButton
                 android:id="@+id/radio_pib"
+                style="@style/subTituloSobre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -43,6 +46,7 @@
 
             <RadioButton
                 android:id="@+id/radio_difusao_tecnologica_qtd"
+                style="@style/subTituloSobre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -51,6 +55,7 @@
 
             <RadioButton
                 android:id="@+id/radio_difusao_tecnologica_investimento"
+                style="@style/subTituloSobre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -59,6 +64,7 @@
 
             <RadioButton
                 android:id="@+id/radio_ideb_fundamental_iniciai"
+                style="@style/subTituloSobre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -67,6 +73,7 @@
 
             <RadioButton
                 android:id="@+id/radio_ideb_fundamental_finais"
+                style="@style/subTituloSobre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -75,6 +82,7 @@
 
             <RadioButton
                 android:id="@+id/radio_ideb_medio"
+                style="@style/subTituloSobre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -83,6 +91,7 @@
 
             <RadioButton
                 android:id="@+id/radio_primeiros_projetos_qtd"
+                style="@style/subTituloSobre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -91,6 +100,7 @@
 
             <RadioButton
                 android:id="@+id/radio_primeiros_projetos_investimento"
+                style="@style/subTituloSobre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -99,6 +109,7 @@
 
             <RadioButton
                 android:id="@+id/radio_apoio_cnpq_qtd"
+                style="@style/subTituloSobre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -107,6 +118,7 @@
 
             <RadioButton
                 android:id="@+id/radio_apoio_cnpq_investimento"
+                style="@style/subTituloSobre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -115,6 +127,7 @@
 
             <RadioButton
                 android:id="@+id/radio_jovens_pesquisadores_qtd"
+                style="@style/subTituloSobre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -123,6 +136,7 @@
 
             <RadioButton
                 android:id="@+id/radio_jovens_pesquisadores_investimento"
+                style="@style/subTituloSobre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -131,6 +145,7 @@
 
             <RadioButton
                 android:id="@+id/radio_projetos_inct_qtd"
+                style="@style/subTituloSobre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -139,6 +154,7 @@
 
             <RadioButton
                 android:id="@+id/radio_projetos_inct_investimento"
+                style="@style/subTituloSobre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -147,6 +163,7 @@
 
             <RadioButton
                 android:id="@+id/radio_alunos_por_turma_fundamental"
+                style="@style/subTituloSobre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -155,6 +172,7 @@
 
             <RadioButton
                 android:id="@+id/radio_alunos_por_turma_medio"
+                style="@style/subTituloSobre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -163,6 +181,7 @@
 
             <RadioButton
                 android:id="@+id/radio_horas_aula_fundamental"
+                style="@style/subTituloSobre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -171,6 +190,7 @@
 
             <RadioButton
                 android:id="@+id/radio_horas_aula_medio"
+                style="@style/subTituloSobre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -179,6 +199,7 @@
 
             <RadioButton
                 android:id="@+id/radio_taxa_distorcao_fundamental"
+                style="@style/subTituloSobre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -187,6 +208,7 @@
 
             <RadioButton
                 android:id="@+id/radio_taxa_distorcao_medio"
+                style="@style/subTituloSobre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -195,6 +217,7 @@
 
             <RadioButton
                 android:id="@+id/radio_taxa_aprovacao_fundamental"
+                style="@style/subTituloSobre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -203,6 +226,7 @@
 
             <RadioButton
                 android:id="@+id/radio_taxa_aprovacao_medio"
+                style="@style/subTituloSobre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -211,6 +235,7 @@
 
             <RadioButton
                 android:id="@+id/radio_taxa_abandono_fundamental"
+                style="@style/subTituloSobre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -219,6 +244,7 @@
 
             <RadioButton
                 android:id="@+id/radio_taxa_abandono_medio"
+                style="@style/subTituloSobre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -227,6 +253,7 @@
 
             <RadioButton
                 android:id="@+id/radio_censo_iniciais_fundamental"
+                style="@style/subTituloSobre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -235,6 +262,7 @@
 
             <RadioButton
                 android:id="@+id/radio_censo_finais_fundamental"
+                style="@style/subTituloSobre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -243,6 +271,7 @@
 
             <RadioButton
                 android:id="@+id/radio_censo_ensino_medio"
+                style="@style/subTituloSobre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -251,6 +280,7 @@
 
             <RadioButton
                 android:id="@+id/radio_censo_eja_fundamental"
+                style="@style/subTituloSobre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -259,6 +289,7 @@
 
             <RadioButton
                 android:id="@+id/radio_censo_eja_medio"
+                style="@style/subTituloSobre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"

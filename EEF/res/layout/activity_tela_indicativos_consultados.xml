@@ -23,6 +23,7 @@
 
             <RadioButton
                 android:id="@+id/radioButtonMarcar"
+                style="@style/subTituloSobre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="onRadioButtonMarcarTodosClicked"
@@ -30,6 +31,7 @@
 
             <RadioButton
                 android:id="@+id/radioButtonDesmarcar"
+                style="@style/subTituloSobre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="onRadioButtonDesmarcarTodosClicked"
@@ -38,6 +40,7 @@
 
         <CheckBox
             android:id="@+id/checkBox_ideb"
+            style="@style/subTituloSobre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
@@ -45,78 +48,91 @@
 
         <CheckBox
             android:id="@+id/checkBox_primeiros_projeto"
+            style="@style/subTituloSobre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/Programa_primeiros_projetos" />
 
         <CheckBox
             android:id="@+id/checkBox_projetos_cnpq"
+            style="@style/subTituloSobre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/Projetos_pesquisa_CNPq" />
 
         <CheckBox
             android:id="@+id/checkBox_projetos_jovens"
+            style="@style/subTituloSobre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/jovens_pesquisadores" />
 
         <CheckBox
             android:id="@+id/checkBox_projetos_iniciacao"
+            style="@style/subTituloSobre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/projeto_iniciacao" />
 
         <CheckBox
             android:id="@+id/checkBox_projetos_difusao"
+            style="@style/subTituloSobre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/numero_projetos" />
 
         <CheckBox
             android:id="@+id/checkBox_populacao"
+            style="@style/subTituloSobre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/populacao" />
 
         <CheckBox
             android:id="@+id/checkBox_participacao_pib"
+            style="@style/subTituloSobre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/participacao_percentual_PIB" />
 
         <CheckBox
             android:id="@+id/checkBox_censo"
+            style="@style/subTituloSobre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/censo" />
 
         <CheckBox
             android:id="@+id/checkBox_horas_aula"
+            style="@style/subTituloSobre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/horas_aula_ensino" />
 
         <CheckBox
             android:id="@+id/checkBox_quantidade_aluno"
+            style="@style/subTituloSobre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/media_alunos_por_turma" />
 
         <CheckBox
             android:id="@+id/checkBox_taxa_distorcao"
+            style="@style/subTituloSobre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/taxa_distorcao" />
 
         <CheckBox
             android:id="@+id/checkBox_taxa_abandono"
+            style="@style/subTituloSobre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/taxa_abandono" />
 
         <CheckBox
             android:id="@+id/checkBox_taxa_aprovacao"
+            style="@style/subTituloSobre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/taxa_aprovacao" />
