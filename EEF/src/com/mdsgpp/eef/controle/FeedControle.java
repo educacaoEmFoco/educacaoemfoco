@@ -34,7 +34,7 @@ public class FeedControle extends AsyncTask<String, Void, Feed> {
 		barraProgresso.setIndeterminate(true);
 		barraProgresso.setMessage("Carregando Not�cias!");
 		barraProgresso.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
-		//barraProgresso.show();
+		barraProgresso.show();
 		super.onPreExecute();
 	}
 
