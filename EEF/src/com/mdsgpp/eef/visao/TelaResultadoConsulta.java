@@ -157,7 +157,7 @@ public class TelaResultadoConsulta extends Activity {
 	}
 	
 	public void abreTelaSobre() {
-		Intent intent = new Intent(this, TelaSobreComparacaoDeEstados.class);
+		Intent intent = new Intent(this, TelaSobreResultadoConsulta.class);
     	startActivity(intent);
 		
 	}

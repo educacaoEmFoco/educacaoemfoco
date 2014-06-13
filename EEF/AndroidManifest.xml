@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.mdsgpp.eef"
     android:installLocation="preferExternal"
-    android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionCode="4"
+    android:versionName="1.03" >
 
     <instrumentation
         android:name="android.test.InstrumentationTestRunner"
@@ -33,213 +33,227 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        
         <activity
             android:name="com.mdsgpp.eef.visao.TelaEstado"
             android:icon="@drawable/home"
             android:label="@string/title_activity_tela_estado"
-            android:parentActivityName="MainActivity"
+            android:parentActivityName="com.mdsgpp.eef.visao.MainActivity"
             android:screenOrientation="portrait" >
         </activity>
+        
         <activity
             android:name="com.mdsgpp.eef.visao.TelaListaEstado"
             android:icon="@drawable/home"
             android:label="@string/title_activity_tela_lista_estado"
-            android:parentActivityName="MainActivity"
+            android:parentActivityName="com.mdsgpp.eef.visao.MainActivity"
             android:screenOrientation="portrait" >
         </activity>
+        
         <activity
             android:name="com.mdsgpp.eef.visao.TelaComparacao"
             android:icon="@drawable/home"
             android:label="@string/title_activity_tela_comparacao"
-            android:parentActivityName="MainActivity"
+            android:parentActivityName="com.mdsgpp.eef.visao.MainActivity"
             android:screenOrientation="portrait" >
         </activity>
+        
         <activity
             android:name="com.mdsgpp.eef.visao.TelaSobre"
             android:icon="@drawable/home"
             android:label="@string/title_activity_tela_sobre"
-            android:parentActivityName="MainActivity"
+            android:parentActivityName="com.mdsgpp.eef.visao.MainActivity"
             android:screenOrientation="portrait" >
         </activity>
+        
         <activity
             android:name="com.mdsgpp.eef.visao.TelaIndicativosConsultados"
             android:icon="@drawable/home"
             android:label="@string/title_activity_tela_indicativos_consultados"
-            android:parentActivityName="MainActivity"
+            android:parentActivityName="com.mdsgpp.eef.visao.MainActivity"
             android:screenOrientation="portrait" >
         </activity>
+        
         <activity
             android:name="com.mdsgpp.eef.visao.TelaResultadoConsulta"
             android:icon="@drawable/home"
             android:label="@string/title_activity_tela_resultado_consulta"
-            android:parentActivityName="MainActivity" >
+            android:parentActivityName="com.mdsgpp.eef.visao.MainActivity" >
         </activity>
+        
         <activity
             android:name="com.mdsgpp.eef.visao.TelaFeed"
             android:icon="@drawable/home"
             android:label="@string/title_activity_tela_feed"
-            android:parentActivityName="MainActivity"
+            android:parentActivityName="com.mdsgpp.eef.visao.MainActivity"
             android:screenOrientation="portrait" >
         </activity>
+        
         <activity
-            android:name="com.mdsgpp.eef.visao.TelaFeedSobre"
+            android:name="com.mdsgpp.eef.visao.TelaSobreFeed"
             android:icon="@drawable/home"
             android:label="@string/title_activity_tela_feed_sobre"
-            android:parentActivityName="MainActivity"
+            android:parentActivityName="com.mdsgpp.eef.visao.com.mdsgpp.eef.visao.MainActivity"
             android:screenOrientation="portrait" >
         </activity>
+        
         <activity
             android:name="com.mdsgpp.eef.visao.TelaEscolheIndicativoGraficoComparacao"
             android:icon="@drawable/home"
             android:label="@string/title_activity_tela_escolhe_indicativo_grafico"
-            android:parentActivityName="MainActivity"
+            android:parentActivityName="com.mdsgpp.eef.visao.MainActivity"
             android:screenOrientation="portrait" >
         </activity>
+        
         <activity
             android:name="com.mdsgpp.eef.visao.TelaEscolheIndicativoGraficoLinha"
             android:icon="@drawable/home"
             android:label="@string/title_activity_tela_escolhe_indicativo_grafico"
-            android:parentActivityName="MainActivity"
+            android:parentActivityName="com.mdsgpp.eef.visao.MainActivity"
             android:screenOrientation="portrait" >
         </activity>
+        
         <activity
             android:name="com.mdsgpp.eef.visao.TelaGrafico"
             android:icon="@drawable/home"
             android:label="@string/title_activity_tela_grafico"
-            android:parentActivityName="MainActivity"
+            android:parentActivityName="com.mdsgpp.eef.visao.MainActivity"
             android:screenOrientation="portrait" >
         </activity>
+        
         <activity
             android:name="com.mdsgpp.eef.visao.TelaGraficoLinha"
             android:icon="@drawable/home"
             android:label="@string/title_activity_tela_grafico"
-            android:parentActivityName="MainActivity"
+            android:parentActivityName="com.mdsgpp.eef.visao.MainActivity"
             android:screenOrientation="portrait" >
         </activity>
+        
         <activity
             android:name="com.mdsgpp.eef.visao.TelaSobreIndicativos"
             android:icon="@drawable/home"
             android:label="@string/title_activity_sobre_indicativos"
-            android:parentActivityName="MainActivity"
+            android:parentActivityName="com.mdsgpp.eef.visao.MainActivity"
             android:screenOrientation="portrait" >
         </activity>
+        
         <activity
             android:name="com.mdsgpp.eef.visao.TelaSobreConsulta"
             android:icon="@drawable/home"
             android:label="@string/title_activity_tela_sobre_consulta"
-            android:parentActivityName="MainActivity"
+            android:parentActivityName="com.mdsgpp.eef.visao.MainActivity"
             android:screenOrientation="portrait" >
         </activity>
+        
         <activity
             android:name="com.mdsgpp.eef.visao.TelaSobreComparacao"
             android:icon="@drawable/home"
             android:label="@string/title_activity_tela_sobre_comparacao"
-            android:parentActivityName="MainActivity"
+            android:parentActivityName="com.mdsgpp.eef.visao.MainActivity"
             android:screenOrientation="portrait" >
         </activity>
-        <activity
-            android:name="com.mdsgpp.eef.visao.TelaConsultasGerais"
-            android:icon="@drawable/home"
-            android:label="@string/title_activity_tela_consultas_gerais"
-            android:parentActivityName="MainActivity"
-            android:screenOrientation="portrait" >
-        </activity>
+        
         <activity
             android:name="com.mdsgpp.eef.visao.TelaComparacoesGerais"
             android:icon="@drawable/home"
             android:label="@string/title_activity_tela_comparacoes_gerais"
-            android:parentActivityName="MainActivity"
+            android:parentActivityName="com.mdsgpp.eef.visao.MainActivity"
             android:screenOrientation="portrait" >
         </activity>
+        
         <activity
             android:name="com.mdsgpp.eef.visao.TelaConsultaPorIndicativo"
             android:icon="@drawable/home"
             android:label="@string/title_activity_tela_consulta_por_indicativo"
-            android:parentActivityName="MainActivity"
+            android:parentActivityName="com.mdsgpp.eef.visao.MainActivity"
             android:screenOrientation="portrait" >
         </activity>
+        
         <activity
             android:name="com.mdsgpp.eef.visao.TelaResultadoConsultaPorIndicativo"
             android:icon="@drawable/home"
             android:label="@string/title_activity_tela_resultado_consulta_por_indicativo"
-            android:parentActivityName="MainActivity"
+            android:parentActivityName="com.mdsgpp.eef.visao.MainActivity"
             android:screenOrientation="portrait" >
         </activity>
+        
         <activity
             android:name="com.mdsgpp.eef.visao.TelaHistoricoEstado"
             android:icon="@drawable/home"
             android:label="@string/title_activity_tela_historico_estado"
-            android:parentActivityName="MainActivity"
+            android:parentActivityName="com.mdsgpp.eef.visao.MainActivity"
             android:screenOrientation="portrait" >
         </activity>
+        
         <activity
             android:name="com.mdsgpp.eef.visao.TelaSobreComparacoesGerais"
             android:icon="@drawable/home"
             android:label="@string/title_activity_tela_sobre_comparacoes_gerais"
-            android:parentActivityName="MainActivity"
+            android:parentActivityName="com.mdsgpp.eef.visao.MainActivity"
             android:screenOrientation="portrait" >
         </activity>
+        
         <activity
             android:name="com.mdsgpp.eef.visao.TelaSobreListaEstado"
             android:icon="@drawable/home"
             android:label="@string/title_activity_tela_sobre_lista_estado"
-            android:parentActivityName="MainActivity"
+            android:parentActivityName="com.mdsgpp.eef.visao.MainActivity"
             android:screenOrientation="portrait" >
         </activity>
+        
         <activity
             android:name="com.mdsgpp.eef.visao.TelaSobreEstado"
             android:icon="@drawable/home"
             android:label="@string/title_activity_tela_sobre_estado"
-            android:parentActivityName="MainActivity"
+            android:parentActivityName="com.mdsgpp.eef.visao.MainActivity"
             android:screenOrientation="portrait" >
         </activity>
-        <activity
-            android:name="com.mdsgpp.eef.SobreComparacaoEstadosActivity"
-            android:icon="@drawable/home"
-            android:label="@string/title_activity_sobre_comparacao_estados"
-            android:parentActivityName="MainActivity"
-            android:screenOrientation="portrait" >
-        </activity>
+        
         <activity
             android:name="com.mdsgpp.eef.visao.TelaSobreEscolhaIndicativo"
             android:icon="@drawable/home"
             android:label="@string/title_activity_tela_sobre_escolha_indicativo"
-            android:parentActivityName="MainActivity"
+            android:parentActivityName="com.mdsgpp.eef.visao.MainActivity"
             android:screenOrientation="portrait" >
         </activity>
+        
         <activity
-            android:name="com.mdsgpp.eef.visao.TelaSobreComparacaoDeEstados"
+            android:name="com.mdsgpp.eef.visao.TelaSobreResultadoConsulta"
             android:icon="@drawable/home"
             android:label="@string/title_activity_tela_sobre_comparacao_de_estados"
-            android:parentActivityName="MainActivity"
+            android:parentActivityName="com.mdsgpp.eef.visao.MainActivity"
             android:screenOrientation="portrait" >
         </activity>
+        
         <activity
-            android:name="com.mdsgpp.eef.visao.TelaSobreResultadoDaConsulta"
+            android:name="com.mdsgpp.eef.visao.TelaSobreResultadoConsultaPorIndicativo"
             android:icon="@drawable/home"
             android:label="@string/title_activity_tela_sobre_resultado_da_consulta"
-            android:parentActivityName="MainActivity"
+            android:parentActivityName="com.mdsgpp.eef.visao.MainActivity"
             android:screenOrientation="portrait" >
         </activity>
+        
         <activity
             android:name="com.mdsgpp.eef.visao.TelaSobreHistoricoDeIndicativo"
             android:icon="@drawable/home"
             android:label="@string/title_activity_sobre_historico_de_indicativo"
-            android:parentActivityName="MainActivity"
+            android:parentActivityName="com.mdsgpp.eef.visao.MainActivity"
             android:screenOrientation="portrait" >
         </activity>
+        
         <activity
             android:name="com.mdsgpp.eef.visao.TelaSobreGrafico"
             android:icon="@drawable/home"
             android:label="@string/title_activity_tela_sobre_grafico"
-            android:parentActivityName="MainActivity"
+            android:parentActivityName="com.mdsgpp.eef.visao.MainActivity"
             android:screenOrientation="portrait" >
         </activity>
+        
         <activity
             android:name="com.mdsgpp.eef.visao.TelaSobreEscolheIndicativoGraficoComparacao"
             android:icon="@drawable/home"
             android:label="@string/title_activity_tela_sobre_escolhe_indicativo_grafico_comparacao"
-            android:parentActivityName="MainActivity"
+            android:parentActivityName="com.mdsgpp.eef.visao.MainActivity"
             android:screenOrientation="portrait" >
         </activity>
     </application>

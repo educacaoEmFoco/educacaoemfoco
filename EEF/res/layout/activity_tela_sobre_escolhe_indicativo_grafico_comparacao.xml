@@ -1,31 +1,22 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".TelaSobreEscolheIndicativoGraficoComparacao"
     android:background="@drawable/background" >
 
-    <TextView
-            android:id="@+id/sobre_tela_escolhe_indicativo_grafico_comparacao_title"
-            style="@style/tituloSobre"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/title_activity_tela_sobre_escolhe_indicativo_grafico_comparacao"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-    
-    <TextView
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <TextView
             android:id="@+id/sobre_tela_grafico_conteudo"
             style="@style/subTituloSobre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/sobre_tela_escolhe_indicativo_grafico_comparacao_title"
-            android:layout_below="@+id/sobre_tela_escolhe_indicativo_grafico_comparacao_title"
-            android:layout_marginTop="22dp"
             android:text="@string/escolhe_indicativo_grafico_comparacao_conteudo"
             android:textAppearance="?android:attr/textAppearanceMedium" />
+    </LinearLayout>
 
-</RelativeLayout>
+</ScrollView>

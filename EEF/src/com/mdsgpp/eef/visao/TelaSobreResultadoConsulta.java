@@ -4,16 +4,14 @@ import com.mdsgpp.eef.R;
 
 import android.os.Bundle;
 import android.app.Activity;
-import android.support.v4.app.NavUtils;
 import android.view.Menu;
-import android.view.MenuItem;
 
-public class TelaFeedSobre extends Activity {
+public class TelaSobreResultadoConsulta extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_tela_feed_sobre);
+		setContentView(R.layout.activity_sobre_tela_comparacao_de_estados);
 	}
 
 	@Override
@@ -21,20 +19,6 @@ public class TelaFeedSobre extends Activity {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.menu_telas_sem_sobre, menu);
 		return true;
-	}
-	
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		
-		switch (item.getItemId()) {
-		case android.R.id.home:
-	        NavUtils.navigateUpFromSameTask(this);
-	        break;
-		default:
-			break;
-		}
-		
-    	return true;
 	}
 
 }

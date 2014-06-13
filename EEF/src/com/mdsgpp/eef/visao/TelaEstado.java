@@ -178,8 +178,8 @@ public class TelaEstado extends Activity {
 		textViewTaxaDistorcaoIdadeSerieMedio.setText(informacoes.get("taxa_distorcao_medio"));
 		textViewTaxaDeAproveitamentoFundamental.setText(informacoes.get("taxa_aprovacao_fundamental"));
 		textViewTaxaDeAproveitamentoMedio.setText(informacoes.get("taxa_aprovacao_medio"));
-		textViewTaxaDeAbandonoFundamental.setText(informacoes.get("taxa_aprovacao_fundamental"));
-		textViewTaxaDeAbandonoMedio.setText(informacoes.get("taxa_aprovacao_medio"));
+		textViewTaxaDeAbandonoFundamental.setText(informacoes.get("taxa_abandono_fundamental"));
+		textViewTaxaDeAbandonoMedio.setText(informacoes.get("taxa_abandono_medio"));
 		
 	}
 	

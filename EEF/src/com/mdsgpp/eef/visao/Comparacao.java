@@ -3,7 +3,6 @@ package com.mdsgpp.eef.visao;
 import java.util.ArrayList;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
@@ -14,7 +13,8 @@ import android.widget.AdapterView.OnItemSelectedListener;
 
 import com.mdsgpp.eef.R;
 
-public abstract class Comparacao extends Activity{
+public abstract class Comparacao extends Activity {
+	
 	private Spinner estadosSpinner01;
 	private Spinner estadosSpinner;
 	private ArrayAdapter<String> estadosAdapter01;
@@ -151,11 +151,6 @@ public abstract class Comparacao extends Activity{
 	}
 
 	public abstract void clickBotaoComparacaoEstados(View view);
-	
-	public void clickBotaoSobreCompara(View view) {
-		Intent intent = new Intent(this, TelaSobreConsulta.class);
-		startActivity(intent);
-	}	
 	
 	public Spinner getEstadosSpinner01() {
 		return estadosSpinner01;

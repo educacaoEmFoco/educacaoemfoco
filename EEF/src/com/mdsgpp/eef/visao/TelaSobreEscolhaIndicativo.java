@@ -20,7 +20,4 @@ public class TelaSobreEscolhaIndicativo extends Activity {
 		getMenuInflater().inflate(R.menu.menu_telas_sem_sobre, menu);
 		return true;
 	}
-	 
-	    
-
 }

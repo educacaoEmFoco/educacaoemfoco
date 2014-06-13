@@ -74,7 +74,7 @@ public class TelaFeed extends Activity implements ReceptorDados {
 	
 	public void abreTelaSobre()
 	{
-		Intent intent = new Intent(this, TelaFeedSobre.class);
+		Intent intent = new Intent(this, TelaSobreFeed.class);
 		startActivity(intent);
 	}	
 	

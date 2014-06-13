@@ -32,7 +32,7 @@ public class FeedControle extends AsyncTask<String, Void, Feed> {
 	protected void onPreExecute() {
 		barraProgresso = new ProgressDialog(context, R.style.CustomProgressBar);
 		barraProgresso.setIndeterminate(true);
-		barraProgresso.setMessage("Carregando Notï¿½cias!");
+		barraProgresso.setMessage("Carregando Notícias!");
 		barraProgresso.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
 		barraProgresso.show();
 		super.onPreExecute();
@@ -78,7 +78,7 @@ public class FeedControle extends AsyncTask<String, Void, Feed> {
 		}
 		
 		if (!this.updated) {
-			Toast.makeText(this.context, "Nï¿½o foi possï¿½vel atualizar as notï¿½cias! :(",
+			Toast.makeText(this.context, "Não foi possível atualizar as notícias! :(",
 					Toast.LENGTH_LONG).show();
 		}
 

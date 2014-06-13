@@ -16,7 +16,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-public class TelaEscolheIndicativoGraficoLinha extends Activity{
+public class TelaEscolheIndicativoGraficoLinha extends Activity {
 	
 	private Estado estado;
 	private ArrayList<Float> historico = new ArrayList<Float>();

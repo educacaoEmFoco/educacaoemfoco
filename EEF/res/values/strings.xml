@@ -11,7 +11,7 @@
     <string name="title_activity_tela_feed">Notícias</string>
     <string name="title_activity_tela_feed_sobre">Sobre as Notícias</string>
     <string name="title_activity_tela_estado">Indicativos do Estado</string>
-    <string name="title_activity_tela_escolhe_indicativo_grafico">Escolha um Indicativo</string>
+    <string name="title_activity_tela_escolhe_indicativo_grafico">Sobre a Escolha de Indicativos</string>
     <string name="title_activity_grafico">Gráfico</string>
     <string name="title_activity_tela_grafico">Gráfico</string>
     <string name="title_activity_sobre_indicativos">Sobre os Indicativos</string>
@@ -20,17 +20,16 @@
     <string name="title_activity_tela_comparacoes_gerais">Comparacões</string>
     <string name="title_activity_tela_consulta_por_indicativo">Consulta por Indicativo</string>
     <string name="title_activity_tela_resultado_consulta_por_indicativo">Resultado da Consulta</string>
-    <string name="title_activity_tela_consultas_gerais">Consultas</string>
     <string name="title_activity_tela_sobre_comparacao">Sobre a Comparação</string>
     <string name="title_activity_tela_historico_estado">Histórico de Indicativo</string>
-    <string name="title_activity_tela_sobre_lista_estado">Lista Estados</string>
-    <string name="title_activity_tela_sobre_estado">Estado</string>
-    <string name="title_activity_tela_sobre_escolha_indicativo">Sobre Escolha de Indicativo</string>
+    <string name="title_activity_tela_sobre_lista_estado">Sobre a Lista de Estados</string>
+    <string name="title_activity_tela_sobre_estado">Sobre o Estado</string>
+    <string name="title_activity_tela_sobre_escolha_indicativo">Sobre a escolha de Indicativos</string>
     <string name="title_activity_tela_sobre_comparacao_de_estados">Sobre Comparação de Estados</string>
-    <string name="title_activity_tela_sobre_resultado_da_consulta">Sobre Resultado da Consulta</string>
-    <string name="title_activity_tela_sobre_historico_de_indicativo">Sobre Histórico de Indicativo</string>
-    <string name="title_activity_tela_sobre_grafico">Sobre Gráfico</string>
-    <string name="title_activity_tela_sobre_escolhe_indicativo_grafico_comparacao">Sobre Escolha um Indicativo</string>
+    <string name="title_activity_tela_sobre_resultado_da_consulta">Sobre o Resultado da Consulta</string>
+    <string name="title_activity_tela_sobre_historico_de_indicativo">Sobre o Histórico de Indicativos</string>
+    <string name="title_activity_tela_sobre_grafico">Sobre o Gráfico</string>
+    <string name="title_activity_tela_sobre_escolhe_indicativo_grafico_comparacao">Sobre a Escolha de Indicativos</string>
 
     <!-- Strings da tela inicial -->
     <string name="app_name">Educação em Foco</string>
@@ -112,35 +111,29 @@
     <string name="botao_estado"> Estado</string>
 
     <!-- Strings da tela sobre os indicativos -->
-    <string name="tela_sobre">Dados usados no EEF</string>
-    <string name="participacao_percentual_PIB"> Participação Estadual no PIB: </string>
-    <string name="participacao_percentual_PIB_conteudo"> Porcentagem referente a participação de cada estado na soma total do PIB nacional </string>
+    <string name="participacao_percentual_PIB">Participação Estadual no PIB: </string>
+    <string name="participacao_percentual_PIB_conteudo">Porcentagem referente a participação de cada estado no PIB nacional.</string>
     <string name="projetos_difusao">Projetos de Difusão Tecnologica:</string>
-    <string name="projetos_difusao_conteudo">  Número de projetos de difusão e popularização de ciência e tecnologia apoiados.
-    		Inclui apoio a diversos projetos de difusão e popularização da ciência e tecnologia;</string>
-    <string name="ideb"> IDEB - Indice de Desenvolvimento da Educação Básica: </string>
-    <string name="ideb_conteudo"> O IDEB é um indicador criado pelo governo federal para medir a qualidade do ensino nas escolas públicas. 
-    		A escala de notas vai de 0 a 10.</string>
-    <string name="primeiros_projetos"> Programa Primeiros Projetos:  </string>
-    <string name="primeiros_projetos_conteudo"> Programa de apoio à infraestrutura de ciência e técnologia para jovens pesquisadores. </string>
-    <string name="projetos_apoio_cnpq"> Projetos de pesquisa e apoio CNPq:  </string>
-    <string name="projetos_apoio_cnpq_conteudo"> Número de projetos contratados pelos Principais Programas de Apoio à Pesquisa do CNPq.  </string>
-    <string name="projetos_jovens_pesquisadores"> Projetos Jovens Pesquisadores:  </string>
-    <string name="projetos_jovens_pesquisadores_conteudo"> Número de projetos contratados pelo Programa Jovens Pesquisadores.
-    		A UF considerada é a UF da instituição de destino.  </string>
-    <string name="projetos_inct"> Projetos Instituto Nacional de Ciência e Tecnologia - INCT: </string>
-    <string name="projetos_inct_conteudo"> Número de projetos contratados dos Institutos Nacionais de Ciência e Tecnologia. </string>
-    <string name="botao_sobre">Sobre</string>
-    <string name="botao_sobre_descricao">	Através dessa tela é possivel ao usuário escolher um dos indicativos abaixo e a partir da seleção visualizar o indicativo para todos os estados</string>
+    <string name="projetos_difusao_conteudo">Número de projetos de difusão e popularização da ciência e tecnologia. Inclui o apoio a diversos projetos neste sentido.</string>
+    <string name="ideb">IDEB - Indice de Desenvolvimento da Educação Básica: </string>
+    <string name="ideb_conteudo">O IDEB é um indicador criado pelo governo federal para medir a qualidade do ensino nas escolas públicas. A escala de notas vai de 0 a 10.</string>
+    <string name="primeiros_projetos">Programa Primeiros Projetos:</string>
+    <string name="primeiros_projetos_conteudo">Programa de apoio aos projetos de ciência e técnologia para jovens pesquisadores.</string>
+    <string name="projetos_apoio_cnpq">Projetos de pesquisa e apoio CNPq:</string>
+    <string name="projetos_apoio_cnpq_conteudo">Número de projetos contratados pelos Principais Programas de Apoio à Pesquisa do CNPq.</string>
+    <string name="projetos_jovens_pesquisadores">Projetos Jovens Pesquisadores:</string>
+    <string name="projetos_jovens_pesquisadores_conteudo">Número de projetos contratados pelo Programa Jovens Pesquisadores. A UF considerada é a UF da instituição de destino.</string>
+    <string name="projetos_inct">Projetos Instituto Nacional de Ciência e Tecnologia - INCT:</string>
+    <string name="projetos_inct_conteudo">Número de projetos dos Institutos Nacionais de Ciência e Tecnologia contratados.</string>
+    <string name="botao_sobre_descricao">Escolha um dos indicativos, para exibí-lo para todos os estados.</string>
 
     <!-- Strings da tela consulta por indicativo -->
     <string name="titulo_escolhe_estado_por_indicativo">Escolha o indicativo</string>
     <string name="bt_verifica_estados_por_indicativo">Verificar estados</string>
     <string name="title_consultar_estados">Consultar Estados</string>
-    <string name="title_consultar_estado1">Escolha o primeiro estado.</string>
 
     <!-- Strings da tela sobre escolha indigativo -->
-    <string name="botao_sobre_escolha_indicativo">Através dessa tela é possível selecionar um ou mais indicativos e após ele selecionar o botão avançar ,será redirecionado a tela de comparação do indicativo(s) escolhido entre os dois estados.Também nessa tela o usuário tem a opção de marcar todos os indicativos ou desmarcar todos os indicativos</string>
+    <string name="botao_sobre_escolha_indicativo">Selecione os indicativos desejados.</string>
 
     <!-- Strings da tela resultado da consulta por indicativo -->
     <string name="acre">Acre</string>
@@ -172,71 +165,55 @@
     <string name="tocantins">Tocantins</string>
 
     <!-- Strings da tela sobre resultado da consulta -->
-    <string name="title_sobre_resultado_da_consulta">Sobre Resultado da Consulta</string>
-    <string name="conteudo_sobre_resultado_da_consulta">Está tela permite o usuário vizualizar o indicativo que ele selecionou, para cada um dos estados brasileiros. Os resultados apresentados são referentes ao último ano disponível. Os anos são disponíbilizados para consulta na opção "Histórico" na tela de consulta de estados.</string>
+    <string name="title_sobre_resultado_da_consulta">Sobre o Resultado da Consulta</string>
+    <string name="conteudo_sobre_resultado_da_consulta">Aqui é possível visualizar o indicativo selecionado para cada um dos estados. Os resultados apresentados se referem ao último ano disponível. No entanto, é possível visualizar todos os anos disponíveis através da opção \"Histórico\", na Tela de Consulta de Estados.</string>
 
     <!-- Strings da tela sobre historico de indicativo -->
-    <string name="title_sobre_historico_de_indicativo">Sobre Histórico de Indicativo</string>
-    <string name="conteudo_sobre_historico_de_indicativo">O usuário visualiza o histórico de cada indicativo do estado que foi selecionado.Também é possível gerar um gráfico do indicativo através do botão gerar gráfico.</string>
+    <string name="title_sobre_historico_de_indicativo">Sobre o Histórico</string>
+    <string name="conteudo_sobre_historico_de_indicativo">Aqui é possível visualizar o histórico de todos os indicativos disoníveis. É possível observar a progressão temporal dos dados através da opção \"Gráfico\".</string>
 
     <!-- Strings da tela sobre feed -->
-    <string name="tela_sobre_feed">Fonte de Informações do EEF</string>
-    <string name="descricao_sobre_feed">As notícias informadas pelo aplicativo Educação em Foco são originárias do site:\n
-			* http://noticias.gov.br/noticias/rss?id=AFSZW.\n
-			Entretanto, as notícias retiradas são apenas relacionadas a educação brasileira.\n
-			Caso o aplicativo seja atualizado para abranger mais fontes de informação, esta tela será atualizada para refletir tais mudanças.</string>
-    <string name="informacao_consultar_estado1">Será apresentado um combo box com 26* unidades federativas brasileiras, 
-    		para a escolha daquela que o usuário deseje definir como o primeiro estado na comparação.</string>
-    <string name="informacao_ast_adicional">O 27º estado é excluido da apresentação,pois este está selecionado no outro combo box. </string>
-    <string name="title_consultar_estado2">Escolha o segundo estado.</string>
-    <string name="title_ast_adicional">*</string>
-    <string name="informacao_consultar_estado2">Será apresentado um combo box com 26* unidades federativas brasileiras,
-    		para a escolha daquela que o usuário deseje definir como o segundo estado na comparação.</string>
-    <string name="title_botao_sobre_consulta">Sobre</string>
-    <string name="title_botao_comparar">Comparar</string>
-    <string name="informacao_botao_comparar">Após a seleção dos 2 estados desejados,esta opção encaminha o usuário para uma tela onde devem ser definido(s) qual(s) indicativo(s) deseja visualizar na comparação.</string>
-    <string name="title_activity_tela_consultas">TelaConsultas</string>
-
+    <string name="tela_sobre_feed">Fonte das informações</string>
+    <string name="descricao_sobre_feed">As notícias disponiblizadas aqui são originárias do portal noticias.gov.br. Apenas notícias dos órgãos relacionados à educação são exibidas aqui.</string>
+    
     <!-- Strings da tela sobre Comparação de Estados -->
     <string name="title_sobre_comparacao">Sobre Comparação</string>
-    <string name="conteudo_sobre_comparacao">Será apresentado 2 combo box com as unidades federativas brasileiras, para que o usuário escolha dois estados diferentes para realizar a comparação dos mesmos.</string>
-    <string name="informacao_botao_sobre_consulta">Após a seleção dos 2 estados desejados,esta opção encaminha o usuário para uma tela onde devem ser definido(s) qual(s) indicativo(s) deseja visualizar na comparação.</string>
+    <string name="conteudo_sobre_comparacao">Escolha os dois estados desejados para a comparação dos indicativos.</string>
+    <string name="informacao_botao_sobre_consulta">Após escolher os dois estados, selecione quais indicativos devem ser comparados.</string>
 
     <!-- Strings da tela sobre Comparação de Estado -->
     <string name="title_sobre_comparacao_estado">Sobre Comparação de Estados</string>
-    <string name="conteudo_sobre_comparacao_estado">Está tela permite o usuário visualizar as comparações dos indicativos selecionados, dos dois estados escolhido, e clicando no botão de gerar grafico a tela é redirecionada para a tela escolha um indicativo. Os resultados apresentados são referentes ao último ano disponível. Os anos são disponíbilizados para consulta na opção "Histórico" na tela de consulta de estados.</string>
-
+    <string name="conteudo_sobre_comparacao_estado">Aqui é possível visualizar a comparação dos indicativos dos dois estados escolhidos. É possível comparar visualmente algum dos indicativos exibidos através da opção \"Gerar Gráfico\". \n\nOs resultados apresentados são referentes ao último ano disponível. Todos os anos disponíveis podem ser consultados na opção "Histórico", na tela de Consulta de Estados.</string>
+	
     <!-- Strings da tela sobre Educação em Foco -->
-    <string name="consultar_estados_conteudo">Selecionando a opção de consultar estados você será redirecionado para uma tela onde irá aparecer a lista de todos os estados, para que você possa consultar os dados do mesmo.</string>
-    <string name="comparar_estados_conteudo">Selecionando a opção de comparar os estados você será redirecionado para uma tela onde você  poderá selecionar se deseja comparar por estado ou por indicativo.</string>
-    <string name="noticias_sobre_conteudo">Selecionando a opção de notícias você será redirecionado para uma tela onde você  poderá visualizar as últimas notícias publicadas no site noticias.gov.br</string>
+    <string name="consultar_estados_conteudo">Consulte todos os dados dispoíveis de um dos Estados do Brasil. Em seguida, observe o histórico de um destes dados, se desejar.</string>
+    <string name="comparar_estados_conteudo">Compare apenas os indicativos desejados de dois estados do Brasil.</string>
+    <string name="noticias_sobre_conteudo">Consulte as últimas notícias dos órgãos públicos relacionados à educação.</string>
 
     <!-- Strings da tela Comparação -->
     <string name="title_radio_button_marcar_todas">Marcar todos indicativos</string>
     <string name="title_radio_button_desmarcar_todas">Desmarcar todos indicativos</string>
     <string name="title_comparar_estados">Comparar Estados</string>
-    <string name="title_activity_tela_escolhe_tipo_de_consulta">TelaEscolheTipoDeConsulta</string>
 
     <!-- Strings da tela sobre Comparações Gerais -->
-    <string name="title_activity_tela_sobre_comparacoes_gerais">TelaSobreComparacoesGerais</string>
+    <string name="title_activity_tela_sobre_comparacoes_gerais">Comparação</string>
     <string name="title_sobre_comparacacoes_gerais_estados">Comparação por estado: </string>
     <string name="title_sobre_comparacacoes_gerais_indicativos">Comparação por indicativo: </string>
-    <string name="comparacoes_gerais_conteudo_estados">O usuário escolherá dois estados para comparar os indicativos dos mesmos.</string>
-    <string name="comparacoes_gerais_conteudo_indicativos">O usuário escolherá os indicativos que deseja comparar em relação a todos os estados.</string>
+    <string name="comparacoes_gerais_conteudo_estados">Escolha dois estados para comparar os seus indicativos.</string>
+    <string name="comparacoes_gerais_conteudo_indicativos">Escolha um único indicativo para exibir as informações relacionadas a todos os estados.</string>
 
     <!-- Strings da tela sobre Lista Estado -->
-    <string name="lista_estado_conteudo">O usuário escolhe o estado afim de consultar os dados do mesmo.</string>
+    <string name="lista_estado_conteudo">Escolha um estado na lista para consultar todos os dados disponíveis a seu respeito.</string>
 
     <!-- Strings da tela sobre Lista Estado -->
-    <string name="estado_conteudo">É apresentado os dados dos indicativos do estado selecionado, com a opção de verificar o histórico. Os resultados apresentados são referentes ao último ano disponível. Os anos são disponíbilizados para consulta na opção "Histórico" na tela de consulta de estados.</string>
-    <string name="title_activity_sobre_comparacao_estados">MainActivity</string>
-    <string name="title_activity_tela_comparacao_de_estados">MainActivity</string>
-    <string name="title_activity_sobre_historico_de_indicativo">SobreHistoricoDeIndicativo</string>
+    <string name="estado_conteudo">Aqui são apresentados todos os dados disponíveis a respeito do estado selecionado. Apenas os dados mais atualizados, ou a soma de todos os valores (no caso dos Projetos) são exibidos. No entanto, é possível visualizar todo o histórico através da opção \"Histórico\".</string>
+    <string name="title_activity_tela_comparacao_de_estados">Sobre a Comparação</string>
+    <string name="title_activity_sobre_historico_de_indicativo">Sobre o Histórico</string>
 
     <!-- Strings da tela sobre Grafico -->
-    <string name="grafico_conteudo">Apresenta o gráfico com os dados do indicativo selecionado.</string>
+    <string name="grafico_conteudo">Aqui é possível observar um gráfico com os dados do indicativo selecionado.</string>
 
     <!-- Strings da tela sobre EscolheIndicativoGraficoComparacao -->
-    <string name="escolhe_indicativo_grafico_comparacao_conteudo">O usuário escolhe um indicativo para gerar o gráfico com os dados do mesmo.</string>
+    <string name="escolhe_indicativo_grafico_comparacao_conteudo">Escolha um indicativo para gerar o gráfico com os seus dados.</string>
 
 </resources>
