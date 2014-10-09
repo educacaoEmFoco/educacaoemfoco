@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Title: Activities -->
+    <string name="title_activity_tela_comparacao">States Comparison</string>
+    <string name="title_activity_tela_lista_estado">List of States</string>
+    <string name="title_activity_tela_sobre">About o EEF</string>
+    <string name="title_activity_tela_consulta_indicativo">Search for Indicator</string>
+    <string name="title_activity_tela_indicativos_consultados">Choose Indicator</string>
+    <string name="title_activity_tela_resultado_consulta">States Comparison</string>
+    <string name="title_activity_tela_feed">News</string>
+    <string name="title_activity_tela_feed_sobre">About News</string>
+    <string name="title_activity_tela_estado">State Indicator</string>
+    <string name="title_activity_tela_escolhe_indicativo_grafico">Choose One Indicator</string>
+    <string name="title_activity_grafico">Graphic</string>
+    <string name="title_activity_tela_grafico">Graphic</string>
+    <string name="title_activity_sobre_indicativos">About indicators</string>
+    <string name="title_activity_tela_sobre_consulta">About Search for</string>
+    <string name="title_noticias_sobre">News</string>
+    <string name="title_activity_tela_comparacoes_gerais">Comparisons</string>
+    <string name="title_activity_tela_consulta_por_indicativo">Search for Indicators</string>
+    <string name="title_activity_tela_resultado_consulta_por_indicativo">Results</string>
+    <string name="title_activity_tela_consultas_gerais">Searches</string>
+    <string name="title_activity_tela_sobre_comparacao">About Comparisons </string>
+    <string name="title_activity_tela_historico_estado">Indicator History</string>
+    <string name="title_activity_tela_sobre_lista_estado">States List</string>
+    <string name="title_activity_tela_sobre_estado">State</string>
+    <string name="title_activity_tela_sobre_escolha_indicativo">About Choose Indicators</string>
+    <string name="title_activity_tela_sobre_comparacao_de_estados">About States Comparison</string>
+    <string name="title_activity_tela_sobre_resultado_da_consulta">About Results</string>
+    <string name="title_activity_tela_sobre_historico_de_indicativo">About Indicator History</string>
+    <string name="title_activity_tela_sobre_grafico">About Graphics</string>
+    <string name="title_activity_tela_sobre_escolhe_indicativo_grafico_comparacao">About Choose Indicators</string>
+
+    <!-- Strings da tela inicial -->
+    <string name="app_name">Educação em Foco - Focus on Education</string>
+    <string name="action_settings">Settings</string>
+    <string name="menu_botao_lista_estados">List of States</string>
+    <string name="menu_botao_comparacao">Compare</string>
+    <string name="botao_gera_grafico">Build Graphic</string>
+    <string name="titulo_escolhe_indicativo_grafico">Choose an indicator to build the graphic:</string>
+    <string name="string_vazia"></string>
+    <string name="menu_botao_consulta">Search</string>
+    <string name="menu_botao_feed">News</string>
+    <string name="menu_botao_consulta_por_indicativo">Search for Indicator</string>
+
+    <!-- Strings da tela indicativos consultados -->
+    <string name="botao_tela_indicativos">Go</string>
+
+    <!-- Strings da tela indicativos consultados -->
+    <string name="botao_indicativos">Build Graphic</string>
+
+    <!-- Strings da Escolhe Indicativo Grafico -->
+    <string name="populacao">Population</string>
+    <string name="participacao_PIB_percentual">State Contribution on GDP(%)</string>
+    <string name="projetos_difusao_tecnologica_qtd">Projects on Technological Diffusion(Quantity)</string>
+    <string name="projetos_difusao_tecnologica_investimento">Projects on Technological Diffusion (Investiment Cost - R$)</string>
+    <string name="participacao_IDEB_fundamental_iniciais">Basic Education Progress Indicator (First Years)</string>
+    <string name="participacao_IDEB_fundamental_finais">Basic Education Progress Indicator(Last Years)</string>
+    <string name="participacao_IDEB_medio">Basic Education Progress Indicator (High School)</string>
+    <string name="programa_primeiros_projetos_qtd">Program "First Projects" (quantity)</string>
+    <string name="programa_primeiros_projetos_investimento">Program "First Projects" (R$)</string>
+    <string name="projetos_pesquisa_CNPq_qtd">Research Projects Supported by:CNPQ (quantity)</string>
+    <string name="projetos_pesquisa_CNPq_investimento">Research Projects Supported by:CNPQ  (R$)</string>
+    <string name="jovens_pesquisadores_qtd">Program "Young Researchers" (quantity)</string>
+    <string name="jovens_pesquisadores_investimento">Program "Young Researchers" (R$)</string>
+    <string name="projeto_iniciacao_qtd">INCT Projects  (quantity)</string>
+    <string name="projeto_iniciacao_investimento">INCT Projects (R$)</string>
+    <string name="media_alunos_por_turma">Average Class Size (quantity)</string>
+    <string name="horas_aula_ensino">Average Class Hours</string>
+    <string name="taxa_distorcao">Distortion Rate of Age(%)</string>
+    <string name="taxa_aprovacao">Success Rate (%)</string>
+    <string name="taxa_abandono">School Desertion Rate(%)</string>
+    <string name="censo">School Census (Enrolled)</string>
+    <string name="alunos_por_turma_fundamental">Average Class Size Elementary School (quantity)</string>
+    <string name="alunos_por_turma_medio">Average Class Size High School(quantity)</string>
+    <string name="horas_aula_fundamental">Average Daily Class Hours Elementary School</string>
+    <string name="horas_aula_medio">Average Daily Class Hours High School</string>
+    <string name="taxa_distorcao_fundamental">Distortion Rate of Age/ Elementary School Years (%)</string>
+    <string name="taxa_distorcao_medio">Distortion Rate of Age/High School Years(%)</string>
+    <string name="taxa_aprovacao_fundamental">Approval Rate Elementary School(%)</string>
+    <string name="taxa_aprovacao_medio">Approval Rate High School(%)</string>
+    <string name="taxa_abandono_fundamental">Desertion Rate Elementary School(%)</string>
+    <string name="taxa_abandono_medio">Desertion Rate High School(%)</string>
+    <string name="censo_anos_iniciais_fundamental">School Census Elementary School First Years (Enrolled)</string>
+    <string name="censo_anos_finais_fundamental">School Census Elementary School Last Years (Enrolled)</string>
+    <string name="censo_ensino_medio">School Census High School First Years (Enrolled)</string>
+    <string name="censo_eja_medio">Scholl Census GED - Elementary School (Enrolled)</string>
+    <string name="censo_eja_fundamental">Scholl Census GED - High School(Enrolled)</string>
+    <string name="bt_grafico">Graphic</string>
+
+    <!-- Strings da tela escolhe tipo de consulta -->
+    <string name="bt_historico">History</string>
+    <string name="bt_estados">States</string>
+
+    <!-- Strings da tela estado -->
+    <string name="participacao_PIB">State Contribution on GDP</string>
+    <string name="numero_projetos">Projects on Technological Diffusion</string>
+    <string name="participacao_IDEB">Basic Education Progress Indicator </string>
+    <string name="Programa_primeiros_projetos">Program "First Projects"</string>
+    <string name="Projetos_pesquisa_CNPq">Research Projects Supported by:CNPQ</string>
+    <string name="jovens_pesquisadores">Young Researchers</string>
+    <string name="projeto_iniciacao">INCT Projects</string>
+    <string name="estados_opcao">Choose two states: </string>
+    <string name="compara_estados">Compare</string>
+    <string name="titulo_menu">Educação em Foco - Focus on Education</string>
+    <string name="string_x"> x </string>
+    <string name="botao_historico_estado"> History </string>
+
+    <!-- Strings da tela consultas gerais -->
+    <string name="botao_historico"> History</string>
+    <string name="botao_estado"> State</string>
+
+    <!-- Strings da tela sobre os indicativos -->
+    <string name="tela_sobre">Data used on EEF</string>
+    <string name="participacao_percentual_PIB"> State Contribution on GDP: </string>
+    <string name="participacao_percentual_PIB_conteudo"> Porcentagem referente a participação de cada estado na soma total do PIB nacional </string>
+
+    <string name="projetos_difusao">Projects on Technological Diffusion:</string>
+    <string name="projetos_difusao_conteudo">  Número de projetos de difusão e popularização de ciência e tecnologia apoiados.
+    		Inclui apoio a diversos projetos de difusão e popularização da ciência e tecnologia;</string>
+
+    <string name="ideb"> Basic Education Progress Indicator : </string>
+    <string name="ideb_conteudo"> O IDEB é um indicador criado pelo governo federal para medir a qualidade do ensino nas escolas públicas. 
+    		A escala de notas vai de 0 a 10.</string>
+
+    <string name="primeiros_projetos"> Program "First Projects" :  </string>
+    <string name="primeiros_projetos_conteudo"> Programa de apoio à infraestrutura de ciência e técnologia para jovens pesquisadores. </string>
+
+    <string name="projetos_apoio_cnpq"> Research Projects Supported by:CNPQ :  </string>
+    <string name="projetos_apoio_cnpq_conteudo"> Número de projetos contratados pelos Principais Programas de Apoio à Pesquisa do CNPq.  </string>
+
+    <string name="projetos_jovens_pesquisadores"> Program "Young Researchers" :  </string>
+    <string name="projetos_jovens_pesquisadores_conteudo"> Número de projetos contratados pelo Programa Jovens Pesquisadores.
+    		A UF considerada é a UF da instituição de destino.  </string>
+
+    <string name="projetos_inct"> INCT Projects: </string>
+    <string name="projetos_inct_conteudo"> Science and Technology National Institute .Número de projetos contratados dos Institutos Nacionais de Ciência e Tecnologia. </string>
+
+    <string name="botao_sobre">About</string>
+    <string name="botao_sobre_descricao">	Através dessa tela é possivel ao usuário escolher um dos indicativos abaixo e a partir da seleção visualizar o indicativo para todos os estados</string>
+
+    <!-- Strings da tela consulta por indicativo -->
+    <string name="titulo_escolhe_estado_por_indicativo">Choose Indicator</string>
+    <string name="bt_verifica_estados_por_indicativo">See States</string>
+    <string name="title_consultar_estados">Search for State</string>
+    <string name="title_consultar_estado1">Choose fisrt state:</string>
+
+    <!-- Strings da tela sobre escolha indigativo -->
+    <string name="botao_sobre_escolha_indicativo">Através dessa tela é possível selecionar um ou mais indicativos e após ele selecionar o botão avançar ,será redirecionado a tela de comparação do indicativo(s) escolhido entre os dois estados.Também nessa tela o usuário tem a opção de marcar todos os indicativos ou desmarcar todos os indicativos</string>
+
+    <!-- Strings da tela resultado da consulta por indicativo -->
+    <string name="acre">Acre</string>
+    <string name="alagoas">Alagoas</string>
+    <string name="amapa">Amapa</string>
+    <string name="amazonas">Amazonas</string>
+    <string name="bahia">Bahia</string>
+    <string name="ceara">Ceará</string>
+    <string name="df">Distrito Federal</string>
+    <string name="espiritoSanto">Esprito Santo</string>
+    <string name="goias">Goias</string>
+    <string name="maranhao">Maranhão</string>
+    <string name="matoGrossoDoSul">Mato Grosso do Sul</string>
+    <string name="matoGrosso">Mato Grosso</string>
+    <string name="minasGerais">Minas Gerais</string>
+    <string name="para">Pará</string>
+    <string name="paraiba">Paraíba</string>
+    <string name="parana">Paraná</string>
+    <string name="pernambuco">Pernambuco</string>
+    <string name="piaui">Piaui</string>
+    <string name="rioDeJaneiro">RioDeJaneiro</string>
+    <string name="rioGrandeDoNorte">Rio Grande do Norte</string>
+    <string name="rioGrandeDoSul">Rio Grande do Sul</string>
+    <string name="rondonia">Rondonia</string>
+    <string name="roraima">Roraima</string>
+    <string name="santaCatarina">Santa Catarina</string>
+    <string name="saoPaulo">São Paulo</string>
+    <string name="sergipe">Sergipe</string>
+    <string name="tocantins">Tocantins</string>
+
+    <!-- Strings da tela sobre resultado da consulta -->
+    <string name="title_sobre_resultado_da_consulta">About Results</string>
+    <string name="conteudo_sobre_resultado_da_consulta">Está tela permite o usuário vizualizar o indicativo que ele selecionou, para cada um dos estados brasileiros. Os resultados apresentados são referentes ao último ano disponível. Os anos são disponíbilizados para consulta na opção "Histórico" na tela de consulta de estados.</string>
+
+    <!-- Strings da tela sobre historico de indicativo -->
+    <string name="title_sobre_historico_de_indicativo">About Indicator History</string>
+    <string name="conteudo_sobre_historico_de_indicativo">O usuário visualiza o histórico de cada indicativo do estado que foi selecionado.Também é possível gerar um gráfico do indicativo através do botão gerar gráfico.</string>
+
+    <!-- Strings da tela sobre feed -->
+    <string name="tela_sobre_feed">Information Source</string>
+    <string name="descricao_sobre_feed">As notícias informadas pelo aplicativo Educação em Foco são originárias do site:\n
+			* http://noticias.gov.br/noticias/rss?id=AFSZW.\n
+			Entretanto, as notícias retiradas são apenas relacionadas a educação brasileira.\n
+			Caso o aplicativo seja atualizado para abranger mais fontes de informação, esta tela será atualizada para refletir tais mudanças.</string>
+    <string name="informacao_consultar_estado1">Será apresentado um combo box com 26* unidades federativas brasileiras, 
+    		para a escolha daquela que o usuário deseje definir como o primeiro estado na comparação.</string>
+    <string name="informacao_ast_adicional">O 27º estado é excluido da apresentação,pois este está selecionado no outro combo box. </string>
+    <string name="title_consultar_estado2">Choose second state:</string>
+    <string name="title_ast_adicional">*</string>
+    <string name="informacao_consultar_estado2">Será apresentado um combo box com 26* unidades federativas brasileiras,
+    		para a escolha daquela que o usuário deseje definir como o segundo estado na comparação.</string>
+    <string name="title_botao_sobre_consulta">About</string>
+    <string name="title_botao_comparar">Compare</string>
+    <string name="informacao_botao_comparar">Após a seleção dos 2 estados desejados,esta opção encaminha o usuário para uma tela onde devem ser definido(s) qual(s) indicativo(s) deseja visualizar na comparação.</string>
+    <string name="title_activity_tela_consultas">TelaConsultas</string>
+
+    <!-- Strings da tela sobre Comparação de Estados -->
+    <string name="title_sobre_comparacao">About Comparisons</string>
+    <string name="conteudo_sobre_comparacao">Será apresentado 2 combo box com as unidades federativas brasileiras, para que o usuário escolha dois estados diferentes para realizar a comparação dos mesmos.</string>
+    <string name="informacao_botao_sobre_consulta">Após a seleção dos 2 estados desejados,esta opção encaminha o usuário para uma tela onde devem ser definido(s) qual(s) indicativo(s) deseja visualizar na comparação.</string>
+
+    <!-- Strings da tela sobre Comparação de Estado -->
+    <string name="title_sobre_comparacao_estado">About States Comparisons</string>
+    <string name="conteudo_sobre_comparacao_estado">Está tela permite o usuário visualizar as comparações dos indicativos selecionados, dos dois estados escolhido, e clicando no botão de gerar grafico a tela é redirecionada para a tela escolha um indicativo. Os resultados apresentados são referentes ao último ano disponível. Os anos são disponíbilizados para consulta na opção "Histórico" na tela de consulta de estados.</string>
+
+    <!-- Strings da tela sobre Educação em Foco -->
+    <string name="consultar_estados_conteudo">Selecionando a opção de consultar estados você será redirecionado para uma tela onde irá aparecer a lista de todos os estados, para que você possa consultar os dados do mesmo.</string>
+    <string name="comparar_estados_conteudo">Selecionando a opção de comparar os estados você será redirecionado para uma tela onde você  poderá selecionar se deseja comparar por estado ou por indicativo.</string>
+    <string name="noticias_sobre_conteudo">Selecionando a opção de notícias você será redirecionado para uma tela onde você  poderá visualizar as últimas notícias publicadas no site noticias.gov.br</string>
+
+    <!-- Strings da tela Comparação -->
+    <string name="title_radio_button_marcar_todas">Select all indicators</string>
+    <string name="title_radio_button_desmarcar_todas">Unselect all indicators</string>
+    <string name="title_comparar_estados">Compare states</string>
+    <string name="title_activity_tela_escolhe_tipo_de_consulta">TelaEscolheTipoDeConsulta</string>
+
+    <!-- Strings da tela sobre Comparações Gerais -->
+    <string name="title_activity_tela_sobre_comparacoes_gerais">TelaSobreComparacoesGerais</string>
+    <string name="title_sobre_comparacacoes_gerais_estados">Compare States: </string>
+    <string name="title_sobre_comparacacoes_gerais_indicativos">Compare Indicators: </string>
+    <string name="comparacoes_gerais_conteudo_estados">O usuário escolherá dois estados para comparar os indicativos dos mesmos.</string>
+    <string name="comparacoes_gerais_conteudo_indicativos">O usuário escolherá os indicativos que deseja comparar em relação a todos os estados.</string>
+
+    <!-- Strings da tela sobre Lista Estado -->
+    <string name="lista_estado_conteudo">O usuário escolhe o estado afim de consultar os dados do mesmo.</string>
+
+    <!-- Strings da tela sobre Lista Estado -->
+    <string name="estado_conteudo">É apresentado os dados dos indicativos do estado selecionado, com a opção de verificar o histórico. Os resultados apresentados são referentes ao último ano disponível. Os anos são disponíbilizados para consulta na opção "Histórico" na tela de consulta de estados.</string>
+    <string name="title_activity_sobre_comparacao_estados">MainActivity</string>
+    <string name="title_activity_tela_comparacao_de_estados">MainActivity</string>
+    <string name="title_activity_sobre_historico_de_indicativo">SobreHistoricoDeIndicativo</string>
+
+    <!-- Strings da tela sobre Grafico -->
+    <string name="grafico_conteudo">Apresenta o gráfico com os dados do indicativo selecionado.</string>
+
+    <!-- Strings da tela sobre EscolheIndicativoGraficoComparacao -->
+    <string name="escolhe_indicativo_grafico_comparacao_conteudo">O usuário escolhe um indicativo para gerar o gráfico com os dados do mesmo.</string>
+
+</resources>
