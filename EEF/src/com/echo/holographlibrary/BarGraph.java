@@ -136,6 +136,9 @@ public class BarGraph extends View {
                 if(bar.getValue() > maxValue) {
                     maxValue = bar.getValue();
                 }
+                else {
+                	// Do nothing
+                }
             }
             
             mRectangle = new Rect();
@@ -208,16 +211,25 @@ public class BarGraph extends View {
                     	(float) Math.abs(r2.top - r2.bottom) / 2f * 0.7f,
                     	this.mPaint);
                 }
+                else {
+                	// Do nothing
+                }
                 if(mIndexSelected == count && mListener != null) {
                     this.mPaint.setColor(Color.parseColor("#33B5E5"));
                     this.mPaint.setAlpha(100);
                     canvas.drawPath(bar.getPath(), this.mPaint);
                     this.mPaint.setAlpha(255);
                 }
+                else {
+                	// Do nothing
+                }
                 
                 count++;
             }
             mShouldUpdate = false;
+        }
+        else {
+        	// Do nothing
         }
         
         ca.drawBitmap(mFullImage, 0, 0, null);
@@ -245,9 +257,15 @@ public class BarGraph extends View {
                     if(mIndexSelected > -1) {
                     	mListener.onClick(mIndexSelected);
                     }
+                    else {
+                    	// Do nothing
+                    }
                     
                     mIndexSelected = -1;
                 }
+            	else{
+            		// Do nothing
+            	}
             }
             else if(event.getAction() == MotionEvent.ACTION_CANCEL) {
             	mIndexSelected = -1;
@@ -261,6 +279,9 @@ public class BarGraph extends View {
         	event.getAction() == MotionEvent.ACTION_CANCEL) {
             mShouldUpdate = true;
             postInvalidate();
+        }
+        else {
+        	// Do nothing
         }
         
         return true;
