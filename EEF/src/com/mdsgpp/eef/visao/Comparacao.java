@@ -14,7 +14,7 @@ import android.widget.AdapterView.OnItemSelectedListener;
 
 import com.mdsgpp.eef.R;
 
-public abstract class Comparacao extends Activity{
+public abstract class Comparacao extends Activity {
 	private Spinner estadosSpinner01;
 	private Spinner estadosSpinner;
 	private ArrayAdapter<String> estadosAdapter01;
@@ -30,7 +30,7 @@ public abstract class Comparacao extends Activity{
 
 		inicializaSpinners();
 		estados01 = preencheEstados(estados01);
-		estados02 =preencheEstados(estados02);
+		estados02 = preencheEstados(estados02);
 		todosEstados = preencheEstados(todosEstados);
 
 		setAdapterSpinner01();
@@ -50,28 +50,10 @@ public abstract class Comparacao extends Activity{
 		todosEstados = new ArrayList<String>();
 
 		estadosSpinner01 = (Spinner) findViewById(R.id.spinner1);
-		estadosSpinner01
-				.setOnItemSelectedListener(new OnItemSelectedListener() {
-					@Override
-					public void onItemSelected(AdapterView<?> adapter,
-							View view, int posicao, long id) {
-						atualizaValoresSpinner02(estadosSpinner01
-								.getSelectedItem().toString());
-					}
-
-					@Override
-					public void onNothingSelected(AdapterView<?> arg0) {
-						// nada a fazer
-					}
-				});
-
-		estadosSpinner = (Spinner) findViewById(R.id.spinner2);
-		estadosSpinner.setOnItemSelectedListener(new OnItemSelectedListener() {
+		estadosSpinner01.setOnItemSelectedListener(new OnItemSelectedListener() {
 			@Override
-			public void onItemSelected(AdapterView<?> adapter, View view,
-					int posicao, long id) {
-				atualizaValoresSpinner01(estadosSpinner.getSelectedItem()
-						.toString());
+			public void onItemSelected(AdapterView<?> adapter, View view, int posicao, long id) {
+				atualizaValoresSpinner02(estadosSpinner01.getSelectedItem().toString());
 			}
 
 			@Override
@@ -80,20 +62,28 @@ public abstract class Comparacao extends Activity{
 			}
 		});
 
+		estadosSpinner = (Spinner) findViewById(R.id.spinner2);
+		estadosSpinner.setOnItemSelectedListener(new OnItemSelectedListener() {
+			@Override
+			public void onItemSelected(AdapterView<?> adapter, View view, int posicao, long id) {
+				atualizaValoresSpinner01(estadosSpinner.getSelectedItem().toString());
+			}
+
+			@Override
+			public void onNothingSelected(AdapterView<?> arg0) {
+				// nada a fazer
+			}
+		});
 	}
 
 	private void setAdapterSpinner01() {
-		estadosAdapter01 = new ArrayAdapter<String>(this,
-				R.layout.spinner_item, estados01);
-		estadosAdapter01
-				.setDropDownViewResource(android.R.layout.simple_list_item_1);
-
+		estadosAdapter01 = new ArrayAdapter<String>(this, R.layout.spinner_item, estados01);
+		estadosAdapter01.setDropDownViewResource(android.R.layout.simple_list_item_1);
 		estadosSpinner01.setAdapter(estadosAdapter01);
 	}
 
 	private void setAdapterSpinner02() {
-		estadosAdapter02 = new ArrayAdapter<String>(this,
-				R.layout.spinner_item, estados02);
+		estadosAdapter02 = new ArrayAdapter<String>(this, R.layout.spinner_item, estados02);
 		estadosAdapter02.setDropDownViewResource(android.R.layout.simple_list_item_1);
 
 		// Define o adapter para os spinners
