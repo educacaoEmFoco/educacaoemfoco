@@ -37,13 +37,17 @@ public abstract class Comparacao extends Activity {
 		setAdapterSpinner02();
 	}
 
+	// Inflate the menu, this adds items to the action bar if it is present.
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.menu_telas, menu);
 		return true;
 	}
 
+	/*
+	* Spinners provide a quick way to select one value from a set.
+	* Here we initialize them with default values.
+	*/
 	private void inicializaSpinners() {
 		estados01 = new ArrayList<String>();
 		estados02 = new ArrayList<String>();
@@ -58,7 +62,7 @@ public abstract class Comparacao extends Activity {
 
 			@Override
 			public void onNothingSelected(AdapterView<?> arg0) {
-				// nada a fazer
+				// Nothing to do.
 			}
 		});
 
@@ -71,7 +75,7 @@ public abstract class Comparacao extends Activity {
 
 			@Override
 			public void onNothingSelected(AdapterView<?> arg0) {
-				// nada a fazer
+				// Nothing to do.
 			}
 		});
 	}
@@ -86,10 +90,11 @@ public abstract class Comparacao extends Activity {
 		estadosAdapter02 = new ArrayAdapter<String>(this, R.layout.spinner_item, estados02);
 		estadosAdapter02.setDropDownViewResource(android.R.layout.simple_list_item_1);
 
-		// Define o adapter para os spinners
+		// Define the adapter for spinners.
 		estadosSpinner.setAdapter(estadosAdapter02);
 	}
 
+	// Fill the array estados with the list of states.
 	private ArrayList<String> preencheEstados(ArrayList<String> estados) {
 		estados.clear();
 
@@ -124,6 +129,7 @@ public abstract class Comparacao extends Activity {
 		return estados;
 	}
 
+	// Refresh the first spinner with new values.
 	private void atualizaValoresSpinner01(String nome) {
 		String estadoSelecionado = estadosSpinner01.getSelectedItem().toString();
 		estados01 = preencheEstados(estados01);
@@ -132,6 +138,7 @@ public abstract class Comparacao extends Activity {
 		estadosSpinner01.setSelection(estados01.indexOf(estadoSelecionado));
 	}
 
+	// Refresh the second spinner with new values.
 	private void atualizaValoresSpinner02(String nome) {
 		String estadoSelecionado = estadosSpinner.getSelectedItem().toString();
 		estados02 = preencheEstados(estados02);
@@ -142,6 +149,7 @@ public abstract class Comparacao extends Activity {
 
 	public abstract void clickBotaoComparacaoEstados(View view);
 	
+	// Implements the action of button to start comparation.
 	public void clickBotaoSobreCompara(View view) {
 		Intent intent = new Intent(this, TelaSobreConsulta.class);
 		startActivity(intent);
