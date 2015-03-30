@@ -13,22 +13,20 @@ import android.widget.TextView;
 
 public class EstadoAdapter extends BaseAdapter{
 
-	String estados[] = {"Acre", "Alagoas", "Amapá", "Amazonas", "Bahia", 
-			"Ceará", "Distrito Federal","Espírito Santo","Goiás", "Maranhão",
-			"Mato Grosso", "Mato Grosso do Sul", "Minas Gerais", "Pará", "Paraiba",
-			"Paraná", "Pernambuco", "Piauí", "Rio de Janeiro", "Rio Grande do Norte",
-			"Rio Grande do Sul", "Rondônia", "Rorâima", "Santa Catarina", "São Paulo",
-			"Sergipe", "Tocantins"};
+	String estados[] = {"Acre", "Alagoas", "Amapá", "Amazonas", "Bahia", "Ceará",
+		"Distrito Federal","Espírito Santo","Goiás", "Maranhão", "Mato Grosso", 
+		"Mato Grosso do Sul", "Minas Gerais", "Pará", "Paraiba", "Paraná", "Pernambuco", "Piauí", 
+		"Rio de Janeiro", "Rio Grande do Norte", "Rio Grande do Sul", "Rondônia", "Rorâima", 
+		"Santa Catarina", "São Paulo", "Sergipe", "Tocantins"};
 	
 	String siglas[] = {"AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", 
-			"PA", "PB", "PR", "PE",	"PI", "RJ", "RN","RS", "RO", "RR", "SC", "SP", "SE", "TO" };
+		"PA", "PB", "PR", "PE",	"PI", "RJ", "RN","RS", "RO", "RR", "SC", "SP", "SE", "TO" };
 	
-	String bandeiras[] = {"acre", "alagoas", "amapa", "amazonas", "bahia", 
-			"ceara", "distritofederal", "espiritosanto", "goias", "maranhao",
-			"matogrosso", "matogrossodosul", "minasgerais", "para", "paraiba",
-			"parana", "pernambuco", "piaui", "riodejaneiro", "riograndedonorte",
-			"riograndedosul", "rondonia", "roraima", "santacatarina", "saopaulo",
-			"sergipe", "tocantins"};
+	String bandeiras[] = {"acre", "alagoas", "amapa", "amazonas", "bahia", "ceara", 
+		"distritofederal", "espiritosanto", "goias", "maranhao", "matogrosso", "matogrossodosul", 
+		"minasgerais", "para", "paraiba", "parana", "pernambuco", "piaui", "riodejaneiro", 
+		"riograndedonorte", "riograndedosul", "rondonia", "roraima", "santacatarina", "saopaulo", 
+		"sergipe", "tocantins"};
 	
 	private LayoutInflater mInflater;
 	private ViewHolder holder;
@@ -84,11 +82,11 @@ public class EstadoAdapter extends BaseAdapter{
 				
 		holder.tvNome.setText(estados[position]);
 		holder.tvSigla.setText(siglas[position]);
-		int idBandeira = context.getResources().getIdentifier(bandeiras[position], "drawable", context.getPackageName());
+		int idBandeira = context.getResources().getIdentifier(bandeiras[position], "drawable", 
+			context.getPackageName());
 		holder.tvBandeiras.setImageResource(idBandeira);
 		convertView.setTag(holder);
 		
 		return convertView;
 	}
-
 }
