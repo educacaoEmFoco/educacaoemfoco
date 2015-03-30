@@ -20,8 +20,7 @@ import android.util.Xml;
 public class FeedParser extends DefaultHandler {
 
 	public Feed parse(InputStream is) {
-
-		// Declaration of each element tag that we want to treat
+		// Declaration of each element tag that we want to treat.
 		RootElement root = new RootElement("rss");
 		Element chanElement = root.getChild("channel");
 
@@ -42,30 +41,28 @@ public class FeedParser extends DefaultHandler {
 			}
 		});
 
-		// when the 'item' element is opened
+		// When the 'item' element is opened.
 		chanItem.setStartElementListener(new StartElementListener() {
 			public void start(Attributes attributes) {
 				FeedParseControle.getInstance().criaNovoItem();
 			}
 		});
 
-		// When the 'item' element is closed
+		// When the 'item' element is closed.
 		chanItem.setEndElementListener(new EndElementListener() {
 			public void end() {
 				FeedParseControle.getInstance().adicionaItem();
 			}
 		});
 
-		// When the 'title' element (inside 'item') is closed, we can get the
-		// text
+		// When the 'title' element (inside 'item') is closed, we can get the 
 		itemTitle.setEndTextElementListener(new EndTextElementListener() {
 			public void end(String body) {
 				FeedParseControle.getInstance().getItem().setTitle(body);
 			}
 		});
 
-		// When the 'description' element (inside 'item') is closed, we can get
-		// the text
+		// When the 'description' element (inside 'item') is closed, we can get the text.
 		itemDescription.setEndTextElementListener(new EndTextElementListener() {
 			@Override
 			public void end(String body) {
@@ -73,8 +70,7 @@ public class FeedParser extends DefaultHandler {
 			}
 		});
 
-		// When the 'category' element (inside 'item') is closed, we can get the
-		// text
+		// When the 'category' element (inside 'item') is closed, we can get the text.
 		itemCategory.setEndTextElementListener(new EndTextElementListener() {
 			@Override
 			public void end(String body) {
@@ -82,8 +78,7 @@ public class FeedParser extends DefaultHandler {
 			}
 		});
 
-		// When the 'pubDate' element (inside 'item') is closed, we can get the
-		// text
+		// When the 'pubDate' element (inside 'item') is closed, we can get the text.
 		itemPubDate.setEndTextElementListener(new EndTextElementListener() {
 			@Override
 			public void end(String body) {
@@ -91,8 +86,7 @@ public class FeedParser extends DefaultHandler {
 			}
 		});
 
-		// When the 'link' element (inside 'item') is closed, we can get the
-		// text
+		// When the 'link' element (inside 'item') is closed, we can get the text.
 		itemLink.setEndTextElementListener(new EndTextElementListener() {
 			@Override
 			public void end(String body) {
@@ -100,8 +94,7 @@ public class FeedParser extends DefaultHandler {
 			}
 		});
 
-		// Finally, we parse the xml file (through the InputStream) and return
-		// it
+		// Finally, we parse the xml file (through the InputStream) and return it.
 		try {
 			Xml.parse(is, Xml.Encoding.UTF_8, root.getContentHandler());
 			return FeedParseControle.getInstance().getFeed();

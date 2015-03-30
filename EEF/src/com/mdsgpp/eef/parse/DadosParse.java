@@ -19,23 +19,23 @@ public class DadosParse {
 	private String nomeIndicador;
 	private int linhas = 2;
 
-	String estados[][] = { { "Acre", "Acre" }, { "Alagoas", "Alagoas" },
-			{ "Amapá", "Amapa" }, { "Amazonas", "Amazonas" },
-			{ "Bahia", "Bahia" }, { "Ceará", "Ceara" },
-			{ "Distrito Federal", "Distrito Federal" },
-			{ "Espírito Santo", "Espirito Santo" }, { "Goiás", "Goias" },
-			{ "Maranhão", "Maranhao" }, { "Mato Grosso", "Mato Grosso" },
-			{ "Mato Grosso do Sul", "Mato Grosso do Sul" },
-			{ "Minas Gerais", "Minas Gerais" }, { "Pará", "Para" },
-			{ "Paraíba", "Paraiba" }, { "Paraná", "Parana" },
-			{ "Pernambuco", "Pernambuco" }, { "Piauí", "Piaui" },
-			{ "Rio de Janeiro", "Rio de Janeiro" },
-			{ "Rio Grande do Norte", "Rio Grande do Norte" },
-			{ "Rio Grande do Sul", "Rio Grande do Sul" },
-			{ "Rondônia", "Rondonia" }, { "Roraima", "Roraima" },
-			{ "Santa Catarina", "Santa Catarina" },
-			{ "São Paulo", "Sao Paulo" }, { "Sergipe", "Sergipe" },
-			{ "Tocantins", "Tocantins" } };
+	String estados[][] = { {"Acre", "Acre"}, {"Alagoas", "Alagoas"},
+			{"Amapï¿½", "Amapa"}, {"Amazonas", "Amazonas"},
+			{"Bahia", "Bahia"}, {"Cearï¿½", "Ceara"},
+			{"Distrito Federal", "Distrito Federal"},
+			{"Espï¿½rito Santo", "Espirito Santo"}, {"Goiï¿½s", "Goias"},
+			{"Maranhï¿½o", "Maranhao"}, {"Mato Grosso", "Mato Grosso"},
+			{"Mato Grosso do Sul", "Mato Grosso do Sul"},
+			{"Minas Gerais", "Minas Gerais"}, {"Parï¿½", "Para"},
+			{"Paraï¿½ba", "Paraiba"}, {"Paranï¿½", "Parana"},
+			{"Pernambuco", "Pernambuco"}, {"Piauï¿½", "Piaui"},
+			{"Rio de Janeiro", "Rio de Janeiro"},
+			{"Rio Grande do Norte", "Rio Grande do Norte"},
+			{"Rio Grande do Sul", "Rio Grande do Sul"},
+			{"Rondï¿½nia", "Rondonia"}, {"Roraima", "Roraima"},
+			{"Santa Catarina", "Santa Catarina"},
+			{"Sï¿½o Paulo", "Sao Paulo"}, {"Sergipe", "Sergipe"},
+			{"Tocantins", "Tocantins"} };
 
 	public DadosParse(Context context) {
 		this.context = context;
@@ -70,7 +70,7 @@ public class DadosParse {
 		this.dados = new ArrayList<String[]>(); 
 	}
 
-	// Método resposavel por mandar o nome e a sigla através do mesmo hashmap ds indicativos
+	// Mï¿½todo resposavel por mandar o nome e a sigla atravï¿½s do mesmo hashmap ds indicativos
 	public void insereNomeSigla(String nome, String sigla) {
 		ArrayList<String[]> container = new ArrayList<String[]>();
 		String nomeEsigla[] = new String[2];
@@ -94,7 +94,8 @@ public class DadosParse {
 			
 			if (linha.isEmpty()) {
 				aux++;
-			} else {
+			} 
+			else {
 				dados.add(linha.split(": "));
 			}
 
@@ -104,11 +105,13 @@ public class DadosParse {
 				nomeIndicador = br.readLine();
 				limpaDados();
 			}
+			else {
+				// Do nothing.
+			}
 			
 			linha = br.readLine();
 		}
 
 		br.close();
 	}
-
 }

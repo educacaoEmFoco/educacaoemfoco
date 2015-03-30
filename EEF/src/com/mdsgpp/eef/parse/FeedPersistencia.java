@@ -24,6 +24,9 @@ public class FeedPersistencia {
 		if (instancia == null) {
 			instancia = new FeedPersistencia(context);
 		}
+		else {
+			// Do nothing.
+		}
 		return instancia;
 	}
 	
@@ -36,9 +39,7 @@ public class FeedPersistencia {
 	}
 
 	public Feed readFeedFile() throws IOException, ClassNotFoundException {
-
 		Feed feed;
-
 
 		FileInputStream filein = context.openFileInput(FILENAME);
 		ObjectInputStream in = new ObjectInputStream(filein);
@@ -48,5 +49,4 @@ public class FeedPersistencia {
 
 		return feed;
 	}
-
 }

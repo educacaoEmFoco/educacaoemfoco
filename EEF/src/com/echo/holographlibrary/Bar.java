@@ -27,6 +27,7 @@ import android.graphics.Path;
 import android.graphics.Region;
 
 public class Bar {
+	
 	private int mColor = 0;
 	private String mName = null;
 	private String mValueString = null;
