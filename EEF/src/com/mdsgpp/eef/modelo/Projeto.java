@@ -4,7 +4,6 @@ public class Projeto {
 	private int quantidade;
 	private double valor;
 	private Estado estado;
-	// ano
 	private int ano;
 	
 	public Projeto() {
@@ -33,9 +32,11 @@ public class Projeto {
 	public void setEstado(Estado estado) {
 		this.estado = estado;
 	}
+	
 	public int getAno(){
 		return ano;
 	}
+	
 	public void setAno(int ano){
 		this.ano = ano;
 	}
