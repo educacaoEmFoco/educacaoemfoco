@@ -26,7 +26,8 @@ public class Estado {
 	public Estado(){
 	}
 	
-	public Estado(String nome, String sigla, HashMap<String, ArrayList<String[]>> informacoes){
+	public Estado(String nome, String sigla, HashMap<String,
+			ArrayList<String[]>> informacoes) {
 		this.nome = nome;
 		this.sigla = sigla;
 		
@@ -52,22 +53,27 @@ public class Estado {
 		dadosEjaFundamental = informacoes.get("censo_eja_fundamental");
 		
 		censo = new Censo[dadosMedio.size()];
-		for (int i=0; i<censo.length; i++) {
+		for(int i=0; i<censo.length; i++) {
 			censo[i] = new Censo();
 			censo[i].setEstado(this); 
 			censo[i].setAno(Integer.parseInt(dadosMedio.get(i)[0]));
-			censo[i].setAnosFinaisFundamental(Double.parseDouble(dadosFundamentalFinais.get(i)[1].replaceAll("\\.", "")));
-			censo[i].setEnsinoMedio(Double.parseDouble(dadosMedio.get(i)[1].replaceAll("\\.", "")));
-			censo[i].setAnosIniciaisFundamental(Double.parseDouble(dadosFundamentalIniciais.get(i)[1].replaceAll("\\.", "")));
-			censo[i].setMedioEJA(Double.parseDouble(dadosEjaMedio.get(i)[1].replaceAll("\\.", "")));
-			censo[i].setFundamentalEJA(Double.parseDouble(dadosEjaFundamental.get(i)[1].replaceAll("\\.", "")));
+			censo[i].setAnosFinaisFundamental(Double.parseDouble
+				(dadosFundamentalFinais.get(i)[1].replaceAll("\\.", "")));
+			censo[i].setEnsinoMedio(Double.parseDouble
+				(dadosMedio.get(i)[1].replaceAll("\\.", "")));
+			censo[i].setAnosIniciaisFundamental(Double.parseDouble
+				(dadosFundamentalIniciais.get(i)[1].replaceAll("\\.", "")));
+			censo[i].setMedioEJA(Double.parseDouble
+				(dadosEjaMedio.get(i)[1].replaceAll("\\.", "")));
+			censo[i].setFundamentalEJA(Double.parseDouble
+				(dadosEjaFundamental.get(i)[1].replaceAll("\\.", "")));
 		}
 		
 		this.censos = censo;
 	}
 	
 	public double[] getParticipacaoPercentualPIB() {
-		if (participacaoPercentualPIB == null) {
+		if(participacaoPercentualPIB == null) {
 			double[] vazio = {0};
 			return vazio;
 		}
@@ -75,14 +81,16 @@ public class Estado {
 		return participacaoPercentualPIB;
 	}
 	
-	public void setParticipacaoPercentualPIB(HashMap<String, ArrayList<String[]>> informacoes) {
+	public void setParticipacaoPercentualPIB(HashMap<String,
+		ArrayList<String[]>> informacoes) {
 		
 		double participacaoPercentual[];
 		ArrayList<String[]> dados = informacoes.get("participacao_estadual_pib");
 			
 		participacaoPercentual = new double[dados.size()];
-		for (int i=0; i<dados.size(); i++) {
-			participacaoPercentual[i] = Double.parseDouble(dados.get(i)[1].replaceAll(",", "."));
+		for(int i=0; i<dados.size(); i++) {
+			participacaoPercentual[i] = Double.parseDouble
+				(dados.get(i)[1].replaceAll(",", "."));
 		}
 			
 		this.participacaoPercentualPIB = participacaoPercentual;
@@ -104,6 +112,9 @@ public class Estado {
 			Ideb vazio[] = { new Ideb(0,0,0) };
 			return vazio;
 		}
+		else {
+			// Do nothing.
+		}
 		
 		return idebs;
 	}
@@ -119,15 +130,22 @@ public class Estado {
 		dadosMedio = informacoes.get("ensino_medio");
 		
 		ideb = new Ideb[dadosMedio.size()];
-		for (int i=0; i<ideb.length; i++) {
+		for(int i=0; i<ideb.length; i++) {
 			ideb[i] = new Ideb();
 			ideb[i].setEstado(this); 
-			if(i<ideb.length-1){
+			if(i<ideb.length-1) {
 				ideb[i].setAno(Integer.parseInt(dadosMedio.get(i)[0]));
 			}
-			ideb[i].setFundamental(Double.parseDouble(dadosFundamentalFinais.get(i)[1].replaceAll(",", ".")));
-			ideb[i].setMedio(Double.parseDouble(dadosMedio.get(i)[1].replaceAll(",", ".")));
-			ideb[i].setSeriesIniciais(Double.parseDouble(dadosFundamentalIniciais.get(i)[1].replaceAll(",", ".")));
+			else {
+				// Do nothing.
+			}
+			
+			ideb[i].setFundamental(Double.parseDouble
+				(dadosFundamentalFinais.get(i)[1].replaceAll(",", ".")));
+			ideb[i].setMedio(Double.parseDouble
+				(dadosMedio.get(i)[1].replaceAll(",", ".")));
+			ideb[i].setSeriesIniciais(Double.parseDouble
+				(dadosFundamentalIniciais.get(i)[1].replaceAll(",", ".")));
 		}
 		
 		this.idebs = ideb;
@@ -140,7 +158,8 @@ public class Estado {
 		return vazio;
 	}
 	
-	public Media[] setMedia(HashMap<String, ArrayList<String[]>> informacoes, String[] nomesIndicativo) {
+	public Media[] setMedia(HashMap<String, ArrayList<String[]>> informacoes,
+		String[] nomesIndicativo) {
 		ArrayList<String[]> dadosFundamental;
 		ArrayList<String[]> dadosMedio;
 		Media mediaLida[] = null;
@@ -149,7 +168,7 @@ public class Estado {
 		dadosMedio = informacoes.get(nomesIndicativo[1]);
 		
 		mediaLida = new Media[dadosMedio.size()];
-		for (int i=0; i<mediaLida.length; i++) {
+		for(int i=0; i<mediaLida.length; i++) {
 			mediaLida[i] = new Media();
 			mediaLida[i].setEstado(this); 
 			mediaLida[i].setAno(Integer.parseInt(dadosMedio.get(i)[0]));
@@ -161,43 +180,47 @@ public class Estado {
 	}
 	
 	public Media[] getMediaAlunosPorTurma() {
-		if (mediaAlunosPorTurma == null) {
+		if(mediaAlunosPorTurma == null) {
 			return retornaMediaVazia();
 		}
 		
 		return mediaAlunosPorTurma;
 	}
 
-	public void setMediaAlunosPorTurma(HashMap<String, ArrayList<String[]>> informacoes, String[] nomesIndicativo) {
+	public void setMediaAlunosPorTurma(HashMap<String,
+		ArrayList<String[]>> informacoes, String[] nomesIndicativo) {
 		this.mediaAlunosPorTurma = this.setMedia(informacoes, nomesIndicativo);
 	}
 
 	public Media[] getMediaHorasAula() {
-		if (mediaHorasAula == null) {
+		if(mediaHorasAula == null) {
 			return retornaMediaVazia();
 		}
 		
 		return mediaHorasAula;
 	}
 
-	public void setMediaHorasAula(HashMap<String, ArrayList<String[]>> informacoes, String[] nomesIndicativo) {
+	public void setMediaHorasAula(HashMap<String,
+		ArrayList<String[]>> informacoes, String[] nomesIndicativo) {
 		this.mediaHorasAula = this.setMedia(informacoes, nomesIndicativo);
 	}
 
 	public Media[] getTaxaDistorcaoIdadeSerie() {
-		if (taxaDistorcaoIdadeSerie == null) {
+		if(taxaDistorcaoIdadeSerie == null) {
 			return retornaMediaVazia();
 		}
 		
 		return taxaDistorcaoIdadeSerie;
 	}
 
-	public void setTaxaDistorcaoIdadeSerie(HashMap<String, ArrayList<String[]>> informacoes, String[] nomesIndicativo) {
-		this.taxaDistorcaoIdadeSerie = this.setMedia(informacoes, nomesIndicativo);
+	public void setTaxaDistorcaoIdadeSerie(HashMap<String,
+		ArrayList<String[]>> informacoes, String[] nomesIndicativo) {
+		this.taxaDistorcaoIdadeSerie = this.setMedia(informacoes,
+			nomesIndicativo);
 	}
 
 	public String getNome() {
-		if (nome == null) {
+		if(nome == null) {
 			return "Sem nome";
 		}
 		
@@ -209,8 +232,11 @@ public class Estado {
 	}
 
 	public String getSigla() {
-		if (sigla == null) {
+		if(sigla == null) {
 			return "Sem sigla";
+		}
+		else {
+			// Do nothing.
 		}
 		
 		return sigla;
@@ -229,24 +255,32 @@ public class Estado {
 		return vazio;
 	}
 	
-	public Projeto[] setProjetos(HashMap<String, ArrayList<String[]>> informacoes, String[] nomesIndicativo) {
+	public Projeto[] setProjetos(HashMap<String,
+		ArrayList<String[]>> informacoes, String[] nomesIndicativo) {
 		ArrayList<String[]> dadosValoresInvestidos = null;
 		ArrayList<String[]> dadosQtdProjetos = null;
 		Projeto projetosLido[] = null;
 		
-		if(informacoes.containsKey(nomesIndicativo[0])){
+		if(informacoes.containsKey(nomesIndicativo[0])) {
 			dadosQtdProjetos = informacoes.get(nomesIndicativo[0]);
 			projetosLido = new Projeto[dadosQtdProjetos.size()];
 			dadosValoresInvestidos = informacoes.get(nomesIndicativo[1]);
 			
 		}
+		else {
+			// Do nothing.
+		}
 		
-		for (int i=0; projetosLido!=null && i<projetosLido.length; i++) { 
+		for(int i=0; projetosLido!=null && i<projetosLido.length; i++) { 
 			projetosLido[i] = new Projeto();
 			projetosLido[i].setEstado(this);
-			if(i<projetosLido.length-1){
+			if(i<projetosLido.length-1) {
 				projetosLido[i].setAno(Integer.parseInt(dadosQtdProjetos.get(i)[0]));
 			}
+			else {
+				// Do nothing.
+			}
+			
 			projetosLido[i].setQuantidade(Integer.parseInt(dadosQtdProjetos.get(i)[1].replaceAll(",", ".")));
 			projetosLido[i].setValor(Double.parseDouble(dadosValoresInvestidos.get(i)[1].replaceAll(",", ".")));
 		}
@@ -255,100 +289,136 @@ public class Estado {
 	}
 	
 	public Projeto[] getProjetosCienciaTecnologia() {
-		if(projetosCienciaTecnologia == null){
+		if(projetosCienciaTecnologia == null) {
 			return retornaProjetoVazio();
+		}
+		else {
+			// Do nothing.
 		}
 		
 		return projetosCienciaTecnologia;
 	}
 
-	public void setProjetosCienciaTecnologia(HashMap<String, ArrayList<String[]>> informacoes, String[] nomesIndicativo) {
-		this.projetosCienciaTecnologia = this.setProjetos(informacoes, nomesIndicativo);
+	public void setProjetosCienciaTecnologia(HashMap<String,
+		ArrayList<String[]>> informacoes, String[] nomesIndicativo) {
+		this.projetosCienciaTecnologia = this.setProjetos(informacoes,
+			nomesIndicativo);
 	}
 	
 	public Projeto[] getPrimeirosProjetos() {
-		if (primeirosProjetos == null) {
+		if(primeirosProjetos == null) {
 			return retornaProjetoVazio();
 		}
 		
 		return primeirosProjetos;
 	}
 
-	public void setPrimeirosProjetos(HashMap<String, ArrayList<String[]>> informacoes, String[] nomesIndicativo) {
+	public void setPrimeirosProjetos(HashMap<String,
+		ArrayList<String[]>> informacoes, String[] nomesIndicativo) {
 		this.primeirosProjetos = this.setProjetos(informacoes, nomesIndicativo);
 	}
 
 	public Projeto[] getProjetosInct() {
-		if (projetoInct == null) {
+		if(projetoInct == null) {
 			return retornaProjetoVazio();
 		}
 		
 		return projetoInct;
 	}
 
-	public void setProjetosInct(HashMap<String, ArrayList<String[]>> informacoes, String[] nomesIndicativo) {
+	public void setProjetosInct(HashMap<String,
+		ArrayList<String[]>> informacoes, String[] nomesIndicativo) {
 		this.projetoInct = this.setProjetos(informacoes, nomesIndicativo);
 	}
 
 	public Projeto[] getProjetosApoioCnpq() {
-		if (projetosApoioCnpq == null) {
+		if(projetosApoioCnpq == null) {
 			return retornaProjetoVazio();
+		}
+		else {
+			// Do nothing.
 		}
 		
 		return projetosApoioCnpq;
 	}
 
-	public void setProjetosApoioCnpq(HashMap<String, ArrayList<String[]>> informacoes, String[] nomesIndicativo) {
+	public void setProjetosApoioCnpq(HashMap<String,
+		ArrayList<String[]>> informacoes, String[] nomesIndicativo) {
 		this.projetosApoioCnpq = this.setProjetos(informacoes, nomesIndicativo);
 	}
 
 	public Projeto[] getProjetoJovensPesquisadores() {
-		if (projetoJovensPesquisadores == null) {
+		if(projetoJovensPesquisadores == null) {
 			return retornaProjetoVazio();
+		}
+		else {
+			// Do nothing.
 		}
 		
 		return projetoJovensPesquisadores;
 	}
 
-	public void setProjetoJovensPesquisadores(HashMap<String, ArrayList<String[]>> informacoes, String[] nomesIndicativo) {
-		this.projetoJovensPesquisadores = this.setProjetos(informacoes, nomesIndicativo);
+	public void setProjetoJovensPesquisadores(HashMap<String,
+		ArrayList<String[]>> informacoes, String[] nomesIndicativo) {
+		this.projetoJovensPesquisadores = this.setProjetos(informacoes,
+			nomesIndicativo);
 	}
 
 	public Media[] getTaxaDeAproveitamento() {
-		if (taxaDeAproveitamento == null) {
+		if(taxaDeAproveitamento == null) {
 			return retornaMediaVazia();
+		}
+		else {
+			// Do nothing.
 		}
 		
 		return taxaDeAproveitamento;
 	}
 
-	public void setTaxaDeAproveitamento(HashMap<String, ArrayList<String[]>> informacoes, String[] nomesIndicativo) {
+	public void setTaxaDeAproveitamento(HashMap<String,
+		ArrayList<String[]>> informacoes, String[] nomesIndicativo) {
 		this.taxaDeAproveitamento = this.setMedia(informacoes, nomesIndicativo);
 	}
 
 	public Media[] getTaxaDeAbandono() {
-		if (taxaDeAbandono == null) {
+		if(taxaDeAbandono == null) {
 			return retornaMediaVazia();
+		}
+		else {
+			// Do nothing.
 		}
 		
 		return taxaDeAbandono;
 	}
 
-	public void setTaxaDeAbandono(HashMap<String, ArrayList<String[]>> informacoes, String[] nomesIndicativo) {
+	public void setTaxaDeAbandono(HashMap<String,
+		ArrayList<String[]>> informacoes, String[] nomesIndicativo) {
 		this.taxaDeAbandono = this.setMedia(informacoes, nomesIndicativo);
 	}
 
-	public void preencheDados(HashMap<String, ArrayList<String[]>> informacoes) {
-		String[] indicativosMediaHorasAula = { "horas_aula_ensino_fundamental", "horas_aula_ensino_medio" };
-		String[] indicativosMediaAlunosPorTurma = { "alunos_por_turma_ensino_fundamental", "alunos_por_turma_ensino_medio" };
-		String[] indicativosProjetosCienciaTecnologia = { "numero_projetos", "valor_investido" };
-		String[] indicativosPrimeirosProjetos = { "programa_primeiros_projetos", "valores_programa_primeiros_projetos" };
-		String[] indicativosApoioCnpq = { "projetos_apoio_pesquisa_cnpq", "valores_projetos_apoio_pesquisa_cnpq" };
-		String[] indicativosJovensPesquisadores = { "jovens_pesquisadores", "valores_jovens_pesquisadores" };
-		String[] indicativosProjetosInct = { "projetos_inct", "valores_projetos_inct" };
-		String[] taxaDistorcaoIdadeSerie = { "taxa_distorcao_fundamental", "taxa_distorcao_ensino_medio" };
-		String[] taxaDeAproveitamento = { "taxa_aprovacao_fundamental", "taxa_aprovacao_medio" };
-		String[] taxaDeAbandono = { "taxa_abandono_fundamental", "taxa_abandono_medio" };
+	public void preencheDados(HashMap<String,
+		ArrayList<String[]>> informacoes) {
+		String[] indicativosMediaHorasAula = { "horas_aula_ensino_fundamental",
+			"horas_aula_ensino_medio" };
+		String[] indicativosMediaAlunosPorTurma = {
+			"alunos_por_turma_ensino_fundamental",
+			"alunos_por_turma_ensino_medio" };
+		String[] indicativosProjetosCienciaTecnologia = { "numero_projetos",
+			"valor_investido" };
+		String[] indicativosPrimeirosProjetos = { "programa_primeiros_projetos",
+			"valores_programa_primeiros_projetos" };
+		String[] indicativosApoioCnpq = { "projetos_apoio_pesquisa_cnpq",
+			"valores_projetos_apoio_pesquisa_cnpq" };
+		String[] indicativosJovensPesquisadores = { "jovens_pesquisadores",
+			"valores_jovens_pesquisadores" };
+		String[] indicativosProjetosInct = { "projetos_inct",
+			"valores_projetos_inct" };
+		String[] taxaDistorcaoIdadeSerie = { "taxa_distorcao_fundamental",
+			"taxa_distorcao_ensino_medio" };
+		String[] taxaDeAproveitamento = { "taxa_aprovacao_fundamental",
+			"taxa_aprovacao_medio" };
+		String[] taxaDeAbandono = { "taxa_abandono_fundamental",
+			"taxa_abandono_medio" };
 		
 		this.setPopulacao(informacoes);
 		this.setCensos(informacoes);
@@ -356,10 +426,12 @@ public class Estado {
 		this.setParticipacaoPercentualPIB(informacoes);
 				
 		this.setProjetosInct(informacoes, indicativosProjetosInct);
-		this.setProjetoJovensPesquisadores(informacoes, indicativosJovensPesquisadores);
+		this.setProjetoJovensPesquisadores(informacoes,
+			indicativosJovensPesquisadores);
 		this.setProjetosApoioCnpq(informacoes, indicativosApoioCnpq);
 		this.setPrimeirosProjetos(informacoes, indicativosPrimeirosProjetos);
-		this.setProjetosCienciaTecnologia(informacoes, indicativosProjetosCienciaTecnologia);
+		this.setProjetosCienciaTecnologia(informacoes,
+			indicativosProjetosCienciaTecnologia);
 		
 		this.setMediaAlunosPorTurma(informacoes, indicativosMediaAlunosPorTurma);
 		this.setMediaHorasAula(informacoes, indicativosMediaHorasAula);

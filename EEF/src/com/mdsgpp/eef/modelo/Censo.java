@@ -14,7 +14,7 @@ public class Censo {
 	}
 
 	public Censo(double anosIniciaisFundamental, double anosFinaisFundamental,
-			     double ensinoMedio, double fundamentalEJA, double medioEJA){
+			     double ensinoMedio, double fundamentalEJA, double medioEJA) {
 
 		this.anosIniciaisFundamental = anosIniciaisFundamental;
 		this.anosFinaisFundamental = anosFinaisFundamental;

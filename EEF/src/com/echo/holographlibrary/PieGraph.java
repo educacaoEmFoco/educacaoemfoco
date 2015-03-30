@@ -82,6 +82,7 @@ public class PieGraph extends View {
 		else {
 			radius = midY;
 		}
+		
 		radius -= padding;
 		innerRadius = radius - thickness;
 		
@@ -135,6 +136,9 @@ public class PieGraph extends View {
 				canvas.drawPath(path, paint);
 				paint.setAlpha(255);
 			}
+			else {
+				// Do nothing.
+			}
 			
 			currentAngle = currentAngle + currentSweep;
 			
@@ -165,15 +169,23 @@ public class PieGraph extends View {
 	    			if(indexSelected > -1) {
 		    			listener.onClick(indexSelected);
 	    			}
+	    			else {
+	    				// Do nothing.
+	    			}
 	    			
 	    			indexSelected = -1;
+	    		}
+	    		else {
+	    			// Do nothing.
 	    		}
 	    		
 	    	}
 	    	else if(event.getAction() == MotionEvent.ACTION_CANCEL) {
 	    		indexSelected = -1;
 	    	}
-	    	
+	    	else {
+	    		// Do nothing.
+	    	}
 		    count++;
 	    }
 	    
@@ -181,6 +193,9 @@ public class PieGraph extends View {
 	    	event.getAction() == MotionEvent.ACTION_UP ||
 	    	event.getAction() == MotionEvent.ACTION_CANCEL) {
 	    	postInvalidate();
+	    }
+	    else {
+	    	// Do nothing.
 	    }
 
 	    return true;
