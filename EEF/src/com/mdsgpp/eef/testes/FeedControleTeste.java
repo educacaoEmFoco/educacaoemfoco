@@ -8,8 +8,7 @@ import com.mdsgpp.eef.visao.TelaFeed;
 
 import android.test.ActivityInstrumentationTestCase2;
 
-public class FeedControleTeste extends
-		ActivityInstrumentationTestCase2<TelaFeed> {
+public class FeedControleTeste extends ActivityInstrumentationTestCase2<TelaFeed> {
 
 	private final String FEED_ADDRESS = "http://noticias.gov.br/noticias/rss?id=AFSZW";
 	private FeedControle task1, task2;
@@ -44,6 +43,5 @@ public class FeedControleTeste extends
 		});
 
 		signal.await(30, TimeUnit.SECONDS);
-
 	}
 }
