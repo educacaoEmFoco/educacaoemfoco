@@ -11,7 +11,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class EstadoAdapter extends BaseAdapter{
+public class EstadoAdapter extends BaseAdapter {
 
 	String estados[] = {"Acre", "Alagoas", "Amapá", "Amazonas", "Bahia", "Ceará",
 		"Distrito Federal","Espírito Santo","Goiás", "Maranhão", "Mato Grosso", 
@@ -60,7 +60,7 @@ public class EstadoAdapter extends BaseAdapter{
 
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
-		// Infla o layout, e pega os views jogando no holder para economizar processamento
+		// Inflate layout, and get the view to put into the holder.
 		if (convertView == null) {
 			convertView = mInflater.inflate(R.layout.listview_item , null);
 			holder = new ViewHolder();
@@ -69,14 +69,16 @@ public class EstadoAdapter extends BaseAdapter{
 			holder.tvSigla = (TextView) convertView.findViewById(R.id.textview_lista_siglas);
 			
 			holder.tvBandeiras = (ImageView) convertView.findViewById(R.id.imageView_bandeiras);
-			if(holder.tvBandeiras==null)
+			if(holder.tvBandeiras==null) {
 				Log.i(null, "nulo");
+			}
 			else{
 				Log.i(null, "não nulo");
 			}
 
-		} else {
-			// pega do holder se tudo já tiver sido iniciado
+		} 
+		else {
+			// Get the holder if everything already got initialized.
 			holder = (ViewHolder) convertView.getTag();
 		}
 				
