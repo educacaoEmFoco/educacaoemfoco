@@ -14,7 +14,6 @@ public class CensoTeste extends AndroidTestCase {
 		ensinoMedio, fundamentalEJA, medioEJA;
 	private int ano;
 	
-	
 	public void setUp() throws Exception {
 		this.censo = new Censo();
 		this.estado = new Estado();
@@ -27,8 +26,8 @@ public class CensoTeste extends AndroidTestCase {
 		this.ano = 2005;
 	}
 
-	
 	public void tearDown() throws Exception {
+		// Do nothing.
 	}
 	
 	

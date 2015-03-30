@@ -40,6 +40,5 @@ public class testeUI extends UiAutomatorTestCase {
 		
 		txtViewSigla = new UiObject(new UiSelector().className("android.widget.TextView").index(1));
 		assertEquals("MT", txtViewSigla.getText());
-		
 	}
 }
