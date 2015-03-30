@@ -185,27 +185,21 @@ public class ParseControleTeste extends AndroidTestCase{
 		dados13.add("2010: 216,510000000009".split(": "));
 		dados13.add("Total: 1905,13000000053".split(": "));
 		informacoes.put(indicadores[12], dados13);
-		
 	}
-
 	
 	public void tearDown() throws Exception {
+		// Do nothing.
 	}
-
 	
 	public void testInstancia() {
 		assertNotNull(parseControle);
 	}
-
 	
 	public void testarSingleton(){
 		assertNotNull(ParseControle.getInstancia(context));
 	}
 	
-
-	
 	public void testarInformacoesParse(){
-		
 		HashMap<String, ArrayList<String[]>> estado;
 		estado = null;
 		try {
@@ -241,6 +235,5 @@ public class ParseControleTeste extends AndroidTestCase{
 		assertEquals("55,4400000000023", estado.get("valores_programa_primeiros_projetos").get(0)[1]);
 		
 		assertEquals("22", estado.get("valores_projetos_apoio_pesquisa_cnpq").get(0)[1]);
-		
 	}
 }

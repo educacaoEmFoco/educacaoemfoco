@@ -13,7 +13,6 @@ public class MediaTeste extends AndroidTestCase {
 	private double ensinoFundamental, ensinoMedio;
 	private int ano;
 	
-	
 	public void setUp() throws Exception {
 		this.media = new Media();
 		this.estado = new Estado();
@@ -22,11 +21,10 @@ public class MediaTeste extends AndroidTestCase {
 		this.ensinoMedio = 90.90;
 		this.ano = 2006;
 	}
-
 	
 	public void tearDown() throws Exception {
+		// Do nothing.
 	}
-	
 	
 	public void testAnosFinais() {
 		double anosFinaisAtual;
@@ -37,7 +35,6 @@ public class MediaTeste extends AndroidTestCase {
 		assertEquals(this.ensinoFundamental, anosFinaisAtual, 0.0);
 	}
 	
-	
 	public void testTotalMedio() {
 		double totalMedioAtual;
 		
@@ -46,7 +43,6 @@ public class MediaTeste extends AndroidTestCase {
 		
 		assertEquals(this.ensinoMedio, totalMedioAtual, 0.0);
 	}
-	
 	
 	public void testEstado() {
 		Estado estadoAtual;
@@ -65,5 +61,4 @@ public class MediaTeste extends AndroidTestCase {
 		
 		assertEquals(this.ano, anoAtual);
 	}
-
 }

@@ -13,7 +13,6 @@ public class IdebTeste extends AndroidTestCase {
 	private double seriesIniciais, fundamental, medio;
 	private int ano;
 	
-	
 	public void setUp() throws Exception {
 		this.ideb = new Ideb();
 		this.estado = new Estado();
@@ -23,11 +22,10 @@ public class IdebTeste extends AndroidTestCase {
 		this.medio = 1.9;
 		this.ano = 1990;
 	}
-
 	
 	public void tearDown() throws Exception {
+		// Do nothing.
 	}
-
 	
 	public void testSeriesIniciais() {
 		double seriesIniciasAtual;
@@ -38,7 +36,6 @@ public class IdebTeste extends AndroidTestCase {
 		assertEquals(this.seriesIniciais, seriesIniciasAtual, 0.0);
 	}
 
-
 	public void testFundamental() {
 		double fundamentalAtual;
 		
@@ -48,7 +45,6 @@ public class IdebTeste extends AndroidTestCase {
 		assertEquals(this.fundamental, fundamentalAtual, 0.0);
 	}
 	
-
 	public void testMedio() {
 		double medioAtual;
 		
@@ -58,7 +54,6 @@ public class IdebTeste extends AndroidTestCase {
 		assertEquals(this.medio, medioAtual, 0.0);
 	}
 	
-	
 	public void testEstado() {
 		Estado estadoAtual;
 		
@@ -67,6 +62,7 @@ public class IdebTeste extends AndroidTestCase {
 		
 		assertEquals(this.estado, estadoAtual);
 	}
+	
 	public void testAno() {
 		int anoAtual;
 		
@@ -75,5 +71,4 @@ public class IdebTeste extends AndroidTestCase {
 		
 		assertEquals(this.ano, anoAtual);
 	}
-
 }

@@ -22,10 +22,9 @@ public class ProjetoTeste extends AndroidTestCase {
 		this.ano = 1990;
 	}
 
-
 	public void tearDown() throws Exception {
+		// Do nothing.
 	}
-
 
 	public void testValor() {
 		double valorAtual;
@@ -45,7 +44,6 @@ public class ProjetoTeste extends AndroidTestCase {
 		assertEquals(this.quantidade, quantidadeAtual);
 	}
 	
-	
 	public void testEstado() {
 		Estado estadoAtual;
 		
@@ -62,5 +60,4 @@ public class ProjetoTeste extends AndroidTestCase {
 		
 		assertEquals(this.ano, anoAtual);
 	}
-
 }

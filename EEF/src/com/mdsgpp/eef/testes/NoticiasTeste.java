@@ -15,7 +15,6 @@ public class NoticiasTeste extends AndroidTestCase {
 	private Feed feed;
 	private Noticias noticias;
 	
-	
 	public void setUp(){
 		feed = new Feed();
 		noticias = new Noticias(feed);
@@ -24,49 +23,35 @@ public class NoticiasTeste extends AndroidTestCase {
 		description = "description";
 		link = "link";
 		date = "date";
-		
 	}
-	
-	
 	
 	public void testTitle() {
 		noticias.setTitle(title);
 		assertEquals(title,noticias.getTitle());
-		
 	}
-	
 	
 	public void testCategory() {
 		noticias.setCategory(category);
 		assertEquals(category,noticias.getCategory());
-		
 	}
 	
-
 	public void testDescription() {
 		noticias.setDescription(description);
 		assertEquals(description,noticias.getDescription());
-		
 	}
-	
 	
 	public void testLink() {
 		noticias.setLink(link);
 		assertEquals(link,noticias.getLink());
 		
 	}
-
 	
 	public void testDate() {
 		noticias.setDate(date);
 		assertEquals(date,noticias.getDate());
-		
 	}
-	
 	
 	public void testGetFeed() {
-		
 		assertEquals(feed,noticias.getFeed());
 	}
-
 }

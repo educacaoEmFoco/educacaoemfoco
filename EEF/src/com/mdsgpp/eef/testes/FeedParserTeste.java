@@ -27,5 +27,4 @@ public class FeedParserTeste extends TestCase {
 		stream = new URL("http://www.noticias.gov.br/noticias/rss?id=AFSZW").openStream();
 		assertEquals("Feed", feedParser.parse(stream).getClass().getSimpleName());
 	}
-
 }

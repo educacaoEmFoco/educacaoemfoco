@@ -25,7 +25,6 @@ public class FeedPersistenciaTeste extends AndroidTestCase {
 		noticia.setDescription("Descricao");
 
 		feed.addItem(noticia);
-
 	}
 
 	protected void tearDown() throws Exception {
@@ -41,19 +40,16 @@ public class FeedPersistenciaTeste extends AndroidTestCase {
 	}
 
 	public void testWriteFeedFile() throws IOException, ClassNotFoundException {
-
 		@SuppressWarnings("unused")
 		Feed feedRead;
 
 		FeedPersistencia.getInstance(getContext()).writeFeedFile(feed);
 		feedRead = FeedPersistencia.getInstance(getContext()).readFeedFile();
 
-		assertEquals("Título esperado", "Teste de persistencia", feed.getItem(0).getTitle());
+		assertEquals("Tï¿½tulo esperado", "Teste de persistencia", feed.getItem(0).getTitle());
 		assertEquals("Categoria esperada", "teste", feed.getItem(0).getCategory());
 		assertEquals("Data esperada", "18/02", feed.getItem(0).getDate());
 		assertEquals("Link esperado", "www.noticias.gov", feed.getItem(0).getLink());
 		assertEquals("Descricao esperada", "Descricao", feed.getItem(0).getDescription());
-
 	}
-
 }
