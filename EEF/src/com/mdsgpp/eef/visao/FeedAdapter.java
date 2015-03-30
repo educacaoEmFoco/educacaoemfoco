@@ -1,7 +1,5 @@
 package com.mdsgpp.eef.visao;
 
-
-
 import com.mdsgpp.eef.R;
 import com.mdsgpp.eef.modelo.Feed;
 
@@ -54,8 +52,10 @@ public class FeedAdapter extends BaseAdapter {
 			this.holder = new ViewHolder();
 			
 			this.holder.tvTitle = (TextView) convertView.findViewById(R.id.textView_rss_title);
-			this.holder.tvCategory = (TextView) convertView.findViewById(R.id.textView_rss_category);
-			this.holder.tvDescription = (TextView) convertView.findViewById(R.id.textView_rss_description);
+			this.holder.tvCategory = (TextView) 
+				convertView.findViewById(R.id.textView_rss_category);
+			this.holder.tvDescription = (TextView) 
+				convertView.findViewById(R.id.textView_rss_description);
 			convertView.setTag(this.holder);
 			
 		} else {
@@ -66,10 +66,10 @@ public class FeedAdapter extends BaseAdapter {
 		// Set the text to our TextViews
 		this.holder.tvTitle.setText(this.feed.getItem(position).getTitle());
 		this.holder.tvCategory.setText(this.feed.getItem(position).getCategory());
-		this.holder.tvDescription.setText(Html.fromHtml( this.feed.getItem(position).getDescription() ));
+		this.holder.tvDescription.setText(Html.fromHtml
+			(this.feed.getItem(position).getDescription()));
 		
 		// at this point, the convertView is full, so we can just return it
 		return convertView;
 	}
-
 }
