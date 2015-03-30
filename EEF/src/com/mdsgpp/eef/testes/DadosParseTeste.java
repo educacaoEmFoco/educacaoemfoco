@@ -31,7 +31,6 @@ public class DadosParseTeste extends AndroidTestCase{
 	private String nomeEsigla[] = new String[2];
 	private DadosParse dadosParse;
 	
-	
 	public void setUp() throws Exception {
 		dadosParse = new DadosParse(getContext());
 		informacoes = new HashMap<String, ArrayList<String[]>>();
@@ -182,19 +181,15 @@ public class DadosParseTeste extends AndroidTestCase{
 		informacoes.put(indicadores[12], dados13);
 	}
 
-	
 	public void tearDown() throws Exception {
+		// Do nothing.
 	}
-
-
 	
 	public void testGetEstado() throws IOException {
-		
 		informacoes.clear();
 		informacoes = dadosParse.getEstado(0);
 		HashMap<String, ArrayList<String[]>> estado;
 		estado = null;
-		
 		
 		try {
 			estado = dadosParse.getEstado(0);
@@ -229,8 +224,5 @@ public class DadosParseTeste extends AndroidTestCase{
 		assertEquals("55,4400000000023", estado.get("valores_programa_primeiros_projetos").get(0)[1]);
 		
 		assertEquals("22", estado.get("valores_projetos_apoio_pesquisa_cnpq").get(0)[1]);
-
-		
 	}
-
 }

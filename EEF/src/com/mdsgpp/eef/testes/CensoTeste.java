@@ -30,7 +30,6 @@ public class CensoTeste extends AndroidTestCase {
 		// Do nothing.
 	}
 	
-	
 	public void testConstrutorCheio() {
 		Censo censoConstruido = new Censo(this.anosIniciaisFundamental, this.anosFinaisFundamental, this.ensinoMedio,
 				this.fundamentalEJA, this.medioEJA);
@@ -51,7 +50,6 @@ public class CensoTeste extends AndroidTestCase {
 		assertEquals(this.anosIniciaisFundamental, anosIniciaisFundamentalAtual, 0.0);
 	}
 	
-	
 	public void testAnosFinaisFundamental() {
 		double anosFinaisFundamentalAtual;
 		
@@ -70,7 +68,6 @@ public class CensoTeste extends AndroidTestCase {
 		assertEquals(this.ensinoMedio, ensinoMedioAtual, 0.0);
 	}
 	
-	
 	public void testFundamentalEJA() {
 		double fundamentalEjaAtual;
 		
@@ -80,7 +77,6 @@ public class CensoTeste extends AndroidTestCase {
 		assertEquals(this.fundamentalEJA, fundamentalEjaAtual, 0.0);
 	}
 	
-
 	public void testMediaEJA() {
 		double medioEjaAtual;
 		
