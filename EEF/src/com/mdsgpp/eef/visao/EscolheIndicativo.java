@@ -27,6 +27,7 @@ public abstract class EscolheIndicativo extends Activity {
 		return true;
 	}
 	
+	// Get the option selected on menu.
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		
@@ -46,6 +47,7 @@ public abstract class EscolheIndicativo extends Activity {
 	
 	public abstract void abreTelaSobre();
 	
+	// Get the radioButton clicked to refresh information.
 	public void onRadioButtonClicked(View view) {
 
 		switch (view.getId()) {
