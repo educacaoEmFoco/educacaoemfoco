@@ -12,8 +12,6 @@ import com.mdsgpp.eef.modelo.Ideb;
 import com.mdsgpp.eef.modelo.Projeto;
 import com.mdsgpp.eef.modelo.Media;
 
-// Classe de testes referentes a classe Estado do modelo
-
 public class EstadoTeste extends AndroidTestCase {
 
 	private Estado estado;
@@ -50,10 +48,7 @@ public class EstadoTeste extends AndroidTestCase {
 	ArrayList<String[]> dadosAbandonoFundamental;
 	ArrayList<String[]> dadosAbandonoMedio;
 		
-		
 	public void setUp() throws Exception {
-		
-		// Objetos utilizados para realizar os testes
 		dados = new ArrayList<String[]>();
 		dadosFundamentalFinais = new ArrayList<String[]>();
 		dadosFundamentalIniciais = new ArrayList<String[]>();
@@ -90,7 +85,6 @@ public class EstadoTeste extends AndroidTestCase {
 		
 		valores[0] = "1998";
 		valores[1] ="3000";
-		
 		
 		String[] idebs1 = {"2000","2.5"};
 		String[] idebs2 = {"2000","3.7"};
@@ -208,13 +202,11 @@ public class EstadoTeste extends AndroidTestCase {
 		informacoes.put("taxa_aprovacao_medio", dadosAprovacaoMedio);
 		informacoes.put("taxa_abandono_fundamental", dadosAbandonoFundamental);
 		informacoes.put("taxa_abandono_medio", dadosAbandonoMedio);
-		
 	}
-
 	
 	public void tearDown() throws Exception {
+		// Do nothing.
 	}
-
 
 	public void testNome() {
 		String nome;
@@ -291,7 +283,7 @@ public class EstadoTeste extends AndroidTestCase {
 	} 
 	
 	public void testProjetoCienciaTecnologia() {
-		String[] indicativosProjetosCienciaTecnologia = { "numero_projetos", "valor_investido" };
+		String[] indicativosProjetosCienciaTecnologia = {"numero_projetos", "valor_investido"};
 		Projeto[] projetosTecnologia;
 		
 		estado.setProjetosCienciaTecnologia(informacoes, indicativosProjetosCienciaTecnologia);
@@ -312,7 +304,7 @@ public class EstadoTeste extends AndroidTestCase {
 	}
 	
 	public void testPrimeirosProjetos() {
-		String[] indicativosPrimeirosProjetos = { "programa_primeiros_projetos", "valores_programa_primeiros_projetos" };
+		String[] indicativosPrimeirosProjetos = {"programa_primeiros_projetos", "valores_programa_primeiros_projetos"};
 		Projeto[] primeirosProjetos;
 		
 		estado.setPrimeirosProjetos(informacoes, indicativosPrimeirosProjetos);
@@ -333,7 +325,7 @@ public class EstadoTeste extends AndroidTestCase {
 	}
 	
 	public void testProjetosInct() {
-		String[] indicativosProjetosInct = { "projetos_inct", "valores_projetos_inct" };
+		String[] indicativosProjetosInct = {"projetos_inct", "valores_projetos_inct"};
 		Projeto[] projetosInct;
 		
 		estado.setProjetosInct(informacoes, indicativosProjetosInct);
@@ -354,7 +346,7 @@ public class EstadoTeste extends AndroidTestCase {
 	}
 	
 	public void testProjetosApoioCnpq() {
-		String[] indicativosApoioCnpq = { "projetos_apoio_pesquisa_cnpq", "valores_projetos_apoio_pesquisa_cnpq" };
+		String[] indicativosApoioCnpq = {"projetos_apoio_pesquisa_cnpq", "valores_projetos_apoio_pesquisa_cnpq"};
 		Projeto[] projetosApoioCnpq;
 		
 		estado.setProjetosApoioCnpq(informacoes, indicativosApoioCnpq);
@@ -375,7 +367,7 @@ public class EstadoTeste extends AndroidTestCase {
 	}
 	
 	public void testProjetoJovensPesquisadores() {
-		String[] indicativosJovensPesquisadores = { "jovens_pesquisadores", "valores_jovens_pesquisadores" };
+		String[] indicativosJovensPesquisadores = {"jovens_pesquisadores", "valores_jovens_pesquisadores"};
 		Projeto[] projetoJovensPesquisadores;
 		
 		estado.setProjetoJovensPesquisadores(informacoes, indicativosJovensPesquisadores);
@@ -409,7 +401,7 @@ public class EstadoTeste extends AndroidTestCase {
 	}
 	
 	public void testMediaAlunosPorTurma() {
-		String[] indicativosMediaAlunosPorTurma = { "alunos_por_turma_ensino_fundamental", "alunos_por_turma_ensino_medio" };
+		String[] indicativosMediaAlunosPorTurma = {"alunos_por_turma_ensino_fundamental", "alunos_por_turma_ensino_medio"};
 		Media[] alunosPorTurma;
 		
 		estado.setMediaAlunosPorTurma(informacoes, indicativosMediaAlunosPorTurma);
@@ -430,7 +422,7 @@ public class EstadoTeste extends AndroidTestCase {
 	}
 	
 	public void testMediahorasAula() {
-		String[] indicativosMediaHorasAula = { "horas_aula_ensino_fundamental", "horas_aula_ensino_medio" };
+		String[] indicativosMediaHorasAula = {"horas_aula_ensino_fundamental", "horas_aula_ensino_medio"};
 		Media[] horasAula;
 		
 		estado.setMediaHorasAula(informacoes, indicativosMediaHorasAula);
@@ -451,7 +443,7 @@ public class EstadoTeste extends AndroidTestCase {
 	}
 	
 	public void testTaxaDistorcaoIdadeSerie() {
-		String[] taxaDistorcaoIdadeSerie = { "taxa_distorcao_fundamental", "taxa_distorcao_ensino_medio" };
+		String[] taxaDistorcaoIdadeSerie = {"taxa_distorcao_fundamental", "taxa_distorcao_ensino_medio"};
 		Media[] taxaDistorcao;
 		
 		estado.setTaxaDistorcaoIdadeSerie(informacoes, taxaDistorcaoIdadeSerie);
@@ -472,7 +464,7 @@ public class EstadoTeste extends AndroidTestCase {
 	}
 	
 	public void testTaxaAproveitamento() {
-		String[] taxaDeAproveitamento = { "taxa_aprovacao_fundamental", "taxa_aprovacao_medio" };
+		String[] taxaDeAproveitamento = {"taxa_aprovacao_fundamental", "taxa_aprovacao_medio"};
 		Media[] taxaAproveitamento;
 		
 		estado.setTaxaDeAproveitamento(informacoes, taxaDeAproveitamento);
@@ -493,7 +485,7 @@ public class EstadoTeste extends AndroidTestCase {
 	}
 	
 	public void testTaxaDeAbandono() {
-		String[] taxaDeAbandono = { "taxa_abandono_fundamental", "taxa_abandono_medio" };
+		String[] taxaDeAbandono = {"taxa_abandono_fundamental", "taxa_abandono_medio"};
 		Media[] taxaAbandono;
 		
 		estado.setTaxaDeAbandono(informacoes, taxaDeAbandono);
