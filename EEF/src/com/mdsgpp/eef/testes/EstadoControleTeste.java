@@ -18,8 +18,6 @@ public class EstadoControleTeste extends AndroidTestCase{
 	private DecimalFormat dfValor = new DecimalFormat("#,##0.00");
 	private DecimalFormat dfPopulacao = new DecimalFormat("#,###");
 	private DecimalFormat dfPorcentagem = new DecimalFormat("#.##");
-
-
 	
 	public void setUp() throws Exception {
 		instancia = new EstadoControle(getContext());
@@ -37,9 +35,9 @@ public class EstadoControleTeste extends AndroidTestCase{
 		this.informacoes.put("percentual_participacao_pib", dfPorcentagem.format(0.200000000000045)+ "%");
 		this.informacoes.put("projetos_ciencia_tecnologia","Quantidade: " + 3 + " projetos");
 		this.informacoes.put("valor_ciencia_tecnologia", "Valor investido: R$ " + dfValor.format(563681.899999976)+ " (em mil)");
-		this.informacoes.put("ideb_fundamental_final", "Ensino Fundamental (séries finais): "+dfPorcentagem.format(4.09999999999854));
-		this.informacoes.put("ideb_ensino_medio","Ensino Médio: " + dfPorcentagem.format(3.5) + "" );	
-		this.informacoes.put("ideb_fundamental_inicial", "Ensino Fundamental (Séries iniciais): " + dfPorcentagem.format(4.5) + "");
+		this.informacoes.put("ideb_fundamental_final", "Ensino Fundamental (sï¿½ries finais): "+dfPorcentagem.format(4.09999999999854));
+		this.informacoes.put("ideb_ensino_medio","Ensino Mï¿½dio: " + dfPorcentagem.format(3.5) + "" );	
+		this.informacoes.put("ideb_fundamental_inicial", "Ensino Fundamental (Sï¿½ries iniciais): " + dfPorcentagem.format(4.5) + "");
 		this.informacoes.put("quantidade_primeiros_projetos", "Quantidade: "+ 2 + " projetos");
 		this.informacoes.put("valor_primeiros_projetos", "Valor investido: R$ "+ dfValor.format(55.4400000000023) + " (em mil)");
 		this.informacoes.put("quantidade_projeto_cnpq","Quantidade: " + 133 + " projetos");
@@ -51,74 +49,68 @@ public class EstadoControleTeste extends AndroidTestCase{
 		this.informacoesCompletas.put("nome", "Acre");
 		this.informacoesCompletas.put("populacao",  dfPopulacao.format(691132) + " habitantes");
 	}
-		
-	
 
 	public void tearDown() throws Exception {
+		//Do nothing.
 	}
-
 
 	public void testLerEstado() throws IOException {
 		assertEquals(this.informacoes.get("nome"),
-				 EstadoControle.getInstancia(getContext()).lerEstado(0).get("nome"));
+				 	 EstadoControle.getInstancia(getContext()).lerEstado(0).get("nome"));
 
 		assertEquals(this.informacoes.get("sigla"),
-						 EstadoControle.getInstancia(getContext()).lerEstado(0).get("sigla"));
+					 EstadoControle.getInstancia(getContext()).lerEstado(0).get("sigla"));
 
 		assertEquals(this.informacoes.get("populacao"),
-				 EstadoControle.getInstancia(getContext()).lerEstado(0).get("populacao"));
+				 	 EstadoControle.getInstancia(getContext()).lerEstado(0).get("populacao"));
 
 		assertEquals(this.informacoes.get("percentual_participacao_pib"),
-				 EstadoControle.getInstancia(getContext()).lerEstado(0).get("percentual_participacao_pib"));
+				 	 EstadoControle.getInstancia(getContext()).lerEstado(0).get("percentual_participacao_pib"));
 		
 		assertEquals(this.informacoes.get("projetos_ciencia_tecnologia"),
-				 EstadoControle.getInstancia(getContext()).lerEstado(0).get("projetos_ciencia_tecnologia"));
+				 	 EstadoControle.getInstancia(getContext()).lerEstado(0).get("projetos_ciencia_tecnologia"));
 		
 		assertEquals(this.informacoes.get("ideb_fundamental_final"),
-				 EstadoControle.getInstancia(getContext()).lerEstado(0).get("ideb_fundamental_final"));
+				 	 EstadoControle.getInstancia(getContext()).lerEstado(0).get("ideb_fundamental_final"));
 		
 		assertEquals(this.informacoes.get("ideb_ensino_medio"),
-				 EstadoControle.getInstancia(getContext()).lerEstado(0).get("ideb_ensino_medio"));
+				 	 EstadoControle.getInstancia(getContext()).lerEstado(0).get("ideb_ensino_medio"));
 		
 		assertEquals(this.informacoes.get("ideb_fundamental_inicial"),
-				 EstadoControle.getInstancia(getContext()).lerEstado(0).get("ideb_fundamental_inicial"));
+				 	 EstadoControle.getInstancia(getContext()).lerEstado(0).get("ideb_fundamental_inicial"));
 
 		assertEquals(this.informacoes.get("quantidade_primeiros_projetos"),
-				 EstadoControle.getInstancia(getContext()).lerEstado(0).get("quantidade_primeiros_projetos"));
+				 	 EstadoControle.getInstancia(getContext()).lerEstado(0).get("quantidade_primeiros_projetos"));
 
 		assertEquals(this.informacoes.get("valor_primeiros_projetos"),
-				 EstadoControle.getInstancia(getContext()).lerEstado(0).get("valor_primeiros_projetos"));
+				 	 EstadoControle.getInstancia(getContext()).lerEstado(0).get("valor_primeiros_projetos"));
 
 		assertEquals(this.informacoes.get("quantidade_projeto_cnpq"),
-				 EstadoControle.getInstancia(getContext()).lerEstado(0).get("quantidade_projeto_cnpq"));
+				 	 EstadoControle.getInstancia(getContext()).lerEstado(0).get("quantidade_projeto_cnpq"));
 
 		assertEquals(this.informacoes.get("valor_projetos_cnpq"),
-				 EstadoControle.getInstancia(getContext()).lerEstado(0).get("valor_projetos_cnpq"));
+				 	 EstadoControle.getInstancia(getContext()).lerEstado(0).get("valor_projetos_cnpq"));
 
 		assertEquals(this.informacoes.get("quantidade_projeto_jovens_pesquisadores"),
-				 EstadoControle.getInstancia(getContext()).lerEstado(0).get("quantidade_projeto_jovens_pesquisadores"));
+				 	 EstadoControle.getInstancia(getContext()).lerEstado(0).get("quantidade_projeto_jovens_pesquisadores"));
 
 		assertEquals(this.informacoes.get("valor_projetos_jovens_pesquisadores"),
-				 EstadoControle.getInstancia(getContext()).lerEstado(0).get("valor_projetos_jovens_pesquisadores"));
-
-
+				 	 EstadoControle.getInstancia(getContext()).lerEstado(0).get("valor_projetos_jovens_pesquisadores"));
 	}
 	
 	public void testLerEstadoCompleto() throws IOException {
 		assertEquals(this.informacoesCompletas.get("nome"),
-				 EstadoControle.getInstancia(getContext()).lerEstadoCompleto(0).get("nome"));
+				 	 EstadoControle.getInstancia(getContext()).lerEstadoCompleto(0).get("nome"));
 
 		assertEquals(this.informacoesCompletas.get("sigla"),
-						 EstadoControle.getInstancia(getContext()).lerEstadoCompleto(0).get("sigla"));
+					 EstadoControle.getInstancia(getContext()).lerEstadoCompleto(0).get("sigla"));
 		
 		assertEquals(this.informacoesCompletas.get("populacao"),
-				 EstadoControle.getInstancia(getContext()).lerEstadoCompleto(0).get("populacao"));
+				 	 EstadoControle.getInstancia(getContext()).lerEstadoCompleto(0).get("populacao"));
 	}
-	
 
 	public void testInstancia() throws IOException {
 		assertEquals(instancia, instancia2);
 		assertEquals(instancia, instancia3);
 	}
-
 }
