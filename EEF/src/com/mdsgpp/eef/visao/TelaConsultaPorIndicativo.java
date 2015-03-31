@@ -18,11 +18,13 @@ public class TelaConsultaPorIndicativo extends EscolheIndicativo {
 		txtViewTitulo.setText("Escolha um indicativo para gerar a lista: ");
 	}
 
+	// Open "About" screen.
 	public void abreTelaSobre() {
 		Intent intent = new Intent(this, TelaSobreIndicativos.class);
 		startActivity(intent);
 	}
 	
+	// When button "Next" get clicked start a new activity with new screen.
 	public void clickBotaoAvancar(View view) {
 		Intent intent = new Intent(this, TelaResultadoConsultaPorIndicativo.class);
 
@@ -30,6 +32,5 @@ public class TelaConsultaPorIndicativo extends EscolheIndicativo {
 		intent.putExtra("TITULO", getTitulo());
 
 		startActivity(intent);
-	}
-	
+	}	
 }
