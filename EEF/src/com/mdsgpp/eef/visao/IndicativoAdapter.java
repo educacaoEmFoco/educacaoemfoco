@@ -15,7 +15,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.view.Gravity;
 
-public class IndicativoAdapter extends BaseAdapter{
+public class IndicativoAdapter extends BaseAdapter {
 	
 	private HashMap<String, String> estado;
 	private String indicativoEscolhido;
@@ -24,12 +24,11 @@ public class IndicativoAdapter extends BaseAdapter{
 	private ViewHolder holder;
 	private LayoutInflater inflater;
 	
-	String bandeiras[] = {"acre", "alagoas", "amapa", "amazonas", "bahia", 
-			"ceara", "distritofederal", "espiritosanto", "goias", "maranhao",
-			"matogrosso", "matogrossodosul", "minasgerais", "para", "paraiba",
-			"parana", "pernambuco", "piaui", "riodejaneiro", "riograndedonorte",
-			"riograndedosul", "rondonia", "roraima", "santacatarina", "saopaulo",
-			"sergipe", "tocantins"};
+	String bandeiras[] = {"acre", "alagoas", "amapa", "amazonas", "bahia", "ceara", 
+		"distritofederal", "espiritosanto", "goias", "maranhao", "matogrosso", "matogrossodosul", 
+		"minasgerais", "para", "paraiba", "parana", "pernambuco", "piaui", "riodejaneiro", 
+		"riograndedonorte", "riograndedosul", "rondonia", "roraima", "santacatarina", "saopaulo", 
+		"sergipe", "tocantins"};
 	
 	static class ViewHolder{
 		private TextView tvNome;
@@ -37,7 +36,7 @@ public class IndicativoAdapter extends BaseAdapter{
 		private ImageView tvBandeiras;
 	}
 	
-	public IndicativoAdapter(String titulo,String indicativoEscolhido, Context context){
+	public IndicativoAdapter(String titulo,String indicativoEscolhido, Context context) {
 		this.indicativoEscolhido = indicativoEscolhido;
 		this.titulo = titulo;
 		this.context = context;
@@ -54,7 +53,7 @@ public class IndicativoAdapter extends BaseAdapter{
 		HashMap<String, String> estado = null;
 		try {
 			estado = EstadoControle.getInstancia(context).lerEstado(posicao);
-		} catch (IOException e) {
+		} catch(IOException e) {
 			e.printStackTrace();
 		}
 		return estado;
@@ -64,7 +63,6 @@ public class IndicativoAdapter extends BaseAdapter{
 	public long getItemId(int posicao) {
 		return posicao;
 	}
-
 	
 	@Override
 	public View getView(int posicao, View view, ViewGroup viewGroup) {
@@ -73,10 +71,13 @@ public class IndicativoAdapter extends BaseAdapter{
 			holder = new ViewHolder();
 				
 			holder.tvNome = (TextView) view.findViewById(R.id.textview_lista_indicativos_nome);
-			holder.tvValorIndicativo = (TextView) view.findViewById(R.id.textview_lista_indicativos_conteudo);
-			holder.tvBandeiras = (ImageView) view.findViewById(R.id.imageview_lista_indicativos_bandeiras);
+			holder.tvValorIndicativo = (TextView) view.findViewById
+				(R.id.textview_lista_indicativos_conteudo);
+			holder.tvBandeiras = (ImageView) view.findViewById
+				(R.id.imageview_lista_indicativos_bandeiras);
 			view.setTag(holder);
-		} else {
+		} 
+		else {
 			holder = (ViewHolder) view.getTag();
 		}
 		
@@ -91,16 +92,16 @@ public class IndicativoAdapter extends BaseAdapter{
 			holder.tvValorIndicativo.setText( pegaValor(estado.get(indicativoEscolhido)) );
 			holder.tvValorIndicativo.setVisibility(View.VISIBLE);
 			
-			int idBandeira = context.getResources().getIdentifier(bandeiras[posicao-1], "drawable", context.getPackageName());
+			int idBandeira = context.getResources().getIdentifier(bandeiras[posicao-1], "drawable", 
+				context.getPackageName());
 			holder.tvBandeiras.setImageResource(idBandeira);
 		}
-		
-		
+
 		return view;
 	}
 	
 	private String pegaValor(String linha) {
-		if (linha.contains(":")) {
+		if(linha.contains(":")) {
 			String partes[] = linha.split(": ");
 			return partes[1];
 		}
