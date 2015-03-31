@@ -24,6 +24,7 @@ public class IndicativoAdapter extends BaseAdapter {
 	private ViewHolder holder;
 	private LayoutInflater inflater;
 	
+	// Name of all flags from states.
 	String bandeiras[] = {"acre", "alagoas", "amapa", "amazonas", "bahia", "ceara", 
 		"distritofederal", "espiritosanto", "goias", "maranhao", "matogrosso", "matogrossodosul", 
 		"minasgerais", "para", "paraiba", "parana", "pernambuco", "piaui", "riodejaneiro", 
@@ -36,7 +37,7 @@ public class IndicativoAdapter extends BaseAdapter {
 		private ImageView tvBandeiras;
 	}
 	
-	public IndicativoAdapter(String titulo,String indicativoEscolhido, Context context) {
+	public IndicativoAdapter(String titulo, String indicativoEscolhido, Context context) {
 		this.indicativoEscolhido = indicativoEscolhido;
 		this.titulo = titulo;
 		this.context = context;
@@ -81,12 +82,13 @@ public class IndicativoAdapter extends BaseAdapter {
 			holder = (ViewHolder) view.getTag();
 		}
 		
-		if(posicao == 0){//Titulo
+		if(posicao == 0){	// Title.
 			holder.tvNome.setText(titulo);
 			holder.tvNome.setGravity(Gravity.CENTER_HORIZONTAL);
 			holder.tvValorIndicativo.setVisibility(View.GONE);
 			holder.tvBandeiras.setImageResource(NO_SELECTION);
-		} else {//Indicativos e seus valores
+		} 
+		else {	// Indicative and it's values.
 			estado = getItem(posicao-1);
 			holder.tvNome.setText(estado.get("nome"));
 			holder.tvValorIndicativo.setText( pegaValor(estado.get(indicativoEscolhido)) );
