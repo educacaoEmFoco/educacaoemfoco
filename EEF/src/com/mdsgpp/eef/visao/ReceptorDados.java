@@ -4,6 +4,5 @@ import com.mdsgpp.eef.modelo.Feed;
 
 public interface ReceptorDados {
 
-	void receiveFeed(Feed feed);
-	
+	void receiveFeed(Feed feed);	
 }
