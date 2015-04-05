@@ -41,10 +41,13 @@ public class TelaListaEstado extends Activity {
 			case R.id.sobre:
 				abreTelaSobre();
 				break;
+				
 			case android.R.id.home:
 		        NavUtils.navigateUpFromSameTask(this);
 		        break;
+		        
 			default:
+				// Do nothing.
 				break;
 			}
 			
@@ -63,13 +66,13 @@ public class TelaListaEstado extends Activity {
 
 		listView.setAdapter(adapter);
 		listView.setOnItemClickListener(new OnItemClickListener() {
-			@Override
-			public void onItemClick(AdapterView<?> arg0, View arg1,
-					int position, long id) {
-				Intent intent = new Intent(context, TelaEstado.class);
-				intent.putExtra("INDEX_ESTADO_ESCOLHIDO", position);
-				startActivity(intent);
-			}
+		@Override
+		public void onItemClick(AdapterView<?> arg0, View arg1,
+			int position, long id) {
+			Intent intent = new Intent(context, TelaEstado.class);
+			intent.putExtra("INDEX_ESTADO_ESCOLHIDO", position);
+			startActivity(intent);
+		}
 		});
 	}
 
