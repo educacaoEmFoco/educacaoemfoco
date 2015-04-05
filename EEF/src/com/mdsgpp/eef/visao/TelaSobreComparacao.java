@@ -24,17 +24,15 @@ public class TelaSobreComparacao extends Activity {
 	}
 	
 	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		
+	public boolean onOptionsItemSelected(MenuItem item) {		
 		switch (item.getItemId()) {
-		case android.R.id.home:
-	        NavUtils.navigateUpFromSameTask(this);
-	        break;
-		default:
-			break;
+			case android.R.id.home:
+	        	NavUtils.navigateUpFromSameTask(this);
+	        	break;
+			default:
+				break;
 		}
 		
     	return true;
 	}
-
 }
