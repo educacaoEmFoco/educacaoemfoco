@@ -154,8 +154,8 @@ public abstract class EscolheIndicativo extends Activity {
 			case R.id.radio_censo_eja_medio:
 				setValores("censo_eja_medio", "Censo Escolar do EJA - Médio (Matriculados)");
 				break;
-			case default:
-				// Nothing to do.
+			default:
+				// Do nothing.
 		}
 	}
 

@@ -35,6 +35,7 @@ public class TelaComparacoesGerais extends Activity {
 		        NavUtils.navigateUpFromSameTask(this);
 		        break;
 			default:
+				// Do nothing.
 				break;
 		}
 		
