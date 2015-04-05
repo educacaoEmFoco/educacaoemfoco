@@ -41,10 +41,13 @@ public class TelaResultadoConsultaPorIndicativo extends Activity {
 		case R.id.sobre:
 			abreTelaSobre();
 			break;
+			
 		case android.R.id.home:
 	        NavUtils.navigateUpFromSameTask(this);
 	        break;
+	        
 		default:
+			// Do nothing.
 			break;
 		}
 		
@@ -58,19 +61,20 @@ public class TelaResultadoConsultaPorIndicativo extends Activity {
 	}
 	
 	private void carregaIndicativosDosEstados() {
-			Intent intent = getIntent();
+		Intent intent = getIntent();
 			
-			String indicativo = intent.getStringExtra("INDICATIVO");
-			String titulo = intent.getStringExtra("TITULO");
+		String indicativo = intent.getStringExtra("INDICATIVO");
+		String titulo = intent.getStringExtra("TITULO");
 			
-			IndicativoAdapter adapter = new IndicativoAdapter(titulo, indicativo,
-					context);
+		IndicativoAdapter adapter = new IndicativoAdapter(titulo, indicativo,
+			context);
 			
-			listaDeEstados.setAdapter(adapter);
+		listaDeEstados.setAdapter(adapter);
 	}
 	
 	public void inicializaViews(){
-		listaDeEstados = (ListView) findViewById(R.id.listview_tela_resultado_consulta_por_indicativo);
+		listaDeEstados = (ListView) 
+			findViewById(R.id.listview_tela_resultado_consulta_por_indicativo);
 	}
 	
 	
