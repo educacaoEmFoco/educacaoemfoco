@@ -50,10 +50,13 @@ public class TelaGrafico extends Activity {
 		case R.id.sobre:
 			abreTelaSobre();
 			break;
+			
 		case android.R.id.home:
 	        NavUtils.navigateUpFromSameTask(this);
 	        break;
+	        
 		default:
+			// Do nothing.
 			break;
 		}
 		
@@ -69,28 +72,31 @@ public class TelaGrafico extends Activity {
 	private void capturaInformacoes() {
 		inicializaCamposTexto();
 		
-		// Captura o intent que abriu a activity
 		Intent intent = getIntent();
-		// Captura o valor transferido atrav√©s da intent
+
 		estado1 = intent.getIntExtra("INDEX_ESTADO1_ESCOLHIDO", 0);
 		estado2 = intent.getIntExtra("INDEX_ESTADO2_ESCOLHIDO", 0);
 		titulo = intent.getStringExtra("TITULO");
 		indicativo = intent.getStringExtra("INDICATIVO");
 
-		HashMap<String, String> informacoesEstado1 = new HashMap<String, String>();
-		HashMap<String, String> informacoesEstado2 = new HashMap<String, String>();
+		HashMap<String, String> informacoesEstado1 = new HashMap<String,
+			String>();
+		HashMap<String, String> informacoesEstado2 = new HashMap<String,
+			String>();
 
 		try {
 			informacoesEstado1 = (HashMap<String, String>) EstadoControle
-					.getInstancia(this).lerEstado(estado1).clone();
+				.getInstancia(this).lerEstado(estado1).clone();
 			informacoesEstado2 = (HashMap<String, String>) EstadoControle
-					.getInstancia(this).lerEstado(estado2).clone();
+				.getInstancia(this).lerEstado(estado2).clone();
 			
 			converteDados(informacoesEstado1, informacoesEstado2);
 			criaGrafico(informacoesEstado1, informacoesEstado2);
 			
 		} catch (IOException e) {
-			Toast.makeText(getApplicationContext(), "Houve um erro no acesso ‡s informaÁıes.", Toast.LENGTH_SHORT).show();
+			Toast.makeText(getApplicationContext(), 
+				"Houve um erro no acesso ‡s informaÁıes.",
+				Toast.LENGTH_SHORT).show();
 			Log.i("IOException - TelaComparaEstados",e.toString());
 		}
 	}
@@ -126,10 +132,10 @@ public class TelaGrafico extends Activity {
 		String estado2IndicativoString = informacoesEstado2.get(indicativo);
 	
 				
-		estado1IndicativoString = estado1IndicativoString.replaceAll("[^\\d,]", "");/*como os dados viram como est√£o escritos na tela
-																					   aqui n√≥s pegamos somente os n√£o digitos (numeros)
-																					   que est√£o na String*/
-		estado2IndicativoString = estado2IndicativoString.replaceAll("[^\\d,]", "");
+		estado1IndicativoString = estado1IndicativoString.replaceAll("[^\\d,]",
+			"");																	 
+		estado2IndicativoString = estado2IndicativoString.replaceAll("[^\\d,]",
+			"");
 		
 		estado1IndicativoString = estado1IndicativoString.replaceAll(",", ".");
 		estado2IndicativoString = estado2IndicativoString.replaceAll(",", ".");
