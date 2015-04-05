@@ -8,7 +8,7 @@ import android.support.v4.app.NavUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class TelaSobreIndicativos extends Activity{
+public class TelaSobreIndicativos extends Activity {
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +31,9 @@ public class TelaSobreIndicativos extends Activity{
 		case android.R.id.home:
 	        NavUtils.navigateUpFromSameTask(this);
 	        break;
+	        
 		default:
+			// Do nothing.
 			break;
 		}
 		
