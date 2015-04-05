@@ -18,7 +18,8 @@ import android.widget.ListView;
 
 public class TelaFeed extends Activity implements ReceptorDados {
 
-	private final static String FEED_ADDRESS = "http://noticias.gov.br/noticias/rss?id=AFSZW";
+	private final static String FEED_ADDRESS = 
+		"http://noticias.gov.br/noticias/rss?id=AFSZW";
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -42,10 +43,13 @@ public class TelaFeed extends Activity implements ReceptorDados {
 		case R.id.sobre:
 			abreTelaSobre();
 			break;
+			
 		case android.R.id.home:
 	        NavUtils.navigateUpFromSameTask(this);
 	        break;
+	        
 		default:
+			// Do nothing.
 			break;
 		}
 		
@@ -56,24 +60,28 @@ public class TelaFeed extends Activity implements ReceptorDados {
 	public void receiveFeed(final Feed feed) {
 		ListView listview = (ListView) findViewById(R.id.listView1);
 		
-		if (feed != null) {
+		if(feed != null) {
 			FeedAdapter adapter = new FeedAdapter(this, feed);
 			listview.setAdapter(adapter);
+		}
+		else {
+			// Do nothing.
 		}
 		
 		listview.setOnItemClickListener(new OnItemClickListener() {
 			@Override
-			public void onItemClick(AdapterView<?> adapter, View view, int position, long id) {
+			public void onItemClick(AdapterView<?> adapter, View view,
+				int position, long id) {
 				String link = feed.getItem(position).getLink();
 				
-				Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(link));
+				Intent browserIntent = new Intent(Intent.ACTION_VIEW,
+					Uri.parse(link));
 				startActivity(browserIntent);
 			}
 		});
 	}
 	
-	public void abreTelaSobre()
-	{
+	public void abreTelaSobre() {
 		Intent intent = new Intent(this, TelaFeedSobre.class);
 		startActivity(intent);
 	}	
