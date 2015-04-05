@@ -22,7 +22,8 @@ import android.widget.TextView;
 
 public class TelaGraficoLinha extends Activity {
 
-	private TextView txtviewTituloGrafico, txtviewHistorico;
+	private TextView txtviewTituloGrafico;
+	private TextView txtviewHistorico;
 	private ArrayList<Float> historico = new ArrayList<Float>();
 	private ArrayList<String> temp;
 	private HashMap<String, String> informacoes;
@@ -54,10 +55,13 @@ public class TelaGraficoLinha extends Activity {
 		case R.id.sobre:
 			abreTelaSobre();
 			break;
+			
 		case android.R.id.home:
 	        NavUtils.navigateUpFromSameTask(this);
 	        break;
+	        
 		default:
+			// Do nothing.
 			break;
 		}
 		
@@ -81,9 +85,11 @@ public class TelaGraficoLinha extends Activity {
 		}
 		
 		try {
-			informacoes = EstadoControle.getInstancia(this).lerEstadoCompleto(posicao);
+			informacoes = EstadoControle.getInstancia(this).lerEstadoCompleto
+				(posicao);
 		} catch (IOException e) {
-			Log.i("Erro - TelaGraficoLinha", "Erro ao capturar as informacoes do estado.");
+			Log.i("Erro - TelaGraficoLinha", 
+				"Erro ao capturar as informacoes do estado.");
 			e.printStackTrace();
 		}	
 	}
@@ -95,8 +101,10 @@ public class TelaGraficoLinha extends Activity {
 	
 
 	private void inicializaCamposTexto() {
-		txtviewTituloGrafico = (TextView) findViewById(R.id.text_view_titulo_grafico_historico);
-		txtviewHistorico = (TextView) findViewById(R.id.text_view_grafico_historico);
+		txtviewTituloGrafico = (TextView)
+			findViewById(R.id.text_view_titulo_grafico_historico);
+		txtviewHistorico = (TextView)
+			findViewById(R.id.text_view_grafico_historico);
 	}
 	
 	private void preencheCamposDeTexto() {
@@ -109,12 +117,13 @@ public class TelaGraficoLinha extends Activity {
 	private void plotarGrafico() {
 		Line curva = new Line();
 		
-		for(int i=0, passo=10; i<historico.size(); i++,passo+=10){
+		for(int i=0, passo=10; i<historico.size(); i++,passo+=10) {
 			LinePoint ponto = new LinePoint();
 			ponto.setX(passo);
 			ponto.setY(historico.get(i));
 			curva.addPoint(ponto);
 		}
+		
 		curva.setColor(Color.parseColor("#4682B4"));
 		LineGraph li = (LineGraph)findViewById(R.id.graph);
 		li.addLine(curva);
@@ -127,10 +136,15 @@ public class TelaGraficoLinha extends Activity {
 	}
 
 	private float calculaValorMaximoHistorico(float maximo) {
-		for(int i=0; i<historico.size(); i++){
-			if(historico.get(i) >= maximo)
+		for(int i=0; i<historico.size(); i++) {
+			if(historico.get(i) >= maximo){
 				maximo = (float) historico.get(i);  
+			}
+			else {
+				// Do nothing.
+			}
 		}
+		
 		return (float)(1.1*maximo);
 	}
 }
