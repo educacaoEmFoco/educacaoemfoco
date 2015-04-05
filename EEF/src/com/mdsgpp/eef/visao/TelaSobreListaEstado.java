@@ -30,7 +30,9 @@ public class TelaSobreListaEstado extends Activity {
 		case android.R.id.home:
 	        NavUtils.navigateUpFromSameTask(this);
 	        break;
+	        
 		default:
+			// Do nothing.
 			break;
 		}
 		
