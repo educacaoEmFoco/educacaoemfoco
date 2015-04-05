@@ -13,15 +13,38 @@ import android.widget.CheckBox;
 
 public class TelaIndicativosConsultados extends Activity {
 
-	CheckBox cbIdeb, cbPib, cbPopulacao, cbPrimeirosProjetos, cbProjetosCnpq,
-			cbProjetosDifusao, cbProjetosIniciacao, cbProjetosJovens, cbCenso,
-			cbAlunosTurma, cbHorasAula, cbTaxaDistorcao, cbTaxaAbandono,
-			cbAprovacao;
-	boolean bIdeb, bPib, bPopulacao, bPrimeirosProjetos, bProjetosCnpq,
-			bProjetosDifusao, bProjetosIniciacao, bProjetosJovens, bCenso,
-			bAlunosTurma, bHorasAula, bTaxaDistorcao, bTaxaAbandono,
-			bAprovacao;
-	int posicao01, posicao02;
+	CheckBox cbIdeb;
+	CheckBox cbPib;
+	CheckBox cbPopulacao;
+	CheckBox cbPrimeirosProjetos;
+	CheckBox cbProjetosCnpq;
+	CheckBox cbProjetosDifusao;
+	CheckBox cbProjetosIniciacao;
+	CheckBox cbProjetosJovens;
+	CheckBox cbCenso;
+	CheckBox cbAlunosTurma;
+	CheckBox cbHorasAula;
+	CheckBox cbTaxaDistorcao;
+	CheckBox cbTaxaAbandono;
+	CheckBox cbAprovacao;
+	
+	boolean bIdeb;
+	boolean bPib;
+	boolean bPopulacao;
+	boolean bPrimeirosProjetos;
+	boolean bProjetosCnpq;
+	boolean bProjetosDifusao;
+	boolean bProjetosIniciacao;
+	boolean bProjetosJovens;
+	boolean bCenso;
+	boolean bAlunosTurma;
+	boolean bHorasAula;
+	boolean bTaxaDistorcao;
+	boolean bTaxaAbandono;
+	boolean bAprovacao;
+	
+	int posicao01;
+	int posicao02;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -49,10 +72,13 @@ public class TelaIndicativosConsultados extends Activity {
 		case R.id.sobre:
 			abreTelaSobre();
 			break;
+			
 		case android.R.id.home:
 	        NavUtils.navigateUpFromSameTask(this);
 	        break;
+	        
 		default:
+			// Do nothing.
 			break;
 		}
 
@@ -68,11 +94,15 @@ public class TelaIndicativosConsultados extends Activity {
 		cbIdeb = (CheckBox) findViewById(R.id.checkBox_ideb);
 		cbPib = (CheckBox) findViewById(R.id.checkBox_participacao_pib);
 		cbPopulacao = (CheckBox) findViewById(R.id.checkBox_populacao);
-		cbPrimeirosProjetos = (CheckBox) findViewById(R.id.checkBox_primeiros_projeto);
+		cbPrimeirosProjetos = (CheckBox) findViewById
+			(R.id.checkBox_primeiros_projeto);
 		cbProjetosCnpq = (CheckBox) findViewById(R.id.checkBox_projetos_cnpq);
-		cbProjetosDifusao = (CheckBox) findViewById(R.id.checkBox_projetos_difusao);
-		cbProjetosIniciacao = (CheckBox) findViewById(R.id.checkBox_projetos_iniciacao);
-		cbProjetosJovens = (CheckBox) findViewById(R.id.checkBox_projetos_jovens);
+		cbProjetosDifusao = (CheckBox) findViewById
+			(R.id.checkBox_projetos_difusao);
+		cbProjetosIniciacao = (CheckBox) findViewById
+			(R.id.checkBox_projetos_iniciacao);
+		cbProjetosJovens = (CheckBox) findViewById
+			(R.id.checkBox_projetos_jovens);
 		cbCenso = (CheckBox) findViewById(R.id.checkBox_censo);
 		cbAlunosTurma = (CheckBox) findViewById(R.id.checkBox_quantidade_aluno);
 		cbHorasAula = (CheckBox) findViewById(R.id.checkBox_horas_aula);
