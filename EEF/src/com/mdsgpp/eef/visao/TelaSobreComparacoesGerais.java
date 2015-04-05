@@ -24,17 +24,15 @@ public class TelaSobreComparacoesGerais extends Activity {
 	}
 	
 	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		
-		switch (item.getItemId()) {
-		case android.R.id.home:
-	        NavUtils.navigateUpFromSameTask(this);
-	        break;
-		default:
-			break;
+	public boolean onOptionsItemSelected(MenuItem item) {		
+		switch(item.getItemId()) {
+			case android.R.id.home:
+		        NavUtils.navigateUpFromSameTask(this);
+		        break;
+			default:
+				break;
 		}
 		
     	return true;
 	}
-
 }
