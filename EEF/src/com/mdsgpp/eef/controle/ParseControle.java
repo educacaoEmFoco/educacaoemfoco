@@ -18,12 +18,17 @@ public class ParseControle {
 	}
 
 	public static ParseControle getInstancia(Context context) {
-		if (instancia == null) instancia = new ParseControle(context);
+		if(instancia == null) {
+			instancia = new ParseControle(context);
+		}
+		else {
+			// Nothing to do.
+		}
+
 		return instancia;
 	}
 	
 	public HashMap<String, ArrayList<String[]>> getInformacoes(int posicao) throws IOException {
 		return parser.getEstado(posicao);
-	}
-	
+	}	
 }
