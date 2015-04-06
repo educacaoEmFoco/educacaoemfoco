@@ -1,6 +1,5 @@
 package com.mdsgpp.eef.testes;
 
-
 import android.test.AndroidTestCase;
 
 import com.mdsgpp.eef.modelo.Estado;
