@@ -1,6 +1,7 @@
 package com.mdsgpp.eef.modelo;
 
 public class Media {
+
 	private double ensinoFundamental;
 	private double ensinoMedio;
 	private int ano;
@@ -9,7 +10,7 @@ public class Media {
 	public Media() {
 	}
 		
-	public Media(double ensinoFundamental, double ensinoMedio){
+	public Media(double ensinoFundamental, double ensinoMedio) {
 		this.ensinoFundamental = ensinoFundamental;
 		this.ensinoMedio = ensinoMedio;
 	}
@@ -44,6 +45,5 @@ public class Media {
 
 	public void setAno(int ano) {
 		this.ano = ano;
-	}
-		
+	}		
 }
