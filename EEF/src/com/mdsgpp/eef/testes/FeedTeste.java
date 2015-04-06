@@ -13,7 +13,7 @@ public class FeedTeste extends AndroidTestCase {
 	private Feed feed;
 	private Noticias noticias;
 	
-	public void setUp(){
+	public void setUp() {
 		itens = new ArrayList<Noticias>();
 		feed = new Feed();
 		noticias = new Noticias(feed);
@@ -23,25 +23,25 @@ public class FeedTeste extends AndroidTestCase {
 	}
 	
 	public void testSetArrayListDeNoticias() {
-		assertEquals(itens,feed.getItems());
+		assertEquals(itens, feed.getItems());
 	}
 	  
-	public void testGetSizeDoArrayDeNoticias(){
-		assertEquals(1,feed.getItemsSize());
+	public void testGetSizeDoArrayDeNoticias() {
+		assertEquals(1, feed.getItemsSize());
 	}
 	
-	public void testResetDoArrayListDeNoticias(){
+	public void testResetDoArrayListDeNoticias() {
 		feed.reset();
 		
-		assertEquals(0,feed.getItemsSize());
+		assertEquals(0, feed.getItemsSize());
 	}
 	  
-	public void testGetItemDoArrayDeNoticias(){
-		assertEquals(noticias,feed.getItem(0));
+	public void testGetItemDoArrayDeNoticias() {
+		assertEquals(noticias, feed.getItem(0));
 	}
 	  
-	public void testAdicionarItensNoArrayDeNoticias(){
+	public void testAdicionarItensNoArrayDeNoticias() {
 		feed.addItem(noticias);
-		assertEquals(2,feed.getItemsSize());
+		assertEquals(2, feed.getItemsSize());
 	}
 }
