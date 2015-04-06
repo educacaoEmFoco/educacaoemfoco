@@ -1,6 +1,5 @@
 package com.mdsgpp.eef.testes;
 
-
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -304,7 +303,8 @@ public class EstadoTeste extends AndroidTestCase {
 	}
 	
 	public void testPrimeirosProjetos() {
-		String[] indicativosPrimeirosProjetos = {"programa_primeiros_projetos", "valores_programa_primeiros_projetos"};
+		String[] indicativosPrimeirosProjetos = {"programa_primeiros_projetos", 
+			"valores_programa_primeiros_projetos"};
 		Projeto[] primeirosProjetos;
 		
 		estado.setPrimeirosProjetos(informacoes, indicativosPrimeirosProjetos);
@@ -346,7 +346,8 @@ public class EstadoTeste extends AndroidTestCase {
 	}
 	
 	public void testProjetosApoioCnpq() {
-		String[] indicativosApoioCnpq = {"projetos_apoio_pesquisa_cnpq", "valores_projetos_apoio_pesquisa_cnpq"};
+		String[] indicativosApoioCnpq = {"projetos_apoio_pesquisa_cnpq", 
+			"valores_projetos_apoio_pesquisa_cnpq"};
 		Projeto[] projetosApoioCnpq;
 		
 		estado.setProjetosApoioCnpq(informacoes, indicativosApoioCnpq);
@@ -367,7 +368,8 @@ public class EstadoTeste extends AndroidTestCase {
 	}
 	
 	public void testProjetoJovensPesquisadores() {
-		String[] indicativosJovensPesquisadores = {"jovens_pesquisadores", "valores_jovens_pesquisadores"};
+		String[] indicativosJovensPesquisadores = {"jovens_pesquisadores", 
+			"valores_jovens_pesquisadores"};
 		Projeto[] projetoJovensPesquisadores;
 		
 		estado.setProjetoJovensPesquisadores(informacoes, indicativosJovensPesquisadores);
@@ -401,7 +403,8 @@ public class EstadoTeste extends AndroidTestCase {
 	}
 	
 	public void testMediaAlunosPorTurma() {
-		String[] indicativosMediaAlunosPorTurma = {"alunos_por_turma_ensino_fundamental", "alunos_por_turma_ensino_medio"};
+		String[] indicativosMediaAlunosPorTurma = {"alunos_por_turma_ensino_fundamental", 
+			"alunos_por_turma_ensino_medio"};
 		Media[] alunosPorTurma;
 		
 		estado.setMediaAlunosPorTurma(informacoes, indicativosMediaAlunosPorTurma);
@@ -422,7 +425,8 @@ public class EstadoTeste extends AndroidTestCase {
 	}
 	
 	public void testMediahorasAula() {
-		String[] indicativosMediaHorasAula = {"horas_aula_ensino_fundamental", "horas_aula_ensino_medio"};
+		String[] indicativosMediaHorasAula = {"horas_aula_ensino_fundamental", 
+			"horas_aula_ensino_medio"};
 		Media[] horasAula;
 		
 		estado.setMediaHorasAula(informacoes, indicativosMediaHorasAula);
@@ -443,7 +447,8 @@ public class EstadoTeste extends AndroidTestCase {
 	}
 	
 	public void testTaxaDistorcaoIdadeSerie() {
-		String[] taxaDistorcaoIdadeSerie = {"taxa_distorcao_fundamental", "taxa_distorcao_ensino_medio"};
+		String[] taxaDistorcaoIdadeSerie = {"taxa_distorcao_fundamental", 
+			"taxa_distorcao_ensino_medio"};
 		Media[] taxaDistorcao;
 		
 		estado.setTaxaDistorcaoIdadeSerie(informacoes, taxaDistorcaoIdadeSerie);
@@ -514,5 +519,3 @@ public class EstadoTeste extends AndroidTestCase {
 		assertEquals(populacao, 3000, 0.00001);
 	}
 }
-	
-
