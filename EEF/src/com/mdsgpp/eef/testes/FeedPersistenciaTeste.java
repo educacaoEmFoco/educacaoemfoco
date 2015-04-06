@@ -33,10 +33,8 @@ public class FeedPersistenciaTeste extends AndroidTestCase {
 
 	public void testgetinstancia() {
 		context = getContext();
-		String nomeClasseRetorno = FeedPersistencia.getInstance(context)
-				.getClass().getSimpleName();
+		String nomeClasseRetorno = FeedPersistencia.getInstance(context).getClass().getSimpleName();
 		assertEquals("FeedPersistencia", nomeClasseRetorno);
-
 	}
 
 	public void testWriteFeedFile() throws IOException, ClassNotFoundException {
@@ -46,7 +44,7 @@ public class FeedPersistenciaTeste extends AndroidTestCase {
 		FeedPersistencia.getInstance(getContext()).writeFeedFile(feed);
 		feedRead = FeedPersistencia.getInstance(getContext()).readFeedFile();
 
-		assertEquals("T�tulo esperado", "Teste de persistencia", feed.getItem(0).getTitle());
+		assertEquals("Título esperado", "Teste de persistencia", feed.getItem(0).getTitle());
 		assertEquals("Categoria esperada", "teste", feed.getItem(0).getCategory());
 		assertEquals("Data esperada", "18/02", feed.getItem(0).getDate());
 		assertEquals("Link esperado", "www.noticias.gov", feed.getItem(0).getLink());
