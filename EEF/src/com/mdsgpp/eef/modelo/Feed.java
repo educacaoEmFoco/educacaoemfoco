@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 public class Feed implements Serializable {
+
 	// Default serial id
 	private static final long serialVersionUID = 1L;
 	
@@ -35,6 +36,5 @@ public class Feed implements Serializable {
 	
 	public void reset() {
 		this.items.clear();
-	}
-	
+	}	
 }
