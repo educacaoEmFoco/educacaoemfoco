@@ -1,6 +1,5 @@
 package com.mdsgpp.eef.testes;
 
-
 import android.test.AndroidTestCase;
 
 import com.mdsgpp.eef.modelo.Censo;
@@ -10,8 +9,8 @@ public class CensoTeste extends AndroidTestCase {
 
 	private Censo censo;
 	private Estado estado;
-	private double anosIniciaisFundamental, anosFinaisFundamental, 
-		ensinoMedio, fundamentalEJA, medioEJA;
+	private double anosIniciaisFundamental, anosFinaisFundamental, ensinoMedio, fundamentalEJA, 
+		medioEJA;
 	private int ano;
 	
 	public void setUp() throws Exception {
@@ -31,10 +30,11 @@ public class CensoTeste extends AndroidTestCase {
 	}
 	
 	public void testConstrutorCheio() {
-		Censo censoConstruido = new Censo(this.anosIniciaisFundamental, this.anosFinaisFundamental, this.ensinoMedio,
-				this.fundamentalEJA, this.medioEJA);
+		Censo censoConstruido = new Censo(this.anosIniciaisFundamental, this.anosFinaisFundamental, 
+			this.ensinoMedio, this.fundamentalEJA, this.medioEJA);
 		
-		assertEquals(this.anosIniciaisFundamental, censoConstruido.getAnosIniciaisFundamental(), 0.0);
+		assertEquals(this.anosIniciaisFundamental, censoConstruido.getAnosIniciaisFundamental(), 
+			0.0);
 		assertEquals(this.anosFinaisFundamental, censoConstruido.getAnosFinaisFundamental(), 0.0);
 		assertEquals(this.ensinoMedio, censoConstruido.getEnsinoMedio(), 0.0);
 		assertEquals(this.fundamentalEJA, censoConstruido.getFundamentalEJA(), 0.0);
