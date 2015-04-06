@@ -1,4 +1,4 @@
-	package com.mdsgpp.eef.modelo;
+package com.mdsgpp.eef.modelo;
 
 public class Ideb {
 
@@ -11,7 +11,7 @@ public class Ideb {
 	public Ideb() {
 	}
 	
-	public Ideb(double fundamental, double medio, double iniciais){
+	public Ideb(double fundamental, double medio, double iniciais) {
 		this.fundamental = fundamental;
 		this.medio = medio;
 		this.seriesIniciais = iniciais;
