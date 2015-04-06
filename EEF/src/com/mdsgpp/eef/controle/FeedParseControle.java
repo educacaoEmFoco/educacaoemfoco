@@ -14,9 +14,13 @@ public class FeedParseControle {
 	}
 	
 	public static FeedParseControle getInstance() {
-		if (instancia == null) {
+		if(instancia == null) {
 			instancia = new FeedParseControle();
 		}
+		else {
+			// Nothing to do.
+		}
+		
 		return instancia;
 	}
 
@@ -38,6 +42,5 @@ public class FeedParseControle {
 	
 	public Noticias getItem() {
 		return this.item;
-	}
-	
+	}	
 }
