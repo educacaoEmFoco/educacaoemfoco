@@ -1,16 +1,14 @@
 package com.mdsgpp.eef.testes;
 
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
-
 
 import android.test.AndroidTestCase;
 
 import com.mdsgpp.eef.parse.DadosParse;
 
-public class DadosParseTeste extends AndroidTestCase{
+public class DadosParseTeste extends AndroidTestCase {
 	
 	private HashMap<String, ArrayList<String[]>> informacoes;
 	private ArrayList<String[]> dados1;
@@ -193,7 +191,8 @@ public class DadosParseTeste extends AndroidTestCase{
 		
 		try {
 			estado = dadosParse.getEstado(0);
-		} catch (IOException e) {
+		} 
+		catch(IOException e) {
 			fail();
 		}
 		
@@ -221,7 +220,8 @@ public class DadosParseTeste extends AndroidTestCase{
 		
 		assertEquals("0", estado.get("valores_jovens_pesquisadores").get(0)[1]);
 
-		assertEquals("55,4400000000023", estado.get("valores_programa_primeiros_projetos").get(0)[1]);
+		assertEquals("55,4400000000023", 
+			estado.get("valores_programa_primeiros_projetos").get(0)[1]);
 		
 		assertEquals("22", estado.get("valores_projetos_apoio_pesquisa_cnpq").get(0)[1]);
 	}
