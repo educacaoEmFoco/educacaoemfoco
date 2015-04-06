@@ -1,6 +1,7 @@
 package com.mdsgpp.eef.modelo;
 
 public class Projeto {
+
 	private int quantidade;
 	private double valor;
 	private Estado estado;
@@ -39,7 +40,5 @@ public class Projeto {
 	
 	public void setAno(int ano){
 		this.ano = ano;
-	}
-
-	
+	}	
 }
