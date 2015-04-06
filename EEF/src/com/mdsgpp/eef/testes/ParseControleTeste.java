@@ -4,18 +4,15 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-
-
 import android.content.Context;
 import android.test.AndroidTestCase;
 
 import com.mdsgpp.eef.controle.ParseControle;
 
-public class ParseControleTeste extends AndroidTestCase{
+public class ParseControleTeste extends AndroidTestCase {
 	
 	private ParseControle parseControle;
-	private Context context;
-	
+	private Context context;	
 	private HashMap<String, ArrayList<String[]>> informacoes;
 	private ArrayList<String[]> dados1;
 	private ArrayList<String[]> dados2;
@@ -37,8 +34,8 @@ public class ParseControleTeste extends AndroidTestCase{
 
 	public void setUp() throws Exception {
 		context = getContext();
-		parseControle = new ParseControle(context);
-		
+
+		parseControle = new ParseControle(context);		
 		informacoes = new HashMap<String, ArrayList<String[]>>();
 		container = new ArrayList<String[]>();
 		dados1 = new ArrayList<String[]>();
@@ -195,16 +192,17 @@ public class ParseControleTeste extends AndroidTestCase{
 		assertNotNull(parseControle);
 	}
 	
-	public void testarSingleton(){
+	public void testarSingleton() {
 		assertNotNull(ParseControle.getInstancia(context));
 	}
 	
-	public void testarInformacoesParse(){
+	public void testarInformacoesParse() {
 		HashMap<String, ArrayList<String[]>> estado;
 		estado = null;
 		try {
 			estado = parseControle.getInformacoes(0);
-		} catch (IOException e) {
+		} 
+		catch(IOException e) {
 			fail();
 		}
 		
@@ -232,7 +230,8 @@ public class ParseControleTeste extends AndroidTestCase{
 		
 		assertEquals("0", estado.get("valores_jovens_pesquisadores").get(0)[1]);
 
-		assertEquals("55,4400000000023", estado.get("valores_programa_primeiros_projetos").get(0)[1]);
+		assertEquals("55,4400000000023", 
+			estado.get("valores_programa_primeiros_projetos").get(0)[1]);
 		
 		assertEquals("22", estado.get("valores_projetos_apoio_pesquisa_cnpq").get(0)[1]);
 	}
