@@ -32,14 +32,13 @@ public class FeedControle extends AsyncTask<String, Void, Feed> {
 	protected void onPreExecute() {
 		barraProgresso = new ProgressDialog(context, R.style.CustomProgressBar);
 		barraProgresso.setIndeterminate(true);
-		barraProgresso.setMessage("Carregando Not�cias!");
+		barraProgresso.setMessage("Carregando Notícias!");
 		barraProgresso.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
 		barraProgresso.show();
 		super.onPreExecute();
 	}
 
 	protected Feed doInBackground(String... urls) {
-
 		Feed feed = null;
 
 		try {
@@ -52,39 +51,49 @@ public class FeedControle extends AsyncTask<String, Void, Feed> {
 			this.updated = true;
 
 			return feed;
-
-		} catch (MalformedURLException e) {
+		} 
+		catch(MalformedURLException e) {
 			e.printStackTrace();
-		} catch (IOException e) {
+		} 
+		catch(IOException e) {
 			e.printStackTrace();
 		}
 
 		try {
 			feed = FeedPersistencia.getInstance(this.context).readFeedFile();
-		} catch (IOException e) {
+		} 
+		catch(IOException e) {
 			e.printStackTrace();
-		} catch (ClassNotFoundException e) {
+		} 
+		catch(ClassNotFoundException e) {
 			e.printStackTrace();
 		}
 
 		return feed;
-
 	}
 
 	// After the execution of the task
-	protected void onPostExecute(Feed feed) {
-		
-		if (barraProgresso != null) {
+	protected void onPostExecute(Feed feed) {		
+		if(barraProgresso != null) {
 			barraProgresso.dismiss();
 		}
+		else {
+			// Nothing to do.
+		}
 		
-		if (!this.updated) {
-			Toast.makeText(this.context, "N�o foi poss�vel atualizar as not�cias! :(",
-					Toast.LENGTH_LONG).show();
+		if(!this.updated) {
+			Toast.makeText(this.context, "Não foi possível atualizar as notícias! :(", 
+				Toast.LENGTH_LONG).show();
+		}
+		else {
+			// Nothing to do.
 		}
 
-		if (dataReceiver != null) {
+		if(dataReceiver != null) {
 			this.dataReceiver.receiveFeed(feed);
+		}
+		else {
+			// Nothing to do.
 		}
 	}
 }
