@@ -58,6 +58,5 @@ public class Noticias implements Serializable {
 	
 	public Feed getFeed() {
 		return this.feed;
-	}
-	
+	}	
 }
