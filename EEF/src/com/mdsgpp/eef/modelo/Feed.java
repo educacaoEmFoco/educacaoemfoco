@@ -26,14 +26,17 @@ public class Feed implements Serializable {
 		this.items = items;
 	}
 	
+	// This method adds a report in the array "items".
 	public void addItem(Noticias newItem) {
 		this.items.add(newItem);
 	}
 	
+	// This method returns the size of the array "items".
 	public int getItemsSize() {
 		return items.size();
 	}
 	
+	// This method clears the array "items"
 	public void reset() {
 		this.items.clear();
 	}	
