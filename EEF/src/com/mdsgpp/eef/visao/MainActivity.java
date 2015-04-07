@@ -25,8 +25,7 @@ public class MainActivity extends Activity {
     }	
         
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-    	
+    public boolean onOptionsItemSelected(MenuItem item) {    	
 		switch(item.getItemId()) {
     		case R.id.sobre:
     			abreTelaSobre();
@@ -38,25 +37,31 @@ public class MainActivity extends Activity {
     	return true;
     }
     
+    // Open the screen about.
     public void abreTelaSobre() {
     	Intent intent = new Intent(this, TelaSobre.class);
     	startActivity(intent);
     }
 
+    // Implements the action on button general comparation.
     public void clickBotaoComparacaoGeral(View view) {
     	Intent intent = new Intent(this, TelaComparacoesGerais.class);
 		startActivity(intent);
     }
     
+    // Implements the action on button general consultation.
     public void clickBotaoConsultaGeral(View view) {
     	Intent intent = new Intent(this, TelaListaEstado.class);
     	startActivity(intent);
     }
     
+    // Implements the action on button feed.
     public void clickBotaoFeed(View view) {
     	Intent intent = new Intent(this, TelaFeed.class);
     	startActivity(intent);
     }
+
+    // Implements the action on button consultation by indicatory.
     public void clickBotaoConsultaPorIndicativo(View view) {
     	Intent intent = new Intent(this, TelaConsultaPorIndicativo.class);
     	startActivity(intent);
