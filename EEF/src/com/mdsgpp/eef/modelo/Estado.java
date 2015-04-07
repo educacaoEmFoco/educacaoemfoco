@@ -412,7 +412,11 @@ public class Estado {
 		String[] nomesIndicativo) {
 		this.taxaDeAbandono = this.setMedia(informacoes, nomesIndicativo);
 	}
-
+	
+	/*
+	 * This method fills the variables of Estado class with
+	 * the information received.
+	 */
 	public void preencheDados(HashMap<String, ArrayList<String[]>> informacoes) {
 		String[] indicativosMediaHorasAula = {"horas_aula_ensino_fundamental", 
 			"horas_aula_ensino_medio"};
