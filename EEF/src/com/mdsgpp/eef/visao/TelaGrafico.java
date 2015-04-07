@@ -63,11 +63,13 @@ public class TelaGrafico extends Activity {
     	return true;
 	}
 	
+	// This method start the intent that leads to the TelaSobreGrafico screen.
 	public void abreTelaSobre() {
 		Intent intent = new Intent(this, TelaSobreGrafico.class);
     	startActivity(intent);
 	}
 	
+	// This method takes the information from the previous Activity.
 	@SuppressWarnings({"unchecked"})
 	private void capturaInformacoes() {
 		inicializaCamposTexto();
@@ -101,6 +103,7 @@ public class TelaGrafico extends Activity {
 		}
 	}
 	
+	// This method generates the chart.
 	private void criaGrafico(HashMap<String, String> informacoesEstado1,
 			HashMap<String, String> informacoesEstado2) {
 		
@@ -124,7 +127,8 @@ public class TelaGrafico extends Activity {
         
         grafico.setBars(barras);
 	}
-
+	
+	// This method converts the data.
 	private void converteDados(HashMap<String, String> informacoesEstado1,
 			HashMap<String, String> informacoesEstado2) {
 		
@@ -143,7 +147,8 @@ public class TelaGrafico extends Activity {
 		valorIndicativoEstado1 = Float.parseFloat(estado1IndicativoString);
 		valorIndicativoEstado2 = Float.parseFloat(estado2IndicativoString);
 	}
-
+	
+	// This method starts the TextView tituloGrafico.
 	private void inicializaCamposTexto() {
 		tituloGrafico = (TextView) findViewById(R.id.text_view_titulo_grafico);		
 	}
