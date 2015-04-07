@@ -102,6 +102,7 @@ public class IndicativoAdapter extends BaseAdapter {
 		return view;
 	}
 	
+	// Split the line whe it contains an ":".
 	private String pegaValor(String linha) {
 		if(linha.contains(":")) {
 			String partes[] = linha.split(": ");
