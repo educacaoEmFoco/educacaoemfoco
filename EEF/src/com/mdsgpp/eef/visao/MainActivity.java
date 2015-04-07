@@ -43,7 +43,7 @@ public class MainActivity extends Activity {
     	startActivity(intent);
     }
 
-    // Implements the action on button general comparation.
+    // Implements the action on button general compararison.
     public void clickBotaoComparacaoGeral(View view) {
     	Intent intent = new Intent(this, TelaComparacoesGerais.class);
 		startActivity(intent);

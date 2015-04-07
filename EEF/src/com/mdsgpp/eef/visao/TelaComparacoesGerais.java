@@ -25,9 +25,8 @@ public class TelaComparacoesGerais extends Activity {
 		return true;
 	}
 	
-    public boolean onOptionsItemSelected(MenuItem item) {
-    	
-		switch (item.getItemId()) {
+    public boolean onOptionsItemSelected(MenuItem item) {    	
+		switch(item.getItemId()) {
 			case R.id.sobre:
 				abreTelaSobre();
 				break;
@@ -42,16 +41,19 @@ public class TelaComparacoesGerais extends Activity {
     	return true;
     }
     
+    // Open screen about.
     public void abreTelaSobre() {
     	Intent intent = new Intent(this, TelaSobreComparacoesGerais.class);
     	startActivity(intent);
     }
 	
+	// Implements action on button compararison.
 	public void clickBotaoComparacao(View view) {
 		Intent intent = new Intent(this, TelaComparacao.class);
 		startActivity(intent);
 	}
 	
+	// Implements action on button indicatives.
 	public void clickBotaoIndicativos(View view) {
 		Intent intent = new Intent(this, TelaConsultaPorIndicativo.class);
 		startActivity(intent);
