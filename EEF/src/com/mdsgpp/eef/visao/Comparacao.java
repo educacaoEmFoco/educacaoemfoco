@@ -15,6 +15,7 @@ import android.widget.AdapterView.OnItemSelectedListener;
 import com.mdsgpp.eef.R;
 
 public abstract class Comparacao extends Activity {
+
 	private Spinner estadosSpinner01;
 	private Spinner estadosSpinner;
 	private ArrayAdapter<String> estadosAdapter01;
@@ -94,7 +95,7 @@ public abstract class Comparacao extends Activity {
 		estadosSpinner.setAdapter(estadosAdapter02);
 	}
 
-	// Fill the array estados with the list of states.
+	// Fill the array estados with the name of all brazilian states.
 	private ArrayList<String> preencheEstados(ArrayList<String> estados) {
 		estados.clear();
 
@@ -147,6 +148,7 @@ public abstract class Comparacao extends Activity {
 		estadosSpinner.setSelection(estados02.indexOf(estadoSelecionado));
 	}
 
+	// When button ComparacaoEstados is clicked triger a new screen.
 	public abstract void clickBotaoComparacaoEstados(View view);
 	
 	// Implements the action of button to start comparation.
