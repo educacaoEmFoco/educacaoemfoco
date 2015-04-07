@@ -45,12 +45,13 @@ public abstract class EscolheIndicativo extends Activity {
     	return true;
 	}
 	
+	// Open the screen about.
 	public abstract void abreTelaSobre();
 	
 	// Get the radioButton clicked to refresh information.
 	public void onRadioButtonClicked(View view) {
 
-		switch (view.getId()) {
+		switch(view.getId()) {
 			case R.id.radio_apoio_cnpq_investimento:
 				setValores("valor_projetos_cnpq", "Projetos de Pesquisa Apoio CNPq (R$)");
 				break;
@@ -155,7 +156,7 @@ public abstract class EscolheIndicativo extends Activity {
 				setValores("censo_eja_medio", "Censo Escolar do EJA - Médio (Matriculados)");
 				break;
 			default:
-				// Do nothing.
+				// Nothing to do.
 		}
 	}
 
@@ -164,6 +165,7 @@ public abstract class EscolheIndicativo extends Activity {
 		setTitulo(titulo);
 	}
 
+	// Implements the action on next button.
 	public abstract void clickBotaoAvancar(View view);
 
 	public String getIndicativo() {
