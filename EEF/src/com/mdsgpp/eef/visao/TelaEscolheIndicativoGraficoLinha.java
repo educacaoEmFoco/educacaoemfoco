@@ -68,12 +68,14 @@ public class TelaEscolheIndicativoGraficoLinha extends Activity {
     	return true;
 	}
 	
+	// Open the screen about.
 	public void abreTelaSobre() {
 		Intent intent = new Intent(this,
 			TelaSobreEscolheIndicativoGraficoComparacao.class);
     	startActivity(intent);
 	}	
 
+	// Get wich option on raddio button is selected.
 	public void onRadioButtonClicked(View view) {
 		int max;
 		int tamanho;
@@ -432,7 +434,7 @@ public class TelaEscolheIndicativoGraficoLinha extends Activity {
 		}
 	}
 
-
+	// Get the informations about the selected state.
 	private Estado capturaInformacoesEstado() {
 		Estado estado1 = null;
 		
@@ -447,7 +449,7 @@ public class TelaEscolheIndicativoGraficoLinha extends Activity {
 		return estado1;
 	}
 
-
+	// Implements the action on button next.
 	public void clickBotaoAvancar(View view) {
 		Intent intent = new Intent(this, TelaGraficoLinha.class);
 		ArrayList<String> temp = new ArrayList<String>();
