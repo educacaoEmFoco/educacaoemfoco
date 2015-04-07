@@ -68,6 +68,7 @@ public class TelaEscolheIndicativoGraficoComparacao extends EscolheIndicativo {
 		escondeRadioButtons();
 	}
 	
+	// Get information about the compared states.
 	public void capturaInformacoes() {
 		Intent intentRecebida = getIntent();
 		
@@ -98,6 +99,7 @@ public class TelaEscolheIndicativoGraficoComparacao extends EscolheIndicativo {
 		
 	}
 	
+	// Inicialize all radio buttons on screen.
 	public void inicializaRadioButtons() {
 		rbIdebIniciais = (RadioButton) findViewById
 			(R.id.radio_ideb_fundamental_iniciai);
@@ -159,11 +161,13 @@ public class TelaEscolheIndicativoGraficoComparacao extends EscolheIndicativo {
 		
 	}
 	
+	// Allow the buttons to be viewed or not.
 	public void setVisibility(RadioButton radioButton, boolean visibilidade) {
 		int valorVisibilidade = (visibilidade) ? View.VISIBLE : View.GONE;
 		radioButton.setVisibility(valorVisibilidade);
 	}
 	
+	// Hide radio buttons when the information is not available.
 	public void escondeRadioButtons() {
 		setVisibility(rbIdebIniciais, bIdeb);
 		setVisibility(rbIdebFinais, bIdeb);
@@ -197,6 +201,7 @@ public class TelaEscolheIndicativoGraficoComparacao extends EscolheIndicativo {
 		setVisibility(rbCensoEJAMedio, bCenso);
 	}
 	
+	// Implements the action on button next.
 	public void clickBotaoAvancar(View view) {
 		Intent intent = new Intent(this, TelaGrafico.class);
 		
@@ -208,6 +213,7 @@ public class TelaEscolheIndicativoGraficoComparacao extends EscolheIndicativo {
 		startActivity(intent);		
 	}
     
+    // Open the screen about.
     public void abreTelaSobre() {
     	Intent intent = new Intent(this, 
     		TelaSobreEscolheIndicativoGraficoComparacao.class);
