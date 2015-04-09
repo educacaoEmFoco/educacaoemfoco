@@ -35,11 +35,13 @@ public class EstadoControle {
 
 		return instancia;
 	}
-
+	
 	public Estado obterEstado(int posicao) throws IOException {
-		informacoesParse = ParseControle.getInstancia(context).getInformacoes(posicao);
+		informacoesParse = ParseControle.getInstancia(context).getInformacoes
+			(posicao);
 		String nomeSigla[] = informacoesParse.get("nome_e_sigla").get(0);
-		Estado estado = new Estado(nomeSigla[0], nomeSigla[1], informacoesParse);
+		Estado estado = new Estado(nomeSigla[0], nomeSigla[1],
+			informacoesParse);
 
 		escreveEstadoComTodasInformacoes(estado);
 
@@ -47,19 +49,24 @@ public class EstadoControle {
 	}
 	
 	public HashMap<String, String> lerEstado(int posicao) throws IOException {
-		informacoesParse = ParseControle.getInstancia(context).getInformacoes(posicao);
+		informacoesParse = ParseControle.getInstancia(context).getInformacoes
+			(posicao);
 		String nomeSigla[] = informacoesParse.get("nome_e_sigla").get(0);
-		Estado estado = new Estado(nomeSigla[0], nomeSigla[1], informacoesParse);
+		Estado estado = new Estado(nomeSigla[0], nomeSigla[1],
+			informacoesParse);
 
 		escreveEstado(estado);
 
 		return this.informacoesEstado;
 	}
 
-	public HashMap<String, String> lerEstadoCompleto(int posicao) throws IOException {
-		informacoesParse = ParseControle.getInstancia(context).getInformacoes(posicao);
+	public HashMap<String, String> lerEstadoCompleto(int posicao) throws
+		IOException {
+		informacoesParse = ParseControle.getInstancia(context).getInformacoes
+			(posicao);
 		String nomeSigla[] = informacoesParse.get("nome_e_sigla").get(0);
-		Estado estado = new Estado(nomeSigla[0], nomeSigla[1], informacoesParse);
+		Estado estado = new Estado(nomeSigla[0], nomeSigla[1],
+			informacoesParse);
 
 		escreveEstadoComTodasInformacoes(estado);
 
@@ -73,98 +80,114 @@ public class EstadoControle {
 			dfPorcentagem.format(estado.getParticipacaoPercentualPIB()[estado
 				.getParticipacaoPercentualPIB().length - 1]) + "%");
 		this.informacoesEstado.put("projetos_ciencia_tecnologia", "Quantidade: " 
-			+ estado.getProjetosCienciaTecnologia()[estado.getProjetosCienciaTecnologia().length 
-			- 1].getQuantidade() + " projetos");
-		this.informacoesEstado.put("valor_ciencia_tecnologia", "Valor investido: R$ " 
-			+ dfValor.format(estado.getProjetosCienciaTecnologia()[estado
-				.getProjetosCienciaTecnologia().length - 1].getValor()) + " (em mil)");
-		this.informacoesEstado.put("ideb_fundamental_final", "Ensino Fundamental (séries finais): " 
-			+ dfPorcentagem.format(estado.getIdebs()[estado.getIdebs().length - 1]
-				.getFundamental()));
-		this.informacoesEstado.put("ideb_ensino_medio", "Ensino Médio: " 
-			+ dfPorcentagem.format(estado.getIdebs()[estado.getIdebs().length - 1].getMedio()) 
-			+ "");
-		this.informacoesEstado.put("ideb_fundamental_inicial", 
-			"Ensino Fundamental (Séries iniciais): " 
-			+ dfPorcentagem.format(estado.getIdebs()[estado.getIdebs().length - 1]
-				.getSeriesIniciais()) + "");
-		this.informacoesEstado.put("quantidade_primeiros_projetos", "Quantidade: " 
-			+ estado.getPrimeirosProjetos()[estado.getPrimeirosProjetos().length - 1]
-			.getQuantidade() + " projetos");
-		this.informacoesEstado.put("valor_primeiros_projetos", "Valor investido: R$ " 
-			+ dfValor.format(estado.getPrimeirosProjetos()[estado.getPrimeirosProjetos().length - 1]
-				.getValor()) + " (em mil)");
-		this.informacoesEstado.put("quantidade_projeto_cnpq", "Quantidade: " 
-			+ estado.getProjetosApoioCnpq()[estado.getProjetosApoioCnpq().length - 1]
-			.getQuantidade() + " projetos");
-		this.informacoesEstado.put("valor_projetos_cnpq", "Valor investido: R$ " 
-			+ dfValor.format(estado.getProjetosApoioCnpq()[estado.getProjetosApoioCnpq().length 
-				- 1].getValor()) + " (em mil)");
-		this.informacoesEstado.put("quantidade_projeto_jovens_pesquisadores", "Quantidade: " 
-			+ estado.getProjetoJovensPesquisadores()[estado.getProjetoJovensPesquisadores().length 
-			- 1].getQuantidade() + " projetos");
-		this.informacoesEstado.put("valor_projetos_jovens_pesquisadores", "Valor investido: R$ " 
-			+ dfValor.format(estado.getProjetoJovensPesquisadores()[estado
-				.getProjetoJovensPesquisadores().length - 1].getValor()) + " (em mil)");
-		this.informacoesEstado.put("quantidade_projetos_inct", "Quantidade: " 
-			+ estado.getProjetosInct()[estado.getProjetosInct().length - 1].getQuantidade() 
+			+ estado.getProjetosCienciaTecnologia()
+			[estado.getProjetosCienciaTecnologia().length - 1].getQuantidade()
 			+ " projetos");
+		this.informacoesEstado.put("valor_ciencia_tecnologia",
+			"Valor investido: R$ " + dfValor.format
+			(estado.getProjetosCienciaTecnologia()
+			[estado.getProjetosCienciaTecnologia().length - 1].getValor()) + 
+			" (em mil)");
+		this.informacoesEstado.put("ideb_fundamental_final",
+			"Ensino Fundamental (séries finais): " + dfPorcentagem.format
+			(estado.getIdebs()[estado.getIdebs().length - 1].getFundamental()));
+		this.informacoesEstado.put("ideb_ensino_medio", "Ensino Médio: " 
+			+ dfPorcentagem.format(estado.getIdebs()[estado.getIdebs().length
+			- 1].getMedio()) + "");
+		this.informacoesEstado.put("ideb_fundamental_inicial", 
+			"Ensino Fundamental (Séries iniciais): " + dfPorcentagem.format
+			(estado.getIdebs()[estado.getIdebs().length - 1]
+			.getSeriesIniciais()) + "");
+		this.informacoesEstado.put("quantidade_primeiros_projetos",
+			"Quantidade: " + estado.getPrimeirosProjetos()
+			[estado.getPrimeirosProjetos().length - 1].getQuantidade() + 
+			" projetos");
+		this.informacoesEstado.put("valor_primeiros_projetos",
+			"Valor investido: R$ " + dfValor.format
+			(estado.getPrimeirosProjetos()[estado.getPrimeirosProjetos().length
+			- 1].getValor()) + " (em mil)");
+		this.informacoesEstado.put("quantidade_projeto_cnpq", "Quantidade: " 
+			+ estado.getProjetosApoioCnpq()[estado.getProjetosApoioCnpq().length
+			- 1].getQuantidade() + " projetos");
+		this.informacoesEstado.put("valor_projetos_cnpq", "Valor investido: R$ " 
+			+ dfValor.format(estado.getProjetosApoioCnpq()
+			[estado.getProjetosApoioCnpq().length - 1].getValor()) +
+			" (em mil)");
+		this.informacoesEstado.put("quantidade_projeto_jovens_pesquisadores",
+			"Quantidade: " + estado.getProjetoJovensPesquisadores()
+			[estado.getProjetoJovensPesquisadores().length - 1].getQuantidade()
+			+ " projetos");
+		this.informacoesEstado.put("valor_projetos_jovens_pesquisadores",
+			"Valor investido: R$ " + dfValor.format
+			(estado.getProjetoJovensPesquisadores()
+			[estado.getProjetoJovensPesquisadores().length - 1].getValor()) +
+			" (em mil)");
+		this.informacoesEstado.put("quantidade_projetos_inct", "Quantidade: " 
+			+ estado.getProjetosInct()[estado.getProjetosInct().length - 1]
+			.getQuantidade() + " projetos");
 		this.informacoesEstado.put("valor_projetos_inct", "Valor investido: R$ " 
-			+ dfValor.format(estado.getProjetosInct()[estado.getProjetosInct().length - 1]
-				.getValor()) + " (em mil)");
+			+ dfValor.format(estado.getProjetosInct()
+			[estado.getProjetosInct().length - 1].getValor()) + " (em mil)");
 		this.informacoesEstado.put("alunos_por_turma_ensino_fundamental", 
 			"Quantidade media de alunos por turma (Fundamental): " 
-			+ dfValor.format(estado.getMediaAlunosPorTurma()[estado.getMediaAlunosPorTurma().length 
-				- 1].getEnsinoFundamental()));
+			+ dfValor.format(estado.getMediaAlunosPorTurma()
+			[estado.getMediaAlunosPorTurma().length - 1].
+			getEnsinoFundamental()));
 		this.informacoesEstado.put("alunos_por_turma_ensino_medio", 
 			"Quantidade media de alunos por turma (Medio): " 
-			+ dfValor.format(estado.getMediaAlunosPorTurma()[estado.getMediaAlunosPorTurma().length 
-				- 1].getEnsinoMedio()));
+			+ dfValor.format(estado.getMediaAlunosPorTurma()
+			[estado.getMediaAlunosPorTurma().length - 1].getEnsinoMedio()));
 		this.informacoesEstado.put("horas_aula_ensino_fundamental", 
 			"Quantidade media de horas de aula(Fundamental): " 
-			+ dfValor.format(estado.getMediaHorasAula()[estado.getMediaHorasAula().length - 1]
-				.getEnsinoFundamental()));
+			+ dfValor.format(estado.getMediaHorasAula()
+			[estado.getMediaHorasAula().length - 1].getEnsinoFundamental()));
 		this.informacoesEstado.put("horas_aula_ensino_medio", 
 			"Quantidade media de horas de aula (Medio): " 
-			+ dfValor.format(estado.getMediaHorasAula()[estado.getMediaHorasAula().length - 1]
-				.getEnsinoMedio()));
+			+ dfValor.format(estado.getMediaHorasAula()
+			[estado.getMediaHorasAula().length - 1].getEnsinoMedio()));
 		this.informacoesEstado.put("taxa_distorcao_fundamental", 
 			"Quantidade de Distorção da Idade(Fundamental): " 
-			+ dfPorcentagem.format(estado.getTaxaDistorcaoIdadeSerie()[estado
-				.getTaxaDistorcaoIdadeSerie().length - 1].getEnsinoFundamental()));
+			+ dfPorcentagem.format(estado.getTaxaDistorcaoIdadeSerie()
+			[estado.getTaxaDistorcaoIdadeSerie().length - 1]
+			.getEnsinoFundamental()));
 		this.informacoesEstado.put("taxa_distorcao_medio", 
 			"Quantidade de Distorção da Idade (Medio): " 
 			+ dfPorcentagem.format(estado.getTaxaDistorcaoIdadeSerie()[estado
 				.getTaxaDistorcaoIdadeSerie().length - 1].getEnsinoMedio()));
-		this.informacoesEstado.put("taxa_aprovacao_fundamental", "Taxa de Aprovação (Fundamental): " 
-			+ dfPorcentagem.format(estado.getTaxaDeAproveitamento()[estado.getTaxaDeAproveitamento()
-				.length - 1].getEnsinoFundamental()));
-		this.informacoesEstado.put("taxa_aprovacao_medio", "Taxa de Aprovação (Medio): " 
-			+ dfPorcentagem.format(estado.getTaxaDeAproveitamento()[estado.getTaxaDeAproveitamento()
-				.length - 1].getEnsinoMedio()));
-		this.informacoesEstado.put("taxa_abandono_fundamental", "Taxa de Abandono (Fundamental): " 
-			+ dfPorcentagem.format(estado.getTaxaDeAbandono()[estado.getTaxaDeAbandono().length - 1]
-				.getEnsinoFundamental()));
-		this.informacoesEstado.put("taxa_abandono_medio", "Taxa de Abandono (Medio): " 
-			+ dfPorcentagem.format(estado.getTaxaDeAbandono()[estado.getTaxaDeAbandono().length - 1]
-				.getEnsinoMedio()));
+		this.informacoesEstado.put("taxa_aprovacao_fundamental", 
+			"Taxa de Aprovação (Fundamental): " + dfPorcentagem.format
+			(estado.getTaxaDeAproveitamento()[estado.getTaxaDeAproveitamento()
+			.length - 1].getEnsinoFundamental()));
+		this.informacoesEstado.put("taxa_aprovacao_medio",
+			"Taxa de Aprovação (Medio): " + dfPorcentagem.format
+			(estado.getTaxaDeAproveitamento()[estado.getTaxaDeAproveitamento()
+			.length - 1].getEnsinoMedio()));
+		this.informacoesEstado.put("taxa_abandono_fundamental",
+			"Taxa de Abandono (Fundamental): " + dfPorcentagem.format
+			(estado.getTaxaDeAbandono()[estado.getTaxaDeAbandono().length - 1]
+			.getEnsinoFundamental()));
+		this.informacoesEstado.put("taxa_abandono_medio",
+			"Taxa de Abandono (Medio): " + dfPorcentagem.format
+			(estado.getTaxaDeAbandono()[estado.getTaxaDeAbandono().length - 1]
+			.getEnsinoMedio()));
 		this.informacoesEstado.put("censo_anos_iniciais_fundamental", 
 			"Censo Anos Iniciais (Fundamental): " 
-			+ dfPorcentagem.format(estado.getCensos()[estado.getCensos().length - 1]
-				.getAnosIniciaisFundamental()));
+			+ dfPorcentagem.format(estado.getCensos()[estado.getCensos().length
+			- 1].getAnosIniciaisFundamental()));
 		this.informacoesEstado.put("censo_anos_finais_fundamental", 
 			"Censo Anos Finais (Fundamental): " 
-			+ dfPorcentagem.format(estado.getCensos()[estado.getCensos().length - 1]
-				.getAnosFinaisFundamental()));
+			+ dfPorcentagem.format(estado.getCensos()[estado.getCensos().length
+			- 1].getAnosFinaisFundamental()));
 		this.informacoesEstado.put("censo_ensino_medio", "Censo Ensino Médio: " 
-			+ dfPorcentagem.format(estado.getCensos()[estado.getCensos().length - 1]
-				.getEnsinoMedio()));
-		this.informacoesEstado.put("censo_eja_fundamental", "Censo EJA (Fundamental): " 
-			+ dfPorcentagem.format(estado.getCensos()[estado.getCensos().length - 1]
-				.getFundamentalEJA()));
+			+ dfPorcentagem.format(estado.getCensos()[estado.getCensos().length
+			- 1].getEnsinoMedio()));
+		this.informacoesEstado.put("censo_eja_fundamental",
+			"Censo EJA (Fundamental): " + dfPorcentagem.format
+			(estado.getCensos()[estado.getCensos().length - 1]
+			.getFundamentalEJA()));
 		this.informacoesEstado.put("censo_eja_medio", "Censo EJA (Medio): " 
-			+ dfPorcentagem.format(estado.getCensos()[estado.getCensos().length - 1]
-				.getMedioEJA()));
+			+ dfPorcentagem.format(estado.getCensos()[estado.getCensos().length
+			- 1].getMedioEJA()));
 	}
 
 	private void escreveEstadoComTodasInformacoes(Estado estado) {
@@ -172,20 +195,23 @@ public class EstadoControle {
 
 		PreencherNomeSiglaEPopulacao(estado);
 
-		for(int i = 0, ano = 1995; i < estado.getParticipacaoPercentualPIB().length; i++, ano++) {
-			temp += ano + ": " + dfPorcentagem.format(estado.getParticipacaoPercentualPIB()[i]) 
+		for(int i = 0, ano = 1995; i < estado.getParticipacaoPercentualPIB()
+			.length; i++, ano++) {
+			temp += ano + ": " + dfPorcentagem.format
+				(estado.getParticipacaoPercentualPIB()[i]) 
 				+ "%\n";
 		}
 
 		this.informacoesEstado.put("percentual_participacao_pib", temp);
 		temp = "";
 
-		for(int i = 0, ano = 2003; i < estado.getProjetosCienciaTecnologia().length-1; i++, ano++) {
+		for(int i = 0, ano = 2003; i < estado.getProjetosCienciaTecnologia()
+			.length-1; i++, ano++) {
 			temp += ano + ": " + "Quantidade: " 
-				+ estado.getProjetosCienciaTecnologia()[i].getQuantidade() + " projetos\n" + "\t\t " 
-				+ "  Valor investido: R$ " 
-				+ dfValor.format(estado.getProjetosCienciaTecnologia()[i].getValor()) 
-				+ " (em mil)\n\n";
+				+ estado.getProjetosCienciaTecnologia()[i].getQuantidade() +
+				" projetos\n" + "\t\t " + "  Valor investido: R$ " 
+				+ dfValor.format(estado.getProjetosCienciaTecnologia()[i]
+				.getValor()) + " (em mil)\n\n";
 		}
 
 		this.informacoesEstado.put("projetos_ciencia_tecnologia", temp);
@@ -193,104 +219,126 @@ public class EstadoControle {
 
 		for(int i = 0, ano = 2005; i < estado.getIdebs().length; i++, ano += 2) {
 			temp += ano + ": " + "Ensino Fundamental (séries finais): " 
-				+ dfPorcentagem.format(estado.getIdebs()[i].getFundamental()) + "\n" + "\t\t  " 
-				+ "Ensino Médio: " + dfPorcentagem.format(estado.getIdebs()[i].getMedio()) + "\n" 
-				+ "\t\t  " + "Ensino Fundamental (Séries iniciais): " 
-				+ dfPorcentagem.format(estado.getIdebs()[i].getSeriesIniciais()) + "\n\n";
+				+ dfPorcentagem.format(estado.getIdebs()[i].getFundamental()) +
+				"\n" + "\t\t  " + "Ensino Médio: " + dfPorcentagem.format
+				(estado.getIdebs()[i].getMedio()) + "\n" + "\t\t  " +
+				"Ensino Fundamental (Séries iniciais): " + dfPorcentagem.format
+				(estado.getIdebs()[i].getSeriesIniciais()) + "\n\n";
 		}
 
 		this.informacoesEstado.put("ideb", temp);
 		temp = "";
 
-		for(int i = 0, ano = 2007; i < estado.getPrimeirosProjetos().length-1; i++, ano++) {
-			temp += ano + ": " + "Quantidade: " + estado.getPrimeirosProjetos()[i].getQuantidade() 
-				+ " projetos\n" + "\t\t  " + "Valor investido: R$ " 
-				+ dfValor.format(estado.getPrimeirosProjetos()[estado.getPrimeirosProjetos().length 
-					- 1].getValor()) + " (em mil)\n\n";
+		for(int i = 0, ano = 2007; i < estado.getPrimeirosProjetos().length-1;
+			i++, ano++) {
+			temp += ano + ": " + "Quantidade: " + estado.
+				getPrimeirosProjetos()[i].getQuantidade() + " projetos\n" +
+				"\t\t  " + "Valor investido: R$ " + dfValor.format
+				(estado.getPrimeirosProjetos()[estado.getPrimeirosProjetos()
+				.length - 1].getValor()) + " (em mil)\n\n";
 		}
 
 		this.informacoesEstado.put("primeiros_projetos", temp);
 		temp = "";
 
-		for(int i = 0, ano = 2001; i < estado.getProjetosApoioCnpq().length-1; i++, ano++) {
-			temp += ano + ": " + "Quantidade: " + estado.getProjetosApoioCnpq()[i].getQuantidade() 
-				+ " projetos\n" + "\t\t  " + "Valor investido: R$ " 
-				+ dfValor.format(estado.getProjetosApoioCnpq()[i].getValor()) + " (em mil)\n\n";
+		for(int i = 0, ano = 2001; i < estado.getProjetosApoioCnpq().length-1;
+			i++, ano++) {
+			temp += ano + ": " + "Quantidade: " + estado.
+				getProjetosApoioCnpq()[i].getQuantidade() + " projetos\n" +
+				"\t\t  " + "Valor investido: R$ " + dfValor.format
+				(estado.getProjetosApoioCnpq()[i].getValor()) + " (em mil)\n\n";
 		}
 
 		this.informacoesEstado.put("cnpq", temp);
 		temp = "";
 
-		for(int i = 0, ano = 2005; i < estado.getProjetoJovensPesquisadores().length - 1; i++, 
-			ano++) {
-			temp += ano + ": " + "Quantidade: " 
-				+ estado.getProjetoJovensPesquisadores()[i].getQuantidade() + " projetos\n" 
-				+ "\t\t  " + "Valor investido: R$ " 
-				+ dfValor.format(estado.getProjetoJovensPesquisadores()[i].getValor()) 
-				+ " (em mil)\n\n";
+		for(int i = 0, ano = 2005; i < estado.getProjetoJovensPesquisadores().
+			length - 1; i++, ano++) {
+			temp += ano + ": " + "Quantidade: " + estado
+				.getProjetoJovensPesquisadores()[i].getQuantidade() +
+				" projetos\n" + "\t\t  " + "Valor investido: R$ " +
+				dfValor.format(estado.getProjetoJovensPesquisadores()[i].
+				getValor()) + " (em mil)\n\n";
 		}
 
 		this.informacoesEstado.put("jovens_pesquisadores", temp);
 		temp = "";
 
-		for(int i = 0, ano = 2008; i < estado.getProjetosInct().length-1; i++, ano++) {
-			temp += ano + ": " + "Quantidade: " + estado.getProjetosInct()[i].getQuantidade() 
-				+ " projetos\n" + "\t\t  " + "Valor investido: R$ " 
-				+ dfValor.format(estado.getProjetosInct()[i].getValor()) + " (em mil)\n\n";
+		for(int i = 0, ano = 2008; i < estado.getProjetosInct().length-1;
+			i++, ano++) {
+			temp += ano + ": " + "Quantidade: " + estado.getProjetosInct()[i]
+				.getQuantidade() + " projetos\n" + "\t\t  " + 
+				"Valor investido: R$ " + dfValor.format
+				(estado.getProjetosInct()[i].getValor()) + " (em mil)\n\n";
 		}
 
 		this.informacoesEstado.put("projetos_inct", temp);
 		temp = "";
 
-		for(int i = 0, ano = 2007; i < estado.getMediaAlunosPorTurma().length; i++, ano++) {
-			temp += ano + ": " + "Quantidade media de alunos por turma (Fundamental): " 
-				+ dfValor.format(estado.getMediaAlunosPorTurma()[i].getEnsinoFundamental()) + "\n" 
-				+ "Quantidade media de alunos por turma (Medio): " 
-				+ dfValor.format(estado.getMediaAlunosPorTurma()[i].getEnsinoMedio()) + "\n\n";
+		for(int i = 0, ano = 2007; i < estado.getMediaAlunosPorTurma().length;
+			i++, ano++) {
+			temp += ano + ": " + 
+				"Quantidade media de alunos por turma (Fundamental): " +
+				dfValor.format(estado.getMediaAlunosPorTurma()[i].
+				getEnsinoFundamental()) + "\n" +
+				"Quantidade media de alunos por turma (Medio): " + dfValor.
+				format(estado.getMediaAlunosPorTurma()[i].getEnsinoMedio()) + 
+				"\n\n";
 		}
 
 		this.informacoesEstado.put("alunos_por_turma_ensino_medio", temp);
 		temp = "";
 
-		for(int i = 0, ano = 2007; i < estado.getMediaAlunosPorTurma().length; i++, ano++) {
-			temp += ano + ": " + "Quantidade media de horas de aula(Fundamental): " 
-				+ dfValor.format(estado.getMediaHorasAula()[estado.getMediaHorasAula().length - 1]
-					.getEnsinoFundamental()) + "\n" + "Quantidade media de horas de aula (Medio): " 
-				+ dfValor.format(estado.getMediaHorasAula()[estado.getMediaHorasAula().length - 1]
-					.getEnsinoMedio()) + "\n\n";
+		for(int i = 0, ano = 2007; i < estado.getMediaAlunosPorTurma().length; 
+			i++, ano++) {
+			temp += ano + ": " +
+				"Quantidade media de horas de aula(Fundamental): " + dfValor.
+				format(estado.getMediaHorasAula()[estado.getMediaHorasAula()
+				.length - 1].getEnsinoFundamental()) + "\n" +
+				"Quantidade media de horas de aula (Medio): " + dfValor.format
+				(estado.getMediaHorasAula()[estado.getMediaHorasAula().length -
+				1].getEnsinoMedio()) + "\n\n";
 		}
 
 		this.informacoesEstado.put("horas_aula_ensino_medio", temp);
 		temp = "";
 
-		for(int i = 0, ano = 2006; i < estado.getTaxaDistorcaoIdadeSerie().length; i++, ano++) {
-			temp += ano + ": " + "Quantidade de Distorção da Idade(Fundamental): " 
-				+ dfPorcentagem.format(estado.getTaxaDistorcaoIdadeSerie()[i]
-					.getEnsinoFundamental()) 
+		for(int i = 0, ano = 2006; i < estado.getTaxaDistorcaoIdadeSerie()
+			.length; i++, ano++) {
+			temp += ano + ": " + 
+				"Quantidade de Distorção da Idade(Fundamental): " +
+				dfPorcentagem.format(estado.getTaxaDistorcaoIdadeSerie()[i]
+				.getEnsinoFundamental()) 
 				+ "\n" + "Quantidade de Distorção da Idade (Medio): " 
-				+ dfPorcentagem.format(estado.getTaxaDistorcaoIdadeSerie()[i].getEnsinoMedio()) 
-				+ "\n\n";
+				+ dfPorcentagem.format(estado.getTaxaDistorcaoIdadeSerie()[i]
+				.getEnsinoMedio()) + "\n\n";
 		}
 
 		this.informacoesEstado.put("taxa_distorcao", temp);
 		temp = "";
 
-		for(int i = 0, ano = 2007; i < estado.getTaxaDeAproveitamento().length; i++, ano++) {
+		for(int i = 0, ano = 2007; i < estado.getTaxaDeAproveitamento().length;
+			i++, ano++) {
 			temp += ano + ": " + "Taxa de Aprovação (Fundamental): " 
-				+ dfPorcentagem.format(estado.getTaxaDeAproveitamento()[i].getEnsinoFundamental()) 
-				+ "\n" + "\t\t  " + "Taxa de Aprovação (Medio): " 
-				+ dfPorcentagem.format(estado.getTaxaDeAproveitamento()[i].getEnsinoMedio()) 
+				+ dfPorcentagem.format(estado.getTaxaDeAproveitamento()[i].
+					getEnsinoFundamental()) + "\n" + "\t\t  " +
+				"Taxa de Aprovação (Medio): " 
+				+ dfPorcentagem.format(estado.getTaxaDeAproveitamento()[i]
+				.getEnsinoMedio()) 
 				+ "\n\n";
 		}
 
 		this.informacoesEstado.put("taxa_aprovacao", temp);
 		temp = "";
 
-		for(int i = 0, ano = 2007; i < estado.getTaxaDeAbandono().length; ano++, i++) {
+		for(int i = 0, ano = 2007; i < estado.getTaxaDeAbandono().length; ano++,
+			i++) {
 			temp += ano + ": " + "Taxa de Abandono (Fundamental): " 
-				+ dfPorcentagem.format(estado.getTaxaDeAbandono()[i].getEnsinoFundamental()) + "\n" 
-				+ "\t\t  " + "Taxa de Abandono (Medio): " 
-				+ dfPorcentagem.format(estado.getTaxaDeAbandono()[i].getEnsinoMedio()) + "\n\n";
+				+ dfPorcentagem.format(estado.getTaxaDeAbandono()[i]
+				.getEnsinoFundamental()) + "\n" + "\t\t  " +
+				"Taxa de Abandono (Medio): " 
+				+ dfPorcentagem.format(estado.getTaxaDeAbandono()[i]
+				.getEnsinoMedio()) + "\n\n";
 		}
 
 		this.informacoesEstado.put("taxa_abandono", temp);
@@ -298,16 +346,16 @@ public class EstadoControle {
 
 		for(int i = 0, ano = 2010; i < estado.getCensos().length; ano++, i++) {
 			temp += ano + ": " + "Censo Anos Iniciais (Fundamental): " 
-				+ dfPorcentagem.format(estado.getCensos()[i].getAnosIniciaisFundamental()) + "\n" 
-				+ "\t\t  " + "Censo Anos Finais (Fundamental): " 
-				+ dfPorcentagem.format(estado.getCensos()[i].getAnosFinaisFundamental()) + "\n" 
-				+ "\t\t  " + "Censo Ensino Médio: " 
-				+ dfPorcentagem.format(estado.getCensos()[i].getEnsinoMedio()) + "\n" + "\t\t  " 
-				+ "Censo EJA (Fundamental): " 
-				+ dfPorcentagem.format(estado.getCensos()[i].getFundamentalEJA()) + "\n" + "\t\t  " 
-				+ "Censo EJA (Medio): " 
-				+ dfPorcentagem.format(estado.getCensos()[estado.getCensos().length - 1]
-					.getMedioEJA()) 
+				+ dfPorcentagem.format(estado.getCensos()[i]
+				.getAnosIniciaisFundamental()) + "\n" + "\t\t  " + 
+				"Censo Anos Finais (Fundamental): " + dfPorcentagem.format
+				(estado.getCensos()[i].getAnosFinaisFundamental()) + "\n" 
+				+ "\t\t  " + "Censo Ensino Médio: " + dfPorcentagem.format
+				(estado.getCensos()[i].getEnsinoMedio()) + "\n" + "\t\t  " 
+				+ "Censo EJA (Fundamental): " + dfPorcentagem.format
+				(estado.getCensos()[i].getFundamentalEJA()) + "\n" + "\t\t  " 
+				+ "Censo EJA (Medio): " + dfPorcentagem.format(estado
+				.getCensos()[estado.getCensos().length - 1].getMedioEJA()) 
 				+ "\n\n";
 		}
 
@@ -319,7 +367,7 @@ public class EstadoControle {
 
 		this.informacoesEstado.put("sigla", estado.getSigla());
 		this.informacoesEstado.put("nome", estado.getNome());
-		this.informacoesEstado.put("populacao", dfPopulacao.format(estado.getPopulacao()) 
-			+ " habitantes");
+		this.informacoesEstado.put("populacao", dfPopulacao.format(estado
+			.getPopulacao()) + " habitantes");
 	}
 }
