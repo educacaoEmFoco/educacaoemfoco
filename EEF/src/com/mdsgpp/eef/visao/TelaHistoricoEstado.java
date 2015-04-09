@@ -74,11 +74,13 @@ public class TelaHistoricoEstado extends Activity {
     	return true;
 	}
 	
+	// Change the activity to TelaSobreHistoricoDeIndicativo activity.
 	public void abreTelaSobre() {
 		Intent intent = new Intent(this, TelaSobreHistoricoDeIndicativo.class);
     	startActivity(intent);	
 	}
 	
+	// Takes the information from the previous activity to that.
 	private void capturaInformacoes() {
 		Intent intent = getIntent();
 		
@@ -100,7 +102,8 @@ public class TelaHistoricoEstado extends Activity {
 			Log.i("IOException - TelaHistoricoEstado", e.toString());
 		}
 	}
-
+	
+	// Assigns the class variables with the fields on the screen.
 	private void inicializaCamposTexto() {
 		
 		textViewSigla = (TextView) findViewById(R.id.textView_sigla);
@@ -137,6 +140,7 @@ public class TelaHistoricoEstado extends Activity {
 			findViewById(R.id.textView_taxa_abandono_valor);
 	}
 	
+	// Fills the screen fields with the information received.
 	private void preencheCamposTexto(HashMap<String, String> informacoes) {
 		textViewSigla.setText(informacoes.get("sigla"));
 		textViewNome.setText(informacoes.get("nome"));
@@ -169,6 +173,7 @@ public class TelaHistoricoEstado extends Activity {
 		
 	}
 	
+	// Set the images of flags of Brazilian states on the screen.
 	private void setImagem(int posicao) {
 		String bandeiras[] = {"acre", "alagoas", "amapa", "amazonas", "bahia", 
 			"ceara", "distritofederal", "espiritosanto", "goias", "maranhao",
@@ -183,6 +188,10 @@ public class TelaHistoricoEstado extends Activity {
 		imageViewBandeiras.setImageResource(idBandeira);
 	}
 	
+	/*
+	 * Implements the action of button to choose the indicative to generate the
+	 * chart.
+	 */
     public void clickBotaoEscolherIndicativoParaGerarGrafico(View view) {
 		Intent intent1 = getIntent();
 		

@@ -249,7 +249,7 @@ public class TelaEstado extends Activity {
 		
 	}
 	
-	// Set the images of flags of Brazilian states.
+	// Set the images of flags of Brazilian states on the screen.
 	private void setImagem(int posicao) {
 		String bandeiras[] = {"acre", "alagoas", "amapa", "amazonas", "bahia", 
 			"ceara", "distritofederal", "espiritosanto", "goias","maranhao",
