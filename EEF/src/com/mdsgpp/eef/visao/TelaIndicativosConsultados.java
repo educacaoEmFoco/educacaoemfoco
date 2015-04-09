@@ -84,12 +84,14 @@ public class TelaIndicativosConsultados extends Activity {
 
 		return true;
 	}
-
+	
+	// Change the activity to TelaSobreEscolhaIndicativo activity.
 	public void abreTelaSobre() {
 		Intent intent = new Intent(this, TelaSobreEscolhaIndicativo.class);
 		startActivity(intent);
 	}
-
+	
+	// Assigns the class variables with the check box on the screen.
 	private void inicializaCheckBox() {
 		cbIdeb = (CheckBox) findViewById(R.id.checkBox_ideb);
 		cbPib = (CheckBox) findViewById(R.id.checkBox_participacao_pib);
@@ -110,7 +112,8 @@ public class TelaIndicativosConsultados extends Activity {
 		cbTaxaAbandono = (CheckBox) findViewById(R.id.checkBox_taxa_abandono);
 		cbAprovacao = (CheckBox) findViewById(R.id.checkBox_taxa_aprovacao);
 	}
-
+	
+	// Verify which checkbox are selected.
 	private void capturaValores() {
 		bIdeb = cbIdeb.isChecked();
 		bPib = cbPib.isChecked();
@@ -127,7 +130,8 @@ public class TelaIndicativosConsultados extends Activity {
 		bTaxaAbandono = cbTaxaAbandono.isChecked();
 		bAprovacao = cbAprovacao.isChecked();
 	}
-
+	
+	// Select or clear all check box.
 	public void marcaOuDesmarcaCheckBox(boolean opcaoEscolhida) {
 		cbIdeb.setChecked(opcaoEscolhida);
 		cbPib.setChecked(opcaoEscolhida);
@@ -144,15 +148,21 @@ public class TelaIndicativosConsultados extends Activity {
 		cbTaxaAbandono.setChecked(opcaoEscolhida);
 		cbAprovacao.setChecked(opcaoEscolhida);
 	}
-
+	
+	// Select all check box.
 	public void onRadioButtonMarcarTodosClicked(View view) {
 		marcaOuDesmarcaCheckBox(true);
 	}
-
+	
+	// Clear all check box.
 	public void onRadioButtonDesmarcarTodosClicked(View view) {
 		marcaOuDesmarcaCheckBox(false);
 	}
-
+	
+	/*
+	 * Implements the action of button which leads to comparison screen between
+	 * the states according to the chosen indicative.
+	 */
 	public void clickBotaoTodosIndicativos(View view) {
 		capturaValores();
 
