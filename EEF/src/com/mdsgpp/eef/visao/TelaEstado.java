@@ -90,11 +90,13 @@ public class TelaEstado extends Activity {
 	    	return true;
 	    }
 	    
+	// Change the activity to TelaSobreEstado activity.
 	public void abreTelaSobre() {
 	    Intent intent = new Intent(this, TelaSobreEstado.class);
 	    startActivity(intent);
 	    }
 	
+	// Takes the information from the previous activity to that.
 	private void capturaInformacoes() {
 		Intent intent = getIntent();
 		int posicao = intent.getIntExtra("INDEX_ESTADO_ESCOLHIDO", 0);	
@@ -115,6 +117,7 @@ public class TelaEstado extends Activity {
 		}
 	}
 	
+	// Assigns the class variables with the fields on the screen.
 	private void inicializaCamposTexto() {
 		
 		textViewSigla = (TextView) findViewById(R.id.textView_sigla);
@@ -182,6 +185,7 @@ public class TelaEstado extends Activity {
 			findViewById(R.id.textView_taxa_abandono_medio);
 	}
 	
+	// Fills the screen fields with the information received.
 	private void preencheCamposTexto(HashMap<String, String> informacoes) {
 		textViewSigla.setText(informacoes.get("sigla"));
 		textViewNome.setText(informacoes.get("nome"));
@@ -245,6 +249,7 @@ public class TelaEstado extends Activity {
 		
 	}
 	
+	// Set the images of flags of Brazilian states.
 	private void setImagem(int posicao) {
 		String bandeiras[] = {"acre", "alagoas", "amapa", "amazonas", "bahia", 
 			"ceara", "distritofederal", "espiritosanto", "goias","maranhao",
@@ -259,6 +264,7 @@ public class TelaEstado extends Activity {
 		imageViewBandeiras.setImageResource(idBandeira);
 	}
 	
+	// Implements the action of button to see the history of the state.
 	public void clickBotaoHistoricoEstado(View view) {
 		Intent intentAux = getIntent();
 		int posicao = intentAux.getIntExtra("INDEX_ESTADO_ESCOLHIDO", 0);
