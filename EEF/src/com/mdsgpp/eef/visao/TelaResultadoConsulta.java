@@ -154,28 +154,30 @@ public class TelaResultadoConsulta extends Activity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		
 		switch (item.getItemId()) {
-		case R.id.sobre:
-			abreTelaSobre();
-			break;
+			case R.id.sobre:
+				abreTelaSobre();
+				break;
 			
-		case android.R.id.home:
-	        NavUtils.navigateUpFromSameTask(this);
-	        break;
+			case android.R.id.home:
+	        	NavUtils.navigateUpFromSameTask(this);
+	        	break;
 	        
-		default:
-			// Do nothing.
-			break;
+			default:
+				// Do nothing.
+				break;
 		}
 		
     	return true;
 	}
 	
+	// Change the activity to TelaSobreComparacaoDeEstados activity.
 	public void abreTelaSobre() {
 		Intent intent = new Intent(this, TelaSobreComparacaoDeEstados.class);
     	startActivity(intent);
 		
 	}
 	
+	// Takes the information from the previous activity to that.
 	@SuppressWarnings("unchecked")
 	private void capturaInformacoes() {
 		Intent intent = getIntent();
@@ -222,6 +224,7 @@ public class TelaResultadoConsulta extends Activity {
 		}
 	}
 
+	// Fills the screen fields with the information received.
 	private void preencheCamposTexto(HashMap<String, String> informacoes1,
 			HashMap<String, String> informacoes2) {
 
@@ -358,7 +361,8 @@ public class TelaResultadoConsulta extends Activity {
 			("taxa_aprovacao_medio").split(":")[1]);
 
 	}
-
+	
+	// Assigns the class variables with the fields on the screen.
 	private void InicializaCamposTexto() {
 
 		textViewSigla1 = (TextView) findViewById(R.id.textView_sigla1);
@@ -540,11 +544,16 @@ public class TelaResultadoConsulta extends Activity {
 			findViewById(R.id.textView_taxa_abandono_medio2);
 	}
 	
+	// Changes the visibility of the text views on the screen.
 	public void setVisibility(TextView txtView, boolean visibilidade) {
 		int valorVisibilidade = (visibilidade) ? View.VISIBLE : View.GONE;
 		txtView.setVisibility(valorVisibilidade);
 	}
 	
+	/*
+	 * Changes the visibility of the text views on the screen according to the
+	 * value of the variable.
+	 */
 	public void escondeCamposDeTexto() {
 		setVisibility(textViewPopulacao1, bPopulacao);
 		setVisibility(textViewPopulacaoValor1, bPopulacao);
@@ -670,6 +679,7 @@ public class TelaResultadoConsulta extends Activity {
 						
 	}
 	
+	// Implements the action of button to generate the chart.
 	public void clickBotaoGeraGrafico(View view) {
 		Intent intent = new Intent(this,
 			TelaEscolheIndicativoGraficoComparacao.class);
@@ -699,6 +709,10 @@ public class TelaResultadoConsulta extends Activity {
 		startActivity(intent);
 	}
 	
+	/*
+	 * Select the image of the flag of the state in accordance with the chosen
+	 * states.
+	 */
 	public void capturaBandeiras(int posicaoEstado1, int posicaoEstado2) {
 		String bandeiras[] = {"acre", "alagoas", "amapa", "amazonas", "bahia", 
 			"ceara", "distritofederal", "espiritosanto", "goias", "maranhao",
