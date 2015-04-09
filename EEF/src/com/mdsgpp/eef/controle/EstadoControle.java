@@ -36,6 +36,10 @@ public class EstadoControle {
 		return instancia;
 	}
 	
+	/*
+	 * This method get the information of a state by its position number and
+	 * fill this information in a variable.
+	 */
 	public Estado obterEstado(int posicao) throws IOException {
 		informacoesParse = ParseControle.getInstancia(context).getInformacoes
 			(posicao);
@@ -48,6 +52,10 @@ public class EstadoControle {
 		return estado;
 	}
 	
+	/*
+	 * This method get some information of a state through the parser, by its
+	 * position number and return this information.
+	 */
 	public HashMap<String, String> lerEstado(int posicao) throws IOException {
 		informacoesParse = ParseControle.getInstancia(context).getInformacoes
 			(posicao);
@@ -59,7 +67,11 @@ public class EstadoControle {
 
 		return this.informacoesEstado;
 	}
-
+	
+	/*
+	 * This method get all the information of a state throught the parser, by
+	 * its position number and return this information
+	 */
 	public HashMap<String, String> lerEstadoCompleto(int posicao) throws
 		IOException {
 		informacoesParse = ParseControle.getInstancia(context).getInformacoes
@@ -72,7 +84,11 @@ public class EstadoControle {
 
 		return this.informacoesEstado;
 	}
-
+	
+	/*
+	 * This method take some data from one state and fills the hashmap 
+	 * "informacoesEstado" with the data.
+	 */
 	private void escreveEstado(Estado estado) {
 		PreencherNomeSiglaEPopulacao(estado);
 
@@ -189,7 +205,11 @@ public class EstadoControle {
 			+ dfPorcentagem.format(estado.getCensos()[estado.getCensos().length
 			- 1].getMedioEJA()));
 	}
-
+	
+	/*
+	 * This method take all data from one state and fills the hashmap 
+	 * "informacoesEstado" with the data.
+	 */
 	private void escreveEstadoComTodasInformacoes(Estado estado) {
 		String temp = "";
 
@@ -361,7 +381,11 @@ public class EstadoControle {
 
 		this.informacoesEstado.put("censo", temp);
 	}
-
+	
+	/*
+	 * This method fills the hashmap informacoesEstado with the name, acronym
+	 * and the amount of population of a state.
+	 */
 	private void PreencherNomeSiglaEPopulacao(Estado estado) {
 		this.informacoesEstado.clear();
 
