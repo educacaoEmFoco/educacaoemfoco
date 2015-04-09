@@ -54,12 +54,14 @@ public class TelaResultadoConsultaPorIndicativo extends Activity {
     	return true;
 	}
 	
+	// Change the activity to TelaSobreResultadosDaConsulta activity.
 	public void abreTelaSobre() {
 		Intent intent = new Intent(this, TelaSobreResultadoDaConsulta.class);
     	startActivity(intent);
 		
 	}
 	
+	// Takes the indicatives information from the previous activity to that.
 	private void carregaIndicativosDosEstados() {
 		Intent intent = getIntent();
 			
@@ -72,6 +74,10 @@ public class TelaResultadoConsultaPorIndicativo extends Activity {
 		listaDeEstados.setAdapter(adapter);
 	}
 	
+	/*
+	 * Assigns the class variable listaDeEstados with the ListView on the
+	 * screen.
+	 */
 	public void inicializaViews(){
 		listaDeEstados = (ListView) 
 			findViewById(R.id.listview_tela_resultado_consulta_por_indicativo);
