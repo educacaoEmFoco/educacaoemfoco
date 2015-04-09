@@ -35,9 +35,9 @@ public class TelaListaEstado extends Activity {
 	}
 	
 	 @Override
-	    public boolean onOptionsItemSelected(MenuItem item) {
+	public boolean onOptionsItemSelected(MenuItem item) {
 	    	
-			switch (item.getItemId()) {
+		switch (item.getItemId()) {
 			case R.id.sobre:
 				abreTelaSobre();
 				break;
@@ -53,12 +53,17 @@ public class TelaListaEstado extends Activity {
 			
 	    	return true;
 	    }
-	    
-	    public void abreTelaSobre() {
-	    	Intent intent = new Intent(this, TelaSobreListaEstado.class);
-	    	startActivity(intent);
-	    }
 	
+	// Change the activity to TelaSobreListaEstado activity.
+	public void abreTelaSobre() {
+	    Intent intent = new Intent(this, TelaSobreListaEstado.class);
+	    startActivity(intent);
+	 }
+	
+	/*
+	 * Assigns the class variable listView with the ListView on the screen and
+	 * assign action to the elements on the list.
+	 */
 	private void inicializaListView() {
 		ListView listView = (ListView) findViewById(R.id.listview_tela_estados);
 
