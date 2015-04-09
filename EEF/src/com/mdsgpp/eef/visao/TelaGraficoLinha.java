@@ -68,6 +68,10 @@ public class TelaGraficoLinha extends Activity {
     	return true;
 	}
 	
+	/* 
+	* Takes the information from the previous activity to that, and fills the
+	* Array historico with them.
+	*/
 	private void capturaInformacoes() {
 		int posicao;
 		Intent intent;
@@ -94,12 +98,13 @@ public class TelaGraficoLinha extends Activity {
 		}	
 	}
 	
+	// Change the activity to TelaSobreGrafico activity.
 	public void abreTelaSobre() {
 		Intent intent = new Intent(this, TelaSobreGrafico.class);
     	startActivity(intent);
 	}
 	
-
+	// Assigns the class variables with the fields on the screen.
 	private void inicializaCamposTexto() {
 		txtviewTituloGrafico = (TextView)
 			findViewById(R.id.text_view_titulo_grafico_historico);
@@ -107,6 +112,7 @@ public class TelaGraficoLinha extends Activity {
 			findViewById(R.id.text_view_grafico_historico);
 	}
 	
+	// Fills the screen fields with the information received.
 	private void preencheCamposDeTexto() {
 		txtviewTituloGrafico.setText(titulo);
 		Log.i("teste_indicativo", indicativo);
@@ -114,6 +120,7 @@ public class TelaGraficoLinha extends Activity {
 		txtviewHistorico.setText(informacoes.get(indicativo));
 	}
 	
+	// Draw the chart on the screen.
 	private void plotarGrafico() {
 		Line curva = new Line();
 		
@@ -134,7 +141,8 @@ public class TelaGraficoLinha extends Activity {
 		li.setRangeY(0, yMaximo);
 		li.setLineToFill(0);
 	}
-
+	
+	// Calculate historical maximum value.
 	private float calculaValorMaximoHistorico(float maximo) {
 		for(int i=0; i<historico.size(); i++) {
 			if(historico.get(i) >= maximo){
