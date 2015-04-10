@@ -28,7 +28,9 @@ public class ParseControle {
 		return instancia;
 	}
 	
-	public HashMap<String, ArrayList<String[]>> getInformacoes(int posicao) throws IOException {
+	// This method acquire the information of a state by the parser.
+	public HashMap<String, ArrayList<String[]>> getInformacoes(int posicao)
+		throws IOException {
 		return parser.getEstado(posicao);
 	}	
 }
