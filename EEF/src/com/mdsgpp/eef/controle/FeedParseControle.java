@@ -28,14 +28,17 @@ public class FeedParseControle {
 		return this.feed;
 	}
 	
+	// This method clear the feed.
 	public void criaNovoFeed() {
 		this.feed.reset();
 	}
 	
+	// This method creates a new item based on the feed.
 	public void criaNovoItem() {
 		this.item = new Noticias(this.feed);
 	}
 	
+	// This method add an item on the feed.
 	public void adicionaItem() {
 		this.feed.addItem(this.item);
 	}
