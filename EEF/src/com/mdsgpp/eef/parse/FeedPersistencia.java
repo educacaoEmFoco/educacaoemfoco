@@ -20,6 +20,7 @@ public class FeedPersistencia {
 		this.context = context;
 	}
 
+	// Get an instance of this class.
 	public static FeedPersistencia getInstance(Context context) {
 		if (instancia == null) {
 			instancia = new FeedPersistencia(context);
@@ -30,6 +31,7 @@ public class FeedPersistencia {
 		return instancia;
 	}
 	
+	// Save the feed on an extern file.
 	public void writeFeedFile(Feed feed) throws IOException {
 		FileOutputStream fileout = context.openFileOutput(FILENAME, Context.MODE_PRIVATE);
 		ObjectOutputStream out = new ObjectOutputStream(fileout);
@@ -38,6 +40,7 @@ public class FeedPersistencia {
 		out.close();
 	}
 
+	// Read the feed saved on a file.
 	public Feed readFeedFile() throws IOException, ClassNotFoundException {
 		Feed feed;
 
