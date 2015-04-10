@@ -37,7 +37,8 @@ public class FeedControle extends AsyncTask<String, Void, Feed> {
 		barraProgresso.show();
 		super.onPreExecute();
 	}
-
+	
+	// This method seeks to update the feed accessing the url at runtime.
 	protected Feed doInBackground(String... urls) {
 		Feed feed = null;
 
