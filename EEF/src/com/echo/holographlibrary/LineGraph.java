@@ -294,9 +294,9 @@ public class LineGraph extends View {
 			paint.setColor(Color.BLACK);
 			paint.setAlpha(50);
 			paint.setAntiAlias(true);
-			canvas.drawLine(sidePadding, getHeight() - bottomPadding, getWidth()-sidePadding, getHeight()-bottomPadding, paint);
+			canvas.drawLine(sidePadding, getHeight() - bottomPadding, getWidth() - sidePadding,
+							getHeight()- bottomPadding, paint);
 			paint.setAlpha(255);
-			
 			
 			for(Line line : lines) {
 				int count = 0;
@@ -333,7 +333,6 @@ public class LineGraph extends View {
 					count++;
 				}
 			}
-			
 			
 			int pointCount = 0;
 			
