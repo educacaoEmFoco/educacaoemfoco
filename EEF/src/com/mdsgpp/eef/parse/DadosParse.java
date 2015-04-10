@@ -42,6 +42,7 @@ public class DadosParse {
 		this.informacoes = new HashMap<String, ArrayList<String[]>>();
 	}
 
+	// Acquire the informations about a state by it's ID, and save in a vector.
 	public HashMap<String, ArrayList<String[]>> getEstado(int posicao) throws IOException {
 		String nome, sigla;
 
@@ -62,15 +63,17 @@ public class DadosParse {
 		return informacoes;
 	}
 
+	// Clear the vector with the state's indicatives information.
 	public void limpaInformacoes() {
 		this.informacoes.clear();
 	}
 	
+	// Clear the vector with the state's information.
 	public void limpaDados() {
 		this.dados = new ArrayList<String[]>(); 
 	}
 
-	// M�todo resposavel por mandar o nome e a sigla atrav�s do mesmo hashmap ds indicativos
+	// Responsible for sending the name and the symbol through the same hashmap indicative.
 	public void insereNomeSigla(String nome, String sigla) {
 		ArrayList<String[]> container = new ArrayList<String[]>();
 		String nomeEsigla[] = new String[2];
@@ -81,7 +84,7 @@ public class DadosParse {
 		this.informacoes.put("nome_e_sigla", container);
 	}
 	
-	// Metodo responsavel pela leitura dos dados disponiveis
+	// Responsible for reading the available data.
 	public void lerIndicativos(BufferedReader br) throws IOException {
 		int aux = 0;
 		String linha;
