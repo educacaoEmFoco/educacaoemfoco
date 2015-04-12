@@ -9,7 +9,7 @@ import com.mdsgpp.eef.parser.FeedParser;
 
 import junit.framework.TestCase;
 
-public class FeedParserTeste extends TestCase {
+public class FeedParserTest extends TestCase {
 
 	private FeedParser feedParser;
 	private InputStream stream;
@@ -23,7 +23,7 @@ public class FeedParserTeste extends TestCase {
 		super.tearDown();
 	}
 
-	public void testParse() throws MalformedURLException, IOException {
+	public void testParser() throws MalformedURLException, IOException {
 		stream = new URL("http://www.noticias.gov.br/noticias/rss?id=AFSZW").openStream();
 		assertEquals("Feed", feedParser.parse(stream).getClass().getSimpleName());
 	}
