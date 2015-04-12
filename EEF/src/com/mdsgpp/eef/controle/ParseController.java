@@ -8,29 +8,29 @@ import android.content.Context;
 
 import com.mdsgpp.eef.parse.DadosParse;
 
-public class ParseControle {
+public class ParseController {
 
-	private static ParseControle instancia;
+	private static ParseController instance;
 	DadosParse parser;
 
-	public ParseControle(Context context) {
+	public ParseController(Context context) {
 		parser = new DadosParse(context);
 	}
 
-	public static ParseControle getInstancia(Context context) {
-		if(instancia == null) {
-			instancia = new ParseControle(context);
+	public static ParseController getInstance(Context context) {
+		if(instance == null) {
+			instance = new ParseController(context);
 		}
 		else {
 			// Nothing to do.
 		}
 
-		return instancia;
+		return instance;
 	}
 	
 	// This method acquire the information of a state by the parser.
-	public HashMap<String, ArrayList<String[]>> getInformacoes(int posicao)
+	public HashMap<String, ArrayList<String[]>> getInformation(int position)
 		throws IOException {
-		return parser.getEstado(posicao);
+		return parser.getState(position);
 	}	
 }
