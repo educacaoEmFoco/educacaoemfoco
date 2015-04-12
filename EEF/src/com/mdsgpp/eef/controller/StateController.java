@@ -103,13 +103,13 @@ public class StateController {
 			[state.getScienceTechnologyProjects().length - 1].getValue()) + 
 			" (em mil)");
 		this.stateInformation.put("ideb_fundamental_final",
-			"Ensino Fundamental (séries finais): " + decimalFormatPercentage.format
+			"Ensino Fundamental (sï¿½ries finais): " + decimalFormatPercentage.format
 			(state.getIdebs()[state.getIdebs().length - 1].getElementarySchool()));
-		this.stateInformation.put("ideb_ensino_medio", "Ensino Médio: " 
+		this.stateInformation.put("ideb_ensino_medio", "Ensino Mï¿½dio: " 
 			+ decimalFormatPercentage.format(state.getIdebs()[state.getIdebs().length
 			- 1].getHighSchool()) + "");
 		this.stateInformation.put("ideb_fundamental_inicial", 
-			"Ensino Fundamental (Séries iniciais): " + decimalFormatPercentage.format
+			"Ensino Fundamental (Sï¿½ries iniciais): " + decimalFormatPercentage.format
 			(state.getIdebs()[state.getIdebs().length - 1]
 			.getEarlyGrades()) + "");
 		this.stateInformation.put("quantidade_primeiros_projetos",
@@ -160,20 +160,20 @@ public class StateController {
 			+ decimalFormatValue.format(state.getAverageClassHours()
 			[state.getAverageClassHours().length - 1].getHighSchool()));
 		this.stateInformation.put("taxa_distorcao_fundamental", 
-			"Quantidade de Distorção da Idade(Fundamental): " 
+			"Quantidade de Distorï¿½ï¿½o da Idade(Fundamental): " 
 			+ decimalFormatPercentage.format(state.getAgeSeriesDistortionRate()
 			[state.getAgeSeriesDistortionRate().length - 1]
 			.getElementarySchool()));
 		this.stateInformation.put("taxa_distorcao_medio", 
-			"Quantidade de Distorção da Idade (Medio): " 
+			"Quantidade de Distorï¿½ï¿½o da Idade (Medio): " 
 			+ decimalFormatPercentage.format(state.getAgeSeriesDistortionRate()[state
 				.getAgeSeriesDistortionRate().length - 1].getHighSchool()));
 		this.stateInformation.put("taxa_aprovacao_fundamental", 
-			"Taxa de Aprovação (Fundamental): " + decimalFormatPercentage.format
+			"Taxa de Aprovaï¿½ï¿½o (Fundamental): " + decimalFormatPercentage.format
 			(state.getUtilizationRate()[state.getUtilizationRate()
 			.length - 1].getElementarySchool()));
 		this.stateInformation.put("taxa_aprovacao_medio",
-			"Taxa de Aprovação (Medio): " + decimalFormatPercentage.format
+			"Taxa de Aprovaï¿½ï¿½o (Medio): " + decimalFormatPercentage.format
 			(state.getUtilizationRate()[state.getUtilizationRate()
 			.length - 1].getHighSchool()));
 		this.stateInformation.put("taxa_abandono_fundamental",
@@ -192,7 +192,7 @@ public class StateController {
 			"Censo Anos Finais (Fundamental): " 
 			+ decimalFormatPercentage.format(state.getCensos()[state.getCensos().length
 			- 1].getElementarySchoolFinalYears()));
-		this.stateInformation.put("censo_ensino_medio", "Censo Ensino Médio: " 
+		this.stateInformation.put("censo_ensino_medio", "Censo Ensino Mï¿½dio: " 
 			+ decimalFormatPercentage.format(state.getCensos()[state.getCensos().length
 			- 1].getHighSchool()));
 		this.stateInformation.put("censo_eja_fundamental",
@@ -236,11 +236,11 @@ public class StateController {
 		temporaryString = "";
 
 		for(int counter = 0, year = 2005; counter < state.getIdebs().length; counter++, year += 2) {
-			temporaryString += year + ": " + "Ensino Fundamental (séries finais): " 
+			temporaryString += year + ": " + "Ensino Fundamental (sï¿½ries finais): " 
 				+ decimalFormatPercentage.format(state.getIdebs()[counter].getElementarySchool()) +
-				"\n" + "\t\t  " + "Ensino Médio: " + decimalFormatPercentage.format
+				"\n" + "\t\t  " + "Ensino Mï¿½dio: " + decimalFormatPercentage.format
 				(state.getIdebs()[counter].getHighSchool()) + "\n" + "\t\t  " +
-				"Ensino Fundamental (Séries iniciais): " + decimalFormatPercentage.format
+				"Ensino Fundamental (Sï¿½ries iniciais): " + decimalFormatPercentage.format
 				(state.getIdebs()[counter].getEarlyGrades()) + "\n\n";
 		}
 
@@ -324,10 +324,10 @@ public class StateController {
 		for(int counter = 0, year = 2006; counter < state.getAgeSeriesDistortionRate()
 			.length; counter++, year++) {
 			temporaryString += year + ": " + 
-				"Quantidade de Distorção da Idade(Fundamental): " +
+				"Quantidade de Distorï¿½ï¿½o da Idade(Fundamental): " +
 				decimalFormatPercentage.format(state.getAgeSeriesDistortionRate()[counter]
 				.getElementarySchool()) 
-				+ "\n" + "Quantidade de Distorção da Idade (Medio): " 
+				+ "\n" + "Quantidade de Distorï¿½ï¿½o da Idade (Medio): " 
 				+ decimalFormatPercentage.format(state.getAgeSeriesDistortionRate()[counter]
 				.getHighSchool()) + "\n\n";
 		}
@@ -337,10 +337,10 @@ public class StateController {
 
 		for(int counter = 0, year = 2007; counter < state.getUtilizationRate().length;
 			counter++, year++) {
-			temporaryString += year + ": " + "Taxa de Aprovação (Fundamental): " 
+			temporaryString += year + ": " + "Taxa de Aprovaï¿½ï¿½o (Fundamental): " 
 				+ decimalFormatPercentage.format(state.getUtilizationRate()[counter].
 					getElementarySchool()) + "\n" + "\t\t  " +
-				"Taxa de Aprovação (Medio): " 
+				"Taxa de Aprovaï¿½ï¿½o (Medio): " 
 				+ decimalFormatPercentage.format(state.getUtilizationRate()[counter]
 				.getHighSchool()) 
 				+ "\n\n";
@@ -368,7 +368,7 @@ public class StateController {
 				.getElementarySchoolEarlyYears()) + "\n" + "\t\t  " + 
 				"Censo Anos Finais (Fundamental): " + decimalFormatPercentage.format
 				(state.getCensos()[counter].getElementarySchoolFinalYears()) + "\n" 
-				+ "\t\t  " + "Censo Ensino Médio: " + decimalFormatPercentage.format
+				+ "\t\t  " + "Censo Ensino Mï¿½dio: " + decimalFormatPercentage.format
 				(state.getCensos()[counter].getHighSchool()) + "\n" + "\t\t  " 
 				+ "Censo EJA (Fundamental): " + decimalFormatPercentage.format
 				(state.getCensos()[counter].getEJAElementarySchool()) + "\n" + "\t\t  " 
