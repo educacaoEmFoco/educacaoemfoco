@@ -9,32 +9,32 @@ import com.mdsgpp.eef.R;
 import com.mdsgpp.eef.modelo.Feed;
 import com.mdsgpp.eef.parse.FeedParser;
 import com.mdsgpp.eef.parse.FeedPersistencia;
-import com.mdsgpp.eef.visao.ReceptorDados;
+import com.mdsgpp.eef.visao.DataReceiver;
 
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.widget.Toast;
 
-public class FeedControle extends AsyncTask<String, Void, Feed> {
+public class FeedController extends AsyncTask<String, Void, Feed> {
 
 	private Context context;
 	private boolean updated = false;
-	private ReceptorDados dataReceiver;
-	private ProgressDialog barraProgresso;
+	private DataReceiver dataReceiver;
+	private ProgressDialog progressBar;
 
-	public FeedControle(Context context, ReceptorDados dataReceiver) {
+	public FeedController(Context context, DataReceiver dataReceiver) {
 		this.dataReceiver = dataReceiver;
 		this.context = context;
 	}
 	
 	@Override
 	protected void onPreExecute() {
-		barraProgresso = new ProgressDialog(context, R.style.CustomProgressBar);
-		barraProgresso.setIndeterminate(true);
-		barraProgresso.setMessage("Carregando Notícias!");
-		barraProgresso.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
-		barraProgresso.show();
+		progressBar = new ProgressDialog(context, R.style.CustomProgressBar);
+		progressBar.setIndeterminate(true);
+		progressBar.setMessage("Carregando Notícias!");
+		progressBar.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+		progressBar.show();
 		super.onPreExecute();
 	}
 	
@@ -75,8 +75,8 @@ public class FeedControle extends AsyncTask<String, Void, Feed> {
 
 	// After the execution of the task
 	protected void onPostExecute(Feed feed) {		
-		if(barraProgresso != null) {
-			barraProgresso.dismiss();
+		if(progressBar != null) {
+			progressBar.dismiss();
 		}
 		else {
 			// Nothing to do.
