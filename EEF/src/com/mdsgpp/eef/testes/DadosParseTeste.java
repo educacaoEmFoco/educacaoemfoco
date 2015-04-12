@@ -6,7 +6,7 @@ import java.util.HashMap;
 
 import android.test.AndroidTestCase;
 
-import com.mdsgpp.eef.parse.DadosParse;
+import com.mdsgpp.eef.parse.ParserData;
 
 public class DadosParseTeste extends AndroidTestCase {
 	
@@ -27,10 +27,10 @@ public class DadosParseTeste extends AndroidTestCase {
 	private String indicadores[] = new String[13];
 	private ArrayList<String[]> container;
 	private String nomeEsigla[] = new String[2];
-	private DadosParse dadosParse;
+	private ParserData dadosParse;
 	
 	public void setUp() throws Exception {
-		dadosParse = new DadosParse(getContext());
+		dadosParse = new ParserData(getContext());
 		informacoes = new HashMap<String, ArrayList<String[]>>();
 		container = new ArrayList<String[]>();
 		dados1 = new ArrayList<String[]>();

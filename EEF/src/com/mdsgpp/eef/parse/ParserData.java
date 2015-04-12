@@ -10,16 +10,16 @@ import java.util.HashMap;
 import android.content.Context;
 import android.content.res.AssetManager;
 
-public class DadosParse {
+public class ParserData {
 
-	private HashMap<String, ArrayList<String[]>> informacoes;
-	private ArrayList<String[]> dados;
+	private HashMap<String, ArrayList<String[]>> informations;
+	private ArrayList<String[]> data;
 	private Context context;
-	private String extensao = ".txt";
-	private String nomeIndicador;
-	private int linhas = 2;
+	private String extension = ".txt";
+	private String indicatorName;
+	private int lines = 2;
 
-	String estados[][] = { {"Acre", "Acre"}, {"Alagoas", "Alagoas"},
+	String states[][] = { {"Acre", "Acre"}, {"Alagoas", "Alagoas"},
 			{"Amap�", "Amapa"}, {"Amazonas", "Amazonas"},
 			{"Bahia", "Bahia"}, {"Cear�", "Ceara"},
 			{"Distrito Federal", "Distrito Federal"},
@@ -37,82 +37,82 @@ public class DadosParse {
 			{"S�o Paulo", "Sao Paulo"}, {"Sergipe", "Sergipe"},
 			{"Tocantins", "Tocantins"} };
 
-	public DadosParse(Context context) {
+	public ParserData(Context context) {
 		this.context = context;
-		this.informacoes = new HashMap<String, ArrayList<String[]>>();
+		this.informations = new HashMap<String, ArrayList<String[]>>();
 	}
 
 	// Acquire the informations about a state by it's ID, and save in a vector.
-	public HashMap<String, ArrayList<String[]>> getEstado(int posicao) throws IOException {
-		String nome, sigla;
+	public HashMap<String, ArrayList<String[]>> getEstado(int position) throws IOException {
+		String name, acronym;
 
 		AssetManager am = this.context.getAssets();
-		InputStream is = am.open(this.estados[posicao][1] + this.extensao);
+		InputStream is = am.open(this.states[position][1] + this.extension);
 		BufferedReader br = new BufferedReader(new InputStreamReader(is));
 
-		nome = br.readLine();
-		nome = this.estados[posicao][0];
-		sigla = br.readLine();
+		name = br.readLine();
+		name = this.states[position][0];
+		acronym = br.readLine();
 		
-		limpaInformacoes();
-		limpaDados();
+		cleanInformations();
+		cleanData();
 		
-		insereNomeSigla(nome, sigla);
-		lerIndicativos(br);
+		insertAcronymName(name, acronym);
+		readIndicative(br);
 		
-		return informacoes;
+		return informations;
 	}
 
 	// Clear the vector with the state's indicatives information.
-	public void limpaInformacoes() {
-		this.informacoes.clear();
+	public void cleanInformations() {
+		this.informations.clear();
 	}
 	
 	// Clear the vector with the state's information.
-	public void limpaDados() {
-		this.dados = new ArrayList<String[]>(); 
+	public void cleanData() {
+		this.data = new ArrayList<String[]>(); 
 	}
 
 	// Responsible for sending the name and the symbol through the same hashmap indicative.
-	public void insereNomeSigla(String nome, String sigla) {
+	public void insertAcronymName(String nome, String sigla) {
 		ArrayList<String[]> container = new ArrayList<String[]>();
-		String nomeEsigla[] = new String[2];
-		nomeEsigla[0] = nome;
-		nomeEsigla[1] = sigla;
+		String acronymAndName[] = new String[2];
+		acronymAndName[0] = nome;
+		acronymAndName[1] = sigla;
 		
-		container.add(nomeEsigla);
-		this.informacoes.put("nome_e_sigla", container);
+		container.add(acronymAndName);
+		this.informations.put("nome_e_sigla", container);
 	}
 	
 	// Responsible for reading the available data.
-	public void lerIndicativos(BufferedReader br) throws IOException {
+	public void readIndicative(BufferedReader br) throws IOException {
 		int aux = 0;
-		String linha;
+		String line;
 
-		linha = br.readLine();
-		nomeIndicador = br.readLine();
-		linha = br.readLine();
+		line = br.readLine();
+		indicatorName = br.readLine();
+		line = br.readLine();
 		
-		while (linha != null) {
+		while (line != null) {
 			
-			if (linha.isEmpty()) {
+			if (line.isEmpty()) {
 				aux++;
 			} 
 			else {
-				dados.add(linha.split(": "));
+				data.add(line.split(": "));
 			}
 
-			if (aux == linhas) {
+			if (aux == lines) {
 				aux = 0;
-				this.informacoes.put(nomeIndicador, dados);
-				nomeIndicador = br.readLine();
-				limpaDados();
+				this.informations.put(indicatorName, data);
+				indicatorName = br.readLine();
+				cleanData();
 			}
 			else {
 				// Do nothing.
 			}
 			
-			linha = br.readLine();
+			line = br.readLine();
 		}
 
 		br.close();
