@@ -1,6 +1,6 @@
 package com.mdsgpp.eef.model;
 
-public class Censo {
+public class Census {
 
 	private double earlyElementarySchoolYears;
 	private double finalElementarySchoolYears;
@@ -10,10 +10,10 @@ public class Censo {
 	private int year;
 	private State state;
 	
-	public Censo() {
+	public Census() {
 	}
 
-	public Censo(double earlyElementarySchoolYears, double finalElementarySchoolYears, double highSchool, 
+	public Census(double earlyElementarySchoolYears, double finalElementarySchoolYears, double highSchool, 
 		double EJAElementarySchool, double EJAHighSchool) {
 
 		this.earlyElementarySchoolYears = earlyElementarySchoolYears;

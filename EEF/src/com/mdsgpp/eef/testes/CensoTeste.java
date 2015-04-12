@@ -7,14 +7,14 @@ import com.mdsgpp.eef.modelo.Estado;
 
 public class CensoTeste extends AndroidTestCase {
 
-	private Censo censo;
+	private Census censo;
 	private Estado estado;
 	private double anosIniciaisFundamental, anosFinaisFundamental, ensinoMedio, fundamentalEJA, 
 		medioEJA;
 	private int ano;
 	
 	public void setUp() throws Exception {
-		this.censo = new Censo();
+		this.censo = new Census();
 		this.estado = new Estado();
 		
 		this.anosIniciaisFundamental = 87.11;
@@ -30,7 +30,7 @@ public class CensoTeste extends AndroidTestCase {
 	}
 	
 	public void testConstrutorCheio() {
-		Censo censoConstruido = new Censo(this.anosIniciaisFundamental, this.anosFinaisFundamental, 
+		Census censoConstruido = new Census(this.anosIniciaisFundamental, this.anosFinaisFundamental, 
 			this.ensinoMedio, this.fundamentalEJA, this.medioEJA);
 		
 		assertEquals(this.anosIniciaisFundamental, censoConstruido.getAnosIniciaisFundamental(), 

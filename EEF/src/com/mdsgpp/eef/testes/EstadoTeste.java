@@ -390,7 +390,7 @@ public class EstadoTeste extends AndroidTestCase {
 	}
 	
 	public void testCensos() {
-		Censo[] censos;
+		Census[] censos;
 		estado.setCensos(informacoes);
 		
 		censos = estado.getCensos();

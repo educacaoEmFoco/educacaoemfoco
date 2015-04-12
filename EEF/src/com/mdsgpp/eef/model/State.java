@@ -10,7 +10,7 @@ public class State {
 	private String acronym;
 	private double PIBPercentParticipaion[];
 	private int population;
-	private Censo censos[]; 
+	private Census censos[]; 
 	private Ideb idebs[];
 	private Average averageClassSize[]; 
 	private Average averageClassHours[]; 
@@ -34,7 +34,7 @@ public class State {
 		fulfillData(information);		
 	}
 
-	public Censo[] getCensos() {
+	public Census[] getCensos() {
 		return censos;
 	}
 
@@ -44,7 +44,7 @@ public class State {
 		ArrayList<String[]> highSchoolData;
 		ArrayList<String[]> EJAHighSchoolData;
 		ArrayList<String[]> EJAElementarySchoolData;
-		Censo censo[] = null;
+		Census censo[] = null;
 		
 		finalElementarySchoolData = information.get("censo_anos_finais");
 		earlyElementarySchoolData = information.get("censo_anos_iniciais");
@@ -52,9 +52,9 @@ public class State {
 		EJAHighSchoolData = information.get("censo_eja_medio");
 		EJAElementarySchoolData = information.get("censo_eja_fundamental");
 		
-		censo = new Censo[highSchoolData.size()];
+		censo = new Census[highSchoolData.size()];
 		for(int counter = 0; counter < censo.length; counter++) {
-			censo[counter] = new Censo();
+			censo[counter] = new Census();
 			censo[counter].setState(this); 
 			censo[counter].setYear(Integer.parseInt(highSchoolData.get(counter)[0]));
 			censo[counter].setFinalElementarySchoolYears(Double.parseDouble
