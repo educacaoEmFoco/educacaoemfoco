@@ -6,7 +6,7 @@ import java.util.HashMap;
 
 import android.content.Context;
 
-import com.mdsgpp.eef.parse.ParserData;
+import com.mdsgpp.eef.parser.ParserData;
 
 public class ParseController {
 

@@ -4,7 +4,7 @@ import java.io.IOException;
 
 import com.mdsgpp.eef.modelo.Feed;
 import com.mdsgpp.eef.modelo.Noticias;
-import com.mdsgpp.eef.parse.FeedPersistence;
+import com.mdsgpp.eef.parser.FeedPersistence;
 
 import android.content.Context;
 import android.test.AndroidTestCase;

@@ -1,4 +1,4 @@
-package com.mdsgpp.eef.parse;
+package com.mdsgpp.eef.parser;
 
 import java.io.IOException;
 import java.io.InputStream;

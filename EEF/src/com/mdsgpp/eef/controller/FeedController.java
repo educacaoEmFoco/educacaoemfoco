@@ -7,8 +7,8 @@ import java.net.URL;
 
 import com.mdsgpp.eef.R;
 import com.mdsgpp.eef.model.Feed;
-import com.mdsgpp.eef.parse.FeedParser;
-import com.mdsgpp.eef.parse.FeedPersistence;
+import com.mdsgpp.eef.parser.FeedParser;
+import com.mdsgpp.eef.parser.FeedPersistence;
 import com.mdsgpp.eef.visao.DataReceiver;
 
 import android.app.ProgressDialog;

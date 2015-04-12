@@ -5,7 +5,7 @@ import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-import com.mdsgpp.eef.parse.FeedParser;
+import com.mdsgpp.eef.parser.FeedParser;
 
 import junit.framework.TestCase;
 
