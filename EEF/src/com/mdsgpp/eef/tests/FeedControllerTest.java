@@ -3,25 +3,25 @@ package com.mdsgpp.eef.tests;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
-import com.mdsgpp.eef.controle.FeedControle;
+import com.mdsgpp.eef.controller.FeedController;
 import com.mdsgpp.eef.visao.TelaFeed;
 
 import android.test.ActivityInstrumentationTestCase2;
 
-public class FeedControleTeste extends ActivityInstrumentationTestCase2<TelaFeed> {
+public class FeedControllerTest extends ActivityInstrumentationTestCase2<TelaFeed> {
 
 	private final String FEED_ADDRESS = "http://noticias.gov.br/noticias/rss?id=AFSZW";
-	private FeedControle task1, task2;
-	private TelaFeed tela;
+	private FeedController task1;
+	private TelaFeed screen;
 
-	public FeedControleTeste() {
+	public FeedControllerTest() {
 		super(TelaFeed.class);
 	}
 
 	@Override
 	public void setUp() throws Exception {
 		super.setUp();
-		tela = getActivity();
+		screen = getActivity();
 	}
 
 	public void tearDown() throws Exception {
@@ -34,11 +34,9 @@ public class FeedControleTeste extends ActivityInstrumentationTestCase2<TelaFeed
 			@Override
 			public void run() {
 
-				task1 = new FeedControle(tela, null);
-				task2 = new FeedControle(tela, tela);
+				task1 = new FeedController(screen, null);
 
 				task1.execute(FEED_ADDRESS);
-				task2.execute("url_errada");
 			}
 		});
 
