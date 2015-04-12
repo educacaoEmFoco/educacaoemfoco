@@ -2,105 +2,105 @@ package com.mdsgpp.eef.testes;
 
 import android.test.AndroidTestCase;
 
-import com.mdsgpp.eef.modelo.Censo;
-import com.mdsgpp.eef.modelo.Estado;
+import com.mdsgpp.eef.model.Census;
+import com.mdsgpp.eef.model.State;
 
 public class CensoTeste extends AndroidTestCase {
 
-	private Census censo;
-	private Estado estado;
-	private double anosIniciaisFundamental, anosFinaisFundamental, ensinoMedio, fundamentalEJA, 
-		medioEJA;
-	private int ano;
+	private Census census;
+	private State state;
+	private double initialYearsElementary, finalYearsElementary, highSchool, EJAElementary, 
+		EJAHighSchool;
+	private int year;
 	
 	public void setUp() throws Exception {
-		this.censo = new Census();
-		this.estado = new Estado();
+		this.census = new Census();
+		this.state = new State();
 		
-		this.anosIniciaisFundamental = 87.11;
-		this.anosFinaisFundamental = 880.98;
-		this.ensinoMedio = 12.23;
-		this.fundamentalEJA = 99.90;
-		this.medioEJA = 460.21;
-		this.ano = 2005;
+		this.initialYearsElementary = 87.11;
+		this.finalYearsElementary = 880.98;
+		this.highSchool = 12.23;
+		this.EJAElementary = 99.90;
+		this.EJAHighSchool = 460.21;
+		this.year = 2005;
 	}
 
 	public void tearDown() throws Exception {
 		// Do nothing.
 	}
 	
-	public void testConstrutorCheio() {
-		Census censoConstruido = new Census(this.anosIniciaisFundamental, this.anosFinaisFundamental, 
-			this.ensinoMedio, this.fundamentalEJA, this.medioEJA);
+	public void testFullConstructor() {
+		Census censoConstruido = new Census(this.initialYearsElementary, this.finalYearsElementary, 
+			this.highSchool, this.EJAElementary, this.EJAHighSchool);
 		
-		assertEquals(this.anosIniciaisFundamental, censoConstruido.getAnosIniciaisFundamental(), 
+		assertEquals(this.initialYearsElementary, censoConstruido.getElementarySchoolEarlyYears(), 
 			0.0);
-		assertEquals(this.anosFinaisFundamental, censoConstruido.getAnosFinaisFundamental(), 0.0);
-		assertEquals(this.ensinoMedio, censoConstruido.getEnsinoMedio(), 0.0);
-		assertEquals(this.fundamentalEJA, censoConstruido.getFundamentalEJA(), 0.0);
-		assertEquals(this.medioEJA, censoConstruido.getMedioEJA(), 0.0);
+		assertEquals(this.finalYearsElementary, censoConstruido.getElementarySchoolFinalYears(), 0.0);
+		assertEquals(this.highSchool, censoConstruido.getHighSchool(), 0.0);
+		assertEquals(this.EJAElementary, censoConstruido.getEJAElementarySchool(), 0.0);
+		assertEquals(this.EJAHighSchool, censoConstruido.getEJAHighSchool(), 0.0);
 	}
 	
-	public void testAnosIniciaisFundamental() {
-		double anosIniciaisFundamentalAtual;
+	public void testElementaryInitialYears() {
+		double initialYearsElementary;
 		
-		this.censo.setAnosIniciaisFundamental(this.anosIniciaisFundamental);
-		anosIniciaisFundamentalAtual = this.censo.getAnosIniciaisFundamental();
+		this.census.setEarlyElementarySchoolYears(this.initialYearsElementary);
+		initialYearsElementary = this.census.getElementarySchoolEarlyYears();
 		
-		assertEquals(this.anosIniciaisFundamental, anosIniciaisFundamentalAtual, 0.0);
+		assertEquals(this.initialYearsElementary, initialYearsElementary, 0.0);
 	}
 	
-	public void testAnosFinaisFundamental() {
-		double anosFinaisFundamentalAtual;
+	public void testElementaryFinalYears() {
+		double finalYearsElementary;
 		
-		this.censo.setAnosFinaisFundamental(this.anosFinaisFundamental);
-		anosFinaisFundamentalAtual = this.censo.getAnosFinaisFundamental();
+		this.census.setFinalElementarySchoolYears(this.finalYearsElementary);
+		finalYearsElementary = this.census.getElementarySchoolFinalYears();
 		
-		assertEquals(this.anosFinaisFundamental, anosFinaisFundamentalAtual, 0.0);
+		assertEquals(this.finalYearsElementary, finalYearsElementary, 0.0);
 	}
 	
-	public void testEnsinoMedio() {
-		double ensinoMedioAtual;
+	public void testHighSchool() {
+		double currentHighSchool;
 		
-		this.censo.setEnsinoMedio(this.ensinoMedio);
-		ensinoMedioAtual = this.censo.getEnsinoMedio();
+		this.census.setHighSchool(this.highSchool);
+		currentHighSchool = this.census.getHighSchool();
 		
-		assertEquals(this.ensinoMedio, ensinoMedioAtual, 0.0);
+		assertEquals(this.highSchool, currentHighSchool, 0.0);
 	}
 	
-	public void testFundamentalEJA() {
-		double fundamentalEjaAtual;
+	public void testEJAElementary() {
+		double currentEJAElementary;
 		
-		this.censo.setFundamentalEJA(this.fundamentalEJA);
-		fundamentalEjaAtual = this.censo.getFundamentalEJA();
+		this.census.setEJAElementarySchool(this.EJAElementary);
+		currentEJAElementary = this.census.getEJAElementarySchool();
 		
-		assertEquals(this.fundamentalEJA, fundamentalEjaAtual, 0.0);
+		assertEquals(this.EJAElementary, currentEJAElementary, 0.0);
 	}
 	
-	public void testMediaEJA() {
-		double medioEjaAtual;
+	public void testHighSchoolEJA() {
+		double currentEJAHighSchool;
 		
-		this.censo.setMedioEJA(this.medioEJA);
-		medioEjaAtual = this.censo.getMedioEJA();
+		this.census.setEJAHighSchool(this.EJAHighSchool);
+		currentEJAHighSchool = this.census.getEJAHighSchool();
 		
-		assertEquals(this.medioEJA, medioEjaAtual, 0.0);
+		assertEquals(this.EJAHighSchool, currentEJAHighSchool, 0.0);
 	}
 	
-	public void testEstado() {
-		Estado estadoAtual;
+	public void testState() {
+		State currentState;
 		
-		this.censo.setEstado(this.estado);
-		estadoAtual = this.censo.getEstado();
+		this.census.setState(this.state);
+		currentState = this.census.getState();
 		
-		assertEquals(this.estado, estadoAtual);
+		assertEquals(this.state, currentState);
 	}
 	
-	public void testAno() {
-		int anoAtual;
+	public void testYear() {
+		int currentYear;
 		
-		this.censo.setAno(this.ano);
-		anoAtual = this.censo.getAno();
+		this.census.setYear(this.year);
+		currentYear = this.census.getYear();
 		
-		assertEquals(this.ano, anoAtual);
+		assertEquals(this.year, currentYear);
 	}
 }
