@@ -2,10 +2,10 @@ package com.mdsgpp.eef.tests;
 
 import android.test.AndroidTestCase;
 
-import com.mdsgpp.eef.modelo.Feed;
-import com.mdsgpp.eef.modelo.Noticias;
+import com.mdsgpp.eef.model.Feed;
+import com.mdsgpp.eef.model.News;
 
-public class NoticiasTeste extends AndroidTestCase {
+public class NewsTest extends AndroidTestCase {
 
 	private String title;
 	private String category;
@@ -13,11 +13,11 @@ public class NoticiasTeste extends AndroidTestCase {
 	private String link;
 	private String date; 
 	private Feed feed;
-	private Noticias noticias;
+	private News noticias;
 	
 	public void setUp(){
 		feed = new Feed();
-		noticias = new Noticias(feed);
+		noticias = new News(feed);
 		category = "categoria";
 		title = "title";
 		description = "description";
@@ -43,7 +43,6 @@ public class NoticiasTeste extends AndroidTestCase {
 	public void testLink() {
 		noticias.setLink(link);
 		assertEquals(link,noticias.getLink());
-		
 	}
 	
 	public void testDate() {
