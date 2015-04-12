@@ -1,18 +1,15 @@
-package com.mdsgpp.eef.testes;
+package com.mdsgpp.eef.tests;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import android.content.Context;
 import android.test.AndroidTestCase;
 
-import com.mdsgpp.eef.controle.ParseControle;
+import com.mdsgpp.eef.parser.ParserData;
 
-public class ParseControleTeste extends AndroidTestCase {
+public class DadosParseTeste extends AndroidTestCase {
 	
-	private ParseControle parseControle;
-	private Context context;	
 	private HashMap<String, ArrayList<String[]>> informacoes;
 	private ArrayList<String[]> dados1;
 	private ArrayList<String[]> dados2;
@@ -30,12 +27,10 @@ public class ParseControleTeste extends AndroidTestCase {
 	private String indicadores[] = new String[13];
 	private ArrayList<String[]> container;
 	private String nomeEsigla[] = new String[2];
+	private ParserData dadosParse;
 	
-
 	public void setUp() throws Exception {
-		context = getContext();
-
-		parseControle = new ParseControle(context);		
+		dadosParse = new ParserData(getContext());
 		informacoes = new HashMap<String, ArrayList<String[]>>();
 		container = new ArrayList<String[]>();
 		dados1 = new ArrayList<String[]>();
@@ -183,24 +178,19 @@ public class ParseControleTeste extends AndroidTestCase {
 		dados13.add("Total: 1905,13000000053".split(": "));
 		informacoes.put(indicadores[12], dados13);
 	}
-	
+
 	public void tearDown() throws Exception {
 		// Do nothing.
 	}
 	
-	public void testInstancia() {
-		assertNotNull(parseControle);
-	}
-	
-	public void testarSingleton() {
-		assertNotNull(ParseControle.getInstancia(context));
-	}
-	
-	public void testarInformacoesParse() {
+	public void testGetEstado() throws IOException {
+		informacoes.clear();
+		informacoes = dadosParse.getEstado(0);
 		HashMap<String, ArrayList<String[]>> estado;
 		estado = null;
+		
 		try {
-			estado = parseControle.getInformacoes(0);
+			estado = dadosParse.getEstado(0);
 		} 
 		catch(IOException e) {
 			fail();

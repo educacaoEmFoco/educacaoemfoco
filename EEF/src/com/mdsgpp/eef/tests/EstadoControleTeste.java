@@ -1,4 +1,4 @@
-package com.mdsgpp.eef.testes;
+package com.mdsgpp.eef.tests;
 
 import java.io.IOException;
 import java.text.DecimalFormat;
