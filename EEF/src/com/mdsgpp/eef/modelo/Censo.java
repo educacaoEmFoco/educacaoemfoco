@@ -2,80 +2,80 @@ package com.mdsgpp.eef.modelo;
 
 public class Censo {
 
-	private double anosIniciaisFundamental;
-	private double anosFinaisFundamental;
-	private double ensinoMedio;
-	private double fundamentalEJA;
-	private double medioEJA;
-	private int ano;
-	private Estado estado;
+	private double earlyElementarySchoolYears;
+	private double finalElementarySchoolYears;
+	private double highSchool;
+	private double EJAElementarySchool;
+	private double EJAHighSchool;
+	private int year;
+	private State state;
 	
 	public Censo() {
 	}
 
-	public Censo(double anosIniciaisFundamental, double anosFinaisFundamental, double ensinoMedio, 
-		double fundamentalEJA, double medioEJA) {
+	public Censo(double earlyElementarySchoolYears, double finalElementarySchoolYears, double highSchool, 
+		double EJAElementarySchool, double EJAHighSchool) {
 
-		this.anosIniciaisFundamental = anosIniciaisFundamental;
-		this.anosFinaisFundamental = anosFinaisFundamental;
-		this.ensinoMedio = ensinoMedio;
-		this.fundamentalEJA = fundamentalEJA;
-		this.medioEJA = medioEJA;
+		this.earlyElementarySchoolYears = earlyElementarySchoolYears;
+		this.finalElementarySchoolYears = finalElementarySchoolYears;
+		this.highSchool = highSchool;
+		this.EJAElementarySchool = EJAElementarySchool;
+		this.EJAHighSchool = EJAHighSchool;
 	}
 
-	public double getAnosIniciaisFundamental() {
-		return anosIniciaisFundamental;
+	public double getElementarySchoolEarlyYears() {
+		return earlyElementarySchoolYears;
 	}
 
-	public void setAnosIniciaisFundamental(double anosIniciaisFundamental) {
-		this.anosIniciaisFundamental = anosIniciaisFundamental;
+	public void setEarlyElementarySchoolYears(double earlyElementarySchoolYears) {
+		this.earlyElementarySchoolYears = earlyElementarySchoolYears;
 	}
 
-	public double getAnosFinaisFundamental() {
-		return anosFinaisFundamental;
+	public double getElementarySchoolFinalYears() {
+		return finalElementarySchoolYears;
 	}
 
-	public void setAnosFinaisFundamental(double anosFinaisFundamental) {
-		this.anosFinaisFundamental = anosFinaisFundamental;
+	public void setFinalElementarySchoolYears(double finalElementarySchoolYears) {
+		this.finalElementarySchoolYears = finalElementarySchoolYears;
 	}
 
-	public double getEnsinoMedio() {
-		return ensinoMedio;
+	public double getHighSchool() {
+		return highSchool;
 	}
 
-	public void setEnsinoMedio(double ensinoMedio) {
-		this.ensinoMedio = ensinoMedio;
+	public void setHighSchool(double highSchool) {
+		this.highSchool = highSchool;
 	}
 
-	public double getFundamentalEJA() {
-		return fundamentalEJA;
+	public double getEJAElementarySchool() {
+		return EJAElementarySchool;
 	}
 
-	public void setFundamentalEJA(double fundamentalEJA) {
-		this.fundamentalEJA = fundamentalEJA;
+	public void setEJAElementarySchool(double EJAElementarySchool) {
+		this.EJAElementarySchool = EJAElementarySchool;
 	}
 
-	public double getMedioEJA() {
-		return medioEJA;
+	public double getEJAHighSchool() {
+		return EJAHighSchool;
 	}
 
-	public void setMedioEJA(double medioEJA) {
-		this.medioEJA = medioEJA;
+	public void setEJAHighSchool(double EJAHighSchool) {
+		this.EJAHighSchool = EJAHighSchool;
 	}
 
-	public Estado getEstado() {
-		return estado;
+	public State getState() {
+		return state;
 	}
 
-	public void setEstado(Estado estado) {
-		this.estado = estado;
+	public void setState(State state) {
+		this.state = state;
 	}
 
-	public int getAno() {
-		return ano;
+	public int getYear() {
+		return year;
 	}
 
-	public void setAno(int ano) {
-		this.ano = ano;
+	public void setYear(int year) {
+		this.year = year;
 	}	
 }
