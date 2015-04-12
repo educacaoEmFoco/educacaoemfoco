@@ -8,7 +8,7 @@ import java.net.URL;
 import com.mdsgpp.eef.R;
 import com.mdsgpp.eef.model.Feed;
 import com.mdsgpp.eef.parse.FeedParser;
-import com.mdsgpp.eef.parse.FeedPersistencia;
+import com.mdsgpp.eef.parse.FeedPersistence;
 import com.mdsgpp.eef.visao.DataReceiver;
 
 import android.app.ProgressDialog;
@@ -48,7 +48,7 @@ public class FeedController extends AsyncTask<String, Void, Feed> {
 			InputStream is = url.openStream();
 			feed = handler.parse(is);
 
-			FeedPersistencia.getInstance(this.context).writeFeedFile(feed);
+			FeedPersistence.getInstance(this.context).writeFeedFile(feed);
 			this.updated = true;
 
 			return feed;
@@ -61,7 +61,7 @@ public class FeedController extends AsyncTask<String, Void, Feed> {
 		}
 
 		try {
-			feed = FeedPersistencia.getInstance(this.context).readFeedFile();
+			feed = FeedPersistence.getInstance(this.context).readFeedFile();
 		} 
 		catch(IOException e) {
 			e.printStackTrace();

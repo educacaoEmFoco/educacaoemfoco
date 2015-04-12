@@ -6,29 +6,29 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
-import com.mdsgpp.eef.modelo.Feed;
+import com.mdsgpp.eef.model.Feed;
 
 import android.content.Context;
 
-public class FeedPersistencia {
+public class FeedPersistence {
 
 	private static final String FILENAME = "feed.txt";
-	private static FeedPersistencia instancia;
+	private static FeedPersistence instance;
 	private Context context;
 	
-	public FeedPersistencia(Context context) {
+	public FeedPersistence(Context context) {
 		this.context = context;
 	}
 
 	// Get an instance of this class.
-	public static FeedPersistencia getInstance(Context context) {
-		if (instancia == null) {
-			instancia = new FeedPersistencia(context);
+	public static FeedPersistence getInstance(Context context) {
+		if (instance == null) {
+			instance = new FeedPersistence(context);
 		}
 		else {
 			// Do nothing.
 		}
-		return instancia;
+		return instance;
 	}
 	
 	// Save the feed on an extern file.

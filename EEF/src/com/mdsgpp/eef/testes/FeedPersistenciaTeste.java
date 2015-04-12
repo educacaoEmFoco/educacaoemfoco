@@ -4,7 +4,7 @@ import java.io.IOException;
 
 import com.mdsgpp.eef.modelo.Feed;
 import com.mdsgpp.eef.modelo.Noticias;
-import com.mdsgpp.eef.parse.FeedPersistencia;
+import com.mdsgpp.eef.parse.FeedPersistence;
 
 import android.content.Context;
 import android.test.AndroidTestCase;
@@ -33,7 +33,7 @@ public class FeedPersistenciaTeste extends AndroidTestCase {
 
 	public void testgetinstancia() {
 		context = getContext();
-		String nomeClasseRetorno = FeedPersistencia.getInstance(context).getClass().getSimpleName();
+		String nomeClasseRetorno = FeedPersistence.getInstance(context).getClass().getSimpleName();
 		assertEquals("FeedPersistencia", nomeClasseRetorno);
 	}
 
@@ -41,8 +41,8 @@ public class FeedPersistenciaTeste extends AndroidTestCase {
 		@SuppressWarnings("unused")
 		Feed feedRead;
 
-		FeedPersistencia.getInstance(getContext()).writeFeedFile(feed);
-		feedRead = FeedPersistencia.getInstance(getContext()).readFeedFile();
+		FeedPersistence.getInstance(getContext()).writeFeedFile(feed);
+		feedRead = FeedPersistence.getInstance(getContext()).readFeedFile();
 
 		assertEquals("Título esperado", "Teste de persistencia", feed.getItem(0).getTitle());
 		assertEquals("Categoria esperada", "teste", feed.getItem(0).getCategory());
