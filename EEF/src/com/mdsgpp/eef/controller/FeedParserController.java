@@ -3,19 +3,19 @@ package com.mdsgpp.eef.controller;
 import com.mdsgpp.eef.model.Feed;
 import com.mdsgpp.eef.model.News;
 
-public class FeedParseController {
+public class FeedParserController {
 
 	private Feed feed;
 	private News item;
-	private static FeedParseController instance;
+	private static FeedParserController instance;
 	
-	public FeedParseController() {
+	public FeedParserController() {
 		this.feed = new Feed();
 	}
 	
-	public static FeedParseController getInstance() {
+	public static FeedParserController getInstance() {
 		if(instance == null) {
-			instance = new FeedParseController();
+			instance = new FeedParserController();
 		}
 		else {
 			// Nothing to do.

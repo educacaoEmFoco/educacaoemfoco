@@ -7,7 +7,7 @@ import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
-import com.mdsgpp.eef.controller.FeedParseController;
+import com.mdsgpp.eef.controller.FeedParserController;
 import com.mdsgpp.eef.model.Feed;
 
 import android.sax.Element;
@@ -37,28 +37,28 @@ public class FeedParser extends DefaultHandler {
 		 */
 		chanElement.setStartElementListener(new StartElementListener() {
 			public void start(Attributes attributes) {
-				FeedParseController.getInstance().creatNewFeed();
+				FeedParserController.getInstance().creatNewFeed();
 			}
 		});
 
 		// When the 'item' element is opened.
 		chanItem.setStartElementListener(new StartElementListener() {
 			public void start(Attributes attributes) {
-				FeedParseController.getInstance().createNewItem();
+				FeedParserController.getInstance().createNewItem();
 			}
 		});
 
 		// When the 'item' element is closed.
 		chanItem.setEndElementListener(new EndElementListener() {
 			public void end() {
-				FeedParseController.getInstance().addItem();
+				FeedParserController.getInstance().addItem();
 			}
 		});
 
 		// When the 'title' element (inside 'item') is closed, we can get the 
 		itemTitle.setEndTextElementListener(new EndTextElementListener() {
 			public void end(String body) {
-				FeedParseController.getInstance().getItem().setTitle(body);
+				FeedParserController.getInstance().getItem().setTitle(body);
 			}
 		});
 
@@ -66,7 +66,7 @@ public class FeedParser extends DefaultHandler {
 		itemDescription.setEndTextElementListener(new EndTextElementListener() {
 			@Override
 			public void end(String body) {
-				FeedParseController.getInstance().getItem().setDescription(body);
+				FeedParserController.getInstance().getItem().setDescription(body);
 			}
 		});
 
@@ -74,7 +74,7 @@ public class FeedParser extends DefaultHandler {
 		itemCategory.setEndTextElementListener(new EndTextElementListener() {
 			@Override
 			public void end(String body) {
-				FeedParseController.getInstance().getItem().setCategory(body);
+				FeedParserController.getInstance().getItem().setCategory(body);
 			}
 		});
 
@@ -82,7 +82,7 @@ public class FeedParser extends DefaultHandler {
 		itemPubDate.setEndTextElementListener(new EndTextElementListener() {
 			@Override
 			public void end(String body) {
-				FeedParseController.getInstance().getItem().setDate(body);
+				FeedParserController.getInstance().getItem().setDate(body);
 			}
 		});
 
@@ -90,14 +90,14 @@ public class FeedParser extends DefaultHandler {
 		itemLink.setEndTextElementListener(new EndTextElementListener() {
 			@Override
 			public void end(String body) {
-				FeedParseController.getInstance().getItem().setLink(body);
+				FeedParserController.getInstance().getItem().setLink(body);
 			}
 		});
 
 		// Finally, we parse the xml file (through the InputStream) and return it.
 		try {
 			Xml.parse(is, Xml.Encoding.UTF_8, root.getContentHandler());
-			return FeedParseController.getInstance().getFeed();
+			return FeedParserController.getInstance().getFeed();
 		} catch (SAXException e) {
 			// XML conversion error
 		} catch (IOException e) {
