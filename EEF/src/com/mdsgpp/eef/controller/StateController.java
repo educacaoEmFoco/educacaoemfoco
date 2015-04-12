@@ -1,4 +1,4 @@
-package com.mdsgpp.eef.controle;
+package com.mdsgpp.eef.controller;
 
 import java.io.IOException;
 import java.text.DecimalFormat;
@@ -7,7 +7,7 @@ import java.util.HashMap;
 
 import android.content.Context;
 
-import com.mdsgpp.eef.modelo.State;
+import com.mdsgpp.eef.model.State;
 
 public class StateController {
 

@@ -1,4 +1,4 @@
-package com.mdsgpp.eef.modelo;
+package com.mdsgpp.eef.model;
 
 import java.util.ArrayList;
 import java.util.HashMap;

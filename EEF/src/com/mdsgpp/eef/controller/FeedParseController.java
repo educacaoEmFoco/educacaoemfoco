@@ -1,7 +1,7 @@
-package com.mdsgpp.eef.controle;
+package com.mdsgpp.eef.controller;
 
-import com.mdsgpp.eef.modelo.Feed;
-import com.mdsgpp.eef.modelo.News;
+import com.mdsgpp.eef.model.Feed;
+import com.mdsgpp.eef.model.News;
 
 public class FeedParseController {
 

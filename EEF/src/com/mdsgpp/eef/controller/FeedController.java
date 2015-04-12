@@ -1,4 +1,4 @@
-package com.mdsgpp.eef.controle;
+package com.mdsgpp.eef.controller;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -6,7 +6,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 import com.mdsgpp.eef.R;
-import com.mdsgpp.eef.modelo.Feed;
+import com.mdsgpp.eef.model.Feed;
 import com.mdsgpp.eef.parse.FeedParser;
 import com.mdsgpp.eef.parse.FeedPersistencia;
 import com.mdsgpp.eef.visao.DataReceiver;
