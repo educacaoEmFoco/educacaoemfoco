@@ -43,7 +43,7 @@ public class ParserData {
 	}
 
 	// Acquire the informations about a state by it's ID, and save in a vector.
-	public HashMap<String, ArrayList<String[]>> getEstado(int position) throws IOException {
+	public HashMap<String, ArrayList<String[]>> getState(int position) throws IOException {
 		String name, acronym;
 
 		AssetManager am = this.context.getAssets();
