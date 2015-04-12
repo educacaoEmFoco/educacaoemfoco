@@ -12,16 +12,16 @@ public class State {
 	private int population;
 	private Censo censos[]; 
 	private Ideb idebs[];
-	private Media averageClassSize[]; 
-	private Media averageClassHours[]; 
-	private Projeto scienceTechnologyProjects[];
-	private Projeto firstProjects[];
-	private Projeto InctProjects[];
-	private Projeto CnpqSupportProjects[];
-	private Projeto youngResearchersProject[];
-	private Media ageSeriesDistortionRate[]; 
-	private Media utilizationRate[]; 
-	private Media droupoutRate[];
+	private Average averageClassSize[]; 
+	private Average averageClassHours[]; 
+	private Project scienceTechnologyProjects[];
+	private Project firstProjects[];
+	private Project InctProjects[];
+	private Project CnpqSupportProjects[];
+	private Project youngResearchersProject[];
+	private Average ageSeriesDistortionRate[]; 
+	private Average utilizationRate[]; 
+	private Average droupoutRate[];
 	
 	public State(){
 	}
@@ -151,25 +151,25 @@ public class State {
 		this.idebs = ideb;
 	}
 
-	public Media[] returnEmptyAverage() {
-		Media emptyAverage[] = {new Media(0,0)};
+	public Average[] returnEmptyAverage() {
+		Average emptyAverage[] = {new Average(0,0)};
 		emptyAverage[0].setYear(0);
 		
 		return emptyAverage;
 	}
 	
-	public Media[] setAverage(HashMap<String, ArrayList<String[]>> information, 
+	public Average[] setAverage(HashMap<String, ArrayList<String[]>> information, 
 		String[] indicativeNames) {
 		ArrayList<String[]> elementarySchoolData;
 		ArrayList<String[]> highSchoolData;
-		Media readAverage[] = null;
+		Average readAverage[] = null;
 		
 		elementarySchoolData = information.get(indicativeNames[0]);
 		highSchoolData = information.get(indicativeNames[1]);
 		
-		readAverage = new Media[highSchoolData.size()];
+		readAverage = new Average[highSchoolData.size()];
 		for(int counter = 0; counter < readAverage.length; counter++) {
-			readAverage[counter] = new Media();
+			readAverage[counter] = new Average();
 			readAverage[counter].setState(this); 
 			readAverage[counter].setYear(Integer.parseInt(highSchoolData.get(counter)[0]));
 			readAverage[counter].setElementarySchool(Double.parseDouble
@@ -181,7 +181,7 @@ public class State {
 		return readAverage;
 	}
 	
-	public Media[] getAverageClassSize() {
+	public Average[] getAverageClassSize() {
 		if(averageClassSize == null) {
 			return returnEmptyAverage();
 		}
@@ -197,7 +197,7 @@ public class State {
 		this.averageClassSize = this.setAverage(information, indicativeNames);
 	}
 
-	public Media[] getAverageClassHours() {
+	public Average[] getAverageClassHours() {
 		if(averageClassHours == null) {
 			return returnEmptyAverage();
 		}
@@ -213,7 +213,7 @@ public class State {
 		this.averageClassHours = this.setAverage(information, indicativeNames);
 	}
 
-	public Media[] getAgeSeriesDistortionRate() {
+	public Average[] getAgeSeriesDistortionRate() {
 		if(ageSeriesDistortionRate == null) {
 			return returnEmptyAverage();
 		}
@@ -260,8 +260,8 @@ public class State {
 	}
 	
 	// Create and returns an empty Array of the type "Projeto".
-	public Projeto[] returnEmptyProject() {
-		Projeto emptyProject[] = {new Projeto()};
+	public Project[] returnEmptyProject() {
+		Project emptyProject[] = {new Project()};
 		emptyProject[0].setQuantity(0);
 		emptyProject[0].setValue(0);
 		emptyProject[0].setYear(0);
@@ -269,15 +269,15 @@ public class State {
 		return emptyProject;
 	}
 	
-	public Projeto[] setProjects(HashMap<String, ArrayList<String[]>> information,
+	public Project[] setProjects(HashMap<String, ArrayList<String[]>> information,
 		String[] indicativeNames) {
 		ArrayList<String[]> amoutInvestedData = null;
 		ArrayList<String[]> quantityProjectsData = null;
-		Projeto readProjects[] = null;
+		Project readProjects[] = null;
 		
 		if(information.containsKey(indicativeNames[0])) {
 			quantityProjectsData = information.get(indicativeNames[0]);
-			readProjects = new Projeto[quantityProjectsData.size()];
+			readProjects = new Project[quantityProjectsData.size()];
 			amoutInvestedData = information.get(indicativeNames[1]);			
 		}
 		else {
@@ -285,8 +285,8 @@ public class State {
 		}
 		
 		for(int counter = 0; readProjects != null && counter < readProjects.length; counter++) { 
-			readProjects[counter] = new Projeto();
-			readProjects[counter].setEstado(this);
+			readProjects[counter] = new Project();
+			readProjects[counter].setState(this);
 			if(counter  < (readProjects.length - 1)) {
 				readProjects[counter].setYear(Integer.parseInt
 					(quantityProjectsData.get(counter)[0]));
@@ -304,7 +304,7 @@ public class State {
 		return readProjects;
 	}
 	
-	public Projeto[] getScienceTechnologyProjects() {
+	public Project[] getScienceTechnologyProjects() {
 		if(scienceTechnologyProjects == null) {
 			return returnEmptyProject();
 		}
@@ -320,7 +320,7 @@ public class State {
 		this.scienceTechnologyProjects = this.setProjects(information, indicativeNames);
 	}
 	
-	public Projeto[] getFirstProjects() {
+	public Project[] getFirstProjects() {
 		if(firstProjects == null) {
 			return returnEmptyProject();
 		}
@@ -336,7 +336,7 @@ public class State {
 		this.firstProjects = this.setProjects(information, indicativeNames);
 	}
 
-	public Projeto[] getInctProjects() {
+	public Project[] getInctProjects() {
 		if(InctProjects == null) {
 			return returnEmptyProject();
 		}
@@ -352,7 +352,7 @@ public class State {
 		this.InctProjects = this.setProjects(information, indicativeNames);
 	}
 
-	public Projeto[] getCnpqSupportProjects() {
+	public Project[] getCnpqSupportProjects() {
 		if(CnpqSupportProjects == null) {
 			return returnEmptyProject();
 		}
@@ -368,7 +368,7 @@ public class State {
 		this.CnpqSupportProjects = this.setProjects(information, indicativeNames);
 	}
 
-	public Projeto[] getYoungResearchersProject() {
+	public Project[] getYoungResearchersProject() {
 		if(youngResearchersProject == null) {
 			return returnEmptyProject();
 		}
@@ -384,7 +384,7 @@ public class State {
 		this.youngResearchersProject = this.setProjects(information, indicativeNames);
 	}
 
-	public Media[] getUtilizationRate() {
+	public Average[] getUtilizationRate() {
 		if(utilizationRate == null) {
 			return returnEmptyAverage();
 		}
@@ -400,7 +400,7 @@ public class State {
 		this.utilizationRate = this.setAverage(information, indicativeNames);
 	}
 
-	public Media[] getDropoutRate() {
+	public Average[] getDropoutRate() {
 		if(droupoutRate == null) {
 			return returnEmptyAverage();
 		}

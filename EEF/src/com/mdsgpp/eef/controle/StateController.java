@@ -41,7 +41,7 @@ public class StateController {
 	 * in a variable.
 	 */
 	public State obtainState(int position) throws IOException {
-		parseInformation = ParseControle.getInstance(context).getInformation(position);
+		parseInformation = ParseController.getInstance(context).getInformation(position);
 		String acronymName[] = parseInformation.get("nome_e_sigla").get(0);
 		State state = new State(acronymName[0], acronymName[1],
 			parseInformation);
@@ -56,7 +56,7 @@ public class StateController {
 	 * return this information.
 	 */
 	public HashMap<String, String> readState(int position) throws IOException {
-		parseInformation = ParseControle.getInstance(context).getInformation(position);
+		parseInformation = ParseController.getInstance(context).getInformation(position);
 		String acronymName[] = parseInformation.get("nome_e_sigla").get(0);
 		State state = new State(acronymName[0], acronymName[1],
 			parseInformation);
@@ -72,7 +72,7 @@ public class StateController {
 	 */
 	public HashMap<String, String> readFullState(int position) throws
 		IOException {
-		parseInformation = ParseControle.getInstance(context).getInformation
+		parseInformation = ParseController.getInstance(context).getInformation
 			(position);
 		String acronymName[] = parseInformation.get("nome_e_sigla").get(0);
 		State state = new State(acronymName[0], acronymName[1],
@@ -128,13 +128,13 @@ public class StateController {
 			[state.getCnpqSupportProjects().length - 1].getValue()) +
 			" (em mil)");
 		this.stateInformation.put("quantidade_projeto_jovens_pesquisadores",
-			"Quantidade: " + state.getYoungResearchresProject()
-			[state.getYoungResearchresProject().length - 1].getQuantity()
+			"Quantidade: " + state.getYoungResearchersProject()
+			[state.getYoungResearchersProject().length - 1].getQuantity()
 			+ " projetos");
 		this.stateInformation.put("valor_projetos_jovens_pesquisadores",
 			"Valor investido: R$ " + decimalFormatValue.format
-			(state.getYoungResearchresProject()
-			[state.getYoungResearchresProject().length - 1].getValue()) +
+			(state.getYoungResearchersProject()
+			[state.getYoungResearchersProject().length - 1].getValue()) +
 			" (em mil)");
 		this.stateInformation.put("quantidade_projetos_inct", "Quantidade: " 
 			+ state.getInctProjects()[state.getInctProjects().length - 1]
@@ -270,12 +270,12 @@ public class StateController {
 		this.stateInformation.put("cnpq", temporaryString);
 		temporaryString = "";
 
-		for(int counter = 0, year = 2005; counter < state.getYoungResearchresProject().
+		for(int counter = 0, year = 2005; counter < state.getYoungResearchersProject().
 			length - 1; counter++, year++) {
 			temporaryString += year + ": " + "Quantidade: " + state
-				.getYoungResearchresProject()[counter].getQuantity() +
+				.getYoungResearchersProject()[counter].getQuantity() +
 				" projetos\n" + "\t\t  " + "Valor investido: R$ " +
-				decimalFormatValue.format(state.getYoungResearchresProject()[counter].
+				decimalFormatValue.format(state.getYoungResearchersProject()[counter].
 				getValue()) + " (em mil)\n\n";
 		}
 

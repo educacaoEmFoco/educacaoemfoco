@@ -1,12 +1,12 @@
 package com.mdsgpp.eef.controle;
 
 import com.mdsgpp.eef.modelo.Feed;
-import com.mdsgpp.eef.modelo.Noticias;
+import com.mdsgpp.eef.modelo.News;
 
 public class FeedParseController {
 
 	private Feed feed;
-	private Noticias item;
+	private News item;
 	private static FeedParseController instance;
 	
 	public FeedParseController() {
@@ -35,7 +35,7 @@ public class FeedParseController {
 	
 	// This method creates a new item based on the feed.
 	public void createNewItem() {
-		this.item = new Noticias(this.feed);
+		this.item = new News(this.feed);
 	}
 	
 	// This method add an item on the feed.
@@ -43,7 +43,7 @@ public class FeedParseController {
 		this.feed.addItem(this.item);
 	}
 	
-	public Noticias getItem() {
+	public News getItem() {
 		return this.item;
 	}	
 }
