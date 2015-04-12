@@ -2,56 +2,56 @@ package com.mdsgpp.eef.modelo;
 
 public class Ideb {
 
-	private double fundamental;
-	private double medio;
-	private double seriesIniciais;
-	private Estado estado;
-	private int ano;
+	private double elementarySchool;
+	private double highSchool;
+	private double earlyGrades;
+	private State state;
+	private int year;
 	
 	public Ideb() {
 	}
 	
-	public Ideb(double fundamental, double medio, double iniciais) {
-		this.fundamental = fundamental;
-		this.medio = medio;
-		this.seriesIniciais = iniciais;
+	public Ideb(double elementarySchool, double highSchool, double iniciais) {
+		this.elementarySchool = elementarySchool;
+		this.highSchool = highSchool;
+		this.earlyGrades = iniciais;
 	}
 
-	public double getFundamental() {
-		return fundamental;
+	public double getElementarySchool() {
+		return elementarySchool;
 	}
 
-	public void setFundamental(double fundamental) {
-		this.fundamental = fundamental;
+	public void setElementarySchool(double elementarySchool) {
+		this.elementarySchool = elementarySchool;
 	}
 
-	public double getMedio() {
-		return medio;
+	public double getHighSchool() {
+		return highSchool;
 	}
 
-	public void setMedio(double medio) {
-		this.medio = medio;
+	public void setHighSchool(double highSchool) {
+		this.highSchool = highSchool;
 	}
 
-	public double getSeriesIniciais() {
-		return seriesIniciais;
+	public double getEarlyGrades() {
+		return earlyGrades;
 	}
 
-	public void setSeriesIniciais(double seriesIniciais) {
-		this.seriesIniciais = seriesIniciais;
+	public void setEarlyGrades(double earlyGrades) {
+		this.earlyGrades = earlyGrades;
 	}
 
-	public Estado getEstado() {
-		return estado;
+	public State getState() {
+		return state;
 	}
 
-	public void setEstado(Estado estado) {
-		this.estado = estado;
+	public void setState(State state) {
+		this.state = state;
 	}	
-	public int getAno(){
-		return ano;
+	public int getYear(){
+		return year;
 	}
-	public void setAno(int ano){
-		this.ano = ano;
+	public void setYear(int year){
+		this.year = year;
 	}
 }
