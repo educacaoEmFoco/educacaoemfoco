@@ -8,26 +8,26 @@ public class Feed implements Serializable {
 	// Default serial id
 	private static final long serialVersionUID = 1L;
 	
-	private ArrayList<Noticias> items;
+	private ArrayList<News> items;
 
 	public Feed() {
-		items = new ArrayList<Noticias>();
+		items = new ArrayList<News>();
 	}
 
-	public ArrayList<Noticias> getItems() {
+	public ArrayList<News> getItems() {
 		return items;
 	}
 	
-	public Noticias getItem(int position) {
+	public News getItem(int position) {
 		return items.get(position);
 	}
 
-	public void setItems(ArrayList<Noticias> items) {
+	public void setItems(ArrayList<News> items) {
 		this.items = items;
 	}
 	
 	// This method adds a report in the array "items".
-	public void addItem(Noticias newItem) {
+	public void addItem(News newItem) {
 		this.items.add(newItem);
 	}
 	
