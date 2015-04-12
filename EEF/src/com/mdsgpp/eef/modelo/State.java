@@ -140,11 +140,11 @@ public class State {
 				// Nothing to do.
 			}
 			
-			ideb[counter].setFundamental(Double.parseDouble
+			ideb[counter].setElementarySchool(Double.parseDouble
 				(finalElementarySchoolData.get(counter)[1].replaceAll(",", ".")));
-			ideb[counter].setMedio(Double.parseDouble
+			ideb[counter].setHighSchool(Double.parseDouble
 				(highSchoolData.get(counter)[1].replaceAll(",", ".")));
-			ideb[counter].setSeriesIniciais(Double.parseDouble
+			ideb[counter].setEarlyGrades(Double.parseDouble
 				(earlyElementarySchoolData.get(counter)[1].replaceAll(",", ".")));
 		}
 		

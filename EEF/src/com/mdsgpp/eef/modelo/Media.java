@@ -2,48 +2,48 @@ package com.mdsgpp.eef.modelo;
 
 public class Media {
 
-	private double ensinoFundamental;
-	private double ensinoMedio;
-	private int ano;
-	private Estado estado;
+	private double elementarySchool;
+	private double highSchool;
+	private int year;
+	private State state;
 		
 	public Media() {
 	}
 		
-	public Media(double ensinoFundamental, double ensinoMedio) {
-		this.ensinoFundamental = ensinoFundamental;
-		this.ensinoMedio = ensinoMedio;
+	public Media(double elementarySchool, double highSchool) {
+		this.elementarySchool = elementarySchool;
+		this.highSchool = highSchool;
 	}
 		
-	public double getEnsinoFundamental() {
-		return ensinoFundamental;
+	public double getElementarySchool() {
+		return elementarySchool;
 	}
 
-	public void setEnsinoFundamental(double ensinoFundamental) {
-		this.ensinoFundamental = ensinoFundamental;
+	public void setElementarySchool(double elementarySchool) {
+		this.elementarySchool = elementarySchool;
 	}
 
-	public double getEnsinoMedio() {
-		return ensinoMedio;
+	public double getHighSchool() {
+		return highSchool;
 	}
 
-	public void setEnsinoMedio(double ensinoMedio) {
-		this.ensinoMedio = ensinoMedio;
+	public void setHighSchool(double highSchool) {
+		this.highSchool = highSchool;
 	}
 
-	public Estado getEstado() {
-		return estado;
+	public State getState() {
+		return state;
 	}
 
-	public void setEstado(Estado estado) {
-		this.estado = estado;
+	public void setState(State state) {
+		this.state = state;
 	}
 
-	public int getAno() {
-		return ano;
+	public int getYear() {
+		return year;
 	}
 
-	public void setAno(int ano) {
-		this.ano = ano;
+	public void setYear(int year) {
+		this.year = year;
 	}		
 }
