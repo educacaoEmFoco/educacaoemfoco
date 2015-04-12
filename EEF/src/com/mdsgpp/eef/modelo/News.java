@@ -2,7 +2,7 @@ package com.mdsgpp.eef.modelo;
 
 import java.io.Serializable;
 
-public class Noticias implements Serializable {
+public class News implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	private String title;
@@ -12,7 +12,7 @@ public class Noticias implements Serializable {
 	private String date; 
 	private Feed feed;
 	
-	public Noticias(Feed feed) {
+	public News(Feed feed) {
 		this.feed = feed;
 	}
 

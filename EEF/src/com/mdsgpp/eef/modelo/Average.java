@@ -1,16 +1,16 @@
 package com.mdsgpp.eef.modelo;
 
-public class Media {
+public class Average {
 
 	private double elementarySchool;
 	private double highSchool;
 	private int year;
 	private State state;
 		
-	public Media() {
+	public Average() {
 	}
 		
-	public Media(double elementarySchool, double highSchool) {
+	public Average(double elementarySchool, double highSchool) {
 		this.elementarySchool = elementarySchool;
 		this.highSchool = highSchool;
 	}
