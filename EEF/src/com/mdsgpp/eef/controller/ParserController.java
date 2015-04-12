@@ -8,18 +8,18 @@ import android.content.Context;
 
 import com.mdsgpp.eef.parser.ParserData;
 
-public class ParseController {
+public class ParserController {
 
-	private static ParseController instance;
+	private static ParserController instance;
 	ParserData parser;
 
-	public ParseController(Context context) {
+	public ParserController(Context context) {
 		parser = new ParserData(context);
 	}
 
-	public static ParseController getInstance(Context context) {
+	public static ParserController getInstance(Context context) {
 		if(instance == null) {
-			instance = new ParseController(context);
+			instance = new ParserController(context);
 		}
 		else {
 			// Nothing to do.
