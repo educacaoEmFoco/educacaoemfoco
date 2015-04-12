@@ -3,25 +3,25 @@ package com.mdsgpp.eef.controle;
 import com.mdsgpp.eef.modelo.Feed;
 import com.mdsgpp.eef.modelo.Noticias;
 
-public class FeedParseControle {
+public class FeedParseController {
 
 	private Feed feed;
 	private Noticias item;
-	private static FeedParseControle instancia;
+	private static FeedParseController instance;
 	
-	public FeedParseControle() {
+	public FeedParseController() {
 		this.feed = new Feed();
 	}
 	
-	public static FeedParseControle getInstance() {
-		if(instancia == null) {
-			instancia = new FeedParseControle();
+	public static FeedParseController getInstance() {
+		if(instance == null) {
+			instance = new FeedParseController();
 		}
 		else {
 			// Nothing to do.
 		}
 		
-		return instancia;
+		return instance;
 	}
 
 	public Feed getFeed() {
@@ -29,17 +29,17 @@ public class FeedParseControle {
 	}
 	
 	// This method clear the feed.
-	public void criaNovoFeed() {
+	public void creatNewFeed() {
 		this.feed.reset();
 	}
 	
 	// This method creates a new item based on the feed.
-	public void criaNovoItem() {
+	public void createNewItem() {
 		this.item = new Noticias(this.feed);
 	}
 	
 	// This method add an item on the feed.
-	public void adicionaItem() {
+	public void addItem() {
 		this.feed.addItem(this.item);
 	}
 	
