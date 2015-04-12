@@ -5,7 +5,7 @@ import android.test.AndroidTestCase;
 import com.mdsgpp.eef.model.Census;
 import com.mdsgpp.eef.model.State;
 
-public class CensoTeste extends AndroidTestCase {
+public class CensusTest extends AndroidTestCase {
 
 	private Census census;
 	private State state;
