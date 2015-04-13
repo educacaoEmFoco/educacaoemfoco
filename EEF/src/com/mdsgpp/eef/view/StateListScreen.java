@@ -1,7 +1,7 @@
-package com.mdsgpp.eef.visao;
+package com.mdsgpp.eef.view;
 
 import com.mdsgpp.eef.R;
-import com.mdsgpp.eef.visao.EstadoAdapter;
+import com.mdsgpp.eef.view.EstadoAdapter;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -15,7 +15,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
-public class TelaListaEstado extends Activity {
+public class StateListScreen extends Activity {
 
 	final Context context = this;
 
@@ -24,7 +24,7 @@ public class TelaListaEstado extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_tela_lista_estado);
 
-		inicializaListView();
+		startListView();
 	}
 
 	@Override
@@ -39,7 +39,7 @@ public class TelaListaEstado extends Activity {
 	    	
 		switch (item.getItemId()) {
 			case R.id.sobre:
-				abreTelaSobre();
+				openAboutScreen();
 				break;
 				
 			case android.R.id.home:
@@ -55,7 +55,7 @@ public class TelaListaEstado extends Activity {
 	    }
 	
 	// Change the activity to TelaSobreListaEstado activity.
-	public void abreTelaSobre() {
+	public void openAboutScreen() {
 	    Intent intent = new Intent(this, TelaSobreListaEstado.class);
 	    startActivity(intent);
 	 }
@@ -64,7 +64,7 @@ public class TelaListaEstado extends Activity {
 	 * Assigns the class variable listView with the ListView on the screen and
 	 * assign action to the elements on the list.
 	 */
-	private void inicializaListView() {
+	private void startListView() {
 		ListView listView = (ListView) findViewById(R.id.listview_tela_estados);
 
 		EstadoAdapter adapter = new EstadoAdapter(this);
@@ -72,8 +72,7 @@ public class TelaListaEstado extends Activity {
 		listView.setAdapter(adapter);
 		listView.setOnItemClickListener(new OnItemClickListener() {
 		@Override
-		public void onItemClick(AdapterView<?> arg0, View arg1,
-			int position, long id) {
+		public void onItemClick(AdapterView<?> arg0, View arg1, int position, long id) {
 			Intent intent = new Intent(context, TelaEstado.class);
 			intent.putExtra("INDEX_ESTADO_ESCOLHIDO", position);
 			startActivity(intent);
