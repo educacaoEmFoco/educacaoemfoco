@@ -1,0 +1,171 @@
+package com.mdsgpp.eef.visao;
+
+import java.util.ArrayList;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
+import android.widget.AdapterView.OnItemSelectedListener;
+
+import com.mdsgpp.eef.R;
+
+public abstract class Comparacao extends Activity {
+
+	private Spinner estadosSpinner01;
+	private Spinner estadosSpinner;
+	private ArrayAdapter<String> estadosAdapter01;
+	private ArrayAdapter<String> estadosAdapter02;
+	private ArrayList<String> estados01;
+	private ArrayList<String> estados02;
+	private ArrayList<String> todosEstados;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_tela_comparacao);
+
+		inicializaSpinners();
+		estados01 = preencheEstados(estados01);
+		estados02 = preencheEstados(estados02);
+		todosEstados = preencheEstados(todosEstados);
+
+		setAdapterSpinner01();
+		setAdapterSpinner02();
+	}
+
+	// Inflate the menu, this adds items to the action bar if it is present.
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		getMenuInflater().inflate(R.menu.menu_telas, menu);
+		return true;
+	}
+
+	/*
+	* Spinners provide a quick way to select one value from a set.
+	* Here we initialize them with default values.
+	*/
+	private void inicializaSpinners() {
+		estados01 = new ArrayList<String>();
+		estados02 = new ArrayList<String>();
+		todosEstados = new ArrayList<String>();
+
+		estadosSpinner01 = (Spinner) findViewById(R.id.spinner1);
+		estadosSpinner01.setOnItemSelectedListener(new OnItemSelectedListener() {
+			@Override
+			public void onItemSelected(AdapterView<?> adapter, View view, int posicao, long id) {
+				atualizaValoresSpinner02(estadosSpinner01.getSelectedItem().toString());
+			}
+
+			@Override
+			public void onNothingSelected(AdapterView<?> arg0) {
+				// Nothing to do.
+			}
+		});
+
+		estadosSpinner = (Spinner) findViewById(R.id.spinner2);
+		estadosSpinner.setOnItemSelectedListener(new OnItemSelectedListener() {
+			@Override
+			public void onItemSelected(AdapterView<?> adapter, View view, int posicao, long id) {
+				atualizaValoresSpinner01(estadosSpinner.getSelectedItem().toString());
+			}
+
+			@Override
+			public void onNothingSelected(AdapterView<?> arg0) {
+				// Nothing to do.
+			}
+		});
+	}
+
+	private void setAdapterSpinner01() {
+		estadosAdapter01 = new ArrayAdapter<String>(this, R.layout.spinner_item, estados01);
+		estadosAdapter01.setDropDownViewResource(android.R.layout.simple_list_item_1);
+		estadosSpinner01.setAdapter(estadosAdapter01);
+	}
+
+	private void setAdapterSpinner02() {
+		estadosAdapter02 = new ArrayAdapter<String>(this, R.layout.spinner_item, estados02);
+		estadosAdapter02.setDropDownViewResource(android.R.layout.simple_list_item_1);
+
+		// Define the adapter for spinners.
+		estadosSpinner.setAdapter(estadosAdapter02);
+	}
+
+	// Fill the array estados with the name of all brazilian states.
+	private ArrayList<String> preencheEstados(ArrayList<String> estados) {
+		estados.clear();
+
+		estados.add("Acre");
+		estados.add("Alagoas");
+		estados.add("Amapá");
+		estados.add("Amazonas");
+		estados.add("Bahia");
+		estados.add("Ceará");
+		estados.add("Distrito Federal");
+		estados.add("Espírito Santo");
+		estados.add("Goiás");
+		estados.add("Maranhão");
+		estados.add("Mato Grosso");
+		estados.add("Mato Grosso do Sul");
+		estados.add("Minas Gerais");
+		estados.add("Pará");
+		estados.add("Paraíba");
+		estados.add("Paraná");
+		estados.add("Pernambuco");
+		estados.add("Piauí");
+		estados.add("Rio de Janeiro");
+		estados.add("Rio Grande do Norte");
+		estados.add("Rio Grande do Sul");
+		estados.add("Rondônia");
+		estados.add("Roraima");
+		estados.add("Santa Catarina");
+		estados.add("São Paulo");
+		estados.add("Sergipe");
+		estados.add("Tocantins");
+		
+		return estados;
+	}
+
+	// Refresh the first spinner with new values.
+	private void atualizaValoresSpinner01(String nome) {
+		String estadoSelecionado = estadosSpinner01.getSelectedItem().toString();
+		estados01 = preencheEstados(estados01);
+		estados01.remove(nome);
+		estadosAdapter01.notifyDataSetChanged();
+		estadosSpinner01.setSelection(estados01.indexOf(estadoSelecionado));
+	}
+
+	// Refresh the second spinner with new values.
+	private void atualizaValoresSpinner02(String nome) {
+		String estadoSelecionado = estadosSpinner.getSelectedItem().toString();
+		estados02 = preencheEstados(estados02);
+		estados02.remove(nome);
+		estadosAdapter02.notifyDataSetChanged();
+		estadosSpinner.setSelection(estados02.indexOf(estadoSelecionado));
+	}
+
+	// When button ComparacaoEstados is clicked triger a new screen.
+	public abstract void clickBotaoComparacaoEstados(View view);
+	
+	// Implements the action of button to start comparation.
+	public void clickBotaoSobreCompara(View view) {
+		Intent intent = new Intent(this, TelaSobreConsulta.class);
+		startActivity(intent);
+	}	
+	
+	public Spinner getEstadosSpinner01() {
+		return estadosSpinner01;
+	}
+
+	public Spinner getEstadosSpinner() {
+		return estadosSpinner;
+	}
+
+	public ArrayList<String> getTodosEstados() {
+		return todosEstados;
+	}
+}
