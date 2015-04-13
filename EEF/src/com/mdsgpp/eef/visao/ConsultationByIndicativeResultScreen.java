@@ -12,17 +12,17 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
 
-public class TelaResultadoConsultaPorIndicativo extends Activity {
+public class ConsultationByIndicativeResultScreen extends Activity {
 	private final Context context = this;
-	private ListView listaDeEstados = null;
+	private ListView statesList = null;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_tela_resultado_consulta_por_indicativo);
-		inicializaViews();
+		startViews();
 		
-		carregaIndicativosDosEstados();
+		loadIndicativesOfStates();
 		
 	}
 
@@ -39,7 +39,7 @@ public class TelaResultadoConsultaPorIndicativo extends Activity {
 		
 		switch (item.getItemId()) {
 		case R.id.sobre:
-			abreTelaSobre();
+			openAboutScreen();
 			break;
 			
 		case android.R.id.home:
@@ -54,32 +54,32 @@ public class TelaResultadoConsultaPorIndicativo extends Activity {
     	return true;
 	}
 	
-	// Change the activity to TelaSobreResultadosDaConsulta activity.
-	public void abreTelaSobre() {
-		Intent intent = new Intent(this, TelaSobreResultadoDaConsulta.class);
+	// Change the activity to AboutResultOfConsultationScreen activity.
+	public void openAboutScreen() {
+		Intent intent = new Intent(this, AboutResultOfConsultationScreen.class);
     	startActivity(intent);
 		
 	}
 	
 	// Takes the indicatives information from the previous activity to that.
-	private void carregaIndicativosDosEstados() {
+	private void loadIndicativesOfStates() {
 		Intent intent = getIntent();
 			
-		String indicativo = intent.getStringExtra("INDICATIVO");
-		String titulo = intent.getStringExtra("TITULO");
+		String indicative = intent.getStringExtra("INDICATIVO");
+		String title = intent.getStringExtra("TITULO");
 			
-		IndicativoAdapter adapter = new IndicativoAdapter(titulo, indicativo,
+		IndicativoAdapter adapter = new IndicativoAdapter(title, indicative,
 			context);
 			
-		listaDeEstados.setAdapter(adapter);
+		statesList.setAdapter(adapter);
 	}
 	
 	/*
-	 * Assigns the class variable listaDeEstados with the ListView on the
+	 * Assigns the class variable statesList with the ListView on the
 	 * screen.
 	 */
-	public void inicializaViews(){
-		listaDeEstados = (ListView) 
+	public void startViews(){
+		statesList = (ListView) 
 			findViewById(R.id.listview_tela_resultado_consulta_por_indicativo);
 	}
 	

@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
 
-public class TelaSobreResultadoDaConsulta extends Activity {
+public class AboutResultOfConsultationScreen extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
