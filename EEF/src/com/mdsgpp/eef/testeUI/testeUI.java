@@ -1,4 +1,4 @@
-package com.mdsgpp.eef.testeUI;
+/*package com.mdsgpp.eef.testeUI;
 
 import com.android.uiautomator.core.UiObject;
 import com.android.uiautomator.core.UiObjectNotFoundException;
@@ -42,4 +42,4 @@ public class testeUI extends UiAutomatorTestCase {
 		txtViewSigla = new UiObject(new UiSelector().className("android.widget.TextView").index(1));
 		assertEquals("MT", txtViewSigla.getText());
 	}
-}
+}*/

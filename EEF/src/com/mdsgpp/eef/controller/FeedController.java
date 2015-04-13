@@ -9,7 +9,7 @@ import com.mdsgpp.eef.R;
 import com.mdsgpp.eef.model.Feed;
 import com.mdsgpp.eef.parser.FeedParser;
 import com.mdsgpp.eef.parser.FeedPersistence;
-import com.mdsgpp.eef.visao.DataReceiver;
+import com.mdsgpp.eef.view.DataReceiver;
 
 import android.app.ProgressDialog;
 import android.content.Context;

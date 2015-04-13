@@ -1,6 +1,6 @@
-package com.mdsgpp.eef.visao;
+package com.mdsgpp.eef.view;
 
-import com.mdsgpp.eef.modelo.Feed;
+import com.mdsgpp.eef.model.Feed;
 
 public interface DataReceiver {
 
