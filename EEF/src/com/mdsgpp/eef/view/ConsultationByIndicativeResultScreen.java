@@ -1,7 +1,8 @@
-package com.mdsgpp.eef.visao;
+package com.mdsgpp.eef.view;
 
 
 import com.mdsgpp.eef.R;
+import com.mdsgpp.eef.view.IndicativoAdapter;
 
 import android.os.Bundle;
 import android.app.Activity;
