@@ -1,4 +1,4 @@
-package com.mdsgpp.eef.visao;
+package com.mdsgpp.eef.view;
 
 import com.mdsgpp.eef.R;
 
@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
 
-public class TelaSobreEscolhaIndicativo extends Activity {
+public class IndicativeChoosenAboutScreen extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
