@@ -172,7 +172,7 @@ public class ConsultationResultScreen extends Activity {
 	
 	// Change the activity to TelaSobreComparacaoDeEstados activity.
 	public void openAboutScreen() {
-		Intent intent = new Intent(this, TelaSobreComparacaoDeEstados.class);
+		Intent intent = new Intent(this, ComparsionBetweenStatesAboutScreen.class);
     	startActivity(intent);
 		
 	}

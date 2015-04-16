@@ -56,7 +56,7 @@ public class StateListScreen extends Activity {
 	
 	// Change the activity to TelaSobreListaEstado activity.
 	public void openAboutScreen() {
-	    Intent intent = new Intent(this, TelaSobreListaEstado.class);
+	    Intent intent = new Intent(this, StateListAboutScreen.class);
 	    startActivity(intent);
 	 }
 	

@@ -87,7 +87,7 @@ public class ConsultedIndicativesScreen extends Activity {
 	
 	// Change the activity to TelaSobreEscolhaIndicativo activity.
 	public void openAboutScreen() {
-		Intent intent = new Intent(this, TelaSobreEscolhaIndicativo.class);
+		Intent intent = new Intent(this, IndicativeChoosenAboutScreen.class);
 		startActivity(intent);
 	}
 	
