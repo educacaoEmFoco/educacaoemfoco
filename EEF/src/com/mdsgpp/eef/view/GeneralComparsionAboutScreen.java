@@ -1,4 +1,4 @@
-package com.mdsgpp.eef.visao;
+package com.mdsgpp.eef.view;
 
 import com.mdsgpp.eef.R;
 
@@ -8,7 +8,7 @@ import android.support.v4.app.NavUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class TelaSobreComparacoesGerais extends Activity {
+public class GeneralComparsionAboutScreen extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
