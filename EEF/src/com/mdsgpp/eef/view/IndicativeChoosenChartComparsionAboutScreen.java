@@ -1,11 +1,11 @@
-package com.mdsgpp.eef.visao;
+package com.mdsgpp.eef.view;
 
 import com.mdsgpp.eef.R;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
 
-public class TelaSobreEscolheIndicativoGraficoComparacao extends Activity {
+public class IndicativeChoosenChartComparsionAboutScreen extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
