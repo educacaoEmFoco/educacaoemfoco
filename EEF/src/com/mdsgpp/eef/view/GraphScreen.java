@@ -44,21 +44,18 @@ public class GraphScreen extends Activity {
 	}
 	
 	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		
-		switch (item.getItemId()) {
-		case R.id.sobre:
-			opensAboutScreen();
-			break;
-			
-		case android.R.id.home:
-	        NavUtils.navigateUpFromSameTask(this);
-	        break;
-	        
-		default:
-			// Do nothing.
-			break;
-		}
+	public boolean onOptionsItemSelected(MenuItem item) {		
+		switch(item.getItemId()) {
+			case R.id.sobre:
+				opensAboutScreen();
+				break;				
+			case android.R.id.home:
+		        NavUtils.navigateUpFromSameTask(this);
+		        break;		        
+			default:
+				// Do nothing.
+				break;
+			}
 		
     	return true;
 	}
@@ -81,23 +78,20 @@ public class GraphScreen extends Activity {
 		title = intent.getStringExtra("TITULO");
 		indicative = intent.getStringExtra("INDICATIVO");
 
-		HashMap<String, String> state1Informations = new HashMap<String,
-			String>();
-		HashMap<String, String> state2Informations = new HashMap<String,
-			String>();
+		HashMap<String, String> state1Informations = new HashMap<String, String>();
+		HashMap<String, String> state2Informations = new HashMap<String, String>();
 
 		try {
-			state1Informations = (HashMap<String, String>) EstadoControle
-				.getInstance(this).readState(estado1).clone();
-			state2Informations = (HashMap<String, String>) EstadoControle
-				.getInstance(this).readState(estado2).clone();
+			state1Informations = (HashMap<String, String>) 
+				StateController.getInstance(this).readState(estado1).clone();
+			state2Informations = (HashMap<String, String>) 
+				StateController.getInstance(this).readState(estado2).clone();
 			
 			convertData(state1Informations, state2Informations);
 			generatesGraph(state1Informations, state2Informations);
 			
-		} catch (IOException e) {
-			Toast.makeText(getApplicationContext(), 
-				"Houve um erro no acesso às informações.",
+		} catch(IOException e) {
+			Toast.makeText(getApplicationContext(), "Houve um erro no acesso às informações.",
 				Toast.LENGTH_SHORT).show();
 			Log.i("IOException - TelaComparaEstados",e.toString());
 		}
@@ -105,7 +99,7 @@ public class GraphScreen extends Activity {
 	
 	// This method generates the chart.
 	private void generatesGraph(HashMap<String, String> state1Informations,
-			HashMap<String, String> state2Informations) {
+		HashMap<String, String> state2Informations) {
 		
         Bar state1Bar = new Bar();
         state1Bar.setColor(Color.parseColor("#4682B4"));
@@ -136,10 +130,8 @@ public class GraphScreen extends Activity {
 		String state2IndicativeString = state2Informations.get(indicative);
 	
 				
-		state1IndicativeString = state1IndicativeString.replaceAll("[^\\d,]",
-			"");																	 
-		state2IndicativeString = state2IndicativeString.replaceAll("[^\\d,]",
-			"");
+		state1IndicativeString = state1IndicativeString.replaceAll("[^\\d,]", "");																	 
+		state2IndicativeString = state2IndicativeString.replaceAll("[^\\d,]", "");
 		
 		state1IndicativeString = state1IndicativeString.replaceAll(",", ".");
 		state2IndicativeString = state2IndicativeString.replaceAll(",", ".");
