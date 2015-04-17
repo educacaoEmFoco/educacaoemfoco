@@ -1,4 +1,4 @@
-package com.mdsgpp.eef.visao;
+package com.mdsgpp.eef.view;
 
 import com.mdsgpp.eef.R;
 
@@ -11,18 +11,18 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class EstadoAdapter extends BaseAdapter {
+public class StateAdapter extends BaseAdapter {
 
-	String estados[] = {"Acre", "Alagoas", "Amapá", "Amazonas", "Bahia", "Ceará",
+	String states[] = {"Acre", "Alagoas", "Amapá", "Amazonas", "Bahia", "Ceará",
 		"Distrito Federal","Espírito Santo","Goiás", "Maranhão", "Mato Grosso", 
 		"Mato Grosso do Sul", "Minas Gerais", "Pará", "Paraiba", "Paraná", "Pernambuco", "Piauí", 
 		"Rio de Janeiro", "Rio Grande do Norte", "Rio Grande do Sul", "Rondônia", "Rorâima", 
 		"Santa Catarina", "São Paulo", "Sergipe", "Tocantins"};
 	
-	String siglas[] = {"AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", 
+	String acronyms[] = {"AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", 
 		"PA", "PB", "PR", "PE",	"PI", "RJ", "RN","RS", "RO", "RR", "SC", "SP", "SE", "TO" };
 	
-	String bandeiras[] = {"acre", "alagoas", "amapa", "amazonas", "bahia", "ceara", 
+	String flags[] = {"acre", "alagoas", "amapa", "amazonas", "bahia", "ceara", 
 		"distritofederal", "espiritosanto", "goias", "maranhao", "matogrosso", "matogrossodosul", 
 		"minasgerais", "para", "paraiba", "parana", "pernambuco", "piaui", "riodejaneiro", 
 		"riograndedonorte", "riograndedosul", "rondonia", "roraima", "santacatarina", "saopaulo", 
@@ -33,9 +33,9 @@ public class EstadoAdapter extends BaseAdapter {
 	private Context context;
 	
 	static class ViewHolder {
-		private TextView tvNome;
-		private TextView tvSigla;
-		private ImageView tvBandeiras;
+		private TextView tvName;
+		private TextView tvAcronym;
+		private ImageView tvFlags;
 	}
 	
 	public EstadoAdapter(Context context) {
@@ -45,12 +45,12 @@ public class EstadoAdapter extends BaseAdapter {
 	
 	@Override
 	public int getCount() {
-		return estados.length;
+		return states.length;
 	}
 
 	@Override
 	public Object getItem(int position) {
-		return estados[position];
+		return states[position];
 	}
 
 	@Override
@@ -65,11 +65,11 @@ public class EstadoAdapter extends BaseAdapter {
 			convertView = mInflater.inflate(R.layout.listview_item , null);
 			holder = new ViewHolder();
 		 
-			holder.tvNome = (TextView) convertView.findViewById(R.id.textview_lista_estados);
-			holder.tvSigla = (TextView) convertView.findViewById(R.id.textview_lista_siglas);
+			holder.tvName = (TextView) convertView.findViewById(R.id.textview_lista_estados);
+			holder.tvAcronym = (TextView) convertView.findViewById(R.id.textview_lista_siglas);
 			
-			holder.tvBandeiras = (ImageView) convertView.findViewById(R.id.imageView_bandeiras);
-			if(holder.tvBandeiras==null) {
+			holder.tvFlags = (ImageView) convertView.findViewById(R.id.imageView_bandeiras);
+			if(holder.tvFlags==null) {
 				Log.i(null, "nulo");
 			}
 			else{
@@ -82,11 +82,11 @@ public class EstadoAdapter extends BaseAdapter {
 			holder = (ViewHolder) convertView.getTag();
 		}
 				
-		holder.tvNome.setText(estados[position]);
-		holder.tvSigla.setText(siglas[position]);
-		int idBandeira = context.getResources().getIdentifier(bandeiras[position], "drawable", 
+		holder.tvName.setText(states[position]);
+		holder.tvAcronym.setText(acronyms[position]);
+		int idFlag = context.getResources().getIdentifier(flags[position], "drawable", 
 			context.getPackageName());
-		holder.tvBandeiras.setImageResource(idBandeira);
+		holder.tvFlags.setImageResource(idFlag);
 		convertView.setTag(holder);
 		
 		return convertView;
