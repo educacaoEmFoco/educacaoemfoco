@@ -1,4 +1,4 @@
-package com.mdsgpp.eef.visao;
+package com.mdsgpp.eef.view;
 
 import com.mdsgpp.eef.R;
 
@@ -7,25 +7,25 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.TextView;
 
-public class TelaConsultaPorIndicativo extends EscolheIndicativo {
+public class ConsultationByIndicativeScreen extends ChoosesIndicative {
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_tela_escolhe_indicativo_grafico);
 		
-		TextView txtViewTitulo = (TextView) findViewById(R.id.textview_titulo);
-		txtViewTitulo.setText("Escolha um indicativo para gerar a lista: ");
+		TextView txtViewTitle = (TextView) findViewById(R.id.textview_titulo);
+		txtViewTitle.setText("Escolha um indicativo para gerar a lista: ");
 	}
 
 	// Open "About" screen.
-	public void abreTelaSobre() {
+	public void opensAboutScreen() {
 		Intent intent = new Intent(this, TelaSobreIndicativos.class);
 		startActivity(intent);
 	}
 	
 	// When button "Next" get clicked start a new activity with new screen.
-	public void clickBotaoAvancar(View view) {
+	public void clickButtonForward(View view) {
 		Intent intent = new Intent(this, TelaResultadoConsultaPorIndicativo.class);
 
 		intent.putExtra("INDICATIVO", getIndicativo());
