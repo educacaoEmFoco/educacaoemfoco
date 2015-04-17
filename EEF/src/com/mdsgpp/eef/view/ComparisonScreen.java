@@ -1,4 +1,4 @@
-package com.mdsgpp.eef.visao;
+package com.mdsgpp.eef.view;
 
 import com.mdsgpp.eef.R;
 
@@ -7,21 +7,21 @@ import android.support.v4.app.NavUtils;
 import android.view.MenuItem;
 import android.view.View;
 
-public class TelaComparacao extends Comparacao {
+public class ComparisonScreen extends Comparison {
 
 	@Override
-	public void clickBotaoComparacaoEstados(View view) {
+	public void clickButtonComparisonStates(View view) {
 		Intent intent = new Intent(this, TelaIndicativosConsultados.class);
-		getEstadosSpinner01().getSelectedItem().toString();
-		getEstadosSpinner().getSelectedItem().toString();
+		getStatesSpinner01().getSelectedItem().toString();
+		getStatesSpinner().getSelectedItem().toString();
 
-		int posicao1 = getTodosEstados().indexOf
-			(getEstadosSpinner01().getSelectedItem().toString());
-		int posicao2 = getTodosEstados().indexOf
-			(getEstadosSpinner().getSelectedItem().toString());
+		int position1 = getAllStates().indexOf
+			(getStatesSpinner01().getSelectedItem().toString());
+		int position2 = getAllStates().indexOf
+			(getStatesSpinner().getSelectedItem().toString());
 
-		intent.putExtra("INDEX_ESTADO1_ESCOLHIDO", posicao1);
-		intent.putExtra("INDEX_ESTADO2_ESCOLHIDO", posicao2);
+		intent.putExtra("INDEX_ESTADO1_ESCOLHIDO", position1);
+		intent.putExtra("INDEX_ESTADO2_ESCOLHIDO", position2);
 
 		startActivity(intent);
 	}
@@ -29,7 +29,7 @@ public class TelaComparacao extends Comparacao {
     public boolean onOptionsItemSelected(MenuItem item) {    	
 		switch(item.getItemId()) {
 			case R.id.sobre:
-				abreTelaSobre();
+				opensAboutScreen();
 				break;
 			case android.R.id.home:
 		        NavUtils.navigateUpFromSameTask(this);
@@ -42,13 +42,13 @@ public class TelaComparacao extends Comparacao {
     }
     
     // Open screen about.
-    public void abreTelaSobre() {
+    public void opensAboutScreen() {
     	Intent intent = new Intent(this, TelaSobreComparacao.class);
     	startActivity(intent);
     }
 	
 	// Implements action on button about compararison.
-	public void clickBotaoSobreComparacao(View view) {
+	public void clickButtonAboutComparison(View view) {
     	Intent intent = new Intent(this, TelaSobreComparacao.class);
     	startActivity(intent);
     }
