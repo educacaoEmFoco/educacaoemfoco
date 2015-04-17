@@ -1,4 +1,4 @@
-package com.mdsgpp.eef.visao;
+package com.mdsgpp.eef.view;
 
 import com.mdsgpp.eef.R;
 
@@ -10,7 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-public class TelaComparacoesGerais extends Activity {
+public class GeneralComparisonsScreen extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +28,7 @@ public class TelaComparacoesGerais extends Activity {
     public boolean onOptionsItemSelected(MenuItem item) {    	
 		switch(item.getItemId()) {
 			case R.id.sobre:
-				abreTelaSobre();
+				opensAboutScreen();
 				break;
 			case android.R.id.home:
 		        NavUtils.navigateUpFromSameTask(this);
@@ -42,20 +42,20 @@ public class TelaComparacoesGerais extends Activity {
     }
     
     // Open screen about.
-    public void abreTelaSobre() {
-    	Intent intent = new Intent(this, TelaSobreComparacoesGerais.class);
+    public void opensAboutScreen() {
+    	Intent intent = new Intent(this, GeneralComparisonAboutScreen.class);
     	startActivity(intent);
     }
 	
 	// Implements action on button compararison.
-	public void clickBotaoComparacao(View view) {
-		Intent intent = new Intent(this, TelaComparacao.class);
+	public void clickButtonComparison(View view) {
+		Intent intent = new Intent(this, ComparisonScreen.class);
 		startActivity(intent);
 	}
 	
 	// Implements action on button indicatives.
-	public void clickBotaoIndicativos(View view) {
-		Intent intent = new Intent(this, TelaConsultaPorIndicativo.class);
+	public void clickButtonIndicatives(View view) {
+		Intent intent = new Intent(this, ConsultationByIndicativeResultScreen.class);
 		startActivity(intent);
 	}	
 }
