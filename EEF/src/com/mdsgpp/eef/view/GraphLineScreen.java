@@ -45,24 +45,22 @@ public class GraphLineScreen extends Activity {
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.menu_telas, menu);
+
 		return true;
 	}
 	
 	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		
+	public boolean onOptionsItemSelected(MenuItem item) {		
 		switch (item.getItemId()) {
-		case R.id.sobre:
-			opensAboutScreen();
-			break;
-			
-		case android.R.id.home:
-	        NavUtils.navigateUpFromSameTask(this);
-	        break;
-	        
-		default:
-			// Do nothing.
-			break;
+			case R.id.sobre:
+				opensAboutScreen();
+				break;				
+			case android.R.id.home:
+		        NavUtils.navigateUpFromSameTask(this);
+		        break;		        
+			default:
+				// Do nothing.
+				break;
 		}
 		
     	return true;
@@ -84,16 +82,14 @@ public class GraphLineScreen extends Activity {
 		indicative = intent.getStringExtra("INDICATIVO_GRAFICO");
 		position = intent.getIntExtra("POSICAO_ESTADO", 0);
 		
-		for(int i=0; i<temp.size(); i++) {
+		for(int i = 0; i < temp.size(); i++) {
 			history.add(Float.parseFloat(temp.get(i)));
 		}
 		
 		try {
-			informations = StateController.getInstance(this).readFullState
-				(position);
-		} catch (IOException e) {
-			Log.i("Erro - TelaGraficoLinha", 
-				"Erro ao capturar as informacoes do estado.");
+			informations = StateController.getInstance(this).readFullState(position);
+		} catch(IOException e) {
+			Log.i("Erro - TelaGraficoLinha", "Erro ao capturar as informacoes do estado.");
 			e.printStackTrace();
 		}	
 	}
@@ -106,17 +102,15 @@ public class GraphLineScreen extends Activity {
 	
 	// Assigns the class variables with the fields on the screen.
 	private void initializesTextFields() {
-		tvGraphTitle = (TextView)
-			findViewById(R.id.text_view_titulo_grafico_historico);
-		tvHistory = (TextView)
-			findViewById(R.id.text_view_grafico_historico);
+		tvGraphTitle = (TextView) findViewById(R.id.text_view_titulo_grafico_historico);
+		tvHistory = (TextView) findViewById(R.id.text_view_grafico_historico);
 	}
 	
 	// Fills the screen fields with the information received.
 	private void fillTextFields() {
 		tvGraphTitle.setText(title);
 		Log.i("teste_indicativo", indicative);
-		Log.i("teste_indicativo", ""+informations.containsKey(indicative));
+		Log.i("teste_indicativo", "" + informations.containsKey(indicative));
 		tvHistory.setText(informations.get(indicative));
 	}
 	
@@ -124,15 +118,16 @@ public class GraphLineScreen extends Activity {
 	private void generatesGraph() {
 		Line curve = new Line();
 		
-		for(int i=0, step=10; i<history.size(); i++,step+=10) {
-			LinePoint point = new LinePoint();
+		for(int i = 0, step = 10; i < history.size(); i++, step += 10) {
+			LinePoint point = new LinePoint();			
 			point.setX(step);
 			point.setY(history.get(i));
+
 			curve.addPoint(point);
 		}
 		
 		curve.setColor(Color.parseColor("#4682B4"));
-		LineGraph li = (LineGraph)findViewById(R.id.graph);
+		LineGraph li = (LineGraph) findViewById(R.id.graph);
 		li.addLine(curve);
 		
 		float yLimit = 0;
@@ -144,8 +139,8 @@ public class GraphLineScreen extends Activity {
 	
 	// Calculate historical maximum value.
 	private float calculatesHistoryMaxValue(float maximum) {
-		for(int i=0; i<history.size(); i++) {
-			if(history.get(i) >= maximum){
+		for(int i = 0; i < history.size(); i++) {
+			if(history.get(i) >= maximum) {
 				maximum = (float) history.get(i);  
 			}
 			else {
@@ -153,6 +148,6 @@ public class GraphLineScreen extends Activity {
 			}
 		}
 		
-		return (float)(1.1*maximum);
+		return (float) (1.1 * maximum);
 	}
 }
