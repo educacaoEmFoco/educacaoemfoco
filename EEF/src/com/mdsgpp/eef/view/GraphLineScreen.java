@@ -36,7 +36,7 @@ public class GraphLineScreen extends Activity {
 		
 		initializesTextFields();
 		capturesInformation();
-		fillsTextFields();
+		fillTextFields();
 			
 		generatesGraph();
 	}
@@ -96,7 +96,7 @@ public class GraphLineScreen extends Activity {
 	
 	// Change the activity to AboutGraphScreen activity.
 	public void opensAboutScreen() {
-		Intent intent = new Intent(this, AboutGraphScreen.class);
+		Intent intent = new Intent(this, ChartAboutScreen.class);
     	startActivity(intent);
 	}
 	

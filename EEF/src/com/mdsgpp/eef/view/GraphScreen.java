@@ -83,15 +83,15 @@ public class GraphScreen extends Activity {
 
 		try {
 			state1Informations = (HashMap<String, String>) 
-				StateController.getInstance(this).readState(estado1).clone();
+				StateController.getInstance(this).readState(state1).clone();
 			state2Informations = (HashMap<String, String>) 
-				StateController.getInstance(this).readState(estado2).clone();
+				StateController.getInstance(this).readState(state2).clone();
 			
 			convertData(state1Informations, state2Informations);
 			generatesGraph(state1Informations, state2Informations);
 			
 		} catch(IOException e) {
-			Toast.makeText(getApplicationContext(), "Houve um erro no acesso às informações.",
+			Toast.makeText(getApplicationContext(), "Houve um erro no acesso ï¿½s informaï¿½ï¿½es.",
 				Toast.LENGTH_SHORT).show();
 			Log.i("IOException - TelaComparaEstados",e.toString());
 		}
