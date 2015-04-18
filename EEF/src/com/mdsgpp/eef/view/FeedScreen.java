@@ -1,8 +1,8 @@
-package com.mdsgpp.eef.visao;
+package com.mdsgpp.eef.view;
 
 import com.mdsgpp.eef.R;
-import com.mdsgpp.eef.controle.FeedControle;
-import com.mdsgpp.eef.modelo.Feed;
+import com.mdsgpp.eef.controller.FeedController;
+import com.mdsgpp.eef.model.Feed;
 
 import android.net.Uri;
 import android.os.Bundle;
@@ -16,10 +16,9 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
-public class TelaFeed extends Activity implements ReceptorDados {
+public class FeedScreen extends Activity implements DataReceiver {
 
-	private final static String FEED_ADDRESS = 
-		"http://noticias.gov.br/noticias/rss?id=AFSZW";
+	private final static String FEED_ADDRESS = "http://noticias.gov.br/noticias/rss?id=AFSZW";
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +26,7 @@ public class TelaFeed extends Activity implements ReceptorDados {
 		setContentView(R.layout.activity_tela_feed);
 		
 		// Execute the task to retrieve the feed data
-		new FeedControle(this, this).execute(FEED_ADDRESS);
+		new FeedController(this, this).execute(FEED_ADDRESS);
 	}
 
 	@Override
@@ -41,7 +40,7 @@ public class TelaFeed extends Activity implements ReceptorDados {
     public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 		case R.id.sobre:
-			abreTelaSobre();
+			openFeedAboutScreen();
 			break;
 			
 		case android.R.id.home:
@@ -81,9 +80,9 @@ public class TelaFeed extends Activity implements ReceptorDados {
 		});
 	}
 	
-	// Change the activity to TelaFeedSobre activity.
-	public void abreTelaSobre() {
-		Intent intent = new Intent(this, TelaFeedSobre.class);
+	// Change the activity to FeedAboutScreen activity.
+	public void openFeedAboutScreen() {
+		Intent intent = new Intent(this, FeedAboutScreen.class);
 		startActivity(intent);
 	}	
 	
