@@ -1,4 +1,4 @@
-package com.mdsgpp.eef.visao;
+package com.mdsgpp.eef.view;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,13 +7,13 @@ import android.widget.RadioButton;
 
 import com.mdsgpp.eef.R;
 
-public class TelaEscolheIndicativoGraficoComparacao extends EscolheIndicativo {
+public class ChooseIndicativeChartComparisonScreen extends ChoosesIndicative {
 	
-	private int posicao1;
-	private int posicao2;
+	private int position1;
+	private int position2;
 	
-	private boolean bCenso;
-	private boolean bAlunosTurma;
+	private boolean censusRadioVisibility;
+	private boolean ClassStudentsRadioVisibility;
 	private boolean bHorasAula;
 	private boolean bTaxaDistorcao;
 	private boolean bTaxaAbandono;
@@ -42,8 +42,8 @@ public class TelaEscolheIndicativoGraficoComparacao extends EscolheIndicativo {
 	private RadioButton rbProjetosIniciacaoValores; 
 	private RadioButton rbProjetosJovensQuantidade;
 	private RadioButton rbProjetosJovensValores;
-	private RadioButton rbAlunosTurmaFundamental;
-	private RadioButton rbAlunosTurmaMedio;
+	private RadioButton rClassStudentsRadioVisibilityFundamental;
+	private RadioButton rClassStudentsRadioVisibilityMedio;
 	private RadioButton rbHorasAulaFundamental;
 	private RadioButton rbHorasAulaMedio;
 	private RadioButton rbTaxaDeDistorcaoFundamental;
@@ -52,11 +52,11 @@ public class TelaEscolheIndicativoGraficoComparacao extends EscolheIndicativo {
 	private RadioButton rbTaxaDeAprovacaoMedio;
 	private RadioButton rbTaxaDeAbandonoFundamental;
 	private RadioButton rbTaxaDeAbandonoMedio;
-	private RadioButton rbCensoAnosIniciaisFundamental;
-	private RadioButton rbCensoAnosFinaisFundamental;
-	private RadioButton rbCensoEsninoMedio;
-	private RadioButton rbCensoEJAFundamental;
-	private RadioButton rbCensoEJAMedio;
+	private RadioButton rcensusRadioVisibilityAnosIniciaisFundamental;
+	private RadioButton rcensusRadioVisibilityAnosFinaisFundamental;
+	private RadioButton rcensusRadioVisibilityEsninoMedio;
+	private RadioButton rcensusRadioVisibilityEJAFundamental;
+	private RadioButton rcensusRadioVisibilityEJAMedio;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -72,8 +72,8 @@ public class TelaEscolheIndicativoGraficoComparacao extends EscolheIndicativo {
 	public void capturaInformacoes() {
 		Intent intentRecebida = getIntent();
 		
-		posicao1 = intentRecebida.getIntExtra("INDEX_ESTADO1_ESCOLHIDO", 0);
-		posicao2 = intentRecebida.getIntExtra("INDEX_ESTADO2_ESCOLHIDO", 0);
+		position1 = intentRecebida.getIntExtra("INDEX_ESTADO1_ESCOLHIDO", 0);
+		position2 = intentRecebida.getIntExtra("INDEX_ESTADO2_ESCOLHIDO", 0);
 
 		bIdeb = intentRecebida.getBooleanExtra("CB_IDEB", false);
 		bPib = intentRecebida.getBooleanExtra("CB_PIB", false);
@@ -88,8 +88,8 @@ public class TelaEscolheIndicativoGraficoComparacao extends EscolheIndicativo {
 			("CB_PROJETOS_INICIACAO", false);
 		bProjetosJovens = intentRecebida.getBooleanExtra("CB_PROJETOS_JOVENS",
 			false);
-		bCenso = intentRecebida.getBooleanExtra("CB_CENSO", false);
-		bAlunosTurma = intentRecebida.getBooleanExtra("CB_ALUNOS_TURMA", false);
+		censusRadioVisibility = intentRecebida.getBooleanExtra("CB_CENSO", false);
+		ClassStudentsRadioVisibility = intentRecebida.getBooleanExtra("CB_ALUNOS_TURMA", false);
 		bHorasAula = intentRecebida.getBooleanExtra("CB_HORAS_AULA", false);
 		bTaxaDistorcao = intentRecebida.getBooleanExtra("CB_TAXA_DISTORCAO",
 			false);
@@ -106,7 +106,6 @@ public class TelaEscolheIndicativoGraficoComparacao extends EscolheIndicativo {
 		rbIdebFinais = (RadioButton) findViewById
 			(R.id.radio_ideb_fundamental_finais);
 		rbIdebMedio = (RadioButton) findViewById(R.id.radio_ideb_medio);
-		rbPib = (RadioButton) findViewById(R.id.radio_pib);
 		rbPopulacao = (RadioButton) findViewById(R.id.radio_populacao);
 		rbPrimeirosProjetosQuantidade = (RadioButton) findViewById
 			(R.id.radio_primeiros_projetos_qtd);
@@ -128,9 +127,9 @@ public class TelaEscolheIndicativoGraficoComparacao extends EscolheIndicativo {
 			(R.id.radio_jovens_pesquisadores_qtd);
 		rbProjetosJovensValores = (RadioButton) findViewById
 			(R.id.radio_jovens_pesquisadores_investimento);
-		rbAlunosTurmaFundamental = (RadioButton) findViewById
+		rClassStudentsRadioVisibilityFundamental = (RadioButton) findViewById
 			(R.id.radio_alunos_por_turma_fundamental);
-		rbAlunosTurmaMedio = (RadioButton) findViewById
+		rClassStudentsRadioVisibilityMedio = (RadioButton) findViewById
 			(R.id.radio_alunos_por_turma_medio);
 		rbHorasAulaFundamental = (RadioButton) findViewById
 			(R.id.radio_horas_aula_fundamental);
@@ -148,15 +147,15 @@ public class TelaEscolheIndicativoGraficoComparacao extends EscolheIndicativo {
 			(R.id.radio_taxa_abandono_fundamental);
 		rbTaxaDeAbandonoMedio = (RadioButton) findViewById
 			(R.id.radio_taxa_abandono_medio);
-		rbCensoAnosIniciaisFundamental = (RadioButton) findViewById
+		rcensusRadioVisibilityAnosIniciaisFundamental = (RadioButton) findViewById
 			(R.id.radio_censo_iniciais_fundamental);
-		rbCensoAnosFinaisFundamental = (RadioButton) findViewById
+		rcensusRadioVisibilityAnosFinaisFundamental = (RadioButton) findViewById
 			(R.id.radio_censo_finais_fundamental);
-		rbCensoEsninoMedio = (RadioButton) findViewById
+		rcensusRadioVisibilityEsninoMedio = (RadioButton) findViewById
 			(R.id.radio_censo_ensino_medio);
-		rbCensoEJAFundamental = (RadioButton) findViewById
+		rcensusRadioVisibilityEJAFundamental = (RadioButton) findViewById
 			(R.id.radio_censo_eja_fundamental);
-		rbCensoEJAMedio = (RadioButton) findViewById
+		rcensusRadioVisibilityEJAMedio = (RadioButton) findViewById
 			(R.id.radio_censo_eja_medio);
 		
 	}
@@ -184,8 +183,8 @@ public class TelaEscolheIndicativoGraficoComparacao extends EscolheIndicativo {
 		setVisibility(rbProjetosIniciacaoValores, bProjetosIniciacao);
 		setVisibility(rbProjetosJovensQuantidade, bProjetosJovens);
 		setVisibility(rbProjetosJovensValores, bProjetosJovens);
-		setVisibility(rbAlunosTurmaFundamental, bAlunosTurma);
-		setVisibility(rbAlunosTurmaMedio, bAlunosTurma);
+		setVisibility(rClassStudentsRadioVisibilityFundamental, ClassStudentsRadioVisibility);
+		setVisibility(rClassStudentsRadioVisibilityMedio, ClassStudentsRadioVisibility);
 		setVisibility(rbHorasAulaFundamental, bHorasAula);
 		setVisibility(rbHorasAulaMedio, bHorasAula);
 		setVisibility(rbTaxaDeDistorcaoFundamental, bTaxaDistorcao);
@@ -194,29 +193,29 @@ public class TelaEscolheIndicativoGraficoComparacao extends EscolheIndicativo {
 		setVisibility(rbTaxaDeAprovacaoMedio, bAprovacao);
 		setVisibility(rbTaxaDeAbandonoFundamental, bTaxaAbandono);
 		setVisibility(rbTaxaDeAbandonoMedio, bTaxaAbandono);
-		setVisibility(rbCensoAnosIniciaisFundamental, bCenso);
-		setVisibility(rbCensoAnosFinaisFundamental, bCenso);
-		setVisibility(rbCensoEsninoMedio, bCenso);
-		setVisibility(rbCensoEJAFundamental, bCenso);
-		setVisibility(rbCensoEJAMedio, bCenso);
+		setVisibility(rcensusRadioVisibilityAnosIniciaisFundamental, censusRadioVisibility);
+		setVisibility(rcensusRadioVisibilityAnosFinaisFundamental, censusRadioVisibility);
+		setVisibility(rcensusRadioVisibilityEsninoMedio, censusRadioVisibility);
+		setVisibility(rcensusRadioVisibilityEJAFundamental, censusRadioVisibility);
+		setVisibility(rcensusRadioVisibilityEJAMedio, censusRadioVisibility);
 	}
 	
 	// Implements the action on button next.
-	public void clickBotaoAvancar(View view) {
-		Intent intent = new Intent(this, TelaGrafico.class);
+	public void clickForwardButton(View view) {
+		Intent intent = new Intent(this, GraphScreen.class);
 		
-		intent.putExtra("INDEX_ESTADO1_ESCOLHIDO", posicao1);
-		intent.putExtra("INDEX_ESTADO2_ESCOLHIDO", posicao2);
-		intent.putExtra("INDICATIVO", getIndicativo());
-		intent.putExtra("TITULO", getTitulo());
+		intent.putExtra("INDEX_ESTADO1_ESCOLHIDO", position1);
+		intent.putExtra("INDEX_ESTADO2_ESCOLHIDO", position2);
+		intent.putExtra("INDICATIVO", getIndicative());
+		intent.putExtra("TITULO", getTitle());
 
 		startActivity(intent);		
 	}
     
     // Open the screen about.
-    public void abreTelaSobre() {
+    public void opensAboutScreen() {
     	Intent intent = new Intent(this, 
-    		TelaSobreEscolheIndicativoGraficoComparacao.class);
+    		IndicativeChoosenChartComparsionAboutScreen.class);
     	startActivity(intent);
     }
 }
