@@ -101,29 +101,29 @@ public abstract class Comparison extends Activity {
 
 		states.add("Acre");
 		states.add("Alagoas");
-		states.add("Amapá");
+		states.add("Amapï¿½");
 		states.add("Amazonas");
 		states.add("Bahia");
-		states.add("Ceará");
+		states.add("Cearï¿½");
 		states.add("Distrito Federal");
-		states.add("Espírito Santo");
-		states.add("Goiás");
-		states.add("Maranhão");
+		states.add("Espï¿½rito Santo");
+		states.add("Goiï¿½s");
+		states.add("Maranhï¿½o");
 		states.add("Mato Grosso");
 		states.add("Mato Grosso do Sul");
 		states.add("Minas Gerais");
-		states.add("Pará");
-		states.add("Paraíba");
-		states.add("Paraná");
+		states.add("Parï¿½");
+		states.add("Paraï¿½ba");
+		states.add("Paranï¿½");
 		states.add("Pernambuco");
-		states.add("Piauí");
+		states.add("Piauï¿½");
 		states.add("Rio de Janeiro");
 		states.add("Rio Grande do Norte");
 		states.add("Rio Grande do Sul");
-		states.add("Rondônia");
+		states.add("Rondï¿½nia");
 		states.add("Roraima");
 		states.add("Santa Catarina");
-		states.add("São Paulo");
+		states.add("Sï¿½o Paulo");
 		states.add("Sergipe");
 		states.add("Tocantins");
 		
@@ -153,7 +153,7 @@ public abstract class Comparison extends Activity {
 	
 	// Implements the action of button to start comparation.
 	public void clickButtonAboutComparison(View view) {
-		Intent intent = new Intent(this, TelaSobreConsulta.class);
+		Intent intent = new Intent(this, ConsultationAboutScreen.class);
 		startActivity(intent);
 	}	
 	

@@ -172,7 +172,7 @@ public class ConsultationResultScreen extends Activity {
 	
 	// Change the activity to TelaSobreComparacaoDeEstados activity.
 	public void openAboutScreen() {
-		Intent intent = new Intent(this, ComparsionBetweenStatesAboutScreen.class);
+		Intent intent = new Intent(this, ComparisonBetweenStatesAboutScreen.class);
     	startActivity(intent);
 		
 	}
@@ -673,7 +673,7 @@ public class ConsultationResultScreen extends Activity {
 			setVisibility(textViewDropoutRate2, booleanDropoutRate);
 			setVisibility(textViewUtilizationRate2,booleanAcceptance);
 		} catch(NullPointerException npe) {
-			Log.i("NullPointerException -layout portrait não possui estes id's",
+			Log.i("NullPointerException -layout portrait nï¿½o possui estes id's",
 				npe.toString());
 		}
 						

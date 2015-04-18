@@ -10,8 +10,8 @@ import android.view.View;
 public class ComparisonScreen extends Comparison {
 
 	@Override
-	public void clickButtonComparisonStates(View view) {
-		Intent intent = new Intent(this, TelaIndicativosConsultados.class);
+	public void clickButtonStatesComparison(View view) {
+		Intent intent = new Intent(this, ConsultedIndicativesScreen.class);
 		getStatesSpinner01().getSelectedItem().toString();
 		getStatesSpinner().getSelectedItem().toString();
 
@@ -43,13 +43,13 @@ public class ComparisonScreen extends Comparison {
     
     // Open screen about.
     public void opensAboutScreen() {
-    	Intent intent = new Intent(this, TelaSobreComparacao.class);
+    	Intent intent = new Intent(this, ComparisonAboutScreen.class);
     	startActivity(intent);
     }
 	
 	// Implements action on button about compararison.
 	public void clickButtonAboutComparison(View view) {
-    	Intent intent = new Intent(this, TelaSobreComparacao.class);
+    	Intent intent = new Intent(this, ComparisonAboutScreen.class);
     	startActivity(intent);
     }
 }

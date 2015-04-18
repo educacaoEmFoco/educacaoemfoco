@@ -1,4 +1,4 @@
-package com.mdsgpp.eef.visao;
+package com.mdsgpp.eef.view;
 
 import com.mdsgpp.eef.R;
 
@@ -39,19 +39,19 @@ public class MainActivity extends Activity {
     
     // Open the screen about.
     public void abreTelaSobre() {
-    	Intent intent = new Intent(this, TelaSobre.class);
+    	Intent intent = new Intent(this, AboutScreen.class);
     	startActivity(intent);
     }
 
     // Implements the action on button general compararison.
     public void clickBotaoComparacaoGeral(View view) {
-    	Intent intent = new Intent(this, TelaComparacoesGerais.class);
+    	Intent intent = new Intent(this, GeneralComparisonsScreen.class);
 		startActivity(intent);
     }
     
     // Implements the action on button general consultation.
     public void clickBotaoConsultaGeral(View view) {
-    	Intent intent = new Intent(this, TelaListaEstado.class);
+    	Intent intent = new Intent(this, StateListScreen.class);
     	startActivity(intent);
     }
     
@@ -63,7 +63,7 @@ public class MainActivity extends Activity {
 
     // Implements the action on button consultation by indicatory.
     public void clickBotaoConsultaPorIndicativo(View view) {
-    	Intent intent = new Intent(this, TelaConsultaPorIndicativo.class);
+    	Intent intent = new Intent(this, ConsultationByIndicativeScreen.class);
     	startActivity(intent);
     }
 }

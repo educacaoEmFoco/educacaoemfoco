@@ -13,11 +13,11 @@ import android.widget.TextView;
 
 public class StateAdapter extends BaseAdapter {
 
-	String states[] = {"Acre", "Alagoas", "Amapá", "Amazonas", "Bahia", "Ceará",
-		"Distrito Federal","Espírito Santo","Goiás", "Maranhão", "Mato Grosso", 
-		"Mato Grosso do Sul", "Minas Gerais", "Pará", "Paraiba", "Paraná", "Pernambuco", "Piauí", 
-		"Rio de Janeiro", "Rio Grande do Norte", "Rio Grande do Sul", "Rondônia", "Rorâima", 
-		"Santa Catarina", "São Paulo", "Sergipe", "Tocantins"};
+	String states[] = {"Acre", "Alagoas", "Amapï¿½", "Amazonas", "Bahia", "Cearï¿½",
+		"Distrito Federal","Espï¿½rito Santo","Goiï¿½s", "Maranhï¿½o", "Mato Grosso", 
+		"Mato Grosso do Sul", "Minas Gerais", "Parï¿½", "Paraiba", "Paranï¿½", "Pernambuco", "Piauï¿½", 
+		"Rio de Janeiro", "Rio Grande do Norte", "Rio Grande do Sul", "Rondï¿½nia", "Rorï¿½ima", 
+		"Santa Catarina", "Sï¿½o Paulo", "Sergipe", "Tocantins"};
 	
 	String acronyms[] = {"AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", 
 		"PA", "PB", "PR", "PE",	"PI", "RJ", "RN","RS", "RO", "RR", "SC", "SP", "SE", "TO" };
@@ -38,7 +38,7 @@ public class StateAdapter extends BaseAdapter {
 		private ImageView tvFlags;
 	}
 	
-	public EstadoAdapter(Context context) {
+	public StateAdapter(Context context) {
 		this.context = context;
 		mInflater = LayoutInflater.from(context);
 	}
@@ -73,7 +73,7 @@ public class StateAdapter extends BaseAdapter {
 				Log.i(null, "nulo");
 			}
 			else{
-				Log.i(null, "não nulo");
+				Log.i(null, "nï¿½o nulo");
 			}
 
 		} 

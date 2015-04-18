@@ -1,7 +1,7 @@
 package com.mdsgpp.eef.view;
 
 import com.mdsgpp.eef.R;
-import com.mdsgpp.eef.view.EstadoAdapter;
+import com.mdsgpp.eef.view.StateAdapter;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -67,7 +67,7 @@ public class StateListScreen extends Activity {
 	private void startListView() {
 		ListView listView = (ListView) findViewById(R.id.listview_tela_estados);
 
-		EstadoAdapter adapter = new EstadoAdapter(this);
+		StateAdapter adapter = new StateAdapter(this);
 
 		listView.setAdapter(adapter);
 		listView.setOnItemClickListener(new OnItemClickListener() {

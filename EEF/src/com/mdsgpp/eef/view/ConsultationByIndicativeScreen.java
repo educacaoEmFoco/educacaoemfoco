@@ -20,16 +20,16 @@ public class ConsultationByIndicativeScreen extends ChoosesIndicative {
 
 	// Open "About" screen.
 	public void opensAboutScreen() {
-		Intent intent = new Intent(this, TelaSobreIndicativos.class);
+		Intent intent = new Intent(this, IndicativesAboutScreen.class);
 		startActivity(intent);
 	}
 	
 	// When button "Next" get clicked start a new activity with new screen.
-	public void clickButtonForward(View view) {
-		Intent intent = new Intent(this, TelaResultadoConsultaPorIndicativo.class);
+	public void clickForwardButton(View view) {
+		Intent intent = new Intent(this, ConsultationByIndicativeResultScreen.class);
 
-		intent.putExtra("INDICATIVO", getIndicativo());
-		intent.putExtra("TITULO", getTitulo());
+		intent.putExtra("INDICATIVO", getIndicative());
+		intent.putExtra("TITULO", getTitle());
 
 		startActivity(intent);
 	}	

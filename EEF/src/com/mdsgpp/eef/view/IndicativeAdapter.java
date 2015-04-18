@@ -37,7 +37,7 @@ public class IndicativeAdapter extends BaseAdapter {
 		private ImageView tvFlags;
 	}
 	
-	public IndicativoAdapter(String title, String choosenIndicative, Context context) {
+	public IndicativeAdapter(String title, String choosenIndicative, Context context) {
 		this.choosenIndicative = choosenIndicative;
 		this.title = title;
 		this.context = context;
@@ -53,7 +53,7 @@ public class IndicativeAdapter extends BaseAdapter {
 	public HashMap<String, String> getItem(int position) {
 		HashMap<String, String> state = null;
 		try {
-			state = EstadoControle.getInstance(context).readState(position);
+			state = StateController.getInstance(context).readState(position);
 		} catch(IOException e) {
 			e.printStackTrace();
 		}

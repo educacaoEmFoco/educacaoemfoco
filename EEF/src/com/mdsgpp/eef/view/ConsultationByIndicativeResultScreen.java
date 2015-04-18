@@ -2,7 +2,7 @@ package com.mdsgpp.eef.view;
 
 
 import com.mdsgpp.eef.R;
-import com.mdsgpp.eef.view.IndicativoAdapter;
+import com.mdsgpp.eef.view.IndicativeAdapter;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -69,8 +69,7 @@ public class ConsultationByIndicativeResultScreen extends Activity {
 		String indicative = intent.getStringExtra("INDICATIVO");
 		String title = intent.getStringExtra("TITULO");
 			
-		IndicativoAdapter adapter = new IndicativoAdapter(title, indicative,
-			context);
+		IndicativeAdapter adapter = new IndicativeAdapter(title, indicative, context);
 			
 		statesList.setAdapter(adapter);
 	}
