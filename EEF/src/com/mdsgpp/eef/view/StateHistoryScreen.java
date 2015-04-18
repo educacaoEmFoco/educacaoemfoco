@@ -96,7 +96,7 @@ public class StateHistoryScreen extends Activity {
 			
 		} catch (IOException e) {
 			Toast.makeText(getApplicationContext(),
-				"Houve um erro no acesso às informações.",
+				"Houve um erro no acesso ï¿½s informaï¿½ï¿½es.",
 				Toast.LENGTH_SHORT).show();
 			Log.i("IOException - TelaHistoricoEstado", e.toString());
 		}
@@ -188,7 +188,7 @@ public class StateHistoryScreen extends Activity {
 		
 		int position = intent1.getIntExtra("ESTADO", 0);
 		
-    	Intent intent = new Intent(this, TelaEscolheIndicativoGraficoLinha.class);
+    	Intent intent = new Intent(this, ChooseIndicativeChartLineScreen.class);
     	intent.putExtra("ESTADO", position);
     	
 		intent.putExtra("CB_IDEB", true);

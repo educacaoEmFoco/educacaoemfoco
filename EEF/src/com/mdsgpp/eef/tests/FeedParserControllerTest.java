@@ -9,15 +9,15 @@ import com.mdsgpp.eef.visao.TelaFeed;
 import android.content.Context;
 import android.test.ActivityUnitTestCase;
 
-public class FeedParserControllerTest extends  ActivityUnitTestCase<TelaFeed> {
+public class FeedParserControllerTest extends  ActivityUnitTestCase<FeedScreen> {
 
 	private static Context context;
 	private final String FEED_ADDRESS = "http://noticias.gov.br/noticias/rss?id=AFSZW";
 	private FeedController task1;
-	private TelaFeed screen;
+	private FeedScreen screen;
 
 	public FeedParserControllerTest() {
-		super(TelaFeed.class);
+		super(FeedScreen.class);
 	}
 
 	public void setUp() throws Exception {

@@ -57,7 +57,7 @@ public class MainActivity extends Activity {
     
     // Implements the action on button feed.
     public void clickBotaoFeed(View view) {
-    	Intent intent = new Intent(this, TelaFeed.class);
+    	Intent intent = new Intent(this, FeedScreen.class);
     	startActivity(intent);
     }
 

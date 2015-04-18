@@ -681,7 +681,7 @@ public class ConsultationResultScreen extends Activity {
 	
 	// Implements the action of button to generate the chart.
 	public void clickGenerateChartButton(View view) {
-		Intent intent = new Intent(this, TelaEscolheIndicativoGraficoComparacao.class);
+		Intent intent = new Intent(this, ChooseIndicativeChartComparisonScreen.class);
 		Intent intent1 = getIntent();
 
 		int position1 = intent1.getIntExtra("INDEX_ESTADO1_ESCOLHIDO", 0);

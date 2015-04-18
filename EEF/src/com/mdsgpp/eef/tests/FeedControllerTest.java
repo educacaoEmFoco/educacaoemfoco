@@ -8,14 +8,14 @@ import com.mdsgpp.eef.visao.TelaFeed;
 
 import android.test.ActivityInstrumentationTestCase2;
 
-public class FeedControllerTest extends ActivityInstrumentationTestCase2<TelaFeed> {
+public class FeedControllerTest extends ActivityInstrumentationTestCase2<FeedScreen> {
 
 	private final String FEED_ADDRESS = "http://noticias.gov.br/noticias/rss?id=AFSZW";
 	private FeedController task1;
-	private TelaFeed screen;
+	private FeedScreen screen;
 
 	public FeedControllerTest() {
-		super(TelaFeed.class);
+		super(FeedScreen.class);
 	}
 
 	@Override
