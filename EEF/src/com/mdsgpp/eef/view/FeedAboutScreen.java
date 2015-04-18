@@ -1,4 +1,4 @@
-package com.mdsgpp.eef.visao;
+package com.mdsgpp.eef.view;
 
 import com.mdsgpp.eef.R;
 
@@ -8,7 +8,7 @@ import android.support.v4.app.NavUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class TelaFeedSobre extends Activity {
+public class FeedAboutScreen extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -25,12 +25,10 @@ public class TelaFeedSobre extends Activity {
 	
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		
 		switch (item.getItemId()) {
 		case android.R.id.home:
 	        NavUtils.navigateUpFromSameTask(this);
-	        break;
-	        
+	        break;  
 		default:
 			// Do nothing.
 			break;
@@ -38,5 +36,4 @@ public class TelaFeedSobre extends Activity {
 		
     	return true;
 	}
-
 }
