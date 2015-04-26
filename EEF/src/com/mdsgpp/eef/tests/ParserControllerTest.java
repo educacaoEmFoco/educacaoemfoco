@@ -200,7 +200,7 @@ public class ParserControllerTest extends AndroidTestCase {
 		HashMap<String, ArrayList<String[]>> state;
 		state = null;
 		try {
-			state = parserController.getInformation(0);
+			state = parserController.getStateInformation(0);
 		} 
 		catch(IOException e) {
 			fail();

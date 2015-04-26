@@ -41,7 +41,7 @@ public class StateController {
 	 * in a variable.
 	 */
 	public State obtainState(int position) throws IOException {
-		parseInformation = ParserController.getInstance(context).getInformation(position);
+		parseInformation = ParserController.getInstance(context).getStateInformation(position);
 		String acronymName[] = parseInformation.get("nome_e_sigla").get(0);
 		State state = new State(acronymName[0], acronymName[1],
 			parseInformation);
@@ -56,7 +56,7 @@ public class StateController {
 	 * return this information.
 	 */
 	public HashMap<String, String> readState(int position) throws IOException {
-		parseInformation = ParserController.getInstance(context).getInformation(position);
+		parseInformation = ParserController.getInstance(context).getStateInformation(position);
 		String acronymName[] = parseInformation.get("nome_e_sigla").get(0);
 		State state = new State(acronymName[0], acronymName[1],
 			parseInformation);
@@ -72,7 +72,7 @@ public class StateController {
 	 */
 	public HashMap<String, String> readFullState(int position) throws
 		IOException {
-		parseInformation = ParserController.getInstance(context).getInformation
+		parseInformation = ParserController.getInstance(context).getStateInformation
 			(position);
 		String acronymName[] = parseInformation.get("nome_e_sigla").get(0);
 		State state = new State(acronymName[0], acronymName[1],

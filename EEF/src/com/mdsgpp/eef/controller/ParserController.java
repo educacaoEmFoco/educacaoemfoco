@@ -1,5 +1,4 @@
 package com.mdsgpp.eef.controller;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -11,10 +10,10 @@ import com.mdsgpp.eef.parser.ParserData;
 public class ParserController {
 
 	private static ParserController instance;
-	ParserData parser;
+	private ParserData parser;
 
 	public ParserController(Context context) {
-		parser = new ParserData(context);
+		this.parser = new ParserData(context);
 	}
 
 	public static ParserController getInstance(Context context) {
@@ -29,8 +28,8 @@ public class ParserController {
 	}
 	
 	// This method acquire the information of a state by the parser.
-	public HashMap<String, ArrayList<String[]>> getInformation(int position)
-		throws IOException {
+	public HashMap<String, ArrayList<String[]>> getStateInformation(int position) 
+			throws IOException {
 		return parser.getState(position);
 	}	
 }
