@@ -23,66 +23,73 @@ public class FeedController extends AsyncTask<String, Void, Feed> {
 	private DataReceiver dataReceiver;
 	private ProgressDialog progressBar;
 
-	public FeedController(Context context, DataReceiver dataReceiver) {
+	public FeedController(Context contextPassed, DataReceiver dataReceiver) {
 		this.dataReceiver = dataReceiver;
-		this.context = context;
+		this.context = contextPassed;
 	}
 	
 	@Override
 	protected void onPreExecute() {
-		progressBar = new ProgressDialog(context, R.style.CustomProgressBar);
-		progressBar.setIndeterminate(true);
-		progressBar.setMessage("Carregando Notícias!");
-		progressBar.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
-		progressBar.show();
+		this.progressBar = new ProgressDialog(this.context, R.style.CustomProgressBar);
+		this.progressBar.setIndeterminate(true);
+		this.progressBar.setMessage("Carregando Notícias!");
+		this.progressBar.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+		this.progressBar.show();
+		
 		super.onPreExecute();
 	}
 	
 	// This method seeks to update the feed accessing the url at runtime.
 	protected Feed doInBackground(String... urls) {
-		Feed feed = null;
+		Feed currentFeed = null;
 
 		try {
 			URL url = new URL(urls[0]);
-			FeedParser handler = new FeedParser();
-			InputStream is = url.openStream();
-			feed = handler.parse(is);
+			
+			InputStream inputStreamObject = null;
+			inputStreamObject = url.openStream();
+			
+			FeedParser feedParserHandler = new FeedParser();
+			currentFeed = feedParserHandler.parse(inputStreamObject);
+			
+			FeedPersistence feedPersistenceInstance = null;
+			feedPersistenceInstance = FeedPersistence.getInstance(this.context);
+			feedPersistenceInstance.writeFeedFile(currentFeed);
+			
+			this.update();
 
-			FeedPersistence.getInstance(this.context).writeFeedFile(feed);
-			this.updated = true;
-
-			return feed;
-		} 
-		catch(MalformedURLException e) {
-			e.printStackTrace();
-		} 
-		catch(IOException e) {
-			e.printStackTrace();
+			return currentFeed;
+		} catch(MalformedURLException exception) {
+			exception.printStackTrace();
+		} catch(IOException exception) {
+			exception.printStackTrace();
 		}
 
 		try {
-			feed = FeedPersistence.getInstance(this.context).readFeedFile();
-		} 
-		catch(IOException e) {
-			e.printStackTrace();
-		} 
-		catch(ClassNotFoundException e) {
-			e.printStackTrace();
+			currentFeed = FeedPersistence.getInstance(this.context).readFeedFile();
+		} catch(IOException exception) {
+			exception.printStackTrace();
+		} catch(ClassNotFoundException exception) {
+			exception.printStackTrace();
 		}
-
-		return feed;
+		
+		return currentFeed;
 	}
-
+	
+	private void update() {
+		this.updated = true;
+	}
+	
 	// After the execution of the task
 	protected void onPostExecute(Feed feed) {		
-		if(progressBar != null) {
-			progressBar.dismiss();
+		if(this.progressBar != null) {
+			this.progressBar.dismiss();
 		}
 		else {
 			// Nothing to do.
 		}
 		
-		if(!this.updated) {
+		if(this.updated == false) {
 			Toast.makeText(this.context, "Não foi possível atualizar as notícias! :(", 
 				Toast.LENGTH_LONG).show();
 		}
