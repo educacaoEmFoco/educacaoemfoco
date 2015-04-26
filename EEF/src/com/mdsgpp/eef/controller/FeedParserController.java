@@ -6,7 +6,7 @@ import com.mdsgpp.eef.model.News;
 public class FeedParserController {
 
 	private Feed feed;
-	private News item;
+	private News newsItem;
 	private static FeedParserController instance;
 	
 	public FeedParserController() {
@@ -29,21 +29,22 @@ public class FeedParserController {
 	}
 	
 	// This method clear the feed.
-	public void creatNewFeed() {
+	public void createNewFeed() {
 		this.feed.reset();
 	}
 	
 	// This method creates a new item based on the feed.
 	public void createNewItem() {
-		this.item = new News(this.feed);
+		this.newsItem = null;
+		this.newsItem = new News(this.feed);
 	}
 	
 	// This method add an item on the feed.
 	public void addItem() {
-		this.feed.addItem(this.item);
+		this.feed.addItem(this.newsItem);
 	}
 	
 	public News getItem() {
-		return this.item;
+		return this.newsItem;
 	}	
 }

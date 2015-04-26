@@ -37,7 +37,7 @@ public class FeedParser extends DefaultHandler {
 		 */
 		chanElement.setStartElementListener(new StartElementListener() {
 			public void start(Attributes attributes) {
-				FeedParserController.getInstance().creatNewFeed();
+				FeedParserController.getInstance().createNewFeed();
 			}
 		});
 
