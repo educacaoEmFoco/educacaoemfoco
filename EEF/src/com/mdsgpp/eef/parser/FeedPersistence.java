@@ -1,3 +1,9 @@
+/**********************************************************
+ * File: FeedPersistence.java 
+ * 
+ * Purpose: Read and write Feed objects from/on text files.
+ **********************************************************/
+
 package com.mdsgpp.eef.parser;
 
 import java.io.FileInputStream;
@@ -20,7 +26,7 @@ public class FeedPersistence {
 		this.context = context;
 	}
 
-	// Get an instance of this class.
+	// Get the ONLY instance of this class. Singleton design pattern applied on here.
 	public static FeedPersistence getInstance(Context context) {
 		if (instance == null) {
 			instance = new FeedPersistence(context);
