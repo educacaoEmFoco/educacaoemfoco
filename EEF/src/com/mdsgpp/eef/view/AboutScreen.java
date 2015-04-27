@@ -29,8 +29,8 @@ public class AboutScreen extends Activity {
 	}
 	
 	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		switch(item.getItemId()) {
+	public boolean onOptionsItemSelected(MenuItem selectedOptionInMenu) {
+		switch(selectedOptionInMenu.getItemId()) {
 			case android.R.id.home:
 		        NavUtils.navigateUpFromSameTask(this);
 		        break;
