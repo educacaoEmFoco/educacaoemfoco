@@ -1,3 +1,9 @@
+/*******************************************************
+ * File: News.java
+ *
+ * Purpose: Report when a new news is already available.
+ *******************************************************/
+
 package com.mdsgpp.eef.model;
 
 import java.io.Serializable;
