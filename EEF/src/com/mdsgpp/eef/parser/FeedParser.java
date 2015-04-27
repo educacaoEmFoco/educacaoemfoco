@@ -1,3 +1,9 @@
+/*************************************
+ * File: FeedParser.java 
+ * 
+ * Purpose: Parse an outside XML file.
+ *************************************/
+
 package com.mdsgpp.eef.parser;
 
 import java.io.IOException;
@@ -20,19 +26,31 @@ import android.util.Xml;
 public class FeedParser extends DefaultHandler {
 
 	public Feed parse(InputStream is) {
-		// Declaration of each element tag that we want to treat.
+		// Declaration of each element tag to be treated.
 		RootElement root = new RootElement("rss");
-		Element chanElement = root.getChild("channel");
+		Element chanElement = null;
+		chanElement = root.getChild("channel");
 
-		Element chanItem = chanElement.getChild("item");
-		Element itemTitle = chanItem.getChild("title");
-		Element itemDescription = chanItem.getChild("description");
-		Element itemCategory = chanItem.getChild("category");
-		Element itemPubDate = chanItem.getChild("pubDate");
-		Element itemLink = chanItem.getChild("link");
+		Element chanItem = null;
+		chanItem = chanElement.getChild("item");
+		
+		Element itemTitle = null;
+		itemTitle = chanItem.getChild("title");
+		
+		Element itemDescription = null;
+		itemDescription = chanItem.getChild("description");
+		
+		Element itemCategory = null;
+		itemCategory = chanItem.getChild("category");
+		
+		Element itemPubDate = null;
+		itemPubDate = chanItem.getChild("pubDate");
+		
+		Element itemLink = null;
+		itemLink = chanItem.getChild("link");
 
 		/*
-		 * To every tag, we define the desired action to be performed, for
+		 * To every tag, the desired action is defined to be performed, for
 		 * example: When the 'channel' element is opened
 		 */
 		chanElement.setStartElementListener(new StartElementListener() {
