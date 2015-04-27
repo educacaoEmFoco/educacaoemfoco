@@ -1,3 +1,9 @@
+/****************************************************
+ * File: ParserController.java 
+ * 
+ * Purpose: Give information of a given State object.
+ ****************************************************/
+
 package com.mdsgpp.eef.controller;
 import java.io.IOException;
 import java.util.ArrayList;
