@@ -42,34 +42,40 @@ public class ParserData {
 		this.informations = new HashMap<String, ArrayList<String[]>>();
 	}
 
-	// Acquire the informations about a state by it's ID, and save in a vector.
+	// Acquire the informations about a state by its ID, and save in an array.
 	public HashMap<String, ArrayList<String[]>> getState(int position) throws IOException {
-		String name, acronym;
+		AssetManager assetManager = null;
+		assetManager = this.context.getAssets();
+		
+		InputStream inputStream = null;
+		inputStream = assetManager.open(this.states[position][1] + this.extension);
+		
+		BufferedReader bufferedReader = null;
+		bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
 
-		AssetManager am = this.context.getAssets();
-		InputStream is = am.open(this.states[position][1] + this.extension);
-		BufferedReader br = new BufferedReader(new InputStreamReader(is));
-
-		name = br.readLine();
+		String name = null; 
+		name = bufferedReader.readLine();
 		name = this.states[position][0];
-		acronym = br.readLine();
+		
+		String acronym = null;
+		acronym = bufferedReader.readLine();
 		
 		cleanInformations();
-		cleanData();
+		clearData();
 		
 		insertAcronymName(name, acronym);
-		readIndicative(br);
+		readIndicative(bufferedReader);
 		
 		return informations;
 	}
 
-	// Clear the vector with the state's indicatives information.
+	// Clear the array with the state's indicatives information.
 	public void cleanInformations() {
 		this.informations.clear();
 	}
 	
-	// Clear the vector with the state's information.
-	public void cleanData() {
+	// Clear the array with the state's information.
+	public void clearData() {
 		this.data = new ArrayList<String[]>(); 
 	}
 
@@ -85,36 +91,34 @@ public class ParserData {
 	}
 	
 	// Responsible for reading the available data.
-	public void readIndicative(BufferedReader br) throws IOException {
-		int aux = 0;
-		String line;
-
-		line = br.readLine();
-		indicatorName = br.readLine();
-		line = br.readLine();
+	public void readIndicative(BufferedReader bufferedReader) throws IOException {
+		String currentReadLine = null;
+		currentReadLine = bufferedReader.readLine();
+		this.indicatorName = bufferedReader.readLine();
+		currentReadLine = bufferedReader.readLine();
 		
-		while (line != null) {
-			
-			if (line.isEmpty()) {
-				aux++;
+		int lineCounting = 0;
+		while (currentReadLine != null) {
+			if (currentReadLine.isEmpty()) {
+				lineCounting++;
 			} 
 			else {
-				data.add(line.split(": "));
+				this.data.add(currentReadLine.split(": "));
 			}
 
-			if (aux == lines) {
-				aux = 0;
+			if (lineCounting == this.lines) {
+				lineCounting = 0;
 				this.informations.put(indicatorName, data);
-				indicatorName = br.readLine();
-				cleanData();
+				this.indicatorName = bufferedReader.readLine();
+				clearData();
 			}
 			else {
 				// Do nothing.
 			}
 			
-			line = br.readLine();
+			currentReadLine = bufferedReader.readLine();
 		}
-
-		br.close();
+		
+		bufferedReader.close();
 	}
 }
