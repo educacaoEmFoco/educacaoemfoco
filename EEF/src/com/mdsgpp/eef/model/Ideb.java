@@ -1,3 +1,9 @@
+/**************************************************************************
+ * File: Ideb.java
+ *
+ * Purpose: Inform the Basic Education Development Index of selected state.
+ **************************************************************************/
+
 package com.mdsgpp.eef.model;
 
 public class Ideb {

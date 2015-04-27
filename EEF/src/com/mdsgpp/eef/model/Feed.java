@@ -1,5 +1,5 @@
 /*******************************************************
- * File: News.java
+ * File: Feed.java
  *
  * Purpose: Report when a new news is already available.
  *******************************************************/
