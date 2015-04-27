@@ -1,3 +1,10 @@
+/***********************************************************************************************
+ * File: ChartAboutScreen.java
+ * 
+ * Purpose: Create the screen responsible to show informations about the screen that show charts
+ * based on states indicatives.
+ ***********************************************************************************************/
+
 package com.mdsgpp.eef.view;
 
 import com.mdsgpp.eef.R;
@@ -16,7 +23,6 @@ public class ChartAboutScreen extends Activity {
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.menu_telas_sem_sobre, menu);
 		return true;
 	}
