@@ -1,3 +1,9 @@
+/***************************************************************************************
+ * File: StateController.java 
+ * 
+ * Purpose: Do operations like reading, obtaining and writing upon a given State object.
+ ***************************************************************************************/
+
 package com.mdsgpp.eef.controller;
 
 import java.io.IOException;
