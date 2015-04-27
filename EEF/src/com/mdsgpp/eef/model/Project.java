@@ -1,3 +1,10 @@
+/******************************************************************************
+ * File: Project.java
+ * 
+ * Purpose: Inform all projects from a state and their respective informations, 
+ * like quantity, value.
+ ******************************************************************************/
+
 package com.mdsgpp.eef.model;
 
 public class Project {
