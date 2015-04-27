@@ -1,3 +1,9 @@
+/************************************************************
+ * File: FeedController.java 
+ * 
+ * Purpose: Update a Feed by accessing given URLs at runtime.
+ ************************************************************/
+
 package com.mdsgpp.eef.controller;
 
 import java.io.IOException;
