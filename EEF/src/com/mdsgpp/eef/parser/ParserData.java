@@ -1,3 +1,9 @@
+/******************************************************************************
+ * File: ParserData.java 
+ * 
+ * Purpose: Parser the states outside data and store it on the State structure.
+ ******************************************************************************/
+
 package com.mdsgpp.eef.parser;
 
 import java.io.BufferedReader;
