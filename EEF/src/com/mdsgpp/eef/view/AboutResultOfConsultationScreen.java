@@ -1,8 +1,9 @@
-/********************************************************************************************************
+/************************************************************************************************
  * File: AboutResultOfConsultationScreen.java 
  * 
- * Purpose: Create the screen responsible to show informations about the screen with results from search.
- ********************************************************************************************************/
+ * Purpose: Create the screen responsible to show informations about the screen with results from
+ * search.
+ ************************************************************************************************/
 
 package com.mdsgpp.eef.view;
 

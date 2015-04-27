@@ -1,3 +1,9 @@
+/*******************************************************************
+ * File: FeedParserController.java 
+ * 
+ * Purpose: Create News' items or add them to a given Feed instance.
+ *******************************************************************/
+
 package com.mdsgpp.eef.controller;
 
 import com.mdsgpp.eef.model.Feed;
