@@ -1,3 +1,9 @@
+/************************************************************
+ * File: News.java
+ *
+ * Purpose: Create a news about any state to update the feed.
+ ************************************************************/
+
 package com.mdsgpp.eef.model;
 
 import java.io.Serializable;
