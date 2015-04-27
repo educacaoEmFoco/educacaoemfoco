@@ -1,3 +1,9 @@
+/*********************************************************************
+ * File: State.java
+ * 
+ * Purpose: Create a state object with information gotten from parser.
+ *********************************************************************/
+
 package com.mdsgpp.eef.model;
 
 import java.util.ArrayList;
