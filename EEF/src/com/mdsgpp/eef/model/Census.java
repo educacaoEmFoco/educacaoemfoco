@@ -1,3 +1,9 @@
+/*********************************************************************
+ * File: Census.java
+ * 
+ * Purpose: Inform about the schoolar census.
+ *********************************************************************/
+
 package com.mdsgpp.eef.model;
 
 public class Census {
@@ -9,7 +15,7 @@ public class Census {
 	private double EJAHighSchool;
 	private int year;
 	private State state;
-	
+
 	public Census() {
 	}
 
@@ -77,5 +83,5 @@ public class Census {
 
 	public void setYear(int year) {
 		this.year = year;
-	}	
+	}
 }
