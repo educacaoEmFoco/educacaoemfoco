@@ -1,3 +1,9 @@
+/*************************************************************************************************
+ * File: ChooseIndicativeChartComparsionScreen.java
+ * 
+ * Purpose: Screen where the user will choose the indicatives to generate the chart of comparison.
+ *************************************************************************************************/
+
 package com.mdsgpp.eef.view;
 
 import android.content.Intent;
