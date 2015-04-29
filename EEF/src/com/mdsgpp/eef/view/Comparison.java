@@ -1,3 +1,9 @@
+/******************************************************************************
+ * File: Comparison.java
+ * 
+ * Purpose: Screen where the user will choose the states that will be compared.
+ ******************************************************************************/
+
 package com.mdsgpp.eef.view;
 
 import java.util.ArrayList;
@@ -95,7 +101,7 @@ public abstract class Comparison extends Activity {
 		statesSpinner.setAdapter(statesAdapter02);
 	}
 
-	// Fill the array estados with the name of all brazilian states.
+	// Fill the array states with the name of all brazilian states.
 	private ArrayList<String> fillStates(ArrayList<String> states) {
 		states.clear();
 
@@ -148,10 +154,10 @@ public abstract class Comparison extends Activity {
 		statesSpinner.setSelection(states02.indexOf(selectedState));
 	}
 
-	// When button ComparacaoEstados is clicked triger a new screen.
+	// When button StatesComparison is clicked triger a new screen.
 	public abstract void clickButtonStatesComparison(View view);
 	
-	// Implements the action of button to start comparation.
+	// Implements the action of button to start comparison.
 	public void clickButtonAboutComparison(View view) {
 		Intent intent = new Intent(this, ConsultationAboutScreen.class);
 		startActivity(intent);
