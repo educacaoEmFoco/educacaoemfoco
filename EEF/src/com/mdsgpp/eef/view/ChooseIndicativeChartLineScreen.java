@@ -1,3 +1,9 @@
+/***********************************************************************************
+ * File: ChooseIndicativeChartLineScreen.java
+ * 
+ * Purpose: Screen where the user will choose the indicatives to generate the chart.
+ ***********************************************************************************/
+
 package com.mdsgpp.eef.view;
 
 import java.io.IOException;
