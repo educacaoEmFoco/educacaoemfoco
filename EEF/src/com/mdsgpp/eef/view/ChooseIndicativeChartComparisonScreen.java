@@ -105,7 +105,7 @@ public class ChooseIndicativeChartComparisonScreen extends ChoosesIndicative {
 		
 	}
 	
-	// Inicialize all radio buttons on screen.
+	// Start all radio buttons on screen.
 	public void inicializaRadioButtons() {
 		rbIdebIniciais = (RadioButton) findViewById
 			(R.id.radio_ideb_fundamental_iniciai);
