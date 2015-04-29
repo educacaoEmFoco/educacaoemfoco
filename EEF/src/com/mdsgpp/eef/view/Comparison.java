@@ -1,8 +1,8 @@
-/******************************************************************************
+/***************************************************************************************************
  * File: Comparison.java
  * 
- * Purpose: Screen where the user will choose the states that will be compared.
- ******************************************************************************/
+ * Purpose: General class of the screen where the user will choose the states that will be compared.
+ **************************************************************************************************/
 
 package com.mdsgpp.eef.view;
 
