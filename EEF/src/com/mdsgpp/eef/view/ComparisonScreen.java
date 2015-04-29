@@ -1,3 +1,9 @@
+/******************************************************************************
+ * File: ComparisonScreen.java
+ * 
+ * Purpose: Screen where the user will choose the states that will be compared.
+ ******************************************************************************/
+
 package com.mdsgpp.eef.view;
 
 import com.mdsgpp.eef.R;
@@ -47,9 +53,4 @@ public class ComparisonScreen extends Comparison {
     	startActivity(intent);
     }
 	
-	// Implements action on button about compararison.
-	public void clickButtonAboutComparison(View view) {
-    	Intent intent = new Intent(this, ComparisonAboutScreen.class);
-    	startActivity(intent);
-    }
 }
