@@ -73,10 +73,10 @@ public class GraphScreen extends Activity {
 		
 		Intent intent = getIntent();
 
-		state1 = intent.getIntExtra("INDEX_ESTADO1_ESCOLHIDO", 0);
-		state2 = intent.getIntExtra("INDEX_ESTADO2_ESCOLHIDO", 0);
-		title = intent.getStringExtra("TITULO");
-		indicative = intent.getStringExtra("INDICATIVO");
+		this.state1 = intent.getIntExtra("INDEX_ESTADO1_ESCOLHIDO", 0);
+		this.state2 = intent.getIntExtra("INDEX_ESTADO2_ESCOLHIDO", 0);
+		this.title = intent.getStringExtra("TITULO");
+		this.indicative = intent.getStringExtra("INDICATIVO");
 
 		HashMap<String, String> state1Informations = new HashMap<String, String>();
 		HashMap<String, String> state2Informations = new HashMap<String, String>();
@@ -128,7 +128,6 @@ public class GraphScreen extends Activity {
 		
 		String state1IndicativeString = state1Informations.get(indicative);
 		String state2IndicativeString = state2Informations.get(indicative);
-	
 				
 		state1IndicativeString = state1IndicativeString.replaceAll("[^\\d,]", "");																	 
 		state2IndicativeString = state2IndicativeString.replaceAll("[^\\d,]", "");
