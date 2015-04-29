@@ -45,11 +45,11 @@ public class FeedAdapter extends BaseAdapter {
 
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
+		/* 
+		 * If the convertView is null (first ListView item), inflate the layout
+		 * and create a ViewHolder to carry our TextViews, storing inside the ConvertView.
+		 */
 		if(convertView == null) {
-			/* 
-			* If the convertView is null (first ListView item), inflate the layout
-			* and create a ViewHolder to carry our TextViews, storing inside the ConvertView.
-			*/
 			convertView = this.mInflater.inflate(R.layout.rss_listview_item , null);
 			this.holder = new ViewHolder();
 			
@@ -58,19 +58,23 @@ public class FeedAdapter extends BaseAdapter {
 				convertView.findViewById(R.id.textView_rss_category);
 			this.holder.tvDescription = (TextView) 
 				convertView.findViewById(R.id.textView_rss_description);
-			convertView.setTag(this.holder);
 			
+			convertView.setTag(this.holder);
 		} 
 		else {
 			// If the convertView is already inflated, just takes our ViewHolder back.
 			this.holder = (ViewHolder) convertView.getTag();
 		}
 		
+		String feedItemTitle = null;
+		feedItemTitle = this.feed.getItem(position).getTitle();
+		String feedItemCategory = null;
+		feedItemCategory = this.feed.getItem(position).getCategory();
+		
 		// Set the text to our TextViews.
-		this.holder.tvTitle.setText(this.feed.getItem(position).getTitle());
-		this.holder.tvCategory.setText(this.feed.getItem(position).getCategory());
-		this.holder.tvDescription.setText(Html.fromHtml
-			(this.feed.getItem(position).getDescription()));
+		this.holder.tvTitle.setText(feedItemTitle);
+		this.holder.tvCategory.setText(feedItemCategory);
+		this.holder.tvDescription.setText(Html.fromHtml(feedItemCategory));
 		
 		// At this point, the convertView is full, so we can just return it.
 		return convertView;
