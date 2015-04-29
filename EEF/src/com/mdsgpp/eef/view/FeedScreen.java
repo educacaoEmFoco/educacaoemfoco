@@ -25,7 +25,7 @@ public class FeedScreen extends Activity implements DataReceiver {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_tela_feed);
 		
-		// Execute the task to retrieve the feed data
+		// Execute the task to retrieve the feed data.
 		new FeedController(this, this).execute(FEED_ADDRESS);
 	}
 
@@ -33,6 +33,7 @@ public class FeedScreen extends Activity implements DataReceiver {
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.menu_telas, menu);
+		
 		return true;
 	}
 	

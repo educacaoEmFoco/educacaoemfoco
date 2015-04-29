@@ -13,23 +13,23 @@ import android.widget.TextView;
 
 public class StateAdapter extends BaseAdapter {
 
-	String states[] = {"Acre", "Alagoas", "Amap�", "Amazonas", "Bahia", "Cear�",
+	final String states[] = {"Acre", "Alagoas", "Amap�", "Amazonas", "Bahia", "Cear�",
 		"Distrito Federal","Esp�rito Santo","Goi�s", "Maranh�o", "Mato Grosso", 
 		"Mato Grosso do Sul", "Minas Gerais", "Par�", "Paraiba", "Paran�", "Pernambuco", "Piau�", 
 		"Rio de Janeiro", "Rio Grande do Norte", "Rio Grande do Sul", "Rond�nia", "Ror�ima", 
 		"Santa Catarina", "S�o Paulo", "Sergipe", "Tocantins"};
 	
-	String acronyms[] = {"AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", 
+	final String acronyms[] = {"AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", 
 		"PA", "PB", "PR", "PE",	"PI", "RJ", "RN","RS", "RO", "RR", "SC", "SP", "SE", "TO" };
 	
-	String flags[] = {"acre", "alagoas", "amapa", "amazonas", "bahia", "ceara", 
+	final String flags[] = {"acre", "alagoas", "amapa", "amazonas", "bahia", "ceara", 
 		"distritofederal", "espiritosanto", "goias", "maranhao", "matogrosso", "matogrossodosul", 
 		"minasgerais", "para", "paraiba", "parana", "pernambuco", "piaui", "riodejaneiro", 
 		"riograndedonorte", "riograndedosul", "rondonia", "roraima", "santacatarina", "saopaulo", 
 		"sergipe", "tocantins"};
 	
-	private LayoutInflater mInflater;
-	private ViewHolder holder;
+	private LayoutInflater layoutInflater;
+	private ViewHolder viewHolder;
 	private Context context;
 	
 	static class ViewHolder {
@@ -40,7 +40,7 @@ public class StateAdapter extends BaseAdapter {
 	
 	public StateAdapter(Context context) {
 		this.context = context;
-		mInflater = LayoutInflater.from(context);
+		layoutInflater = LayoutInflater.from(context);
 	}
 	
 	@Override
@@ -60,34 +60,31 @@ public class StateAdapter extends BaseAdapter {
 
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
-		// Inflate layout, and get the view to put into the holder.
+		// Inflate layout, and get the view to put into the viewHolder.
 		if (convertView == null) {
-			convertView = mInflater.inflate(R.layout.listview_item , null);
-			holder = new ViewHolder();
+			convertView = layoutInflater.inflate(R.layout.listview_item , null);
+			this.viewHolder = new ViewHolder();
 		 
-			holder.tvName = (TextView) convertView.findViewById(R.id.textview_lista_estados);
-			holder.tvAcronym = (TextView) convertView.findViewById(R.id.textview_lista_siglas);
-			
-			holder.tvFlags = (ImageView) convertView.findViewById(R.id.imageView_bandeiras);
-			if(holder.tvFlags==null) {
-				Log.i(null, "nulo");
-			}
-			else{
-				Log.i(null, "n�o nulo");
-			}
-
+			this.viewHolder.tvName = (TextView) convertView.findViewById(R.id.textview_lista_estados);
+			this.viewHolder.tvAcronym = (TextView) convertView.findViewById(R.id.textview_lista_siglas);
+			this.viewHolder.tvFlags = (ImageView) convertView.findViewById(R.id.imageView_bandeiras);
 		} 
 		else {
-			// Get the holder if everything already got initialized.
-			holder = (ViewHolder) convertView.getTag();
+			// Get the viewHolder if everything already got initialized.
+			this.viewHolder = (ViewHolder) convertView.getTag();
 		}
-				
-		holder.tvName.setText(states[position]);
-		holder.tvAcronym.setText(acronyms[position]);
-		int idFlag = context.getResources().getIdentifier(flags[position], "drawable", 
-			context.getPackageName());
-		holder.tvFlags.setImageResource(idFlag);
-		convertView.setTag(holder);
+		
+		String contextPackageName = null;
+		contextPackageName = this.context.getPackageName();
+		
+		int idFlag = this.context.getResources().getIdentifier(flags[position], "drawable", 
+				contextPackageName);
+		
+		this.viewHolder.tvName.setText(this.states[position]);
+		this.viewHolder.tvAcronym.setText(this.acronyms[position]);
+		this.viewHolder.tvFlags.setImageResource(idFlag);
+		
+		convertView.setTag(this.viewHolder);
 		
 		return convertView;
 	}
