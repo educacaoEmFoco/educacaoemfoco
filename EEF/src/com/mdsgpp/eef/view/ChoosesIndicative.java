@@ -1,3 +1,9 @@
+/***********************************************
+ * File: ChoosesIndicative.java
+ * 
+ * Purpose: General class of choose indicatives.
+ ***********************************************/
+
 package com.mdsgpp.eef.view;
 
 import com.mdsgpp.eef.R;
@@ -12,7 +18,7 @@ import android.view.View;
 public abstract class ChoosesIndicative extends Activity {
 	
 	private String indicative = "populacao";
-	private String title = "Populaï¿½ï¿½o";
+	private String title = "População";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -59,20 +65,20 @@ public abstract class ChoosesIndicative extends Activity {
 				setValues("quantidade_projeto_cnpq", "rojetos de Pesquisa Apoio CNPq (Qtd.)");
 				break;
 			case R.id.radio_difusao_tecnologica_investimento:
-				setValues("valor_ciencia_tecnologia", "Projeto de Difusï¿½o Tecnolï¿½gica (R$)");
+				setValues("valor_ciencia_tecnologia", "Projeto de Difusão Tecnológica (R$)");
 				break;
 			case R.id.radio_difusao_tecnologica_qtd:
-				setValues("projetos_ciencia_tecnologia", "Projeto de Difusï¿½oo Tecnolï¿½gica (Qtd.)");
+				setValues("projetos_ciencia_tecnologia", "Projeto de Difusão Tecnológica (Qtd.)");
 				break;
 			case R.id.radio_ideb_fundamental_finais:
-				setValues("ideb_fundamental_final", "IDEB do Ensino Fundamental (Sï¿½ries Finais)");
+				setValues("ideb_fundamental_final", "IDEB do Ensino Fundamental (Séries Finais)");
 				break;
 			case R.id.radio_ideb_fundamental_iniciai:
 				setValues("ideb_fundamental_inicial", 
-					"IDEB do Ensino Fundamental (Sï¿½ries Iniciais)");
+					"IDEB do Ensino Fundamental (Séries Iniciais)");
 				break;
 			case R.id.radio_ideb_medio:
-				setValues("ideb_ensino_medio", "IDEB do Ensino Mï¿½dio");
+				setValues("ideb_ensino_medio", "IDEB do Ensino Médio");
 				break;
 			case R.id.radio_jovens_pesquisadores_investimento:
 				setValues("valor_projetos_jovens_pesquisadores", "Jovens pesquisadores (R$)");
@@ -82,10 +88,10 @@ public abstract class ChoosesIndicative extends Activity {
 					"Jovens pesquisadores (Qtd.)");
 				break;
 			case R.id.radio_pib:
-				setValues("percentual_participacao_pib", "Participaï¿½ï¿½o Estadual no PIB (%)");
+				setValues("percentual_participacao_pib", "Participação Estadual no PIB (%)");
 				break;
 			case R.id.radio_populacao:
-				setValues("populacao", "Populaï¿½ï¿½o");
+				setValues("populacao", "População");
 				break;
 			case R.id.radio_primeiros_projetos_investimento:
 				setValues("valor_primeiros_projetos", "Programa Primeiros Projetos (R$)");
@@ -101,41 +107,41 @@ public abstract class ChoosesIndicative extends Activity {
 				break;
 			case R.id.radio_alunos_por_turma_fundamental:
 				setValues("alunos_por_turma_ensino_fundamental", 
-					"Mï¿½dia de Alunos por Turma do Ensino Fundamental (Qtd.)");
+					"Média de Alunos por Turma do Ensino Fundamental (Qtd.)");
 				break;
 			case R.id.radio_alunos_por_turma_medio:
 				setValues("alunos_por_turma_ensino_medio", 
-					"Mï¿½dia de Alunos por Turma do Ensino Mï¿½dio (Qtd.)");
+					"Média de Alunos por Turma do Ensino Médio (Qtd.)");
 				break;
 			case R.id.radio_horas_aula_fundamental:
 				setValues("horas_aula_ensino_fundamental", 
-					"Mï¿½dia de horas aula diï¿½rias do Ensino Fundamental");
+					"Média de horas aula diárias do Ensino Fundamental");
 				break;
 			case R.id.radio_horas_aula_medio:
 				setValues("horas_aula_ensino_medio", 
-					"Mï¿½dia de horas aula diï¿½rias do Ensino Mï¿½dio");
+					"Média de horas aula diárias do Ensino Mï¿½dio");
 				break;
 			case R.id.radio_taxa_distorcao_fundamental:
 				setValues("taxa_distorcao_fundamental", 
-					"Taxa de Distorï¿½ï¿½o Idade/Sï¿½rie do Ensino Fundamental (%)");
+					"Taxa de Distorção Idade/Série do Ensino Fundamental (%)");
 				break;
 			case R.id.radio_taxa_distorcao_medio:
 				setValues("taxa_distorcao_medio", 
-					"Taxa de Distorï¿½ï¿½o Idade/Sï¿½rie do Ensino Mï¿½dio (%)");
+					"Taxa de Distorção Idade/Série do Ensino Médio (%)");
 				break;
 			case R.id.radio_taxa_aprovacao_fundamental:
 				setValues("taxa_aprovacao_fundamental", 
 					"Taxa de Aproveitamento do Ensino Fundamental (%)");
 				break;
 			case R.id.radio_taxa_aprovacao_medio:
-				setValues("taxa_aprovacao_medio", "Taxa de Aproveitamento do Ensino Mï¿½dio (%)");
+				setValues("taxa_aprovacao_medio", "Taxa de Aproveitamento do Ensino Médio (%)");
 				break;
 			case R.id.radio_taxa_abandono_fundamental:
 				setValues("taxa_abandono_fundamental", 
 					"Taxa de Abandono do Ensino Fundamental (%)");
 				break;
 			case R.id.radio_taxa_abandono_medio:
-				setValues("taxa_abandono_medio", "Taxa de Abandono do Ensino Mï¿½dio (%)");
+				setValues("taxa_abandono_medio", "Taxa de Abandono do Ensino Médio (%)");
 				break;
 			case R.id.radio_censo_iniciais_fundamental:
 				setValues("censo_anos_iniciais_fundamental", 
@@ -146,14 +152,14 @@ public abstract class ChoosesIndicative extends Activity {
 					"Censo Escolar dos Anos Finais do Ensino Fundamental (Matriculados)");
 				break;
 			case R.id.radio_censo_ensino_medio:
-				setValues("censo_ensino_medio", "Censo Escolar do Ensino Mï¿½dio (Matriculados)");
+				setValues("censo_ensino_medio", "Censo Escolar do Ensino Médio (Matriculados)");
 				break;
 			case R.id.radio_censo_eja_fundamental:
 				setValues("censo_eja_fundamental", 
 					"Censo Escolar do EJA - Fundamental (Matriculados)");
 				break;
 			case R.id.radio_censo_eja_medio:
-				setValues("censo_eja_medio", "Censo Escolar do EJA - Mï¿½dio (Matriculados)");
+				setValues("censo_eja_medio", "Censo Escolar do EJA - Médio (Matriculados)");
 				break;
 			default:
 				// Nothing to do.
