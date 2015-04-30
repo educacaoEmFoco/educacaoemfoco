@@ -1,3 +1,9 @@
+/************************************************************
+ * File: IndicativeAdapter.java
+ *
+ * Purpose: Generate information about a selected indicative.
+ ************************************************************/
+
 package com.mdsgpp.eef.view;
 
 import java.io.IOException;
@@ -24,7 +30,7 @@ public class IndicativeAdapter extends BaseAdapter {
 	private ViewHolder holder;
 	private LayoutInflater inflater;
 	
-	// Name of all flags from states.
+	// Contains the name of all states from brazil, to select its own flag.
 	String flags[] = {"acre", "alagoas", "amapa", "amazonas", "bahia", "ceara", 
 		"distritofederal", "espiritosanto", "goias", "maranhao", "matogrosso", "matogrossodosul", 
 		"minasgerais", "para", "paraiba", "parana", "pernambuco", "piaui", "riodejaneiro", 
