@@ -1,3 +1,9 @@
+/**************************************************************************
+ * File: GraphLineScreen.java
+ *
+ * Purpose: Generate a line graph based on the history of indicative values
+ **************************************************************************/
+
 package com.mdsgpp.eef.view;
 
 import java.io.IOException;
