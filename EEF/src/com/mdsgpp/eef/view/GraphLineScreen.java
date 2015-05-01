@@ -28,25 +28,26 @@ import android.widget.TextView;
 
 public class GraphLineScreen extends Activity {
 
-	private TextView tvGraphTitle;
-	private TextView tvHistory;
+	private TextView textViewGraphTitle;
+	private TextView textViewHistory;
 	private ArrayList<Float> history = new ArrayList<Float>();
-	private ArrayList<String> temp;
+	private ArrayList<String> indicativeList = null;
 	private HashMap<String, String> informations;
-	private String title, indicative;
-	
+	private String title = null;
+	private String indicative = null;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_tela_grafico_historico);
-		
-		initializesTextFields();
-		capturesInformation();
+
+		initializeTextFields();
+		captureInformation();
 		fillTextFields();
-			
-		generatesGraph();
+
+		generateGraph();
 	}
-	
+
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
@@ -54,106 +55,106 @@ public class GraphLineScreen extends Activity {
 
 		return true;
 	}
-	
+
 	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {		
+	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 			case R.id.sobre:
-				opensAboutScreen();
-				break;				
+				openAboutScreen();
+				break;
 			case android.R.id.home:
 		        NavUtils.navigateUpFromSameTask(this);
-		        break;		        
+		        break;
 			default:
 				// Do nothing.
 				break;
 		}
-		
+
     	return true;
 	}
-	
+
 	/* 
 	* Takes the information from the previous activity to that, and fills the
 	* Array historico with them.
 	*/
-	private void capturesInformation() {
-		int position;
+	private void captureInformation() {
+		int position = 0;
 		Intent intent;
-		
+
 		informations = new HashMap<String, String>();
-		
-		intent = getIntent();
-		temp = intent.getStringArrayListExtra("HISTORICO");
-		title = intent.getStringExtra("TITULO");
-		indicative = intent.getStringExtra("INDICATIVO_GRAFICO");
-		position = intent.getIntExtra("POSICAO_ESTADO", 0);
-		
-		for(int i = 0; i < temp.size(); i++) {
-			history.add(Float.parseFloat(temp.get(i)));
+
+		this.intent = getIntent();
+		this.indicativeList = intent.getStringArrayListExtra("HISTORICO");
+		this.title = intent.getStringExtra("TITULO");
+		this.indicative = intent.getStringExtra("INDICATIVO_GRAFICO");
+		this.position = intent.getIntExtra("POSICAO_ESTADO", 0);
+
+		for(int i = 0; i < indicativeList.size(); i++) {
+			history.add(Float.parseFloat(indicativeList.get(i)));
 		}
-		
+
 		try {
 			informations = StateController.getInstance(this).readFullState(position);
 		} catch(IOException e) {
 			Log.i("Erro - TelaGraficoLinha", "Erro ao capturar as informacoes do estado.");
 			e.printStackTrace();
-		}	
+		}
 	}
-	
+
 	// Change the activity to AboutGraphScreen activity.
-	public void opensAboutScreen() {
+	public void openAboutScreen() {
 		Intent intent = new Intent(this, ChartAboutScreen.class);
     	startActivity(intent);
 	}
-	
+
 	// Assigns the class variables with the fields on the screen.
-	private void initializesTextFields() {
-		tvGraphTitle = (TextView) findViewById(R.id.text_view_titulo_grafico_historico);
-		tvHistory = (TextView) findViewById(R.id.text_view_grafico_historico);
+	private void initializeTextFields() {
+		textViewGraphTitle = (TextView) findViewById(R.id.text_view_titulo_grafico_historico);
+		textViewHistory = (TextView) findViewById(R.id.text_view_grafico_historico);
 	}
-	
+
 	// Fills the screen fields with the information received.
 	private void fillTextFields() {
-		tvGraphTitle.setText(title);
+		textViewGraphTitle.setText(title);
 		Log.i("teste_indicativo", indicative);
 		Log.i("teste_indicativo", "" + informations.containsKey(indicative));
-		tvHistory.setText(informations.get(indicative));
+		textViewHistory.setText(informations.get(indicative));
 	}
-	
+
 	// Draw the chart on the screen.
-	private void generatesGraph() {
+	private void generateGraph() {
 		Line curve = new Line();
-		
-		for(int i = 0, step = 10; i < history.size(); i++, step += 10) {
-			LinePoint point = new LinePoint();			
-			point.setX(step);
+
+		for(int i = 0, graphInterval = 10; i < history.size(); i++, graphInterval += 10) {
+			LinePoint point = new LinePoint();
+			point.setX(graphInterval);
 			point.setY(history.get(i));
 
 			curve.addPoint(point);
 		}
-		
+
 		curve.setColor(Color.parseColor("#4682B4"));
-		LineGraph li = (LineGraph) findViewById(R.id.graph);
-		li.addLine(curve);
-		
+		LineGraph lineGraph = (LineGraph) findViewById(R.id.graph);
+		lineGraph.addLine(curve);
+
 		float yLimit = 0;
 		yLimit = calculatesHistoryMaxValue(yLimit);
-		
-		li.setRangeY(0, yLimit);
-		li.setLineToFill(0);
+
+		lineGraph.setRangeY(0, yLimit);
+		lineGraph.setLineToFill(0);
 	}
-	
+
 	// Calculate historical maximum value.
 	private float calculatesHistoryMaxValue(float maximum) {
 		for(int i = 0; i < history.size(); i++) {
 			if(history.get(i) >= maximum) {
-				maximum = (float) history.get(i);  
+				maximum = (float) history.get(i);
 			}
 			else {
 				// Do nothing.
 			}
 		}
-		
+
 		return (float) (1.1 * maximum);
 	}
 }
