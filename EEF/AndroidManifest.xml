@@ -89,7 +89,7 @@
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name="com.mdsgpp.eef.visao.TelaEscolheIndicativoGraficoComparacao"
+            android:name="com.mdsgpp.eef.visao.ChooseIndicativeChartComparisonScreen"
             android:icon="@drawable/home"
             android:label="@string/title_activity_tela_escolhe_indicativo_grafico"
             android:parentActivityName="MainActivity"
