@@ -12,6 +12,7 @@ import java.util.HashMap;
 import android.content.Context;
 
 import com.mdsgpp.eef.parser.ParserData;
+import com.mdsgpp.eef.util.Debug;
 
 public class ParserController {
 
@@ -27,7 +28,7 @@ public class ParserController {
 			instance = new ParserController(context);
 		}
 		else {
-			// Nothing to do.
+			Debug.debug(Debug.INFO, "Already exist a ParserController Instance");
 		}
 
 		return instance;
@@ -36,6 +37,7 @@ public class ParserController {
 	// This method acquire the information of a state by the parser.
 	public HashMap<String, ArrayList<String[]>> getStateInformation(int position) 
 			throws IOException {
+		Debug.debug(Debug.DEBUG, "Getting state information by parser");
 		return parser.getState(position);
 	}	
 }
