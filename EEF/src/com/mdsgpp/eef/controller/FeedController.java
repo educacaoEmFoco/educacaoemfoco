@@ -16,6 +16,7 @@ import com.mdsgpp.eef.model.Feed;
 import com.mdsgpp.eef.parser.FeedParser;
 import com.mdsgpp.eef.parser.FeedPersistence;
 import com.mdsgpp.eef.view.DataReceiver;
+import com.mdsgpp.eef.util.Debug;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -36,9 +37,11 @@ public class FeedController extends AsyncTask<String, Void, Feed> {
 	
 	@Override
 	protected void onPreExecute() {
+		Debug.debug(Debug.DEBUG, "Executing onPreExecute method");
 		this.progressBar = new ProgressDialog(this.context, R.style.CustomProgressBar);
 		this.progressBar.setIndeterminate(true);
 		this.progressBar.setMessage("Carregando Notícias!");
+		Debug.debug(Debug.INFO, "Loading Feeds");
 		this.progressBar.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
 		this.progressBar.show();
 		
@@ -84,20 +87,23 @@ public class FeedController extends AsyncTask<String, Void, Feed> {
 	
 	private void update() {
 		this.updated = true;
+		Debug.debug(Debug.INFO, "Feeds Updated!");
 	}
 	
 	// After the execution of the task
-	protected void onPostExecute(Feed feed) {		
+	protected void onPostExecute(Feed feed) {	
+		Debug.debug(Debug.DEBUG, "Executing onPostExecute method");
 		if(this.progressBar != null) {
 			this.progressBar.dismiss();
 		}
 		else {
-			// Nothing to do.
+			Debug.debug(Debug.WARNING, "null value on progressBar in onPostExecute method");
 		}
 		
 		if(this.updated == false) {
 			Toast.makeText(this.context, "Não foi possível atualizar as notícias! :(", 
 				Toast.LENGTH_LONG).show();
+			Debug.debug(Debug.WARNING, "The Feed could not be updated!");
 		}
 		else {
 			// Nothing to do.
@@ -107,7 +113,7 @@ public class FeedController extends AsyncTask<String, Void, Feed> {
 			this.dataReceiver.receiveFeed(feed);
 		}
 		else {
-			// Nothing to do.
+			Debug.debug(Debug.WARNING, "dataReceiver value null in method onPostExecute!");
 		}
 	}
 }
