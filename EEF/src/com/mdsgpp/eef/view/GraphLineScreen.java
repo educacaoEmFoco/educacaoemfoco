@@ -75,7 +75,7 @@ public class GraphLineScreen extends Activity {
 
 	/* 
 	* Takes the information from the previous activity to that, and fills the
-	* Array historico with them.
+	* Array history with them.
 	*/
 	private void captureInformation() {
 		int position = 0;
@@ -83,14 +83,14 @@ public class GraphLineScreen extends Activity {
 
 		informations = new HashMap<String, String>();
 
-		this.intent = getIntent();
+		intent = getIntent();
 		this.indicativeList = intent.getStringArrayListExtra("HISTORICO");
 		this.title = intent.getStringExtra("TITULO");
 		this.indicative = intent.getStringExtra("INDICATIVO_GRAFICO");
-		this.position = intent.getIntExtra("POSICAO_ESTADO", 0);
+		position = intent.getIntExtra("POSICAO_ESTADO", 0);
 
-		for(int i = 0; i < indicativeList.size(); i++) {
-			history.add(Float.parseFloat(indicativeList.get(i)));
+		for(int index = 0; index < indicativeList.size(); index++) {
+			history.add(Float.parseFloat(indicativeList.get(index)));
 		}
 
 		try {
@@ -125,10 +125,11 @@ public class GraphLineScreen extends Activity {
 	private void generateGraph() {
 		Line curve = new Line();
 
-		for(int i = 0, graphInterval = 10; i < history.size(); i++, graphInterval += 10) {
+		for(int index = 0, graphInterval = 10; index < history.size(); index++,
+				graphInterval += 10) {
 			LinePoint point = new LinePoint();
 			point.setX(graphInterval);
-			point.setY(history.get(i));
+			point.setY(history.get(index));
 
 			curve.addPoint(point);
 		}
