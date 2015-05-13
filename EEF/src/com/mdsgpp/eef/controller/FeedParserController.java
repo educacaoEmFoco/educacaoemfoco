@@ -6,9 +6,9 @@
 
 package com.mdsgpp.eef.controller;
 
+import com.mdsgpp.eef.debug.Debug;
 import com.mdsgpp.eef.model.Feed;
 import com.mdsgpp.eef.model.News;
-import com.mdsgpp.eef.util.Debug;
 
 public class FeedParserController {
 

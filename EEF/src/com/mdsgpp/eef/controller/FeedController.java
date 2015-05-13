@@ -12,11 +12,11 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 import com.mdsgpp.eef.R;
+import com.mdsgpp.eef.debug.Debug;
 import com.mdsgpp.eef.model.Feed;
 import com.mdsgpp.eef.parser.FeedParser;
 import com.mdsgpp.eef.parser.FeedPersistence;
 import com.mdsgpp.eef.view.DataReceiver;
-import com.mdsgpp.eef.util.Debug;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -37,11 +37,14 @@ public class FeedController extends AsyncTask<String, Void, Feed> {
 	
 	@Override
 	protected void onPreExecute() {
-		Debug.debug(Debug.DEBUG, "Executing onPreExecute method");
+		Debug.log("FeedController - onPreExecute()", "Executing onPreExecute method", Debug.INFO);
+		
 		this.progressBar = new ProgressDialog(this.context, R.style.CustomProgressBar);
 		this.progressBar.setIndeterminate(true);
 		this.progressBar.setMessage("Carregando Notícias!");
-		Debug.debug(Debug.INFO, "Loading Feeds");
+		
+		Debug.log("FeedController - onPreExecute()", "Loading Feeds", Debug.INFO);
+		
 		this.progressBar.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
 		this.progressBar.show();
 		
@@ -87,23 +90,27 @@ public class FeedController extends AsyncTask<String, Void, Feed> {
 	
 	private void update() {
 		this.updated = true;
-		Debug.debug(Debug.INFO, "Feeds Updated!");
+		Debug.log("FeedController - update()", "Feeds Updated!", Debug.INFO);
 	}
 	
 	// After the execution of the task
 	protected void onPostExecute(Feed feed) {	
-		Debug.debug(Debug.DEBUG, "Executing onPostExecute method");
+		Debug.log("FeedController - onPostExecute()", "Executing onPostExecute method", Debug.DEBUG);
 		if(this.progressBar != null) {
 			this.progressBar.dismiss();
 		}
 		else {
-			Debug.debug(Debug.WARNING, "null value on progressBar in onPostExecute method");
+			Debug.log("FeedController - onPostExecute()",
+					  "Null value on progressBar in onPostExecute method",
+					  Debug.WARNING);
 		}
 		
 		if(this.updated == false) {
 			Toast.makeText(this.context, "Não foi possível atualizar as notícias! :(", 
 				Toast.LENGTH_LONG).show();
-			Debug.debug(Debug.WARNING, "The Feed could not be updated!");
+			
+			Debug.log("FeedController - onPostExecute()", "The Feed could not be updated!",
+					  Debug.WARNING);
 		}
 		else {
 			// Nothing to do.
@@ -113,7 +120,9 @@ public class FeedController extends AsyncTask<String, Void, Feed> {
 			this.dataReceiver.receiveFeed(feed);
 		}
 		else {
-			Debug.debug(Debug.WARNING, "dataReceiver value null in method onPostExecute!");
+			Debug.log("FeedController - onPostExecute()",
+					  "dataReceiver value null in method onPostExecute!",
+					  Debug.WARNING);
 		}
 	}
 }

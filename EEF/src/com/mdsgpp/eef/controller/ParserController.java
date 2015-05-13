@@ -11,8 +11,8 @@ import java.util.HashMap;
 
 import android.content.Context;
 
+import com.mdsgpp.eef.debug.Debug;
 import com.mdsgpp.eef.parser.ParserData;
-import com.mdsgpp.eef.util.Debug;
 
 public class ParserController {
 
