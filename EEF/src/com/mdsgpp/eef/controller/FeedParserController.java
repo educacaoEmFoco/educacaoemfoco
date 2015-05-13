@@ -8,6 +8,7 @@ package com.mdsgpp.eef.controller;
 
 import com.mdsgpp.eef.model.Feed;
 import com.mdsgpp.eef.model.News;
+import com.mdsgpp.eef.util.Debug;
 
 public class FeedParserController {
 
@@ -24,7 +25,7 @@ public class FeedParserController {
 			instance = new FeedParserController();
 		}
 		else {
-			// Nothing to do.
+			Debug.debug(Debug.INFO, "Already exist a FeedParserController Instance");
 		}
 		
 		return instance;
@@ -37,17 +38,20 @@ public class FeedParserController {
 	// This method clear the feed.
 	public void createNewFeed() {
 		this.feed.reset();
+		Debug.debug(Debug.DEBUG, "Creating a new Feed");
 	}
 	
 	// This method creates a new item based on the feed.
 	public void createNewItem() {
 		this.newsItem = null;
 		this.newsItem = new News(this.feed);
+		Debug.debug(Debug.DEBUG, "Building a new item");
 	}
 	
 	// This method add an item on the feed.
 	public void addItem() {
 		this.feed.addItem(this.newsItem);
+		Debug.debug(Debug.DEBUG, "Add an item on feed");
 	}
 	
 	public News getItem() {
