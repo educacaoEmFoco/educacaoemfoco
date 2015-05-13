@@ -417,7 +417,7 @@ public class State {
 		return droupoutRate;
 	}
 
-	public void setDroupoutRate(HashMap<String, ArrayList<String[]>> information, 
+	public void setDropoutRate(HashMap<String, ArrayList<String[]>> information, 
 		String[] indicativeNames) {
 		this.droupoutRate = this.setAverage(information, indicativeNames);
 	}
@@ -467,6 +467,6 @@ public class State {
 		this.setAverageClassHours(information, indicativeAverageClassHours);
 		this.setAgeSeriesDistortionRate(information, ageSeriesDistortionRate);
 		this.setUtilizationRate(information, utilizationRate);
-		this.setDroupoutRate(information, droupoutRate);
+		this.setDropoutRate(information, droupoutRate);
 	}	
 }

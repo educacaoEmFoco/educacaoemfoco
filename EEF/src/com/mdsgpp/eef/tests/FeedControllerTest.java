@@ -4,7 +4,7 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
 import com.mdsgpp.eef.controller.FeedController;
-import com.mdsgpp.eef.visao.TelaFeed;
+import com.mdsgpp.eef.view.FeedScreen;
 
 import android.test.ActivityInstrumentationTestCase2;
 
