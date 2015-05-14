@@ -5,6 +5,7 @@ import java.util.HashMap;
 
 import com.mdsgpp.eef.R;
 import com.mdsgpp.eef.controller.StateController;
+import com.mdsgpp.eef.debug.Debug;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -91,6 +92,8 @@ public class StateScreen extends Activity {
 	    
 	// Change the activity to TelaSobreEstado activity.
 	public void openStateAboutScreen() {
+		Debug.log("StateScreen - openStateAboutScreen()", "opening stateAboutScreen", Debug.DEBUG);
+		
 	    Intent intent = new Intent(this, StateAboutScreen.class);
 	    startActivity(intent);
 	}
@@ -99,6 +102,8 @@ public class StateScreen extends Activity {
 	private void captureInformations() {
 		Intent intent = getIntent();
 		int position = intent.getIntExtra("INDEX_ESTADO_ESCOLHIDO", 0);	
+		
+		Debug.log("StateScreen - captureInformations()", "position = " + position, Debug.INFO);
 		
 		initializeTextViews();
 		
@@ -111,11 +116,16 @@ public class StateScreen extends Activity {
 		} catch (IOException e) {
 			Toast.makeText(getApplicationContext(), "Houve um erro no acesso �s informa��es.",
 				Toast.LENGTH_SHORT).show();
+			Debug.log("StateScreen - captureInformations()",
+				"an error has ocurred acessing the state informations", Debug.ERROR);
 		}
 	}
 	
 	// Assigns the class variables with the fields on the screen.
 	private void initializeTextViews() {
+		Debug.log("StateScreen - initializeTextViews()", "initializing text views of the screen",
+			Debug.DEBUG);
+		
 		textViewAcronym = (TextView) findViewById(R.id.textView_sigla);
 		textViewName = (TextView) findViewById(R.id.textView_nome_estado);
 		textViewPopulation = (TextView)
@@ -183,6 +193,8 @@ public class StateScreen extends Activity {
 	
 	// Fills the screen fields with the information received.
 	private void fillTextViews(HashMap<String, String> informations) {
+		Debug.log("StateScreen - fillTextViews()", "fulfilling the state text views", Debug.DEBUG);
+		
 		textViewAcronym.setText(informations.get("sigla"));
 		textViewName.setText(informations.get("nome"));
 		textViewPopulation.setText(informations.get("populacao"));
@@ -247,6 +259,8 @@ public class StateScreen extends Activity {
 	
 	// Set the images of flags of Brazilian states on the screen.
 	private void setImage (int position) {
+		Debug.log("StateScreen - setImage()", "setting state flags images", Debug.DEBUG);
+		
 		String flags[] = {"acre", "alagoas", "amapa", "amazonas", "bahia", 
 			"ceara", "distritofederal", "espiritosanto", "goias","maranhao",
 			"matogrosso", "matogrossodosul", "minasgerais","para", "paraiba",
@@ -262,11 +276,17 @@ public class StateScreen extends Activity {
 	
 	// Implements the action of button to see the history of the state.
 	public void clickStateHistoryButton (View view) {
+		Debug.log("StateScreen - clickStateHistoryButton", "State History Button Clicked!",
+			Debug.INFO);
+		Debug.log("StateScreen - clickStateHistoryButton", "creating intent", Debug.DEBUG);
+		
 		Intent intentAux = getIntent();
 		int position = intentAux.getIntExtra("INDEX_ESTADO_ESCOLHIDO", 0);
 		
 		Intent intent = new Intent(this, StateHistoryScreen.class);
 		intent.putExtra("ESTADO", position);
+		
+		Debug.log("StateScreen - clickStateHistoryButton", "starting activity", Debug.DEBUG);
 		
 		startActivity(intent);
 	}
