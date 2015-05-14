@@ -1,6 +1,7 @@
 package com.mdsgpp.eef.view;
 
 import com.mdsgpp.eef.R;
+import com.mdsgpp.eef.debug.Debug;
 import com.mdsgpp.eef.view.StateAdapter;
 
 import android.os.Bundle;
@@ -54,8 +55,10 @@ public class StateListScreen extends Activity {
 	    	return true;
 	    }
 	
-	// Change the activity to TelaSobreListaEstado activity.
+	// Change the activity to StateListAboutScreen activity.
 	public void openAboutScreen() {
+		Debug.log("StateScreen - openAboutScreen()", "opening StateListAboutScreen", Debug.DEBUG);
+		
 	    Intent intent = new Intent(this, StateListAboutScreen.class);
 	    startActivity(intent);
 	 }
@@ -66,15 +69,25 @@ public class StateListScreen extends Activity {
 	 */
 	private void startListView() {
 		ListView listView = (ListView) findViewById(R.id.listview_tela_estados);
-
+		
+		Debug.log("StateListScreen - startListView()", "setting state adapter", Debug.DEBUG);
+		
 		StateAdapter adapter = new StateAdapter(this);
 
 		listView.setAdapter(adapter);
+		
+		Debug.log("StateListScreen - startListView()", "setting onItemCLickListener on list view",
+				Debug.DEBUG);
+		
 		listView.setOnItemClickListener(new OnItemClickListener() {
 		@Override
 		public void onItemClick(AdapterView<?> arg0, View arg1, int position, long id) {
 			Intent intent = new Intent(context, StateScreen.class);
 			intent.putExtra("INDEX_ESTADO_ESCOLHIDO", position);
+			
+			Debug.log("StateListScreen - startListView()",
+				"itemClick detected on item: " + position, Debug.INFO);
+			
 			startActivity(intent);
 		}
 		});
