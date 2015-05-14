@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
+import com.mdsgpp.eef.debug.Debug;
 import com.mdsgpp.eef.model.Feed;
 
 import android.content.Context;
@@ -32,7 +33,9 @@ public class FeedPersistence {
 			instance = new FeedPersistence(context);
 		}
 		else {
-			// Do nothing.
+			Debug.log("FeedPersistence - getInstance()",
+					  "A FeedPersistence instance already exists",
+					  Debug.WARNING);
 		}
 		return instance;
 	}
@@ -41,9 +44,11 @@ public class FeedPersistence {
 	public void writeFeedFile(Feed feed) throws IOException {
 		FileOutputStream fileout = context.openFileOutput(FILENAME, Context.MODE_PRIVATE);
 		ObjectOutputStream out = new ObjectOutputStream(fileout);
-
+		
+		Debug.log("FeedPersistence - writeFeedFile()", "About to write a Feed object", Debug.INFO);
 		out.writeObject(feed);
 		out.close();
+		Debug.log("FeedPersistence - writeFeedFile()", "Feed object written", Debug.INFO);
 	}
 
 	// Read the feed saved on a file.
@@ -52,9 +57,11 @@ public class FeedPersistence {
 
 		FileInputStream filein = context.openFileInput(FILENAME);
 		ObjectInputStream in = new ObjectInputStream(filein);
-
+		
+		Debug.log("FeedPersistence - writeFeedFile()", "About to read a Feed object", Debug.INFO);
 		feed = (Feed) in.readObject();
 		in.close();
+		Debug.log("FeedPersistence - writeFeedFile()", "Feed object read", Debug.INFO);
 
 		return feed;
 	}
