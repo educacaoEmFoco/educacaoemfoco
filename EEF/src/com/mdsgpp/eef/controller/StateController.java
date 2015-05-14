@@ -13,6 +13,7 @@ import java.util.HashMap;
 
 import android.content.Context;
 
+import com.mdsgpp.eef.debug.Debug;
 import com.mdsgpp.eef.model.State;
 
 public class StateController {
@@ -216,19 +217,32 @@ public class StateController {
 	 */
 	private void writeStateWithAllInformation(State state) {
 		String temporaryString = "";
-
+		
+		Debug.log("StateController - writeStateWithAllInformation()", 
+				"fulfilling state with name, acronym and population", Debug.DEBUG);
+		
 		fulfillNameAcronymAndPopulation(state);
-
+		
+		Debug.log("StateController - writeStateWithAllInformation()",
+				"getting state pib participation along the years", Debug.DEBUG);
+		
 		for(int counter = 0, year = 1995; counter < state.getPIBPercentParticipation()
 			.length; counter++, year++) {
 			temporaryString += year + ": " + decimalFormatPercentage.format
 				(state.getPIBPercentParticipation()[counter]) 
 				+ "%\n";
 		}
-
+		
+		Debug.log("StateControler - writeStateWithAllInformation()", 
+				"putting the pib participation values on the stateInformation", Debug.DEBUG);
+		
 		this.stateInformation.put("percentual_participacao_pib", temporaryString);
 		temporaryString = "";
 
+		Debug.log("StateController - writeStateWithAllInformation()",
+				"getting state science and technology projects quantity and values along the years",
+				Debug.DEBUG);
+		
 		for(int counter = 0, year = 2003; counter < state.getScienceTechnologyProjects()
 			.length-1; counter++, year++) {
 			temporaryString += year + ": " + "Quantidade: " 
@@ -237,10 +251,18 @@ public class StateController {
 				+ decimalFormatValue.format(state.getScienceTechnologyProjects()[counter]
 				.getValue()) + " (em mil)\n\n";
 		}
-
+		
+		Debug.log("StateController - writeStateWithAllInformation()", 
+				"putting science and technology projects quantity and values on the stateInformation",
+				Debug.DEBUG);
+		
 		this.stateInformation.put("projetos_ciencia_tecnologia", temporaryString);
 		temporaryString = "";
 
+		Debug.log("StateController - writeStateWithAllInformation()",
+				"getting state Ideb elementary and high school information along the years",
+				Debug.DEBUG);
+		
 		for(int counter = 0, year = 2005; counter < state.getIdebs().length; counter++, year += 2) {
 			temporaryString += year + ": " + "Ensino Fundamental (s�ries finais): " 
 				+ decimalFormatPercentage.format(state.getIdebs()[counter].getElementarySchool()) +
@@ -249,10 +271,17 @@ public class StateController {
 				"Ensino Fundamental (S�ries iniciais): " + decimalFormatPercentage.format
 				(state.getIdebs()[counter].getEarlyGrades()) + "\n\n";
 		}
-
+		
+		Debug.log("StateController - writeStateWithAllInformation()", 
+				"putting Ideb information on the stateInformation", Debug.DEBUG);
+		
 		this.stateInformation.put("ideb", temporaryString);
 		temporaryString = "";
 
+		Debug.log("StateController - writeStateWithAllInformation()",
+			"getting state First Projects quantity and values along the years",
+			Debug.DEBUG);
+		
 		for(int counter = 0, year = 2007; counter < state.getFirstProjects().length-1;
 			counter++, year++) {
 			temporaryString += year + ": " + "Quantidade: " + state.
@@ -262,9 +291,17 @@ public class StateController {
 				.length - 1].getValue()) + " (em mil)\n\n";
 		}
 
+		Debug.log("StateController - writeStateWithAllInformation()",
+			"putting state first projects quantity and values on the stateInformation",
+			Debug.DEBUG);
+		
 		this.stateInformation.put("primeiros_projetos", temporaryString);
 		temporaryString = "";
-
+		
+		Debug.log("StateController - writeStateWithAllInformation()",
+			"getting state Cnpq Support Projects quantity and values along the years",
+			Debug.DEBUG);
+		
 		for(int counter = 0, year = 2001; counter < state.getCnpqSupportProjects().length-1;
 			counter++, year++) {
 			temporaryString += year + ": " + "Quantidade: " + state.
@@ -273,9 +310,17 @@ public class StateController {
 				(state.getCnpqSupportProjects()[counter].getValue()) + " (em mil)\n\n";
 		}
 
+		Debug.log("StateController - writeStateWithAllInformation()",
+			"putting Cnpq Support Projects quantity and values on the stateInformation",
+			Debug.DEBUG);
+		
 		this.stateInformation.put("cnpq", temporaryString);
 		temporaryString = "";
 
+		Debug.log("StateController - writeStateWithAllInformation()",
+			"getting state Young Researchers Projects quantity and values along the years",
+			Debug.DEBUG);
+		
 		for(int counter = 0, year = 2005; counter < state.getYoungResearchersProject().
 			length - 1; counter++, year++) {
 			temporaryString += year + ": " + "Quantidade: " + state
@@ -284,10 +329,17 @@ public class StateController {
 				decimalFormatValue.format(state.getYoungResearchersProject()[counter].
 				getValue()) + " (em mil)\n\n";
 		}
-
+		
+		Debug.log("StateController - writeStateWithAllInformation()",
+			"putting state Young Researchers Projects quantity and values on state information",
+			Debug.DEBUG);
+		
 		this.stateInformation.put("jovens_pesquisadores", temporaryString);
 		temporaryString = "";
 
+		Debug.log("StateController - writeStateWithAllInformation()",
+				"getting state Inct Projects quantity and values along the years", Debug.DEBUG);
+		
 		for(int counter = 0, year = 2008; counter < state.getInctProjects().length-1;
 			counter++, year++) {
 			temporaryString += year + ": " + "Quantidade: " + state.getInctProjects()[counter]
@@ -296,9 +348,16 @@ public class StateController {
 				(state.getInctProjects()[counter].getValue()) + " (em mil)\n\n";
 		}
 
+		Debug.log("StateController - writeStateWithAllInformation()",
+				"putting state Inct projects quantity and values on stateInformation",
+				Debug.DEBUG);
+		
 		this.stateInformation.put("projetos_inct", temporaryString);
 		temporaryString = "";
 
+		Debug.log("StateController - writeStateWithAllInformation()",
+				"getting state average class size along the years", Debug.DEBUG);
+		
 		for(int counter = 0, year = 2007; counter < state.getAverageClassSize().length;
 			counter++, year++) {
 			temporaryString += year + ": " + 
@@ -310,9 +369,15 @@ public class StateController {
 				"\n\n";
 		}
 
+		Debug.log("StateController - writeStateWithAllInformation()",
+				"putting state average class size on the stateInformation", Debug.DEBUG);
+		
 		this.stateInformation.put("alunos_por_turma_ensino_medio", temporaryString);
 		temporaryString = "";
-
+		
+		Debug.log("StateController - writeStateWithAllInformation()",
+				"getting state average class hours along the years", Debug.DEBUG);
+		
 		for(int counter = 0, year = 2007; counter < state.getAverageClassSize().length; 
 			counter++, year++) {
 			temporaryString += year + ": " +
@@ -324,9 +389,15 @@ public class StateController {
 				1].getHighSchool()) + "\n\n";
 		}
 
+		Debug.log("StateController - writeStateWithAllInformation()",
+				"putting state average class hours on the stateInformation", Debug.DEBUG);
+		
 		this.stateInformation.put("horas_aula_ensino_medio", temporaryString);
 		temporaryString = "";
 
+		Debug.log("StateController - writeStateWithAllInformation()",
+				"getting state Age-Series distortion rate along the years", Debug.DEBUG);
+		
 		for(int counter = 0, year = 2006; counter < state.getAgeSeriesDistortionRate()
 			.length; counter++, year++) {
 			temporaryString += year + ": " + 
@@ -338,9 +409,15 @@ public class StateController {
 				.getHighSchool()) + "\n\n";
 		}
 
+		Debug.log("StateController - writeStateWithAllInformation()",
+				"putting state Age-Series distortion rate on the stateInformation", Debug.DEBUG);
+		
 		this.stateInformation.put("taxa_distorcao", temporaryString);
 		temporaryString = "";
 
+		Debug.log("StateController - writeStateWithAllInformation()",
+				"getting state utilization rate along the years", Debug.DEBUG);
+		
 		for(int counter = 0, year = 2007; counter < state.getUtilizationRate().length;
 			counter++, year++) {
 			temporaryString += year + ": " + "Taxa de Aprova��o (Fundamental): " 
@@ -352,9 +429,15 @@ public class StateController {
 				+ "\n\n";
 		}
 
+		Debug.log("StateController - writeStateWithAllInformation()",
+				"putting utilization rate on the stateInformation", Debug.DEBUG);
+		
 		this.stateInformation.put("taxa_aprovacao", temporaryString);
 		temporaryString = "";
 
+		Debug.log("StateController - writeStateWithAllInformation()",
+				"getting state dropout rate along the years", Debug.DEBUG);
+		
 		for(int counter = 0, year = 2007; counter < state.getDropoutRate().length; year++,
 			counter++) {
 			temporaryString += year + ": " + "Taxa de Abandono (Fundamental): " 
@@ -365,9 +448,15 @@ public class StateController {
 				.getHighSchool()) + "\n\n";
 		}
 
+		Debug.log("StateController - writeStateWithAllInformation()",
+				"putting state dropout rate on the stateInformation", Debug.DEBUG);
+		
 		this.stateInformation.put("taxa_abandono", temporaryString);
 		temporaryString = "";
 
+		Debug.log("StateController - writeStateWithAllInformation()",
+				"getting state Census along the years", Debug.DEBUG);
+		
 		for(int counter = 0, year = 2010; counter < state.getCensos().length; year++, counter++) {
 			temporaryString += year + ": " + "Censo Anos Iniciais (Fundamental): " 
 				+ decimalFormatPercentage.format(state.getCensos()[counter]
@@ -383,6 +472,9 @@ public class StateController {
 				+ "\n\n";
 		}
 
+		Debug.log("StateController - writeStateWithAllInformation()",
+				"putting state Census on the stateInformation", Debug.DEBUG);
+		
 		this.stateInformation.put("censo", temporaryString);
 	}
 	
