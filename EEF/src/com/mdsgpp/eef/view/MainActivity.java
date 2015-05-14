@@ -28,7 +28,7 @@ public class MainActivity extends Activity {
     public boolean onOptionsItemSelected(MenuItem item) {    	
 		switch(item.getItemId()) {
     		case R.id.sobre:
-    			abreTelaSobre();
+    			openAboutScreen();
     			break;
     		default:
     			break;
@@ -38,31 +38,31 @@ public class MainActivity extends Activity {
     }
     
     // Open the screen about.
-    public void abreTelaSobre() {
+    public void openAboutScreen() {
     	Intent intent = new Intent(this, AboutScreen.class);
     	startActivity(intent);
     }
 
-    // Implements the action on button general compararison.
-    public void clickBotaoComparacaoGeral(View view) {
+    // Implements the action on button general comparison.
+    public void clickGeneralComparisonButton(View view) {
     	Intent intent = new Intent(this, GeneralComparisonsScreen.class);
 		startActivity(intent);
     }
     
     // Implements the action on button general consultation.
-    public void clickBotaoConsultaGeral(View view) {
+    public void clickGeneralConsultButton(View view) {
     	Intent intent = new Intent(this, StateListScreen.class);
     	startActivity(intent);
     }
     
     // Implements the action on button feed.
-    public void clickBotaoFeed(View view) {
+    public void clickFeedButton(View view) {
     	Intent intent = new Intent(this, FeedScreen.class);
     	startActivity(intent);
     }
 
-    // Implements the action on button consultation by indicatory.
-    public void clickBotaoConsultaPorIndicativo(View view) {
+    // Implements the action on button consultation by indicative.
+    public void clickConsultByIndicativeButton(View view) {
     	Intent intent = new Intent(this, ConsultationByIndicativeScreen.class);
     	startActivity(intent);
     }
