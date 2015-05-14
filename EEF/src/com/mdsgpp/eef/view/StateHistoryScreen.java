@@ -5,6 +5,7 @@ import java.util.HashMap;
 
 import com.mdsgpp.eef.R;
 import com.mdsgpp.eef.controller.StateController;
+import com.mdsgpp.eef.debug.Debug;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -76,6 +77,9 @@ public class StateHistoryScreen extends Activity {
 	
 	// Change the activity to TelaSobreHistoricoDeIndicativo activity.
 	public void openAboutScreen() {
+		Debug.log("StateHistoryScreen - openAboutScreen()", "opening IndicativeHistoryAboutScreen",
+				Debug.DEBUG);
+		
 		Intent intent = new Intent(this, IndicativeHistoryAboutScreen.class);
     	startActivity(intent);	
 	}
@@ -85,6 +89,10 @@ public class StateHistoryScreen extends Activity {
 		Intent intent = getIntent();
 		
 		int position = intent.getIntExtra("ESTADO", 0);
+		
+		Debug.log("StateHistoryScreen - catchInformation()", "position get: " + position,
+			Debug.INFO);
+		
 		information = new HashMap <String, String>();
 		
 		startTextFields();
@@ -92,18 +100,20 @@ public class StateHistoryScreen extends Activity {
 		try {
 			information = StateController.getInstance(this).readFullState(position);
 			fulfillTextFields(information);
-			setImagem(position);
+			setImage(position);
 			
 		} catch (IOException e) {
 			Toast.makeText(getApplicationContext(),
 				"Houve um erro no acesso �s informa��es.",
 				Toast.LENGTH_SHORT).show();
-			Log.i("IOException - TelaHistoricoEstado", e.toString());
+			Debug.log("StateHistoryScreen - catchInformation()",
+				"An error ocurred acessing the informations!", Debug.ERROR);
 		}
 	}
 	
 	// Assigns the class variables with the fields on the screen.
 	private void startTextFields() {
+		Debug.log("StateHistoryScreen - startTextFields()", "Initialize text fields", Debug.DEBUG);
 		
 		textViewAcronym = (TextView) findViewById(R.id.textView_sigla);
 		textViewName = (TextView) findViewById(R.id.textView_nome_estado);
@@ -141,6 +151,9 @@ public class StateHistoryScreen extends Activity {
 	
 	// Fills the screen fields with the information received.
 	private void fulfillTextFields(HashMap<String, String> information) {
+		Debug.log("StateHistoryScreen - fulfillTextFields()", "fulfilling the text fields",
+			Debug.DEBUG);
+		
 		textViewAcronym.setText(information.get("sigla"));
 		textViewName.setText(information.get("nome"));
 		textViewPopulation.setText(information.get("populacao"));
@@ -165,7 +178,9 @@ public class StateHistoryScreen extends Activity {
 	}
 	
 	// Set the images of flags of Brazilian states on the screen.
-	private void setImagem(int position) {
+	private void setImage(int position) {
+		Debug.log("StateHistoryScreen - setImage()", "Setting brazilian flags images", Debug.DEBUG);
+		
 		String stateFlags[] = {"acre", "alagoas", "amapa", "amazonas", "bahia", 
 			"ceara", "distritofederal", "espiritosanto", "goias", "maranhao",
 			"matogrosso", "matogrossodosul", "minasgerais", "para", "paraiba",
@@ -184,9 +199,15 @@ public class StateHistoryScreen extends Activity {
 	 * chart.
 	 */
     public void clickChooseIndicativeToGenerateChartButton(View view) {
+    	Debug.log("StateHistoryScreen - clickChooseIndicativeToGenerateChartButton()",
+    		"generate chart button clicked!", Debug.INFO);
+    	
 		Intent intent1 = getIntent();
 		
 		int position = intent1.getIntExtra("ESTADO", 0);
+		
+		Debug.log("StateHistoryScreen - clickChooseIndicativeToGenerateChartButton()",
+			"position clicked: " + position, Debug.INFO);
 		
     	Intent intent = new Intent(this, ChooseIndicativeChartLineScreen.class);
     	intent.putExtra("ESTADO", position);
