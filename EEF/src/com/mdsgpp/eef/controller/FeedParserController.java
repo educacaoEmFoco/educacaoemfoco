@@ -25,7 +25,8 @@ public class FeedParserController {
 			instance = new FeedParserController();
 		}
 		else {
-			Debug.debug(Debug.INFO, "Already exist a FeedParserController Instance");
+			Debug.log("FeedParserController - getInstance()",
+					  "A FeedParserController instance already exists", Debug.WARNING);
 		}
 		
 		return instance;
@@ -38,20 +39,20 @@ public class FeedParserController {
 	// This method clear the feed.
 	public void createNewFeed() {
 		this.feed.reset();
-		Debug.debug(Debug.DEBUG, "Creating a new Feed");
+		Debug.log("FeedParserController - createNewFeed()", "Creating a new Feed", Debug.INFO);
 	}
 	
 	// This method creates a new item based on the feed.
 	public void createNewItem() {
 		this.newsItem = null;
 		this.newsItem = new News(this.feed);
-		Debug.debug(Debug.DEBUG, "Building a new item");
+		Debug.log("FeedParserController - createNewItem()", "Building a new Item", Debug.INFO);
 	}
 	
 	// This method add an item on the feed.
 	public void addItem() {
 		this.feed.addItem(this.newsItem);
-		Debug.debug(Debug.DEBUG, "Add an item on feed");
+		Debug.log("FeedParserController - addItem()", "Add an item on this.feed", Debug.INFO);
 	}
 	
 	public News getItem() {
