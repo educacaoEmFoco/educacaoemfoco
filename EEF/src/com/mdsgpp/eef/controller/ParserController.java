@@ -28,7 +28,9 @@ public class ParserController {
 			instance = new ParserController(context);
 		}
 		else {
-			Debug.debug(Debug.INFO, "Already exist a ParserController Instance");
+			Debug.log("ParserController - getInstance()",
+					  "A ParserController instance already exists",
+					  Debug.WARNING);
 		}
 
 		return instance;
@@ -37,7 +39,10 @@ public class ParserController {
 	// This method acquire the information of a state by the parser.
 	public HashMap<String, ArrayList<String[]>> getStateInformation(int position) 
 			throws IOException {
-		Debug.debug(Debug.DEBUG, "Getting state information by parser");
+		Debug.log("ParserController - getStateInformation()",
+				  "State information gotten by parser",
+				  Debug.INFO);
+		
 		return parser.getState(position);
 	}	
 }
