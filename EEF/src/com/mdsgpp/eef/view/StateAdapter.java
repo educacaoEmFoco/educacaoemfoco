@@ -1,6 +1,7 @@
 package com.mdsgpp.eef.view;
 
 import com.mdsgpp.eef.R;
+import com.mdsgpp.eef.debug.Debug;
 
 import android.content.Context;
 import android.util.Log;
@@ -61,7 +62,8 @@ public class StateAdapter extends BaseAdapter {
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 		// Inflate layout, and get the view to put into the viewHolder.
-		if (convertView == null) {
+		if(convertView == null) {
+			Debug.log("StateAdapter - getView()", "Initializing convertView", Debug.DEBUG);
 			convertView = layoutInflater.inflate(R.layout.listview_item , null);
 			this.viewHolder = new ViewHolder();
 		 
@@ -71,6 +73,8 @@ public class StateAdapter extends BaseAdapter {
 		} 
 		else {
 			// Get the viewHolder if everything already got initialized.
+			
+			Debug.log("StateAdapter - getView()", "viewHolder already exist!", Debug.INFO);
 			this.viewHolder = (ViewHolder) convertView.getTag();
 		}
 		
