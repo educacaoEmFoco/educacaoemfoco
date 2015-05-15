@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.RadioButton;
 
 import com.mdsgpp.eef.R;
+import com.mdsgpp.eef.debug.Debug;
 
 public class ChooseIndicativeChartComparisonScreen extends ChoosesIndicative {
 	
@@ -76,37 +77,51 @@ public class ChooseIndicativeChartComparisonScreen extends ChoosesIndicative {
 	
 	// Get information about the compared states.
 	public void catchInformation() {
+		Debug.log("ChooseIndicativeChartComparisonScreen - catchInformation()",
+				  "Initialising", Debug.DEBUG);
 		Intent receivedIntent = getIntent();
 		
-		position1 = receivedIntent.getIntExtra("INDEX_ESTADO1_ESCOLHIDO", 0);
-		position2 = receivedIntent.getIntExtra("INDEX_ESTADO2_ESCOLHIDO", 0);
-
-		radioButtonVisibilityIdeb = receivedIntent.getBooleanExtra("CB_IDEB", false);
-		radioButtonVisibilityPIB = receivedIntent.getBooleanExtra("CB_PIB", false);
-		radioButtonVisibilityPopulation = receivedIntent.getBooleanExtra("CB_POPULACAO", false);
-		radioButtonVisibilityFirstProjects = receivedIntent.getBooleanExtra
-			("CB_PRIMEIROS_PROJETOS", false);
-		radioButtonVisibilityCnpqProjects = receivedIntent.getBooleanExtra("CB_PROJETOS_CNPQ",
-			false);
-		radioButtonVisibilityDifusionProjects = receivedIntent.getBooleanExtra("CB_PROJETOS_DIFUSAO",
-			false);
-		radioButtonVisibilityInitiationProjects = receivedIntent.getBooleanExtra
-			("CB_PROJETOS_INICIACAO", false);
-		radioButtonVisibilityYoungProjects = receivedIntent.getBooleanExtra("CB_PROJETOS_JOVENS",
-			false);
-		radioButtonVisibilityCensus = receivedIntent.getBooleanExtra("CB_CENSO", false);
-		radioButtonVisibilityClassSize = receivedIntent.getBooleanExtra("CB_ALUNOS_TURMA", false);
-		radioButtonVisibilityClassHours = receivedIntent.getBooleanExtra("CB_HORAS_AULA", false);
-		radioButtonVisibilityDistortionRate = receivedIntent.getBooleanExtra("CB_TAXA_DISTORCAO",
-			false);
-		radioButtonVisibilityDropoutRate = receivedIntent.getBooleanExtra("CB_TAXA_ABANDONO",
-			false);
-		radioButtonVisibilityAprovation = receivedIntent.getBooleanExtra("CB_APROVACAO", false);
+		if(receivedIntent != null) {
+			position1 = receivedIntent.getIntExtra("INDEX_ESTADO1_ESCOLHIDO", 0);
+			position2 = receivedIntent.getIntExtra("INDEX_ESTADO2_ESCOLHIDO", 0);
+	
+			radioButtonVisibilityIdeb = receivedIntent.getBooleanExtra("CB_IDEB", false);
+			radioButtonVisibilityPIB = receivedIntent.getBooleanExtra("CB_PIB", false);
+			radioButtonVisibilityPopulation = receivedIntent.getBooleanExtra("CB_POPULACAO", false);
+			radioButtonVisibilityFirstProjects = receivedIntent.getBooleanExtra
+				("CB_PRIMEIROS_PROJETOS", false);
+			radioButtonVisibilityCnpqProjects = receivedIntent.getBooleanExtra("CB_PROJETOS_CNPQ",
+				false);
+			radioButtonVisibilityDifusionProjects = receivedIntent.
+													getBooleanExtra("CB_PROJETOS_DIFUSAO",
+													false);
+			radioButtonVisibilityInitiationProjects = receivedIntent.getBooleanExtra
+				("CB_PROJETOS_INICIACAO", false);
+			radioButtonVisibilityYoungProjects = receivedIntent.getBooleanExtra("CB_PROJETOS_JOVENS",
+				false);
+			radioButtonVisibilityCensus = receivedIntent.getBooleanExtra("CB_CENSO", false);
+			radioButtonVisibilityClassSize = receivedIntent.getBooleanExtra("CB_ALUNOS_TURMA", false);
+			radioButtonVisibilityClassHours = receivedIntent.getBooleanExtra("CB_HORAS_AULA", false);
+			radioButtonVisibilityDistortionRate = receivedIntent.getBooleanExtra("CB_TAXA_DISTORCAO",
+				false);
+			radioButtonVisibilityDropoutRate = receivedIntent.getBooleanExtra("CB_TAXA_ABANDONO",
+				false);
+			radioButtonVisibilityAprovation = receivedIntent.getBooleanExtra("CB_APROVACAO", false);
+		}
+		else {
+			Debug.log("ChooseIndicativeChartComparisonScreen - catchInformation()",
+					  "Null intent received", Debug.WARNING);
+		}
 		
+		Debug.log("ChooseIndicativeChartComparisonScreen - catchInformation()",
+				  "Leaving", Debug.DEBUG);
 	}
 	
 	// Start all radio buttons on screen.
 	public void radioButtonsStart() {
+		Debug.log("ChooseIndicativeChartComparisonScreen - radioButtonsStart()",
+				  "Initialising", Debug.DEBUG);
+		
 		radioButtonEarlyYearsIdeb = (RadioButton) findViewById
 			(R.id.radio_ideb_fundamental_iniciai);
 		radioButtonFinalYearsIdeb = (RadioButton) findViewById
@@ -164,6 +179,8 @@ public class ChooseIndicativeChartComparisonScreen extends ChoosesIndicative {
 		radioButtonEJAHighSchoolCensus = (RadioButton) findViewById
 			(R.id.radio_censo_eja_medio);
 		
+		Debug.log("ChooseIndicativeChartComparisonScreen - radioButtonsStart()",
+				  "Leaving", Debug.DEBUG);
 	}
 	
 	// Allow the buttons to be viewed or not.
@@ -174,6 +191,9 @@ public class ChooseIndicativeChartComparisonScreen extends ChoosesIndicative {
 	
 	// Hide radio buttons when the information is not available.
 	public void hideRadionButton() {
+		Debug.log("ChooseIndicativeChartComparisonScreen - hideRadionButton()",
+				  "Initialising", Debug.DEBUG);
+		
 		setVisibility(radioButtonEarlyYearsIdeb, radioButtonVisibilityIdeb);
 		setVisibility(radioButtonFinalYearsIdeb, radioButtonVisibilityIdeb);
 		setVisibility(radioButtonHighSchoolIdeb, radioButtonVisibilityIdeb);
@@ -204,18 +224,29 @@ public class ChooseIndicativeChartComparisonScreen extends ChoosesIndicative {
 		setVisibility(radioButtonHighSchoolCensus, radioButtonVisibilityCensus);
 		setVisibility(radioButtonEJAElementarySchoolCensus, radioButtonVisibilityCensus);
 		setVisibility(radioButtonEJAHighSchoolCensus, radioButtonVisibilityCensus);
+		
+		Debug.log("ChooseIndicativeChartComparisonScreen - hideRadionButton()",
+				  "Leaving", Debug.DEBUG);
 	}
 	
 	// Implements the action on button next.
 	public void clickForwardButton(View view) {
+		Debug.log("ChooseIndicativeChartComparisonScreen - clickForwardButton()",
+				  "Initialising... About to build intent", Debug.DEBUG);
 		Intent intent = new Intent(this, GraphScreen.class);
-		
+		Debug.log("ChooseIndicativeChartComparisonScreen - clickForwardButton()",
+				  "Intent built", Debug.DEBUG);
+
 		intent.putExtra("INDEX_ESTADO1_ESCOLHIDO", position1);
 		intent.putExtra("INDEX_ESTADO2_ESCOLHIDO", position2);
 		intent.putExtra("INDICATIVO", getIndicative());
 		intent.putExtra("TITULO", getTitle());
 
-		startActivity(intent);		
+		Debug.log("ChooseIndicativeChartComparisonScreen - clickForwardButton()",
+				  "Initialising... About to start Activity", Debug.DEBUG);
+		startActivity(intent);
+		Debug.log("ChooseIndicativeChartComparisonScreen - clickForwardButton()",
+				  "Activity started", Debug.DEBUG);
 	}
     
     // Open the screen about.
