@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:drawableTop="@drawable/estado"
-            android:onClick="clickBotaoComparacao" >
+            android:onClick="clickButtonComparison" >
         </Button>
 
         <Button
@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:drawableTop="@drawable/indicativos"
-            android:onClick="clickBotaoIndicativos" >
+            android:onClick="clickButtonIndicatives" >
         </Button>
         
     </LinearLayout>

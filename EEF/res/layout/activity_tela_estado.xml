@@ -49,7 +49,7 @@
             android:layout_height="wrap_content"
             android:drawableTop="@drawable/historico"
             android:layout_gravity="center"
-            android:onClick="clickBotaoHistoricoEstado" >
+            android:onClick="clickStateHistoryButton" >
         </Button>
 
         <TextView
