@@ -2,6 +2,7 @@ package com.mdsgpp.eef.view;
 
 import com.mdsgpp.eef.R;
 import com.mdsgpp.eef.controller.FeedController;
+import com.mdsgpp.eef.debug.Debug;
 import com.mdsgpp.eef.model.Feed;
 
 import android.net.Uri;
@@ -58,13 +59,17 @@ public class FeedScreen extends Activity implements DataReceiver {
 
 	@Override
 	public void receiveFeed(final Feed feed) {
+		Debug.log("FeedScreen - receiveFeed()", "Initialising", Debug.DEBUG);
+		
 		ListView listview = (ListView) findViewById(R.id.listView1);
 		
 		if(feed != null) {
+			Debug.log("FeedScreen - receiveFeed()", "Feed feed is null", Debug.INFO);
 			FeedAdapter adapter = new FeedAdapter(this, feed);
 			listview.setAdapter(adapter);
 		}
 		else {
+			Debug.log("FeedScreen - receiveFeed()", "Feed feed is not null", Debug.INFO);
 			// Do nothing.
 		}
 		
@@ -79,12 +84,16 @@ public class FeedScreen extends Activity implements DataReceiver {
 				startActivity(browserIntent);
 			}
 		});
+		
+		Debug.log("FeedScreen - receiveFeed()", "Leaving", Debug.DEBUG);
 	}
 	
 	// Change the activity to FeedAboutScreen activity.
 	public void openFeedAboutScreen() {
 		Intent intent = new Intent(this, FeedAboutScreen.class);
+		Debug.log("FeedScreen - openFeedAboutScreen()", "Starting FeedAbout Activity", Debug.DEBUG);
 		startActivity(intent);
+		Debug.log("FeedScreen - openFeedAboutScreen()", "FeedAbout Activity started", Debug.DEBUG);
 	}	
 	
 }
