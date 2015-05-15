@@ -116,7 +116,7 @@ public class ChooseIndicativeChartLineScreen extends Activity {
 	 */
 	
 	private void fulfillHistoryWithScienceTechnologyProjectsValues() {
-		this.title = "Projeto de Difusão Tecnológica (R$)";
+		this.title = "Projeto de Difusï¿½o Tecnolï¿½gica (R$)";
 		this.indicative = "projetos_ciencia_tecnologia";
 		this.history.clear();
 		int size = this.state.getScienceTechnologyProjects().length;
@@ -129,7 +129,7 @@ public class ChooseIndicativeChartLineScreen extends Activity {
 	
 	// Fulfill the history with the quantity Science and Technology projects.
 	private void fulfillHistoryWithScienceTechnologyProjectsQuantity() {
-		title = "Projeto de Difusão Tecnológica (Qtd.)";
+		title = "Projeto de Difusï¿½o Tecnolï¿½gica (Qtd.)";
 		indicative = "projetos_ciencia_tecnologia";
 		history.clear();
 		int size = this.state.getScienceTechnologyProjects().length;
@@ -142,7 +142,7 @@ public class ChooseIndicativeChartLineScreen extends Activity {
 	
 	// Fulfill the history with the values of the index related Elementary School.
 	private void fulfillHistoryWithIdebElementarySchool() {
-		title = "IDEB do Ensino Fundamental (Séries Finais)";
+		title = "IDEB do Ensino Fundamental (Sï¿½ries Finais)";
 		indicative = "ideb";
 		history.clear();
 		int size = this.state.getIdebs().length;
@@ -155,7 +155,7 @@ public class ChooseIndicativeChartLineScreen extends Activity {
 	
 	// Fulfill the history with the values of the index related to Early Grades.
 	private void fulfillHistoryWithIdebEarlyGrades() {
-		title = "IDEB do Ensino Fundamental (Séries Iniciais)";
+		title = "IDEB do Ensino Fundamental (Sï¿½ries Iniciais)";
 		indicative = "ideb";
 		history.clear();
 		int size = this.state.getIdebs().length;
@@ -168,7 +168,7 @@ public class ChooseIndicativeChartLineScreen extends Activity {
 	
 	// Fulfill the history with the values of the index related to High School.
 	private void fulfillHistoryWithIdebHighSchool() {
-		title = "IDEB do Ensino Médio";
+		title = "IDEB do Ensino Mï¿½dio";
 		indicative = "ideb";
 		history.clear();
 		int size = this.state.getIdebs().length;
@@ -211,7 +211,7 @@ public class ChooseIndicativeChartLineScreen extends Activity {
 	
 	// Fulfill the history with the current state PIB Participation.
 	private void fulfillHistoryWithStatePIBParticipation() {
-		title = "Participação Estadual no PIB (%)";
+		title = "Participaï¿½ï¿½o Estadual no PIB (%)";
 		indicative = "percentual_participacao_pib";
 		history.clear();
 		int size = state.getPIBPercentParticipation().length;
@@ -223,7 +223,7 @@ public class ChooseIndicativeChartLineScreen extends Activity {
 	
 	// Fulfill the history with the current state population.
 	private void fulfillHistoryWithPopulation() {
-		title = "População";
+		title = "Populaï¿½ï¿½o";
 		indicative = "populacao";
 		history.clear();
 		history.add((float) state.getPopulation());
@@ -284,7 +284,7 @@ public class ChooseIndicativeChartLineScreen extends Activity {
 	
 	// Fulfill the history with the quantity of students in class of the elementary school.
 	private void fulfillHistoryWithElementarySchoolAverageClassSize() {
-		title = "Média de Alunos por Turma do Ensino Fundamental (Qtd.)";
+		title = "Mï¿½dia de Alunos por Turma do Ensino Fundamental (Qtd.)";
 		indicative = "alunos_por_turma_ensino_medio";
 		history.clear();
 		int size = state.getAverageClassSize().length;
@@ -297,7 +297,7 @@ public class ChooseIndicativeChartLineScreen extends Activity {
 	
 	// Fulfill the history with the quantity of students in class of the high school.
 	private void fulfillHistoryWithHighSchoolAverageClassSize() {
-		title = "Média de Alunos por Turma do Ensino Médio (Qtd.)";
+		title = "Mï¿½dia de Alunos por Turma do Ensino Mï¿½dio (Qtd.)";
 		indicative = "alunos_por_turma_ensino_medio";
 		history.clear();
 		int size = state.getAverageClassSize().length;
@@ -310,7 +310,7 @@ public class ChooseIndicativeChartLineScreen extends Activity {
 	
 	// Fulfill the history with the average class hour per day of the elementary school.
 	private void fulfillHistoryWithElementarySchoolAverageClassHours() {
-		title = "Média de horas aula diárias do Ensino Fundamental";
+		title = "Mï¿½dia de horas aula diï¿½rias do Ensino Fundamental";
 		indicative = "horas_aula_ensino_medio";
 		history.clear();
 		int size = state.getAverageClassHours().length;
@@ -323,7 +323,7 @@ public class ChooseIndicativeChartLineScreen extends Activity {
 	
 	// Fulfill the history with the average class hour per day of the high school.
 	private void fulfillHistoryWithHighSchoolAverageClassHours() {
-		title = "Média de horas aula diárias do Ensino Médio";
+		title = "Mï¿½dia de horas aula diï¿½rias do Ensino Mï¿½dio";
 		indicative = "horas_aula_ensino_medio";
 		history.clear();
 		int size = state.getAverageClassHours().length;
@@ -336,7 +336,7 @@ public class ChooseIndicativeChartLineScreen extends Activity {
 	
 	// Fulfill the history with the Age/Series distortion rate of the elementary schools.
 	private void fulfillHistoryWithElementarySchoolAgeSeriesDistortionRate() {
-		title = "Taxa de Distorção Idade/Série do Ensino Fundamental (%)";
+		title = "Taxa de Distorï¿½ï¿½o Idade/Sï¿½rie do Ensino Fundamental (%)";
 		indicative = "taxa_distorcao";
 		history.clear();
 		int size = state.getAgeSeriesDistortionRate().length;
@@ -349,7 +349,7 @@ public class ChooseIndicativeChartLineScreen extends Activity {
 	
 	// Fulfill the history with the Age/Series distortion rate of the high school.
 	private void fulfillHistoryWithHighSchoolAgeSeriesDistortionRate() {
-		title = "Taxa de Distorção Idade/Série do Ensino Médio (%)";
+		title = "Taxa de Distorï¿½ï¿½o Idade/Sï¿½rie do Ensino Mï¿½dio (%)";
 		indicative = "taxa_distorcao";
 		history.clear();
 		int size = state.getAgeSeriesDistortionRate().length;
@@ -376,7 +376,7 @@ public class ChooseIndicativeChartLineScreen extends Activity {
 	
 	// Fulfill history with the utilization rate of students of the high school.
 	private void fulfillHistoryWithHighSchoolUtilizationRate() {
-		title = "Taxa de Aproveitamento do Ensino Médio (%)";
+		title = "Taxa de Aproveitamento do Ensino Mï¿½dio (%)";
 		indicative = "taxa_aprovacao";
 		history.clear();
 		int size = state.getUtilizationRate().length;
@@ -418,11 +418,11 @@ public class ChooseIndicativeChartLineScreen extends Activity {
 		title = "Censo Escolar dos Anos Iniciais do Ensino Fundamental (Matriculados)";
 		indicative = "censo";
 		history.clear();
-		int size = state.getCensos().length;
+		int size = state.getCensus().length;
 		int max = size == 1 ? size : (size - 1);
 		
 		for(int index = 0; index < max; index++) {
-			history.add((float) state.getCensos()[index].getElementarySchoolEarlyYears());
+			history.add((float) state.getCensus()[index].getElementarySchoolEarlyYears());
 		}
 	}
 	
@@ -431,24 +431,24 @@ public class ChooseIndicativeChartLineScreen extends Activity {
 		title = "Censo Escolar dos Anos Finais do Ensino Fundamental (Matriculados)";
 		indicative = "censo";
 		history.clear();
-		int size = state.getCensos().length;
+		int size = state.getCensus().length;
 		int max = size == 1 ? size : (size - 1);
 		
 		for(int index = 0; index < max; index++) {
-			history.add((float) state.getCensos()[index].getElementarySchoolFinalYears());
+			history.add((float) state.getCensus()[index].getElementarySchoolFinalYears());
 		}
 	}
 	
 	// Fulfill the history with the census of the high school.
 	private void fulfillHistoryWithHighSchoolCensus() {
-		title = "Censo Escolar do Ensino Médio (Matriculados)";
+		title = "Censo Escolar do Ensino Mï¿½dio (Matriculados)";
 		indicative = "censo";
 		history.clear();
-		int size = state.getCensos().length;
+		int size = state.getCensus().length;
 		int max = size == 1 ? size : (size - 1);
 		
 		for(int index = 0; index < max; index++) {
-			history.add((float) state.getCensos()[index].getHighSchool());
+			history.add((float) state.getCensus()[index].getHighSchool());
 		}
 	}
 	
@@ -457,24 +457,24 @@ public class ChooseIndicativeChartLineScreen extends Activity {
 		title = "Censo Escolar do EJA - Fundamental (Matriculados)";
 		indicative = "censo";
 		history.clear();
-		int size = state.getCensos().length;
+		int size = state.getCensus().length;
 		int max = size == 1 ? size : (size - 1);
 		
 		for(int index = 0; index < max; index++) {
-			history.add((float) state.getCensos()[index].getEJAElementarySchool());
+			history.add((float) state.getCensus()[index].getEJAElementarySchool());
 		}
 	}
 	
 	// Fulfill the history with the census of EJA high school.
 	private void fulfillHistoryWithEJAHighSchoolCensus() {
-		title = "Censo Escolar do EJA - Médio (Matriculados)";
+		title = "Censo Escolar do EJA - Mï¿½dio (Matriculados)";
 		indicative = "censo";
 		history.clear();
-		int size = state.getCensos().length;
+		int size = state.getCensus().length;
 		int max = size == 1 ? size : (size - 1);
 		
 		for(int index = 0; index < max; index++) {
-			history.add((float) state.getCensos()[index].getEJAHighSchool());
+			history.add((float) state.getCensus()[index].getEJAHighSchool());
 		}
 	}
 	/*

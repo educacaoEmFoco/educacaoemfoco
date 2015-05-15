@@ -193,21 +193,21 @@ public class StateController {
 			.getHighSchool()));
 		this.stateInformation.put("censo_anos_iniciais_fundamental", 
 			"Censo Anos Iniciais (Fundamental): " 
-			+ decimalFormatPercentage.format(state.getCensos()[state.getCensos().length
+			+ decimalFormatPercentage.format(state.getCensus()[state.getCensus().length
 			- 1].getElementarySchoolEarlyYears()));
 		this.stateInformation.put("censo_anos_finais_fundamental", 
 			"Censo Anos Finais (Fundamental): " 
-			+ decimalFormatPercentage.format(state.getCensos()[state.getCensos().length
+			+ decimalFormatPercentage.format(state.getCensus()[state.getCensus().length
 			- 1].getElementarySchoolFinalYears()));
 		this.stateInformation.put("censo_ensino_medio", "Censo Ensino M�dio: " 
-			+ decimalFormatPercentage.format(state.getCensos()[state.getCensos().length
+			+ decimalFormatPercentage.format(state.getCensus()[state.getCensus().length
 			- 1].getHighSchool()));
 		this.stateInformation.put("censo_eja_fundamental",
 			"Censo EJA (Fundamental): " + decimalFormatPercentage.format
-			(state.getCensos()[state.getCensos().length - 1]
+			(state.getCensus()[state.getCensus().length - 1]
 			.getEJAElementarySchool()));
 		this.stateInformation.put("censo_eja_medio", "Censo EJA (Medio): " 
-			+ decimalFormatPercentage.format(state.getCensos()[state.getCensos().length
+			+ decimalFormatPercentage.format(state.getCensus()[state.getCensus().length
 			- 1].getEJAHighSchool()));
 	}
 	
@@ -457,18 +457,18 @@ public class StateController {
 		Debug.log("StateController - writeStateWithAllInformation()",
 				"getting state Census along the years", Debug.DEBUG);
 		
-		for(int counter = 0, year = 2010; counter < state.getCensos().length; year++, counter++) {
+		for(int counter = 0, year = 2010; counter < state.getCensus().length; year++, counter++) {
 			temporaryString += year + ": " + "Censo Anos Iniciais (Fundamental): " 
-				+ decimalFormatPercentage.format(state.getCensos()[counter]
+				+ decimalFormatPercentage.format(state.getCensus()[counter]
 				.getElementarySchoolEarlyYears()) + "\n" + "\t\t  " + 
 				"Censo Anos Finais (Fundamental): " + decimalFormatPercentage.format
-				(state.getCensos()[counter].getElementarySchoolFinalYears()) + "\n" 
+				(state.getCensus()[counter].getElementarySchoolFinalYears()) + "\n" 
 				+ "\t\t  " + "Censo Ensino M�dio: " + decimalFormatPercentage.format
-				(state.getCensos()[counter].getHighSchool()) + "\n" + "\t\t  " 
+				(state.getCensus()[counter].getHighSchool()) + "\n" + "\t\t  " 
 				+ "Censo EJA (Fundamental): " + decimalFormatPercentage.format
-				(state.getCensos()[counter].getEJAElementarySchool()) + "\n" + "\t\t  " 
+				(state.getCensus()[counter].getEJAElementarySchool()) + "\n" + "\t\t  " 
 				+ "Censo EJA (Medio): " + decimalFormatPercentage.format(state
-				.getCensos()[state.getCensos().length - 1].getEJAHighSchool()) 
+				.getCensus()[state.getCensus().length - 1].getEJAHighSchool()) 
 				+ "\n\n";
 		}
 

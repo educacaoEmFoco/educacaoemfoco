@@ -40,11 +40,11 @@ public class State {
 		fulfillData(information);		
 	}
 
-	public Census[] getCensos() {
+	public Census[] getCensus() {
 		return censos;
 	}
 
-	public void setCensos(HashMap<String, ArrayList<String[]>> information) {
+	public void setCensus(HashMap<String, ArrayList<String[]>> information) {
 		ArrayList<String[]> finalElementarySchoolData;
 		ArrayList<String[]> earlyElementarySchoolData;
 		ArrayList<String[]> highSchoolData;
@@ -450,7 +450,7 @@ public class State {
 			"taxa_abandono_medio"};
 		
 		this.setPopulation(information);
-		this.setCensos(information);
+		this.setCensus(information);
 		this.setIdebs(information);
 		this.setPIBPercentParticipaion(information);
 				
