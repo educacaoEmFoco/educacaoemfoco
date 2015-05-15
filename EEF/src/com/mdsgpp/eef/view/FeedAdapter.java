@@ -1,6 +1,7 @@
 package com.mdsgpp.eef.view;
 
 import com.mdsgpp.eef.R;
+import com.mdsgpp.eef.debug.Debug;
 import com.mdsgpp.eef.model.Feed;
 
 import android.content.Context;
@@ -45,12 +46,13 @@ public class FeedAdapter extends BaseAdapter {
 
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
+		Debug.log("FeedAdapter - getView()", "Initialising", Debug.DEBUG);
 		/* 
 		 * If the convertView is null (first ListView item), inflate the layout
 		 * and create a ViewHolder to carry our TextViews, storing inside the ConvertView.
 		 */
 		if(convertView == null) {
-			convertView = this.mInflater.inflate(R.layout.rss_listview_item , null);
+			convertView = this.mInflater.inflate(R.layout.rss_listview_item, null);
 			this.holder = new ViewHolder();
 			
 			this.holder.tvTitle = (TextView) convertView.findViewById(R.id.textView_rss_title);
@@ -66,6 +68,8 @@ public class FeedAdapter extends BaseAdapter {
 			this.holder = (ViewHolder) convertView.getTag();
 		}
 		
+		Debug.log("FeedAdapter - getView()", "Holder ready", Debug.DEBUG);
+		
 		String feedItemTitle = null;
 		feedItemTitle = this.feed.getItem(position).getTitle();
 		String feedItemCategory = null;
@@ -75,6 +79,8 @@ public class FeedAdapter extends BaseAdapter {
 		this.holder.tvTitle.setText(feedItemTitle);
 		this.holder.tvCategory.setText(feedItemCategory);
 		this.holder.tvDescription.setText(Html.fromHtml(feedItemCategory));
+		
+		Debug.log("FeedAdapter - getView()", "Leaving", Debug.DEBUG);
 		
 		// At this point, the convertView is full, so we can just return it.
 		return convertView;
