@@ -7,6 +7,8 @@ import com.echo.holographlibrary.Bar;
 import com.echo.holographlibrary.BarGraph;
 import com.mdsgpp.eef.R;
 import com.mdsgpp.eef.controller.StateController;
+import com.mdsgpp.eef.debug.Debug;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -47,6 +49,9 @@ public class GraphScreen extends Activity {
 	public boolean onOptionsItemSelected(MenuItem item) {		
 		switch(item.getItemId()) {
 			case R.id.sobre:
+				Debug.log("GraphScreen - onOptionsItemSelected()",
+					"item click detected on open about screen", Debug.INFO);
+				
 				opensAboutScreen();
 				break;				
 			case android.R.id.home:
@@ -62,6 +67,7 @@ public class GraphScreen extends Activity {
 	
 	// This method start the intent that leads to the ChartAboutScreen screen.
 	public void opensAboutScreen() {
+		Debug.log("GraphScreen - opensAboutScreen()", "opening about screen", Debug.INFO);
 		Intent intent = new Intent(this, ChartAboutScreen.class);
     	startActivity(intent);
 	}
@@ -93,13 +99,16 @@ public class GraphScreen extends Activity {
 		} catch(IOException e) {
 			Toast.makeText(getApplicationContext(), "Houve um erro no acesso �s informa��es.",
 				Toast.LENGTH_SHORT).show();
-			Log.i("IOException - TelaComparaEstados",e.toString());
+			Debug.log("GraphScreen - capturesInformation()",
+				"An error has ocurred acessing information of graphs!", Debug.ERROR);
 		}
 	}
 	
 	// This method generates the chart.
 	private void generatesGraph(HashMap<String, String> state1Informations,
 		HashMap<String, String> state2Informations) {
+		
+		Debug.log("GraphScreen - generatesGraph()", "Starting generating the chart", Debug.DEBUG);
 		
         Bar state1Bar = new Bar();
         state1Bar.setColor(Color.parseColor("#4682B4"));
@@ -126,6 +135,8 @@ public class GraphScreen extends Activity {
 	private void convertData(HashMap<String, String> state1Informations,
 			HashMap<String, String> state2Informations) {
 		
+		Debug.log("GraphScreen - convertData()", "starting data convertion", Debug.DEBUG);
+		
 		String state1IndicativeString = state1Informations.get(indicative);
 		String state2IndicativeString = state2Informations.get(indicative);
 				
@@ -141,6 +152,9 @@ public class GraphScreen extends Activity {
 	
 	// This method starts the TextView graphTitle.
 	private void initializesTextFields() {
+		Debug.log("GraphScreen() - initializesTextFields()", "Starting the text fields",
+			Debug.DEBUG);
+		
 		graphTitle = (TextView) findViewById(R.id.text_view_titulo_grafico);		
 	}
 }
