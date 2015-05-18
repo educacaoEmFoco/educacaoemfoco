@@ -9,6 +9,8 @@ package com.mdsgpp.eef.model;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import com.mdsgpp.eef.debug.Debug;
+
 
 public class State {
 
@@ -59,6 +61,9 @@ public class State {
 		EJAElementarySchoolData = information.get("censo_eja_fundamental");
 		
 		censo = new Census[highSchoolData.size()];
+		
+		Debug.log("State - setCensus()", "before for interation", Debug.DEBUG);
+		
 		for(int counter = 0; counter < censo.length; counter++) {
 			censo[counter] = new Census();
 			censo[counter].setState(this); 
@@ -75,16 +80,22 @@ public class State {
 				(EJAElementarySchoolData.get(counter)[1].replaceAll("\\.", "")));
 		}
 		
+		Debug.log("State - setCensus()", "after for interation", Debug.DEBUG);
+		
 		this.censos = censo;
 	}
 	
 	public double[] getPIBPercentParticipation() {
 		if(PIBPercentParticipaion == null) {
+			Debug.log("State - getPIBPercentParticipation()",
+				"PIB percent participation null. returning empty empty array", Debug.INFO);
+			
 			double[] empty = {0};
 			return empty;
 		}
 		else {
-			// Nothing to do.
+			Debug.log("State - getPIBPercentParticipation()", 
+				"PIB participation not null. returning current PIB participation", Debug.INFO);
 		}
 			
 		return PIBPercentParticipaion;
@@ -114,11 +125,12 @@ public class State {
 
 	public Ideb[] getIdebs() {
 		if(idebs == null) {
+			Debug.log("State - getIdebs()", "idebs null. return empty array", Debug.INFO);
 			Ideb empty[] = {new Ideb(0,0,0)};
 			return empty;
 		}
 		else {
-			// Nothing to do.
+			Debug.log("State - getIdebs()", "idebs not null. returning current ideb", Debug.INFO);
 		}
 		
 		return idebs;
@@ -140,10 +152,12 @@ public class State {
 			ideb[counter].setState(this);
 
 			if(counter < (ideb.length - 1)) {
+				Debug.log("State - setIdebs()", "setting year on ideb", Debug.INFO);
+				
 				ideb[counter].setYear(Integer.parseInt(highSchoolData.get(counter)[0]));
 			}
 			else {
-				// Nothing to do.
+				Debug.log("State - setIdebs()", "end of the setting year on ideb", Debug.INFO);
 			}
 			
 			ideb[counter].setElementarySchool(Double.parseDouble
@@ -189,10 +203,14 @@ public class State {
 	
 	public Average[] getAverageClassSize() {
 		if(averageClassSize == null) {
+			Debug.log("State - getAverageClassSize()",
+				"average class size null. returning empty average", Debug.INFO);
+			
 			return returnEmptyAverage();
 		}
 		else {
-			// Nothing to do.
+			Debug.log("State - getAverageClassSize()",
+				"average class size not null. returning current average", Debug.INFO);
 		}
 		
 		return averageClassSize;
@@ -205,10 +223,14 @@ public class State {
 
 	public Average[] getAverageClassHours() {
 		if(averageClassHours == null) {
+			Debug.log("State - getAverageClassHours()",
+				"average class hours null. returning empty average", Debug.INFO);
+			
 			return returnEmptyAverage();
 		}
 		else {
-			// Nothing to do.
+			Debug.log("State - getAverageClassHours()",
+				"average class hours not null. returning current average", Debug.INFO);
 		}
 		
 		return averageClassHours;
@@ -221,10 +243,14 @@ public class State {
 
 	public Average[] getAgeSeriesDistortionRate() {
 		if(ageSeriesDistortionRate == null) {
+			Debug.log("State - getAgeSeriesDistortionRate()",
+				"age series distortion rate null. returning empty average", Debug.INFO);
+			
 			return returnEmptyAverage();
 		}
 		else {
-			// Nothing to do.
+			Debug.log("State - getAgeSeriesDistortionRate()",
+				"age series distortion rate not null. returning current average", Debug.INFO);
 		}
 		
 		return ageSeriesDistortionRate;
@@ -237,10 +263,12 @@ public class State {
 
 	public String getName() {
 		if(name == null) {
+			Debug.log("State - getName()", "state name not found", Debug.WARNING);
+			
 			return "Sem nome";
 		}
 		else {
-			// Nothing to do.
+			Debug.log("State - getName()", "state name found. returning " + this.name, Debug.INFO);
 		}
 		
 		return name;
@@ -252,10 +280,12 @@ public class State {
 
 	public String getAcronym() {
 		if(acronym == null) {
+			Debug.log("State - getAcronym()", "state acronym not found", Debug.WARNING);
+			
 			return "Sem sigla";
 		}
 		else {
-			// Nothing to do.
+			Debug.log("State - getAcronym()", "acronym found. returning " + this.acronym, Debug.INFO);
 		}
 		
 		return acronym;
@@ -265,7 +295,7 @@ public class State {
 		this.acronym = acronym;
 	}
 	
-	// Create and returns an empty Array of the type "Projeto".
+	// Create and returns an empty Array of the type "Project".
 	public Project[] returnEmptyProject() {
 		Project emptyProject[] = {new Project()};
 		emptyProject[0].setQuantity(0);
@@ -282,23 +312,30 @@ public class State {
 		Project readProjects[] = null;
 		
 		if(information.containsKey(indicativeNames[0])) {
+			Debug.log("State - setProjects()", "There are information about the projects",
+				Debug.DEBUG);
+			
 			quantityProjectsData = information.get(indicativeNames[0]);
 			readProjects = new Project[quantityProjectsData.size()];
 			amoutInvestedData = information.get(indicativeNames[1]);			
 		}
 		else {
-			// Nothing to do.
+			Debug.log("State - setProjects()", "There isn't any information about the projects",
+				Debug.WARNING);
 		}
 		
 		for(int counter = 0; readProjects != null && counter < readProjects.length; counter++) { 
 			readProjects[counter] = new Project();
 			readProjects[counter].setState(this);
 			if(counter  < (readProjects.length - 1)) {
+				Debug.log("State - setProjects()", "Setting year of the project", Debug.DEBUG);
+				
 				readProjects[counter].setYear(Integer.parseInt
 					(quantityProjectsData.get(counter)[0]));
 			}
 			else {
-				// Nothing to do.
+				Debug.log("State - setProjects()","Finished populate readProjects with the years",
+					Debug.INFO);
 			}
 			
 			readProjects[counter].setQuantity(Integer.parseInt
@@ -312,10 +349,14 @@ public class State {
 	
 	public Project[] getScienceTechnologyProjects() {
 		if(scienceTechnologyProjects == null) {
+			Debug.log("State - getScienceTechnologyProjects", "Science Technology Projects empty," +
+				" returning empty project.", Debug.INFO);
+			
 			return returnEmptyProject();
 		}
 		else {
-			// Nothing to do.
+			Debug.log("State - getScienceTechnologyProjects", 
+				"Science Technology Project not empty", Debug.INFO);
 		}
 		
 		return scienceTechnologyProjects;
@@ -328,10 +369,14 @@ public class State {
 	
 	public Project[] getFirstProjects() {
 		if(firstProjects == null) {
+			Debug.log("State - getFirstProjects()",
+				"First Projects null value! returnin empty project", Debug.INFO);
+			
 			return returnEmptyProject();
 		}
 		else {
-			// Nothing to do.
+			Debug.log("State - getFirstProjects()",
+				"First Projects not null. returning current project", Debug.INFO);
 		}
 		
 		return firstProjects;
@@ -344,10 +389,14 @@ public class State {
 
 	public Project[] getInctProjects() {
 		if(InctProjects == null) {
+			Debug.log("State - getInctProjects()",
+				"Inct projects null. returning empty project", Debug.INFO);
+			
 			return returnEmptyProject();
 		}
 		else {
-			// Nothing to do.
+			Debug.log("State - getInctProjects()",
+				"Inct projects not null, returning current project", Debug.INFO);
 		}
 		
 		return InctProjects;
@@ -360,10 +409,14 @@ public class State {
 
 	public Project[] getCnpqSupportProjects() {
 		if(CnpqSupportProjects == null) {
+			Debug.log("State - getCnpqSupportProjects()",
+				"cnpq support projects null! returning empty project", Debug.INFO);
+			
 			return returnEmptyProject();
 		}
 		else {
-			// Nothing to do.
+			Debug.log("State - getCnpqSupportProjects()",
+				"cnpq support projects not null, returning current project", Debug.INFO);
 		}
 		
 		return CnpqSupportProjects;
@@ -376,10 +429,14 @@ public class State {
 
 	public Project[] getYoungResearchersProject() {
 		if(youngResearchersProject == null) {
+			Debug.log("State - getYoungResearchersProject()",
+					"young researchers null! Returning empty project", Debug.INFO);
+			
 			return returnEmptyProject();
 		}
 		else {
-			// Nothing to do.
+			Debug.log("State - getYoungResearchersProject()",
+				"young researchers not null, returning current value", Debug.INFO);
 		}
 		
 		return youngResearchersProject;
@@ -392,10 +449,14 @@ public class State {
 
 	public Average[] getUtilizationRate() {
 		if(utilizationRate == null) {
+			Debug.log("State - getUtilizationRate()",
+				"utilizationRate null! Returning empty average", Debug.INFO);
+			
 			return returnEmptyAverage();
 		}
 		else {
-			// Nothing to do.
+			Debug.log("State - getUtilizationRate()",
+				"utilizationRate not null, returning current value", Debug.INFO);
 		}
 		
 		return utilizationRate;
@@ -408,10 +469,13 @@ public class State {
 
 	public Average[] getDropoutRate() {
 		if(droupoutRate == null) {
+			Debug.log("State - getDropoutRate()", "dropoutRate null! Returnin empty average.",
+				Debug.INFO);
+			
 			return returnEmptyAverage();
 		}
 		else {
-			// Nothing to do.
+			Debug.log("State - getDropoutRate()", "dropoutRate not null. Returning current value.", Debug.INFO);
 		}
 		
 		return droupoutRate;
@@ -427,6 +491,8 @@ public class State {
 	 * the information received.
 	 */
 	public void fulfillData(HashMap<String, ArrayList<String[]>> information) {
+		Debug.log("State - fulfillData()", "Fulfilling state data on model-level", Debug.DEBUG);
+		
 		String[] indicativeAverageClassHours = {"horas_aula_ensino_fundamental", 
 			"horas_aula_ensino_medio"};
 		String[] indicativeAverageClassSize = 
