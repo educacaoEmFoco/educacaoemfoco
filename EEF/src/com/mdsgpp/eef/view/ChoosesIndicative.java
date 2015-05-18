@@ -29,19 +29,23 @@ public abstract class ChoosesIndicative extends Activity {
 	// Inflate the menu, this adds items to the action bar if it is present.
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
+		Debug.log("Chooses Indicative - onCreateOptionsMenu()", "Creating menu", Debug.DEBUG);
 		getMenuInflater().inflate(R.menu.menu_telas, menu);
 		return true;
 	}
 	
 	// Get the option selected on menu.
 	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		
+	public boolean onOptionsItemSelected(MenuItem item) {		
 		switch(item.getItemId()) {
 			case R.id.sobre:
+				Debug.log("Chooses Indicative - onOptionsItemSelected", 
+					"click detected in About Button!", Debug.INFO);
 				opensAboutScreen();
 				break;
 			case android.R.id.home:
+				Debug.log("Chooses Indicative - onOptionsItemSelected", 
+					"click detected in Home Button!", Debug.INFO);
 	        	NavUtils.navigateUpFromSameTask(this);
 	       		break;
 			default:
@@ -56,6 +60,8 @@ public abstract class ChoosesIndicative extends Activity {
 	
 	// Get the radioButton clicked to refresh information.
 	public void onRadioButtonClicked(View view) {
+		Debug.log("Chooses Indicative - onRadioButtonClicked", 
+			"click detected on radio button indicative", Debug.INFO);
 
 		switch(view.getId()) {
 			case R.id.radio_apoio_cnpq_investimento:
