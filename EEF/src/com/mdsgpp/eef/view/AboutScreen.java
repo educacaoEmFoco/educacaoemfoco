@@ -24,7 +24,11 @@ public class AboutScreen extends Activity {
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
+		Debug.log("AboutScreen - onCreateOptionsMenu()", "creating action bar options", 
+			Debug.DEBUG);
+
 		getMenuInflater().inflate(R.menu.menu_telas_sem_sobre, menu);
+
 		return true;
 	}
 	
@@ -32,6 +36,12 @@ public class AboutScreen extends Activity {
 	public boolean onOptionsItemSelected(MenuItem selectedOptionInMenu) {
 		switch(selectedOptionInMenu.getItemId()) {
 			case android.R.id.home:
+				Debug.log("AboutScreen - onOptionsItemSelected()", "home selected in action bar", 
+					Debug.INFO);
+
+				Debug.log("AboutScreen - onOptionsItemSelected()", "returning to previous activity", 
+					Debug.DEBUG);
+
 		        NavUtils.navigateUpFromSameTask(this);
 		        break;
 			default:
