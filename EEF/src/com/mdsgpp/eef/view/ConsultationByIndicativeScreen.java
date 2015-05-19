@@ -1,3 +1,9 @@
+/***************************************************************************
+ * File: ConsultationByIndicativeScreen.java
+ *
+ * Purpose: Show all possible indicatives to be selected for a consultation.
+ ***************************************************************************/
+
 package com.mdsgpp.eef.view;
 
 import com.mdsgpp.eef.R;
@@ -20,16 +26,29 @@ public class ConsultationByIndicativeScreen extends ChoosesIndicative {
 
 	// Open "About" screen.
 	public void opensAboutScreen() {
+		Debug.log("ConsultationByIndicativeScreen - opensAboutScreen()", 
+			"click detected in About Screen Button.", Debug.DEBUG);
+
 		Intent intent = new Intent(this, IndicativesAboutScreen.class);
+
+		Debug.log("ConsultationByIndicativeScreen - opensAboutScreen()", "starting new activity", 
+			Debug.DEBUG);
+
 		startActivity(intent);
 	}
 	
 	// When button "Next" get clicked start a new activity with new screen.
 	public void clickForwardButton(View view) {
+		Debug.log("ConsultationByIndicativeScreen - clickForwardButton()", 
+			"click detected in Forward Button.", Debug.DEBUG);
+
 		Intent intent = new Intent(this, ConsultationByIndicativeResultScreen.class);
 
 		intent.putExtra("INDICATIVO", getIndicative());
 		intent.putExtra("TITULO", getTitle());
+
+		Debug.log("ConsultationByIndicativeScreen - clickForwardButton()", "starting new activity", 
+			Debug.DEBUG);
 
 		startActivity(intent);
 	}	
