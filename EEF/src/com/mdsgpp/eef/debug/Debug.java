@@ -18,7 +18,7 @@ public class Debug {
 	
 	// Receives the message of debug and the type of this debug.
 	public static void log(String tag, String message, int log_type) {
-		if(DEBUG_ON == true) {
+		if(DEBUG_ON) {
 			switch(log_type) {
 				case DEBUG:
 					Log.d(tag, message);

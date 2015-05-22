@@ -19,6 +19,7 @@ import android.widget.Spinner;
 import android.widget.AdapterView.OnItemSelectedListener;
 
 import com.mdsgpp.eef.R;
+import com.mdsgpp.eef.debug.Debug;
 
 public abstract class Comparison extends Activity {
 

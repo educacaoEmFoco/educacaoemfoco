@@ -14,6 +14,8 @@ import android.support.v4.app.NavUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.mdsgpp.eef.debug.Debug;
+
 public class AboutScreen extends Activity {
 
 	@Override

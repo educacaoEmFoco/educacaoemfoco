@@ -15,6 +15,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.mdsgpp.eef.debug.Debug;
+
 public abstract class ChoosesIndicative extends Activity {
 	
 	private String indicative = "populacao";
@@ -187,7 +189,11 @@ public abstract class ChoosesIndicative extends Activity {
 	public void setIndicative(String indicative) {
 		this.indicative = indicative;
 	}
-
+	
+	public String getIndicativeTitle() {
+		return title;
+	}
+	
 	public void setTitle(String title) {
 		this.title = title;
 	}	
