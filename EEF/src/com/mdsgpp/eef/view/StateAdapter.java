@@ -4,7 +4,6 @@ import com.mdsgpp.eef.R;
 import com.mdsgpp.eef.debug.Debug;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -64,7 +63,7 @@ public class StateAdapter extends BaseAdapter {
 		// Inflate layout, and get the view to put into the viewHolder.
 		if(convertView == null) {
 			Debug.log("StateAdapter - getView()", "Initializing convertView", Debug.DEBUG);
-			convertView = layoutInflater.inflate(R.layout.listview_item , null);
+			convertView = layoutInflater.inflate(R.layout.listview_item , parent, false);
 			this.viewHolder = new ViewHolder();
 		 
 			this.viewHolder.tvName = (TextView) convertView.findViewById(R.id.textview_lista_estados);

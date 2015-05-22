@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.content.Intent;
 import android.view.View;
 import android.widget.TextView;
+import com.mdsgpp.eef.debug.Debug;
 
 public class ConsultationByIndicativeScreen extends ChoosesIndicative {
 	
