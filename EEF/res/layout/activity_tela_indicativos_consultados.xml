@@ -3,7 +3,7 @@
     android:id="@+id/scrollViewConsulta"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TelaIndicativosConsultados" >
+    tools:context=".ConsultedIndicativesScreen" >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -26,7 +26,7 @@
                 style="@style/subTituloSobre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="onRadioButtonMarcarTodosClicked"
+                android:onClick="onRadioButtonCheckAllClick"
                 android:text="@string/title_radio_button_marcar_todas" />
 
             <RadioButton
@@ -34,7 +34,7 @@
                 style="@style/subTituloSobre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="onRadioButtonDesmarcarTodosClicked"
+                android:onClick="onRadioButtonUncheckAllClick"
                 android:text="@string/title_radio_button_desmarcar_todas" />
         </RadioGroup>
 
@@ -148,7 +148,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:drawableTop="@drawable/avancar"
-                android:onClick="clickBotaoTodosIndicativos" >
+                android:onClick="clickButtonAllIndicatives" >
             </Button>
         </LinearLayout>
     </LinearLayout>

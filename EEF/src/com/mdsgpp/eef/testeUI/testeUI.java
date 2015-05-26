@@ -1,4 +1,4 @@
-package com.mdsgpp.eef.testeUI;
+/*package com.mdsgpp.eef.testeUI;
 
 import com.android.uiautomator.core.UiObject;
 import com.android.uiautomator.core.UiObjectNotFoundException;
@@ -35,11 +35,11 @@ public class testeUI extends UiAutomatorTestCase {
 		scrollListaEstados = new UiScrollable(new UiSelector().scrollable(true));
 		scrollListaEstados.scrollTextIntoView("Mato Grosso");
 		
-		itemMatoGrosso = scrollListaEstados.getChildByText(new UiSelector().className(android.widget.TextView.class.getName()), "Mato Grosso");
+		itemMatoGrosso = scrollListaEstados.getChildByText(new UiSelector().
+				className(android.widget.TextView.class.getName()), "Mato Grosso");
 		itemMatoGrosso.clickAndWaitForNewWindow();
 		
 		txtViewSigla = new UiObject(new UiSelector().className("android.widget.TextView").index(1));
 		assertEquals("MT", txtViewSigla.getText());
-		
 	}
-}
+}*/

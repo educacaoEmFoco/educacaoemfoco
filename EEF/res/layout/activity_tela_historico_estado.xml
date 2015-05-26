@@ -50,7 +50,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="5dp"
             android:drawableTop="@drawable/botao_grafico"
-            android:onClick="clickBotaoEscolherIndicativoParaGerarGrafico"
+            android:onClick="clickChooseIndicativeToGenerateChartButton"
             android:text="@string/string_vazia" />
 
         <TextView
