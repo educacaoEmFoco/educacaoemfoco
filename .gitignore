@@ -44,3 +44,11 @@ local.properties
 
 # PDT-specific
 .buildpath
+
+# Latex auto generated
+*.aux
+*.lof
+*.log
+*.lot
+*.pyg
+*.toc
