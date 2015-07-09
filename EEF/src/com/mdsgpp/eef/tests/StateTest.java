@@ -247,13 +247,13 @@ public class StateTest extends AndroidTestCase {
 	
 	public void testParticipacaoPercentualPIB() {
 		double[] valores;	
-		valores = state.getParticipacaoPercentualPIB();
+		valores = state.getPIBPercentParticipation();
 		assertEquals(valores[0], 3000, 0.00001);
 	}
 	
 	public void testParticipacaoPercentualPIBNull() {
 		double[] valores;
-		valores = state.getParticipacaoPercentualPIB();
+		valores = state.getPIBPercentParticipation();
 		
 		assertEquals(0, valores[0], 0);
 	}
@@ -264,9 +264,9 @@ public class StateTest extends AndroidTestCase {
 		
 		idebs = state.getIdebs();
 		
-		assertEquals(2.5,idebs[0].getFundamental(), 0.00001);
-		assertEquals(3.7,idebs[0].getSeriesIniciais(),0.00001);
-		assertEquals(4.1,idebs[0].getMedio(),0.00001);
+		assertEquals(2.5,idebs[0].getElementarySchool(), 0.00001);
+		assertEquals(3.7,idebs[0].getEarlyGrades(),0.00001);
+		assertEquals(4.1,idebs[0].getHighSchool(),0.00001);
 		assertEquals(2000,idebs[0].getYear());
 	}
 	
@@ -274,17 +274,17 @@ public class StateTest extends AndroidTestCase {
 		Ideb[] idebs;
 		idebs = state.getIdebs();
 		
-		assertEquals(0,idebs[0].getFundamental(), 0);
-		assertEquals(0,idebs[0].getSeriesIniciais(),0);
-		assertEquals(0,idebs[0].getMedio(),0);
+		assertEquals(0,idebs[0].getElementarySchool(), 0);
+		assertEquals(0,idebs[0].getEarlyGrades(),0);
+		assertEquals(0,idebs[0].getHighSchool(), 0);
 	} 
 	
 	public void testProjectCienciaTecnologia() {
 		String[] indicativosProjectsCienciaTecnologia = {"numero_projetos", "valor_investido"};
 		Project[] projetosTecnologia;
 		
-		state.setProjectsCienciaTecnologia(informacoes, indicativosProjectsCienciaTecnologia);
-		projetosTecnologia = state.getProjectsCienciaTecnologia();
+		state.setScienceTechnologyProjects(informacoes, indicativosProjectsCienciaTecnologia);
+		projetosTecnologia = state.getScienceTechnologyProjects();
 		
 		assertEquals(10, projetosTecnologia[0].getQuantity());
 		assertEquals(10000.50, projetosTecnologia[0].getValue(), 0.00001);
@@ -293,7 +293,7 @@ public class StateTest extends AndroidTestCase {
 	
 	public void testProjectCienciaTecnologiaNull() {
 		Project[] projetosTecnologia;
-		projetosTecnologia = state.getProjectsCienciaTecnologia();
+		projetosTecnologia = state.getScienceTechnologyProjects();
 		
 		assertEquals(0, projetosTecnologia[0].getQuantity());
 		assertEquals(0, projetosTecnologia[0].getValue(), 0);
@@ -305,8 +305,8 @@ public class StateTest extends AndroidTestCase {
 			"valores_programa_primeiros_projetos"};
 		Project[] primeirosProjects;
 		
-		state.setPrimeirosProjects(informacoes, indicativosPrimeirosProjects);
-		primeirosProjects = state.getPrimeirosProjects();
+		state.setFirstProjects(informacoes, indicativosPrimeirosProjects);
+		primeirosProjects = state.getFirstProjects();
 		
 		assertEquals(10, primeirosProjects[0].getQuantity());
 		assertEquals(10000.50, primeirosProjects[0].getValue(), 0.00001);
@@ -315,8 +315,8 @@ public class StateTest extends AndroidTestCase {
 	
 	public void testPrimeirosProjectsNull() {
 		Project[] primeirosProjects;
-		primeirosProjects = state.getPrimeirosProjects();
-		
+		primeirosProjects = state.getFirstProjects();
+
 		assertEquals(0, primeirosProjects[0].getQuantity());
 		assertEquals(0, primeirosProjects[0].getValue(), 0);
 		assertEquals(0, primeirosProjects[0].getYear());
@@ -326,8 +326,8 @@ public class StateTest extends AndroidTestCase {
 		String[] indicativosProjectsInct = {"projetos_inct", "valores_projetos_inct"};
 		Project[] projetosInct;
 		
-		state.setProjectsInct(informacoes, indicativosProjectsInct);
-		projetosInct = state.getProjectsInct();
+		state.setInctProjects(informacoes, indicativosProjectsInct);
+		projetosInct = state.getInctProjects();
 		
 		assertEquals(10, projetosInct[0].getQuantity());
 		assertEquals(10000.50, projetosInct[0].getValue(), 0.00001);
@@ -336,7 +336,7 @@ public class StateTest extends AndroidTestCase {
 	
 	public void testProjectsInctNull() {
 		Project[] projetosInct;
-		projetosInct = state.getProjectsInct();
+		projetosInct = state.getInctProjects();
 		
 		assertEquals(0, projetosInct[0].getQuantity());
 		assertEquals(0, projetosInct[0].getValue(), 0);
@@ -348,8 +348,8 @@ public class StateTest extends AndroidTestCase {
 			"valores_projetos_apoio_pesquisa_cnpq"};
 		Project[] projetosApoioCnpq;
 		
-		state.setProjectsApoioCnpq(informacoes, indicativosApoioCnpq);
-		projetosApoioCnpq = state.getProjectsApoioCnpq();
+		state.setCnpqSupportProjects(informacoes, indicativosApoioCnpq);
+		projetosApoioCnpq = state.getCnpqSupportProjects();
 		
 		assertEquals(10, projetosApoioCnpq[0].getQuantity());
 		assertEquals(10000.50, projetosApoioCnpq[0].getValue(), 0.00001);
@@ -358,7 +358,7 @@ public class StateTest extends AndroidTestCase {
 	
 	public void testProjectsApoioCnpqNull() {
 		Project[] projetosApoioCnpq;
-		projetosApoioCnpq = state.getProjectsApoioCnpq();
+		projetosApoioCnpq = state.getCnpqSupportProjects();
 		
 		assertEquals(0, projetosApoioCnpq[0].getQuantity());
 		assertEquals(0, projetosApoioCnpq[0].getValue(), 0);
@@ -370,9 +370,9 @@ public class StateTest extends AndroidTestCase {
 			"valores_jovens_pesquisadores"};
 		Project[] projetoJovensPesquisadores;
 		
-		state.setProjectJovensPesquisadores(informacoes, indicativosJovensPesquisadores);
-		projetoJovensPesquisadores = state.getProjectJovensPesquisadores();
-		
+		state.setYoungResearchersProject(informacoes, indicativosJovensPesquisadores);
+		projetoJovensPesquisadores = state.getYoungResearchersProject();
+
 		assertEquals(10, projetoJovensPesquisadores[0].getQuantity());
 		assertEquals(10000.50, projetoJovensPesquisadores[0].getValue(), 0.00001);
 		assertEquals(2001, projetoJovensPesquisadores[0].getYear());
@@ -380,8 +380,8 @@ public class StateTest extends AndroidTestCase {
 	
 	public void testProjectJovensPesquisadoresNull() {
 		Project[] projetoJovensPesquisadores;
-		projetoJovensPesquisadores = state.getProjectJovensPesquisadores();
-		
+		projetoJovensPesquisadores = state.getYoungResearchersProject();
+
 		assertEquals(0, projetoJovensPesquisadores[0].getQuantity());
 		assertEquals(0, projetoJovensPesquisadores[0].getValue(), 0);
 		assertEquals(0, projetoJovensPesquisadores[0].getYear());
@@ -392,11 +392,11 @@ public class StateTest extends AndroidTestCase {
 		state.setCensus(informacoes);
 		
 		census = state.getCensus();
-		assertEquals(1000, census[0].getYearsIniciaisFundamental(), 0);
-		assertEquals(2000, census[0].getYearsFinaisFundamental(), 0);
+		assertEquals(1000, census[0].getElementarySchoolEarlyYears(), 0);
+		assertEquals(2000, census[0].getElementarySchoolFinalYears(), 0);
 		assertEquals(3000, census[0].getHighSchool(), 0);
-		assertEquals(4000, census[0].getFundamentalEJA(), 0);
-		assertEquals(5000, census[0].getMedioEJA(), 0);
+		assertEquals(4000, census[0].getEJAElementarySchool(), 0);
+		assertEquals(5000, census[0].getEJAHighSchool(), 0);
 		assertEquals(2000, census[0].getYear());
 	}
 	
@@ -405,8 +405,8 @@ public class StateTest extends AndroidTestCase {
 			"alunos_por_turma_ensino_medio"};
 		Average[] alunosPorTurma;
 		
-		state.setAverageAlunosPorTurma(informacoes, indicativosAverageAlunosPorTurma);
-		alunosPorTurma = state.getAverageAlunosPorTurma();
+		state.setAverageClassSize(informacoes, indicativosAverageAlunosPorTurma);
+		alunosPorTurma = state.getAverageClassSize();
 		
 		assertEquals(50, alunosPorTurma[0].getElementarySchool(), 0);
 		assertEquals(60, alunosPorTurma[0].getHighSchool(), 0);
@@ -415,7 +415,7 @@ public class StateTest extends AndroidTestCase {
 	
 	public void testAverageAlunosPorTurmaNull() {
 		Average[] alunosPorTurma;
-		alunosPorTurma = state.getAverageAlunosPorTurma();
+		alunosPorTurma = state.getAverageClassSize();
 		
 		assertEquals(0, alunosPorTurma[0].getElementarySchool(), 0);
 		assertEquals(0, alunosPorTurma[0].getHighSchool(), 0);
@@ -427,7 +427,7 @@ public class StateTest extends AndroidTestCase {
 			"horas_aula_ensino_medio"};
 		Average[] horasAula;
 		
-		state.setAverageClassHours(information, indicativeNames)(informacoes, indicativosAverageClassHours);
+		state.setAverageClassHours(informacoes, indicativosAverageClassHours);
 		horasAula = state.getAverageClassHours();
 		
 		assertEquals(4, horasAula[0].getElementarySchool(), 0);
@@ -449,8 +449,8 @@ public class StateTest extends AndroidTestCase {
 			"taxa_distorcao_ensino_medio"};
 		Average[] taxaDistorcao;
 		
-		state.setTaxaDistorcaoIdadeSerie(informacoes, taxaDistorcaoIdadeSerie);
-		taxaDistorcao = state.getTaxaDistorcaoIdadeSerie();
+		state.setAgeSeriesDistortionRate(informacoes, taxaDistorcaoIdadeSerie);
+		taxaDistorcao = state.getAgeSeriesDistortionRate();
 		
 		assertEquals(15, taxaDistorcao[0].getElementarySchool(), 0);
 		assertEquals(20, taxaDistorcao[0].getHighSchool(), 0);
@@ -459,7 +459,7 @@ public class StateTest extends AndroidTestCase {
 	
 	public void testTaxaDistorcaoIdadeSerieNull() {
 		Average[] taxaDistorcao;
-		taxaDistorcao = state.getTaxaDistorcaoIdadeSerie();
+		taxaDistorcao = state.getAgeSeriesDistortionRate();
 		
 		assertEquals(0, taxaDistorcao[0].getElementarySchool(), 0);
 		assertEquals(0, taxaDistorcao[0].getHighSchool(), 0);
@@ -470,8 +470,8 @@ public class StateTest extends AndroidTestCase {
 		String[] taxaDeAproveitamento = {"taxa_aprovacao_fundamental", "taxa_aprovacao_medio"};
 		Average[] taxaAproveitamento;
 		
-		state.setTaxaDeAproveitamento(informacoes, taxaDeAproveitamento);
-		taxaAproveitamento = state.getTaxaDeAproveitamento();
+		state.setUtilizationRate(informacoes, taxaDeAproveitamento);
+		taxaAproveitamento = state.getUtilizationRate();
 		
 		assertEquals(95, taxaAproveitamento[0].getElementarySchool(), 0);
 		assertEquals(80, taxaAproveitamento[0].getHighSchool(), 0);
@@ -480,7 +480,7 @@ public class StateTest extends AndroidTestCase {
 	
 	public void testTaxaAproveitamentoNull() {
 		Average[] taxaAproveitamento;
-		taxaAproveitamento = state.getTaxaDeAproveitamento();
+		taxaAproveitamento = state.getUtilizationRate();
 		
 		assertEquals(0, taxaAproveitamento[0].getElementarySchool(), 0);
 		assertEquals(0, taxaAproveitamento[0].getHighSchool(), 0);
