@@ -1,0 +1,156 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollViewConsulta"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConsultedIndicativesScreen" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin" >
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <RadioButton
+                android:id="@+id/radioButtonMarcar"
+                style="@style/subTituloSobre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonCheckAllClick"
+                android:text="@string/title_radio_button_marcar_todas" />
+
+            <RadioButton
+                android:id="@+id/radioButtonDesmarcar"
+                style="@style/subTituloSobre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonUncheckAllClick"
+                android:text="@string/title_radio_button_desmarcar_todas" />
+        </RadioGroup>
+
+        <CheckBox
+            android:id="@+id/checkBox_ideb"
+            style="@style/subTituloSobre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/participacao_IDEB" />
+
+        <CheckBox
+            android:id="@+id/checkBox_primeiros_projeto"
+            style="@style/subTituloSobre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Programa_primeiros_projetos" />
+
+        <CheckBox
+            android:id="@+id/checkBox_projetos_cnpq"
+            style="@style/subTituloSobre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Projetos_pesquisa_CNPq" />
+
+        <CheckBox
+            android:id="@+id/checkBox_projetos_jovens"
+            style="@style/subTituloSobre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/jovens_pesquisadores" />
+
+        <CheckBox
+            android:id="@+id/checkBox_projetos_iniciacao"
+            style="@style/subTituloSobre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/projeto_iniciacao" />
+
+        <CheckBox
+            android:id="@+id/checkBox_projetos_difusao"
+            style="@style/subTituloSobre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/numero_projetos" />
+
+        <CheckBox
+            android:id="@+id/checkBox_populacao"
+            style="@style/subTituloSobre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/populacao" />
+
+        <CheckBox
+            android:id="@+id/checkBox_participacao_pib"
+            style="@style/subTituloSobre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/participacao_percentual_PIB" />
+
+        <CheckBox
+            android:id="@+id/checkBox_censo"
+            style="@style/subTituloSobre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/censo" />
+
+        <CheckBox
+            android:id="@+id/checkBox_horas_aula"
+            style="@style/subTituloSobre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/horas_aula_ensino" />
+
+        <CheckBox
+            android:id="@+id/checkBox_quantidade_aluno"
+            style="@style/subTituloSobre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/media_alunos_por_turma" />
+
+        <CheckBox
+            android:id="@+id/checkBox_taxa_distorcao"
+            style="@style/subTituloSobre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/taxa_distorcao" />
+
+        <CheckBox
+            android:id="@+id/checkBox_taxa_abandono"
+            style="@style/subTituloSobre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/taxa_abandono" />
+
+        <CheckBox
+            android:id="@+id/checkBox_taxa_aprovacao"
+            style="@style/subTituloSobre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/taxa_aprovacao" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right" >
+
+            <Button
+                android:id="@+id/buttonAvancar"
+                style="@style/botaoMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/avancar"
+                android:onClick="clickButtonAllIndicatives" >
+            </Button>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView><!-- From: file:/home/john/Git/educacaoemfoco/app/src/main/res/layout/activity_tela_indicativos_consultados.xml -->

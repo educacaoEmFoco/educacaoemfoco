@@ -1,0 +1,310 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background" >
+
+    <LinearLayout
+        android:id="@+id/linearlayout_estado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@android:color/transparent"
+        android:orientation="vertical"
+        android:paddingBottom="30dp"
+        android:paddingLeft="10dp" >
+
+        <ImageView
+            android:id="@+id/imageView_bandeiras"
+            android:layout_width="350dp"
+            android:layout_height="0dip"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_weight="30"
+            android:contentDescription="@string/string_vazia" />
+
+        <TextView
+            android:id="@+id/textView_sigla"
+            style="@style/titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/string_vazia" />
+
+        <TextView
+            android:id="@+id/textView_nome_estado"
+            style="@style/titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="@string/string_vazia" />
+
+        <Button
+            android:id="@+id/buttonIndicativos"
+            style="@style/botaoMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:drawableTop="@drawable/botao_grafico"
+            android:onClick="clickChooseIndicativeToGenerateChartButton"
+            android:text="@string/string_vazia" />
+
+        <TextView
+            android:id="@+id/textView_populacao"
+            style="@style/subTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/populacao" />
+
+        <TextView
+            android:id="@+id/textView_populacao_valor"
+            style="@style/valor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="@string/string_vazia" />
+
+        <TextView
+            android:id="@+id/textView_participacao_estadual_pib"
+            style="@style/subTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/participacao_PIB"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView_participacao_pib_valor"
+            style="@style/valor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="@string/string_vazia" />
+
+        <TextView
+            android:id="@+id/textView_numero_projetos"
+            style="@style/subTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/numero_projetos"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView_numero_projetos_quantidade"
+            style="@style/valor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="@string/string_vazia" />
+
+        <TextView
+            android:id="@+id/textView_ideb"
+            style="@style/subTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/participacao_IDEB"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView_idebs"
+            style="@style/valor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="@string/string_vazia" />
+
+        <TextView
+            android:id="@+id/textView_programa_primeiros_projetos"
+            style="@style/subTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/Programa_primeiros_projetos"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView_primeiros_projetos"
+            style="@style/valor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="@string/string_vazia" />
+
+        <TextView
+            android:id="@+id/textView_projetos_pesquisa"
+            style="@style/subTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/Projetos_pesquisa_CNPq"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView_valores_projeto_pesquisa"
+            style="@style/valor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="@string/string_vazia" />
+
+        <TextView
+            android:id="@+id/textView_jovens_pesquisadores"
+            style="@style/subTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/jovens_pesquisadores"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView_jovens_pesquisadores_valor"
+            style="@style/valor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="@string/string_vazia" />
+
+        <TextView
+            android:id="@+id/textView_projetos_iniciacao"
+            style="@style/subTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/projeto_iniciacao"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView_projetos_iniciacao_quantidade"
+            style="@style/valor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="@string/string_vazia" />
+
+        <TextView
+            android:id="@+id/textView_projetos_iniciacao_valor"
+            style="@style/valor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="@string/string_vazia" />
+
+        <TextView
+            android:id="@+id/textView_media_alunos_por_turma"
+            style="@style/subTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/media_alunos_por_turma"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView_media_alunos_por_turma_valor"
+            style="@style/valor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="@string/string_vazia" />
+
+        <TextView
+            android:id="@+id/textView_horas_aula_ensino"
+            style="@style/subTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/horas_aula_ensino"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView_horas_aula_ensino_fundamental"
+            style="@style/valor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="@string/string_vazia" />
+
+        <TextView
+            android:id="@+id/textView_horas_aula_ensino_medio"
+            style="@style/valor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="@string/string_vazia" />
+
+        <TextView
+            android:id="@+id/textView_taxa_distorcao"
+            style="@style/subTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/taxa_distorcao"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView_taxa_distorcao_valor"
+            style="@style/valor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="@string/string_vazia" />
+
+        <TextView
+            android:id="@+id/textView_taxa_aprovacao"
+            style="@style/subTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/taxa_aprovacao"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView_taxa_aprovacao_valor"
+            style="@style/valor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="@string/string_vazia" />
+
+        <TextView
+            android:id="@+id/textView_taxa_abandono"
+            style="@style/subTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/taxa_abandono"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView_taxa_abandono_valor"
+            style="@style/valor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="@string/string_vazia" />
+
+        <TextView
+            android:id="@+id/textView_censo"
+            style="@style/subTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/censo"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView_censo_medio_valor"
+            style="@style/valor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="@string/string_vazia" />
+    </LinearLayout>
+
+</ScrollView>

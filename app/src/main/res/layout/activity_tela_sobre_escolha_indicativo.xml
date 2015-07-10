@@ -1,0 +1,130 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+        android:background="@drawable/background">
+
+        <TextView
+            android:id="@+id/botao_sobre_escolha_indicativo"
+            android:layout_marginTop="15dp"
+            style="@style/subTituloSobre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/botao_sobre_escolha_indicativo" />
+
+        <TextView
+            android:id="@+id/idebSobreTitle"
+            style="@style/subTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ideb" />
+
+        <TextView
+            android:id="@+id/idebSobreConteudo"
+            style="@style/subTituloSobre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/ideb_conteudo" />
+
+        <TextView
+            android:id="@+id/projetosJovensPesquisadoresTitle"
+            style="@style/subTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/projetos_jovens_pesquisadores" />
+
+        <TextView
+            android:id="@+id/projetosJovensPesquisadoresConteudo"
+            style="@style/subTituloSobre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/projetos_jovens_pesquisadores_conteudo" />
+
+        <TextView
+            android:id="@+id/participacaoPercentualPIBTitle"
+            style="@style/subTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/participacao_percentual_PIB" />
+
+        <TextView
+            android:id="@+id/participacaoPercentualPIBConteudo"
+            style="@style/subTituloSobre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/participacao_percentual_PIB_conteudo" />
+
+        <TextView
+            android:id="@+id/projetos_inct"
+            style="@style/subTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/projetos_inct" />
+
+        <TextView
+            android:id="@+id/projetos_inct_conteudo"
+            style="@style/subTituloSobre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/projetos_inct_conteudo" />
+
+        <TextView
+            android:id="@+id/projetos_difusao"
+            style="@style/subTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/projetos_difusao" />
+
+        <TextView
+            android:id="@+id/projetos_difusao_conteudo"
+            style="@style/subTituloSobre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/projetos_difusao_conteudo" />
+
+        <TextView
+            android:id="@+id/projetos_apoio_cnpq"
+            style="@style/subTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/projetos_apoio_cnpq" />
+
+        <TextView
+            android:id="@+id/projetos_apoio_cnpq_conteudo"
+            style="@style/subTituloSobre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/projetos_apoio_cnpq_conteudo" />
+
+        <TextView
+            android:id="@+id/primeiros_projetos"
+            style="@style/subTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/primeiros_projetos" />
+
+        <TextView
+            android:id="@+id/primeiros_projetos_conteudo"
+            style="@style/subTituloSobre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/primeiros_projetos_conteudo" />
+    </LinearLayout>
+
+</ScrollView>

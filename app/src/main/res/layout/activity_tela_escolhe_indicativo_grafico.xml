@@ -1,0 +1,316 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textview_titulo"
+            style="@style/tituloSobre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="@string/titulo_escolhe_indicativo_grafico" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <RadioButton
+                android:id="@+id/radio_populacao"
+                style="@style/subTituloSobre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:checked="true"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/populacao" />
+
+            <RadioButton
+                android:id="@+id/radio_pib"
+                style="@style/subTituloSobre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/participacao_PIB" />
+
+            <RadioButton
+                android:id="@+id/radio_difusao_tecnologica_qtd"
+                style="@style/subTituloSobre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/projetos_difusao_tecnologica_qtd" />
+
+            <RadioButton
+                android:id="@+id/radio_difusao_tecnologica_investimento"
+                style="@style/subTituloSobre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/projetos_difusao_tecnologica_investimento" />
+
+            <RadioButton
+                android:id="@+id/radio_ideb_fundamental_iniciai"
+                style="@style/subTituloSobre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/participacao_IDEB_fundamental_iniciais" />
+
+            <RadioButton
+                android:id="@+id/radio_ideb_fundamental_finais"
+                style="@style/subTituloSobre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/participacao_IDEB_fundamental_finais" />
+
+            <RadioButton
+                android:id="@+id/radio_ideb_medio"
+                style="@style/subTituloSobre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/participacao_IDEB_medio" />
+
+            <RadioButton
+                android:id="@+id/radio_primeiros_projetos_qtd"
+                style="@style/subTituloSobre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/programa_primeiros_projetos_qtd" />
+
+            <RadioButton
+                android:id="@+id/radio_primeiros_projetos_investimento"
+                style="@style/subTituloSobre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/programa_primeiros_projetos_investimento" />
+
+            <RadioButton
+                android:id="@+id/radio_apoio_cnpq_qtd"
+                style="@style/subTituloSobre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/projetos_pesquisa_CNPq_qtd" />
+
+            <RadioButton
+                android:id="@+id/radio_apoio_cnpq_investimento"
+                style="@style/subTituloSobre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/projetos_pesquisa_CNPq_investimento" />
+
+            <RadioButton
+                android:id="@+id/radio_jovens_pesquisadores_qtd"
+                style="@style/subTituloSobre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/jovens_pesquisadores_qtd" />
+
+            <RadioButton
+                android:id="@+id/radio_jovens_pesquisadores_investimento"
+                style="@style/subTituloSobre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/jovens_pesquisadores_investimento" />
+
+            <RadioButton
+                android:id="@+id/radio_projetos_inct_qtd"
+                style="@style/subTituloSobre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/projeto_iniciacao_qtd" />
+
+            <RadioButton
+                android:id="@+id/radio_projetos_inct_investimento"
+                style="@style/subTituloSobre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/projeto_iniciacao_investimento" />
+
+            <RadioButton
+                android:id="@+id/radio_alunos_por_turma_fundamental"
+                style="@style/subTituloSobre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/alunos_por_turma_fundamental" />
+
+            <RadioButton
+                android:id="@+id/radio_alunos_por_turma_medio"
+                style="@style/subTituloSobre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/alunos_por_turma_medio" />
+
+            <RadioButton
+                android:id="@+id/radio_horas_aula_fundamental"
+                style="@style/subTituloSobre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/horas_aula_fundamental" />
+
+            <RadioButton
+                android:id="@+id/radio_horas_aula_medio"
+                style="@style/subTituloSobre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/horas_aula_medio" />
+
+            <RadioButton
+                android:id="@+id/radio_taxa_distorcao_fundamental"
+                style="@style/subTituloSobre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/taxa_distorcao_fundamental" />
+
+            <RadioButton
+                android:id="@+id/radio_taxa_distorcao_medio"
+                style="@style/subTituloSobre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/taxa_distorcao_medio" />
+
+            <RadioButton
+                android:id="@+id/radio_taxa_aprovacao_fundamental"
+                style="@style/subTituloSobre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/taxa_aprovacao_fundamental" />
+
+            <RadioButton
+                android:id="@+id/radio_taxa_aprovacao_medio"
+                style="@style/subTituloSobre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/taxa_aprovacao_medio" />
+
+            <RadioButton
+                android:id="@+id/radio_taxa_abandono_fundamental"
+                style="@style/subTituloSobre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/taxa_abandono_fundamental" />
+
+            <RadioButton
+                android:id="@+id/radio_taxa_abandono_medio"
+                style="@style/subTituloSobre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/taxa_abandono_medio" />
+
+            <RadioButton
+                android:id="@+id/radio_censo_iniciais_fundamental"
+                style="@style/subTituloSobre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/censo_anos_iniciais_fundamental" />
+
+            <RadioButton
+                android:id="@+id/radio_censo_finais_fundamental"
+                style="@style/subTituloSobre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/censo_anos_finais_fundamental" />
+
+            <RadioButton
+                android:id="@+id/radio_censo_ensino_medio"
+                style="@style/subTituloSobre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/censo_ensino_medio" />
+
+            <RadioButton
+                android:id="@+id/radio_censo_eja_fundamental"
+                style="@style/subTituloSobre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/censo_eja_fundamental" />
+
+            <RadioButton
+                android:id="@+id/radio_censo_eja_medio"
+                style="@style/subTituloSobre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/censo_eja_medio" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right" >
+
+            <Button
+                android:id="@+id/grafico"
+                style="@style/botaoMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/avancar"
+                android:onClick="clickNextButton" >
+            </Button>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
