@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mdsgpp.eef"
+    android:installLocation="preferExternal"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <!--
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:targetPackage="com.mdsgpp.eef" />
+    -->
+
+    <!--
+    <uses-sdk
+        android:minSdkVersion="18"
+        android:targetSdkVersion="18" />
+    -->
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:launchMode="singleTask"
+        android:theme="@style/AppTheme" >
+        <uses-library android:name="android.test.runner" />
+
+        <activity
+            android:name="com.mdsgpp.eef.view.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.mdsgpp.eef.view.StateScreen"
+            android:icon="@drawable/home"
+            android:label="@string/title_activity_tela_estado"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.mdsgpp.eef.view.StateListScreen"
+            android:icon="@drawable/home"
+            android:label="@string/title_activity_tela_lista_estado"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.mdsgpp.eef.view.ComparisonScreen"
+            android:icon="@drawable/home"
+            android:label="@string/title_activity_tela_comparacao"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.mdsgpp.eef.view.AboutScreen"
+            android:icon="@drawable/home"
+            android:label="@string/title_activity_tela_sobre"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.mdsgpp.eef.view.ConsultedIndicativesScreen"
+            android:icon="@drawable/home"
+            android:label="@string/title_activity_tela_indicativos_consultados"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.mdsgpp.eef.view.ConsultationResultScreen"
+            android:icon="@drawable/home"
+            android:label="@string/title_activity_tela_resultado_consulta" >
+        </activity>
+        <activity
+            android:name="com.mdsgpp.eef.view.FeedScreen"
+            android:icon="@drawable/home"
+            android:label="@string/title_activity_tela_feed"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.mdsgpp.eef.view.FeedAboutScreen"
+            android:icon="@drawable/home"
+            android:label="@string/title_activity_tela_feed_sobre"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.mdsgpp.eef.view.ChooseIndicativeChartComparisonScreen"
+            android:icon="@drawable/home"
+            android:label="@string/title_activity_tela_escolhe_indicativo_grafico"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.mdsgpp.eef.view.ChooseIndicativeChartLineScreen"
+            android:icon="@drawable/home"
+            android:label="@string/title_activity_tela_escolhe_indicativo_grafico"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.mdsgpp.eef.view.GraphScreen"
+            android:icon="@drawable/home"
+            android:label="@string/title_activity_tela_grafico"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.mdsgpp.eef.view.GraphLineScreen"
+            android:icon="@drawable/home"
+            android:label="@string/title_activity_tela_grafico"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.mdsgpp.eef.view.IndicativesAboutScreen"
+            android:icon="@drawable/home"
+            android:label="@string/title_activity_sobre_indicativos"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.mdsgpp.eef.view.ConsultationAboutScreen"
+            android:icon="@drawable/home"
+            android:label="@string/title_activity_tela_sobre_consulta"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.mdsgpp.eef.view.ComparisonAboutScreen"
+            android:icon="@drawable/home"
+            android:label="@string/title_activity_tela_sobre_comparacao"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.mdsgpp.eef.view.GeneralComparisonsScreen"
+            android:icon="@drawable/home"
+            android:label="@string/title_activity_tela_comparacoes_gerais"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.mdsgpp.eef.view.ConsultationByIndicativeScreen"
+            android:icon="@drawable/home"
+            android:label="@string/title_activity_tela_consulta_por_indicativo"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.mdsgpp.eef.view.ConsultationByIndicativeResultScreen"
+            android:icon="@drawable/home"
+            android:label="@string/title_activity_tela_resultado_consulta_por_indicativo"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.mdsgpp.eef.view.StateHistoryScreen"
+            android:icon="@drawable/home"
+            android:label="@string/title_activity_tela_historico_estado"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.mdsgpp.eef.view.GeneralComparisonAboutScreen"
+            android:icon="@drawable/home"
+            android:label="@string/title_activity_tela_sobre_comparacoes_gerais"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.mdsgpp.eef.view.StateListAboutScreen"
+            android:icon="@drawable/home"
+            android:label="@string/title_activity_tela_sobre_lista_estado"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.mdsgpp.eef.view.StateAboutScreen"
+            android:icon="@drawable/home"
+            android:label="@string/title_activity_tela_sobre_estado"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.mdsgpp.eef.view.ComparisonBetweenStatesAboutScreen"
+            android:icon="@drawable/home"
+            android:label="@string/title_activity_sobre_comparacao_estados"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.mdsgpp.eef.view.IndicativeChoosenAboutScreen"
+            android:icon="@drawable/home"
+            android:label="@string/title_activity_tela_sobre_escolha_indicativo"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.mdsgpp.eef.view.AboutResultOfConsultationScreen"
+            android:icon="@drawable/home"
+            android:label="@string/title_activity_tela_sobre_resultado_da_consulta"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.mdsgpp.eef.view.IndicativeHistoryAboutScreen"
+            android:icon="@drawable/home"
+            android:label="@string/title_activity_sobre_historico_de_indicativo"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.mdsgpp.eef.view.ChartAboutScreen"
+            android:icon="@drawable/home"
+            android:label="@string/title_activity_tela_sobre_grafico"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.mdsgpp.eef.view.IndicativeChoosenChartComparsionAboutScreen"
+            android:icon="@drawable/home"
+            android:label="@string/title_activity_tela_sobre_escolhe_indicativo_grafico_comparacao"
+            android:screenOrientation="portrait" >
+        </activity>
+    </application>
+
+</manifest>

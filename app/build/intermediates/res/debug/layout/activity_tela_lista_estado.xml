@@ -1,0 +1,19 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:paddingLeft="@dimen/activity_horizontal_margin"
+	android:paddingRight="@dimen/activity_horizontal_margin"
+	tools:context=".StateListScreen" 
+	android:background="@drawable/background">
+
+    <ListView
+    	android:id="@+id/listview_tela_estados"
+    	android:layout_width="match_parent"
+    	android:layout_height="match_parent"
+    	android:layout_centerHorizontal="true"
+    	android:layout_alignParentTop="true" >
+    </ListView>
+
+</RelativeLayout>
+<!-- From: file:/home/john/Git/educacaoemfoco/app/src/main/res/layout/activity_tela_lista_estado.xml -->
